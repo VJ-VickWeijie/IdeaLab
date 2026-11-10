@@ -5,6 +5,7 @@
 ## 项目索引
 
 - [Marble](ideas/Marble/README.md) · 灵感记录
+- [OpenMausBot](ideas/OpenMausBot/README.md) · 灵感，待试用
 
 ## 新建创意
 
