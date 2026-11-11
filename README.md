@@ -17,7 +17,7 @@
 - **AI-Workflow（独立 Private 仓库）**：保存通用生命周期、动态组队、内部辩论、Skills/工具适配、质量审查、回退和里程碑审批规范。
 - **各子项目**：保留各自业务事实与成果；需要代码仓库或大型素材库时，可在项目文档中链接外部仓库。
 
-当前默认版本为 [AI-Workflow V1.0](https://github.com/VJ-VickWeijie/AI-Workflow/tree/76f2d0ab04ff5b2d8d0920699372a79dca69337c)。项目可在自身资料中指定另一个已批准的固定提交。
+当前默认版本为 [AI-Workflow V1.0](https://github.com/VJ-VickWeijie/AI-Workflow/tree/76f2d0ab04ff5b2d8d0920699372a79dca69337c)。AI-Workflow V1.1 候选更新在 [PR #1](https://github.com/VJ-VickWeijie/AI-Workflow/pull/1)，其中增加模型选择规则，候选版本合并并经项目批准采用前，不改变现有固定版本。项目可在自身资料中指定另一个已批准的固定提交。
 
 ### 必须遵循的启动顺序
 
