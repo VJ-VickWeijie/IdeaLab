@@ -1,11 +1,12 @@
 # AI-Workflow 接入规范（IdeaLab 侧）
 
-状态：初始接入规范；独立 AI-Workflow 仓库尚待创建与验证。本文不等于 Skills 已安装或自动化已启用。
+状态：AI-Workflow V1.0 已发布，IdeaLab 接入等待 PR 审批。
 
 ## 1. 仓库关系
 
 - 主仓库：`VJ-VickWeijie/IdeaLab`，创意/项目事实来源。
-- 目标流程仓库：`VJ-VickWeijie/AI-Workflow`（拟创建，尚未验证存在），流程与角色规范来源。
+- 流程仓库：[VJ-VickWeijie/AI-Workflow](https://github.com/VJ-VickWeijie/AI-Workflow)，流程与角色规范来源。
+- 默认固定版本：[V1.0](https://github.com/VJ-VickWeijie/AI-Workflow/tree/76f2d0ab04ff5b2d8d0920699372a79dca69337c)，完整提交 `76f2d0ab04ff5b2d8d0920699372a79dca69337c`。
 - 业务代码、媒体资源可存放在项目链接的其他仓库，但项目入口和决策仍由 IdeaLab 维护。
 
 ## 2. 每次接手的强制顺序
@@ -39,9 +40,9 @@
 
 ## 5. 接入和版本规则
 
-项目应在自己的文档中记录 AI-Workflow 的固定版本或提交 SHA、当前里程碑及最后批准的决定。新工作流版本需要评估兼容性后再升级。
+项目文档中的已批准固定 SHA 优先。没有项目级锁定时使用本页默认固定 SHA。新模板和项目交接应记录实际解析出的 SHA、当前里程碑和最后批准的决定。升级须检查兼容性及授权。
 
-独立仓库尚未创建时，禁止声称已完成 AI-Workflow 加载、Skills 安装或自动调度。可继续进行已授权的资料整理，但不得冒充完成规范化阶段执行。
+工作流版本无法读取时，记录缺失并暂停依赖该规范的阶段执行；可保留只读核查。记录实际可用的工具与 Skills。
 
 ## 6. Work / Codex 交接
 
@@ -54,10 +55,11 @@
 ## 7. 当前实施状态
 
 - [x] IdeaLab 侧明确独立 AI-Workflow 强制接入规则（待 PR 合并生效）
-- [ ] 创建独立 Private AI-Workflow 仓库
-- [ ] 在 AI-Workflow 中建立 agents、workflows、skills、policies、templates、adapters
-- [ ] 固定四个上游 Skills 的来源版本并检查依赖
-- [ ] 验证 Work / Codex 实际读取与 Skill 调用机制
-- [ ] 完成一轮端到端试运行与里程碑验收
+- [x] 创建独立 Private AI-Workflow 仓库
+- [x] 在 AI-Workflow 中建立 agents、workflows、skills、policies、templates、adapters
+- [x] 固定四个上游 Skills 的来源版本并检查依赖
+- [x] Work 手动读取两仓的固定版本，核对 Marble 处于灵感阶段并恢复到目标探索入口
+- [ ] 在新会话验证 Codex 接手、Work/Codex Skill 实际调用及独立审查
+- [ ] 待接入审批后，执行完整项目试运行与里程碑验收
 
 本清单仅陈述实施进度，不代表任何未验证能力已可用。
