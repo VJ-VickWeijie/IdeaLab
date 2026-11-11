@@ -1,12 +1,12 @@
 # AI-Workflow 接入规范（IdeaLab 侧）
 
-状态：AI-Workflow V1.0 为当前固定版本，IdeaLab 接入等待 PR 审批。AI-Workflow V1.1 候选更新见 [PR #1](https://github.com/VJ-VickWeijie/AI-Workflow/pull/1)，尚未合并，不改变现有项目版本锁定。
+状态：AI-Workflow V1.1 已合并为正式版本，IdeaLab 接入规则也已合并。新项目默认使用 V1.1 固定提交。
 
 ## 1. 仓库关系
 
 - 主仓库：`VJ-VickWeijie/IdeaLab`，创意/项目事实来源。
 - 流程仓库：[VJ-VickWeijie/AI-Workflow](https://github.com/VJ-VickWeijie/AI-Workflow)，流程与角色规范来源。
-- 默认固定版本：[V1.0](https://github.com/VJ-VickWeijie/AI-Workflow/tree/76f2d0ab04ff5b2d8d0920699372a79dca69337c)，完整提交 `76f2d0ab04ff5b2d8d0920699372a79dca69337c`。
+- 默认固定版本：[V1.1](https://github.com/VJ-VickWeijie/AI-Workflow/tree/939ec44036d89cd91622ab96b938be9f02479026)，完整提交 `939ec44036d89cd91622ab96b938be9f02479026`。
 - 业务代码、媒体资源可存放在项目链接的其他仓库，但项目入口和决策仍由 IdeaLab 维护。
 
 ## 2. 每次接手的强制顺序
@@ -40,7 +40,7 @@
 
 ## 5. 接入和版本规则
 
-项目文档中的已批准固定 SHA 优先。没有项目级锁定时使用本页默认固定 SHA。新模板和项目交接应记录实际解析出的 SHA、当前里程碑和最后批准的决定。升级须检查兼容性及授权。V1.1 候选包含按任务难度、风险、环境能力与预算选择模型的规则。只有候选合并并经项目批准采用后，子项目才按该版本规则选型；不同环境若不支持按角色切换模型，应记录限制和实际使用模型。
+项目文档中的已批准固定 SHA 优先。没有项目级锁定时使用本页默认固定 SHA。新模板和项目交接应记录实际解析出的 SHA、当前里程碑和最后批准的决定。升级须检查兼容性及授权。V1.1 包含按任务难度、风险、环境能力与预算选择模型的规则。不同环境若不支持按角色切换模型，应记录限制和实际使用模型。
 
 工作流版本无法读取时，记录缺失并暂停依赖该规范的阶段执行；可保留只读核查。记录实际可用的工具与 Skills。
 
@@ -54,12 +54,14 @@
 
 ## 7. 当前实施状态
 
-- [x] IdeaLab 侧明确独立 AI-Workflow 强制接入规则（待 PR 合并生效）
+- [x] IdeaLab 侧强制接入规则已合并至主分支
+- [x] AI-Workflow V1.1 模型选择与治理改进已合并至主分支
+- [x] IdeaLab 默认固定版本已更新至 V1.1 提交
 - [x] 创建独立 Private AI-Workflow 仓库
 - [x] 在 AI-Workflow 中建立 agents、workflows、skills、policies、templates、adapters
 - [x] 固定四个上游 Skills 的来源版本并检查依赖
 - [x] Work 手动读取两仓的固定版本，核对 Marble 处于灵感阶段并恢复到目标探索入口
 - [ ] 在新会话验证 Codex 接手、Work/Codex Skill 实际调用及独立审查
-- [ ] 待接入审批后，执行完整项目试运行与里程碑验收
+- [ ] 执行完整项目试运行与里程碑验收
 
 本清单仅陈述实施进度，不代表任何未验证能力已可用。
