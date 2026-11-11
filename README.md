@@ -8,6 +8,7 @@
 
 - [Marble](ideas/Marble/README.md) · 灵感记录
 - [OpenMausBot](ideas/OpenMausBot/README.md) · 灵感，待试用
+- [家有灵犀](ideas/家有灵犀/README.md) · Android 家庭生活助手，M0 重启中
 
 ## AI-Workflow 强制协作规范
 
