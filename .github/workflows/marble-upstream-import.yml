@@ -1,0 +1,64 @@
+name: Import Marble upstream taxonomy
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout IdeaLab
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Checkout upstream Marble taxonomy
+        uses: actions/checkout@v4
+        with:
+          repository: withmarbleapp/os-taxonomy
+          ref: main
+          path: _marble_upstream
+          persist-credentials: false
+      - name: Verify upstream data and copy snapshot
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, pathlib, shutil, subprocess
+          src=pathlib.Path('_marble_upstream')
+          dest=pathlib.Path('ideas/Marble/upstream')
+          manifest=json.loads((src/'data/manifest.json').read_text())
+          for name, meta in manifest['files'].items():
+              p=src/'data'/name
+              actual=hashlib.sha256(p.read_bytes()).hexdigest()
+              assert actual == meta['sha256'], f'Hash mismatch: {name}'
+              assert p.stat().st_size == meta['bytes'], f'Size mismatch: {name}'
+          dest.mkdir(parents=True,exist_ok=True)
+          (dest/'data').mkdir(exist_ok=True)
+          for name in manifest['files']:
+              shutil.copy2(src/'data'/name,dest/'data'/name)
+          shutil.copy2(src/'data/manifest.json',dest/'manifest.json')
+          for name in ('LICENSE','LICENSE-CONTENT','PROVENANCE.md'):
+              p=src/name
+              if p.exists(): shutil.copy2(p,dest/name)
+          sha=subprocess.check_output(['git','-C',str(src),'rev-parse','HEAD'],text=True).strip()
+          (dest/'UPSTREAM_COMMIT.txt').write_text(sha+'\n')
+          print(f'Verified {len(manifest["files"])} files, upstream commit {sha}')
+          PY
+          rm -rf _marble_upstream
+      - name: Create reviewable import PR
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "data(marble): import verified upstream taxonomy snapshot"
+          branch: automation/marble-upstream-import
+          delete-branch: true
+          title: "Import verified Marble upstream taxonomy"
+          body: |
+            Manual upstream snapshot import. Checks every data file against manifest SHA-256 and byte size.
+            Includes upstream licenses, provenance, and commit SHA.
+            Review third-party curriculum provenance and share-alike requirements before merging.
+          add-paths: |
+            ideas/Marble/upstream/
