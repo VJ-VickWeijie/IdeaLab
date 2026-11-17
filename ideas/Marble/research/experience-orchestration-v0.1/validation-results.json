@@ -1,0 +1,1590 @@
+{
+  "result": "pass",
+  "failures": [],
+  "formatVersion": "0.1.0",
+  "toolchain": {
+    "python": "3.12.14",
+    "jsonschema": "4.26.0"
+  },
+  "source": {
+    "upstreamCommit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+    "sha256": {
+      "topics.json": "fd96ce5963e24f11dcfb549fee46d3cb6afae5d545dc30f4d01366a406444f35",
+      "dependencies.json": "ed38d8a265699d1687a7fa8166c528999e21771d54449a84ea5362dc1d0e7758"
+    },
+    "topics": 1912,
+    "dependencies": 4002
+  },
+  "recordChecks": [
+    {
+      "id": "mt_wHN14Unk7h",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_TlLE4cZgOr",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_BO_AHGLCk0",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_4pLvMN8uzL",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_zCGwH1OQZa",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_s08-QxASd2",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_KTSoXcO7OL",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_0NlbulkB5P",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_Mf-T-fYRLX",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_8FUXG_39-C",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_6Z42wJaKYG",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_obF-6VYRya",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_2mb17lUCPD",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_-c4Ca_nBzX",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_dlm3NspUyy",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_5UtPmgdoQ9",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_HopZomN12L",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_4GiE83rJF_",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_VEwM7ClYYE",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_w4cUnN_SsQ",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_pK6QkcKxZT",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_Lu4H4mbsqO",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_69w5GVudJl",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_mvXufozy2s",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_EWiY8-opdd",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_xACS3rWWDp",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_e8CZ7E5qW7",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_LhkP_KKIRS",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_6msyXavNJf",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "mt_mAschyjZAT",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "id": "local:banana-identification",
+      "passed": true,
+      "failures": []
+    }
+  ],
+  "coverage": {
+    "subject": {
+      "Art & Design": 1,
+      "Computing": 2,
+      "English": 2,
+      "Français": 1,
+      "Geography": 2,
+      "History": 2,
+      "Learning to Learn": 1,
+      "Life Skills": 1,
+      "Mathematics": 3,
+      "Performing Arts": 1,
+      "Personal & Social Development": 2,
+      "Science": 12
+    },
+    "sourceType": {
+      "CONCEPTUAL": 14,
+      "LANGUAGE": 2,
+      "META": 3,
+      "PROCEDURAL": 9,
+      "REPRESENTATIONAL": 2
+    },
+    "sourceAgeOverlap": {
+      "0-1": 0,
+      "1-2": 0,
+      "2-3": 0,
+      "3-6": 14,
+      "6-9": 24,
+      "9-12": 22
+    },
+    "adaptation": {
+      "1-2": 1,
+      "2-3": 1,
+      "3-6": 14,
+      "6-9": 30,
+      "9-12": 18
+    },
+    "primaryTags": {
+      "cause_effect": 2,
+      "evidence_reasoning": 3,
+      "object_identification": 1,
+      "observation_comparison": 3,
+      "procedure": 6,
+      "process_change": 5,
+      "representation_model": 4,
+      "rule_pattern": 2,
+      "social_perspective": 4
+    },
+    "allTags": {
+      "cause_effect": 9,
+      "evidence_reasoning": 7,
+      "object_identification": 2,
+      "observation_comparison": 8,
+      "procedure": 10,
+      "process_change": 8,
+      "representation_model": 5,
+      "rule_pattern": 4,
+      "social_perspective": 5
+    },
+    "multiLabel": 28,
+    "primaryMedium": {
+      "animation": 3,
+      "audio": 5,
+      "comparison_card": 10,
+      "diagram": 6,
+      "interactive": 2,
+      "object": 1,
+      "photo": 1,
+      "text": 2
+    },
+    "entryMode": {
+      "phenomenon": 17,
+      "question": 13
+    },
+    "activity": {
+      "low": 16,
+      "moderate": 1,
+      "none": 13
+    },
+    "reviewStatus": {
+      "manual_review_required": 15,
+      "research_reviewed": 15
+    },
+    "proposedOrMissingMedia": {
+      "missing": 3,
+      "proposed": 29
+    },
+    "explorationLinks": {
+      "local_suggestion": 29,
+      "upstream_dependency": 1
+    }
+  },
+  "coverageChecks": {
+    "roster_matches_exact_order": true,
+    "all_upstream_subjects": true,
+    "all_upstream_types": true,
+    "all_taxonomy_tags_represented": true,
+    "all_taxonomy_tags_primary": true,
+    "local_id_not_upstream": true
+  },
+  "schemaNegativeChecks": [
+    {
+      "id": "camera_required",
+      "passed": true
+    },
+    {
+      "id": "upload_required",
+      "passed": true
+    },
+    {
+      "id": "network_required",
+      "passed": true
+    },
+    {
+      "id": "fake_asset",
+      "passed": true
+    },
+    {
+      "id": "bad_taxonomy",
+      "passed": true
+    },
+    {
+      "id": "local_upstream_id",
+      "passed": true
+    },
+    {
+      "id": "invented_local_age",
+      "passed": true
+    },
+    {
+      "id": "mandatory_activity",
+      "passed": true
+    },
+    {
+      "id": "high_risk_auto_approved",
+      "passed": true
+    },
+    {
+      "id": "unknown_hazard_auto_approved",
+      "passed": true
+    }
+  ],
+  "blindLabels": [
+    {
+      "id": "mt_wHN14Unk7h",
+      "authorPrimary": "observation_comparison",
+      "blindPrimary": "observation_comparison",
+      "exact": true,
+      "withinBlindAlternatives": true
+    },
+    {
+      "id": "mt_TlLE4cZgOr",
+      "authorPrimary": "process_change",
+      "blindPrimary": "process_change",
+      "exact": true,
+      "withinBlindAlternatives": true
+    },
+    {
+      "id": "mt_BO_AHGLCk0",
+      "authorPrimary": "cause_effect",
+      "blindPrimary": "cause_effect",
+      "exact": true,
+      "withinBlindAlternatives": true
+    },
+    {
+      "id": "mt_Mf-T-fYRLX",
+      "authorPrimary": "process_change",
+      "blindPrimary": "process_change",
+      "exact": true,
+      "withinBlindAlternatives": true
+    },
+    {
+      "id": "mt_5UtPmgdoQ9",
+      "authorPrimary": "procedure",
+      "blindPrimary": "procedure",
+      "exact": true,
+      "withinBlindAlternatives": true
+    },
+    {
+      "id": "mt_Lu4H4mbsqO",
+      "authorPrimary": "evidence_reasoning",
+      "blindPrimary": "evidence_reasoning",
+      "exact": true,
+      "withinBlindAlternatives": true
+    },
+    {
+      "id": "mt_xACS3rWWDp",
+      "authorPrimary": "representation_model",
+      "blindPrimary": "representation_model",
+      "exact": true,
+      "withinBlindAlternatives": true
+    },
+    {
+      "id": "mt_mAschyjZAT",
+      "authorPrimary": "observation_comparison",
+      "blindPrimary": "observation_comparison",
+      "exact": true,
+      "withinBlindAlternatives": true
+    }
+  ],
+  "manualReviewQueue": [
+    {
+      "id": "mt_wHN14Unk7h",
+      "reasons": [
+        "真实录音、动物例子与实际信号目的需逐素材标注；野生动物活动仅限室内远听，避免根据单次鸟鸣推断目的。",
+        "成人须独立确认现实观察场所、风险与监护前提，具体活动文案和白名单规则的映射待人工审核。"
+      ]
+    },
+    {
+      "id": "mt_TlLE4cZgOr",
+      "reasons": [
+        "上游用蒸发解释水坑变小，实际机制可有多种；动画不可把水蒸气绘成真实可见的白烟。",
+        "成人须独立确认现实观察场所、风险与监护前提，具体活动文案和白名单规则的映射待人工审核。"
+      ]
+    },
+    {
+      "id": "mt_BO_AHGLCk0",
+      "reasons": [
+        "原版强调云中放电，配置文字也允许云地之间的放电。",
+        "仅使用离线低刺激示意，无现场观察；需人工审核可能被理解为要求跟踪闪雷的措辞。"
+      ]
+    },
+    {
+      "id": "mt_4pLvMN8uzL",
+      "reasons": [
+        "原版简写了进汽车的条件；此儿童研究稿优先选稳固封闭建筑，车辆细节交成人专业审查。",
+        "雷暴节点进入人工复核；任何实地验证均禁用。"
+      ]
+    },
+    {
+      "id": "mt_s08-QxASd2",
+      "reasons": [
+        "不据上游标题把现代商品统一标为在天然雨林内生产。",
+        "原文列举坚果等食物。本样本没有寻找、触摸或试吃任务。来源及授权图片在使用前人工审校。"
+      ]
+    },
+    {
+      "id": "mt_Mf-T-fYRLX",
+      "reasons": [
+        "原版证据把混合物和溶液相对比，容易被误读为溶液不属于混合物；上游原文保留，修订解释进入人工队列。",
+        "化学场景只呈现离线示意；引用的专业教学实验含成人实验条件，儿童侧不可直接触达实验操作。"
+      ]
+    },
+    {
+      "id": "mt_8FUXG_39-C",
+      "reasons": [
+        "真实工具技能无法由纸面替代证明。",
+        "尖锐工具风险进入人工队列。研究稿不提供手锯操作、动作示范或幼儿可模仿的步骤。"
+      ]
+    },
+    {
+      "id": "mt_obF-6VYRya",
+      "reasons": [
+        "上游把令人意外的结果描述为更有价值。本地草案仅保留证据的解释作用，待人工审定。"
+      ]
+    },
+    {
+      "id": "mt_dlm3NspUyy",
+      "reasons": [
+        "原版的安慰不应扩展为一概无需帮助。样板无需自我披露，不推断个人心理状态；语气和适龄支持表达待人工审阅。"
+      ]
+    },
+    {
+      "id": "mt_HopZomN12L",
+      "reasons": [
+        "上游的 always listening 容易误读为所有设备持续保存录音；产品特定行为和儿童资料表述须复核。"
+      ]
+    },
+    {
+      "id": "mt_pK6QkcKxZT",
+      "reasons": [
+        "候选解释仅作导入；命名案例、音像、故事、翻译发布前需查阅相关社群认可来源与使用条件，避免跨社群概括。"
+      ]
+    },
+    {
+      "id": "mt_EWiY8-opdd",
+      "reasons": [
+        "原版含过敏原和实际厨房操作，本样板仅模拟；食品安全与年龄适用性须人审，现实处置依适用地区指引。"
+      ]
+    },
+    {
+      "id": "mt_e8CZ7E5qW7",
+      "reasons": [
+        "原版标题与说明冲突；分别引用于研究卡，人工决定后再选择要编排的学习目标。"
+      ]
+    },
+    {
+      "id": "mt_6msyXavNJf",
+      "reasons": [
+        "无固定握姿、手别或识字要求；画具物件与碎片风险需按实际材料和孩子能力复核。"
+      ]
+    },
+    {
+      "id": "mt_mAschyjZAT",
+      "reasons": [
+        "目标变体、法语音源授权、示范真实度及不把地区差异打成错误须由合适的人工审查；无音源时只展示文字概念。"
+      ]
+    },
+    {
+      "id": "local:banana-identification",
+      "reasons": [
+        "本地新增样板；上游相关食品节点只用于延伸参考，不作为同名来源。",
+        "含真实食物的显示须人工确认适龄、过敏与吞咽风险；样例中无品尝、喂食和触摸。"
+      ]
+    }
+  ],
+  "safetyOutcomeCounts": {
+    "block": 31,
+    "allow": 7,
+    "fallback": 30,
+    "human_review": 3
+  },
+  "safetyCasesByGroup": {
+    "lightning": {
+      "block": 13,
+      "allow": 2,
+      "fallback": 5
+    },
+    "chemicals": {
+      "block": 4,
+      "allow": 1,
+      "fallback": 1
+    },
+    "wildlife": {
+      "block": 5,
+      "allow": 1,
+      "fallback": 1
+    },
+    "choking": {
+      "block": 3,
+      "allow": 1,
+      "fallback": 2
+    },
+    "conditions": {
+      "block": 5,
+      "fallback": 6,
+      "allow": 1
+    },
+    "access": {
+      "fallback": 5,
+      "allow": 1
+    },
+    "trust": {
+      "fallback": 10,
+      "human_review": 3,
+      "block": 1
+    }
+  },
+  "safetyCases": [
+    {
+      "id": "WX01",
+      "group": "lightning",
+      "expected": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX02",
+      "group": "lightning",
+      "expected": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX03",
+      "group": "lightning",
+      "expected": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX04",
+      "group": "lightning",
+      "expected": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX05",
+      "group": "lightning",
+      "expected": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX06",
+      "group": "lightning",
+      "expected": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX07",
+      "group": "lightning",
+      "expected": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX08",
+      "group": "lightning",
+      "expected": {
+        "decision": "block",
+        "reason": "weather_wait",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "weather_wait",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX09",
+      "group": "lightning",
+      "expected": {
+        "decision": "allow",
+        "reason": "constraints_satisfied",
+        "route": "real_activity"
+      },
+      "actual": {
+        "decision": "allow",
+        "reason": "constraints_satisfied",
+        "route": "real_activity"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX10",
+      "group": "lightning",
+      "expected": {
+        "decision": "fallback",
+        "reason": "weather_unverified",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "weather_unverified",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX11",
+      "group": "lightning",
+      "expected": {
+        "decision": "fallback",
+        "reason": "weather_unverified",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "weather_unverified",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX12",
+      "group": "lightning",
+      "expected": {
+        "decision": "fallback",
+        "reason": "weather_unverified",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "weather_unverified",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX13",
+      "group": "lightning",
+      "expected": {
+        "decision": "block",
+        "reason": "live_lightning",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "live_lightning",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX14",
+      "group": "lightning",
+      "expected": {
+        "decision": "block",
+        "reason": "live_lightning",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "live_lightning",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX15",
+      "group": "lightning",
+      "expected": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX16",
+      "group": "lightning",
+      "expected": {
+        "decision": "allow",
+        "reason": "constraints_satisfied",
+        "route": "real_activity"
+      },
+      "actual": {
+        "decision": "allow",
+        "reason": "constraints_satisfied",
+        "route": "real_activity"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX17",
+      "group": "lightning",
+      "expected": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "weather_active",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX18",
+      "group": "lightning",
+      "expected": {
+        "decision": "fallback",
+        "reason": "weather_unverified",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "weather_unverified",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX19",
+      "group": "lightning",
+      "expected": {
+        "decision": "block",
+        "reason": "weather_wait",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "weather_wait",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "WX20",
+      "group": "lightning",
+      "expected": {
+        "decision": "fallback",
+        "reason": "weather_unverified",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "weather_unverified",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "CH01",
+      "group": "chemicals",
+      "expected": {
+        "decision": "block",
+        "reason": "chemical_contact",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "chemical_contact",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "CH02",
+      "group": "chemicals",
+      "expected": {
+        "decision": "block",
+        "reason": "chemical_contact",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "chemical_contact",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "CH03",
+      "group": "chemicals",
+      "expected": {
+        "decision": "block",
+        "reason": "chemical_contact",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "chemical_contact",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "CH04",
+      "group": "chemicals",
+      "expected": {
+        "decision": "allow",
+        "reason": "constraints_satisfied",
+        "route": "real_activity"
+      },
+      "actual": {
+        "decision": "allow",
+        "reason": "constraints_satisfied",
+        "route": "real_activity"
+      },
+      "passed": true
+    },
+    {
+      "id": "CH05",
+      "group": "chemicals",
+      "expected": {
+        "decision": "fallback",
+        "reason": "hazard_unconfirmed",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "hazard_unconfirmed",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "CH06",
+      "group": "chemicals",
+      "expected": {
+        "decision": "block",
+        "reason": "chemical_contact",
+        "route": "end"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "chemical_contact",
+        "route": "end"
+      },
+      "passed": true
+    },
+    {
+      "id": "AN01",
+      "group": "wildlife",
+      "expected": {
+        "decision": "block",
+        "reason": "wildlife_contact",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "wildlife_contact",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "AN02",
+      "group": "wildlife",
+      "expected": {
+        "decision": "block",
+        "reason": "wildlife_contact",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "wildlife_contact",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "AN03",
+      "group": "wildlife",
+      "expected": {
+        "decision": "block",
+        "reason": "wildlife_contact",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "wildlife_contact",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "AN04",
+      "group": "wildlife",
+      "expected": {
+        "decision": "block",
+        "reason": "wildlife_contact",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "wildlife_contact",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "AN05",
+      "group": "wildlife",
+      "expected": {
+        "decision": "allow",
+        "reason": "constraints_satisfied",
+        "route": "real_activity"
+      },
+      "actual": {
+        "decision": "allow",
+        "reason": "constraints_satisfied",
+        "route": "real_activity"
+      },
+      "passed": true
+    },
+    {
+      "id": "AN06",
+      "group": "wildlife",
+      "expected": {
+        "decision": "block",
+        "reason": "hazard_present",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "hazard_present",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "AN07",
+      "group": "wildlife",
+      "expected": {
+        "decision": "fallback",
+        "reason": "hazard_unconfirmed",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "hazard_unconfirmed",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "FO01",
+      "group": "choking",
+      "expected": {
+        "decision": "block",
+        "reason": "food_ingestion",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "food_ingestion",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "FO02",
+      "group": "choking",
+      "expected": {
+        "decision": "block",
+        "reason": "food_ingestion",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "food_ingestion",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "FO03",
+      "group": "choking",
+      "expected": {
+        "decision": "allow",
+        "reason": "constraints_satisfied",
+        "route": "real_activity"
+      },
+      "actual": {
+        "decision": "allow",
+        "reason": "constraints_satisfied",
+        "route": "real_activity"
+      },
+      "passed": true
+    },
+    {
+      "id": "FO04",
+      "group": "choking",
+      "expected": {
+        "decision": "fallback",
+        "reason": "supervision_missing",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "supervision_missing",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "FO05",
+      "group": "choking",
+      "expected": {
+        "decision": "fallback",
+        "reason": "hazard_unconfirmed",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "hazard_unconfirmed",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "FO06",
+      "group": "choking",
+      "expected": {
+        "decision": "block",
+        "reason": "small_object_ingestion",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "small_object_ingestion",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "CT01",
+      "group": "conditions",
+      "expected": {
+        "decision": "block",
+        "reason": "hazard_present",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "hazard_present",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "CT02",
+      "group": "conditions",
+      "expected": {
+        "decision": "fallback",
+        "reason": "access_unconfirmed",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "access_unconfirmed",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "CT03",
+      "group": "conditions",
+      "expected": {
+        "decision": "fallback",
+        "reason": "environment_unconfirmed",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "environment_unconfirmed",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "CT04",
+      "group": "conditions",
+      "expected": {
+        "decision": "fallback",
+        "reason": "supervision_missing",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "supervision_missing",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "CT05",
+      "group": "conditions",
+      "expected": {
+        "decision": "fallback",
+        "reason": "age_unverified_or_ineligible",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "age_unverified_or_ineligible",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "CT06",
+      "group": "conditions",
+      "expected": {
+        "decision": "fallback",
+        "reason": "age_unverified_or_ineligible",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "age_unverified_or_ineligible",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "CT07",
+      "group": "conditions",
+      "expected": {
+        "decision": "allow",
+        "reason": "constraints_satisfied",
+        "route": "real_activity"
+      },
+      "actual": {
+        "decision": "allow",
+        "reason": "constraints_satisfied",
+        "route": "real_activity"
+      },
+      "passed": true
+    },
+    {
+      "id": "CT08",
+      "group": "conditions",
+      "expected": {
+        "decision": "block",
+        "reason": "deep_water",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "deep_water",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "CT09",
+      "group": "conditions",
+      "expected": {
+        "decision": "block",
+        "reason": "fire",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "fire",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "CT10",
+      "group": "conditions",
+      "expected": {
+        "decision": "block",
+        "reason": "sharp_tools",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "sharp_tools",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "CT11",
+      "group": "conditions",
+      "expected": {
+        "decision": "block",
+        "reason": "hazard_present",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "hazard_present",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "CT12",
+      "group": "conditions",
+      "expected": {
+        "decision": "fallback",
+        "reason": "hazard_unconfirmed",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "hazard_unconfirmed",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "AC01",
+      "group": "access",
+      "expected": {
+        "decision": "fallback",
+        "reason": "capture_or_upload",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "capture_or_upload",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "AC02",
+      "group": "access",
+      "expected": {
+        "decision": "fallback",
+        "reason": "capture_or_upload",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "capture_or_upload",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "AC03",
+      "group": "access",
+      "expected": {
+        "decision": "fallback",
+        "reason": "network_dependency",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "network_dependency",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "AC04",
+      "group": "access",
+      "expected": {
+        "decision": "fallback",
+        "reason": "activity_not_optional",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "activity_not_optional",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "AC05",
+      "group": "access",
+      "expected": {
+        "decision": "fallback",
+        "reason": "access_unconfirmed",
+        "route": "end"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "access_unconfirmed",
+        "route": "end"
+      },
+      "passed": true
+    },
+    {
+      "id": "AC06",
+      "group": "access",
+      "expected": {
+        "decision": "allow",
+        "reason": "constraints_satisfied",
+        "route": "real_activity"
+      },
+      "actual": {
+        "decision": "allow",
+        "reason": "constraints_satisfied",
+        "route": "real_activity"
+      },
+      "passed": true
+    },
+    {
+      "id": "TR01",
+      "group": "trust",
+      "expected": {
+        "decision": "fallback",
+        "reason": "untrusted_candidate",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "untrusted_candidate",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "TR02",
+      "group": "trust",
+      "expected": {
+        "decision": "fallback",
+        "reason": "registration_mismatch",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "registration_mismatch",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "TR03",
+      "group": "trust",
+      "expected": {
+        "decision": "fallback",
+        "reason": "unexpected_candidate_fields",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "unexpected_candidate_fields",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "TR04",
+      "group": "trust",
+      "expected": {
+        "decision": "fallback",
+        "reason": "unknown_action",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "unknown_action",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "TR05",
+      "group": "trust",
+      "expected": {
+        "decision": "fallback",
+        "reason": "malformed_candidate",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "malformed_candidate",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "TR06",
+      "group": "trust",
+      "expected": {
+        "decision": "fallback",
+        "reason": "malformed_candidate",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "malformed_candidate",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "TR07",
+      "group": "trust",
+      "expected": {
+        "decision": "human_review",
+        "reason": "high_risk",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "human_review",
+        "reason": "high_risk",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "TR08",
+      "group": "trust",
+      "expected": {
+        "decision": "human_review",
+        "reason": "fact_disputed",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "human_review",
+        "reason": "fact_disputed",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "TR09",
+      "group": "trust",
+      "expected": {
+        "decision": "human_review",
+        "reason": "review_pending",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "human_review",
+        "reason": "review_pending",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "TR10",
+      "group": "trust",
+      "expected": {
+        "decision": "fallback",
+        "reason": "risk_unknown",
+        "route": "end"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "risk_unknown",
+        "route": "end"
+      },
+      "passed": true
+    },
+    {
+      "id": "TR11",
+      "group": "trust",
+      "expected": {
+        "decision": "fallback",
+        "reason": "unsupported_setting",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "unsupported_setting",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "TR12",
+      "group": "trust",
+      "expected": {
+        "decision": "fallback",
+        "reason": "capture_or_upload",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "capture_or_upload",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "TR13",
+      "group": "trust",
+      "expected": {
+        "decision": "fallback",
+        "reason": "review_unverified",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "fallback",
+        "reason": "review_unverified",
+        "route": "local_fallback"
+      },
+      "passed": true
+    },
+    {
+      "id": "TR14",
+      "group": "trust",
+      "expected": {
+        "decision": "block",
+        "reason": "wildlife_contact",
+        "route": "local_fallback"
+      },
+      "actual": {
+        "decision": "block",
+        "reason": "wildlife_contact",
+        "route": "local_fallback"
+      },
+      "passed": true
+    }
+  ]
+}

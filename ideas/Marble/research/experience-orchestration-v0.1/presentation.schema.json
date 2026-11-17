@@ -1,0 +1,300 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Marble Presentation Layer Research Record V0.1",
+  "description": "One research record. Validation of shape does not approve content or authorize activities.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "knowledge", "presentation", "exploration", "adaptation", "safetyQuality"],
+  "properties": {
+    "schemaVersion": { "const": "0.1.0" },
+    "id": { "$ref": "#/$defs/nodeId" },
+    "knowledge": { "$ref": "#/$defs/knowledge" },
+    "presentation": { "$ref": "#/$defs/presentation" },
+    "exploration": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/explorationLink" }
+    },
+    "adaptation": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/ageAdaptation" }
+    },
+    "safetyQuality": { "$ref": "#/$defs/safetyQuality" }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "knowledge": {
+            "properties": { "source": { "properties": { "kind": { "const": "upstream" } } } }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": { "$ref": "#/$defs/upstreamId" },
+          "knowledge": {
+            "properties": {
+              "sourceAge": { "$ref": "#/$defs/ageRange" },
+              "sourceType": { "$ref": "#/$defs/text" }
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "id": { "$ref": "#/$defs/localId" },
+          "knowledge": {
+            "properties": {
+              "sourceAge": { "type": "null" },
+              "sourceType": { "type": "null" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "presentation": {
+            "properties": {
+              "activity": {
+                "type": "object",
+                "anyOf": [
+                  { "properties": { "risk": { "const": "high" } } },
+                  { "properties": { "hazards": { "contains": { "const": "unknown" } } } }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "safetyQuality": {
+            "properties": { "status": { "const": "manual_review_required" } }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "text": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "upstreamId": { "type": "string", "pattern": "^mt_[A-Za-z0-9_-]+$" },
+    "localId": { "type": "string", "pattern": "^local:[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "nodeId": { "oneOf": [{ "$ref": "#/$defs/upstreamId" }, { "$ref": "#/$defs/localId" }] },
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "ageRange": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start", "end"],
+      "properties": {
+        "start": { "type": "integer", "minimum": 0 },
+        "end": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "source": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "topicId", "commit", "path", "descriptionSha256"],
+          "properties": {
+            "kind": { "const": "upstream" },
+            "topicId": { "$ref": "#/$defs/upstreamId" },
+            "commit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+            "path": { "const": "upstream/data/topics.json" },
+            "descriptionSha256": { "$ref": "#/$defs/sha256" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "referenceTopicIds"],
+          "properties": {
+            "kind": { "const": "local" },
+            "referenceTopicIds": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": { "$ref": "#/$defs/upstreamId" }
+            }
+          }
+        }
+      ]
+    },
+    "knowledge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "title", "descriptionSummary", "subject", "domain", "sourceType", "sourceAge", "tags", "tagRationale"],
+      "properties": {
+        "source": { "$ref": "#/$defs/source" },
+        "title": { "$ref": "#/$defs/text" },
+        "descriptionSummary": { "$ref": "#/$defs/text" },
+        "subject": { "$ref": "#/$defs/text" },
+        "domain": { "$ref": "#/$defs/text" },
+        "sourceType": { "oneOf": [{ "$ref": "#/$defs/text" }, { "type": "null" }] },
+        "sourceAge": { "oneOf": [{ "$ref": "#/$defs/ageRange" }, { "type": "null" }] },
+        "tags": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "Ordered. The first tag drives the main experience. Later tags explain other valid treatments.",
+          "items": {
+            "enum": ["object_identification", "observation_comparison", "process_change", "cause_effect", "procedure", "rule_pattern", "representation_model", "social_perspective", "evidence_reasoning"]
+          }
+        },
+        "tagRationale": { "$ref": "#/$defs/text" }
+      }
+    },
+    "medium": {
+      "enum": ["photo", "audio", "video", "diagram", "animation", "comparison_card", "interactive", "text", "object"]
+    },
+    "mediaAsset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["medium", "availability"],
+      "properties": {
+        "medium": { "$ref": "#/$defs/medium" },
+        "availability": { "enum": ["proposed", "missing", "available"] },
+        "role": { "enum": ["illustration", "voiceover", "captions", "ambient"] },
+        "language": { "enum": ["yue", "en", "fr", "und"] },
+        "ref": {
+          "type": "string",
+          "description": "Relative path under the reviewed resource root.",
+          "pattern": "^(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "availability": { "const": "available" } } },
+          "then": { "required": ["ref"] },
+          "else": { "not": { "required": ["ref"] } }
+        },
+        {
+          "if": { "required": ["role"], "properties": { "role": { "const": "voiceover" } } },
+          "then": {
+            "required": ["language"],
+            "properties": { "medium": { "const": "audio" }, "language": { "enum": ["yue", "en"] } }
+          }
+        },
+        {
+          "if": { "required": ["role"], "properties": { "role": { "const": "captions" } } },
+          "then": {
+            "required": ["language"],
+            "properties": { "medium": { "const": "text" }, "language": { "enum": ["yue", "en"] } }
+          }
+        }
+      ]
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "prompt", "answer"],
+      "properties": {
+        "mode": { "enum": ["phenomenon", "question"] },
+        "prompt": { "$ref": "#/$defs/text" },
+        "answer": { "$ref": "#/$defs/text" }
+      }
+    },
+    "fallback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["medium", "description", "offline", "requiresCamera", "requiresUpload"],
+      "properties": {
+        "medium": { "$ref": "#/$defs/medium" },
+        "description": { "$ref": "#/$defs/text" },
+        "offline": { "const": true },
+        "requiresCamera": { "const": false },
+        "requiresUpload": { "const": false }
+      }
+    },
+    "hazard": {
+      "enum": ["weather_lightning", "slips_traffic", "wild_animals", "hazardous_chemicals", "choking_allergy", "heat_fire", "water_depth", "sharp_tools", "small_objects", "exertion", "privacy", "loud_sound", "unknown"]
+    },
+    "activity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["instruction", "risk", "hazards", "supervision", "prerequisites", "optional", "fallback"],
+      "properties": {
+        "instruction": { "$ref": "#/$defs/text" },
+        "risk": { "enum": ["low", "moderate", "high"] },
+        "hazards": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/hazard" }
+        },
+        "supervision": { "enum": ["adult_present", "adult_leads"] },
+        "prerequisites": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/text" }
+        },
+        "optional": { "const": true },
+        "fallback": { "$ref": "#/$defs/fallback" }
+      }
+    },
+    "presentation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primaryMedium", "mediumRationale", "entry", "media", "fallback", "activity"],
+      "properties": {
+        "primaryMedium": { "$ref": "#/$defs/medium" },
+        "mediumRationale": { "$ref": "#/$defs/text" },
+        "entry": { "$ref": "#/$defs/entry" },
+        "media": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/mediaAsset" } },
+        "fallback": { "$ref": "#/$defs/fallback" },
+        "activity": { "oneOf": [{ "$ref": "#/$defs/activity" }, { "type": "null" }] }
+      }
+    },
+    "explorationLink": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["targetId", "relation", "reason", "optional"],
+      "properties": {
+        "targetId": { "$ref": "#/$defs/nodeId" },
+        "relation": { "enum": ["local_suggestion", "upstream_dependency"] },
+        "reason": { "$ref": "#/$defs/text" },
+        "optional": { "const": true }
+      },
+      "if": { "properties": { "relation": { "const": "upstream_dependency" } } },
+      "then": { "properties": { "targetId": { "$ref": "#/$defs/upstreamId" } } }
+    },
+    "ageAdaptation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ageBand", "guidance"],
+      "properties": {
+        "ageBand": { "enum": ["0-1", "1-2", "2-3", "3-6", "6-9", "9-12"] },
+        "guidance": { "$ref": "#/$defs/text" }
+      }
+    },
+    "safetyQuality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reasons", "evidence"],
+      "properties": {
+        "status": { "enum": ["research_reviewed", "manual_review_required"] },
+        "reasons": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/text" }
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^(https://[^\\s]+|(?:\\.\\.?/)*(?:[A-Za-z0-9_-]+/)*[A-Za-z0-9_.-]+(?:#[^\\s]+)?)$",
+            "description": "Research evidence reference. HTTPS link or a relative path using ASCII file names."
+          }
+        }
+      }
+    }
+  }
+}

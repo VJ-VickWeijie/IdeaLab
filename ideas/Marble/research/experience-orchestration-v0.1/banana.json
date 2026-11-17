@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "0.1.0",
+  "id": "local:banana-identification",
+  "knowledge": {
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": [
+        "mt_s08-QxASd2"
+      ]
+    },
+    "title": "香蕉是什么",
+    "descriptionSummary": "本地事物辨识样板。认识香蕉是一种水果，观察常见果形、果皮以及果肉的位置。",
+    "subject": "Science",
+    "domain": "本地事物认知",
+    "sourceType": null,
+    "sourceAge": null,
+    "tags": [
+      "object_identification",
+      "observation_comparison"
+    ],
+    "tagRationale": "以命名和识别熟悉物件为主，比较常见外形与颜色只是辅助线索。"
+  },
+  "presentation": {
+    "primaryMedium": "photo",
+    "mediumRationale": "实物照片适合幼儿辨识形状与果皮；用实拍能呈现香蕉有不同颜色和外形。",
+    "entry": {
+      "mode": "question",
+      "prompt": "这个长长的水果是什么？",
+      "answer": "这是香蕉，一种水果。外面是果皮，里面是果肉。"
+    },
+    "media": [
+      {
+        "medium": "photo",
+        "availability": "proposed"
+      },
+      {
+        "medium": "object",
+        "availability": "proposed"
+      }
+    ],
+    "fallback": {
+      "medium": "text",
+      "description": "想象一个长形、往一边弯的水果，外面的一层叫果皮，里面是果肉。我们熟悉的有黄色香蕉，也能见到不同颜色的香蕉。没有实物时也可跟成人读名称。",
+      "offline": true,
+      "requiresCamera": false,
+      "requiresUpload": false
+    },
+    "activity": {
+      "instruction": "成人拿稳一整根未剥皮的香蕉，给孩子留出距离看外形；成人负责拿走实物。",
+      "risk": "low",
+      "hazards": [
+        "choking_allergy"
+      ],
+      "supervision": "adult_leads",
+      "prerequisites": [
+        "成人全程拿持，儿童不拿取、不触摸、不闻、也不尝",
+        "有过敏顾虑、成人不在或物品不适合展示时切换文字",
+        "不展示已经切开或分散的小块"
+      ],
+      "optional": true,
+      "fallback": {
+        "medium": "text",
+        "description": "想象一个长形、往一边弯的水果，外面的一层叫果皮，里面是果肉。我们熟悉的有黄色香蕉，也能见到不同颜色的香蕉。没有实物时也可跟成人读名称。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      }
+    }
+  },
+  "exploration": [
+    {
+      "targetId": "mt_s08-QxASd2",
+      "reason": "从认识身边的香蕉，延伸到其他水果与食物的植物来源。",
+      "optional": true,
+      "relation": "local_suggestion"
+    }
+  ],
+  "adaptation": [
+    {
+      "ageBand": "0-1",
+      "guidance": "成人慢慢说「香蕉」，孩子可以只听。仅在现实活动条件核实后再展示整果。"
+    },
+    {
+      "ageBand": "1-2",
+      "guidance": "照顾者重复说「香蕉」，孩子可用目光或指一指回应。"
+    },
+    {
+      "ageBand": "2-3",
+      "guidance": "照顾者说「外面是皮」，让孩子任选看着或跟读，不要求回答。"
+    },
+    {
+      "ageBand": "3-6",
+      "guidance": "比较文字描述中的弯形与颜色，发现有些香蕉看起来不同，仍都是香蕉。"
+    }
+  ],
+  "safetyQuality": {
+    "status": "manual_review_required",
+    "reasons": [
+      "本地新增样板；上游相关食品节点只用于延伸参考，不作为同名来源。",
+      "含真实食物的显示须人工确认适龄、过敏与吞咽风险；样例中无品尝、喂食和触摸。"
+    ],
+    "evidence": [
+      "../../notes/2026-11-17-presentation-experience-prototypes-v0.1.md",
+      "https://www.fao.org/4/t0308e/t0308e03.htm",
+      "https://www.fao.org/fileadmin/templates/est/COMM_MARKETS_MONITORING/Bananas/Documents/ccpside/Foc_TR4_Workshop-FAO_1.pdf",
+      "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/choking-hazards.html"
+    ]
+  }
+}
