@@ -1,0 +1,68 @@
+{
+  "recordedAt": "2026-11-17T02:48:33+00:00",
+  "method": "独立上下文。锁定八个真实 ID 后，仅查看原版主题的原名、描述、证据、类型和年龄，再记录主标签及玩法变化时的可解释备选。记录生成前未读样本方案或作者标签。",
+  "sourceSha256": "fd96ce5963e24f11dcfb549fee46d3cb6afae5d545dc30f4d01366a406444f35",
+  "labels": {
+    "mt_wHN14Unk7h": {
+      "primary": "observation_comparison",
+      "alternatives": [
+        "cause_effect"
+      ],
+      "reason": "先比较动物的不同信号与例子，再解释这些信号如何服务于不同目的。"
+    },
+    "mt_TlLE4cZgOr": {
+      "primary": "process_change",
+      "alternatives": [
+        "cause_effect"
+      ],
+      "reason": "三项证据连接雨落、积水变少与循环。解释积水为何变少可作因果副标签。"
+    },
+    "mt_BO_AHGLCk0": {
+      "primary": "cause_effect",
+      "alternatives": [
+        "process_change",
+        "observation_comparison"
+      ],
+      "reason": "用闪电导致雷声与传播速度解释先看到、后听到的现象。"
+    },
+    "mt_Mf-T-fYRLX": {
+      "primary": "process_change",
+      "alternatives": [
+        "cause_effect",
+        "observation_comparison",
+        "procedure"
+      ],
+      "reason": "描述溶解及蒸发后重新获得溶质的物质变化。解释机制、比较或操作步骤均可作为次要视角。"
+    },
+    "mt_5UtPmgdoQ9": {
+      "primary": "procedure",
+      "alternatives": [
+        "evidence_reasoning"
+      ],
+      "reason": "预测、运行、比对、修改一次并重测构成明确可重复的步骤，以输出差异作证据。"
+    },
+    "mt_Lu4H4mbsqO": {
+      "primary": "evidence_reasoning",
+      "alternatives": [
+        "social_perspective",
+        "observation_comparison"
+      ],
+      "reason": "区分历史遗存与据此建立的论证，并说明同一证据如何支持不同但受证据约束的解释。"
+    },
+    "mt_xACS3rWWDp": {
+      "primary": "representation_model",
+      "alternatives": [
+        "rule_pattern",
+        "procedure"
+      ],
+      "reason": "把圆与长方形的等分图作为分数表征，再重组图中的半份解决问题。等份规则与作图操作也适合作副标签。"
+    },
+    "mt_mAschyjZAT": {
+      "primary": "observation_comparison",
+      "alternatives": [
+        "procedure"
+      ],
+      "reason": "先听辨目标法语变体中有意义的元音对立，再以不同词语和语音复核辨识与产出。"
+    }
+  }
+}

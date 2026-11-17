@@ -1,0 +1,2698 @@
+[
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_wHN14Unk7h",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_wHN14Unk7h",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "f567382d7cf1d12be3e241e332e7b64d6f212df2dbfb7af26b5804297eabf68d"
+      },
+      "title": "Animal Communication",
+      "descriptionSummary": "比较动物如何借声音、动作、光、气味或身体姿态传递信息，以及这些信号有什么作用。",
+      "subject": "Science",
+      "domain": "Animals of the World",
+      "sourceType": "CONCEPTUAL",
+      "sourceAge": {
+        "start": 7,
+        "end": 9
+      },
+      "tags": [
+        "observation_comparison",
+        "cause_effect"
+      ],
+      "tagRationale": "比较不同动物和信号方式是主线，信号如何帮助找食物或交流危险是机制延伸。"
+    },
+    "presentation": {
+      "primaryMedium": "audio",
+      "mediumRationale": "先听真实鸟鸣，再用可选图文承接动作和光等听不见的信号；音频拟议，文字描述可直接阅读。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "小鸟发出一串鸣叫，萤火虫却一闪一闪。",
+        "answer": "动物会用声音、动作或发光向同类传递不同信息。"
+      },
+      "media": [
+        {
+          "medium": "audio",
+          "availability": "missing",
+          "role": "ambient"
+        },
+        {
+          "medium": "photo",
+          "availability": "proposed",
+          "role": "illustration"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "把它们想成三条信息。鸟发出短叫声让同伴跟上，这是声音。有些蜜蜂以舞动传达食物所在，这是动作。有些萤火虫闪光寻找配偶，这是光。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "跟成人留在室内安全处，听原本就能听到的自然鸟鸣。没有听见时直接读文字例子。",
+        "risk": "low",
+        "hazards": [
+          "wild_animals",
+          "weather_lightning"
+        ],
+        "supervision": "adult_leads",
+        "prerequisites": [
+          "成人确认所在室内位置安全及天气无雷暴",
+          "没有惊扰、投喂、录音或追踪动物"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "把它们想成三条信息。鸟发出短叫声让同伴跟上，这是声音。有些蜜蜂以舞动传达食物所在，这是动作。有些萤火虫闪光寻找配偶，这是光。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_KTSoXcO7OL",
+        "reason": "如果孩子喜欢鸟声，可探索声音为什么有高低。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "1-2",
+        "guidance": "成人说「小鸟，啾啾」，给孩子听一遍，孩子无需回应。"
+      },
+      {
+        "ageBand": "6-9",
+        "guidance": "听和看两种信号后任选一个，比较它们传递的信息与用到的感官。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "manual_review_required",
+      "reasons": [
+        "真实录音、动物例子与实际信号目的需逐素材标注；野生动物活动仅限室内远听，避免根据单次鸟鸣推断目的。",
+        "成人须独立确认现实观察场所、风险与监护前提，具体活动文案和白名单规则的映射待人工审核。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json",
+        "https://academy.allaboutbirds.org/the-language-of-birds/",
+        "https://www.fs.usda.gov/media/245574",
+        "https://www.nps.gov/cong/learn/nature/synchronous-fireflies-at-congaree.htm",
+        "https://www.nps.gov/articles/000/wildlifewatching.htm"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_TlLE4cZgOr",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_TlLE4cZgOr",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "12d44b3d65280e9295a58934400017c248b7370128093b6b8ccd0e6c1abd4d02"
+      },
+      "title": "Rain & Puddles",
+      "descriptionSummary": "认识雨从云中落下、水坑里的水可蒸发回空气，以及水在地面和天空之间循环。",
+      "subject": "Science",
+      "domain": "Weather & Climate",
+      "sourceType": "CONCEPTUAL",
+      "sourceAge": {
+        "start": 5,
+        "end": 7
+      },
+      "tags": [
+        "process_change",
+        "cause_effect"
+      ],
+      "tagRationale": "水坑先变小和水的往复是时间过程；水去哪儿需要区分蒸发与下渗等原因。"
+    },
+    "presentation": {
+      "primaryMedium": "animation",
+      "mediumRationale": "把雨落、水坑变小和水循环画成分段序列；用标签标示不可见的水蒸气。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "昨天下过雨，地上有一摊水。今天那摊水小了。",
+        "answer": "水坑里的水可以慢慢蒸发，变成看不见的水蒸气。有些也会流走或渗进地里。"
+      },
+      "media": [
+        {
+          "medium": "animation",
+          "availability": "proposed"
+        },
+        {
+          "medium": "audio",
+          "availability": "missing",
+          "role": "ambient"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "想象两张图：雨停后，坚硬地面上有浅浅一摊水。隔了一段时间，湿痕变小。水的一部分进入空气，叫蒸发；空气里的水蒸气遇到合适的条件，能再形成小水滴。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "成人在室内平稳桌面放一只浅托盘，用拧过的湿布留一小片湿痕，过一会儿再看边缘。",
+        "risk": "low",
+        "hazards": [
+          "slips_traffic"
+        ],
+        "supervision": "adult_leads",
+        "prerequisites": [
+          "成人确认地面干燥且托盘平稳",
+          "活动远离窗口、插电设备和走道",
+          "仅由成人操作，不加热、不使用深水"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "想象两张图：雨停后，坚硬地面上有浅浅一摊水。隔了一段时间，湿痕变小。水的一部分进入空气，叫蒸发；空气里的水蒸气遇到合适的条件，能再形成小水滴。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_zCGwH1OQZa",
+        "reason": "想进一步解释湿痕和水滴，可比较蒸发与凝结。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "2-3",
+        "guidance": "成人先说「地面湿了，后来慢慢干了」，孩子可指一指湿痕。"
+      },
+      {
+        "ageBand": "6-9",
+        "guidance": "用时间先后描述湿痕怎样变，在水坑例子里补充下渗或流走的可能。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "manual_review_required",
+      "reasons": [
+        "上游用蒸发解释水坑变小，实际机制可有多种；动画不可把水蒸气绘成真实可见的白烟。",
+        "成人须独立确认现实观察场所、风险与监护前提，具体活动文案和白名单规则的映射待人工审核。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json",
+        "https://www.usgs.gov/water-science-school/science/evaporation-and-water-cycle",
+        "https://www.usgs.gov/water-science-school/water-cycle"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_BO_AHGLCk0",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_BO_AHGLCk0",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "8ff8f93666b245c1a816226e6c787700ae9051eee83ad6e1b21fa647e669fd75"
+      },
+      "title": "Thunder & Lightning",
+      "descriptionSummary": "认识闪电的放电本质、放电使周围空气急剧变化产生雷声，以及光和声音的到达差。",
+      "subject": "Science",
+      "domain": "Weather & Climate",
+      "sourceType": "CONCEPTUAL",
+      "sourceAge": {
+        "start": 7,
+        "end": 9
+      },
+      "tags": [
+        "cause_effect",
+        "process_change"
+      ],
+      "tagRationale": "放电、空气迅速膨胀与雷声是因果链，先接收到光后接收到声音则是可呈现的时间关系。"
+    },
+    "presentation": {
+      "primaryMedium": "animation",
+      "mediumRationale": "用无强闪、无爆响的静态帧或缓动示意一次闪电与两个到达时刻。",
+      "entry": {
+        "mode": "question",
+        "prompt": "点两格示意图，为什么先看到闪光文字，再看到雷声文字？",
+        "answer": "闪电让周围空气迅速膨胀，发出雷声。光比空气中的声音传播得快，所以通常先看到闪电。"
+      },
+      "media": [
+        {
+          "medium": "animation",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "同一次闪电可以同时产生光和雷声。先到的是光，后来到的是声音，像同一时间从同一处出发却走得快慢不同。示例使用文字，在室内远离窗门的安全位置阅读。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": null
+    },
+    "exploration": [
+      {
+        "targetId": "mt_4pLvMN8uzL",
+        "reason": "由原版雷暴安全前置关系进入独立安全知识，探索卡仍保持可选。",
+        "optional": true,
+        "relation": "upstream_dependency"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "6-9",
+        "guidance": "把「放电」「光先到」「雷声后到」说成两句：雷声怎么来，为什么稍后才听见。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "区分光和声的传播速度，不把闪雷间隔当作户外活动是否安全的判断。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "manual_review_required",
+      "reasons": [
+        "原版强调云中放电，配置文字也允许云地之间的放电。",
+        "仅使用离线低刺激示意，无现场观察；需人工审核可能被理解为要求跟踪闪雷的措辞。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json",
+        "https://www.weather.gov/safety/lightning-safety-overview",
+        "https://www.weather.gov/safety/lightning-indoors",
+        "https://www.weather.gov/safety/lightning-science-thunder",
+        "https://www.hko.gov.hk/tc/publica/gen_pub/ts.htm"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_4pLvMN8uzL",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_4pLvMN8uzL",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "16b027f0cb1d421a8298fc8684c81de71b764e23db3b35555fe5065048715494"
+      },
+      "title": "Storm Safety",
+      "descriptionSummary": "理解雷暴时寻求安全庇护、避免树下或水边，以及受到惊吓时可得到成人支持。",
+      "subject": "Science",
+      "domain": "Weather & Climate",
+      "sourceType": "CONCEPTUAL",
+      "sourceAge": {
+        "start": 5,
+        "end": 7
+      },
+      "tags": [
+        "procedure",
+        "cause_effect"
+      ],
+      "tagRationale": "按情境选择避险行动是主学习目标，风险原因用于解释为什么应更换场所。"
+    },
+    "presentation": {
+      "primaryMedium": "comparison_card",
+      "mediumRationale": "用虚构地点对照稳固封闭建筑和开敞遮雨点，不以测验或雷声刺激推进。",
+      "entry": {
+        "mode": "question",
+        "prompt": "听到打雷，可以去树下躲雨吗？",
+        "answer": "请立刻跟成人进入稳固封闭建筑物，离开树下和水边；在室内也要远离窗户和门。"
+      },
+      "media": [
+        {
+          "medium": "comparison_card",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "想象人物在树下听到雷声。她跟大人进入稳固封闭建筑物，在远离窗门、水管和插电设备的地方等候。这个故事在文字里体验即可。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": null
+    },
+    "exploration": [
+      {
+        "targetId": "mt_BO_AHGLCk0",
+        "reason": "安全场景结束后，可选看一页雷声如何产生的示意。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "3-6",
+        "guidance": "成人说「听到雷声，跟我进屋」，用一句确定的动作给安全感。"
+      },
+      {
+        "ageBand": "6-9",
+        "guidance": "从纸面情境找稳固封闭的室内空间，理解开敞雨棚遮雨但不能提供雷电防护。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "manual_review_required",
+      "reasons": [
+        "原版简写了进汽车的条件；此儿童研究稿优先选稳固封闭建筑，车辆细节交成人专业审查。",
+        "雷暴节点进入人工复核；任何实地验证均禁用。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json",
+        "https://www.weather.gov/safety/lightning-safety-overview",
+        "https://www.weather.gov/safety/lightning-indoors",
+        "https://www.hko.gov.hk/tc/publica/gen_pub/ts.htm"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_zCGwH1OQZa",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_zCGwH1OQZa",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "b6eeabbc1eaa5af7370f100b6a9824851e7050c908c18e03213ead6dff231a9e"
+      },
+      "title": "Evaporation and condensation",
+      "descriptionSummary": "用蒸发、凝结、降水、汇集等名称解释水循环的几条路径，并区分看不见的水蒸气与液态小水滴。",
+      "subject": "Science",
+      "domain": "Earth's Systems",
+      "sourceType": "LANGUAGE",
+      "sourceAge": {
+        "start": 7,
+        "end": 10
+      },
+      "tags": [
+        "process_change",
+        "representation_model"
+      ],
+      "tagRationale": "物态与位置的变化是学习主线；图上分支支持蒸腾、径流与地下水等未走同一路径的过程。"
+    },
+    "presentation": {
+      "primaryMedium": "diagram",
+      "mediumRationale": "用带标示的多条箭头显示变化方向并容纳分叉；局部过程可以放大。",
+      "entry": {
+        "mode": "question",
+        "prompt": "冰过的杯子外面的小水珠是从哪里来的？",
+        "answer": "空气里的水蒸气碰到较冷的杯壁，变成液态小水滴，叫凝结。"
+      },
+      "media": [
+        {
+          "medium": "diagram",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "水从湖面变成空气里看不见的水蒸气，叫蒸发。水蒸气遇冷能变回小水滴，叫凝结。水从云中下降是降水；落地后有的汇入河流，有的渗入地下。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "成人在平稳桌面放凉水容器供远看，只看外壁是否出现小水滴。",
+        "risk": "low",
+        "hazards": [
+          "slips_traffic"
+        ],
+        "supervision": "adult_leads",
+        "prerequisites": [
+          "仅由成人持拿非易碎容器",
+          "桌面干燥且远离电器",
+          "无明显水滴或无法安全摆放时读文字"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "水从湖面变成空气里看不见的水蒸气，叫蒸发。水蒸气遇冷能变回小水滴，叫凝结。水从云中下降是降水；落地后有的汇入河流，有的渗入地下。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_TlLE4cZgOr",
+        "reason": "用雨后水坑作为最贴近日常的水循环入口。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "6-9",
+        "guidance": "一边看湿痕和杯壁的文字示意，一边把「蒸发」与「凝结」分别对应。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "沿两条路径追踪一滴水，补充蒸腾、径流或者地下水。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "research_reviewed",
+      "reasons": [
+        "上游教学文字讲顺序；研稿保留示范顺序，并说明水循环的路径可分叉。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json",
+        "https://www.usgs.gov/water-science-school/science/condensation-and-water-cycle",
+        "https://www.usgs.gov/water-science-school/water-cycle"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_s08-QxASd2",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_s08-QxASd2",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "69a6f0a7c0cfa5837741af60e5efd143c9002c66d05bf263b3b8137ba39cf808"
+      },
+      "title": "Everyday Foods from Rainforests",
+      "descriptionSummary": "认识可可、香蕉、咖啡、巴西坚果等与热带环境有关的食物例子，并把农产品同植物来源相连。",
+      "subject": "Science",
+      "domain": "Rainforests",
+      "sourceType": "CONCEPTUAL",
+      "sourceAge": {
+        "start": 5,
+        "end": 7
+      },
+      "tags": [
+        "object_identification",
+        "process_change"
+      ],
+      "tagRationale": "先把实物与对应植物识别出来，再讨论原料怎样成为熟悉的食品。"
+    },
+    "presentation": {
+      "primaryMedium": "comparison_card",
+      "mediumRationale": "并列显示植物、果实或种子及可能制成的食品，用来源题注区分原料与成品。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "一边是可可树上的果实，一边是巧克力。",
+        "answer": "巧克力的原料来自可可种子。香蕉也是植物结出的果实。"
+      },
+      "media": [
+        {
+          "medium": "comparison_card",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "可可树结果，果实里的可可种子是制作巧克力的原料。香蕉植物结香蕉。可以买到这些食品的地方很多，实际产地要看具体来源。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": null
+    },
+    "exploration": [
+      {
+        "targetId": "local:banana-identification",
+        "reason": "想认识具体的香蕉形状和果皮时，进入独立本地样板。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "3-6",
+        "guidance": "成人一边读一边对照水果名字和植物名字，任选一组即可。"
+      },
+      {
+        "ageBand": "6-9",
+        "guidance": "区分原料与加工成品，并思考一种作物可以在什么地方栽培。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "manual_review_required",
+      "reasons": [
+        "不据上游标题把现代商品统一标为在天然雨林内生产。",
+        "原文列举坚果等食物。本样本没有寻找、触摸或试吃任务。来源及授权图片在使用前人工审校。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json",
+        "https://www.fao.org/4/t0308e/t0308e03.htm",
+        "https://www.si.edu/spotlight/chocolate",
+        "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/choking-hazards.html"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_KTSoXcO7OL",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_KTSoXcO7OL",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "0b991169521c6ea470249f08e50afc60aff9a463b59b84a067e8b32e830cba3e"
+      },
+      "title": "Pitch of Sounds",
+      "descriptionSummary": "观察什么会改变声音高低，并把音高同振动快慢联系起来。",
+      "subject": "Science",
+      "domain": "Waves, Light & Sound",
+      "sourceType": "CONCEPTUAL",
+      "sourceAge": {
+        "start": 3,
+        "end": 10
+      },
+      "tags": [
+        "observation_comparison",
+        "cause_effect"
+      ],
+      "tagRationale": "先比较音高与发声条件，再解释振动频率；同一把弦上控制条件的例子能防止过度概括。"
+    },
+    "presentation": {
+      "primaryMedium": "audio",
+      "mediumRationale": "需直接听到两个高低不同但音量相近的声音；并给同内容的可读说明。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "两个声音一样轻，一个听起来比较高，另一个比较低。",
+        "answer": "音高是声音听起来的高低，和振动快慢有关。音量是声音听起来有多响。"
+      },
+      "media": [
+        {
+          "medium": "audio",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "想象先后听见两个一样轻的音。一个音每秒的振动次数较多，听起来较高；另一个次数较少，听起来较低。用文字能理解差别，实际听辨等有合适声音时再试。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "如孩子愿意，成人用平时说话的轻柔音量哼两个舒服的音，各一次。",
+        "risk": "low",
+        "hazards": [
+          "loud_sound"
+        ],
+        "supervision": "adult_leads",
+        "prerequisites": [
+          "不靠近耳朵、不提高音量和不使用扩音设备",
+          "孩子对声音不适时停止"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "想象先后听见两个一样轻的音。一个音每秒的振动次数较多，听起来较高；另一个次数较少，听起来较低。用文字能理解差别，实际听辨等有合适声音时再试。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_2mb17lUCPD",
+        "reason": "喜欢听声音变化时，可以进一步用声音和停顿表达一个场景。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "3-6",
+        "guidance": "只说「这个音高些，那个音低些」，允许用手势表示。"
+      },
+      {
+        "ageBand": "6-9",
+        "guidance": "阅读同类弦其他条件保持相近时的对比，区分声音的高低和响轻。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "research_reviewed",
+      "reasons": [
+        "短、细、紧和音高的关系只在具体模型及控制其他条件下陈述；本稿不提供绷紧或拉扯物品的任务。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json",
+        "https://openstax.org/books/psychology-2e/pages/5-2-waves-and-wavelengths"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_0NlbulkB5P",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_0NlbulkB5P",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "96a5a8bba5451eed05ce6b611fc4706f9113a5b7ada6fa1e006490964a3ca5d0"
+      },
+      "title": "Digestion & Enzymes",
+      "descriptionSummary": "认识消化道里的器官、机械和化学消化，并理解酶怎样帮助分解食物。",
+      "subject": "Science",
+      "domain": "Organisms & Life Processes",
+      "sourceType": "CONCEPTUAL",
+      "sourceAge": {
+        "start": 11,
+        "end": 13
+      },
+      "tags": [
+        "process_change",
+        "cause_effect"
+      ],
+      "tagRationale": "食物经历有先后；不同部位的移动与分解机制需要另外解释。"
+    },
+    "presentation": {
+      "primaryMedium": "diagram",
+      "mediumRationale": "一条可追踪的路线展示器官位置，并用单独箭头标示胰液进入小肠。",
+      "entry": {
+        "mode": "question",
+        "prompt": "咬碎的面包吞下去之后，会去哪里？",
+        "answer": "食物经过食道抵达胃，再进入小肠。咀嚼和搅动帮助变碎混合，消化酶帮助分解其中的营养成分。"
+      },
+      "media": [
+        {
+          "medium": "diagram",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "嘴里咀嚼，食道把食物推向胃，胃搅拌食物，小肠继续消化和吸收大部分营养，余下内容进入大肠。唾液中的酶可开始分解淀粉，胰腺产生的酶也可以在小肠发挥作用。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": null
+    },
+    "exploration": [
+      {
+        "targetId": "mt_s08-QxASd2",
+        "reason": "先知道原料如何来自植物，也可追问它进入人体以后发生什么。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "6-9",
+        "guidance": "用口腔、胃、小肠三站认识食物的旅程。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "对比咀嚼与酶分解，并把经过食物的器官和提供消化液的器官画开。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "research_reviewed",
+      "reasons": [
+        "保留原版 11–13 岁范围；六段年龄中的简化路线是本地适配。酶的来源不应省略胰腺。",
+        "只用示意和文字，取消进食、吞咽或身体检查。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json",
+        "https://www.niddk.nih.gov/health-information/digestive-diseases/digestive-system-how-it-works"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_Mf-T-fYRLX",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_Mf-T-fYRLX",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "953993a9c3e32c2f87db90b7e6c8c8e9f5e5436bae6d23ef8921bf4b39248cf0"
+      },
+      "title": "Dissolving & Solutions",
+      "descriptionSummary": "认识在液体中形成溶液的溶解现象，并以水蒸发后回收普通盐为分离例子。",
+      "subject": "Science",
+      "domain": "Matter & Materials",
+      "sourceType": "CONCEPTUAL",
+      "sourceAge": {
+        "start": 9,
+        "end": 12
+      },
+      "tags": [
+        "process_change",
+        "cause_effect"
+      ],
+      "tagRationale": "核心是盐溶解及随后回收的状态变化；机制解释层再引入盐均匀分散及水的蒸发。"
+    },
+    "presentation": {
+      "primaryMedium": "animation",
+      "mediumRationale": "用可控的示意帧并置颗粒层和看得见的杯中变化。无需演示加热或实际化学操作。",
+      "entry": {
+        "mode": "question",
+        "prompt": "水里看不见盐了，盐去了哪里？",
+        "answer": "盐在水里均匀分散，形成盐水。水渐渐蒸发时，可以留下盐。"
+      },
+      "media": [
+        {
+          "medium": "animation",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "想象三帧：杯里可见盐粒；后来是一杯盐水，盐均匀分散；水分蒸发后留下固体盐。溶液属于混合物，靠颜色或者能否看见颗粒，无法独立判定。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": null
+    },
+    "exploration": [
+      {
+        "targetId": "mt_zCGwH1OQZa",
+        "reason": "溶液分离例子里的水变少，与水循环中的蒸发使用同一概念。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "6-9",
+        "guidance": "看文字三帧，比较看不见的盐与最后出现的盐。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "用溶质和溶剂解释普通盐从水中回收的条件，并区分溶液与悬浮混合物。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "manual_review_required",
+      "reasons": [
+        "原版证据把混合物和溶液相对比，容易被误读为溶液不属于混合物；上游原文保留，修订解释进入人工队列。",
+        "化学场景只呈现离线示意；引用的专业教学实验含成人实验条件，儿童侧不可直接触达实验操作。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json",
+        "https://edu.rsc.org/cpd/how-to-teach-solubility-at-14-16/4021197.article",
+        "https://edu.rsc.org/experiments/separating-sand-and-salt-by-filtering-and-evaporation/386.article"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_8FUXG_39-C",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_8FUXG_39-C",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "a5c0b37929034c0f1cd0c3f4eca2e1f039c9cd0b3e223ad50ad47295851a97d3"
+      },
+      "title": "Cutting with a saw safely",
+      "descriptionSummary": "原版是手锯实践的安全技能。研究稿仅识别制作任务为何需要成人安排及适当工作环境。",
+      "subject": "Science",
+      "domain": "Design & Technology",
+      "sourceType": "PROCEDURAL",
+      "sourceAge": {
+        "start": 9,
+        "end": 12
+      },
+      "tags": [
+        "procedure"
+      ],
+      "tagRationale": "原版目标是可观察的顺序技能，但面向居家儿童的研究仅保留纸上安全决策。"
+    },
+    "presentation": {
+      "primaryMedium": "comparison_card",
+      "mediumRationale": "用无工具操作的纸面情景区分标定目标与必须由成人安排的实际加工。",
+      "entry": {
+        "mode": "question",
+        "prompt": "做模型需要一块合适长短的木片时，家里没有合适的工具和场地，怎么办？",
+        "answer": "请把需要的长短告诉成人，请成人负责选择材料、工具和工作环境。"
+      },
+      "media": [
+        {
+          "medium": "comparison_card",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "模型需要长度为 8 格的木片。线条一是 8 格，线条二是 6 格。可以用纸上的线条向成人解释想要的长度，然后由成人决定是否以及在哪里进行加工。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": null
+    },
+    "exploration": [
+      {
+        "targetId": "mt_5UtPmgdoQ9",
+        "reason": "软件调试与纸面制作计划都可以比对预计和实际结果。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "6-9",
+        "guidance": "在纸上指出模型需要多长的线条，再由成人负责后续安排。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "比较计划长度与结果长度，可用纯纸面数字解释误差，不用工具。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "manual_review_required",
+      "reasons": [
+        "真实工具技能无法由纸面替代证明。",
+        "尖锐工具风险进入人工队列。研究稿不提供手锯操作、动作示范或幼儿可模仿的步骤。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json",
+        "https://primary.cleapss.org.uk/resources/doing-things-safely/equipment/"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_6Z42wJaKYG",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_6Z42wJaKYG",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "b940fb1b0eb8c447198b4ef59068f02758810ec4428b3f14431bdbbbc8acb74d"
+      },
+      "title": "Fossils as Evidence",
+      "descriptionSummary": "观察化石留下的身体遗存或活动痕迹，据形状和出土背景有条件地推断过去的生物与环境。",
+      "subject": "Science",
+      "domain": "Dinosaurs & Paleontology",
+      "sourceType": "CONCEPTUAL",
+      "sourceAge": {
+        "start": 8,
+        "end": 11
+      },
+      "tags": [
+        "evidence_reasoning",
+        "observation_comparison"
+      ],
+      "tagRationale": "重点是从证据推断与说明限度。观察、比较现代生物痕迹是具体方法。"
+    },
+    "presentation": {
+      "primaryMedium": "photo",
+      "mediumRationale": "有比例尺和出土说明的真实化石照片保留纹理与上下文；使用前核权。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "一块岩石上，有好几个朝同一方向的脚印形状。",
+        "answer": "这些痕迹给了我们线索，提示可能有生物走过那片地面。"
+      },
+      "media": [
+        {
+          "medium": "photo",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "想象四个互相隔开、方向相近的三趾形印痕。看到的是印痕的形状和排列，推断的是某种生物走过。想弄清是什么生物，需要和更多足迹、标本及岩层资料一起比较。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": null
+    },
+    "exploration": [
+      {
+        "targetId": "mt_Lu4H4mbsqO",
+        "reason": "跨到历史证据领域，比较观察到什么与据此解释什么。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "6-9",
+        "guidance": "先说「看到了几个印痕」，再说「可能有生物走过」。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "比较两组假设，包括印痕同向和印痕成对出现等证据，说明每一组的推断边界。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "research_reviewed",
+      "reasons": [
+        "图像上线前分别核查版权、比例尺、形成情境；这里不提供采集、敲击岩石或到野外寻找的活动。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json",
+        "https://www.nps.gov/subjects/fossils/trace-fossils.htm"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_obF-6VYRya",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_obF-6VYRya",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "6aad8b2be2782dad4ff06f797a3a9ac03d7282249eb5ce0455f44f05b74b5d05"
+      },
+      "title": "Changing Your Mind with Evidence",
+      "descriptionSummary": "当观察结果与预测不符时，重新检查证据和原解释，并在有足够证据时修正判断。",
+      "subject": "Science",
+      "domain": "Scientific Inquiry",
+      "sourceType": "META",
+      "sourceAge": {
+        "start": 6,
+        "end": 8
+      },
+      "tags": [
+        "evidence_reasoning"
+      ],
+      "tagRationale": "改不改看证据支持度；「试一试」和按步骤比较在这里服务于论证。"
+    },
+    "presentation": {
+      "primaryMedium": "comparison_card",
+      "mediumRationale": "把预测、观察与修订结果并排，让差异作为故事的转折直接可见。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "小敏猜两幅图都有三个圆，仔细看后一幅却是四个。",
+        "answer": "先重新数一遍。如果还是四个，就按观察结果修改原来的猜想。"
+      },
+      "media": [
+        {
+          "medium": "comparison_card",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "小敏写下预测：两幅图各有三个圆。第一幅是「○○○」，第二幅是「○○○○」。她再指着每个圆数了一次，于是记录「第一幅三个，第二幅四个」。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": null
+    },
+    "exploration": [
+      {
+        "targetId": "mt_5UtPmgdoQ9",
+        "reason": "可选用同一种先预测、再运行并比较的方法测试程序。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "3-6",
+        "guidance": "成人沿着两行圆一个个指着数，孩子可以只看，不用解释。"
+      },
+      {
+        "ageBand": "6-9",
+        "guidance": "区分原先的猜想和后来可重复检查的观察。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "manual_review_required",
+      "reasons": [
+        "上游把令人意外的结果描述为更有价值。本地草案仅保留证据的解释作用，待人工审定。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_2mb17lUCPD",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_2mb17lUCPD",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "890fb1a473145d4ad62f332f1dc01b18a30794f3241a712ec8eedd255af138bc"
+      },
+      "title": "Creating and shaping musical sound",
+      "descriptionSummary": "有目的地安排声音和停顿，聆听效果后调整时机、音色或音乐对比。",
+      "subject": "Performing Arts",
+      "domain": "Music",
+      "sourceType": "PROCEDURAL",
+      "sourceAge": {
+        "start": 3,
+        "end": 12
+      },
+      "tags": [
+        "procedure",
+        "observation_comparison"
+      ],
+      "tagRationale": "创造、聆听、调整是行动循环；比较两个版本帮助判断预期表达效果。"
+    },
+    "presentation": {
+      "primaryMedium": "audio",
+      "mediumRationale": "一对轻音量的原创短音段可以直接展示不同停顿的效果；文字转写可部分替代。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "「嗒——嗒」和「嗒嗒」用了两个一样的音，两种听法却不同。",
+        "answer": "声响之间的停顿会改变听起来的感觉。"
+      },
+      "media": [
+        {
+          "medium": "audio",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "第一版写作「嗒，停一拍，再嗒」。第二版写作「嗒嗒，中间很短」。前一版有留白，后一版更紧凑。两个版本都可变化，没有规定哪种感受才正确。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "成人轻拍一下自己的大腿，停一会儿再拍一下；然后用相同力度轻拍两下作比较。",
+        "risk": "low",
+        "hazards": [
+          "loud_sound"
+        ],
+        "supervision": "adult_leads",
+        "prerequisites": [
+          "坐在室内，不敲物件、不放大音量",
+          "孩子不舒服时立即停下"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "第一版写作「嗒，停一拍，再嗒」。第二版写作「嗒嗒，中间很短」。前一版有留白，后一版更紧凑。两个版本都可变化，没有规定哪种感受才正确。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_KTSoXcO7OL",
+        "reason": "如果兴趣来自音高差异，可探索振动如何影响声音高低。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "3-6",
+        "guidance": "用一个轻拍和一个停顿模仿走路，不要求节拍一致。"
+      },
+      {
+        "ageBand": "6-9",
+        "guidance": "调整一个停顿的位置，比较想表达的两种场景，任选一种结束。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "research_reviewed",
+      "reasons": [
+        "原版重点是声音服务表达目的；文字版可概念比较，实际听感和表演还需真实声音或适配媒介。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_-c4Ca_nBzX",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_-c4Ca_nBzX",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "4cc27db337f6f878ca8e05e20f3829fb481f2337311a9d49da96caf7b79f5f15"
+      },
+      "title": "Probability as a Fraction",
+      "descriptionSummary": "用分数表示简单等可能事件并在 0～1 刻度上表达它。",
+      "subject": "Mathematics",
+      "domain": "Probability",
+      "sourceType": "REPRESENTATIONAL",
+      "sourceAge": {
+        "start": 9,
+        "end": 12
+      },
+      "tags": [
+        "representation_model",
+        "rule_pattern"
+      ],
+      "tagRationale": "用分数和刻度表示概率是主任务，等可能是可按结果个数进行计算的前提。"
+    },
+    "presentation": {
+      "primaryMedium": "interactive",
+      "mediumRationale": "用原地可点击的模拟事件和数轴对照分数；即使没有交互媒体，文字仍提供完整例子。",
+      "entry": {
+        "mode": "question",
+        "prompt": "一枚公平骰子出现 6，有多大的可能？",
+        "answer": "六面一样可能，其中一面写着 6，所以概率是六分之一。"
+      },
+      "media": [
+        {
+          "medium": "interactive",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "公平骰子的结果是 1、2、3、4、5、6。想要的结果只有 6，因此概率是 1/6，位于 0 和 1/2 之间。一次掷出什么无法由这个分数提前决定。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": null
+    },
+    "exploration": [
+      {
+        "targetId": "mt_xACS3rWWDp",
+        "reason": "数轴上的 1/2 和图形对半都是同一个分数的不同表示。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "6-9",
+        "guidance": "在六个文字结果中找出想要的一个，可只比较多和少。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "改成出现偶数，数出三个满足条件的等可能结果，因此是 3/6，位于数轴中间。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "research_reviewed",
+      "reasons": [
+        "等可能条件写入题干；离线示例只显示理论概率，无需实物骰子、账号、联网或大量试验。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_dlm3NspUyy",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_dlm3NspUyy",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "949979aaa62988556a12e4035dc93c8ab801aa412615688c05f9a63f2a6c5123"
+      },
+      "title": "Mixed and Conflicting Emotions",
+      "descriptionSummary": "理解一个人在同一个情境下可能同时有几种感受，有些还会互相拉扯。",
+      "subject": "Personal & Social Development",
+      "domain": "Emotional Literacy",
+      "sourceType": "CONCEPTUAL",
+      "sourceAge": {
+        "start": 9,
+        "end": 11
+      },
+      "tags": [
+        "social_perspective",
+        "observation_comparison"
+      ],
+      "tagRationale": "同一人物或两个人可以有不同感受，通过虚构人物与视角理解，观察比较是辅助。"
+    },
+    "presentation": {
+      "primaryMedium": "comparison_card",
+      "mediumRationale": "同一人物的两个念头并列显示，避免用单一表情预设唯一情绪。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "快去新学校了。小贝既想认识新同学，也有点担心。",
+        "answer": "期待和紧张可以一起出现。"
+      },
+      "media": [
+        {
+          "medium": "comparison_card",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "小贝说「我想认识新朋友」，又说「我还不知道教室在哪里」。前一句显出期待，后一句可能有点紧张。她想说或想先安静一下都可以，也可以找信任的大人聊。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": null
+    },
+    "exploration": [
+      {
+        "targetId": "mt_LhkP_KKIRS",
+        "reason": "想找更贴切的词，可以先看看常见情绪名称。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "6-9",
+        "guidance": "给故事角色的两种感受命名，不要求说出自己的经历。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "可以谈同一人物的两个视角，或者写一句支持角色的话；可自然结束。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "manual_review_required",
+      "reasons": [
+        "原版的安慰不应扩展为一概无需帮助。样板无需自我披露，不推断个人心理状态；语气和适龄支持表达待人工审阅。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json",
+        "https://www.nimh.nih.gov/health/publications/children-and-mental-health"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_5UtPmgdoQ9",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_5UtPmgdoQ9",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "e4d2c7ad2860cdde057d2ba9ff788ed5dcb0a9ee5f5a2cf5c0d3aba519da6549"
+      },
+      "title": "Testing and debugging programs",
+      "descriptionSummary": "预测可视化程序的行为，运行并比较结果，找到差异后每次改一处再验证。",
+      "subject": "Computing",
+      "domain": "Algorithms & Programming",
+      "sourceType": "PROCEDURAL",
+      "sourceAge": {
+        "start": 6,
+        "end": 13
+      },
+      "tags": [
+        "procedure",
+        "evidence_reasoning"
+      ],
+      "tagRationale": "反复运行和修改是核心技能；预测与实际结果的差异提供排错证据。"
+    },
+    "presentation": {
+      "primaryMedium": "interactive",
+      "mediumRationale": "逐步执行的本地沙盒可同时显示预测和结果，并在每次修改后用相同输入重试。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "你想让纸面小车到第 2 格，可是它停在第 3 格。",
+        "answer": "先比较预想和实际，再只改一个可能出错的步骤，重跑看看结果。"
+      },
+      "media": [
+        {
+          "medium": "interactive",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "车从 0 格出发，当前指令是「向右走 1 格，再向右走 2 格」，结果是第 3 格。把第二条改成「向右走 1 格」，从 0 重来，就到第 2 格。一次只改第二条，方便看出变化来自哪里。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "由成人用纸画 0 至 4 格，用手指做小车，依次演示原指令和改动一处后的指令。",
+        "risk": "low",
+        "hazards": [],
+        "supervision": "adult_present",
+        "prerequisites": [
+          "在室内桌面操作",
+          "用手指指格，避免使用小棋子"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "车从 0 格出发，当前指令是「向右走 1 格，再向右走 2 格」，结果是第 3 格。把第二条改成「向右走 1 格」，从 0 重来，就到第 2 格。一次只改第二条，方便看出变化来自哪里。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_Lu4H4mbsqO",
+        "reason": "在两个题目里都要把实际观察到的证据与自己推断的原因分开。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "6-9",
+        "guidance": "先找出实际多走了几格，再只改一条指令。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "换一个终点做第二个测试，并比较每次修改前后的结果。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "research_reviewed",
+      "reasons": [
+        "样例只改变一项指令；暂未部署可视化沙盒，纸上和文字过程可独立运行。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_HopZomN12L",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_HopZomN12L",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "3cc0003be857830d1fab6022c6cff7dc8a77c3681a92f90c784b154f2806e9e7"
+      },
+      "title": "AI Data Collection and Privacy",
+      "descriptionSummary": "了解 AI 服务可能收集什么资料、谁持有资料以及为什么值得关心，涉及网站跟踪与智能音箱等例子。",
+      "subject": "Computing",
+      "domain": "Artificial Intelligence",
+      "sourceType": "CONCEPTUAL",
+      "sourceAge": {
+        "start": 8,
+        "end": 12
+      },
+      "tags": [
+        "cause_effect",
+        "evidence_reasoning"
+      ],
+      "tagRationale": "资料进入服务后可能怎样被处理是核心机制；具体设备行为和宣称需要查证来源。"
+    },
+    "presentation": {
+      "primaryMedium": "diagram",
+      "mediumRationale": "用虚构的资料流箭头标注资料、可能接收者和处理目的，避免孩子接触真实账户。",
+      "entry": {
+        "mode": "question",
+        "prompt": "跟智能音箱说一句话，这句话可能去了哪里？",
+        "answer": "设备可能在唤醒后处理语音；有些服务会把录音送到服务器，是否保存取决于服务和设置。"
+      },
+      "media": [
+        {
+          "medium": "diagram",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "在虚构例子中，音箱接到「播雨声」后，把语音送给服务，服务识别请求，再回传雨声。「语音发送」「语音保存」是两个不同问题。这个虚构例子没有真实名字或录音。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "成人口述虚构的雨声请求，在空白纸上指出音箱、服务、回传三个位置。",
+        "risk": "low",
+        "hazards": [
+          "privacy"
+        ],
+        "supervision": "adult_present",
+        "prerequisites": [
+          "全程只用虚构资料",
+          "不启动麦克风或联网设备",
+          "不收集名字、声音、账号或地址"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "在虚构例子中，音箱接到「播雨声」后，把语音送给服务，服务识别请求，再回传雨声。「语音发送」「语音保存」是两个不同问题。这个虚构例子没有真实名字或录音。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_5UtPmgdoQ9",
+        "reason": "把「唤醒后才进入下一步骤」画成一条假想流程，再检查预期和流程结果。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "6-9",
+        "guidance": "以虚构玩具区分「它听到请求」和「它把资料留起来」。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "区分本地唤醒、上传处理、保存与删除，并说明哪些须看具体产品。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "manual_review_required",
+      "reasons": [
+        "上游的 always listening 容易误读为所有设备持续保存录音；产品特定行为和儿童资料表述须复核。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json",
+        "https://beconnected.esafety.gov.au/topic-library/introduction-to-smart-homes/using-a-voice-assistant/security-and-privacy-with-a-voice-assistant",
+        "https://www.esafety.gov.au/key-topics/esafety-guide/google-assistant"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_4GiE83rJF_",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_4GiE83rJF_",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "d5cb6489cb67cabc9ca5d7bfacd1bfe2cf6b6702efae06b2ddcf54e67cbd9e9f"
+      },
+      "title": "Rhyming words",
+      "descriptionSummary": "辨认和说出押韵单词，享受故事、儿歌或诗中重复的音韵。",
+      "subject": "English",
+      "domain": "Phonics & Word Reading",
+      "sourceType": "PROCEDURAL",
+      "sourceAge": {
+        "start": 4,
+        "end": 8
+      },
+      "tags": [
+        "rule_pattern",
+        "observation_comparison"
+      ],
+      "tagRationale": "识别并迁用重复的词尾音型是首要目标；对比新词发音支持辨认。"
+    },
+    "presentation": {
+      "primaryMedium": "audio",
+      "mediumRationale": "让孩子先听英语词尾，避免把押韵误作比较拼写；可由成人用稳定发音代读。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "Cat, hat。两个词开头变了，末尾听着有什么相似？",
+        "answer": "Cat 和 hat 的末尾声音相同，所以它们押韵。"
+      },
+      "media": [
+        {
+          "medium": "audio",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "读得到声音时，可以把 cat、hat 和 dog 连在一起听，cat 和 hat 的词尾押韵，dog 的末尾不同。只有文字时，先读这个已经给出答案的例子，声音辨认可以下次再体验。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "由能稳定英语发音的成人念 cat、hat、dog，孩子可听或一起念。",
+        "risk": "low",
+        "hazards": [],
+        "supervision": "adult_present",
+        "prerequisites": [
+          "在安静室内使用自然音量",
+          "不开麦克风，不录音",
+          "成人能示范目标发音"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "读得到声音时，可以把 cat、hat 和 dog 连在一起听，cat 和 hat 的词尾押韵，dog 的末尾不同。只有文字时，先读这个已经给出答案的例子，声音辨认可以下次再体验。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_mAschyjZAT",
+        "reason": "转到另一语言听音的异同；押韵与鼻化元音辨认分别练习。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "3-6",
+        "guidance": "两词短重复并直接揭示相同词尾，孩子可以只听。"
+      },
+      {
+        "ageBand": "6-9",
+        "guidance": "加入 dog 对照，再听成人念同样词尾的新词。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "research_reviewed",
+      "reasons": [
+        "词尾对比选发音稳定的基础例子；文字替代提供知识解释，语音听辨能力尚待有音源时验证。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_VEwM7ClYYE",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_VEwM7ClYYE",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "7ba56cb988709b0fee067f1e417eb133939fd7c054ca499a401c1cf7ad16dc7d"
+      },
+      "title": "Story Sequence and Central Message",
+      "descriptionSummary": "梳理故事事件先后、复述关键细节及理解中心意思，也观察非虚构文本的信息关联。",
+      "subject": "English",
+      "domain": "Reading Comprehension",
+      "sourceType": "CONCEPTUAL",
+      "sourceAge": {
+        "start": 3,
+        "end": 12
+      },
+      "tags": [
+        "process_change",
+        "evidence_reasoning"
+      ],
+      "tagRationale": "事件先后帮助复述，选取关键细节才能说明对中心意思的理解。"
+    },
+    "presentation": {
+      "primaryMedium": "comparison_card",
+      "mediumRationale": "三张画面把先后顺序直观化，翻面可提供细节对应的解释。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "出门前有伞、路上在下雨、放学把湿伞晾好，这三张画面能接成一个故事。",
+        "answer": "先拿伞，再遇到雨，回来晾伞。顺序交代发生了什么，关键细节还可以帮助我们解释故事想说什么。"
+      },
+      "media": [
+        {
+          "medium": "comparison_card",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "小晴看见乌云，出门前拿了伞，路上突然下雨，她和同伴一起撑伞。先带伞再遇到雨是事件顺序；「一起撑伞」这条细节支持一个读法：准备好的东西也能帮助别人。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "成人在室内口述虚构短故事，孩子可指向先、后两个位置，也可以只听。",
+        "risk": "low",
+        "hazards": [],
+        "supervision": "adult_present",
+        "prerequisites": [
+          "故事使用虚构人物",
+          "不要求讲出家庭的真实经历"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "小晴看见乌云，出门前拿了伞，路上突然下雨，她和同伴一起撑伞。先带伞再遇到雨是事件顺序；「一起撑伞」这条细节支持一个读法：准备好的东西也能帮助别人。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_69w5GVudJl",
+        "reason": "把故事的先后顺序迁移到过去事件的时间线。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "3-6",
+        "guidance": "听有两三个事件的小故事，用先、再复述其中两个。"
+      },
+      {
+        "ageBand": "6-9",
+        "guidance": "用故事里的一个细节支持自己对中心意思的看法。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "比较故事中的事件先后与说明文中的因果或并列关系。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "research_reviewed",
+      "reasons": [
+        "原版同时提到非虚构文本，本入口以叙事为例，9–12 岁引入说明文，不把所有信息关系视为时序。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_w4cUnN_SsQ",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_w4cUnN_SsQ",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "dd614409b7d394565589d03523c8094055f8f82b331fd7f22d99ea88782b91cf"
+      },
+      "title": "Reading and drawing maps",
+      "descriptionSummary": "读画熟悉环境的二维平面图，用图例、标签与相对位置找到地标和物件。",
+      "subject": "Geography",
+      "domain": "Maps & Spatial Skills",
+      "sourceType": "PROCEDURAL",
+      "sourceAge": {
+        "start": 6,
+        "end": 12
+      },
+      "tags": [
+        "representation_model",
+        "procedure"
+      ],
+      "tagRationale": "核心是把真实空间映射为俯视表征；读图与画图是获得这种表征的过程。"
+    },
+    "presentation": {
+      "primaryMedium": "diagram",
+      "mediumRationale": "俯视示意图能同时表现相对位置和图例；不调用真实定位。",
+      "entry": {
+        "mode": "question",
+        "prompt": "只看图，怎样知道模拟图书角的书架在哪里？",
+        "answer": "先读图例，再用图上书架和入口的相对位置定位。"
+      },
+      "media": [
+        {
+          "medium": "diagram",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "虚构图书角：图例写 ○ 是桌子，□ 是书架。入口在纸下方，□ 在 ○ 的右边。把图上的这两条提示合起来，就知道书架在桌子右边。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "成人在纸上画一个虚构房间，孩子可用手指对应入口、桌子与书架。",
+        "risk": "low",
+        "hazards": [
+          "privacy"
+        ],
+        "supervision": "adult_present",
+        "prerequisites": [
+          "用虚构布局",
+          "不测绘住址学校，不拍摄上传",
+          "坐在室内桌边"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "虚构图书角：图例写 ○ 是桌子，□ 是书架。入口在纸下方，□ 在 ○ 的右边。把图上的这两条提示合起来，就知道书架在桌子右边。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_6msyXavNJf",
+        "reason": "同样可以用有意控制的线和记号表达不同东西，图例负责说明意思。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "6-9",
+        "guidance": "加入两种图标和对应图例，读一个简单的左右关系。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "交换图例后验证新图能读懂，解释符号一致和参照方向的重要性。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "research_reviewed",
+      "reasons": [
+        "保持图例清楚，使用模拟位置，避免暴露真实住址或学校动线。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_pK6QkcKxZT",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_pK6QkcKxZT",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "818fa421c204acc7c2e1a005f02cec885a8035368ada0048aa2da5f0af4bbba9"
+      },
+      "title": "First Nations and local Country",
+      "descriptionSummary": "依据本地或获认可的第一民族来源，了解澳大利亚第一民族与各自 Country／Place 的关系，包括文化、语言、季节知识、故事与照护。",
+      "subject": "Geography",
+      "domain": "Places & Environments",
+      "sourceType": "CONCEPTUAL",
+      "sourceAge": {
+        "start": 7,
+        "end": 9
+      },
+      "tags": [
+        "social_perspective",
+        "evidence_reasoning"
+      ],
+      "tagRationale": "核心是理解具体社群与地方的关系；谁述说、所用材料是否经认可决定例子可怎样使用。"
+    },
+    "presentation": {
+      "primaryMedium": "text",
+      "mediumRationale": "短文字先保留 Country 一词和范围说明；后续具名社区文本须经出处、许可及语境审查。",
+      "entry": {
+        "mode": "question",
+        "prompt": "在这里，为什么 Country 这个词跟单说「国家」的意思不一样？",
+        "answer": "这里的 Country 可以指第一民族社群与其地方、文化和生活之间的关系；具体涵义和照护方式要听相关社群怎么讲。"
+      },
+      "media": [
+        {
+          "medium": "text",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "想象两份第一手资料分别由不同地方的知识持有人写成。读到某地的照护经验时，只把它归给该资料所讲的地方和社群；另一地要看当地认可的来源。这里用阅读原则演示，具体社群故事留待查证。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": null
+    },
+    "exploration": [
+      {
+        "targetId": "mt_Lu4H4mbsqO",
+        "reason": "一起理解资料由谁提供、能支持什么看法；对第一民族社群资料仍要遵守相应使用条件。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "6-9",
+        "guidance": "先解释 Country 与特定社群和地方相联系；将来使用具名的已审来源。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "若延伸到比较，说明两份材料由谁提供、讨论哪一地方、获准如何使用。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "manual_review_required",
+      "reasons": [
+        "候选解释仅作导入；命名案例、音像、故事、翻译发布前需查阅相关社群认可来源与使用条件，避免跨社群概括。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json",
+        "https://aiatsis.gov.au/sites/default/files/research_pub/AIATSIS%20Guide%20to%20evaluating%20and%20selecting%20education%20resources.pdf",
+        "https://aiatsis.gov.au/sites/default/files/2024-02/aiatsis-teachers-notes-and-learning-sequence-luwa-tara-luwa-waypa.pdf"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_Lu4H4mbsqO",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_Lu4H4mbsqO",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "dd34a0d4023e9c45e2a255a995a101849b12c3508f6dad6b08af6e21bb1ea58f"
+      },
+      "title": "Evidence Versus Interpretation",
+      "descriptionSummary": "区分留存的历史证据与研究者基于证据提出的历史解释，认识同一证据可支持不同论证。",
+      "subject": "History",
+      "domain": "Historical Thinking",
+      "sourceType": "META",
+      "sourceAge": {
+        "start": 10,
+        "end": 11
+      },
+      "tags": [
+        "evidence_reasoning",
+        "social_perspective"
+      ],
+      "tagRationale": "从留存材料到解释的论证是主目标；不同人物视角可能帮助提出其他解释。"
+    },
+    "presentation": {
+      "primaryMedium": "comparison_card",
+      "mediumRationale": "同一份材料配两种推断，逐句区分看得见的内容与研究者的推断。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "一张旧活动海报写着「周六免费入场」。它能说明活动那天一定有很多人吗？",
+        "answer": "海报能说明免费入场曾被宣传；要论证实际有多少人，需要别的证据。"
+      },
+      "media": [
+        {
+          "medium": "comparison_card",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "虚构海报写「周六免费入场」。甲推测主办方想吸引更多人；乙推测活动由社区经费支持。这两条都是可能的解释。海报本身只能支持它宣传了免费入场。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "和成人选读一张无私人讯息的虚构告示，分别说出告示写了什么和自己猜了什么。",
+        "risk": "low",
+        "hazards": [
+          "privacy"
+        ],
+        "supervision": "adult_present",
+        "prerequisites": [
+          "用虚构或已经公开且无身份资料的文字",
+          "不询问真实参与者信息"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "虚构海报写「周六免费入场」。甲推测主办方想吸引更多人；乙推测活动由社区经费支持。这两条都是可能的解释。海报本身只能支持它宣传了免费入场。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_69w5GVudJl",
+        "reason": "把已经证实日期的事件加入时间线，未能确认的时间要标出。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "6-9",
+        "guidance": "可用一句广告演示「它写了什么」和「我猜了什么」的区别。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "依据两份资料提出解释，写清各自推断的依据和仍缺少的信息。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "research_reviewed",
+      "reasons": [
+        "案例明确为虚构；多种解释仍需衡量证据支持度。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_69w5GVudJl",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_69w5GVudJl",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "cc7c645b08cfdf07c96be299fa07561eac0930f93e2fe531351f6ca753b2d806"
+      },
+      "title": "Timelines of past events",
+      "descriptionSummary": "收集并排序过去的事件，用图片或标签将它们按先后画在不按比例的时间线上。",
+      "subject": "History",
+      "domain": "Historical Thinking",
+      "sourceType": "REPRESENTATIONAL",
+      "sourceAge": {
+        "start": 5,
+        "end": 8
+      },
+      "tags": [
+        "representation_model",
+        "process_change"
+      ],
+      "tagRationale": "时间线是主目标；过去事件按先后串连是它表达的关系。"
+    },
+    "presentation": {
+      "primaryMedium": "diagram",
+      "mediumRationale": "用带箭头的非比例时间线显示顺序，避免把画面间距误认为时间间隔。",
+      "entry": {
+        "mode": "question",
+        "prompt": "三件以前发生的事情，怎样放在一条线上？",
+        "answer": "把最早的放在左边，再依序放后来的。这张图只表示先后，空格大小不代表过了多久。"
+      },
+      "media": [
+        {
+          "medium": "diagram",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "虚构记录：周一做纸船、周二给纸船涂色、周五办纸船展。线上的顺序是「周一 → 周二 → 周五」。即使三个点相隔一样远，过去的天数也不一样。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "成人口述三个虚构事件，孩子可在纸上从左到右指出顺序。",
+        "risk": "low",
+        "hazards": [],
+        "supervision": "adult_present",
+        "prerequisites": [
+          "在室内桌边",
+          "使用虚构事件，活动不涉及真实出游"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "虚构记录：周一做纸船、周二给纸船涂色、周五办纸船展。线上的顺序是「周一 → 周二 → 周五」。即使三个点相隔一样远，过去的天数也不一样。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_VEwM7ClYYE",
+        "reason": "既有先后关系，故事还可以通过细节传达中心意思。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "3-6",
+        "guidance": "用两个事件说明先与后，先直接示范。"
+      },
+      {
+        "ageBand": "6-9",
+        "guidance": "加入第三个事件，另解释为什么箭头图不一定按日数等比例。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "research_reviewed",
+      "reasons": [
+        "用非等距时间间隔示范，务必标注这张线的目的只在顺序。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_mvXufozy2s",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_mvXufozy2s",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "245d4a124a755570308c9eeba6c4fb75383f8dfa9b94997f143f785d6f0b90df"
+      },
+      "title": "Asking for Help",
+      "descriptionSummary": "在卡住时识别何时向人求助，学习在适合尝试的情境说明已遇到的困难。",
+      "subject": "Learning to Learn",
+      "domain": "Learning to Learn",
+      "sourceType": "META",
+      "sourceAge": {
+        "start": 5,
+        "end": 6
+      },
+      "tags": [
+        "social_perspective",
+        "procedure"
+      ],
+      "tagRationale": "判断何时与谁互动是主目标；说明已经试过的事可以整理成简短步骤。"
+    },
+    "presentation": {
+      "primaryMedium": "text",
+      "mediumRationale": "极短对话可以直接让孩子听到怎样请求协助，不要求装置或角色表演。",
+      "entry": {
+        "mode": "question",
+        "prompt": "拼图做到一半卡住了，可以怎么请大人帮忙？",
+        "answer": "可以直接说「我卡在这里，你可以给我一个提示吗？」如果不舒服或觉得不安全，马上找可信任的大人。"
+      },
+      "media": [
+        {
+          "medium": "text",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "阿文说：「我想找边角，找不到，你可以陪我看看吗？」妈妈说：「好，我们一起看。」这里选择请求一个提示；遇到不舒服或不安全的事，可以马上开口。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "成人用虚构的桌面拼图情境演示一句求助，孩子可只听或说一句自己的版本。",
+        "risk": "low",
+        "hazards": [],
+        "supervision": "adult_present",
+        "prerequisites": [
+          "仅用口述情境，无需真实拼图或小零件",
+          "不制造挫折，不要求透露真实困扰"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "阿文说：「我想找边角，找不到，你可以陪我看看吗？」妈妈说：「好，我们一起看。」这里选择请求一个提示；遇到不舒服或不安全的事，可以马上开口。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_5UtPmgdoQ9",
+        "reason": "程序调试卡住时，也可以说清预期、看到的结果和需要哪种提示。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "3-6",
+        "guidance": "示范「我需要帮忙」，接受手势或直接开口。"
+      },
+      {
+        "ageBand": "6-9",
+        "guidance": "用简单句说遇到哪里、需要何种协助；说明不舒服时无需先尝试。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "research_reviewed",
+      "reasons": [
+        "上游先尝试适用于普通学习；本地文案保留立即求助的安全例外。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_EWiY8-opdd",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_EWiY8-opdd",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "643c10dec63fa16a219656fd8ae3f12e05c539ce4268ccaf46b25a15504d2da9"
+      },
+      "title": "Keeping food safe and clean",
+      "descriptionSummary": "理解简单的食物卫生与安全做法，包括洗手，清洁工具和表面，清洗适合清洗的果蔬、冷藏及核查过敏原。",
+      "subject": "Life Skills",
+      "domain": "Food & Cooking",
+      "sourceType": "PROCEDURAL",
+      "sourceAge": {
+        "start": 3,
+        "end": 10
+      },
+      "tags": [
+        "procedure",
+        "cause_effect"
+      ],
+      "tagRationale": "食物处理顺序是主目标；了解不良操作可能造成污染或过敏风险能解释步骤。"
+    },
+    "presentation": {
+      "primaryMedium": "comparison_card",
+      "mediumRationale": "用虚构配料标签和两张安全流程卡表达做法，演示过程无需做菜或试吃。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "在两张模拟图里，一张写「先洗手」，另一张写「做完再洗」。该把哪张放在处理食物之前？",
+        "answer": "处理食物前先洗手。需要冷藏的食物由成人放回冷藏，过敏相关的配料由成人核对。"
+      },
+      "media": [
+        {
+          "medium": "comparison_card",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "虚构的准备卡写着：先洗手、清洁使用处；需要冷藏的食物由成人冷藏；成人对照所用配料核查过敏原。用这段文字把流程读一次即可，无须碰真实食物。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "和成人在书桌上看虚构的厨房步骤卡，指出何时洗手和谁负责查配料。",
+        "risk": "low",
+        "hazards": [],
+        "supervision": "adult_leads",
+        "prerequisites": [
+          "只用纸面虚构材料",
+          "没有真实食物或试吃",
+          "远离厨房工具和清洁剂"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "虚构的准备卡写着：先洗手、清洁使用处；需要冷藏的食物由成人冷藏；成人对照所用配料核查过敏原。用这段文字把流程读一次即可，无须碰真实食物。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_5UtPmgdoQ9",
+        "reason": "比较「顺序会影响结果」这一共同概念；食物安全本身遵循经过复核的步骤。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "3-6",
+        "guidance": "只引入先洗手、请成人看配料，保留图卡顺序。"
+      },
+      {
+        "ageBand": "6-9",
+        "guidance": "在模拟步骤卡上指出何时应清洁工具和表面，区分洗手与清洗果蔬。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "在虚构情境讨论冷藏与减少交叉污染，不让孩子操作高风险步骤。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "manual_review_required",
+      "reasons": [
+        "原版含过敏原和实际厨房操作，本样板仅模拟；食品安全与年龄适用性须人审，现实处置依适用地区指引。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json",
+        "https://www.foodsafety.gov/keep-food-safe/4-steps-to-food-safety",
+        "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/food-allergies"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_xACS3rWWDp",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_xACS3rWWDp",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "da9db0b3f12c78a76b996630943664ffce6360079ea81d7905164e4322e50603"
+      },
+      "title": "Halves & Quarters of Shapes",
+      "descriptionSummary": "把圆或长方形分为两个或四个相等的部分，认识一半、四分之一与整体的关系。",
+      "subject": "Mathematics",
+      "domain": "Fractions",
+      "sourceType": "CONCEPTUAL",
+      "sourceAge": {
+        "start": 5,
+        "end": 9
+      },
+      "tags": [
+        "representation_model",
+        "rule_pattern"
+      ],
+      "tagRationale": "图形面积表示分数；等份及两个一半组成整体是图形背后的共同规则。"
+    },
+    "presentation": {
+      "primaryMedium": "diagram",
+      "mediumRationale": "并列尺寸相同的图形中呈现等份和不等份，能看清份数和等量两个条件。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "两个图都画了两部分，可第一张一大一小，第二张一样大。",
+        "answer": "只有分成两份且每份同样大，才可把每份叫作一半。分成四个同样大的部分时，每份是四分之一。"
+      },
+      "media": [
+        {
+          "medium": "diagram",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "假想在一张同样大小的长方形上画中线，得到两个一样大的区域，每个是二分之一；再把两个区域各平分，就有四个一样大的区域，每个是四分之一。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "成人把一张大纸对折后展开，孩子可在桌上观察两份，再观察每份如何平分。",
+        "risk": "low",
+        "hazards": [],
+        "supervision": "adult_present",
+        "prerequisites": [
+          "使用平整的大纸",
+          "全程折纸，无需剪刀、食物或小道具"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "假想在一张同样大小的长方形上画中线，得到两个一样大的区域，每个是二分之一；再把两个区域各平分，就有四个一样大的区域，每个是四分之一。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_6msyXavNJf",
+        "reason": "换不同落笔方式画分界线，同时保留每个部分一样大的条件。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "3-6",
+        "guidance": "只比较两份一样大或不一样大，直接示范一半。"
+      },
+      {
+        "ageBand": "6-9",
+        "guidance": "把圆和长方形用不同方法分成等份；说明两半组成原来的一整份。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "research_reviewed",
+      "reasons": [
+        "用大小相同的整体做对照；把「同样大」表述为面积相等，兼顾等份未必同形。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_e8CZ7E5qW7",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_e8CZ7E5qW7",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "22125b5139fde23ce2f4834f26e578ab7909da8702f2170354c4beb383be6b50"
+      },
+      "title": "Number bonds to 9",
+      "descriptionSummary": "原版标题指凑成 9，说明字段指用 1 至 9 的一个数凑成 10；两项指向不一致，暂不能推出一个统一目标。",
+      "subject": "Mathematics",
+      "domain": "Addition & Subtraction",
+      "sourceType": "PROCEDURAL",
+      "sourceAge": {
+        "start": 4,
+        "end": 7
+      },
+      "tags": [
+        "rule_pattern",
+        "procedure"
+      ],
+      "tagRationale": "加数和目标和之间的规则是共同机制；按给定目标找缺失数是程序，目标数字需独立确认。"
+    },
+    "presentation": {
+      "primaryMedium": "comparison_card",
+      "mediumRationale": "让两张卡各标明目标和对应例子，避免系统静默选择目标数字。",
+      "entry": {
+        "mode": "question",
+        "prompt": "同样从 4 开始，凑成 9 和凑成 10，要加的数一样吗？",
+        "answer": "4 加 5 得 9，4 加 6 得 10。换了目标，能凑成目标的数也会改变。"
+      },
+      "media": [
+        {
+          "medium": "comparison_card",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "把目标明确写在两行：目标 9 对应 4＋5＝9，目标 10 对应 4＋6＝10。只比较两行的算式。这条记录的正式学习目标需要审定。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": null
+    },
+    "exploration": [
+      {
+        "targetId": "mt_xACS3rWWDp",
+        "reason": "比较部分及整体，但分别保留加法目标与图形面积等份两个条件。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "3-6",
+        "guidance": "仅用明标目标的两个具体例子，不把源字段冲突当作练习。"
+      },
+      {
+        "ageBand": "6-9",
+        "guidance": "可比较保持一个加数、改变目标和时，缺少的加数怎样改变。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "manual_review_required",
+      "reasons": [
+        "原版标题与说明冲突；分别引用于研究卡，人工决定后再选择要编排的学习目标。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_LhkP_KKIRS",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_LhkP_KKIRS",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "57d22caeef9a442539b555215047e4f542006d1208aaef9d39cc43a61414fc80"
+      },
+      "title": "Naming Basic Emotions",
+      "descriptionSummary": "学习用词命名自己与故事人物的常见感受，原版以表情和动作作为线索。",
+      "subject": "Personal & Social Development",
+      "domain": "Emotional Literacy",
+      "sourceType": "LANGUAGE",
+      "sourceAge": {
+        "start": 3,
+        "end": 13
+      },
+      "tags": [
+        "social_perspective",
+        "object_identification"
+      ],
+      "tagRationale": "认识自我与他人的感受是主要目标；表情、动作与词汇是辅助线索。"
+    },
+    "presentation": {
+      "primaryMedium": "comparison_card",
+      "mediumRationale": "用虚构人物在不同情境下的同一表情示范有多种解释，保持识别练习和真实判断的区别。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "故事里的阿乐安静没说话，他可能在想事情，也可能有点难过。",
+        "answer": "表情、动作和发生的事能提供线索。可以说「我看到你很安静」，再问当事人有什么感受。"
+      },
+      "media": [
+        {
+          "medium": "comparison_card",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "虚构角色收到礼物后笑了，可用「开心」来描述一种可能。另一个角色微笑时同时有点紧张，也可以有两种感受。故事人物自己说的话能补充线索。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "成人口述虚构故事，和孩子为虚构人物找一个可能的感受词。",
+        "risk": "low",
+        "hazards": [
+          "privacy"
+        ],
+        "supervision": "adult_present",
+        "prerequisites": [
+          "用虚构人物",
+          "不拍脸、不做情绪识别",
+          "孩子可跳过，不披露私人经历"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "虚构角色收到礼物后笑了，可用「开心」来描述一种可能。另一个角色微笑时同时有点紧张，也可以有两种感受。故事人物自己说的话能补充线索。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_VEwM7ClYYE",
+        "reason": "利用故事先后与关键细节推测角色的感受，并允许不同读法。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "3-6",
+        "guidance": "示范开心、难过、惊讶三个词；用「可能」表达从线索得到的猜想。"
+      },
+      {
+        "ageBand": "6-9",
+        "guidance": "比较相同表情在两种虚构情境下可能代表的不同感受。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "谈论多重感受与线索限制，尊重当事人的自我描述。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "research_reviewed",
+      "reasons": [
+        "明确情境和当事人的自我表达，表情或动作只作为非诊断线索，无影像或私人内容采集。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_6msyXavNJf",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_6msyXavNJf",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "e9f93d37a19af679fe223d8acd0288946d965baf1bb6c8439f4d23a1f25666da"
+      },
+      "title": "Making and controlling marks",
+      "descriptionSummary": "有意控制画具的起止、运动与力度，在工具或表面变化时调整画法来产生想要的线条和效果。",
+      "subject": "Art & Design",
+      "domain": "Drawing & Mark Making",
+      "sourceType": "PROCEDURAL",
+      "sourceAge": {
+        "start": 3,
+        "end": 12
+      },
+      "tags": [
+        "procedure",
+        "observation_comparison"
+      ],
+      "tagRationale": "调整起笔、运笔、收笔是技能；比较轻重线或工具痕迹帮助发现效果。"
+    },
+    "presentation": {
+      "primaryMedium": "object",
+      "mediumRationale": "亲子实际看到每次动作带来的痕迹变化；活动可跳过，文字也能直接说明原理。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "同一支蜡笔，轻轻画与稍用力画，各出现一条看起来不同的线。",
+        "answer": "同一种画具也能留下不同的线。轻轻掠过和稳稳压下，线条的深浅或宽窄可能不同。"
+      },
+      "media": [
+        {
+          "medium": "object",
+          "availability": "proposed"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "想象纸上有一条浅浅的细线和一条较深的粗线。大人讲出两条线的差别，再描述一条短线、一条长线。孩子可以任选一种线，听完就结束。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": {
+        "instruction": "在成人带领下，使用适龄的大号完整蜡笔在大纸上轻画两条线，比较痕迹。",
+        "risk": "moderate",
+        "hazards": [
+          "small_objects"
+        ],
+        "supervision": "adult_leads",
+        "prerequisites": [
+          "仅供能按示范控制画具的年龄段",
+          "成人先检查画具适龄、完整无碎片",
+          "无尖利画具，不使用共用化学颜料"
+        ],
+        "optional": true,
+        "fallback": {
+          "medium": "text",
+          "description": "想象纸上有一条浅浅的细线和一条较深的粗线。大人讲出两条线的差别，再描述一条短线、一条长线。孩子可以任选一种线，听完就结束。",
+          "offline": true,
+          "requiresCamera": false,
+          "requiresUpload": false
+        }
+      }
+    },
+    "exploration": [
+      {
+        "targetId": "mt_w4cUnN_SsQ",
+        "reason": "从控制笔迹延伸到在图例中使用能区分地点的记号。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "3-6",
+        "guidance": "成人示范由轻到重的两条线，孩子自选观看或大幅移动，不固定握法。"
+      },
+      {
+        "ageBand": "6-9",
+        "guidance": "固定纸和画具，一次对比力度或方向；描述线怎样变。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "提出预期，并比较换画具或纸后仍能得到类似效果的办法。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "manual_review_required",
+      "reasons": [
+        "无固定握姿、手别或识字要求；画具物件与碎片风险需按实际材料和孩子能力复核。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json"
+      ]
+    }
+  },
+  {
+    "schemaVersion": "0.1.0",
+    "id": "mt_mAschyjZAT",
+    "knowledge": {
+      "source": {
+        "kind": "upstream",
+        "topicId": "mt_mAschyjZAT",
+        "commit": "2926da338fc9db583c2bd1d241957e8b0fe1d4ce",
+        "path": "upstream/data/topics.json",
+        "descriptionSha256": "6db15508ce122040818d1adb35d6918603ad49eaa4ab48704f1891f145c90a4e"
+      },
+      "title": "Distinguer les voyelles nasales",
+      "descriptionSummary": "听辨并尝试说出目标法语变体的口腔与鼻化元音对照，也听辨该变体内部保留的鼻化元音对立。",
+      "subject": "Français",
+      "domain": "Langage oral",
+      "sourceType": "PROCEDURAL",
+      "sourceAge": {
+        "start": 6,
+        "end": 12
+      },
+      "tags": [
+        "observation_comparison",
+        "procedure"
+      ],
+      "tagRationale": "为了辨认声音对比要先听和比较，再选择模仿；根据目标变体保留真实差异。"
+    },
+    "presentation": {
+      "primaryMedium": "audio",
+      "mediumRationale": "听辨需要标注口音来源且经审的录音，法语示范与粤英讲解声轨分别标识。",
+      "entry": {
+        "mode": "phenomenon",
+        "prompt": "同样是 brin 和 brun，有的法语使用者把这两个词念得相同，有的会区分它们。",
+        "answer": "鼻化元音的对比随法语口音变化。听某一位说者时，可先感受他实际怎样念两个词。"
+      },
+      "media": [
+        {
+          "medium": "audio",
+          "availability": "missing",
+          "role": "illustration",
+          "language": "fr"
+        }
+      ],
+      "fallback": {
+        "medium": "text",
+        "description": "文字小卡：brin 表示细茎一类事物，brun 表示褐色或深色。很多使用法国北部口音的人在这两个词中读同一个元音；另一些口音保留区别。这里只用文字了解地域变化，听辨需要对应的发音示例。",
+        "offline": true,
+        "requiresCamera": false,
+        "requiresUpload": false
+      },
+      "activity": null
+    },
+    "exploration": [
+      {
+        "targetId": "mt_4GiE83rJF_",
+        "reason": "比较英语押韵和法语音位辨认的共同体验入口与不同学习目标。",
+        "optional": true,
+        "relation": "local_suggestion"
+      }
+    ],
+    "adaptation": [
+      {
+        "ageBand": "6-9",
+        "guidance": "有经审录音后用图片对应两个词；可以只听，不强求跟读。"
+      },
+      {
+        "ageBand": "9-12",
+        "guidance": "选择标注地域的样例，比较其中口腔／鼻化对照与该口音保留的鼻化元音对立。"
+      }
+    ],
+    "safetyQuality": {
+      "status": "manual_review_required",
+      "reasons": [
+        "目标变体、法语音源授权、示范真实度及不把地区差异打成错误须由合适的人工审查；无音源时只展示文字概念。"
+      ],
+      "evidence": [
+        "../../upstream/data/topics.json",
+        "https://www.cambridge.org/core/journals/journal-of-french-language-studies/article/role-of-speaker-sex-and-sexuality-in-an-ongoing-sound-change-nasal-vowels-in-parisian-french/CA0D5593A22115D0F583FC826690AF8D",
+        "https://dante.univ-tlse2.fr/files/original/32205/miletic.filip_1995-_these_33296.pdf"
+      ]
+    }
+  }
+]
