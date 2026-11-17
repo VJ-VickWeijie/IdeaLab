@@ -1,5 +1,7 @@
 # Marble 原版知识库引入与本地扩展规范（2026-11-17）
 
+> **历史阶段记录（已归档）**：本文的“尚未导入上游 JSON”“待锁定版本”“Marble README 待更新”等状态已过时。当前已完成七个上游 JSON 导入、固定版本、1,912 条中文目录初译及 README 更新。请以 [Marble 当前进度](../README.md) 与 [中文目录](../catalog/README.md) 为准；本文保留原始讨论记录，不代表当前待办清单。
+
 ## 上游来源
 - 仓库：https://github.com/withmarbleapp/os-taxonomy
 - 数据目录：https://github.com/withmarbleapp/os-taxonomy/tree/main/data
