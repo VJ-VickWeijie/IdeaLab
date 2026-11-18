@@ -18,7 +18,7 @@ Windows 用 `python` 同 `gradlew.bat`。連接專用測試裝置或者模擬器
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
 
-開發版應用 ID 為 `com.idealab.marble.dev`，使用 Android 開發簽章同工程測試包。飛行模式下可以由「滑滑認識世界」點香蕉圖播放，試上下滑、詳情、家長陪讀、香蕉地圖入蘋果及逐層返回。用 `banana` 搜尋後可驗證重啟及清除歷史。[完整驗收條件](../planning/v0.2-android-mvp/T04-acceptance.md)
+開發版應用 ID 為 `com.idealab.marble.dev`，使用 Android 開發簽章同工程測試包。飛行模式下可以由「滑滑認識世界」點香蕉圖播放，喺卡片頁嘅留白或相片位置上下掃換卡，再試詳情、家長陪讀、香蕉地圖入蘋果及逐層返回。用 `banana` 搜尋後可驗證重啟及清除歷史。[完整驗收條件](../planning/v0.2-android-mvp/T04-acceptance.md)
 
 [M4 實施與自驗](M4-EVIDENCE.md) · [內容與素材](CONTENT.md)
 
