@@ -41,7 +41,7 @@ class ExploreFlowTest {
         val photo = compose.onNodeWithTag("card-photo")
         val pageBounds = compose.onNodeWithTag("card-page").getUnclippedBoundsInRoot()
         val photoBounds = photo.getUnclippedBoundsInRoot()
-        val photoFraction = photoBounds.height / pageBounds.height
+        val photoFraction = (photoBounds.bottom - photoBounds.top) / (pageBounds.bottom - pageBounds.top)
         assertTrue("Expected a photo about two thirds of the viewport, got $photoFraction", photoFraction in 0.57f..0.69f)
         assertTrue(photoBounds.left > pageBounds.left + 8.dp)
         compose.onNodeWithText("上一張").assertDoesNotExist()
