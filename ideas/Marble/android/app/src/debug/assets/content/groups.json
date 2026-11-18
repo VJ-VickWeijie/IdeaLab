@@ -1,0 +1,102 @@
+[
+  {
+    "id": "fruits",
+    "label": "水果",
+    "ageBand": "0-1",
+    "nodeIds": [
+      "local:banana-identification",
+      "local:apple-example",
+      "local:pear",
+      "local:orange",
+      "local:strawberry"
+    ]
+  },
+  {
+    "id": "fruits",
+    "label": "水果",
+    "ageBand": "1-2",
+    "nodeIds": [
+      "local:banana-identification",
+      "local:apple-example",
+      "local:pear",
+      "local:orange",
+      "local:strawberry",
+      "local:watermelon"
+    ]
+  },
+  {
+    "id": "animals",
+    "label": "身邊嘅動物",
+    "ageBand": "0-1",
+    "nodeIds": [
+      "local:cat",
+      "local:dog",
+      "local:duck",
+      "local:goldfish",
+      "local:butterfly"
+    ]
+  },
+  {
+    "id": "animals",
+    "label": "身邊嘅動物",
+    "ageBand": "1-2",
+    "nodeIds": [
+      "local:cat",
+      "local:dog",
+      "local:duck",
+      "local:goldfish",
+      "local:butterfly",
+      "local:frog"
+    ]
+  },
+  {
+    "id": "home",
+    "label": "屋企常見嘅物件",
+    "ageBand": "0-1",
+    "nodeIds": [
+      "local:cup",
+      "local:bowl",
+      "local:spoon",
+      "local:towel",
+      "local:socks"
+    ]
+  },
+  {
+    "id": "home",
+    "label": "屋企常見嘅物件",
+    "ageBand": "1-2",
+    "nodeIds": [
+      "local:cup",
+      "local:bowl",
+      "local:spoon",
+      "local:towel",
+      "local:socks",
+      "local:book"
+    ]
+  },
+  {
+    "id": "nature",
+    "label": "植物同天氣",
+    "ageBand": "0-1",
+    "nodeIds": [
+      "local:plant-example",
+      "local:leaf",
+      "local:tree",
+      "local:cloud",
+      "local:rain"
+    ]
+  },
+  {
+    "id": "nature",
+    "label": "植物同天氣",
+    "ageBand": "1-2",
+    "nodeIds": [
+      "local:plant-example",
+      "local:leaf",
+      "local:tree",
+      "local:cloud",
+      "local:rain",
+      "local:puddle"
+    ]
+  }
+]

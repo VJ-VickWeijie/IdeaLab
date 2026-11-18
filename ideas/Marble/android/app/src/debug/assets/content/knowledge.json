@@ -1,0 +1,456 @@
+[
+  {
+    "id": "local:banana-identification",
+    "category": "水果",
+    "aliases": [
+      "banana"
+    ],
+    "tags": [
+      "水果"
+    ],
+    "facts": [
+      "呢個係香蕉，外面嗰層係香蕉皮。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": [
+        "mt_s08-QxASd2"
+      ]
+    }
+  },
+  {
+    "id": "local:apple-example",
+    "category": "水果",
+    "aliases": [
+      "苹果",
+      "apple"
+    ],
+    "tags": [
+      "水果"
+    ],
+    "facts": [
+      "望吓呢個蘋果，佢圓圓哋。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": []
+    }
+  },
+  {
+    "id": "local:pear",
+    "category": "水果",
+    "aliases": [
+      "梨子",
+      "pear"
+    ],
+    "tags": [
+      "水果"
+    ],
+    "facts": [
+      "望吓呢個梨，上面比下面窄。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": []
+    }
+  },
+  {
+    "id": "local:orange",
+    "category": "水果",
+    "aliases": [
+      "橙子",
+      "orange"
+    ],
+    "tags": [
+      "水果"
+    ],
+    "facts": [
+      "今次見到呢個橙，外面係橙色。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": []
+    }
+  },
+  {
+    "id": "local:strawberry",
+    "category": "水果",
+    "aliases": [
+      "草莓",
+      "strawberry"
+    ],
+    "tags": [
+      "水果"
+    ],
+    "facts": [
+      "相入面嘅士多啤梨係紅色，頂部仲有綠色。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": []
+    }
+  },
+  {
+    "id": "local:watermelon",
+    "category": "水果",
+    "aliases": [
+      "watermelon"
+    ],
+    "tags": [
+      "水果"
+    ],
+    "facts": [
+      "望吓相入面嘅西瓜，佢有綠色嘅皮。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": []
+    }
+  },
+  {
+    "id": "local:cat",
+    "category": "身邊嘅動物",
+    "aliases": [
+      "猫",
+      "cat"
+    ],
+    "tags": [
+      "身邊嘅動物"
+    ],
+    "facts": [
+      "睇吓貓相入面嘅耳仔。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": [
+        "mt_zVLOm6U7bh"
+      ]
+    }
+  },
+  {
+    "id": "local:dog",
+    "category": "身邊嘅動物",
+    "aliases": [
+      "犬",
+      "dog"
+    ],
+    "tags": [
+      "身邊嘅動物"
+    ],
+    "facts": [
+      "望吓相入面隻狗，佢有四隻腳。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": [
+        "mt_zVLOm6U7bh"
+      ]
+    }
+  },
+  {
+    "id": "local:duck",
+    "category": "身邊嘅動物",
+    "aliases": [
+      "鸭",
+      "duck"
+    ],
+    "tags": [
+      "身邊嘅動物"
+    ],
+    "facts": [
+      "相入面嘅鴨有一張扁扁哋嘅嘴。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": []
+    }
+  },
+  {
+    "id": "local:goldfish",
+    "category": "身邊嘅動物",
+    "aliases": [
+      "金鱼",
+      "goldfish"
+    ],
+    "tags": [
+      "身邊嘅動物"
+    ],
+    "facts": [
+      "望吓相入面金魚條尾。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": []
+    }
+  },
+  {
+    "id": "local:butterfly",
+    "category": "身邊嘅動物",
+    "aliases": [
+      "butterfly"
+    ],
+    "tags": [
+      "身邊嘅動物"
+    ],
+    "facts": [
+      "睇吓相入面蝴蝶嘅翼。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": []
+    }
+  },
+  {
+    "id": "local:frog",
+    "category": "身邊嘅動物",
+    "aliases": [
+      "frog"
+    ],
+    "tags": [
+      "身邊嘅動物"
+    ],
+    "facts": [
+      "睇吓相入面青蛙對眼。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": []
+    }
+  },
+  {
+    "id": "local:cup",
+    "category": "屋企常見嘅物件",
+    "aliases": [
+      "杯子",
+      "cup",
+      "mug"
+    ],
+    "tags": [
+      "屋企常見嘅物件"
+    ],
+    "facts": [
+      "望吓相入面個杯口。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": []
+    }
+  },
+  {
+    "id": "local:bowl",
+    "category": "屋企常見嘅物件",
+    "aliases": [
+      "bowl"
+    ],
+    "tags": [
+      "屋企常見嘅物件"
+    ],
+    "facts": [
+      "睇吓呢隻碗，中間凹入去。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": []
+    }
+  },
+  {
+    "id": "local:spoon",
+    "category": "屋企常見嘅物件",
+    "aliases": [
+      "汤匙",
+      "湯匙",
+      "勺子",
+      "spoon"
+    ],
+    "tags": [
+      "屋企常見嘅物件"
+    ],
+    "facts": [
+      "相入面嘅匙羹有一個柄。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": []
+    }
+  },
+  {
+    "id": "local:towel",
+    "category": "屋企常見嘅物件",
+    "aliases": [
+      "towel"
+    ],
+    "tags": [
+      "屋企常見嘅物件"
+    ],
+    "facts": [
+      "睇吓相入面條毛巾。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": []
+    }
+  },
+  {
+    "id": "local:socks",
+    "category": "屋企常見嘅物件",
+    "aliases": [
+      "袜",
+      "襪子",
+      "socks"
+    ],
+    "tags": [
+      "屋企常見嘅物件"
+    ],
+    "facts": [
+      "我哋着襪喺腳度。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": []
+    }
+  },
+  {
+    "id": "local:book",
+    "category": "屋企常見嘅物件",
+    "aliases": [
+      "书",
+      "book"
+    ],
+    "tags": [
+      "屋企常見嘅物件"
+    ],
+    "facts": [
+      "睇吓相入面嘅書頁。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": []
+    }
+  },
+  {
+    "id": "local:plant-example",
+    "category": "植物同天氣",
+    "aliases": [
+      "香蕉植株",
+      "香蕉樹",
+      "香蕉树",
+      "plant"
+    ],
+    "tags": [
+      "植物同天氣"
+    ],
+    "facts": [
+      "呢棵植物有長長嘅葉。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": [
+        "mt_xT6jPzyj92"
+      ]
+    }
+  },
+  {
+    "id": "local:leaf",
+    "category": "植物同天氣",
+    "aliases": [
+      "叶",
+      "葉片",
+      "leaf"
+    ],
+    "tags": [
+      "植物同天氣"
+    ],
+    "facts": [
+      "望吓相入面片葉，有啲幼幼嘅紋。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": [
+        "mt_xT6jPzyj92"
+      ]
+    }
+  },
+  {
+    "id": "local:tree",
+    "category": "植物同天氣",
+    "aliases": [
+      "树",
+      "tree"
+    ],
+    "tags": [
+      "植物同天氣"
+    ],
+    "facts": [
+      "望吓呢棵樹嘅樹幹。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": []
+    }
+  },
+  {
+    "id": "local:cloud",
+    "category": "植物同天氣",
+    "aliases": [
+      "云",
+      "白雲",
+      "白云",
+      "cloud"
+    ],
+    "tags": [
+      "植物同天氣"
+    ],
+    "facts": [
+      "望吓相入面啲雲，有厚有薄。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": [
+        "mt_jc9k_HJQGd"
+      ]
+    }
+  },
+  {
+    "id": "local:rain",
+    "category": "植物同天氣",
+    "aliases": [
+      "下雨",
+      "雨",
+      "rain"
+    ],
+    "tags": [
+      "植物同天氣"
+    ],
+    "facts": [
+      "落雨嗰陣，有雨水落到玻璃上。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": [
+        "mt_TlLE4cZgOr",
+        "mt_jc9k_HJQGd"
+      ]
+    }
+  },
+  {
+    "id": "local:puddle",
+    "category": "植物同天氣",
+    "aliases": [
+      "水坑",
+      "水窪",
+      "puddle"
+    ],
+    "tags": [
+      "植物同天氣"
+    ],
+    "facts": [
+      "落完雨，地下有時留低一個水氹。"
+    ],
+    "source": {
+      "kind": "local",
+      "referenceTopicIds": [
+        "mt_TlLE4cZgOr"
+      ]
+    }
+  }
+]

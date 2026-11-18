@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "marble-v0.2-dev-fixture.2",
+  "language": "yue-Hant-HK",
+  "status": "fixture",
+  "tables": {
+    "knowledge": {
+      "path": "content/knowledge.json",
+      "sha256": "7813400d5c25df2f7e16d68a11901ba7464c410c2001bcdd04d831d5c0e0ef49"
+    },
+    "presentations": {
+      "path": "content/presentations.json",
+      "sha256": "01116b566590613c3128758299f6455fa1f0fc45400d8c8139c20cdf78e23d97"
+    },
+    "relations": {
+      "path": "content/relations.json",
+      "sha256": "c82321b4a197cfca0dd16432576ea1f84ba0d6ef2d06c7b2dfb4681231298f43"
+    },
+    "groups": {
+      "path": "content/groups.json",
+      "sha256": "7b03f7b8c1734eb0c28e5b5b5e50b27fa329548b6f852550c37cbe801b151eb2"
+    },
+    "media": {
+      "path": "content/media.json",
+      "sha256": "96e6cf8d06bc590d4029a9dfc2a538211f71c014da4279c6fe5cd38edf3827d7"
+    },
+    "idAliases": {
+      "path": "content/idAliases.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    }
+  }
+}
