@@ -22,9 +22,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.CustomAccessibilityAction
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.customActions
 import androidx.compose.ui.semantics.clearAndSetSemantics
+import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.hideFromAccessibility
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.idealab.marble.data.AgeBand
 import com.idealab.marble.data.CardGroup
@@ -61,32 +66,64 @@ internal fun CardPage(
 
     BackHandler(enabled = reading, onBack = ::closeReading)
     BoxWithConstraints(Modifier.fillMaxSize()) {
-        val photoHeight = (maxHeight * .48f).coerceIn(108.dp, 320.dp)
-        val swipe = Modifier.cardGestures(
-            onStep = { delta -> step(group.nodeIds.indexOf(nodeId).coerceAtLeast(0) + delta) },
-        )
+        val photoHeight = maxHeight * (2f / 3f)
         val audio = catalog.asset(item.audioId)?.path
-        Page(modifier = underOverlay(reading)) {
-            PageTitle(group.label, "返回首頁", home)
-            Picture(catalog.asset(item.imageId), item.imageDescription,
-                Modifier.fillMaxWidth().heightIn(max = photoHeight).aspectRatio(1.22f).testTag("card-photo").then(swipe),
-                play = audio?.takeUnless { reading }?.let { path -> { if (!reading) play(path) } })
-            Text("${index + 1} / ${group.nodeIds.size}", color = Forest)
-            Heading(item.name)
-            Text(item.transcript.ifBlank { item.fallbackText }, style = MaterialTheme.typography.bodyLarge)
-            if (audio == null || failedAudio == audio) AudioUnavailable()
-            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                Action("上一張", { step(index - 1) }, Modifier.weight(1f), enabled = index > 0)
-                Action("下一張", { step(index + 1) }, Modifier.weight(1f), enabled = index < group.nodeIds.lastIndex)
+        val pageNavigation = if (reading) Modifier else Modifier.cardGestures { delta ->
+            step(group.nodeIds.indexOf(nodeId).coerceAtLeast(0) + delta)
+        }.semantics {
+            customActions = buildList {
+                if (index > 0) add(CustomAccessibilityAction("上一張") {
+                    step(index - 1)
+                    true
+                })
+                if (index < group.nodeIds.lastIndex) add(CustomAccessibilityAction("下一張") {
+                    step(index + 1)
+                    true
+                })
             }
-            if (index == group.nodeIds.lastIndex) Panel(color = Leaf) {
-                Label("睇完呢組喇")
-                Action("重睇呢組", { step(0) }, Modifier.fillMaxWidth(), primary = true)
-                if (nextGroup != null) Action("換一組", nextGroup, Modifier.fillMaxWidth())
-                Action("返回首頁", home, Modifier.fillMaxWidth())
+        }
+        Box(
+            Modifier.fillMaxSize().testTag("card-page").then(pageNavigation).then(underOverlay(reading)),
+            contentAlignment = Alignment.TopCenter,
+        ) {
+            Column(
+                Modifier.widthIn(max = 660.dp).fillMaxSize().padding(horizontal = 16.dp, vertical = 8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                Row(
+                    Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Action("返回首頁", home)
+                    Text(group.label, Modifier.weight(1f).semantics { heading() },
+                        style = MaterialTheme.typography.titleMedium, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                    Text("${index + 1} / ${group.nodeIds.size}", color = Forest)
+                }
+                Picture(
+                    catalog.asset(item.imageId), item.imageDescription,
+                    Modifier.weight(1f, fill = false).fillMaxWidth().height(photoHeight).testTag("card-photo"),
+                    play = audio?.takeUnless { reading }?.let { path -> { if (!reading) play(path) } },
+                    fit = true,
+                )
+                Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                    Text(item.name, Modifier.semantics { heading() }, style = MaterialTheme.typography.titleLarge,
+                        maxLines = 1, overflow = TextOverflow.Ellipsis)
+                    Text(item.transcript.ifBlank { item.fallbackText }, style = MaterialTheme.typography.bodyLarge,
+                        maxLines = 2, overflow = TextOverflow.Ellipsis)
+                    if (audio == null || failedAudio == audio) AudioUnavailable()
+                }
+                if (index == group.nodeIds.lastIndex) {
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Action("重睇呢組", { step(0) }, Modifier.weight(1f), primary = true)
+                        if (nextGroup != null) Action("換一組", nextGroup, Modifier.weight(1f))
+                    }
+                }
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Action("睇知識詳情", { details(item.nodeId) }, Modifier.weight(1f), primary = true)
+                    Action("家長陪讀", { stop(); reading = true }, Modifier.weight(1f))
+                }
             }
-            Action("睇知識詳情", { details(item.nodeId) }, Modifier.fillMaxWidth(), primary = true)
-            Action("家長陪讀", { stop(); reading = true }, Modifier.fillMaxWidth())
         }
         if (reading) CaregiverSheet(catalog, item, failedAudio, play, ::closeReading)
     }
