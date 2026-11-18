@@ -1,0 +1,120 @@
+plugins {
+    id 'com.android.application' version '9.4.0'
+    id 'org.jetbrains.kotlin.plugin.compose' version '2.2.10'
+    id 'com.google.protobuf' version '0.10.0'
+}
+
+def releaseKeyStore = providers.environmentVariable('MARBLE_RELEASE_KEYSTORE').orNull
+def releaseStorePassword = providers.environmentVariable('MARBLE_RELEASE_STORE_PASSWORD').orNull
+def releaseKeyAlias = providers.environmentVariable('MARBLE_RELEASE_KEY_ALIAS').orNull
+def releaseKeyPassword = providers.environmentVariable('MARBLE_RELEASE_KEY_PASSWORD').orNull
+def releaseKeyStoreFile = releaseKeyStore == null ? null : rootProject.file(releaseKeyStore)
+def hasReleaseSigning = releaseKeyStoreFile != null && releaseStorePassword && releaseKeyAlias && releaseKeyPassword
+
+android {
+    namespace = 'com.idealab.marble'
+    compileSdk = 37
+    buildToolsVersion = '37.0.0'
+
+    defaultConfig {
+        applicationId = 'com.idealab.marble'
+        minSdk = 26
+        targetSdk = 37
+        versionCode = providers.gradleProperty('marbleVersionCode').getOrElse('1').toInteger()
+        versionName = '0.2.0'
+        testInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    signingConfigs {
+        if (hasReleaseSigning) {
+            family {
+                storeFile = releaseKeyStoreFile
+                storePassword = releaseStorePassword
+                keyAlias = releaseKeyAlias
+                keyPassword = releaseKeyPassword
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix = '.dev'
+            versionNameSuffix = '-dev'
+        }
+        release {
+            if (hasReleaseSigning) {
+                signingConfig = signingConfigs.family
+            }
+        }
+    }
+
+    buildFeatures {
+        compose = true
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    androidResources {
+        noCompress += ['m4a']
+    }
+}
+
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:4.31.1'
+    }
+    generateProtoTasks {
+        all().configureEach {
+            builtins {
+                java { option 'lite' }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation platform('androidx.compose:compose-bom:2025.11.01')
+    implementation 'androidx.activity:activity-compose:1.11.0'
+    implementation 'androidx.compose.foundation:foundation'
+    implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.compose.ui:ui'
+    implementation 'androidx.lifecycle:lifecycle-runtime-compose:2.10.0'
+    implementation 'androidx.navigation:navigation-compose:2.9.6'
+    implementation 'androidx.datastore:datastore:1.2.0'
+    implementation 'com.google.protobuf:protobuf-javalite:4.31.1'
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.2'
+    testImplementation 'org.json:json:20250517'
+
+    androidTestImplementation platform('androidx.compose:compose-bom:2025.11.01')
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+    androidTestImplementation 'androidx.test.ext:junit:1.3.0'
+    androidTestImplementation 'androidx.test:runner:1.7.0'
+}
+
+def python = providers.environmentVariable('MARBLE_PYTHON').getOrElse(
+    System.getProperty('os.name').startsWith('Windows') ? 'python' : 'python3'
+)
+def releaseContent = rootProject.file('app/src/release/assets/content')
+def contentChecker = rootProject.file('tools/check_content.py')
+def verifyFamilyContent = tasks.register('verifyFamilyContent', Exec) {
+    description = 'Checks the approved offline content pack for the family APK.'
+    commandLine python, contentChecker, '--release', releaseContent
+}
+
+def verifyFamilySigning = tasks.register('verifyFamilySigning') {
+    description = 'Requires the configured owner-controlled signing key for the family APK.'
+    doLast {
+        if (!hasReleaseSigning || !releaseKeyStoreFile.isFile()) {
+            throw new GradleException('Family signing requires an approved keystore and all four MARBLE_RELEASE_* signing variables.')
+        }
+    }
+}
+
+tasks.matching { it.name == 'preReleaseBuild' }.configureEach {
+    dependsOn verifyFamilyContent, verifyFamilySigning
+}
