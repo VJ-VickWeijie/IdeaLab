@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Marble</string>
+    <color name="icon_background">#F5ECD5</color>
+    <style name="Theme.Marble" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">#F8F1E1</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:colorAccent">#47634B</item>
+    </style>
+</resources>

@@ -1,0 +1,290 @@
+[
+  {
+    "fromId": "local:banana-identification",
+    "toId": "local:apple-example",
+    "label": "同類",
+    "order": 0
+  },
+  {
+    "fromId": "local:banana-identification",
+    "toId": "local:plant-example",
+    "label": "生長喺植株上",
+    "order": 1
+  },
+  {
+    "fromId": "local:apple-example",
+    "toId": "local:banana-identification",
+    "label": "同類",
+    "order": 0
+  },
+  {
+    "fromId": "local:apple-example",
+    "toId": "local:pear",
+    "label": "外形比較",
+    "order": 1
+  },
+  {
+    "fromId": "local:pear",
+    "toId": "local:apple-example",
+    "label": "外形比較",
+    "order": 0
+  },
+  {
+    "fromId": "local:pear",
+    "toId": "local:orange",
+    "label": "果皮比較",
+    "order": 1
+  },
+  {
+    "fromId": "local:orange",
+    "toId": "local:apple-example",
+    "label": "同類",
+    "order": 0
+  },
+  {
+    "fromId": "local:orange",
+    "toId": "local:watermelon",
+    "label": "果皮比較",
+    "order": 1
+  },
+  {
+    "fromId": "local:strawberry",
+    "toId": "local:apple-example",
+    "label": "顏色比較",
+    "order": 0
+  },
+  {
+    "fromId": "local:strawberry",
+    "toId": "local:watermelon",
+    "label": "同類",
+    "order": 1
+  },
+  {
+    "fromId": "local:watermelon",
+    "toId": "local:orange",
+    "label": "果皮比較",
+    "order": 0
+  },
+  {
+    "fromId": "local:watermelon",
+    "toId": "local:strawberry",
+    "label": "大小比較",
+    "order": 1
+  },
+  {
+    "fromId": "local:cat",
+    "toId": "local:dog",
+    "label": "動物比較",
+    "order": 0
+  },
+  {
+    "fromId": "local:cat",
+    "toId": "local:duck",
+    "label": "外形比較",
+    "order": 1
+  },
+  {
+    "fromId": "local:dog",
+    "toId": "local:cat",
+    "label": "動物比較",
+    "order": 0
+  },
+  {
+    "fromId": "local:dog",
+    "toId": "local:duck",
+    "label": "外形比較",
+    "order": 1
+  },
+  {
+    "fromId": "local:duck",
+    "toId": "local:goldfish",
+    "label": "水中環境",
+    "order": 0
+  },
+  {
+    "fromId": "local:duck",
+    "toId": "local:frog",
+    "label": "外形比較",
+    "order": 1
+  },
+  {
+    "fromId": "local:goldfish",
+    "toId": "local:duck",
+    "label": "水中環境",
+    "order": 0
+  },
+  {
+    "fromId": "local:goldfish",
+    "toId": "local:frog",
+    "label": "外形比較",
+    "order": 1
+  },
+  {
+    "fromId": "local:butterfly",
+    "toId": "local:leaf",
+    "label": "戶外觀察",
+    "order": 0
+  },
+  {
+    "fromId": "local:butterfly",
+    "toId": "local:frog",
+    "label": "動物比較",
+    "order": 1
+  },
+  {
+    "fromId": "local:frog",
+    "toId": "local:duck",
+    "label": "動物比較",
+    "order": 0
+  },
+  {
+    "fromId": "local:frog",
+    "toId": "local:goldfish",
+    "label": "動物比較",
+    "order": 1
+  },
+  {
+    "fromId": "local:cup",
+    "toId": "local:bowl",
+    "label": "容器",
+    "order": 0
+  },
+  {
+    "fromId": "local:cup",
+    "toId": "local:spoon",
+    "label": "用餐物件",
+    "order": 1
+  },
+  {
+    "fromId": "local:bowl",
+    "toId": "local:cup",
+    "label": "容器",
+    "order": 0
+  },
+  {
+    "fromId": "local:bowl",
+    "toId": "local:spoon",
+    "label": "可以配搭",
+    "order": 1
+  },
+  {
+    "fromId": "local:spoon",
+    "toId": "local:bowl",
+    "label": "可以配搭",
+    "order": 0
+  },
+  {
+    "fromId": "local:spoon",
+    "toId": "local:cup",
+    "label": "用餐物件",
+    "order": 1
+  },
+  {
+    "fromId": "local:towel",
+    "toId": "local:socks",
+    "label": "布料對照",
+    "order": 0
+  },
+  {
+    "fromId": "local:towel",
+    "toId": "local:cup",
+    "label": "家中物件",
+    "order": 1
+  },
+  {
+    "fromId": "local:socks",
+    "toId": "local:towel",
+    "label": "布料對照",
+    "order": 0
+  },
+  {
+    "fromId": "local:socks",
+    "toId": "local:book",
+    "label": "家中物件",
+    "order": 1
+  },
+  {
+    "fromId": "local:book",
+    "toId": "local:socks",
+    "label": "家中物件",
+    "order": 0
+  },
+  {
+    "fromId": "local:book",
+    "toId": "local:towel",
+    "label": "家中物件",
+    "order": 1
+  },
+  {
+    "fromId": "local:plant-example",
+    "toId": "local:banana-identification",
+    "label": "果實",
+    "order": 0
+  },
+  {
+    "fromId": "local:plant-example",
+    "toId": "local:leaf",
+    "label": "組成部分",
+    "order": 1
+  },
+  {
+    "fromId": "local:leaf",
+    "toId": "local:plant-example",
+    "label": "植物組成",
+    "order": 0
+  },
+  {
+    "fromId": "local:leaf",
+    "toId": "local:tree",
+    "label": "植物組成",
+    "order": 1
+  },
+  {
+    "fromId": "local:tree",
+    "toId": "local:leaf",
+    "label": "組成部分",
+    "order": 0
+  },
+  {
+    "fromId": "local:tree",
+    "toId": "local:plant-example",
+    "label": "植物",
+    "order": 1
+  },
+  {
+    "fromId": "local:cloud",
+    "toId": "local:rain",
+    "label": "天氣現象",
+    "order": 0
+  },
+  {
+    "fromId": "local:cloud",
+    "toId": "local:tree",
+    "label": "日常觀察",
+    "order": 1
+  },
+  {
+    "fromId": "local:rain",
+    "toId": "local:cloud",
+    "label": "天氣現象",
+    "order": 0
+  },
+  {
+    "fromId": "local:rain",
+    "toId": "local:puddle",
+    "label": "雨後觀察",
+    "order": 1
+  },
+  {
+    "fromId": "local:puddle",
+    "toId": "local:rain",
+    "label": "雨後觀察",
+    "order": 0
+  },
+  {
+    "fromId": "local:puddle",
+    "toId": "local:cloud",
+    "label": "天氣聯想",
+    "order": 1
+  }
+]
