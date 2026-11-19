@@ -23,6 +23,19 @@ Android 正常更新需相容的應用 ID、簽章及版本號。簽署憑證不
 
 現有 `app/build.gradle` 使用四個 `MARBLE_RELEASE_*` 環境變數取得簽署資料，並對家庭預覽版與正式版都加入「缺簽章直接失敗」門禁。`tools/Build-MarbleOwner.ps1` 只在本機互動讀取密碼、運行 Gradle，完成後清除該 PowerShell 進程的四項環境變數。建議使用專用 Windows 本機帳戶與受控構建環境；密碼會在 Gradle 子進程內短暫可用，不代表零暴露風險。
 
+## 2.1 所有者 Keystore 建立紀錄（2026-11-20）
+
+所有者已在 Windows 本機使用 JDK 17 `keytool` 成功建立 JKS：
+
+- 檔案：`%LOCALAPPDATA%\\MarbleKeys\\marble-family.jks`（僅記錄位置，不提交檔案）
+- Alias：`marble-family`
+- Entry：`PrivateKeyEntry`
+- 公開憑證：RSA 3072 bit，`SHA256withRSA`
+- 有效期：2026-11-20 至 2076-11-07
+- 公開憑證 SHA-256 指紋：`09:0E:7A:97:94:57:25:A4:76:B0:92:D3:26:F6:42:6E:BD:05:44:BF:07:36:7B:41:3A:3C:6A:A6:9C:4F:68:C5`
+
+此指紋是公開憑證識別值，可用於核對日後 APK 簽署身份；它不是私鑰或密碼。Keystore 檔案及兩個密碼仍只由所有者本機保管，沒有上傳至 GitHub。JKS 的 keytool 格式提示是資訊性警告；本專案明確使用 JKS，故不轉換格式。
+
 ## 3. 發版號與構建
 
 - `gradle.properties` 為單一版本記錄：初始 `marbleVersionCode=1`、`marbleVersionName=0.2.1`。**每次交付新的家庭預覽或正式 APK，都必須在來源控制中遞增 `marbleVersionCode`**；從預覽切正式時同樣遞增。
