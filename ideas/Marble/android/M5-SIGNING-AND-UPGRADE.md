@@ -84,3 +84,57 @@ python tools/check_apk_upgrade.py OLD.apk NEW.apk --aapt2 aapt2 --apksigner apks
 | 私鑰生成、兩版 APK 與小米 17 覆蓋升級 | **未執行**；私鑰只應由所有者在本機產生及保管 |
 
 本輪由同一執行上下文完成協調、開發和靜態自檢，未進行真正獨立執行上下文的代碼審查，也未切換不同模型。**正式驗收仍待擁有完整 Android SDK/Gradle 工具鏈的環境與所有者實機完成。**
+
+
+## 8. 2026-11-20 Windows 本機構建環境準備紀錄（APK 尚未構建）
+
+所有者在 Windows 11、VS Code、PowerShell 環境完成以下本機準備。此紀錄只涵蓋已提供截圖／命令輸出證明的項目；不代表 APK 已編譯、簽署或完成真機升級驗收。
+
+### 8.1 已驗證的工具鏈
+
+| 項目 | 本機結果 | 證據／備註 |
+| --- | --- | --- |
+| JDK | Eclipse Temurin / OpenJDK 17.0.21 | `java`、`javac`、`keytool` 均可執行；`JAVA_HOME` 指向 `C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.21.9-hotspot` |
+| Android SDK 根目錄 | `%LOCALAPPDATA%\\Android\\Sdk` | 已建立；Command-line Tools 放於 `cmdline-tools/latest` |
+| Command-line Tools 壓縮包 | `commandlinetools-win-15859902_latest.zip` | 下載檔 SHA-256 與當時官方提供值一致；解壓目錄已整理為官方要求的 `cmdline-tools/latest` |
+| Android Platform | `platforms;android-37.0` | 已安裝，目錄 `platforms/android-37.0` 存在 |
+| Android Build Tools | `build-tools;37.0.0` | 已安裝，目錄 `build-tools/37.0.0` 存在 |
+| Android Platform Tools | `platform-tools` | 安裝命令已執行；`platform-tools/adb.exe` 的 `Test-Path` 結果為 `True`；SDK Manager 列表顯示版本 37.0.1 |
+| Gradle Wrapper | Gradle 9.6.0 | 成功下載並執行 `gradlew.bat --version`；Launcher JVM / Daemon JVM 為 17.0.21 |
+| Gradle 專案設定 | `gradlew.bat help` | 最終執行結果為 `BUILD SUCCESSFUL`。此前一次嘗試曾回報 Kotlin Compose plugin 2.2.10 無法解析；其後未修改專案配置再次執行成功，具體初次失敗原因未確定 |
+| Android SDK 環境變數 | `ANDROID_HOME`、`ANDROID_SDK_ROOT` | 已在當前 PowerShell 會話設定；是否已永久寫入 Windows 使用者環境變數，尚未確認 |
+
+SDK Manager CLI 顯示 deprecated 提示，但本次仍成功列出及安裝所需 SDK 套件；此提示不等同安裝失敗。
+
+### 8.2 固定簽章已由所有者本機建立及驗證
+
+- 本機檔案：`%LOCALAPPDATA%\\MarbleKeys\\marble-family.jks`
+- Alias：`marble-family`
+- Entry：`PrivateKeyEntry`
+- 公開金鑰：RSA 3072 bit
+- 簽名算法：`SHA256withRSA`
+- 有效期：2026-11-20 至 2076-11-07
+- 證書 SHA-256：`09:0E:7A:97:94:57:25:A4:76:B0:92:D3:26:F6:42:6E:BD:05:44:BF:07:36:7B:41:3A:3C:6A:A6:9C:4F:68:C5`
+
+Keytool 輸出確認條目為 `PrivateKeyEntry`，指紋與第 2.1 節登記值一致。JKS 格式提示為資訊性警告；本專案明確使用 JKS，保持原格式。Keystore 檔案及密碼只由所有者本機保管，沒有提交至倉庫。
+
+### 8.3 尚未完成／不可宣稱通過
+
+| 項目 | 狀態 |
+| --- | --- |
+| `:app:tasks --all` 中的 `assembleFamilyPreview`、`verifyFamilyPreviewContent`、`verifyFamilySigning` 任務核實 | 待執行 |
+| Python 執行環境及內容檢查腳本 | 待核實 |
+| `Build-MarbleOwner.ps1` 所有者本機簽署構建 | 待執行 |
+| `familyPreview` APK 編譯及簽署 | 待執行 |
+| APK 包名、versionCode、versionName、證書指紋與 APK SHA-256 靜態檢查 | 待執行 |
+| 小米 17 / Android 17 安裝及 V1→V2 覆蓋升級 | 待執行 |
+| 歷史、設定、繼續探索及離線使用資料保留 | 待真機驗收 |
+
+### 8.4 下一步
+
+1. 在 `ideas/Marble/android` 目錄核實 Gradle 任務：`./gradlew.bat :app:tasks --all`，確認 `assembleFamilyPreview`、`verifyFamilyPreviewContent`、`verifyFamilySigning`。
+2. 確認 Windows `python --version` 可用，因 `verifyFamilyPreviewContent` 會執行 `tools/check_content.py`。
+3. 由所有者在本機執行 `tools/Build-MarbleOwner.ps1 -Channel Preview -KeyStore "$env:LOCALAPPDATA\\MarbleKeys\\marble-family.jks" -Alias "marble-family"`，在隱藏輸入提示中輸入 Keystore 與 key 密碼。不要將密碼放入命令列、檔案、GitHub 或聊天。
+4. 構建成功後記錄 APK 路徑及 SHA-256，使用 `aapt2`、`apksigner` 和 `tools/check_apk_upgrade.py` 完成靜態身份檢查，再進行小米 17 真機驗收。
+
+**本階段判定：本機工具鏈與固定簽章材料準備已完成；Android App 編譯、APK 簽署、安裝與覆蓋升級仍未驗證。不得將 M5 SYS05 標記為通過。**
