@@ -22,6 +22,12 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 
 [M4 實施與自驗](M4-EVIDENCE.md) · [內容與素材](CONTENT.md)
 
+## 長期覆蓋升級（M5）
+
+已批准測試資料可清空一次；此後家庭預覽與正式版統一使用 `com.idealab.marble`，由所有者持有固定私鑰，並遞增同一 `versionCode` 序列。新增 `familyPreview` 建置供私人升級驗證：載入現有測試內容、使用家庭簽章，不允許作為正式家庭內容發佈。`debug` 維持獨立 `.dev` ID。
+
+**[完整固定簽章、密鑰保管、Windows 建置與升級驗收規格](M5-SIGNING-AND-UPGRADE.md)**。正式簽章及小米 17 覆蓋安裝仍待所有者執行，未通過前不得宣稱 SYS05 完成。
+
 ## 家庭候選
 
 家庭簽署版使用獨立應用 ID。經准入嘅資源包放喺 `app/src/release/assets/content/`。開發測試包放喺 `app/src/debug/assets/content/`。所有者控制簽署資料，透過受控環境提供 `MARBLE_RELEASE_KEYSTORE`、`MARBLE_RELEASE_STORE_PASSWORD`、`MARBLE_RELEASE_KEY_ALIAS` 同 `MARBLE_RELEASE_KEY_PASSWORD`。

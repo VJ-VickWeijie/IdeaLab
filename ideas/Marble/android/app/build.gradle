@@ -20,8 +20,10 @@ android {
         applicationId = 'com.idealab.marble'
         minSdk = 26
         targetSdk = 37
-        versionCode = providers.gradleProperty('marbleVersionCode').getOrElse('1').toInteger()
-        versionName = '0.2.0'
+        // One monotonic version sequence for familyPreview and release.
+        // Never silently fall back to versionCode 1 on a signed build.
+        versionCode = providers.gradleProperty('marbleVersionCode').get().toInteger()
+        versionName = providers.gradleProperty('marbleVersionName').get()
         testInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
     }
 
@@ -45,6 +47,21 @@ android {
             if (hasReleaseSigning) {
                 signingConfig = signingConfigs.family
             }
+        }
+        familyPreview {
+            // Owner-signed, non-debuggable preview that can update to release.
+            // Unlike debug, it has NO applicationIdSuffix or disposable signing key.
+            initWith release
+            matchingFallbacks = ['release']
+            versionNameSuffix = '-preview'
+        }
+    }
+
+    sourceSets {
+        familyPreview {
+            // Explicitly use development fixtures for this private preview only.
+            // Formal release continues to use src/release/assets/content and its gate.
+            assets.srcDirs = ['src/debug/assets']
         }
     }
 
@@ -105,6 +122,10 @@ def verifyFamilyContent = tasks.register('verifyFamilyContent', Exec) {
     description = 'Checks the approved offline content pack for the family APK.'
     commandLine python, contentChecker, '--release', releaseContent
 }
+def verifyFamilyPreviewContent = tasks.register('verifyFamilyPreviewContent', Exec) {
+    description = 'Checks development fixtures used by the private family preview APK.'
+    commandLine python, contentChecker, rootProject.file('app/src/debug/assets/content')
+}
 
 def verifyFamilySigning = tasks.register('verifyFamilySigning') {
     description = 'Requires the configured owner-controlled signing key for the family APK.'
@@ -117,4 +138,7 @@ def verifyFamilySigning = tasks.register('verifyFamilySigning') {
 
 tasks.matching { it.name == 'preReleaseBuild' }.configureEach {
     dependsOn verifyFamilyContent, verifyFamilySigning
+}
+tasks.matching { it.name == 'preFamilyPreviewBuild' }.configureEach {
+    dependsOn verifyFamilyPreviewContent, verifyFamilySigning
 }
