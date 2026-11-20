@@ -36,21 +36,27 @@ def parse_badging(output: str) -> tuple[str, int, str]:
 
 
 def parse_certificates(output: str) -> str:
+    # Older apksigner uses "Signer #1"; Build Tools 37 uses "V2 Signer:".
+    # Multiple signing schemes may report the same certificate more than once.
     hashes = re.findall(
-        r"Signer\s+#\d+\s+certificate\s+SHA-256\s+digest:\s*([0-9A-Fa-f:]+)",
+        r"^(?:Signer\s+#\d+|V\d+(?:\.\d+)?\s+Signer:)\s+certificate\s+SHA-256\s+digest:\s*([0-9A-Fa-f:]+)\s*$",
         output,
-        re.IGNORECASE,
+        re.IGNORECASE | re.MULTILINE,
     )
-    if len(hashes) != 1:
-        raise ValueError(f"Expected one APK signer certificate, found {len(hashes)}")
-    fingerprint = hashes[0].replace(":", "").lower()
+    fingerprints = {digest.replace(":", "").lower() for digest in hashes}
+    if len(fingerprints) != 1:
+        raise ValueError(f"Expected one unique APK signer certificate, found {len(fingerprints)}")
+    fingerprint = next(iter(fingerprints))
     if len(fingerprint) != 64:
         raise ValueError("Unexpected SHA-256 certificate fingerprint length")
+    signer_count = re.search(r"^Number of signers:\s*(\d+)\s*$", output, re.MULTILINE)
+    if signer_count and int(signer_count.group(1)) != 1:
+        raise ValueError("Expected one APK signer")
     return fingerprint
 
 
 def run_tool(*args: str) -> str:
-    result = subprocess.run(args, capture_output=True, text=True, check=True)
+    result = subprocess.run(args, capture_output=True, text=True, encoding='utf-8', errors='replace', check=True)
     return result.stdout
 
 
@@ -60,7 +66,7 @@ def inspect(path: Path, aapt2: str, apksigner: str) -> ApkIdentity:
     app_id, version_code, version_name = parse_badging(
         run_tool(aapt2, "dump", "badging", str(path))
     )
-    fingerprint = parse_certificates(run_tool(apksigner, "verify", "--print-certs", str(path)))
+    fingerprint = parse_certificates(run_tool(apksigner, "verify", "--verbose", "--print-certs", str(path)))
     return ApkIdentity(app_id, version_code, version_name, fingerprint)
 
 

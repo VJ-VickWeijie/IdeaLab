@@ -1,0 +1,3 @@
+# Keep content hashes stable across Windows/macOS/Linux checkouts.
+app/src/debug/assets/content/*.json text eol=lf
+app/src/release/assets/content/*.json text eol=lf

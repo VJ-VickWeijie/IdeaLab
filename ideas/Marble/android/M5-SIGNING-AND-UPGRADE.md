@@ -138,3 +138,31 @@ Keytool 輸出確認條目為 `PrivateKeyEntry`，指紋與第 2.1 節登記值�
 4. 構建成功後記錄 APK 路徑及 SHA-256，使用 `aapt2`、`apksigner` 和 `tools/check_apk_upgrade.py` 完成靜態身份檢查，再進行小米 17 真機驗收。
 
 **本階段判定：本機工具鏈與固定簽章材料準備已完成；Android App 編譯、APK 簽署、安裝與覆蓋升級仍未驗證。不得將 M5 SYS05 標記為通過。**
+
+
+## 9. 2026-11-21 所有者真機 V1 → V2 覆蓋升級紀錄（M5 核心路徑通過）
+
+本段記錄所有者在 Windows 11 / VS Code / PowerShell 和小米 17（Android 17）提供的命令截圖與文字回報。這是**所有者實機驗收證據**，不是本執行環境親自連接手機進行的獨立復測；完整 SYS05 仍有待辦。
+
+| 驗收事項 | 實際證據與結論 |
+| --- | --- |
+| 開發環境 | JDK 17、Android SDK API/Build Tools 37、Gradle 9.6、Python 3.14 運作；`assembleFamilyPreview` 完成 `BUILD SUCCESSFUL` |
+| 內容包 | `verifyFamilyPreviewContent` 通過：24 nodes、48 presentations、48 relations、8 groups、73 media（3,677,000 bytes） |
+| V1 APK | `com.idealab.marble`、`versionCode=1`、`versionName=0.2.1-preview`；APK v2 簽署驗證 `Verifies`，1 個簽署者；與所有者 Keystore 的證書 SHA-256 相同 |
+| V1 安裝 | 所有者確認小米 17 真機安裝成功，五項功能測試成功，並建立升級前測試資料 |
+| V2 APK | 所有者將本機 `marbleVersionCode` 增至 2、`marbleVersionName` 增至 `0.2.2`，用**同一** Keystore 構建並備份 `Marble-V2-familyPreview.apk`；Gradle 再次 `BUILD SUCCESSFUL` |
+| V1/V2 相容性 | 所有者以 `aapt2`、`apksigner` 手動檢查後回報可以繼續；自動腳本的 GBK 解碼及 Build Tools 37 輸出格式兩個問題在本 PR 中修復，**不聲稱舊腳本曾通過** |
+| 真機覆蓋升級 | 所有者回報 V2 直接更新 V1，沒有卸載重裝；**通過** |
+| 已有資料保留 | 所有者回報 V2 上歷史記錄和設定仍存在；**通過** |
+| 尚需補驗 | V2 強制結束重開後的「繼續探索」位置、V2 飛行模式內容與音訊、獨立審查、錯誤簽章拒絕測試；V2 APK 文件 SHA-256 尚未在本報告登記 |
+
+### 固定身份與版本決策
+
+- Application ID：`com.idealab.marble`；家庭預覽與日後審核通過的正式版沿用同一長期簽章。
+- 公開的簽署證書 SHA-256：`09:0E:7A:97:94:57:25:A4:76:B0:92:D3:26:F6:42:6E:BD:05:44:BF:07:36:7B:41:3A:3C:6A:A6:9C:4F:68:C5`。
+- 本 PR 將倉庫的 `marbleVersionCode` 更新為 **2**，與已在手機上的 V2 一致。**下一個新交付 APK 必須升至 versionCode 3 或更高**，不得從倉庫舊版號重新生成覆蓋安裝包。
+- 不把 Keystore、密碼或本機簽章憑據上傳 GitHub。V1/V2 APK 保存在所有者本機。
+- Windows Git `core.autocrlf` 曾令 JSON 由 LF 變為 CRLF，導致內容 SHA-256 失敗；本 PR 用專用 `.gitattributes` 將測試及正式內容表固定為 LF，保留內容位元組完整性驗證。
+- `check_apk_upgrade.py` 將改用明確 UTF-8 解碼，並支援 `Signer #1` / `V2 Signer:` 等證書格式；保留錯簽章、包名改變和版本不遞增的失敗門禁。
+
+**M5 階段判定**：同簽章版本的真機覆蓋升級、歷史和設定保留，已由所有者回報驗收通過；SYS05 其餘驗收項仍為「待補驗」。此結果不是正式內容發佈批准，也不表示 M5 其他既有缺陷（例如 Activity 重建後搜索詞恢復）已解決。獨立審查仍須由不同執行上下文完成。
