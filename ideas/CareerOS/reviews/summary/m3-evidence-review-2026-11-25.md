@@ -71,3 +71,6 @@
 - PROCESS-01：`/root/developer_m3_review` 补查付款建议、凭证、介质、银行状态，`/root/consultant_plan` 独立核对其中三处原文，不能据此声称真实资金已扣或所有采购付款路径已证。见 [付款末端](../../plans/p2p-payment-evidence-m3.md)。
 
 以上均为阶段研究，不是正文审查；未连接 SAP，M3 未通过，M4 未授权。
+
+- `/root/audit_design_review` 复核 `6ac8c0b` 的 FI-04 阅读归属及迁移范围正确，CDS 补查和主台账的两页阅读归属亦正确；指出 `#CHECK` 与 `#NOT_ALLOWED` 警告时机须限定在开发者激活相应 entity/role。Work 已修正文案，待原审查者复核。
+- `/root/reader_plan` 和 `/root/consultant_plan` 分别复核 `6ac8c0b` 的 MM-09 与付款末端记录，确认各自实际读取范围、特定场景与未实测边界；其余函数、完整流程与系统缺口仍开放。
