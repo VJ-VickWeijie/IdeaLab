@@ -22,7 +22,7 @@
 - 原文提及 GR/IR 被 `cleared`；“账面金额相抵”与实际执行 SAP 未清项目清账、凭证状态变化不必然是同一事件。应核查清账程序的匹配条件和凭证状态，不能凭文字直接宣称已自动清账完成。
 - 发现有价值的新版搜索线索 [Postings for the Example of Price Determination](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/5e23dc8fe9be4fd496f8ab556667ea05/59a677829c5d4d31bdfd3b075cc2b6f0.html)；但本次指定 `version=2021.000` 在浏览器返回 `Page Not Found`，因此**未找到可读的目标版**，不能用于 2021 结论或声称页面不存在于所有版本。
 - 供应商记账不等于真实资金支付。消费性采购、非估价、差额/税、已收未到票/先票后货的分支、单据与字段、实际审批及只读权限仍需按文章逐项定位来源、配置和系统适用性。实际 SAP 未连接、未实测。
-- 建议独立审查者重开四个固定版本页面，逐条复核选择器、正文、图示数字和上述限制，尤其核验正文的 `credits` 与图表正负所引起的歧义。**四个页面中前三页已由独立审查上下文复核；第四页仍待独立复核。不能将本记录计入正式文章审核轮次。**
+- 建议独立审查者重开四个固定版本页面，逐条复核选择器、正文、图示数字和上述限制，尤其核验正文的 `credits` 与图表正负所引起的歧义。**四个页面中前三页已由独立审查上下文复核；第四页仍待独立复核。不能将本记录计入正式文章三角色各按需 5–10 轮。**
 
 
 ## 独立审查者复核（2026-11-25）
@@ -44,11 +44,29 @@
 该例不能代表普通库存物料无税发票、其他税区或当前印度税法，也不证明具体企业实际清账、付款或系统配置；库存采购发票的目标版直接借贷例子仍待核实。`/root/audit_design_review` 已通过独立浏览器实读页面及截图，确认版本、四行借贷、税额、合计及特定条件；未连接 SAP，也不计正式文章审核。
 
 
-## 普通库存物料发票补查（2026-11-25）
+## 2026-11-26（Asia/Shanghai）：通过 SAP Help 页面接口重新读取固定版原文
 
-`/root/consultant_plan` 通过浏览器实读 [Posting Example Warehouse Concept 4](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/d56edf94353d4beeabb7f9b90adf081a/eeedcc53a8b77214e10000000a174cb4.html?version=2021.000)，选择器为 2021 (Oct 2021)。该页为 Funds Management 与库存物料采购集成的特定仓库场景，涉及移动平均价、FM 更新设置、税及差额等前提；发票行出现 GR/IR 与供应商，但截图中借贷表头相对数据列错位，且页面没有金额。因此不能只据此将这两项明确判为借方或贷方，也不能推广到所有企业的普通库存采购。SAP Learning 的相关方向未固定 2021；印度运输服务税案例已有明确方向，但不是普通库存采购。当前仍未找到同时满足目标版本、普通库存采购及明确借贷方向的官方正文，保持待核。未连接 SAP 或进行文章审核。
+为提高版本可复现性，Work 直接读取 SAP Help Portal 的只读 pagecontent 接口：先向 deliverableMetadata 请求 `version=2021.000`，确认版本标签与 buildNo，再读取对应话题 HTML。以下 SHA-256 是接口返回的 `data.body` HTML 字符串编码后的摘要，不是 SAP 发布方签名，也不保证未来接口快照不变；固定版本标签显示 **2021 (Oct 2021)**。这次重读未访问客户系统。
+
+| 页面 | 2021 buildNo | 本次读取到的具体内容与边界 | 返回 HTML 摘要 SHA-256 |
+| --- | ---: | --- | --- |
+| [Postings at Goods Receipt and Invoice Receipt](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/825eb6531de6b64ce10000000a174cb4.html?version=2021.000) | 509 | 正文说 GR/IR 作为收货与发票的中间清算账户，并将收货金额称为“credits”到 stock account；此前记录的图示则以正负号呈现，二者不构成无歧义的借贷标签。不得擅自消除该文献内部的表达歧义。 | `b298c34d92d08aa0c35ad98460a90661ee897b58a37da8c746a09e2ee7555235` |
+| [Important Accounts for Invoice Verification](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/2d70b6531de6b64ce10000000a174cb4.html?version=2021.000) | 509 | 说明供应商子账过账不等于付款、GR/IR 为中间账户；提及物料主数据决定相关库存账户，并在发票校验语境下描述库存账户与发票价差的关系。不能脱离上下文把它解释为所有收货都不更新库存。 | `575ec297ee014ea1edbc7de6f872c5d0202d5a2fb36ca5cfe3a6ff85dd85e732` |
+| [Entering Goods Receipts for Nonexcisable Goods](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/240fcdcc71c640ea9aa9691500b34889/b39bd7531a4d414de10000000a174cb4.html?version=2021.000) | 505 | 印度本地化、不涉及消费税的采购订单收货流程明确写出借记 inventory、贷记 GR/IR；仅支持此货物与税务场景，不等于其他税种不存在。 | `47b52f2003781ee669ad78706ef9f63cf74805592b2f433046c0ef7d393de635` |
+| [Example: Invoice Receipt](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/0f095921571d4e94a53bfaa5f6dc120d/1d4bd953292a424de10000000a174cb4.html?version=2021.000) | 505 | 标准价 1,500、采购价 1,700 的示例列 stock 1,500、price difference expense 200 与 GR/IR 1,700，并讨论 profit center；该表没有明确 debit/credit 列标题。 | `0dbbf8ec69ce080733d0e9a9081d2cd040f80a9d580049879f0c432f59e5e18d` |
+| [GR/IR Clearing Account](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/651d8af3ea974ad1a4d74449122c620e/f47fd1538cdf4608e10000000a174cb4.html?version=2021.000) | 508 | 对同一采购订单及项目的收货/发票项目不会自动清账；F.13/F.13E 可按 PO 与项目分析未清项并对零余额项目清账，无法配对或非零余额项仍保留。科目贷方余额表示已收未票、借方余额表示已票未收，是该文所述分析情境。手工过账不等于可手工清账。 | `976a123a8e22569a693fe070b64593135e1b9bd065f093b939481540e3960c0c` |
+| [Treatment of Exchange Rate Differences for Incoming Invoices](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b4970dc428d14ce7a16e91dd0ffd733b.html?version=2021.000) | 351 | 2021 文档说明可按公司代码选择使用收货时或发票接收时有效汇率的方法；其标准价、移动平均价、科目分配订单和库存不足条件下的分配规则各不相同。范围限于该配置页描述的 incoming invoice 场景。 | `dd8e8d1b14d6e223589597b78872ea60f097bd9a613039124bf5784437f58df7` |
+
+本次补证增加了清账条件和外币发票价差的目标版直接证据，但**没有解决普通非印度库存采购中** SAP 初版正文 “credits” 与图示符号的歧义，也未证明一般场景下逐项借贷、自动科目决定、税务处理和当前系统配置。FI-07/PROCESS-01 保持未闭合；须继续寻找无歧义、同一目标版本与明确采购前提的来源，并由独立顾问复读本追加资料。上述资料研究不计正式文章审核轮次。
 
 
-## GR/IR T 型账户的补充证据
+## 2026-11-26 直接来源复读后的审查边界补充
 
-`/root/consultant_plan` 浏览器实读 [2021 GR/IR T 型账户](fi07-grir-taccount-2021.md)，`/root/audit_design_review` 独立复读正文及图：收货 2,000、部分发票 1,000 欧元的左右位置有明确图示，但图中未逐项标借贷，按左借右贷是会计惯例解释。原例未说明 PO 行无科目分配、税及全部条件；期末调整不是付款或实际清账。普通库存发票的完整目标版文字证据仍待核。
+本轮通过 SAP Help 的固定版本页面接口再次读取若干原文；在前述表格中已记录 buildNo 与返回 HTML 摘要。此次明确新补证的两个交叉点为：
+
+- [GR/IR Clearing Account](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/651d8af3ea974ad1a4d74449122c620e/f47fd1538cdf4608e10000000a174cb4.html?version=2021.000) 明确同一 PO 和项目上的收货/发票更新 GR/IR 未清项，不会自动清账；F.13/F.13E 对可匹配的零余额项目清账，不能匹配或不为零的项目继续保持未清。该资料支持过程状态区别，仍不是 SAP 系统实测或所有配置适用保证。
+- [Treatment of Exchange Rate Differences for Incoming Invoices](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b4970dc428d14ce7a16e91dd0ffd733b.html?version=2021.000) 为 SAP S/4HANA 2021 文档。其汇率取值时点、标准价/移动平均价/科目分配及库存不足情形不同；该页面可支持“公司代码级处理设置会影响汇兑差额归属”这一限定命题，不是所有采购与汇率类型的一揽子规则。
+
+root/consultant_plan 独立在 SAP Help 浏览器复读本节的六个页面正文，确认版本选择器为 2021 (Oct 2021)，并核对本节的 GR/IR 清账规则、印度限定收货、标准价差异例子、外币差额规则及 credits/图示歧义。审查者没有重新计算本文 API 返回内容的 SHA-256，也未核对本文的 buildNo；Work 仅将其记录为对页面正文和场景边界的独立核验。Work 接受其两项精度建议：将 1,700 标为“采购价”而非“发票金额”，并将汇率选项表述为“选择使用收货时或发票接收时有效汇率的方法”；复核时区标为 Asia/Shanghai，以消除日期歧义。
+
+经此修订，普通库存物料采购中 Postings at Goods Receipt and Invoice Receipt 的 “credits” 措辞、图示正负及借贷关系仍有来源内部歧义；印度不涉及消费税例子给出明确方向，但不可泛化到所有国家与所有税。普通无税库存发票、自动科目决定、异常/冲销、目标系统配置仍未充分闭合。故 FI-07 与 PROCESS-01 仍未闭合。

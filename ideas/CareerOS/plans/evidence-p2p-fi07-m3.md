@@ -1,14 +1,20 @@
 # CareerOS V0.3｜PROCESS-01 与 FI-07 的 2021 证据补查
 
-核查日：2026-11-25（UTC）。只做 M3 文献研究，未编写正式正文、未进入 M4、未连接 SAP 系统、未产生正式文章审核轮次。以下区分 PDF 的搜索缓存正文、Help 页面的搜索索引正文与实际网页读取；不会把网页的搜索摘要当成已在浏览器打开的正文。
+原始核查日：2026-11-25（UTC）；状态更正：2026-11-26（Asia/Shanghai）。只做 M3 文献研究，未编写正式正文、未进入 M4、未连接 SAP 系统、未产生正式文章审核轮次。以下区分 PDF 的搜索缓存正文、Help 页面的搜索索引正文与实际网页读取；不会把网页的搜索摘要当成已在浏览器打开的正文。
 
 ## 2021 初始版：采购订单、收货和发票的部分连接
 
-- [Post Goods Receipt for Purchasing Document](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/c2be52880d194905a0692f6dce907795.html?version=2021.000)：SAP Help 搜索索引返回 `What's New in SAP S/4HANA 2021` 的正文片段，明确该 app 可参考采购订单过账收货；页面标 `Available As Of SAP S/4HANA 2021`。直接打开 HTML 返回零行，尚未通过浏览器复核。
+- [Post Goods Receipt for Purchasing Document](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/c2be52880d194905a0692f6dce907795.html?version=2021.000)：SAP Help 页面接口固定到 2021 (Oct 2021)，直接读取正文（buildNo 351，返回 HTML SHA-256：7ea146c6fb0e380e19abaf74231e4e59b42964dbc8741097665727a53564e38e）。正文说明该 app 对采购订单参考收货过账的功能范围；另列特定委外序列号、分割估价与 EWM 条件，不能将其当作所有收货变体或会计分录的证据。
 - [Manage Workflows for Supplier Invoices](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/51ef12513df44d39bf3778822812813f.html?version=2021.000)：2021 初始版 SAP Help 索引正文描述可针对“发票有至少一项不期望收货”配置工作流，并指出 PO 项目的 Goods Receipt indicator 与该条件有关。只能证明此特定工作流场景的条件，不代表所有采购都必须收货，也不证明对应会计分录。
-- [Adjustment of Payment Due Dates in the Case of Public Holidays for Supplier Invoices](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/004109983492485191b538488ea9daf0.html?version=2021.000)：2021 初始版索引正文描述 MIRO 或 Create Supplier Invoice - Advanced 的供应商发票付款到期日可依公共假日规则调整。直接打开 HTML 返回零行；这说明发票记录有到期日，**不能证明发票已支付、发生银行资金流或所有付款规则**。
+- [Adjustment of Payment Due Dates in the Case of Public Holidays for Supplier Invoices](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/004109983492485191b538488ea9daf0.html?version=2021.000)：SAP Help 页面接口固定到 2021 (Oct 2021)，直接读取正文（buildNo 351，返回 HTML SHA-256：a76a3021268484a1b4172021c49caf33a0e33e06faf861e753fe769f724d8fc3）。该例为日本本地化：供应商发票在 MIRO/指定 app 的付款到期日遇公共假日时，可按设定调整到期日和现金折扣天数；这不证明发票已支付、银行资金流发生或其它地区付款规则。
 
-这些网页均是 SAP 2021.000 版本参数下的搜索索引结果；索引可漂移，尚缺可读原网页/固定快照的独立复验。
+## Work/审查者读取方式与版本边界（更正）
+
+上列第 1 条（Post Goods Receipt for Purchasing Document）与第 3 条（Adjustment of Payment Due Dates...）是 Work 读取 SAP Help 页面的 2021.000 版本接口正文；另一顾问随后在浏览器独立重读两页，实际看到版本选择器为 2021 (Oct 2021)。审查者确认正文摘要与局限，但未重算 Work 的 HTML 摘要或核对 buildNo。第 2 条（Manage Workflows for Supplier Invoices）仍仅有 2021.000 搜索索引片段，本文未直接读取其完整正文，不能将该摘要计为已读来源。
+
+另两份资料请分别按[收货与发票估价补查](p2p-valuation-direct-2021.md)的事实状态引用：[Invoices for Purchase Orders](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/be5eb6531de6b64ce10000000a174cb4.html?version=2021.000)的浏览器版本选择器显示 2021 (Oct 2021)，页面同时显示该版文档提示，且已读取正文；/root/reader_m3_review 与 /root/consultant_plan 的既有记录分别说明曾读取与复读此页。[Goods Receipt for a Purchase Order](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/885eb6531de6b64ce10000000a174cb4.html?version=2021.000)由 /root/consultant_plan 正文实读，页面显示 2021 (Oct 2021) 文档提示且说明不随后续版本更新，但读取时版本选择器未显示。不能概括成“未读目标版页面”；后者版本钉定强度仍低于明确选择器显示的页面。
+
+上列直接读取的来源均只能支持各自页面明确限定的流程或功能；FSD、S/4HANA 2021 页面和 SAP Help 特定文章不能拼接成所有场景通用的配置/分录/付款证明。
 
 ## 2021 初始版：GR/IR 及清账的具体证据
 
@@ -25,11 +31,6 @@
 ## 辅助线索与尚未解决
 
 - SAP FSD 的 `latest` 地址曾返回 SPS08、现返回 SPS10，虽然现版 §2.12.5.1 可说明供应商发票参考采购订单及会计凭证，链接不固定。不得把当前 SPS10 段落认作初始版证据。
-- [Invoices for Purchase Orders，目标 2021.000 页面](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/be5eb6531de6b64ce10000000a174cb4.html?version=2021.000) 和 [Goods Receipt for a Purchase Order，目标 2021.000 页面](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/885eb6531de6b64ce10000000a174cb4.html?version=2021.000)：本研究上下文目前只找到默认版或其他产品版本的索引内容，未能自行读到目标版；另一个执行上下文此前已实际读取这两个 2021 页面，详见 [P2P估价补查](p2p-valuation-direct-2021.md)，不能把另一个上下文的读取说成本研究者本人所做。
+- 同前述来源状态更正：Invoices for Purchase Orders 的 2021 (Oct 2021) 选择器及正文已读；Goods Receipt for a Purchase Order 的正文带 2021 (Oct 2021) 固定版提示、但读取时未见版本选择器。两者的具体收货/发票估价例子见 [P2P 估价补查](p2p-valuation-direct-2021.md)；不能把其范围夸大成所有业务变体或全链路过账证据。
 - 尚未取得一份**可复现、固定版 2021 官方原文**将标准采购的 PO→收货→发票→应付→实际付款与对应分录端到端逐事件串通；先票后货、价差、GR 非估价、成本中心/资产科目分配、税、币种、采购金额、收货价值、发票金额和付款时点均需具体前提和直接证据。暂不得把 PROCESS-01 或 FI-07 的全部事实标为已验证。
 - 文献可阅读性、产品/FPS 适配、具体主张支持性和系统验证为不同状态；实机未测。本记录不批准配置写入或生产操作。
-
-
-## 复核状态
-
-本条 P2P 补查由 `/root/consultant_m3_review` 汇总；各项标注其自身实际读取方式及未覆盖内容，独立审查者尚未复核本报告，不计正式文章审核轮次。
