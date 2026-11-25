@@ -74,3 +74,13 @@
 
 - `/root/audit_design_review` 复核 `6ac8c0b` 的 FI-04 阅读归属及迁移范围正确，CDS 补查和主台账的两页阅读归属亦正确；指出 `#CHECK` 与 `#NOT_ALLOWED` 警告时机须限定在开发者激活相应 entity/role。Work 已修正文案，原审查者复读 `6b8e5a` 后确认；Work 依其精度建议将“未定义”改为“不存在”。
 - `/root/reader_plan` 和 `/root/consultant_plan` 分别复核 `6ac8c0b` 的 MM-09 与付款末端记录，确认各自实际读取范围、特定场景与未实测边界；其余函数、完整流程与系统缺口仍开放。
+
+
+## 销售、生产、成本与扩展补证
+
+- SD-02：[伙伴职能补查](../../plans/sd02-partner-2021-evidence-m3.md)记录四个 2021 Oct 页面，`/root/audit_design_review` 独立复读前两页并确认同页 FLVN00 标注冲突；BP grouping、实际配置和其他两页的独立复核仍待查。
+- PP-09：[生产数据模型补查](../../plans/pp09-data-model-evidence-m3.md)限定简化 sourcing 下 material BOM 的例外，并区分 MATDOC 与 `NSDM_DDL_*` DDL source；`/root/consultant_m3_review` 实读原文并复核两处修订，完整键/基数/API 未证。
+- CO-03：[内部订单补查](../../plans/co03-internal-order-evidence-m3.md)的两篇 SAP Learning 由 `/root/audit_design_review` 独立复读，但课程未锁定 2021；2021.001 Central Finance 仅为限定场景。
+- S4HANA-06：[扩展补查](../../plans/extension-2021-evidence-m3.md)的 2021 初版 key-user 与 FPS01 side-by-side 实例经独立复读；审查者未复核升级指南和后期 FAQ，完整 Clean Core/API 合同未证。
+
+均属资料研究，不计入正式文章审核轮次；无 SAP 实机，M3 尚未通过，M4 尚未授权。

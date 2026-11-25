@@ -45,7 +45,7 @@ T1 使用动态 `latest` 地址，同一 URL 曾发生版本漂移。先前独�
 | S4HANA-03 | [2021 CDS/DCL 专题补查](cds-dcl-2021-evidence-m3.md)；T6 `Technical Details` | SAP 2021 初版 CDS 示例、DCL 与注解分别有原文；其中 DCL 示例与注解页已独立复读。T6 仅限 FPS01 的 SQL Service；各访问路径、具体服务/权限及实机仍待核。 | 部分可证，不代表全路径/系统通过 |
 | S4HANA-04 | T1 §2.15.2 `SAP Gateway Foundation`，物理页 215；T8 `Technical Details`；T15 Gateway Authorization | T1 描述 Gateway 创建 OData 服务，T8 描述 Fiori/PFCG 指定集成；T15 据协调者阅读可支持 Gateway 根据发起用户的授权对象作检查，但不能证明具体服务的身份认证、授权对象、部署或发布状态。 | 部分可证，T15 有限描述已独立复核，安全细节待核 |
 | S4HANA-05 | T1 §2.15.1 `RAP`，物理页 204 | 目标 2021 文档描述 RAP、CDS、OData 的架构与模型；此 2026 更新文档不足以证明所有列举能力在 FPS00 支持，须逐特性补目标 FPS。 | 部分可证，逐特性/FPS 待核 |
-| S4HANA-06 | T1 §2.15.1 `Software Logistics`，物理页 202；§2.15.1 自定义对象，物理页 209 | 可用作目标产品的开发对象运输和部分扩展功能背景；不直接证明 Clean Core 政策、2021 所有 API 发布状态或升级效果。 | 部分可证，架构政策/FPS 待核 |
+| S4HANA-06 | [2021 扩展与升级补查](extension-2021-evidence-m3.md)：特定 Key User 初版与 side-by-side FPS01 例子独立复核。 | 两个维护应用及特定 API 场景；升级指南持续更新，不能由个例推断全部接口契约、Clean Core 分层或免回归。 | 部分可证，架构政策/FPS 待核 |
 | S4HANA-07 | T2 `Additional Details`；T8 `Technical Details` | 支持 SQLMD 和 PFCG 的特定说明；其他平台 T-Code、显示与修改权限及版本逐项查证。 | 部分可证，逐码待核 |
 | S4HANA-08 | T8 `PFCG Integration`；T5 物理页 241；T15 Gateway Authorization | 文档分别讨论特定 Fiori 集成及 HCM 权限；T15 据协调者阅读解释 Gateway 根据发起用户的授权对象检查；不能推断 SAP API 一律采用相同角色、当前用户权限或配置查看入口。 | 部分可证，T15 有限描述已独立复核，接口及配置待核 |
 | S4HANA-09 | T9 §12.6，物理页 285–286 | 可支持特定 COEP 04/11 值类型、ACDOCA 与兼容视图的说明；MATDOC 键、物理表关系、CDS/API 的发布及授权需另证。 | 部分可证，初版/FPS01/02 文档范围 |

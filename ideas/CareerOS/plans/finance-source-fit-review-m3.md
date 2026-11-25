@@ -55,3 +55,8 @@
 ## 后续更新：FI-04
 
 上述初评时尚缺所列组织关系依据；之后 `/root/reader_plan` 找到 SAP 固定 2021 迁移对象指南，`/root/audit_design_review` 独立浏览器核对，见 [FI-04 总账补查](fi04-gl-2021-evidence-m3.md)。它仅支持 Direct Transfer 特定选择和视图，不证明日常组织基数、实际权限或完整文章；原初评保留为当时状态。
+
+
+## 后续更新：CO-03
+
+[内部订单补查](co03-internal-order-evidence-m3.md)补充两篇未锁定 2021 的 SAP Learning 概念资料及 2021.001 Central Finance 特定结算场景；两篇 Learning 经独立复读，不能用来证明普通订单的所有 2021 功能、配置或例外。原初评保留为当时状态。

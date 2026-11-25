@@ -52,3 +52,8 @@
 ## 后续更新：S4HANA-03
 
 上述初评针对当时 T6 的来源；随后 `/root/developer_plan` 直接读取 SAP 2021 Oct 的 CDS/DCL 四页，`/root/audit_design_review` 独立复读其中授权示例和注解两页，见 [CDS/DCL 补查](cds-dcl-2021-evidence-m3.md)。对该文章核心的个别 DCL 子命题现有目标版本直接支持，但不证明所有访问路径、服务授权或整篇资料充分；其他 15 项分类不因此改变。
+
+
+## 后续更新：S4HANA-06
+
+[扩展补查](extension-2021-evidence-m3.md)为2021初版和FPS01找到两个具体 Key User 与 side-by-side 场景，并由独立审查者核对这两页。它们支持有限实例，不代表完整 Clean Core 分层、全部 API 发布契约或免回归；目标版本的完整规则仍需另证。
