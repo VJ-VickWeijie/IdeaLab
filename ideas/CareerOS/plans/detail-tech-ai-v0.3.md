@@ -73,6 +73,8 @@
 
 ## 逐篇主题证据补充（2026-11-25 检索记录）
 
+追加线索（2026-11-25）：[SAP Gateway Foundation Security Guide，索引标示 2021 Latest](https://help.sap.com/docs/ABAP_PLATFORM_NEW/68bf513362174d54b58cddec28794093/535d22518bc72214e10000000a44176d.html?version=202110.latest) 的搜索抓取可见认证、授权等目录内容，但在当前环境直接打开返回零行；可用于后续查找 S4HANA-04 的版本资料，尚不能计为可直接读取、可复现的完整证据。[SAP Purchasing BAPIs](https://help.sap.com/docs/SUPPORT_CONTENT/spmm/3362167428.html) 与 [SAP ABAP FAQ](https://help.sap.com/docs/SUPPORT_CONTENT/abapfaq/3353523514.html) 搜索抓取分别出现采购 BAPI 提交和分包读取的线索，但直接打开同样零行、目标 2021 适用性未逐项确认；不可标为 ABAP-02/04 已验证。
+
 本节按页面**实际打开得到的正文**记录证据，并区分目标版本和具体主张。部分 SAP Help 动态页在搜索中显示标题和内容，但打开返回零行；这些页面在本次工具环境下只算索引线索，不能说已读。`可读` 仅表示本次阅读获得页面正文，不表示整篇文章或目标版本已验证；真实系统、配置和授权均未验证。以下每行是已定位的部分证据而非文章全部依据。每次写入正文时应重新核对来源版本和精确原文；未覆盖部分保持待核验。
 
 | 文章 | 官方/权威直接主题来源及阅读状态、版本 | 正文可支持的有限内容 / 未覆盖项目 |
