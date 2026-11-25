@@ -139,3 +139,10 @@
 - 新增 [SAP S/4HANA 2021.000 采购订单扩展页面](../../plans/extension-2021-evidence-m3.md)：Work 读取固定版本 2021 (Oct 2021)，页面支持 BAPI_PO_CREATE1 采购订单创建的自定义字段扩展，并列出 scope items J45、22Z、BNX、J13 与组件 MM-PUR、MM-FIO-PUR-PO。
 - /root/consultant_plan 独立通过浏览器复读原文并确认版本选择器、范围与摘要准确；未核 Work 的 buildNo 或 HTML 摘要，未调用 BAPI 或访问 SAP 系统。
 - 页面不说明提交、回滚、更新任务或消息行为；ABAP-04 事务证据仍未闭合。此次仅为 M3 文献交叉核验，正式文章与有效审查轮次仍为 0。
+
+
+## 2026-11-26｜FI-07 移动平均价案例复读
+
+- /root/consultant_plan 找到 SAP S/4HANA 2021.000 固定页 [Example: Material with MAP with Stock Coverage](../../plans/finance-fi07-direct-2021.md)；Work 随后独立在浏览器复读版本选择器、正文和图示。
+- 案例描述 PO 100 件、$2.00；先票 50 件@$2.20，再收货 80 件，随后再票 50 件@$2.20。图示列示 GR/IR、供应商和库存的加减值及 MAP 变化，但没有借/贷标题；无科目分配和税务前提也未明确。正文称最后发票改变库存数量，图中数量前后均为 180，保留歧义。
+- 该案例只支持有限 MAP 价格/数量差异，不解决普通库存采购借贷方向或 FI-07 / PROCESS-01 完整门槛；没有 SAP 实机验证，不计正式文章审核轮次。
