@@ -42,3 +42,8 @@
 `/root/consultant_plan` 浏览器实读 [SAP 2021 GTA Service Tax](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/240fcdcc71c640ea9aa9691500b34889/cf0d6d6be65444c4b4f37811b6e858bf.html?version=2021.000)，选择器显示 2021 (Oct 2021)，并查看截图核对借贷表格。原文为印度货物运输代理服务的特定税务示例，所列服务 15,000 INR、税率 12%，表格对应借 GR/IR 15,000、借服务税应收 1,800，贷供应商 15,000、贷服务税应付 1,800；两侧各 16,800。页面列有服务税与供应商预提税设置等条件。
 
 该例不能代表普通库存物料无税发票、其他税区或当前印度税法，也不证明具体企业实际清账、付款或系统配置；库存采购发票的目标版直接借贷例子仍待核实。`/root/audit_design_review` 已通过独立浏览器实读页面及截图，确认版本、四行借贷、税额、合计及特定条件；未连接 SAP，也不计正式文章审核。
+
+
+## 普通库存物料发票补查（2026-11-25）
+
+`/root/consultant_plan` 通过浏览器实读 [Posting Example Warehouse Concept 4](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/d56edf94353d4beeabb7f9b90adf081a/eeedcc53a8b77214e10000000a174cb4.html?version=2021.000)，选择器为 2021 (Oct 2021)。该页为 Funds Management 与库存物料采购集成的特定仓库场景，涉及移动平均价、FM 更新设置、税及差额等前提；发票行出现 GR/IR 与供应商，但截图中借贷表头相对数据列错位，且页面没有金额。因此不能只据此将这两项明确判为借方或贷方，也不能推广到所有企业的普通库存采购。SAP Learning 的相关方向未固定 2021；印度运输服务税案例已有明确方向，但不是普通库存采购。当前仍未找到同时满足目标版本、普通库存采购及明确借贷方向的官方正文，保持待核。未连接 SAP 或进行文章审核。
