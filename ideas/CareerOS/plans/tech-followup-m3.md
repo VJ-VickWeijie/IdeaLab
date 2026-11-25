@@ -49,3 +49,10 @@
 `/root/developer_m3_review` 实读 SAP 官方示例仓库 [v756 固定提交的 README](https://github.com/SAP-samples/abap-cheat-sheets/blob/1274c581696579e18777463c851a2e0ef3bf8f13/README.md) 和 [ABAP SQL 示例](https://github.com/SAP-samples/abap-cheat-sheets/blob/1274c581696579e18777463c851a2e0ef3bf8f13/src/zcl_demo_abap_sql.clas.abap#L511)，以及 [ADT 系统配置指南](https://help.sap.com/doc/2e65ad9a26c84878b1413009f8ac07c3/202210.000/en-US/config_guide_system_backend_abap_development_tools.pdf)；`/root/reader_plan` 独立核对版本说明和代码。README 指明 Classic ABAP 7.56，示例中有 `INTO TABLE ... PACKAGE SIZE ... ENDSELECT`；ADT PDF 物理第 3 页将 Application Server ABAP 7.56 FPS00 及以上称为 ABAP Platform 2021。
 
 该例用于语法演示，随后将各包累积到另一内表，**不能证明总内存受限或避免 dump**；仓库不保证示例可直接用于生产。普通 APPENDING 与 PACKAGE SIZE 在不同示例中出现，不能据此证明二者组合的语义或游标/提交行为，ADT 指南也不是 SQL 关键字语义文档。目标系统组件、具体 7.56 关键字原文、异常和实测仍待核验。该复核为规划来源检查，正式文章审核轮次为零。
+
+
+## ABAP-02：7.56 关键字直接来源更新（2026-11-26）
+
+[ABAP 7.56 SQL 与游标关键字补查](abap-756-keyword-direct-m3.md)现已直接核对 SELECT/INTO、PACKAGE SIZE、OPEN CURSOR、FETCH、COMMIT WORK 与 ROLLBACK WORK 六个 SAP HTML 页面，页眉为 AS ABAP Release 756 / ©2021。独立上下文复读了六页并提出两项具体精度修改；Work 修订 FAE 与 PACKAGE SIZE 的全部行先进入系统内表的文档提示，并逐轮修正 CALL DIALOG 特例定位。原复核者最终确认：该 SAP LUW 例外具体适用于 CALL DIALOG 被调程序，数据库提交仍发生，不能推断游标继续可用。
+
+这一直接资料补上了 ABAP 7.56 的语法和游标语义，但没有运行 ABAP 或访问 SAP 系统；不证明目标系统 FPS、实际内存安全、性能、异常捕获或任何特定程序行为，也不计正式文章审核轮次。原章节中“需找 7.56 关键字文档”的研究待办已完成；目标系统/实测缺口仍未闭合。
