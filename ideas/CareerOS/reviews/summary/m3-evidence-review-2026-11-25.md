@@ -61,3 +61,13 @@
 - `/root/developer_plan` 复核 AI 来源报告时发现自身误将 Gateway 文档阅读归于自己；Work 已改为准确转述协调者及 `/root/consultant_plan` 的早前阅读记录，`/root/developer_plan` 复读 `09deed9` 并确认该归属；不增加虚构独立验证次数。
 
 - `/root/audit_design_review` 指出 AI 贴合度报告误用了 AI-01～08 别名、术语表报告未显式给出 COMMON-01，影响严格逐 ID 自动核对。Work 已改为清单原 ID；`/root/audit_design_review` 对 `09deed9` 独立执行严格集合比对，99 个唯一 ID、无缺失/额外项，仅 FI-07 与 MM-09 在重点表和领域报告重复出现且不重复计数。计划级覆盖和 M3 通过仍是不同状态。
+
+
+## 新一轮目标版本补证
+
+- FI-04：`/root/reader_plan` 阅读固定 2021 总账迁移对象，`/root/audit_design_review` 独立核对封面和页191–194；仅支持 Direct Transfer 场景，不证明一般组织基数或 FS00 全事务只读。见 [FI-04 补查](../../plans/fi04-gl-2021-evidence-m3.md)。
+- S4HANA-03：`/root/developer_plan` 阅读 SAP 2021 Oct CDS/DCL 四页，`/root/audit_design_review` 独立复读其中两页；详见 [CDS/DCL 补查](../../plans/cds-dcl-2021-evidence-m3.md)。适用 DCL 与用户其他授权/访问路径不能混同。
+- MM-09：`/root/consultant_m3_review` 补查 SAP Learning 和公开 KBA，`/root/reader_plan` 独立核对其中两篇课程和两个预览；前者未锁定 2021，后者只限各自具体问题与产品字段，普通库存场景完整目标版依据仍未闭合。见 [MM-09 补查](../../plans/mm09-obyc-source-followup-m3.md)。
+- PROCESS-01：`/root/developer_m3_review` 补查付款建议、凭证、介质、银行状态，`/root/consultant_plan` 独立核对其中三处原文，不能据此声称真实资金已扣或所有采购付款路径已证。见 [付款末端](../../plans/p2p-payment-evidence-m3.md)。
+
+以上均为阶段研究，不是正文审查；未连接 SAP，M3 未通过，M4 未授权。

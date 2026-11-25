@@ -42,7 +42,7 @@ T1 使用动态 `latest` 地址，同一 URL 曾发生版本漂移。先前独�
 | ABAP-09 | T1 §2.15.1 `Data Modeling`，物理页 203 | 明确字典涉及类型、表、视图和锁对象；具体业务字段、键、发布接口、兼容视图和版本差异仍待逐项核。 | 部分可证，目标 FPS 待核 |
 | S4HANA-01 | T1 §2.15.1，物理页 198 | ABAP Platform 建基于 HANA 平台；Fiori/Gateway 拓扑、安装、许可和版本组合未由该句完整证明。 | 部分可证，部署/FPS 待核 |
 | S4HANA-02 | T2 `Additional Details` | 只能说明 SQLMD 诊断结果的过滤能力；执行计划、索引策略、性能结论必须按工具/真实数据另验。 | 部分可证，非性能实测 |
-| S4HANA-03 | T6 `Technical Details` | 特定 SQL Service 可供 ODBC 客户端只读访问 CDS view entity；CDS 建模、DCL 访问路径和授权依目标版本另查。 | 部分可证，FPS01 特定特性 |
+| S4HANA-03 | [2021 CDS/DCL 专题补查](cds-dcl-2021-evidence-m3.md)；T6 `Technical Details` | SAP 2021 初版 CDS 示例、DCL 与注解分别有原文；其中 DCL 示例与注解页已独立复读。T6 仅限 FPS01 的 SQL Service；各访问路径、具体服务/权限及实机仍待核。 | 部分可证，不代表全路径/系统通过 |
 | S4HANA-04 | T1 §2.15.2 `SAP Gateway Foundation`，物理页 215；T8 `Technical Details`；T15 Gateway Authorization | T1 描述 Gateway 创建 OData 服务，T8 描述 Fiori/PFCG 指定集成；T15 据协调者阅读可支持 Gateway 根据发起用户的授权对象作检查，但不能证明具体服务的身份认证、授权对象、部署或发布状态。 | 部分可证，T15 有限描述已独立复核，安全细节待核 |
 | S4HANA-05 | T1 §2.15.1 `RAP`，物理页 204 | 目标 2021 文档描述 RAP、CDS、OData 的架构与模型；此 2026 更新文档不足以证明所有列举能力在 FPS00 支持，须逐特性补目标 FPS。 | 部分可证，逐特性/FPS 待核 |
 | S4HANA-06 | T1 §2.15.1 `Software Logistics`，物理页 202；§2.15.1 自定义对象，物理页 209 | 可用作目标产品的开发对象运输和部分扩展功能背景；不直接证明 Clean Core 政策、2021 所有 API 发布状态或升级效果。 | 部分可证，架构政策/FPS 待核 |

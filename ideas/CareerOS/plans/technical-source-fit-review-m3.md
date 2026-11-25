@@ -47,3 +47,8 @@
 ## 独立抽查
 
 `/root/audit_design_review` 基于提交 `a345f0b6ee68cf48713540cc6a952b740e54641d` 抽查 ABAP-03、ABAP-07、ABAP-05、S4HANA-03、S4HANA-09 五项，确认所列有限分类合理；未复核全部 16 项。审查者指出计划文件误称 `tech-m3.md`，Work 已修正为仓库实际文件链接，原审查者在 `d6049bc` 复读确认，限该链接问题关闭。
+
+
+## 后续更新：S4HANA-03
+
+上述初评针对当时 T6 的来源；随后 `/root/developer_plan` 直接读取 SAP 2021 Oct 的 CDS/DCL 四页，`/root/audit_design_review` 独立复读其中授权示例和注解两页，见 [CDS/DCL 补查](cds-dcl-2021-evidence-m3.md)。对该文章核心的个别 DCL 子命题现有目标版本直接支持，但不证明所有访问路径、服务授权或整篇资料充分；其他 15 项分类不因此改变。
