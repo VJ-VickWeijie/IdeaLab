@@ -30,7 +30,7 @@
 
 相关官方 2021 initial What's New PDF 因文件大小约 15 MB 超出网页读取工具限制，未能读取对应正文，不能声称已核实。2021.1 `Cross-Plant Planning` PDF 已读到采购 BAPI 扩展参数，但它描述 ERP 的 SCM Consulting Solution 附加组件，日期或 `2021.1` 不足以证明 S/4HANA 2021 产品及事务行为。
 
-再次核查结果：当前独立执行上下文的可用工具清单没有发现 Browser、CUA 或 Node REPL，因此无法实际操作该页版本选择器；2021.000 目标 URL 再次直接打开时返回不可访问，之前另一语言地址也曾返回零行。德文搜索索引显示 2021 年 10 月初始版并涉及该 BAPI 的自定义字段扩展，但在本上下文中依然属于**仅索引**，不能记为本次独立读取官方正文或现场确认版本。自定义字段扩展信息无论读取与否，均不支持推断调用方提交、回滚、更新任务或其他 BAPI 的事务语义。
+当时原研究者再次核查结果：该研究者执行上下文的可用工具清单没有发现 Browser、CUA 或 Node REPL，因此无法实际操作该页版本选择器；2021.000 目标 URL 再次直接打开时返回不可访问，之前另一语言地址也曾返回零行。德文搜索索引显示 2021 年 10 月初始版并涉及该 BAPI 的自定义字段扩展，但在本上下文中依然属于**仅索引**，不能记为本次独立读取官方正文或现场确认版本。自定义字段扩展信息无论读取与否，均不支持推断调用方提交、回滚、更新任务或其他 BAPI 的事务语义。
 
 ## 检索结论与剩余动作
 
@@ -47,6 +47,6 @@
 
 `/root/developer_plan` 通过版本选择器读取 [ABAP Platform 2021 初版的 BAPI Transaction Model](https://help.sap.com/docs/ABAP_PLATFORM_NEW/166400f6be7b46e8adc6b90fd20f3516/4d5b102ba1483d8fe10000000a42189e.html?version=202110.000)，`/root/consultant_plan` 随后独立复读，均确认选择器为 2021 (Oct 2021)。原文讨论 BAPI 通常由调用方控制提交/回滚，也明示少数自带 COMMIT 的例外和函数文档/Note 0131838。它是通用模型，**未指明 BAPI_PO_CREATE1**，不能证明该函数无例外、RETURN 判断、RFC 会话或更新任务行为。
 
-同一开发者和独立顾问实读 [Function Module Test Sequence](https://help.sap.com/docs/SUPPORT_CONTENT/abap/3353523556.html)，其 SAP Support Additional Content 示例演示顺序调用 PO 创建和提交、检查 RETURN 及设置 WAIT；该页面无目标产品/FPS 标识，并提示 Additional Content 不属于 SAP 条款中定义的 Documentation。示例不能视为目标函数的 2021 产品契约、完整回滚规则或执行授权。此前本文件中搜索工具打开为空的记录保留为当时结果，后续浏览器实读不应倒写为原研究者已读。
+同一开发者和独立顾问实读 [Function Module Test Sequence](https://help.sap.com/docs/SUPPORT_CONTENT/abap/3353523556.html)，其 SAP Support Additional Content 示例演示顺序调用 PO 创建和提交、检查 RETURN 及设置 WAIT = 'X'；该页面无目标产品/FPS 标识，并提示 Additional Content 不属于 SAP 条款中定义的 Documentation。示例不能视为目标函数的 2021 产品契约、完整回滚规则或执行授权。此前本文件中搜索工具打开为空的记录保留为当时结果，后续浏览器实读不应倒写为原研究者已读。
 
 **状态**：2021 通用 BAPI 模型直接证据已找到并独立复核；2021 采购函数级事务、消息、回滚及实机行为仍待核。未操作 SAP 系统，未进行正式文章审核。

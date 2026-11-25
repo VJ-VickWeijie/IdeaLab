@@ -73,7 +73,7 @@ T1 使用动态 `latest` 地址，同一 URL 曾发生版本漂移。先前独�
 
 ## 追加技术来源（研究记录）
 
-[技术证据补查](tech-followup-m3.md) 记录了 SAP 官方 2021 FPS01 Custom Code Migration Guide 关于运行时 SQL 检查和 SQL Monitor 的限定说明，以及 RAP 和采购 BAPI 尚未直接读到正文的线索。PDF 封面写 FPS01，不能凭 URL 中的 `.002` 将文档认作 FPS02。分包内存安全、RAP 逐功能和采购 BAPI 提交行为均未由该证据解决。
+[技术证据补查](tech-followup-m3.md) 记录了 SAP 官方 2021 FPS01 Custom Code Migration Guide 关于运行时 SQL 检查和 SQL Monitor 的限定说明，以及原研究者当时尚未直接读到的 RAP 和采购 BAPI 线索；随后独立开发者已实读 2021 初版 RAP 特定功能和采购 BAPI 自定义字段扩展页面，但函数级提交/回滚语义仍缺。PDF 封面写 FPS01，不能凭 URL 中的 `.002` 将文档认作 FPS02。分包内存安全、RAP 逐功能和采购 BAPI 提交行为均未由该证据解决。
 
 [采购 BAPI 定向补查](bapi-transaction-search-m3.md) 新发现第三方公开样章，以 S/4HANA 2021 FPS01 为特定示例讨论采购 BAPI 与 RAP 的事务边界；独立开发者已复核，但该样章并非 SAP 官方文档。2026 官方集成指南仅列接口暴露要求，不能据此推出调用或回滚语义。目标版本 SAP 官方直接依据仍未取得。
 

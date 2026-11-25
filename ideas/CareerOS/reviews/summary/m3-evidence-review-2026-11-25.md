@@ -41,6 +41,8 @@
 
 - `/root/developer_plan` 和 `/root/consultant_plan` 分别实读并独立复核 ABAP Platform 2021 的 BAPI 通用事务模型与无产品版本的 SAP Additional Content 测试示例；通用模型明确有例外，未证明采购 BAPI 的事务契约。见 [BAPI 证据](../../plans/bapi-transaction-search-m3.md)。
 - `/root/developer_m3_review` 找到 SAP 官方 7.56 固定代码示例与版本映射，`/root/reader_plan` 独立复核示例的分包和累积边界；该例不保证免内存 dump。见 [7.56 证据](../../plans/abap-756-sql-evidence-m3.md)。
-- `/root/audit_design_review` 发现 SQL Monitor 来源的正文和页尾版本字段表述不一致；`/root/developer_m3_review` 独立实读，确认 Available As Of 字段仅为 2021，而页面 Version 字段标 FPS00。Work 已修正主台账和细化文档；该修订仍待原审查者复核。
-- `/root/reader_plan` 发现 FI/CO 入门先修、正常余额与增减方向的教学设计以及 F4 链接问题。Work 已更新课程计划，并将财政部 2014 历史大纲的限定支持同步主台账；本轮修订仍待原审查者复核，未声称现行适用或 SAP 实测。
-- 针对逐篇来源和资源计划欠缺量化状态，Work 新增控制计划并保留尚未判定/未闭合的标识；该方案仍须独立复核，不代表 M3 门槛通过。
+- `/root/audit_design_review` 发现 SQL Monitor 来源的正文和页尾版本字段表述不一致；`/root/developer_m3_review` 独立实读，确认 Available As Of 字段仅为 2021，而页面 Version 字段标 FPS00。Work 已修正主台账和细化文档；原审查者复核主表正确，但指出两条细化表引用仍缺字段区分，Work 追加修正，待其再复核。
+- `/root/reader_plan` 发现 FI/CO 入门先修、正常余额与增减方向的教学设计以及 F4 链接问题。Work 已更新课程计划，并将财政部 2014 历史大纲的限定支持同步主台账；原审查者复核主要修订准确，并指出 COURSE-03 主表仍需同步历史来源；Work 已修正该处，待其再复核。未声称现行适用或 SAP 实测。
+- 针对逐篇来源和资源计划欠缺量化状态，Work 新增控制计划并保留尚未判定/未闭合的标识；原审查者复核当时 5/94 状态、资源与事件数正确；后续另对 16 项技术主题进行初步贴合度归类，余下 78 项仍待该项归类，任何归类均非 M3 通过，但实际每批角色和容量仍未落实，且提出新增严重缺陷须明确复验；Work 追加说明并待其再复核。该方案不代表 M3 门槛通过。
+
+- `/root/developer_m3_review` 对 16 项技术计划进行了[来源贴合度初步复核](../../plans/technical-source-fit-review-m3.md)：12 项直接部分支持、4 项主要为邻近概述；未覆盖的 78 项不能据此判通过。该报告尚待独立复核，分类不代表正式文章完成或 M3 审批。
