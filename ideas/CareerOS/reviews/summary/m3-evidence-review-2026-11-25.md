@@ -19,7 +19,7 @@
 | 财务台账；`/root/audit_design_review` | 独立抽查 26 个 ID 与原始资料，指出 SEC1 应包括现金流量表及 GAO1 的页码有误；Work 修正原财务台账。 | 同一审查者复核两处修正；未能独立读取大型 SAP 2021 PDF，因此未验证其具体段落。只代表抽样，不代表全文通过。 |
 | 财务补查；原作者 `/root/reader_m3_review`，独立审查 `/root/audit_design_review` | 原作者重新核对并补查 [26 项 FI/CO 与课程资料](../../plans/finance-source-recheck-20261125.md)；其自身复查不能算独立验收。审查者指出补查报告的 GAO 旧页码，Work 已统一修正。 | 独立审查者复读修订，并直接读取 2014 财政部大纲及两份通知；确认仅限历史资料线索，不证明现行规定、SAP 行为或具体使用许可。其他来源未全部独立验证。 |
 | 技术追加；`/root/developer_m3_review`，独立审查 `/root/developer_plan` | [技术补查](../../plans/tech-followup-m3.md) 找到 SAP Custom Code Migration Guide：封面是 2021 FPS01，尽管 URL 带 `.002`；正文涉及 SRTCM 和 SQL Monitor。 | 独立开发者核对封面和物理页 3、80、81，确认有限描述；该页不证明 SQLM 事务码、`PACKAGE SIZE` 或消除 dump，未进行 SAP 实测。 |
-| 财务过账专题；`/root/reader_m3_review`，独立审查 `/root/audit_design_review` | [FI-07 补查](../../plans/finance-fi07-direct-2021.md) 取得 2021 初版收货与发票图示及账户说明。 | 独立复核前两页图示及供应商过账不等于付款；另找到2021印度不涉及消费税的货物收货借库存、贷 GR/IR 的特定例子。原文正负与借贷对应仍有歧义，不能据此断定笔误；新增印度来源最初独立复核因用量限制中断，随后 `/root/consultant_plan` 实读原文并指出 nonexcisable 应限指消费税，Work 已修正译法，原审查者复读确认，限此问题关闭。另两页尚未独立复核。 |
+| 财务过账专题；`/root/reader_m3_review`，独立审查 `/root/audit_design_review` | [FI-07 补查](../../plans/finance-fi07-direct-2021.md) 取得 2021 初版收货与发票图示及账户说明。 | 独立复核前两页图示及供应商过账不等于付款；另找到2021印度不涉及消费税的货物收货借库存、贷 GR/IR 的特定例子。原文正负与借贷对应仍有歧义，不能据此断定笔误；新增印度来源最初独立复核因用量限制中断，随后 `/root/consultant_plan` 实读原文并指出 nonexcisable 应限指消费税，Work 已修正译法，原审查者复读确认，限此问题关闭。第三页已由 `/root/consultant_plan` 独立复读，第四页仍未独立复核。 |
 | 采购 BAPI 专题；`/root/developer_m3_review`，独立审查 `/root/developer_plan` | Work 补查 [BAPI 事务资料](../../plans/bapi-transaction-search-m3.md)：SAP 2026 指南仅列特定集成的函数暴露清单；第三方样章使用 2021 FPS01 具体 RAP 场景。 | 独立开发者读取两份原文并确认局限；第三方不能冒充 SAP 官方，官方目标版本特定事务语义仍待核。 |
 | 2021 RAP 与 PO 扩展；`/root/developer_plan` | 原研究者只能取得索引；独立开发者在浏览器明确选择 2021 初版并阅读两个 SAP 原文，补充特定 RAP 功能和 BAPI 自定义字段扩展。 | 更新 [技术补查](../../plans/tech-followup-m3.md) 与 [BAPI研究](../../plans/bapi-transaction-search-m3.md)；不能由此推断全部特性、事务、增强副作用或系统实测。 |
 | 物流与质量补查；`/root/consultant_m3_review` | [四项专题补查](../../plans/evidence-gap-four-m3.md) 找到 MM-09 特定迁移场景、QM-07/08 的 FPS01 单项配置与 CDS；原研究 SD-01 仅有搜索索引；独立顾问随后直接读取了 2021 初版销售组织和销售区域 API 两个页面。 | 独立配置顾问 `/root/consultant_plan` 复核 MM/QM 原 PDF、场景及页码，并实读 SD 两个 2021 页面；Work 按反馈更新专题记录。仅限所述问题，不代表各主题全文已验证。 |
@@ -32,7 +32,7 @@
 2. 2021 FSD 的 `latest.pdf` 是动态链接，同日出现旧抓取 9.0/SPS08 与当前 11.0/SPS10；记录了后者当次文件长度和 SHA-256，但未归档原文件，不能保证旧版或今后可复现。不得跨版本混用页码或宣称符合目标系统未知 FPS。
 3. ABAP-04 仍缺可读且明确适用于 S/4HANA 2021 的目标采购 BAPI 事务与提交依据；RAP 特性、分包语法等的目标 FPS 证据不足。搜索索引可见不能当作正文已读，也不能把 ECC 事实自动套用 2021。
 4. 财务借贷入门已找到历史中文资料，但当代地区适用性、具体使用许可和 SAP 会计分录仍需核对；OpenStax 已暂停使用。
-5. 上次复核一度受用量限制；本次恢复后完成上表列明的复验。后续印度来源再复核与 P2P 来源补查的两个子代理任务再次遇到用量限制；印度页面随后由另一顾问独立实读，P2P 补查未完成。未取得的独立复核不得计作通过。P2P 补查中研究者报告 [2021 采购收货应用](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/c2be52880d194905a0692f6dce907795.html?version=2021.000) 的索引涉及凭采购订单过账收货，但正文未实读；未完成的发票到付款链仍需研究。没有公司 SAP 环境，不能声称系统实测。
+5. 上次复核一度受用量限制；本次恢复后完成上表列明的复验。后续印度来源再复核与 P2P 来源补查的两个子代理任务再次遇到用量限制；印度页面随后由另一顾问独立实读，P2P 补查后由另一顾问接手并实读两页，其有限结果见 [P2P估价补查](../../plans/p2p-valuation-direct-2021.md)；完整 P2P 和付款证据仍未闭合。未取得的独立复核不得计作通过。P2P 补查中研究者报告 [2021 采购收货应用](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/c2be52880d194905a0692f6dce907795.html?version=2021.000) 的索引涉及凭采购订单过账收货，但正文未实读；未完成的发票到付款链仍需研究。没有公司 SAP 环境，不能声称系统实测。
 6. 逐篇目标版本直接来源与实施资源计划未全部闭合。M3 阶段评审须如实列出未解事项及影响；未经所有者批准 M3 和明确授权，不进入 M4。
 
 以上均为规划来源审查，并非三角色对正式文章进行的有效问答、修订与复核，不计入每篇至少 60 轮的统计。
