@@ -89,6 +89,7 @@ planned 转 drafting 前补路径和资料线索；reviewed 需真实且完整�
 | AI-Integration-06 | AI-Integration | AI 集成相关事务码与运维入口 | P1 | AI 通用架构与 SAP 接口分开；标注产品版本、来源及权限 | planned | 0 / 0 / 0 |
 | AI-Integration-07 | AI-Integration | 集成配置与授权查看 | P1 | AI 通用架构与 SAP 接口分开；标注产品版本、来源及权限 | planned | 0 / 0 / 0 |
 | AI-Integration-08 | AI-Integration | AI 集成数据模型与证据链 | P1 | AI 通用架构与 SAP 接口分开；标注产品版本、来源及权限 | planned | 0 / 0 / 0 |
+| COMMON-01 | COMMON | SAP 业务和技术统一术语表 | P0 | 术语中英全称、例子、唯一归属及来源；核对交叉链接 | planned | 0 / 0 / 0 |
 | PROCESS-01 | PROCESS | P2P 采购到付款 | P0 | 端到端完整流及条件差异；官方 2021 文档逐项核验 | planned | 0 / 0 / 0 |
 | PROCESS-02 | PROCESS | O2C 订单到收款 | P0 | 端到端完整流及条件差异；官方 2021 文档逐项核验 | planned | 0 / 0 / 0 |
 | PROCESS-03 | PROCESS | 同公司库存调拨 STO | P0 | 端到端完整流及条件差异；官方 2021 文档逐项核验 | planned | 0 / 0 / 0 |
@@ -109,7 +110,7 @@ planned 转 drafting 前补路径和资料线索；reviewed 需真实且完整�
 | COURSE-06 | COURSE | ABAP 与 S/4HANA 技术架构 | P1 | 先修、目标、时长、原文引用与可选练习；检查链接 | planned | 0 / 0 / 0 |
 | COURSE-07 | COURSE | SAP 与 AI 集成及职业验证 | P1 | 先修、目标、时长、原文引用与可选练习；检查链接 | planned | 0 / 0 / 0 |
 
-当前候选正式文章 **98** 篇，按每篇至少 60 轮计算最低 **5880** 个完整闭环；这是容量底线而不是质量保证。各类导航、文章合并或拆分，以及是否把课程视作正式文章，均需在实施前固定并记录。
+当前候选正式文章 **99** 篇，按每篇至少 60 轮计算最低 **5940** 个完整闭环；这是容量底线而不是质量保证。各类导航、文章合并或拆分，以及是否把课程视作正式文章，均需在实施前固定并记录。
 
 ## 覆盖缺口与依赖
 
