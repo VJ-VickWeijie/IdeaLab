@@ -11,7 +11,7 @@
 - 页面说明 partner function 用于定义业务交易中各业务伙伴的权利与责任。客户类型的标准示例包括 sold-to party、ship-to party、bill-to party 和 payer。
 - 原文列举的数据示例分别是：sold-to 的销售数据，如销售办公室或价目表；ship-to 的卸货点和收货时间；bill-to 的地址、单据打印和电子通信数据；payer 的开票计划和银行数据。这些是原文示例，不是所有适用字段的穷尽列表。
 - 同一客户可以承担全部伙伴职能；也可由分支机构订货、总部付款。后者涉及相应数量的客户主记录，并在 sold-to 的客户主记录中用相应客户编号关联各职能。
-- 原文说客户账户组决定可用于某伙伴职能的账户组，partner determination procedure 规定特定业务交易允许或必须的职能。不能把四个示例直接推成所有场景和所有系统配置中固定必填。
+- 原文说明，针对客户及供应商伙伴类型，在配置中定义哪些账户组可用于哪些伙伴职能；partner determination procedure 规定特定业务交易允许或必须的职能。不能把四个示例直接推成所有场景和所有系统配置中固定必填。
 
 ## 2. Business Partner 角色和 Fiori 角色导航
 
@@ -49,3 +49,6 @@ Business Partner **role**（如 FLCU00、FLCU01）表示伙伴主数据所具备
 ## 独立复核
 
 `/root/audit_design_review` 通过浏览器独立读取上述第1、2页，确认选择器为 2021 Oct、伙伴职能与 BP role 不同，以及页面 Role Deletion 表中 FLVN00 的内部不一致；不能断言 SAP 已发布勘误。该审查者未审第3、4页，不代表全部字段或实际权限已核实，也不计正式文章审核。
+
+
+审查记录：`/root/audit_design_review` 复核 `82410979f8254cfb3f58fd3f1a71973d6f02076e` 时指出原账户组句子语义重复，Work 已按其所读 2021 原文精确修订；待审查者复核该修订，不计文章审核轮次。
