@@ -14,9 +14,9 @@
 | --- | --- | --- |
 | S21 | [SAP《What's New in SAP S/4HANA 2021》](https://help.sap.com/doc/4eefc5f2d826408f91a999687d31780f/2021/en-US/WN_OP2021__EN.pdf)，PDF正文可读；封面明确文档1.0（2021-10-13），面向2021初始发行。部分条目含不同“Valid as Of”，须逐条核对。 | §3.5、§3.6内特定功能变更；不是所有功能、T-Code或配置的完整说明；SAP版权所有，引用须符合其适用条款。 |
 | SI21 | [SAP《Simplification List for SAP S/4HANA 2021》](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf)，PDF正文可读；覆盖2021初始发行及FPS01/02。 | §8.1财务数据模型转换与兼容对象背景；不证明每个字段、访问权限或发布API。文件版本和目标系统FPS须逐项复核。 |
-| SEC1 | [美国SEC《Beginners’ Guide to Financial Statements》](https://www.sec.gov/about/reports-publications/beginners-guide-financial-statements)，网页正文可读，在线内容可能变更。SEC [网站FAQ](https://www.sec.gov/about/webmaster-frequently-asked-questions)称其政府制作内容可自由获取及再利用，并提示极少数内容如素材图片例外；具体素材仍需确认。 | “Balance Sheets”和“Income Statements”章节介绍资产、负债、权益、会计等式、收入费用与现金流的基础概念。美国语境，不证明中国财税规则和SAP系统行为。 |
+| SEC1 | [美国SEC《Beginners’ Guide to Financial Statements》](https://www.sec.gov/about/reports-publications/beginners-guide-financial-statements)，网页正文可读，在线内容可能变更。SEC [网站FAQ](https://www.sec.gov/about/webmaster-frequently-asked-questions)称其政府制作内容可自由获取及再利用，并提示极少数内容如素材图片例外；具体素材仍需确认。 | “Balance Sheets”“Income Statements”和“Cash Flow Statements”分别介绍资产、负债、权益、会计等式、收入费用与现金流的基础概念。美国语境，不证明中国财税规则和SAP系统行为。 |
 | SEC2 | [SEC《What is a balance sheet?》](https://www.sec.gov/files/balancesheet-building-blocks.pdf)，SEC小企业资本形成倡导办公室PDF正文可读；文件说明为工作人员教育资料，不具法规效力。 | 第1–2页介绍资产、负债、权益、等式及应收应付概念；使用边界同SEC1。 |
-| GAO1 | [美国GAO《Illustrative Accounting Procedures for Federal Agencies》](https://www.gao.gov/assets/095099.pdf)，PDF正文可读，历史性美国联邦政府案例。GAO [版权和使用说明](https://www.gao.gov/copyright)称其产品可复制分发，但其内容可能含第三方版权材料；具体材料须核实。 | 第3–4节（PDF印刷页18–19）以政府数据处理为例，描述成本中心、责任归属、直接及间接成本；不能直接映射SAP配置或当作现代中国企业制度。 |
+| GAO1 | [美国GAO《Illustrative Accounting Procedures for Federal Agencies》](https://www.gao.gov/assets/095099.pdf)，PDF正文可读，历史性美国联邦政府案例。GAO [版权和使用说明](https://www.gao.gov/copyright)称其产品可复制分发，但其内容可能含第三方版权材料；具体材料须核实。 | 第3–4节（印刷页19–20，§4 可能延续后页）以政府数据处理为例，描述成本中心、责任归属、直接及间接成本；不能直接映射SAP配置或当作现代中国企业制度。 |
 | GAO2 | [GAO/PCIE《Financial Audit Manual》财务会计报告核对表](https://www.gao.gov/assets/a76851.html)，网页正文可读，历史性美国联邦会计指南。 | “Managerial cost accounting”和“Responsibility Segments”段落描述管理成本信息和责任分部；不证明SAP业务对象或其版次。 |
 | IRS1 | [美国IRS Publication 538（2022年1月版）](https://www.irs.gov/pub/irs-pdf/p538.pdf)，PDF正文可读；仅作美国特定税务语境下现金制/权责发生制说明，不代表中国税会规则或SAP功能。 | Introduction 概述收入/费用确认时间；政府来源使用时仍应检查第三方素材及当前具体条款。 |
 | IRS2 | [美国IRS《Examination Techniques》§4.10.3.15.1及 Exhibit 4.10.3-2](https://www.irs.gov/irm/part4/irm_04-010-003)，正文可读；网页可能变更，特定小节标注2003-03-01。IRS [官方使用说明 §1.17.8.6.5](https://www.irs.gov/irm/part1/irm_01-017-008)称政府人员公务编制且不含其他受保护素材的政府出版物不受版权保护；不得将其一概扩展至第三方素材。 | 复式记账、资产=负债+资本及账户通常余额方向的美国审计示例；一般余额方向不等同各账户所有变动方向，也不是中国税法或SAP过账配置。 |
@@ -38,7 +38,7 @@ SEC/GAO/IRS来源只支持文本中确切内容，站点其他第三方内容或
 | FI-04 | SEC1“Balance Sheets”提供一般报表背景；S21 §3.6.1.16限于特定总账应用中扩展未清项管理字段。 | 公司代码、会计科目表组织关系、类别与权限需SAP 2021专题来源；不能由应用单一功能反推。 |
 | FI-05 | S21 §3.6.1.8描述特定 Manage Journal Entries 应用中的凭证分析与冲销功能。 | 复式会计分录、各单据冲销条件、期间与GUI事务仍缺直接依据；不得凭已暂停教材补足。 |
 | FI-06 | SEC2第2页说明应收/应付的基本含义；S21 Finance相关条目列出特定客户和供应商项目应用。 | SAP 2021发票、过账、部分支付、付款清账及税币条件仍缺可读专题；美国教育资料不是中国准则。 |
-| FI-07 | S21 §3.6.1.15支持2021特定GR/IR自动清账程序的显示、模拟和更新模式及其特定前提。 | 采购收货/发票分录、库存/消耗采购、非估价、先票后货和自动科目确定未由此证明。 |
+| FI-07 | S21 §3.6.1.15 为特定 GR/IR 清账程序；[FI-07补查](finance-fi07-direct-2021.md) 的前两篇 SAP 2021 初版原文，经独立审查，展示特定收货/发票相关账户和供应商过账不等于付款。 | 图示正负与借贷对应尚未核实；消耗采购、非估价、先票后货、税、差异、自动科目确定及实际清账状态不能据此推断。 |
 | FI-08 | S21 §3.6.1.24–25支持2021余额结转状态及特定作业；IRS1 Introduction仅提供美国税务语境下会计期间/方法线索。 | 完整月结/年结和国内制度需2021专题及适用地区证据；无实机操作。 |
 | FI-09 | S21 §3.6.1.15列特定GR/IR清账入口及显示/模拟/更新模式。 | 不可把整个程序称作只读；完整GUI与Fiori索引逐项版本、输入输出、权限及影响尚缺。 |
 | FI-10 | S21 §3.6.1.16限特定GR/IR扩展未清项字段及启用条件。 | 科目表、账期、自动科目、付款配置的实际路径和权限需逐项2021文档；未授权不做更改。 |
@@ -72,3 +72,10 @@ SEC/GAO/IRS来源只支持文本中确切内容，站点其他第三方内容或
 ## 当前结论
 
 共26项：FI 11、CO 8、COURSE 7。**部分借贷基础已有美国政府公开资料直接支持，但完整借贷变动规则、中国适用性、生产成本和各项SAP 2021配置/字段等核心主张仍有证据缺口。** 保留为阻碍并继续研究，不得因已有索引或局部证据就宣布M3通过，也不将公开资料核验伪装成SAP系统实测。
+
+
+## 独立抽查与修订复验（2026-11-25）
+
+`/root/audit_design_review` 独立抽查 PR #20 原财务台账（blob `1d1b34a90a111df3c6a76665910000427e709dd7`）及相关规划：26 个 ID 无重复。审查者指出 SEC1 相关位置还应列出现金流量表，以及 GAO1 第3–4节的位置应为印刷页19–20而非18–19。协调者依据意见修正本台账，原审查上下文重新读取修改后本地文件确认这两处修正。SEC、GAO、IRS 仅在原记录注明的美国背景和具体范围内使用；审查者未能独立读取大型 SAP 2021 PDF，因此不能将 SAP 具体段落记成其独立验证。其他来源、主张与全部文章并未被本次抽样证明。
+
+本台账的原作者另做 [FI/CO 来源补查](finance-source-recheck-20261125.md)，该报告不是独立验收；其中中国财政部2014历史大纲及2016修订通知只作为研究线索，不是当前规则或 SAP 2021 证据，复用范围待确认。

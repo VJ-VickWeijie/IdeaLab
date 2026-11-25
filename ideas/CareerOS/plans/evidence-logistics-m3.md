@@ -10,17 +10,17 @@
 
 | ID | 来源、产品/修订及具体页 | 本次实际读取并可支持的范围 | 未覆盖与门禁 |
 | --- | --- | --- | --- |
-| MM-01 | [SAP 采购组织结构，S/4HANA 2021 初始版](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/2b7eb65334e6b54ce10000000a174cb4.html?version=2021.000)；协调者通过 SAP 版本选择器及浏览器于 2026-11-25 实际读到 `2021 (Oct 2021)` | 直接覆盖客户端、公司代码、工厂、采购组织与采购组的概念，及文中所述的组织关联、集中/分散采购 | 不代表每家企业的组织设置、所有模块关系和当前系统权限；本次新来源尚未独立复核 |
+| MM-01 | [SAP 采购组织结构，S/4HANA 2021 初始版](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/2b7eb65334e6b54ce10000000a174cb4.html?version=2021.000)；协调者及独立开发者均通过浏览器实际读取 `2021 (Oct 2021)` | 直接覆盖客户端、公司代码、工厂、采购组织与采购组的概念，及文中所述的组织关联、集中/分散采购 | 不代表每家企业的组织设置、所有模块关系和当前系统权限；该来源有限描述经独立复核 |
 | MM-02 | [S：2021 初版/FPS01/FPS02；1.25，PDF 第 134 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=134)；§3.18 Business Partner Approach | BP 和 CVI 配置检查涉及 BP role category | 该段是迁移前提，非供应商角色全表及物料视图 |
 | MM-03 | [F：2021 SPS10；11.0，PDF 第 153 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=153)；§2.12.3.2 Source Assignment | 信息记录关联物料和供应商，并可按采购组织或工厂维护；货源清单/配额在该节 | 优先级、有效性和自动选择条件 |
 | MM-04 | [F：2021 SPS10；11.0，PDF 第 157 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=157)；§2.12.4.2 Requirements Processing | 采购申请及其处理功能 | PR→PO 各变体、审批配置与实际事务 |
 | MM-05 | [F：2021 SPS10；11.0，PDF 第 169 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=169)；§2.13.1.1 Goods Movement | 货物移动、收发货与库位/库存类型变化概述 | 具体移动类型、特殊库存和价值影响 |
 | MM-06 | [F：2021 SPS10；11.0，PDF 第 169 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=169)；§2.13.1.1 Goods Movement | 列举货物发出、货物收取和移动 | 冲销与退货在单据及账务上的具体差异 |
-| MM-07 | [SAP Units of Measure in Purchase Orders，2021 初始版](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/af7eb65334e6b54ce10000000a174cb4.html?version=2021.000)；协调者 2026-11-25 通过 SAP Help 的版本选择器选择 `2021 (Oct 2021)` 并读取正文 | 可作为普通采购订单中的订单单位、订单价格单位、换算以及采购信息记录可供默认值的直接来源；只支持文档明确的使用场景 | 未证明 BAPI 特定字段覆盖根因、所有配置优先级、后续 FPS 差异或当前系统行为；协调者读取结果尚待独立复核 |
+| MM-07 | [SAP Units of Measure in Purchase Orders，2021 初始版](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/af7eb65334e6b54ce10000000a174cb4.html?version=2021.000)；协调者及独立开发者均读取 `2021 (Oct 2021)` | 可作为普通采购订单中的订单单位、订单价格单位、换算以及采购信息记录可供默认值的直接来源；只支持文档明确的使用场景 | 未证明 BAPI 特定字段覆盖根因、所有配置优先级、后续 FPS 差异或当前系统行为；该来源有限描述经独立复核 |
 | MM-08 | [S：2021 初版/FPS01/FPS02；1.25，PDF 第 151 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=151)；Material/Article Master 的 MRP 字段变更 | 对 MM01/MM02/MM03 特定屏幕字段改变有说明 | 不证明这些事务全面可用、显示/写入权限或其他采购 T-Code |
-| MM-09 | [S：2021 初版/FPS01/FPS02；1.25，PDF 第 775 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=775)；S/4HANA-based Output Management 配置迁移说明 | 特定采购订单输出管理配置路径的版本变化 | 非本条计划核心的凭证类型、移动类型和科目决定，直接证据未解决 |
+| MM-09 | [2021 Simplification List 1.25 §15.4，PDF 356页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=356)；详见[补查](evidence-gap-four-m3.md) | 特定材料账实际成本迁移场景的 OBYC、IMG 和 PRL/GBB-AUI 检查；独立顾问已复核。 | 不证明常规收货 BSX/WRX、全部采购设置或只读权限；凭证类型、移动类型仍待核。 |
 | MM-10 | [S：2021 初版/FPS01/FPS02；1.25，PDF 第 478 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=478)；MM-IM 数据模型简化 | 比较 ERP 与 S/4HANA 库存管理数据模型 | PR/PO 完整模型、精确键、基数和发布 API |
-| SD-01 | [F：2021 SPS10；11.0，PDF 第 116 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=116)；§2.10.2.1 Sales Master Data Management | 销售主数据对销售处理的总体作用 | 销售组织/渠道/产品组及工厂分配；直接证据未解决 |
+| SD-01 | [SAP 2021 Sales Organization](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/f7fddfe4caca43dd967ac4c9ce6a70e4/a614c453f57eb44ce10000000a174cb4.html?version=2021.000)；详见[补查](evidence-gap-four-m3.md) | 独立顾问实读 2021 初版销售组织、销售区域三项以及公司代码/工厂的有限分配关系。 | 不证明所有客户自定义、实际配置及全部跨公司开票场景。 |
 | SD-02 | [F：2021 SPS10；11.0，PDF 第 116 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=116)；§2.10.2.1 Sales Master Data Management | 销售主数据是业务数据的复用基础 | BP 角色、伙伴职能及具体组织视图 |
 | SD-03 | [F：2021 SPS10；11.0，PDF 第 122 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=122)；§2.10.2.6 Sales Order Management and Processing | 销售单据类型及确认数量日期的功能 | 具体部分交货、取消与权限 |
 | SD-04 | [F：2021 SPS10；11.0，PDF 第 126 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=126)；§2.10.2.8 Sales Billing | 开票单据可传递 FI | 并非所有开票的收入确认、税和收款逻辑 |
@@ -42,17 +42,17 @@
 | QM-04 | [F：2021 SPS10；11.0，PDF 第 94 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=94)；§2.8.5.2 Quality Inspection | 记录检验结果并执行使用决策 | UD 与自动/手工库存过账、撤销及业务条件 |
 | QM-05 | [F：2021 SPS10；11.0，PDF 第 188 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=188)；仓储 Quality Management 描述 | 特定 EWM 入库处理有检验批与部分使用决策场景 | 该段属于 EWM，不能替代通用 IM 质量库存和财务影响证据 |
 | QM-06 | [S：2021 初版/FPS01/FPS02；1.25，PDF 第 678 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=678)；§31.2 Removed Redundant Transactions in QM | 列举 QE51 的替代及其他事务导航变化 | 旧版事务替代说明不证明所有事务在目标补丁均可访问或权限充足 |
-| QM-07 | [S：2021 初版/FPS01/FPS02；1.25，PDF 第 681 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=681)；QM 授权对象变化 | 说明部分旧 QM 授权对象与 Q_TCODE 关系及 Fiori 改造 | 非 IMG 检验类型激活或具体工厂配置；直接证据未解决 |
-| QM-08 | [F：2021 SPS10；11.0，PDF 第 94 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=94)；§2.8.5.2 Quality Inspection | 检验批、结果记录、使用决策作为业务概念 | 未证实检验批/特性/结果的数据库字段、键和发布 API；直接数据模型证据未解决 |
+| QM-07 | [2021 FPS01 What's New §4.3.8](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.001/en-US/WN_OP2021_FPS01_EN.pdf)；详见[补查](evidence-gap-four-m3.md) | 检验结果比较符的一个 FPS01 IMG 配置示例，独立顾问已核对。 | 不证明初版同样可用、检验类型激活、工厂配置或实际权限。 |
+| QM-08 | [2021 FPS01 What's New §4.3.8](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.001/en-US/WN_OP2021_FPS01_EN.pdf)；详见[补查](evidence-gap-four-m3.md) | 特定检验结果属性 CDS `I_INSPECTIONRESULTATTRIBUTE`，独立顾问已核对。 | 不证明初版支持、检验批及结果的表键、关联、CDS 发布或授权。 |
 | PROCESS-01 | [F：2021 SPS10；11.0，PDF 第 146 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=146)；§2.12 Sourcing and Procurement | 采购订单、收货与发票为采购管理对象 | 完整 P2P 时序、会计分录、科目分配及付款 |
 | PROCESS-02 | [F：2021 SPS10；11.0，PDF 第 122 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=122)；§2.10.2.6 Sales Order Management and Processing | 销售订单管理处理客户要求与确认 | 交货、开票、收款全链及异常场景 |
 | PROCESS-03 | [F：2021 SPS10；11.0，PDF 第 178 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=178)；§2.13.2.1 Delivery Management | 出库交货业务可包括不同工厂的库存调拨 | 不证明直接转储/PO-STO各分支、在途及公司代码估价 |
-| PROCESS-04 | [SAP 跨公司代码调拨，S/4HANA 2021 初始版](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/91b21005dded4984bcccf4a69ae1300c/9993b853dcfcb44ce10000000a174cb4.html?version=2021.000)；协调者 2026-11-25 通过版本固定的 SAP Help 页面实际读取 | 直接列出跨公司一步/两步、无交货 STO、含交货和开票的 STO 等方案，并对文中所述的公司代码间清算及定价作出说明 | 不能推出全部流程必然产生发票或资金结算；具体税、组织、配置、分录及异常须逐项核验；新来源尚未独立复核 |
+| PROCESS-04 | [SAP 跨公司代码调拨，S/4HANA 2021 初始版](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/91b21005dded4984bcccf4a69ae1300c/9993b853dcfcb44ce10000000a174cb4.html?version=2021.000)；协调者及独立开发者均读取 `2021 (Oct 2021)` | 直接列出跨公司一步/两步、无交货 STO、含交货和开票的 STO 等方案，并对文中所述的公司代码间清算及定价作出说明 | 不能推出全部流程必然产生发票或资金结算；具体税、组织、配置、分录及异常须逐项核验；该来源有限描述经独立复核 |
 | PROCESS-05 | [F：2021 SPS10；11.0，PDF 第 76 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=76)；§2.8.4.2 Production Execution | 生产执行包括备料、领料及进度记录 | 计划→生产→成本结算的完整流程及价值分录 |
 | PROCESS-06 | [F：2021 SPS10；11.0，PDF 第 94 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=94)；§2.8.5.2 Quality Inspection | 检验批、结果记录及使用决策的概念 | 采购触发配置、自动/手工库存过账、部分量和冲销 |
 | PROCESS-07 | [F：2021 SPS10；11.0，PDF 第 39 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=39)；§2.6.2.2 Financial Close 相关章节 | 财务结账功能及报表的总体范围 | 企业实际关账顺序、管理会计和分录 |
 | PROCESS-08 | [F：2021 SPS10；11.0，PDF 第 90 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=90)；§2.8.4.2 内 Subcontracting Cockpit | 特定生产委外协作可管理采购订单、组件及交货 | 所有委外采购变体的货权/库存/会计和付款 |
-| PROCESS-09 | [SAP Consignment，S/4HANA 2021 初始版](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/91b21005dded4984bcccf4a69ae1300c/4c13b953495bb44ce10000000a174cb4.html?version=2021.000)；协调者 2026-11-25 通过版本固定页面实际读取 | 直接说明该标准寄售业务的库存、提取、估价和周期结算概念 | 具体合同货权、税、公司会计分录及所有变体仍须单独核实；该来源不替代法律或业务合同；新来源尚未独立复核 |
+| PROCESS-09 | [SAP Consignment，S/4HANA 2021 初始版](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/91b21005dded4984bcccf4a69ae1300c/4c13b953495bb44ce10000000a174cb4.html?version=2021.000)；协调者及独立开发者均读取 `2021 (Oct 2021)` | 直接说明该标准寄售业务的库存、提取、估价和周期结算概念 | 具体合同货权、税、公司会计分录及所有变体仍须单独核实；该来源不替代法律或业务合同；该来源有限描述经独立复核 |
 | PROCESS-10 | [F：2021 SPS10；11.0，PDF 第 169 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=169)；§2.13.1.1 Goods Movement | 存在供应商退货及货物移动功能 | 退货与收货冲销、后续已开票时的凭证与资金 |
 | PROCESS-11 | [F：2021 SPS10；11.0，PDF 第 164 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=164)；§2.12.5.1 Invoice Processing | 发票校验涉及内容、价格及会计 | 差异容差、自动冻结与付款释放各触发条件 |
 | PROCESS-12 | [F：2021 SPS10；11.0，PDF 第 129 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=129)；§2.10.2.12 Claims, Returns, and Refund Management | 该特定客户退货流程可经检查并贷项或替代交付 | 退货、退款、抵扣和税务的所有变体及必要前提 |
@@ -60,10 +60,15 @@
 ## 留存与未解决
 
 - 以上 F 的哈希只标识曾读取的字节；没有保存/发布原 PDF，不代表用户能经 latest 重现相同字节。后续应寻 SAP 官方固定版本或在许可范围内保留可复核快照及出处；若重读版本不同，重新定位正文、核验全部相关主张。
-- **MM-09、SD-01、QM-07、QM-08** 等的核心配置或定义直接来源仍缺；MM-01、MM-07、PROCESS-04、PROCESS-09 已补入初版直接资料，但各自未覆盖的场景和独立复核仍缺。本表不以相关但范围不足的概述冒充完整文章依据。其余条目也尚有大量具体场景、字段、配置、权限和账务内容未验证，不能由部分取证推断整篇通过。
+- **MM-09、SD-01、QM-07、QM-08** 已补充部分直接来源；其未覆盖的核心场景仍缺；MM-01、MM-07、PROCESS-04、PROCESS-09 的初版直接资料已独立复核有限描述，但各自未覆盖的场景仍缺。本表不以相关但范围不足的概述冒充完整文章依据。其余条目也尚有大量具体场景、字段、配置、权限和账务内容未验证，不能由部分取证推断整篇通过。
 - 对 SPS10 之后目标系统补丁是否一致、用户环境权限以及所有实机运行行为没有验证；版本有差异时要另行核对。所有 46 项正文和三角色正式有效审核轮次均为 0。
 
 ## 独立开发者复核与修订（2026-11-25）
 
-独立开发者向协调者报告：46 个 ID、FSD 哈希及七项抽查基本正确；发现 PROCESS-03/04 将 §2.13.2.1 标为 “Delivery Processing”，应为 “Delivery Management”。作者重新打开当次 SPS10 原文确认该节标题，已修正两条引用及生成脚本。此结果为独立开发者的报告与作者纠正；**尚未取得开发者针对修订版的再次复核**，故该问题的独立复核未关闭。
+独立开发者向协调者报告：46 个 ID、FSD 哈希及七项抽查基本正确；发现 PROCESS-03/04 将 §2.13.2.1 标为 “Delivery Processing”，应为 “Delivery Management”。作者重新打开当次 SPS10 原文确认并修正。用量恢复后，原开发者读取 PR #20 `0730c3fc66292c1ae22ff95a0d9b89847b930d70` 并再次复核：PROCESS-03 标题与 PDF 一致；PROCESS-04 已换成 2021 初版跨公司资料，不再引用原错误标题。该标题缺陷的复核关闭。开发者也分别读取 MM-01、MM-07、PROCESS-04、PROCESS-09 四个 2021 初版页面，确认本表有限描述和边界；仍不能推断文章全文、配置或系统测试通过。
 剩余门禁：latest 文档未固定版本且未留存原始文件；核心主题取证不足及逐项 FPS、权限、配置、分录、接口和实机行为均继续待查。计划级资料复核不能计入正式文章的有效审核轮次。
+
+
+## 追加物流与质量来源（研究记录）
+
+[四项专题补查](evidence-gap-four-m3.md) 新增 MM-09 在特定材料账迁移场景的 OBYC 依据，以及 QM-07/QM-08 在 2021 FPS01 的单项配置和 CDS 示例；SD-01 的销售组织和销售区域 API 2021 初版正文已由独立配置顾问直接读取。各来源的适用版本与未覆盖事项以补查记录为准，不代表任何文章证据完整。

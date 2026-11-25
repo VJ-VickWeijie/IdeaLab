@@ -1,0 +1,30 @@
+# CareerOS M3｜FI-07 采购收货、发票与 GR/IR：SAP 2021 初版直接证据
+
+状态：M3 来源研究；不是正式知识正文、正式文章审核或 SAP 实机测试。记录日期 2026-11-25。研究者是先前财务台账的作者，对自己补充的来源由另一独立上下文作限定范围复核，见文末。已获批准的阶段与范围不等于 M3 已通过或 M4 已授权。
+
+## 实际查看方式与版本
+
+公开搜索首先找到 SAP 帮助相同主题的新版页面，但其默认版本为 2025，不能用作 2021 的证明。之后通过浏览器打开下述明确 `version=2021.000` 的 SAP Help 页面，等页面完整加载，再同时读取可访问文本和可见示意图。四个成功页面的版本选择器实际显示 **2021 (Oct 2021)**，且页面提示该版不包含后续交付的更新，因此仅支持所见的 2021 初版具体描述，不代表所有 FPS、SAP 系统实际配置或后续变化。
+
+## 来源与有限结论
+
+1. [Postings at Goods Receipt and Invoice Receipt](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/825eb6531de6b64ce10000000a174cb4.html?version=2021.000)，`Sourcing and Procurement → Further Functions → Evaluation → MM - Material Price Change → Price Control`。浏览器版本为 2021 (Oct 2021)。页面正文说明收货和发票通过 GR/IR 过渡；**实际可见图示**为采购单 50 件、每件 2 美元、总值 100 美元：收货栏显示 `stock account 100 +`、`GR/IR account 100 −`；发票栏显示 `GR/IR account 100 +`、`vendor account 100 −`。该页文字与图示不构成可无条件推广到所有企业的分录。图中的 `+` / `−` 不是图示明确写出的“借方 / 贷方”；英文正文还使用了 `credits` 描述库存过账，如何与图中正负及借贷方向对应仍须独立证据核查。图中没有明确给出税、发票差异、企业会计政策或账户配置，不能补造。
+
+2. [Important Accounts for Invoice Verification](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/2d70b6531de6b64ce10000000a174cb4.html?version=2021.000)，`Invoice Management → Invoice Processing → Further Information → Account Determination`，同为 2021 初版。其 `Vendor Account` 与 `GR/IR Clearing Accounts` 小节分别描述：该情形的收货涉及库存与 GR/IR 对方过账；发票涉及 GR/IR 与供应商账户；供应商账户过账不等于付款。页面也列税、价差及其他账户，但这并不说明所有采购都会产生同样账户组合。
+
+3. [Invoices for Purchase Orders](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/be5eb6531de6b64ce10000000a174cb4.html?version=2021.000)，`Further Functions → Evaluation → MM - Material Price Change → Value Changes in Logistics Invoice Verification`，同为 2021 初版。`Features` 说明收货/发票可有先后次序；收货先、发票先及价差处理不应混成一种无条件流程。对列出的物料估价例子，它将标准价与移动平均价分开描述，并提示移动平均价的价差处理还受库存覆盖条件影响。这里不把文档描述等同所有价格控制、业务配置或系统环境。
+
+4. [Postings Made When Posting to a Previous Period](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/4d5fb6531de6b64ce10000000a174cb4.html?version=2021.000)，`Further Functions → Evaluation → MM - Material Price Change → Posting to a Previous Period`，同为 2021 初版。正文将过账到前期的一般收货与发票账户关系与当前期比较，并列出标准价格和移动平均价库存不足时可能需要额外调整的场景。不能据此忽略过账日期、期间开放、价格变动及配置条件。
+
+## 适用范围、限制与后续动作
+
+- 上述 50×2 案例可作为**限定示例的研究证据**，不代表零税、全部付款、正式系统凭证、所有控制账户或所有业务场景已核查。应在正式写作时注明假设，并以原图所示为准，独立查证借贷方及税务，不直接复用图片或长篇引用；SAP 内容保留其版权和适用条款。
+- 原文提及 GR/IR 被 `cleared`；“账面金额相抵”与实际执行 SAP 未清项目清账、凭证状态变化不必然是同一事件。应核查清账程序的匹配条件和凭证状态，不能凭文字直接宣称已自动清账完成。
+- 发现有价值的新版搜索线索 [Postings for the Example of Price Determination](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/5e23dc8fe9be4fd496f8ab556667ea05/59a677829c5d4d31bdfd3b075cc2b6f0.html)；但本次指定 `version=2021.000` 在浏览器返回 `Page Not Found`，因此**未找到可读的目标版**，不能用于 2021 结论或声称页面不存在于所有版本。
+- 供应商记账不等于真实资金支付。消费性采购、非估价、差额/税、已收未到票/先票后货的分支、单据与字段、实际审批及只读权限仍需按文章逐项定位来源、配置和系统适用性。实际 SAP 未连接、未实测。
+- 建议独立审查者重开四个固定版本页面，逐条复核选择器、正文、图示数字和上述限制，尤其核验正文的 `credits` 与图表正负所引起的歧义。**四个页面中前两页已由独立审查者复核；后两页仍待独立复核。不能将本记录计入正式文章 20 轮。**
+
+
+## 独立审查者复核（2026-11-25）
+
+`/root/audit_design_review` 使用独立浏览器实读以上前两页，确认版本选择器均为 2021 (Oct 2021)，50×2 图中四个账户金额和正负及供应商过账与付款不同的说明均与本记录一致。审查者提出：英文正文中 `credits` 对库存的表述与图示正负存在潜在歧义，图示未把正负直接标为借贷；Work 保留待核，不写确定借贷分录。审查者亦提醒发票校验页面有关库存账户价格差异的陈述有特定上下文，不能扩展至全部收货和价差；金额抵消不等于已验证 SAP 未清项自动清账。第三、四页尚未由此独立上下文复核，所有系统与权限均未实测。此复核不计正式文章审核轮次。
