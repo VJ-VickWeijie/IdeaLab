@@ -51,3 +51,8 @@ SAP 当前 [Production Order Item CDS](https://help.sap.com/docs/SAP_S4HANA_ON-P
 ## 独立复核结果
 
 `/root/consultant_m3_review` 独立读 §27.35 的 PDF 618–619 页与 §24.5 的 479–480 页，提出限定 material BOM 简化 sourcing 及 DDL source 名称的修订。作者据此修改后，原审查者复读并确认这两处文字；仅关闭这两项限定问题，订单键、基数、API 与系统测试仍待证，不计正式文章审核。
+
+
+## 后续补查：生产确认 OData 生成模型
+
+在本报告原先的“CDS / API 待核”判断之后，`/root/developer_m3_review` 获取了 SAP 固定 SDK 3.59 与 3.70 的源码及版本说明，`/root/consultant_m3_review` 独立复读来源和本地源码，见[生产确认与物料凭证实体字段](pp09-order-material-key-m3.md)。该特定生成 OData entity 的五项 `@Key` 和非键 OrderID/OrderItem 获部分支持，但不是 MATDOC 物理键、通用订单关联、系统 `$metadata` 或 API 已授权的证明；上述未闭合事项继续保留。

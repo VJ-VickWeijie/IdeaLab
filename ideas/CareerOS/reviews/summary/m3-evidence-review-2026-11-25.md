@@ -101,3 +101,8 @@
 - `/root/consultant_m3_review` 追加 MM-09 [检索记录](../../plans/mm09-obyc-source-followup-m3.md)，新候选为 2023 索引、无法读取的 2021 PDF 或未解析版本的索引，均未冒称目标版直接证据。普通估价采购 BSX/WRX 完整固定版证据仍未闭合。
 
 此轮是阶段资料研究，不计正式文章审核；未连接 SAP，M3 未通过，M4 未授权。
+
+
+## PP-09：确认关联的 OData 实体补证
+
+`/root/developer_m3_review` 读取 SAP Cloud SDK 3.59 与 3.70 的发行说明和固定源码包，`/root/consultant_m3_review` 独立复读发行说明、重新计算**同一本地包**的哈希并核对源码，见 [PP-09 OData 实体补查](../../plans/pp09-order-material-key-m3.md)。该生产确认关联物料移动实体的五字段 `@Key` 及订单属性有源码依据；这不是独立下载确认，也不是 MATDOC 物理主键或目标系统 `$metadata`、权限、全量基数证明。未访问 SAP 系统，不计正式文章审核轮次。
