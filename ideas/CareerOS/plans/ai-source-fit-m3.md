@@ -15,7 +15,7 @@
 
 台账用语建议：“26 个 ID 均有直接主题的可读部分资料”对 03/04/06 的 SAP API/权限/运维核心易产生过高期待，建议改成“每 ID 有至少部分相关背景或子命题来源；部分仅邻近，核心直接来源未完成”，每行继续区分通用/特定 SAP 2021、版本和缺口。不建议以“通用 AI 文献非 2021”作为缺陷；亦不把零实测的计划标为完成。
 
-## 本次实际读取的来源
+## 来源与读取归属
 
 - [NIST AI RMF 1.0，2023](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)，物理页 27–29。
 - [NIST Generative AI Profile，2024](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf)，物理页 20、28–29、37、52–56。
@@ -30,4 +30,4 @@
 
 ## 阅读归属修订
 
-`/root/developer_plan` 复读提交 `d6049bc2c2920033968a45b04844fccbc8a22266` 时发现初稿将 Gateway 阅读错误归于自身；Work 已改为转述此前协调者及 `/root/consultant_plan` 的实际阅读记录。此项修订待原审查者复核；不可因错误归属虚增独立验证次数。
+`/root/developer_plan` 复读提交 `d6049bc2c2920033968a45b04844fccbc8a22266` 时发现初稿将 Gateway 阅读错误归于自身；Work 已改为转述此前协调者及 `/root/consultant_plan` 的实际阅读记录。原审查者已在提交 `09deed90fb2c06d62ea60e2b999a181bb1e626f5` 复读确认归属与 ID；不可因错误归属虚增独立验证次数。
