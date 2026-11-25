@@ -40,7 +40,7 @@
 | QM-02 | [F：2021 SPS10；11.0，PDF 第 94 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=94)；§2.8.5.2 Quality Inspection | 检验批代表执行质量检验的请求 | 检验类型/批来源、启用与不产生条件 |
 | QM-03 | [F：2021 SPS10；11.0，PDF 第 93 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=93)；§2.8.5.1 Quality Planning | 检验规划含对象、方法、特性及规格 | 计划选择规则、抽样参数和具体字段 |
 | QM-04 | [F：2021 SPS10；11.0，PDF 第 94 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=94)；§2.8.5.2 Quality Inspection | 记录检验结果并执行使用决策 | UD 与自动/手工库存过账、撤销及业务条件 |
-| QM-05 | [F：2021 SPS10；11.0，PDF 第 188 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=188)；仓储 Quality Management 描述 | 特定 EWM 入库处理有检验批与部分使用决策场景 | 该段属于 EWM，不能替代通用 IM 质量库存和财务影响证据 |
+| QM-05 | [F：2021 SPS10；11.0，PDF 第 189 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=189)；仓储 Quality Management 描述 | 特定 EWM 入库处理有检验批与部分使用决策场景 | 该段属于 EWM，不能替代通用 IM 质量库存和财务影响证据 |
 | QM-06 | [S：2021 初版/FPS01/FPS02；1.25，PDF 第 678 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=678)；§31.2 Removed Redundant Transactions in QM | 列举 QE51 的替代及其他事务导航变化 | 旧版事务替代说明不证明所有事务在目标补丁均可访问或权限充足 |
 | QM-07 | [2021 FPS01 What's New §4.3.8](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.001/en-US/WN_OP2021_FPS01_EN.pdf)；详见[补查](evidence-gap-four-m3.md) | 检验结果比较符的一个 FPS01 IMG 配置示例，独立顾问已核对。 | 不证明初版同样可用、检验类型激活、工厂配置或实际权限。 |
 | QM-08 | [2021 FPS01 What's New §4.3.8](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.001/en-US/WN_OP2021_FPS01_EN.pdf)；详见[补查](evidence-gap-four-m3.md) | 特定检验结果属性 CDS `I_INSPECTIONRESULTATTRIBUTE`，独立顾问已核对。 | 不证明初版支持、检验批及结果的表键、关联、CDS 发布或授权。 |
@@ -74,3 +74,8 @@
 [四项专题补查](evidence-gap-four-m3.md) 新增 MM-09 在特定材料账迁移场景的 OBYC 依据，以及 QM-07/QM-08 在 2021 FPS01 的单项配置和 CDS 示例；SD-01 的销售组织和销售区域 API 2021 初版正文已由独立配置顾问直接读取。各来源的适用版本与未覆盖事项以补查记录为准，不代表任何文章证据完整。
 
 [P2P 收货与发票估价补查](p2p-valuation-direct-2021.md) 收录实际读取的 2021 初版部分数量、估价与顺序示例；该范围不等于完整 P2P 或系统实测。
+
+
+## MM / QM 逐项来源复核
+
+`/root/consultant_m3_review` 对 [MM 与 QM 18 项来源](review-evidence-mm-qm-m3.md)进行复核，指出 QM-05 当前 SPS10 的引用应为 PDF 物理页 189 而非 188。Work 已修正上述台账链接与页码；原审查者的修订复核尚待完成。FSD latest 未固定版本，MM-01/MM-07 本轮审查者未能独立重开动态正文，不可冒称本轮独立读取。以上为资料计划复核，不代表文章通过或 SAP 实测。
