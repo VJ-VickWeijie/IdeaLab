@@ -28,3 +28,9 @@
 ## 独立审查者复核（2026-11-25）
 
 `/root/audit_design_review` 使用独立浏览器实读以上前两页，确认版本选择器均为 2021 (Oct 2021)，50×2 图中四个账户金额和正负及供应商过账与付款不同的说明均与本记录一致。审查者提出：英文正文中 `credits` 对库存的表述与图示正负存在潜在歧义，图示未把正负直接标为借贷；Work 保留待核，不写确定借贷分录。审查者亦提醒发票校验页面有关库存账户价格差异的陈述有特定上下文，不能扩展至全部收货和价差；金额抵消不等于已验证 SAP 未清项自动清账。第三、四页尚未由此独立上下文复核，所有系统与权限均未实测。此复核不计正式文章审核轮次。
+
+## 收货借贷方向的追加查证（2026-11-25）
+
+`/root/audit_design_review` 独立浏览器实读 [Entering Goods Receipts for Nonexcisable Goods](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/240fcdcc71c640ea9aa9691500b34889/b39bd7531a4d414de10000000a174cb4.html?version=2021.000)，版本选择器为 2021 (Oct 2021)。其印度本地化、非应税货物参考采购订单收货示例的 Result 明确写出产生物料与会计凭证，借库存、贷 GR/IR。该证据仅支持这一场景，不能断言所有税区、采购配置和其他 FPS 都如此，也不能证明上文正文中 `credits` 是笔误。
+
+审查者另读 [SAP Learning：Purchasing (MM Integration)](https://learning.sap.com/courses/configuring-additional-settings-in-financial-accounting-in-sap-s-4hana/understanding-purchasing-mm-integration)，其中描述常见收货和发票的借贷方向；但该页面没有固定 2021/FPS，不能单独证明目标版本。另一个 2021 消耗物料示例的借贷表头与内容列在所见页面中存在对齐歧义，不作为确定方向的证据；库存采购发票的明确目标版借贷方向仍需进一步核实。上述印度页面由发现者实读，但委派另一执行上下文独立复核时遇到用量限制而中断；该次复核未完成。均非 SAP 实机测试或文章审核。

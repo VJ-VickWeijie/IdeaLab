@@ -26,9 +26,11 @@
 
 ### 4. SAP 官方 2021 采购扩展公告：动态正文未由本执行上下文读到
 
-[SAP Support for Extension of Purchase Orders](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/0fbc805785a0403d9f56beacf89c0ef4.html?version=2021.000)，搜索索引将其标为 S/4HANA 2021 initial，涉及 `BAPI_PO_CREATE1` 的自定义字段扩展。本执行上下文用网页工具打开时正文为零行，因此这里仅记录搜索线索；即便可读，该公告主题也不是提交/回滚。
+[SAP Support for Extension of Purchase Orders](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/0fbc805785a0403d9f56beacf89c0ef4.html?version=2021.000)，搜索索引将其标为 S/4HANA 2021 initial，涉及 `BAPI_PO_CREATE1` 的自定义字段扩展。本执行上下文用网页工具打开时正文为零行；随后独立开发者 `/root/developer_plan` 用浏览器实读版本选择器 2021 (Oct 2021) 与正文，确认该版本增强 BAPI_PO_CREATE1 对自定义字段的支持。该公告未给具体扩展结构，也不证明提交/回滚。
 
 相关官方 2021 initial What's New PDF 因文件大小约 15 MB 超出网页读取工具限制，未能读取对应正文，不能声称已核实。2021.1 `Cross-Plant Planning` PDF 已读到采购 BAPI 扩展参数，但它描述 ERP 的 SCM Consulting Solution 附加组件，日期或 `2021.1` 不足以证明 S/4HANA 2021 产品及事务行为。
+
+再次核查结果：当前独立执行上下文的可用工具清单没有发现 Browser、CUA 或 Node REPL，因此无法实际操作该页版本选择器；2021.000 目标 URL 再次直接打开时返回不可访问，之前另一语言地址也曾返回零行。德文搜索索引显示 2021 年 10 月初始版并涉及该 BAPI 的自定义字段扩展，但在本上下文中依然属于**仅索引**，不能记为本次独立读取官方正文或现场确认版本。自定义字段扩展信息无论读取与否，均不支持推断调用方提交、回滚、更新任务或其他 BAPI 的事务语义。
 
 ## 检索结论与剩余动作
 

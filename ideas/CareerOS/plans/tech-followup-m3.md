@@ -15,14 +15,14 @@
 ## S4HANA-05：RAP 在目标 FPS 的支持范围
 
 1. **已读，目标版本入口**：[SAP RESTful Application Programming Model](https://help.sap.com/doc/34796706f38646f68d51a0fa0d4636e4/100/de-DE/7b66b9e7cdb5433a82633e650b337207.html) 的 `Technical Details` 指明 SAP S/4HANA 2021 并链接 `Version 2021 FPS00`，页面是发布说明入口，不列全体具体功能。
-2. **仅索引**：[SAP `Version 2021 FPS00`](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/eb5df2a2aa18406382af2b2d055d2d87.html?version=202110.latest) 的搜索索引可见 `Global Authorization Control`、`COMMIT ENTITIES in Simulation Mode` 等段落；本次直接打开返回零行，不能记作独立读到原文或当作已完成的 FPS00 功能证据。
+2. **独立开发者已读原文**：[SAP `Version 2021 FPS00`](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/eb5df2a2aa18406382af2b2d055d2d87.html?version=202110.000&locale=en-US&state=PRODUCTION)。本研究者原先仅取到索引，后由 `/root/developer_plan` 在浏览器选择 `2021 (Oct 2021)` 并读取正文；可支持该文所列 Global Authorization Control、COMMIT ENTITIES simulation mode 等特定功能，不能代替完整功能矩阵。
 3. **仅索引**：[SAP 2021 FPS02 `Exposing the Draft Business Object for a UI Business Service`](https://help.sap.com/docs/ABAP_PLATFORM_2021/fc4c71aa50014fd1b43721701471913d/97e324d003b8443181569f425a33d42e.html?locale=en-US&state=PRODUCTION&version=202110.002) 的搜索摘要涉及 managed business object 的 draft exposure；本次尚未通过可读原文核实，不能认定该页面已读。
 
 **剩余缺口**：在可读取 SAP 动态文档的授权浏览器中逐节检查并保留准确页面和版本记录，逐项建立 managed/unmanaged、draft、OData V2/V4、EML、行为定义和认证授权支持矩阵；具体 FPS 与组件未知时保留待核。版本入口不能替代特性级证据。
 
 ## ABAP-04：采购 BAPI 的事务和提交
 
-1. **仅索引，目标 S/4HANA 2021 initial 明确**：[SAP `Support for Extension of Purchase Orders`](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/0fbc805785a0403d9f56beacf89c0ef4.html?version=2021.000) 的搜索索引说明 `BAPI_PO_CREATE1` 的自定义字段扩展；本次直接打开返回零行，不能记为已读。该页面主题本身即使可读取，也仅能说明扩展，不证明提交/回滚语义。
+1. **独立开发者已读，S/4HANA 2021 initial**：[SAP `Extensibility Support for Purchase Orders`](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/0fbc805785a0403d9f56beacf89c0ef4.html?version=2021.000)。本研究者原先仅取到索引；随后 `/root/developer_plan` 在浏览器实读选择器 `2021 (Oct 2021)` 和正文：该版本增强 `BAPI_PO_CREATE1` 支持 custom fields。此概述不证明具体 EXTENSIONIN 结构、每个字段、提交/回滚或价格单位覆盖机制。
 2. **仅索引，ABAP Platform 2021 FPS02**：[SAP `Implementing Idempotent Web Services`](https://help.sap.com/docs/ABAP_PLATFORM_NEW/684cffda9cbc4187ad7dad790b03b983/2ec039d6c2bf458f95041eb1079f2f2b.html?locale=en-US&state=PRODUCTION&version=202110.002) 的索引摘要提及**特定同步 SOAP Web Service** 实现中的 BAPI 处理和 `CL_SOAP_COMMIT_ROLLBACK`；本次直接打开返回零行，不能记作已读，且不能推广到 `BAPI_PO_CREATE1` 或所有 RFC/BAPI。
 3. **已读，非 S/4HANA 2021 产品证据**：[SAP Cross-Plant Planning](https://help.sap.com/doc/6afeeafa6a424b9b8060d91da975c497/2021.1/en-US/CPP-EN.pdf) 封面日期 2021-05-03，§4、PDF 物理页 23；其中 ERP 的 SCM Consulting Solution 附加组件使用 `BAPI_PO_CREATE1` 的扩展参数。日期或 URL `2021.1` 不能证明产品为 S/4HANA 2021，且内容没有提交语义。
 4. **已读，旧版而非目标 2021 的通用事务资料**：[SAP BAPI Transaction Model](https://help.sap.com/SAPHELP_SCM700_EHP02/helpdata/EN/4d/5b102ba1483d8fe10000000a42189e/content.htm?no_cache=true) 可解释其自身版本的调用方提交/回滚模型和少数例外，但不能单凭它断言所选 2021 采购 BAPI 的行为。
@@ -35,4 +35,10 @@
 
 ## 独立开发者复核（2026-11-25）
 
-`/root/developer_plan` 独立打开原 PDF 并核对封面、物理页 3、80、81，确认以上 FPS01 与 SRTCM、SQL Monitor、CDS/AMDP 的有限表述。审查者指出原文提到 SQL Monitor，但第 80 页本身不证明 SQLM 事务码；它也不证明 2021 所有补丁一致、`PACKAGE SIZE` 语法或避免内存 dump。无需修改上述原判断，保留这些限制。独立核对只涉及该 PDF；动态页面和 SAP 实机仍未验证，也不是正式文章审核。
+`/root/developer_plan` 独立打开原 PDF 并核对封面、物理页 3、80、81，确认以上 FPS01 与 SRTCM、SQL Monitor、CDS/AMDP 的有限表述。审查者指出原文提到 SQL Monitor，但第 80 页本身不证明 SQLM 事务码；它也不证明 2021 所有补丁一致、`PACKAGE SIZE` 语法或避免内存 dump。无需修改上述原判断，保留这些限制。该项 PDF 复核不覆盖动态页面；动态页面后续核验见下节。SAP 实机未测，也不是正式文章审核。
+
+## 2021 初版页面的后续浏览器核验（2026-11-25）
+
+`/root/developer_plan` 在 RAP 页面显式选择 2021 (Oct 2021)，确认页面标题为 Version 2021 FPS00；页面列 Global Authorization Control、COMMIT ENTITIES simulation mode、managed BO unmanaged early numbering、unmanaged BO managed draft early numbering 和特定 ADT Quick Fix。simulation mode 所述不实际保存并不能证明增强或外部副作用零风险。未验证全部 OData、managed/unmanaged、draft、组件、权限和实机功能。另实读采购订单扩展页面，见 ABAP-04 限定范围。页面原研究者未读取正文，不得伪称其独立复验。
+
+`/root/developer_m3_review` 复读新增记录，确认浏览器读取归属及来源边界区分清楚；其指出旧段落可能使读者误以为后续动态页未读，Work 已将该句明确限定为 PDF 复核阶段。该研究者未实读上述两个动态页面，不能记作第二次正文复验。
