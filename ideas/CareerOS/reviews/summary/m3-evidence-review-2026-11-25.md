@@ -88,8 +88,8 @@
 
 ## 原审查者复读记录
 
-- `/root/audit_design_review` 复读 `82410979` 的 SD-02 与扩展记录，确认实际读取归属和适用边界，指出 SD-02 账户组与职能关系一句语义重复；Work 已按原文修订，待原审查者复核。
-- `/root/consultant_m3_review` 复读 `82410979` 的 PP-09 记录，确认原文复核只覆盖 material BOM 与 DDL source 两项；Work 进一步写明两个 DDL source 全名，待其复核。
+- `/root/audit_design_review` 复读 `82410979` 的 SD-02 与扩展记录，确认实际读取归属和适用边界，指出 SD-02 账户组与职能关系一句语义重复；Work 已按原文修订，原审查者复读 `e737b344` 后确认，限此句问题关闭。
+- `/root/consultant_m3_review` 复读 `82410979` 的 PP-09 记录，确认原文复核只覆盖 material BOM 与 DDL source 两项；Work 进一步写明两个 DDL source 全名，原审查者复读 `e737b344` 后确认范围准确，限此问题关闭。
 - `/root/reader_plan` 复读 `82410979` 的 CO-03 记录，确认独立审查仅覆盖两篇未固定 2021 的 Learning 课程，不覆盖 Central Finance PDF；该记录问题限此关闭。
 
 以上为来源规划资料复核，不计正式文章轮次。
