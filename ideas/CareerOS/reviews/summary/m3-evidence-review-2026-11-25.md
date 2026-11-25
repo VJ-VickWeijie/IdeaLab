@@ -106,3 +106,9 @@
 ## PP-09：确认关联的 OData 实体补证
 
 `/root/developer_m3_review` 读取 SAP Cloud SDK 3.59 与 3.70 的发行说明和固定源码包，`/root/consultant_m3_review` 独立复读发行说明、重新计算**同一本地包**的哈希并核对源码，见 [PP-09 OData 实体补查](../../plans/pp09-order-material-key-m3.md)。该生产确认关联物料移动实体的五字段 `@Key` 及订单属性有源码依据；这不是独立下载确认，也不是 MATDOC 物理主键或目标系统 `$metadata`、权限、全量基数证明。未访问 SAP 系统，不计正式文章审核轮次。
+
+
+## 本轮来源记录复读
+
+- `/root/audit_design_review` 复读提交 `fe81e7e60ddd1e36941472f6f193e56023eeab9c` 的 FI-07 图示及主台账，确认其本人实读归属和局限；指出此前正负号图与新 T 型左右图可能混淆，Work 已明确区分，待其复核。
+- `/root/consultant_m3_review` 复读同一提交的 PP-09 SDK 报告及台账，确认同一本地包的独立复算哈希、实体键与物理键区分；该审查者还补读 3.70 service，限此项资料复核，未实测 SAP。
