@@ -1,6 +1,8 @@
 # CareerOS V0.3｜FI / CO 与课程逐篇实施规划草案
 
-状态：M0 已在本次对话获用户批准；本文件仅供 M1–M3 联合评审，M4 尚未获批。以下为 26 篇候选正式文章的规划，不是文章正文；每篇状态均为 planned，读者/顾问/开发者有效正式审核均为 0/0/0。目标路径相对 `ideas/CareerOS/`，尚未创建；课程中使用 ID 而非指向不存在文件的链接。原路线仍以 [roadmap-v0.1.md](roadmap-v0.1.md) 为基线；每周 4–5 次、每次 30–60 分钟作为可调整的建议上限，不是强制要求，实际以工作许可、家庭时间与精力为准。
+状态：M0–M2 及 99 篇范围基线已获批准，M3 继续补充资料且尚未通过，M4 尚未获批。以下为 26 篇正式文章的规划，不是文章正文；每篇状态均为 planned，读者/顾问/开发者有效正式审核均为 0/0/0。目标路径相对 `ideas/CareerOS/`，尚未创建；课程中使用 ID 而非指向不存在文件的链接。原路线仍以 [roadmap-v0.1.md](roadmap-v0.1.md) 为基线；每周 4–5 次、每次 30–60 分钟作为可调整的建议上限，不是强制要求，实际以工作许可、家庭时间与精力为准。
+
+> **来源限制记录（2026-11-25）**：本次研究曾读取 OpenStax 财务及管理会计章节，随后发现其页面对未经许可用于生成式 AI/AI offerings 有限制提示。已读取事实如实保留；AI 使用许可及其具体适用性待确认，后续停止读取或以其作为生成依据。先前所列 OpenStax 主题来源已替换为已读 SEC 教育资料或明确标为缺口；详情见 [FI/CO 证据登记](evidence-finance-m3.md)。此记录不对法律适用作最终判断。
 
 ## 证据目录与使用边界
 
@@ -27,7 +29,7 @@
 | --- | --- | --- |
 | FI-01 `knowledge/FI/01-foundations/financial-accounting-for-beginners.md` | 零先修；区分企业业务事件、实物、凭证、价值及资金，采用虚构采购；解释只创建订单/已付款可能是不同事件。 | F1 找总账/应付章节；阅读者能将一笔买卖按六列分类，标识未发生的流。 |
 | FI-02 `knowledge/FI/01-foundations/accounting-equation.md` | FI-01；资产/负债/权益和会计等式，覆盖现金购买及赊购，不混淆企业和个人账。 | F1 查财报术语、辅以公开会计基础资料并标地区；用虚构金额保持等式平衡，答案可复验。 |
-| FI-03 `knowledge/FI/01-foundations/debit-credit.md` | FI-02；先账户类别再借贷及复式；反例为借方不总代表增加，收入费用期末处理不在此作无条件断言。 | F1 查科目、凭证；借贷额成对示例及账户增减解释，含金额平衡校核。 |
+| FI-03 `knowledge/FI/01-foundations/debit-credit.md` | FI-02；计划先解释账户类别，再讲借贷及复式；账户具体变动方向和反例仍须独立来源核验。 | 已读 IRS 复式记账和通常余额方向资料，详见证据登记；具体增减方向/地区适用/SAP场景仍缺依据，禁止使用已暂停的 OpenStax 作为生成依据。 |
 | FI-04 `knowledge/FI/02-functions/company-code-gl.md` | FI-03；公司代码、会计科目表、总账科目与组织关系；跨公司账独立前提，区别科目定义与余额。 | F1/F2 查组织与总账；完成组织→科目→凭证映射图与条件表。 |
 | FI-05 `knowledge/FI/02-functions/posting-reversal.md` | FI-04；会计凭证、日期/期间、过账和冲销；区分更正原始业务、关联凭证，避免称所有凭证均可直接冲销。 | F1/F2 查凭证和版本；虚构凭证借贷平衡、识别原因及期间/权限约束。 |
 | FI-06 `knowledge/FI/02-functions/payables-receivables.md` | FI-03～05；应付应收、未清项/清账、付款/收款；区分发票入账与资金支付、部分支付和差异/税币前提。 | F1/F2 查 AR/AP；一笔赊购及赊销各画事件、凭证、价值与资金表，余额自洽。 |
@@ -103,13 +105,13 @@
 
 ## 逐篇证据地图：适用主张、读取状态与未覆盖项
 
-核对日期 2026-11-25。FSD 为 SAP《Feature Scope Description》，产品虽标 2021，但 latest 地址发生版本漂移：先前检索缓存显示文档 9.0（2025-07-23），同地址再次直接读取为 11.0（2026-07-22，共 718 页）。此前 9.0 未保存可验证快照，因此原章节和页码不可稳定复验；例如 Overhead Cost Accounting 从 2.5.1.1.1 移到 2.6.1.1.1。下文已移除 FSD 的固定页码与旧章节编号，所有 FSD 记录仅作待核验线索，须寻找可固定版本或保存合法可验证快照并对照目标 FPS 后方可作证据。SAP 页面可能要求切换版本或权限。OpenStax 是美国教材，只作通用会计教学对照，不是中国企业会计准则或 SAP 2021 的证据。课程文章证据目前仅有已批准的规划和拟引用条目，知识正文均待建。
+核对日期 2026-11-25。FSD 为 SAP《Feature Scope Description》，产品虽标 2021，但 latest 地址发生版本漂移：先前检索缓存显示文档 9.0（2025-07-23），同地址再次直接读取为 11.0（2026-07-22，共 718 页）。此前 9.0 未保存可验证快照，因此原章节和页码不可稳定复验；例如 Overhead Cost Accounting 从 2.5.1.1.1 移到 2.6.1.1.1。下文已移除 FSD 的固定页码与旧章节编号，所有 FSD 记录仅作待核验线索，须寻找可固定版本或保存合法可验证快照并对照目标 FPS 后方可作证据。SAP 页面可能要求切换版本或权限。此前已读取的 OpenStax 内容因 AI 使用许可待确认，已暂停作为生成依据；下方 FI-01/02 改用 SEC 教育材料，FI-03 用 IRS 对复式记账及通常余额方向的局部说明，完整借贷增减规则仍缺直接依据。课程文章证据目前仅有已批准的规划和拟引用条目，知识正文均待建。
 
 | ID | 逐篇主题来源（标题及 URL） | 实际读取、版本及有限用途 | 仍待核查 |
 | --- | --- | --- | --- |
-| FI-01 | [OpenStax 3.3 会计循环初步](https://openstax.org/books/principles-financial-accounting/pages/3-3-define-and-describe-the-initial-steps-in-the-accounting-cycle) | 已读网页正文；2019 年美国教材；作为事件→会计记录的入门教学线索。 | 虚构 SAP 采购例证、会计与实际资金差异需核对 PROCESS-01 和 2021 资料。 |
-| FI-02 | [OpenStax 2.2 资产、负债与权益](https://openstax.org/books/principles-financial-accounting/pages/2-2-define-explain-and-provide-examples-of-current-and-noncurrent-assets-current-and-noncurrent-liabilities-equity-revenues-and-expenses) | 已读正文；2019 年美国教材；描述账户分类和会计等式的教学示例。 | 中国及企业具体准则和资产确认条件；不以此推出 SAP 配置。 |
-| FI-03 | [OpenStax 3.1 会计原则与借贷](https://openstax.org/books/principles-financial-accounting/pages/3-1-describe-principles-assumptions-and-concepts-of-accounting-and-their-relationship-to-financial-statements) | 已读正文；2019 年美国教材；涉及复式记账、账户方向和等式。 | 各类实际业务记账、税收与 SAP 系统逻辑须另以对应版本核验。 |
+| FI-01 | [SEC 财务报表入门](https://www.sec.gov/about/reports-publications/beginners-guide-financial-statements) | 已读正文；美国政府教育资料，支持资产、负债、权益和收入费用基础概念，不证明 SAP 流程。 | SAP 采购例证、会计与实际资金差异需核对 PROCESS-01 和 2021 资料。 |
+| FI-02 | [SEC 资产负债表入门](https://www.sec.gov/files/balancesheet-building-blocks.pdf) | 已读正文；美国 SEC 工作人员教育资料第 1 页支持会计等式；不作为中国会计准则。 | 中国及企业具体准则和资产确认条件；不以此推出 SAP 配置。 |
+| FI-03 | [IRS 复式记账与账户通常余额](https://www.irs.gov/irm/part4/irm_04-010-003) §4.10.3.15.1、Exhibit 4.10.3-2；[IRS 记账示例](https://www.irs.gov/pub/irs-prior/p583--2007.pdf) Bookkeeping System | 已读美国政府资料；支持复式记账、通常余额方向与历史租金分录；不证明中国准则或 SAP 功能。此前读取的 OpenStax 已暂停作为生成依据。 | 账户的完整借贷增减规则、例外、地区适用性和 SAP 过账行为仍需直接证据。 |
 | FI-04 | [SAP 2021 FSD：General Ledger（latest，版本漂移）](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf) | 初查 9.0 检索缓存；现地址漂移至 11.0、旧版无法稳定复验；待核验主题：总账科目主数据、科目表和凭证。 | 公司代码配置映射、事务和各 FPS 差异待查专文；FSD 需固定版本并重新核验。 |
 | FI-05 | [SAP 2021 FSD：General Ledger（latest，版本漂移）](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf) | 初查 9.0 检索缓存；现地址漂移至 11.0、旧版无法稳定复验；待核验主题：描述凭证及未清项的冲销/清账能力。 | 冲销的期间、权限和前后置业务约束未全部核验；FSD 需固定版本并重新核验。 |
 | FI-06 | [SAP 2021 FSD：Accounts Payable / Accounts Receivable（latest，版本漂移）](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf) | 初查 9.0 检索缓存；现地址漂移至 11.0、旧版无法稳定复验；待核验主题：提供应付发票/供应商付款、应收和总账关联的功能范围。 | 部分清账、税、外币和具体资金事件需要其他逐项资料；FSD 需固定版本并重新核验。 |
