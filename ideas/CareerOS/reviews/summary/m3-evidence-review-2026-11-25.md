@@ -45,7 +45,7 @@
 - `/root/reader_plan` 发现 FI/CO 入门先修、正常余额与增减方向的教学设计以及 F4 链接问题。Work 已更新课程计划，并将财政部 2014 历史大纲的限定支持同步主台账；原审查者复核主要修订准确，并指出 COURSE-03 主表仍需同步历史来源；Work 已修正该处，待其再复核。未声称现行适用或 SAP 实测。
 - 针对逐篇来源和资源计划欠缺量化状态，Work 新增控制计划并保留尚未判定/未闭合的标识；原审查者复核当时 5/94 状态、资源与事件数正确；后续另对 16 项技术主题进行初步贴合度归类，随后新增 MM/QM 18 项（其中 MM-09 已在重点五项），目前 38 个不同 ID 有本轮分类或重点记录，余下 61 项仍待该项归类，任何归类均非 M3 通过，但实际每批角色和容量仍未落实，且提出新增严重缺陷须明确复验；Work 追加说明并待其再复核。该方案不代表 M3 门槛通过。
 
-- `/root/developer_m3_review` 对 16 项技术计划进行了[来源贴合度初步复核](../../plans/technical-source-fit-review-m3.md)：12 项直接部分支持、4 项主要为邻近概述；当时未覆盖的 78 项不能据此判通过。`/root/audit_design_review` 独立抽查其中 ABAP-03、ABAP-07、ABAP-05、S4HANA-03、S4HANA-09 五项；其余 11 项未由该审查者逐一复核。报告中原将仓库文件误写为 `tech-m3.md`，Work 已修正为实际计划文件链接，待原审查者复核。分类不代表正式文章完成或 M3 审批。
+- `/root/developer_m3_review` 对 16 项技术计划进行了[来源贴合度初步复核](../../plans/technical-source-fit-review-m3.md)：12 项直接部分支持、4 项主要为邻近概述；当时未覆盖的 78 项不能据此判通过。`/root/audit_design_review` 独立抽查其中 ABAP-03、ABAP-07、ABAP-05、S4HANA-03、S4HANA-09 五项；其余 11 项未由该审查者逐一复核。报告中原将仓库文件误写为 `tech-m3.md`，Work 已修正为实际计划文件链接，原审查者在 `d6049bc` 复读确认，限链接问题关闭。分类不代表正式文章完成或 M3 审批。
 
 - `/root/consultant_m3_review` 对 [MM/QM 18 项](../../plans/review-evidence-mm-qm-m3.md)逐行复核，指出 QM-05 的 SPS10 PDF 引用页码应为 189 而非 188；Work 已修正，原审查者复核仍待完成。MM-01/MM-07 本轮未能独立重开网页正文，不能冒称本轮已读。此复核不是 M3 或正文通过。
 
@@ -55,5 +55,9 @@
 - 独立执行上下文分别完成 [SD/PP 16 项](../../plans/sd-pp-source-fit-m3.md)、[FI/CO/课程 26 项](../../plans/finance-source-fit-review-m3.md)、[AI 8 项](../../plans/ai-source-fit-m3.md)、[流程 11 项](../../plans/process-source-fit-m3.md)和[术语表](../../plans/common-source-fit-m3.md)的来源贴合度记录；各报告明确本轮实读与沿用既有来源记录的区别，部分来源未被本轮审查者重新打开。
 - 这些记录与此前技术 16、MM/QM 18 及 ABAP-02、ABAP-04、PROCESS-01 三项重点合计 99 个独立 ID；数量仅是计划级分类覆盖，不是来源已充分、逐篇复验完成或 M3 通过。
 - `/root/consultant_m3_review` 对 QM-05 页码修订进行真实复核：提交 `b46182890f73990f019b2db391ed0c0022ca9ae4` 的第189页及 EWM 限定正确，限页码问题关闭。其他场景和实机仍未验证。
-- `/root/consultant_plan` 指出 SD-06 配置功能应引用 SPS10 的第118页而不是117页，并提醒 SD-07 迁移限定；`/root/developer_m3_review` 指出 PROCESS-08 的 Basic Subcontracting 章节应为 §2.8.4.7.1。Work 已修正；这些修订仍待各原审查者复核。
-- 财务审查者指出 COURSE-03 的历史会计来源描述需与 FI-03 同步；BAPI 复核者建议标明示例 `WAIT = 'X'` 与浏览器不可用的历史上下文。Work 已修订，仍待原审查者复核。均不计正式文章审核轮次。
+- `/root/consultant_plan` 指出 SD-06 配置功能应引用 SPS10 的第118页而不是117页，并提醒 SD-07 迁移限定；`/root/developer_m3_review` 指出 PROCESS-08 的 Basic Subcontracting 章节应为 §2.8.4.7.1。Work 已修正；各原审查者复读提交 `d6049bc` 并确认，限 SD-06、SD-07 及 PROCESS-08 定位与限定问题关闭。
+- 财务审查者指出 COURSE-03 的历史会计来源描述需与 FI-03 同步；BAPI 复核者建议标明示例 `WAIT = 'X'` 与浏览器不可用的历史上下文。Work 已修订；`/root/reader_plan` 复读 `d6049bc` 并确认 COURSE-03 历史范围，BAPI 描述的原审查者复核仍待记录。均不计正式文章审核轮次。
+
+- `/root/developer_plan` 复核 AI 来源报告时发现自身误将 Gateway 文档阅读归于自己；Work 已改为准确转述协调者及 `/root/consultant_plan` 的早前阅读记录，待原审查者复读确认，不增加虚构独立验证次数。
+
+- `/root/audit_design_review` 指出 AI 贴合度报告误用了 AI-01～08 别名、术语表报告未显式给出 COMMON-01，影响严格逐 ID 自动核对。Work 已改为清单原 ID，并将重新运行精确覆盖检查；修订待审查者复核。计划级覆盖和 M3 通过仍是不同状态。

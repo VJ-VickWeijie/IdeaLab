@@ -46,4 +46,4 @@
 
 ## 独立抽查
 
-`/root/audit_design_review` 基于提交 `a345f0b6ee68cf48713540cc6a952b740e54641d` 抽查 ABAP-03、ABAP-07、ABAP-05、S4HANA-03、S4HANA-09 五项，确认所列有限分类合理；未复核全部 16 项。审查者指出计划文件误称 `tech-m3.md`，Work 已修正为仓库实际文件链接，待原审查者复核。
+`/root/audit_design_review` 基于提交 `a345f0b6ee68cf48713540cc6a952b740e54641d` 抽查 ABAP-03、ABAP-07、ABAP-05、S4HANA-03、S4HANA-09 五项，确认所列有限分类合理；未复核全部 16 项。审查者指出计划文件误称 `tech-m3.md`，Work 已修正为仓库实际文件链接，原审查者在 `d6049bc` 复读确认，限该链接问题关闭。

@@ -83,4 +83,4 @@
 
 ## SD / PP 与流程章节定位复核
 
-`/root/consultant_plan` 逐项核查 SD/PP 来源，指出 SD-06 对应 SPS10 PDF 的配置功能位于第118页而不是117页，并提示 SD-07 只涉及特定转换字段；`/root/developer_m3_review` 指出 PROCESS-08 的委外小节应为 §2.8.4.7.1。Work 已修正这三处，待各原审查者复核。详见 [SD/PP 来源贴合度](sd-pp-source-fit-m3.md) 和 [流程来源贴合度](process-source-fit-m3.md)。上述文献是局部支持，不能代替完整流程、权限或目标系统实测。
+`/root/consultant_plan` 逐项核查 SD/PP 来源，指出 SD-06 对应 SPS10 PDF 的配置功能位于第118页而不是117页，并提示 SD-07 只涉及特定转换字段；`/root/developer_m3_review` 指出 PROCESS-08 的委外小节应为 §2.8.4.7.1。Work 已修正这三处；`/root/consultant_plan` 已在 `d6049bc` 复核 SD-06/SD-07，`/root/developer_m3_review` 已在该提交复核 PROCESS-08，限上述定位与限定问题关闭。详见 [SD/PP 来源贴合度](sd-pp-source-fit-m3.md) 和 [流程来源贴合度](process-source-fit-m3.md)。上述文献是局部支持，不能代替完整流程、权限或目标系统实测。

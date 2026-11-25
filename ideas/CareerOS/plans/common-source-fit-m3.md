@@ -1,4 +1,4 @@
-# CareerOS M3｜统一术语表的来源贴合度复核
+# CareerOS M3｜COMMON-01 统一术语表的来源贴合度复核
 
 2026-11-25，`/root/audit_design_review` 重新实际读取 SAP [Custom Code Migration Guide for SAP S/4HANA 2021](https://help.sap.com/doc/9dcbc5e47ba54a5cbb509afaa49dd5a1/202110.001/en-US/CustomCodeMigration_EndToEnd.pdf) 封面、文档历史和印刷页82第6章：封面为 FPS01，词表仅限该迁移指南语境，可直接支持部分英文技术术语，不代表全部模块、所有 FPS 行为或中文官方译名。
 
