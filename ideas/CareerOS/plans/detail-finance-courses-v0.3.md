@@ -6,14 +6,14 @@
 
 ## 证据目录与使用边界
 
-以下为**已检索到的官方入口和线索，而非本计划已逐条证明全部业务主张**。F1 的 latest URL 出现版本漂移，旧版缓存未留存可验证快照，不能作为固定证据；F2 的 PDF 正文可读取。本次尝试直接打开 F3–F8 页面未取得可读正文，其标题、版本与摘要来自搜索索引，需后续重新核验原文后才能作为事实依据。正文须按具体主张补充可访问、可定位章节、目标产品及 2021 FPS 的依据，证明不了即列待核实，阻止文章审核通过。特别注意 `version=2021.000` 是初始发行文档，不能声称已验证全部后续 FPS，实际生产系统 FPS 未知。
+以下为**已检索到的官方入口和线索，而非本计划已逐条证明全部业务主张**。F1 的 latest URL 出现版本漂移，旧版缓存未留存可验证快照，不能作为固定证据；F2 的 PDF 正文可读取。原研究中 F3–F8 页面的正文未取得；随后 F4 已由两个执行上下文读取 2021 初版正文，其余条目的正文和版本仍按各自台账状态核验。正文须按具体主张补充可访问、可定位章节、目标产品及 2021 FPS 的依据，证明不了即列待核实，阻止文章审核通过。特别注意 `version=2021.000` 是初始发行文档，不能声称已验证全部后续 FPS，实际生产系统 FPS 未知。
 
 | 引用 ID | 原厂资料 | 作用与限制 |
 | --- | --- | --- |
 | F1 | [SAP S/4HANA 2021 Feature Scope Description](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf) | 2021 产品范围入口，但 latest 地址不固定：曾检索到文档 9.0（2025-07-23），2026-11-25 重新打开为 11.0（2026-07-22）；旧版未保留可校验快照，不能稳定复验。仅作检索线索，需另寻稳定版本并逐项验证目标 FPS。 |
 | F2 | [SAP S/4HANA 2021 Simplification List](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf) | 初始、FPS01、FPS02 的简化事项，作为 FI/CO 数据模型和 ECC 差异检索入口；按具体章节和生效版本核验。 |
 | F3 | [GR/IR Automatic Clearing，2021 初始版](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/d57abfc6bcf644938dd7c4e12e152ff6.html?version=2021.000) | 检索摘要提到三种清账执行模式；原文尚未读取，仅作待核验线索，不能以此证明具体模式、所有收货/发票分录或配置。 |
-| F4 | [Supplier Invoices for Purchase Orders](https://help.sap.com/docs/SAP_S4HANA_ON-PREMI-SE/af9ef57f504840d2b81be8667206d485/be5eb6531de6b64ce10000000a174cb4.html) | 采购发票与 GR/IR 业务线索；页面默认版本需确认、定位 2021，不能直接据此证明 2021 细节。 |
+| F4 | [Invoices for Purchase Orders，2021 初版](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/be5eb6531de6b64ce10000000a174cb4.html?version=2021.000) | 已由独立上下文读取；限该文的收货／发票顺序、价格控制与库存覆盖条件，详见 [FI-07 补查](finance-fi07-direct-2021.md)；不证明所有税、科目及 FPS。 |
 | F5 | [2021 内部订单更改日志](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/00ec2c96762d4587b976248bf2f4f12c.html?version=2021.000) | 可追溯的 2021 特定应用线索，不代表内部订单全部机制。 |
 | F6 | [2021 成本要素组应用](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/daad5c6c4d764c2baa25b93a9fab7d82.html?version=2021.000) | 2021 特定成本要素组应用线索，不能代替成本要素原理或配置文档。 |
 | F7 | [2021 生产成本延迟汇总](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b8102751e57e4de2ad50ec07253127e0.html?version=2021.000) | 特定配置下的 ACDOCA/ACDOCD 案例，不代表所有生产成本场景。 |
@@ -28,8 +28,8 @@
 | ID / 目标路径 | 阅读先修/知识关联、内容、场景和边界 | 来源与验收 |
 | --- | --- | --- |
 | FI-01 `knowledge/FI/01-foundations/financial-accounting-for-beginners.md` | 零先修；区分企业业务事件、实物、凭证、价值及资金，采用虚构采购；解释只创建订单/已付款可能是不同事件。 | F1 找总账/应付章节；阅读者能将一笔买卖按六列分类，标识未发生的流。 |
-| FI-02 `knowledge/FI/01-foundations/accounting-equation.md` | FI-01；资产/负债/权益和会计等式，覆盖现金购买及赊购，不混淆企业和个人账。 | F1 查财报术语、辅以公开会计基础资料并标地区；用虚构金额保持等式平衡，答案可复验。 |
-| FI-03 `knowledge/FI/01-foundations/debit-credit.md` | FI-02；计划先解释账户类别，再讲借贷及复式；账户具体变动方向和反例仍须独立来源核验。 | 已读 IRS 复式记账和通常余额方向资料，详见证据登记；具体增减方向/地区适用/SAP场景仍缺依据，禁止使用已暂停的 OpenStax 作为生成依据。 |
+| FI-02 `knowledge/FI/01-foundations/accounting-equation.md` | FI-01；资产/负债/权益和会计等式，覆盖现金购买及赊购，不混淆企业和个人账；计划增加收入、费用、利润与权益的关系，并区分时点报表与期间报表。 | F1 查财报术语、辅以公开会计基础资料并标地区；用虚构金额保持等式平衡，答案可复验。 |
+| FI-03 `knowledge/FI/01-foundations/debit-credit.md` | FI-02；计划先解释账户类别，再讲借贷及复式；明确区分账户通常余额与每笔增减方向，具体规则、例外及地区适用需逐项核验。 | 已读 IRS 通常余额及财政部 2014 历史大纲的一般账户增减说明，详见证据登记；适用地区、现行规则、完整例外及 SAP 场景仍待核，禁止使用已暂停的 OpenStax 作为生成依据。 |
 | FI-04 `knowledge/FI/02-functions/company-code-gl.md` | FI-03；公司代码、会计科目表、总账科目与组织关系；跨公司账独立前提，区别科目定义与余额。 | F1/F2 查组织与总账；完成组织→科目→凭证映射图与条件表。 |
 | FI-05 `knowledge/FI/02-functions/posting-reversal.md` | FI-04；会计凭证、日期/期间、过账和冲销；区分更正原始业务、关联凭证，避免称所有凭证均可直接冲销。 | F1/F2 查凭证和版本；虚构凭证借贷平衡、识别原因及期间/权限约束。 |
 | FI-06 `knowledge/FI/02-functions/payables-receivables.md` | FI-03～05；应付应收、未清项/清账、付款/收款；区分发票入账与资金支付、部分支付和差异/税币前提。 | F1/F2 查 AR/AP；一笔赊购及赊销各画事件、凭证、价值与资金表，余额自洽。 |
@@ -43,7 +43,7 @@
 
 | ID / 目标路径 | 阅读先修/知识关联、内容、场景和边界 | 来源与验收 |
 | --- | --- | --- |
-| CO-01 `knowledge/CO/01-foundations/cost-profit-basics.md` | FI-01～03；从企业预算、费用、成本对象及内部管理切入，区分 FI 外部核算和 CO 管理分析，说明口径会依配置与场景不同。 | F1/F2 核验适用边界；给虚构车间费用列外部/内部观察角度，不能称无例外。 |
+| CO-01 `knowledge/CO/01-foundations/cost-profit-basics.md` | FI-01～03；从企业预算、费用、成本对象及内部管理切入，区分 FI 外部核算和 CO 管理分析，说明口径会依配置与场景不同。 | F1/F2 核验适用边界；用虚构部门费用、成本中心及计划/实际值解释外部/内部观察角度，内部订单另列独立场景，不能暗示自动双重计费或无条件过账。 |
 | CO-02 `knowledge/CO/02-functions/cost-center-elements.md` | CO-01、FI-04；成本中心、成本要素及其与会计科目关系；期间、组织归属、主数据有效期和 S/4/ECC 差异。 | F2/F6 + 具体 2021 成本要素主数据文档；追踪一笔费用进入指定成本中心、核对前提。 |
 | CO-03 `knowledge/CO/02-functions/internal-orders.md` | CO-01/02；内部订单适用场景、费用归集、预算与结算的关联；区分统计/真实订单、接收对象和设定，避免断言必有结算。 | F5 + 2021 订单类型/结算资料；虚构项目归集到接收方的事件、金额及条件。 |
 | CO-04 `knowledge/CO/02-functions/product-cost-variance-settlement.md` | CO-01～03、PP-05/06；生产成本归集、计划/实际、差异和结算；说明成本核算方法、期间、在制品和评估前提，模块文引用 PROCESS-05。 | F1/F7 + 2021 产品成本核算与生产订单结算文档；条件化成本流及示例平衡，严禁 F7 证明全部场景。 |
@@ -60,7 +60,7 @@
 | --- | --- | --- |
 | COURSE-01 `learning/24-month-roadmap.md` | 零先修；沿用原路线的基线、深化、架构、AI、职业验证阶段，链接月度目标和可选练习；不能保证工作成果。 | roadmap-v0.1 + 下表 24 个月 + COURSE-02～07；每个阶段有可阅读原文或标待建，每季可调整。 |
 | COURSE-02 `learning/first-purchase.md` | 零先修；5–10 分钟一笔采购，区分订单、收货、发票、付款；对应财务无基础，不在课程重复维护流程全文。先阅读 FI-01、MM-01 的入门概览及 PROCESS-01 的 3–5 分钟概览，完整流程留到第 2 月；如原文未建成，该课程标记待建设。 | FI-01、MM-01、PROCESS-01；虚构事件排序，参照来源原文给出答案。 |
-| COURSE-03 `learning/finance-controlling-from-zero.md` | COURSE-02；按 FI-01→02→03→04→05→06→07→08→CO-01→02→03/04/05 排列，适配无财务基础。 | 各条标学习目标/时间/先修；练习借贷平衡和应付未清项，练习均可离线且有参考答案。 |
+| COURSE-03 `learning/finance-controlling-from-zero.md` | COURSE-02；按 FI-01→02→03→04→05→06→07→08→CO-01→02→03/04/05 排列，适配无财务基础。 | 各条标学习目标/时间/先修；可选离线练习包括区分收货/发票/付款、等式和借贷平衡、利润与现金流、FI 科目与 CO 对象及计划/实际，并附参考答案；涉及 SAP 具体分录须先核对适用证据。 |
 | COURSE-04 `learning/mm-qm-deepening.md` | COURSE-02、FI-01～03；采购组织、货源、单位、收货、质量检验、GR/IR、异常。 | MM-01～10、QM-01～08、FI-07、PROCESS-01/06/10/11；按先修、只读条件和理解题组织。 |
 | COURSE-05 `learning/cross-module-processes.md` | COURSE-03/04；P2P、O2C、STO、生产、质量、R2R 及特殊场景。 | PROCESS-01～12；每一条引用唯一流程主文并标角色、单据、物流、财务/资金及异常提问。 |
 | COURSE-06 `learning/abap-s4-architecture.md` | ABAP 基础、COURSE-04；调试、接口/增强、数据模型、HANA/CDS/OData/RAP/Clean Core；具体能力按 2021 发行和 FPS 核验。 | ABAP-01～09、S4HANA-01～09；给虚构案例诊断练习，实机只读/受授权时可选。 |
@@ -73,13 +73,14 @@
 下表每月 ID 是建议主题池，不要求逐篇、逐月全部读完。优先阅读所需先修和对应主题的入门概览，具体岗位相关内容选读；同一月份内按列出顺序阅读。下列“入门先修”说明何时开始主题；文章表的跨文 ID 是可返回阅读的知识关联，不自动构成入门门槛：
 
 - 第 1 月 COURSE-02 的入门前提是 FI-01 和 MM-01 的概览，以及 PROCESS-01 的速览部分；第 2 月再阅读全文。课程引用原文，不另行维护完整流程。
+- 第 2 月可以先读 P2P 业务概览，财务凭证和付款细节在学习 FI-04～06 后再返回，不要求零基础读者预先理解分录。
 - CO 入门先 FI-01～03；学习 CO-02 还需 FI-04；CO-03 建立在 CO-01/02 上。第 4 月按此顺序引入，CO-04 待第 15 月先读 PP-05/06 后再深入，CO-05 待第 13 月读 SD-04 后再深入；CO-08 数据模型待第 19 月补完 CO-05 后再读。
 - 同月若读不完，以理解业务事件和一项可选练习为主，其余顺延，不以月末完成数量作为质量验收。
 
 | 月 | 本月目标及拟读正文 ID | 可选练习 / 可验证产出 |
 | --- | --- | --- |
 | 1 | 先速览 [FI-01 财务会计从零：企业的钱和账](coverage-matrix-v0.3-proposal.md)、[MM-01 组织结构与采购业务对象](coverage-matrix-v0.3-proposal.md) 和 [PROCESS-01 P2P 采购到付款](coverage-matrix-v0.3-proposal.md) 概览，再读 [COURSE-02 入门：一笔采购的单据物流与资金流](coverage-matrix-v0.3-proposal.md) 和 [FI-02 资产、负债、权益与会计等式](coverage-matrix-v0.3-proposal.md)；[FI-03 借贷方向与复式记账](coverage-matrix-v0.3-proposal.md)、[MM-02 物料主数据与业务伙伴](coverage-matrix-v0.3-proposal.md) 选读；盘点技能 | 画一笔虚构采购与账户等式；个人能力清单只留私密位置。 |
-| 2 | 先补 [FI-03 借贷方向与复式记账](coverage-matrix-v0.3-proposal.md)，再读 [PROCESS-01 P2P 采购到付款](coverage-matrix-v0.3-proposal.md) 全文、[MM-03 采购信息记录与货源决定](coverage-matrix-v0.3-proposal.md)、[MM-04 采购申请与订单机制](coverage-matrix-v0.3-proposal.md)、[MM-05 库存类型与移动类型](coverage-matrix-v0.3-proposal.md)、[FI-04 公司代码、会计科目与总账](coverage-matrix-v0.3-proposal.md)、[FI-05 会计凭证、过账与冲销](coverage-matrix-v0.3-proposal.md)、[FI-06 应付、应收与资金流](coverage-matrix-v0.3-proposal.md) | 对比订单、到货、发票与付款四种状态。 |
+| 2 | 先补 [FI-03 借贷方向与复式记账](coverage-matrix-v0.3-proposal.md)，先阅读 P2P 业务概览并补 FI-04～06，再返回 [PROCESS-01 P2P 采购到付款](coverage-matrix-v0.3-proposal.md) 的财务细节；同月阅读 [MM-03 采购信息记录与货源决定](coverage-matrix-v0.3-proposal.md)、[MM-04 采购申请与订单机制](coverage-matrix-v0.3-proposal.md)、[MM-05 库存类型与移动类型](coverage-matrix-v0.3-proposal.md)、[FI-04 公司代码、会计科目与总账](coverage-matrix-v0.3-proposal.md)、[FI-05 会计凭证、过账与冲销](coverage-matrix-v0.3-proposal.md)、[FI-06 应付、应收与资金流](coverage-matrix-v0.3-proposal.md) | 对比订单、到货、发票与付款四种状态。 |
 | 3 | 先读 [MM-06 收货、退货与冲销](coverage-matrix-v0.3-proposal.md)，再读 [QM-01 质量管理业务与组织对象](coverage-matrix-v0.3-proposal.md)、[QM-02 检验类型与检验批](coverage-matrix-v0.3-proposal.md)、[QM-03 检验计划与检验特性](coverage-matrix-v0.3-proposal.md)、[QM-04 结果记录与使用决策](coverage-matrix-v0.3-proposal.md)、[QM-05 质量库存与采购生产集成](coverage-matrix-v0.3-proposal.md)、[FI-07 库存估价与收货发票暂估 GR/IR](coverage-matrix-v0.3-proposal.md)、[PROCESS-06 来料检验到放行 Quality-to-Release](coverage-matrix-v0.3-proposal.md)；[COURSE-04 MM 与 QM 深化](coverage-matrix-v0.3-proposal.md) 作导航 | 写一份模拟检验及暂估差异排查图。 |
 | 4 | 如 [FI-01 财务会计从零：企业的钱和账](coverage-matrix-v0.3-proposal.md)、[FI-02 资产、负债、权益与会计等式](coverage-matrix-v0.3-proposal.md)、[FI-03 借贷方向与复式记账](coverage-matrix-v0.3-proposal.md)、[FI-04 公司代码、会计科目与总账](coverage-matrix-v0.3-proposal.md) 仍有缺口先补基础，再读 [CO-01 管理会计从零：成本与利润](coverage-matrix-v0.3-proposal.md)、[CO-02 成本中心与成本要素](coverage-matrix-v0.3-proposal.md)、[CO-03 内部订单和费用归集](coverage-matrix-v0.3-proposal.md) 入门；[ABAP-01 ABAP 与业务对象基础](coverage-matrix-v0.3-proposal.md)、[ABAP-02 内表、SQL 与海量数据内存](coverage-matrix-v0.3-proposal.md)、[ABAP-03 标准流程调试与运行分析](coverage-matrix-v0.3-proposal.md)、[S4HANA-01 S/4HANA 2021 技术架构入门](coverage-matrix-v0.3-proposal.md)、[S4HANA-02 HANA 数据处理与性能分析](coverage-matrix-v0.3-proposal.md)、[MM-10 采购库存数据模型与单据关系](coverage-matrix-v0.3-proposal.md) 选读 | 用假数据说明性能/内存问题与可验证假设。 |
 | 5 | [S4HANA-03 CDS 数据建模与权限](coverage-matrix-v0.3-proposal.md)、[S4HANA-04 OData 服务和接口治理](coverage-matrix-v0.3-proposal.md)；[ABAP-04 BAPI、LUW 与事务提交](coverage-matrix-v0.3-proposal.md)、[ABAP-06 RFC、接口、异常与幂等](coverage-matrix-v0.3-proposal.md)；[FI-11 财务凭证与总账数据模型](coverage-matrix-v0.3-proposal.md) | 画一个只读虚构业务对象和接口边界。 |
@@ -105,7 +106,7 @@
 
 ## 逐篇证据地图：适用主张、读取状态与未覆盖项
 
-核对日期 2026-11-25。FSD 为 SAP《Feature Scope Description》，产品虽标 2021，但 latest 地址发生版本漂移：先前检索缓存显示文档 9.0（2025-07-23），同地址再次直接读取为 11.0（2026-07-22，共 718 页）。此前 9.0 未保存可验证快照，因此原章节和页码不可稳定复验；例如 Overhead Cost Accounting 从 2.5.1.1.1 移到 2.6.1.1.1。下文已移除 FSD 的固定页码与旧章节编号，所有 FSD 记录仅作待核验线索，须寻找可固定版本或保存合法可验证快照并对照目标 FPS 后方可作证据。SAP 页面可能要求切换版本或权限。此前已读取的 OpenStax 内容因 AI 使用许可待确认，已暂停作为生成依据；下方 FI-01/02 改用 SEC 教育材料，FI-03 用 IRS 对复式记账及通常余额方向的局部说明，完整借贷增减规则仍缺直接依据。课程文章证据目前仅有已批准的规划和拟引用条目，知识正文均待建。
+核对日期 2026-11-25。FSD 为 SAP《Feature Scope Description》，产品虽标 2021，但 latest 地址发生版本漂移：先前检索缓存显示文档 9.0（2025-07-23），同地址再次直接读取为 11.0（2026-07-22，共 718 页）。此前 9.0 未保存可验证快照，因此原章节和页码不可稳定复验；例如 Overhead Cost Accounting 从 2.5.1.1.1 移到 2.6.1.1.1。下文已移除 FSD 的固定页码与旧章节编号，所有 FSD 记录仅作待核验线索，须寻找可固定版本或保存合法可验证快照并对照目标 FPS 后方可作证据。SAP 页面可能要求切换版本或权限。此前已读取的 OpenStax 内容因 AI 使用许可待确认，已暂停作为生成依据；下方 FI-01/02 改用 SEC 教育材料，FI-03 用 IRS 对复式记账及通常余额方向的局部说明；财政部 2014 历史大纲提供账户增减与备抵科目线索，但现行适用性和完整例外仍待核。课程文章证据目前仅有已批准的规划和拟引用条目，知识正文均待建。
 
 | ID | 逐篇主题来源（标题及 URL） | 实际读取、版本及有限用途 | 仍待核查 |
 | --- | --- | --- | --- |
@@ -115,7 +116,7 @@
 | FI-04 | [SAP 2021 FSD：General Ledger（latest，版本漂移）](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf) | 初查 9.0 检索缓存；现地址漂移至 11.0、旧版无法稳定复验；待核验主题：总账科目主数据、科目表和凭证。 | 公司代码配置映射、事务和各 FPS 差异待查专文；FSD 需固定版本并重新核验。 |
 | FI-05 | [SAP 2021 FSD：General Ledger（latest，版本漂移）](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf) | 初查 9.0 检索缓存；现地址漂移至 11.0、旧版无法稳定复验；待核验主题：描述凭证及未清项的冲销/清账能力。 | 冲销的期间、权限和前后置业务约束未全部核验；FSD 需固定版本并重新核验。 |
 | FI-06 | [SAP 2021 FSD：Accounts Payable / Accounts Receivable（latest，版本漂移）](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf) | 初查 9.0 检索缓存；现地址漂移至 11.0、旧版无法稳定复验；待核验主题：提供应付发票/供应商付款、应收和总账关联的功能范围。 | 部分清账、税、外币和具体资金事件需要其他逐项资料；FSD 需固定版本并重新核验。 |
-| FI-07 | [SAP 2021 FSD：采购订单与科目分配（latest，版本漂移）](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf) | 初查 9.0 检索缓存；现地址漂移至 11.0、旧版无法稳定复验；待核验主题：描述采购可基于成本中心和内部订单分配，不代表每种后续分录。 | 资产分配、GR/IR 三模式、非估价收货、自动科目与凭证逐项待核验；F3/F4 原文未读；FSD 需固定版本并重新核验。 |
+| FI-07 | [SAP 2021 FSD：采购订单与科目分配（latest，版本漂移）](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf) | 初查 9.0 检索缓存；现地址漂移至 11.0、旧版无法稳定复验；待核验主题：描述采购可基于成本中心和内部订单分配，不代表每种后续分录。 | 资产分配、GR/IR 三模式、非估价收货、自动科目与凭证逐项待核验；F3 原文状态仍待核；F4 已读且仅支持限定场景；FSD 需固定版本并重新核验。 |
 | FI-08 | [SAP 2021 FSD：General Ledger / Closing Operations and Reporting（latest，版本漂移）](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf) | 初查 9.0 检索缓存；现地址漂移至 11.0、旧版无法稳定复验；待核验主题：描述结账分析和报表功能范围。 | 国家会计准则、期间开关和每类结账处理前提须专文确认；FSD 需固定版本并重新核验。 |
 | FI-09 | [SAP 2021 FSD：Accounting（latest，版本漂移）](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf) | 初查 9.0 检索缓存；现地址漂移至 11.0、旧版无法稳定复验；待核验主题：功能目录有助定位财务领域，不证明任何具体事务码。 | 每个 T-Code/Fiori 应用的作用、只读权限和版本均待逐项查证；FSD 需固定版本并重新核验。 |
 | FI-10 | [SAP 2021 GR/IR Automatic Clearing](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/d57abfc6bcf644938dd7c4e12e152ff6.html?version=2021.000) | 仅搜索摘要、直接打开无正文；2021 初始版线索；不得作为已确认配置依据。 | 每个 IMG 节点、配置→行为、读取权限与公司代码条件均需可读原文。 |

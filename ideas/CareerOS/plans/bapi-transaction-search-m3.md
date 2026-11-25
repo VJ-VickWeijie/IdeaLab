@@ -41,3 +41,12 @@
 ## 独立开发者复核（2026-11-25）
 
 `/root/developer_plan` 独立读取两份 PDF：SAP 2026 指南物理页 24 仅列特定集成的接口暴露要求；出版社样章物理页 4–6、印刷页 372–374 指定 S/4HANA 2021 FPS01 场景，并讨论普通 BAPI 消费者和 RAP 框架各自的事务边界。审查者确认它是第三方资料，不是 SAP 官方产品文档；其他 BAPI 可有内置事务控制例外，不能泛化到所有调用方式、版本、更新任务或失败分支。公开可访问不等于可重发布全文，故不复制整份样章。原结论无需修改：SAP 官方目标版本直接依据仍未获得，未作实机测试，不计文章审核轮次。
+
+
+## 2021 通用事务模型与无版本示例的新增核验
+
+`/root/developer_plan` 通过版本选择器读取 [ABAP Platform 2021 初版的 BAPI Transaction Model](https://help.sap.com/docs/ABAP_PLATFORM_NEW/166400f6be7b46e8adc6b90fd20f3516/4d5b102ba1483d8fe10000000a42189e.html?version=202110.000)，`/root/consultant_plan` 随后独立复读，均确认选择器为 2021 (Oct 2021)。原文讨论 BAPI 通常由调用方控制提交/回滚，也明示少数自带 COMMIT 的例外和函数文档/Note 0131838。它是通用模型，**未指明 BAPI_PO_CREATE1**，不能证明该函数无例外、RETURN 判断、RFC 会话或更新任务行为。
+
+同一开发者和独立顾问实读 [Function Module Test Sequence](https://help.sap.com/docs/SUPPORT_CONTENT/abap/3353523556.html)，其 SAP Support Additional Content 示例演示顺序调用 PO 创建和提交、检查 RETURN 及设置 WAIT；该页面无目标产品/FPS 标识，并提示 Additional Content 不属于 SAP 条款中定义的 Documentation。示例不能视为目标函数的 2021 产品契约、完整回滚规则或执行授权。此前本文件中搜索工具打开为空的记录保留为当时结果，后续浏览器实读不应倒写为原研究者已读。
+
+**状态**：2021 通用 BAPI 模型直接证据已找到并独立复核；2021 采购函数级事务、消息、回滚及实机行为仍待核。未操作 SAP 系统，未进行正式文章审核。

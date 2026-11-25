@@ -14,7 +14,7 @@
 | --- | --- | --- |
 | 术语表来源；`/root/audit_design_review` | 独立复核 SAP 文档封面为 FPS01，初稿将历史 FPS00 记为当前版本；Work 修正。SEC 材料仅支持其美国语境的会计基础。 | 同一上下文确认修正，限此问题；不代表词表整体完成。 |
 | 物流来源；`/root/developer_plan` | 独立抽查 7 个条目、46 个 ID，指出 PROCESS-03/04 的 §2.13.2.1 标题误写。Work 核实并改为 `Delivery Management`；PROCESS-04 改引 2021 初版跨公司调拨页面。 | 用量恢复后，原审查者读取 PR #20 的 `0730c3fc66292c1ae22ff95a0d9b89847b930d70` 确认修订，并独立读取 MM-01、MM-07、PROCESS-04、PROCESS-09 四个 2021 初版页面；仅关闭已核实的有限描述。 |
-| 技术来源；`/root/consultant_plan` | 审查者指出 SQL Monitor 原文仅标“ABAP Platform 2021”，不能断言 FPS00；Work 移除无依据的 FPS 断言。 | 原审查者在 `0730c3fc` 再次核对修订；确切 FPS 仍待核。 |
+| 技术来源；`/root/consultant_plan` | 审查者指出 SQL Monitor 原文仅标“ABAP Platform 2021”，不能断言 FPS00；Work 移除无依据的 FPS 断言。 | 原审查者在 `0730c3fc` 当时复核了 Available As Of 字段；本轮另发现页尾 Version 为 FPS00，经另一独立上下文核对，历史结论已按下方记录修正。实际系统补丁仍待核。 |
 | Gateway 与采购 BAPI；`/root/consultant_plan` | Work 读取 SAP Gateway `2021 Latest` 和 ECC 背景 Purchasing BAPIs 支持资料，标明有限内容。 | 独立配置顾问读取原文并确认 Gateway 授权检查及 ECC 来源边界；不能推断具体服务权限或 2021 采购 BAPI 事务。 |
 | 财务台账；`/root/audit_design_review` | 独立抽查 26 个 ID 与原始资料，指出 SEC1 应包括现金流量表及 GAO1 的页码有误；Work 修正原财务台账。 | 同一审查者复核两处修正；未能独立读取大型 SAP 2021 PDF，因此未验证其具体段落。只代表抽样，不代表全文通过。 |
 | 财务补查；原作者 `/root/reader_m3_review`，独立审查 `/root/audit_design_review` | 原作者重新核对并补查 [26 项 FI/CO 与课程资料](../../plans/finance-source-recheck-20261125.md)；其自身复查不能算独立验收。审查者指出补查报告的 GAO 旧页码，Work 已统一修正。 | 独立审查者复读修订，并直接读取 2014 财政部大纲及两份通知；确认仅限历史资料线索，不证明现行规定、SAP 行为或具体使用许可。其他来源未全部独立验证。 |
@@ -30,9 +30,17 @@
 
 1. 新的 MM/QM 证据只覆盖特定业务和补丁，SD-01 已取得部分 2021 组织定义与分配依据；其他主题中的配置与字段仍需直接依据。不能从单一 IMG 范例推断文章整体通过。
 2. 2021 FSD 的 `latest.pdf` 是动态链接，同日出现旧抓取 9.0/SPS08 与当前 11.0/SPS10；记录了后者当次文件长度和 SHA-256，但未归档原文件，不能保证旧版或今后可复现。不得跨版本混用页码或宣称符合目标系统未知 FPS。
-3. ABAP-04 仍缺可读且明确适用于 S/4HANA 2021 的目标采购 BAPI 事务与提交依据；RAP 特性、分包语法等的目标 FPS 证据不足。搜索索引可见不能当作正文已读，也不能把 ECC 事实自动套用 2021。
+3. ABAP Platform 2021 的通用 BAPI 事务模型已由两个独立上下文实读；但 ABAP-04 特定采购 BAPI 的目标版本事务、异常和提交依据仍缺。ABAP 7.56 的分包官方示例已核读，但 APPENDING+PACKAGE SIZE 组合、游标和提交边界仍未闭合；RAP 其他特性仍须逐 FPS 核查。搜索索引可见不能当作正文已读，也不能把 ECC 事实自动套用 2021。
 4. 财务借贷入门已找到历史中文资料，但当代地区适用性、具体使用许可和 SAP 会计分录仍需核对；OpenStax 已暂停使用。
 5. 上次复核一度受用量限制；本次恢复后完成上表列明的复验。后续印度来源再复核与 P2P 来源补查的两个子代理任务再次遇到用量限制；印度页面随后由另一顾问独立实读，P2P 补查后由另一顾问接手并实读两页，其有限结果见 [P2P估价补查](../../plans/p2p-valuation-direct-2021.md)；完整 P2P 和付款证据仍未闭合。后续顾问实读了 2021 固定版库存采购 FM 示例，但借贷表头错位，不能据其确认方向；普通库存采购发票直接证据仍待补查，见 [FI-07 补查](../../plans/finance-fi07-direct-2021.md)。未取得的独立复核不得计作通过。P2P 补查中研究者报告 [2021 采购收货应用](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/c2be52880d194905a0692f6dce907795.html?version=2021.000) 的索引涉及凭采购订单过账收货，但正文未实读；未完成的发票到付款链仍需研究。没有公司 SAP 环境，不能声称系统实测。
-6. 逐篇目标版本直接来源与实施资源计划未全部闭合。M3 阶段评审须如实列出未解事项及影响；未经所有者批准 M3 和明确授权，不进入 M4。
+6. 逐篇目标版本直接来源与实施资源计划未全部闭合；新增[逐篇门槛与资源控制计划](../../plans/m3-evidence-resource-control-v0.3.md)记录具体状态和恢复方式。M3 阶段评审须如实列出未解事项及影响；未经所有者批准 M3 和明确授权，不进入 M4。
 
 以上均为规划来源审查，并非三角色对正式文章进行的有效问答、修订与复核，不计入每篇三个角色各 5～10 轮的统计。
+
+## 本轮补充来源与方案审查
+
+- `/root/developer_plan` 和 `/root/consultant_plan` 分别实读并独立复核 ABAP Platform 2021 的 BAPI 通用事务模型与无产品版本的 SAP Additional Content 测试示例；通用模型明确有例外，未证明采购 BAPI 的事务契约。见 [BAPI 证据](../../plans/bapi-transaction-search-m3.md)。
+- `/root/developer_m3_review` 找到 SAP 官方 7.56 固定代码示例与版本映射，`/root/reader_plan` 独立复核示例的分包和累积边界；该例不保证免内存 dump。见 [7.56 证据](../../plans/abap-756-sql-evidence-m3.md)。
+- `/root/audit_design_review` 发现 SQL Monitor 来源的正文和页尾版本字段表述不一致；`/root/developer_m3_review` 独立实读，确认 Available As Of 字段仅为 2021，而页面 Version 字段标 FPS00。Work 已修正主台账和细化文档；该修订仍待原审查者复核。
+- `/root/reader_plan` 发现 FI/CO 入门先修、正常余额与增减方向的教学设计以及 F4 链接问题。Work 已更新课程计划，并将财政部 2014 历史大纲的限定支持同步主台账；本轮修订仍待原审查者复核，未声称现行适用或 SAP 实测。
+- 针对逐篇来源和资源计划欠缺量化状态，Work 新增控制计划并保留尚未判定/未闭合的标识；该方案仍须独立复核，不代表 M3 门槛通过。

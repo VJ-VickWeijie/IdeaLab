@@ -7,7 +7,7 @@
 | 代码 | 原始资料及版本 | 阅读范围和限制 |
 | --- | --- | --- |
 | T1 | [SAP S/4HANA 2021 Feature Scope Description](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)，文档版本 11.0，2026-07-22 | PDF 物理页 198、201–206、209、215、228（零基索引分别 197、200–205、208、214、227）；内容是针对 2021 产品持续更新的特性范围，**FPS 未必逐项明确，不可倒推 FPS00**。 |
-| T2 | [SQL Monitor What's New](https://help.sap.com/doc/34796706f38646f68d51a0fa0d4636e4/100/en-US/b370bcd2f756469fb83ec418797550ee.html)，ABAP Platform 2021，具体 FPS 待明确 | `Technical Details` 和 `Additional Details`：特指 SQLMD 的 Resolved/Joins/Cross Node Joins，不覆盖其他诊断工具。独立评审指出页面的明确 `Available As Of` 字段为 2021，当前不将 FPS00 当作已确定结论。 |
+| T2 | [SQL Monitor What's New](https://help.sap.com/doc/34796706f38646f68d51a0fa0d4636e4/100/en-US/b370bcd2f756469fb83ec418797550ee.html)，ABAP Platform 2021，页面版本元数据标 FPS00 | `Technical Details` 的 `Available As Of` 仅标 2021，页面底部 `Version` 字段标 ABAP Platform 2021 FPS00；两位独立上下文均核对。特指 SQLMD 的 Resolved/Joins/Cross Node Joins，不证明 SQL Monitor 整体首次出现于 FPS00 或实际环境可用。 |
 | T3 | [BAPI Transaction Model](https://help.sap.com/SAPHELP_SCM700_EHP02/helpdata/EN/4d/5b102ba1483d8fe10000000a42189e/content.htm?no_cache=true)，旧版 SCM Help | `Transaction Control in Client`、`Transaction Handling via Service BAPIs`、`Comment`；可读且直接讨论通用事务/例外，**不直接证明 S/4HANA 2021 的特定 BAPI**。 |
 | T4 | [What's New in SAP S/4HANA 2021 FPS01](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.001/en-US/WN_OP2021_FPS01_EN.pdf)，版本 1.0，2022-02-23 | 第 3.4.2.1.2 节，PDF 物理页 85–86：`EXECUTE_ALGORITHM` 特定银行对账 BAdI，含该例 IMG 路径。 |
 | T5 | [S/4HANA 2021 Security Guide](https://help.sap.com/doc/d7c2c95f2ed2402c9efa2f58f7c233ec/2021/en-US/SEC_OP2021.pdf)，文档版本 11.0，2026-07-22 | PDF 物理页 158–159 Dispute Management 特定 RFC/BAPI 场景；第 241 页 HCM Processes and Forms 权限；第 709–710 页审计日志。目标产品 2021，具体 FPS 未确认。 |
@@ -32,9 +32,9 @@ T1 使用动态 `latest` 地址，同一 URL 曾发生版本漂移。先前独�
 | 文章 ID | 本次可读来源/具体位置 | 限定性支持及未覆盖缺口 | 状态 |
 | --- | --- | --- | --- |
 | ABAP-01 | T1 §2.15.1 数据建模、BOPF，PDF 物理页 203–205 | 可支持字典、CDS 与业务对象封装数据/逻辑的基础概念；采购业务对象与事务映射、精准 FPS 未证。 | 部分可证，目标 FPS 待核 |
-| ABAP-02 | T1 §2.15.1 `Database Access`，物理页 203–204 | 可支持 ABAP SQL 是访问 ABAP 管理数据库对象的语言；内表内存占用、`PACKAGE SIZE`、大数据防 dump 和并发计数限制均未由此证明。 | 部分可证，目标 FPS 待核 |
-| ABAP-03 | T2 `Additional Details` | 支持 SQLMD 特定版本选项；ABAP debugger、SAT/ST05 权限、执行影响及实际跟踪仍待单独核验。 | 部分可证，2021，具体 FPS 待明确 |
-| ABAP-04 | T3 `Transaction Control in Client`、`Comment`；T5 物理页 158–159；T16 ECC 采购例子 | T3 可解释旧资料中提交/回滚与少数例外；T5 可证 2021 Dispute Management 有 BAPI 调用；T16 是 ECC 范围。**三者不能组合推定 2021 某采购 BAPI 的事务语义**。目标 BAPI 的官方事务、消息与提交说明仍缺。 | 目标 BAPI 事务证据阻断；T16 已核对 ECC 示例，2021 仍待核 |
+| ABAP-02 | T1 §2.15.1 `Database Access`，物理页 203–204 | 可支持 ABAP SQL 的基础定位；[7.56 固定官方样例](tech-followup-m3.md) 提供 PACKAGE SIZE 的有限演示并经独立复核，但示例累积各包，不能证明总内存受限、免 dump 或游标事务语义。 | 部分可证，目标 FPS 待核 |
+| ABAP-03 | T2 `Additional Details` | 支持 SQLMD 特定版本选项；ABAP debugger、SAT/ST05 权限、执行影响及实际跟踪仍待单独核验。 | 部分可证，文档版本字段 FPS00；系统适用性待核 |
+| ABAP-04 | T3 `Transaction Control in Client`、`Comment`；T5 物理页 158–159；T16 ECC 采购例子 | T3 为旧资料；另有[已独立复核的 ABAP Platform 2021 通用 BAPI 模型](bapi-transaction-search-m3.md)说明客户端事务控制及例外，但未点名采购函数。T5 为特定应用，T16 是 ECC 范围；**不能据此推定 2021 采购 BAPI 的具体事务语义**。目标函数级事务、消息与提交说明仍缺。 | 目标 BAPI 事务证据阻断；T16 已核对 ECC 示例，2021 仍待核 |
 | ABAP-05 | T4 §3.4.2.1.2，物理页 85–86；T10 物理页 24 | T4 支持 FPS01 特定 BAdI 的增强用途；T10 仅支持对应 MRP 场景。其他增强点、发布 API 和各系统配置未证。 | 部分可证，FPS01 特定对象 |
 | ABAP-06 | T5 PDF 物理页 158–159 | 指定 Dispute Management 场景分别有 RFC 对话调用和 BAPI 通信角色；不证明一般 RFC 事务、重试和幂等语义，也不能取代接口文档。 | 部分可证，FPS及接口级行为待核 |
 | ABAP-07 | T2 `Additional Details` | SQLMD 是该版本一个诊断入口；SE11、SE37、SE80、SAT、ST05、ST22 的用途、授权和影响尚需各自资料。 | 部分可证，逐码待核 |
@@ -68,7 +68,7 @@ T1 使用动态 `latest` 地址，同一 URL 曾发生版本漂移。先前独�
 
 ## 恢复用量后的独立复核
 
-独立审查者 `/root/consultant_plan` 基于 PR #20 `0730c3fc66292c1ae22ff95a0d9b89847b930d70` 实际读取 T15 和 T16，并复核 T2 中将 SQL Monitor 的具体 FPS 保持待核的修订。T15 的 2021 Latest 页面可支持该授权检查概念，但不能推断特定服务角色；T16 页面为 ECC 背景的 SAP Support Content，不证明 S/4HANA 2021 的特定采购 BAPI 事务。T15/T16 的这次有限表述已完成独立来源复核，**ABAP-04 的目标版本事务依据仍未解决**；这不是正式文章审核。
+独立审查者 `/root/consultant_plan` 基于 PR #20 `0730c3fc66292c1ae22ff95a0d9b89847b930d70` 实际读取 T15 和 T16，并在当时根据 `Available As Of` 字段复核 T2 的修订。后续另一审查者发现页面底部还有标 FPS00 的 `Version` 字段，已由独立开发者复读；详见后续记录。T15 的 2021 Latest 页面可支持该授权检查概念，但不能推断特定服务角色；T16 页面为 ECC 背景的 SAP Support Content，不证明 S/4HANA 2021 的特定采购 BAPI 事务。T15/T16 的这次有限表述已完成独立来源复核，**ABAP-04 的目标版本事务依据仍未解决**；这不是正式文章审核。
 
 
 ## 追加技术来源（研究记录）
