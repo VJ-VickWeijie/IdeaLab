@@ -72,5 +72,5 @@
 
 以上均为阶段研究，不是正文审查；未连接 SAP，M3 未通过，M4 未授权。
 
-- `/root/audit_design_review` 复核 `6ac8c0b` 的 FI-04 阅读归属及迁移范围正确，CDS 补查和主台账的两页阅读归属亦正确；指出 `#CHECK` 与 `#NOT_ALLOWED` 警告时机须限定在开发者激活相应 entity/role。Work 已修正文案，待原审查者复核。
+- `/root/audit_design_review` 复核 `6ac8c0b` 的 FI-04 阅读归属及迁移范围正确，CDS 补查和主台账的两页阅读归属亦正确；指出 `#CHECK` 与 `#NOT_ALLOWED` 警告时机须限定在开发者激活相应 entity/role。Work 已修正文案，原审查者复读 `6b8e5a` 后确认；Work 依其精度建议将“未定义”改为“不存在”。
 - `/root/reader_plan` 和 `/root/consultant_plan` 分别复核 `6ac8c0b` 的 MM-09 与付款末端记录，确认各自实际读取范围、特定场景与未实测边界；其余函数、完整流程与系统缺口仍开放。
