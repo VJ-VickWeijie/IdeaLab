@@ -4,7 +4,7 @@
 
 ## 逐篇判定与缺口
 
-99 个批准文章 ID 与路径以[统一清单](manifest-v0.3-proposal.md)为分母；[物流/流程](evidence-logistics-m3.md)、[财务/课程](evidence-finance-m3.md)、[技术/AI](evidence-tech-m3.md)和[术语表](evidence-common-m3.md)是逐项来源工作台账。已登记 99 项仅表示每项有记录，不代表直接证据合格。以下是本轮从台账中明确列出的 5 个重点项：另有 16 项技术文章完成[来源贴合度初步复核](technical-source-fit-review-m3.md)，其中 12 项有直接但有限的支持、4 项只有邻近概述；该分类不等于 M3 通过。此外 [MM/QM 18 项来源复核](review-evidence-mm-qm-m3.md)列出每项证据与缺口，其中 MM-09 与上述五项重叠；合计覆盖了 5+16+17 = 38 个不同 ID，**另外 61 项尚未按本控制计划完成逐项贴合度归类**。这些归类不等于 M3 通过，也不表示其他来源都未读。
+99 个批准文章 ID 与路径以[统一清单](manifest-v0.3-proposal.md)为分母；[物流/流程](evidence-logistics-m3.md)、[财务/课程](evidence-finance-m3.md)、[技术/AI](evidence-tech-m3.md)和[术语表](evidence-common-m3.md)是逐项来源工作台账。已登记 99 项仅表示每项有记录，不代表直接证据合格。已就 **99/99 个不同 ID** 建立初步来源贴合度或重点缺口记录，并与批准清单核对：其中 [技术 16 项](technical-source-fit-review-m3.md)、[MM/QM 18 项](review-evidence-mm-qm-m3.md)、[SD/PP 16 项](sd-pp-source-fit-m3.md)、[FI/CO/课程 26 项](finance-source-fit-review-m3.md)、[AI 8 项](ai-source-fit-m3.md)、[流程 11 项](process-source-fit-m3.md)及[术语表](common-source-fit-m3.md)分别列出相关支持与缺口；ABAP-02、ABAP-04、PROCESS-01 列入下方重点。这是计划级贴合度登记，部分判断基于先前台账而非本轮重读外部原文，也并非逐篇证据充分或 M3 出口判定。**来源适配、版本和独立复核仍有缺口，M3 尚未通过。** 以下五项列为优先阻碍，其中 FI-07 和 MM-09 也分别出现在财务及物流报告，不重复计数：
 
 | ID | 已读取的有限依据及版本 | 未闭合的问题 | 工作负责人及下一步 | 判定 |
 | --- | --- | --- | --- | --- |

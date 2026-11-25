@@ -32,7 +32,7 @@
 | QM-02 | [F PDF 94 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=94)：11.0/SPS10 解释检验批代表检验请求。 | 检验类型、检验来源、创建条件及激活/跳批规则待查。 |
 | QM-03 | [F PDF 93 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=93) §2.8.5.1：实读质量规划与检验特性/规格概述。 | 检验计划选择、抽样、有效期及各字段需专门资料。 |
 | QM-04 | [F PDF 94 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=94)：11.0/SPS10 描述结果记录及使用决策。 | 不足以证明 UD 的库存过账是自动还是手动、冲销或所有系统的条件。 |
-| QM-05 | 11.0/SPS10 FSD 的 Basic Warehouse Management/QM 文本确实涉及 EWM origin 17 及 partial usage decision。**原表标 PDF 第 188 页，实际这些内容位于 PDF 第 189 页**：[正确页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=189)。 | Work 已修正源码引用页码，待原审查者复核；该 EWM 场景不能直接代表一般 IM 质量库存、财务、工厂设置或 2021 初始版。 |
+| QM-05 | 11.0/SPS10 FSD 的 Basic Warehouse Management/QM 文本确实涉及 EWM origin 17 及 partial usage decision。**原表标 PDF 第 188 页，实际这些内容位于 PDF 第 189 页**：[正确页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=189)。 | Work 已修正源码引用页码；原审查者已在提交 b461828 复读，限该页码问题关闭；该 EWM 场景不能直接代表一般 IM 质量库存、财务、工厂设置或 2021 初始版。 |
 | QM-06 | [S PDF 678 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=678) §31.2：实读冗余事务替代，如 QE51/QE51N 的文档列示。 | 是 2021 初始/FPS01/FPS02 的特定转换/导航说明，不等于所有系统用户有权限或全索引已验证。 |
 | QM-07 | [N §4.3.8 印刷页 126–127](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.001/en-US/WN_OP2021_FPS01_EN.pdf)：搜索服务 PDF 章节正文明确 FPS01 结果比较符及特定配置节点。 | 仅该变更及指定 FPS；其他检验类型、工厂设置、UD 自动库存过账和只读权限仍待核。 |
 | QM-08 | 同 N §4.3.8：实读的 FPS01 文段指明结果属性 CDS `I_INSPECTIONRESULTATTRIBUTE`。 | 只支持该 CDS 特定语义和比较符；不能证明检验批/特性/结果的表键、关联基数、发布日期/发布状态或初始版支持。 |
@@ -42,3 +42,8 @@
 1. F、S、N 均指向 SAP 2021 产品文档，但分别为 SPS10 动态文档、初始/FPS01/FPS02 简化清单和 FPS01 版本说明；各文是部分事实证据，不等于 18 篇文章的完整 2021 来源门槛通过。
 2. QM-05 存在具体 PDF 物理页码错误，已反馈协调者修正；未直接修改其 GitHub 台账。SPS10 的 `latest` 未固定、目标系统 FPS/授权和生产行为均未知。
 3. 采购组织/单位 2021 页面本轮无法重读；记录此前人员声称读取，并保留再次独立复核的限制，不将其描述为本轮复读通过。
+
+
+## 页码修订复核
+
+`/root/consultant_m3_review` 读取提交 `b46182890f73990f019b2db391ed0c0022ca9ae4` 的 QM-05 行并重新阅读 SAP PDF 第 189 页，确认页码、EWM 限定及版本风险；页码问题关闭，其他事实、FPS、权限和系统测试不因此通过。

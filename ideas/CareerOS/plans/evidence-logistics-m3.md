@@ -25,8 +25,8 @@
 | SD-03 | [F：2021 SPS10；11.0，PDF 第 122 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=122)；§2.10.2.6 Sales Order Management and Processing | 销售单据类型及确认数量日期的功能 | 具体部分交货、取消与权限 |
 | SD-04 | [F：2021 SPS10；11.0，PDF 第 126 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=126)；§2.10.2.8 Sales Billing | 开票单据可传递 FI | 并非所有开票的收入确认、税和收款逻辑 |
 | SD-05 | [S：2021 初版/FPS01/FPS02；1.25，PDF 第 951 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=951)；DIMP 场景快速录入兼容变更 | 特定 DIMP 快速录入的变更段提到 VA03 | 不能据此推断所有系统 VA03 的授权及完整作用 |
-| SD-06 | [F：2021 SPS10；11.0，PDF 第 117 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=117)；§2.10.2.2 Price Management | 价格管理包含定价流程配置 | 准确 IMG 节点、业务分支和访问权限 |
-| SD-07 | [S：2021 初版/FPS01/FPS02；1.25，PDF 第 789 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=789)；SD data model simplifications | 状态字段由 VBUK/VBUP 迁移到相关 SD 对象 | 完整单据流字段、主键、接口及关联基数 |
+| SD-06 | [F：2021 SPS10；11.0，PDF 第 118 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=118)；§2.10.2.2 Price Management | 价格管理包含定价流程配置 | 准确 IMG 节点、业务分支和访问权限 |
+| SD-07 | [S：2021 初版/FPS01/FPS02；1.25，PDF 第 789 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=789)；SD data model simplifications | 特定转换场景涉及 VBUK/VBUP 的状态和追加字段迁移；不推断所有状态字段均同样迁移 | 完整单据流字段、主键、接口及关联基数 |
 | PP-01 | [F：2021 SPS10；11.0，PDF 第 70 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=70)；§2.8.3.1 Material Requirements Planning | 生产/客户需求与供应计划的范围 | 组织结构及所有制造模式的业务边界 |
 | PP-02 | [F：2021 SPS10；11.0，PDF 第 67 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=67)；§2.8.2.1 Production BOM Management | 生产 BOM 是产品组件的结构化清单 | 有效期、替代项选择和具体表/字段 |
 | PP-03 | [F：2021 SPS10；11.0，PDF 第 68 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=68)；§2.8.2.2 Master Recipe/Routing Management | 工艺路线/配方作为生产过程主数据的总体作用 | 工作中心完整定义、工序选择和成本/产能参数 |
@@ -51,7 +51,7 @@
 | PROCESS-05 | [F：2021 SPS10；11.0，PDF 第 76 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=76)；§2.8.4.2 Production Execution | 生产执行包括备料、领料及进度记录 | 计划→生产→成本结算的完整流程及价值分录 |
 | PROCESS-06 | [F：2021 SPS10；11.0，PDF 第 94 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=94)；§2.8.5.2 Quality Inspection | 检验批、结果记录及使用决策的概念 | 采购触发配置、自动/手工库存过账、部分量和冲销 |
 | PROCESS-07 | [F：2021 SPS10；11.0，PDF 第 39 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=39)；§2.6.2.2 Financial Close 相关章节 | 财务结账功能及报表的总体范围 | 企业实际关账顺序、管理会计和分录 |
-| PROCESS-08 | [F：2021 SPS10；11.0，PDF 第 90 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=90)；§2.8.4.2 内 Subcontracting Cockpit | 特定生产委外协作可管理采购订单、组件及交货 | 所有委外采购变体的货权/库存/会计和付款 |
+| PROCESS-08 | [F：2021 SPS10；11.0，PDF 第 90 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=90)；§2.8.4.7.1 Basic Subcontracting：Subcontracting Cockpit | 特定生产委外协作可管理采购订单、组件及交货 | 所有委外采购变体的货权/库存/会计和付款 |
 | PROCESS-09 | [SAP Consignment，S/4HANA 2021 初始版](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/91b21005dded4984bcccf4a69ae1300c/4c13b953495bb44ce10000000a174cb4.html?version=2021.000)；协调者及独立开发者均读取 `2021 (Oct 2021)` | 直接说明该标准寄售业务的库存、提取、估价和周期结算概念 | 具体合同货权、税、公司会计分录及所有变体仍须单独核实；该来源不替代法律或业务合同；该来源有限描述经独立复核 |
 | PROCESS-10 | [F：2021 SPS10；11.0，PDF 第 169 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=169)；§2.13.1.1 Goods Movement | 存在供应商退货及货物移动功能 | 退货与收货冲销、后续已开票时的凭证与资金 |
 | PROCESS-11 | [F：2021 SPS10；11.0，PDF 第 164 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=164)；§2.12.5.1 Invoice Processing | 发票校验涉及内容、价格及会计 | 差异容差、自动冻结与付款释放各触发条件 |
@@ -78,4 +78,9 @@
 
 ## MM / QM 逐项来源复核
 
-`/root/consultant_m3_review` 对 [MM 与 QM 18 项来源](review-evidence-mm-qm-m3.md)进行复核，指出 QM-05 当前 SPS10 的引用应为 PDF 物理页 189 而非 188。Work 已修正上述台账链接与页码；原审查者的修订复核尚待完成。FSD latest 未固定版本，MM-01/MM-07 本轮审查者未能独立重开动态正文，不可冒称本轮独立读取。以上为资料计划复核，不代表文章通过或 SAP 实测。
+`/root/consultant_m3_review` 对 [MM 与 QM 18 项来源](review-evidence-mm-qm-m3.md)进行复核，指出 QM-05 当前 SPS10 的引用应为 PDF 物理页 189 而非 188。Work 已修正上述台账链接与页码；原审查者已复读提交 `b46182890f73990f019b2db391ed0c0022ca9ae4` 与 SAP 第 189 页，页码问题限此关闭。FSD latest 未固定版本，MM-01/MM-07 本轮审查者未能独立重开动态正文，不可冒称本轮独立读取。以上为资料计划复核，不代表文章通过或 SAP 实测。
+
+
+## SD / PP 与流程章节定位复核
+
+`/root/consultant_plan` 逐项核查 SD/PP 来源，指出 SD-06 对应 SPS10 PDF 的配置功能位于第118页而不是117页，并提示 SD-07 只涉及特定转换字段；`/root/developer_m3_review` 指出 PROCESS-08 的委外小节应为 §2.8.4.7.1。Work 已修正这三处，待各原审查者复核。详见 [SD/PP 来源贴合度](sd-pp-source-fit-m3.md) 和 [流程来源贴合度](process-source-fit-m3.md)。上述文献是局部支持，不能代替完整流程、权限或目标系统实测。
