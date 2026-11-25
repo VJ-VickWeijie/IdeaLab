@@ -16,7 +16,7 @@
 | MM-04 | [F：2021 SPS10；11.0，PDF 第 157 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=157)；§2.12.4.2 Requirements Processing | 采购申请及其处理功能 | PR→PO 各变体、审批配置与实际事务 |
 | MM-05 | [F：2021 SPS10；11.0，PDF 第 169 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=169)；§2.13.1.1 Goods Movement | 货物移动、收发货与库位/库存类型变化概述 | 具体移动类型、特殊库存和价值影响 |
 | MM-06 | [F：2021 SPS10；11.0，PDF 第 169 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=169)；§2.13.1.1 Goods Movement | 列举货物发出、货物收取和移动 | 冲销与退货在单据及账务上的具体差异 |
-| MM-07 | [F：2021 SPS10；11.0，PDF 第 452 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=452)；Central Purchase Contract 指定条件功能 | 特定中央采购合同的条件条目涉及净价和价格单位 | 非普通 PO 订单价格单位/换算专题，直接证据未解决 |
+| MM-07 | [SAP Units of Measure in Purchase Orders，2021 初始版](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/af7eb65334e6b54ce10000000a174cb4.html?version=2021.000)；协调者 2026-11-25 通过 SAP Help 的版本选择器选择 `2021 (Oct 2021)` 并读取正文 | 可作为普通采购订单中的订单单位、订单价格单位、换算以及采购信息记录可供默认值的直接来源；只支持文档明确的使用场景 | 未证明 BAPI 特定字段覆盖根因、所有配置优先级、后续 FPS 差异或当前系统行为；协调者读取结果尚待独立复核 |
 | MM-08 | [S：2021 初版/FPS01/FPS02；1.25，PDF 第 151 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=151)；Material/Article Master 的 MRP 字段变更 | 对 MM01/MM02/MM03 特定屏幕字段改变有说明 | 不证明这些事务全面可用、显示/写入权限或其他采购 T-Code |
 | MM-09 | [S：2021 初版/FPS01/FPS02；1.25，PDF 第 775 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=775)；S/4HANA-based Output Management 配置迁移说明 | 特定采购订单输出管理配置路径的版本变化 | 非本条计划核心的凭证类型、移动类型和科目决定，直接证据未解决 |
 | MM-10 | [S：2021 初版/FPS01/FPS02；1.25，PDF 第 478 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=478)；MM-IM 数据模型简化 | 比较 ERP 与 S/4HANA 库存管理数据模型 | PR/PO 完整模型、精确键、基数和发布 API |
@@ -60,7 +60,7 @@
 ## 留存与未解决
 
 - 以上 F 的哈希只标识曾读取的字节；没有保存/发布原 PDF，不代表用户能经 latest 重现相同字节。后续应寻 SAP 官方固定版本或在许可范围内保留可复核快照及出处；若重读版本不同，重新定位正文、核验全部相关主张。
-- **MM-01、MM-07、MM-09、SD-01、QM-07、QM-08、PROCESS-04、PROCESS-09** 等的核心定义、配置或完整流程直接来源仍缺；本表不以相关但范围不足的概述冒充完整文章依据。其余条目也尚有大量具体场景、字段、配置、权限和账务内容未验证，不能由部分取证推断整篇通过。
+- **MM-01、MM-09、SD-01、QM-07、QM-08、PROCESS-04、PROCESS-09** 等的核心定义、配置或完整流程直接来源仍缺；MM-07 已补入采购单位的直接来源，但 BAPI 等关键场景和独立复核仍缺。本表不以相关但范围不足的概述冒充完整文章依据。其余条目也尚有大量具体场景、字段、配置、权限和账务内容未验证，不能由部分取证推断整篇通过。
 - 对 SPS10 之后目标系统补丁是否一致、用户环境权限以及所有实机运行行为没有验证；版本有差异时要另行核对。所有 46 项正文和三角色正式有效审核轮次均为 0。
 
 ## 独立开发者复核与修订（2026-11-25）
