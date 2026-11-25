@@ -146,3 +146,10 @@
 - /root/consultant_plan 找到 SAP S/4HANA 2021.000 固定页 [Example: Material with MAP with Stock Coverage](../../plans/finance-fi07-direct-2021.md)；Work 随后独立在浏览器复读版本选择器、正文和图示。
 - 案例描述 PO 100 件、$2.00；先票 50 件@$2.20，再收货 80 件，随后再票 50 件@$2.20。图示列示 GR/IR、供应商和库存的加减值及 MAP 变化，但没有借/贷标题；无科目分配和税务前提也未明确。正文称最后发票改变库存数量，图中数量前后均为 180，保留歧义。
 - 该案例只支持有限 MAP 价格/数量差异，不解决普通库存采购借贷方向或 FI-07 / PROCESS-01 完整门槛；没有 SAP 实机验证，不计正式文章审核轮次。
+
+
+## 2026-11-26｜WRX 收货分录的邻近版本对照
+
+- /root/consultant_plan 直接读取 SAP Help 的 WRX_GR/IR Clearing Account 页面，选择器显示 2025-FPS1，路径属于 SAP_S4HANA_BEST_PRACTICES / YCOA；可见版本列表没有 2021，不能推断其他 2021 来源不存在或该资料专属部署模式。
+- 页面明确写出标准 PO 无科目分配收货的库存借方、GR/IR 贷方，并给 1 件、标准价 EUR 3、PO 净价 EUR 10 的借库存 EUR 3、借价差损失 EUR 7、贷 GR/IR EUR 10 示例。它是清晰的邻近对照，但只涉及收货、不含库存发票分录，且不是 S/4HANA 2021 on-prem 固定证据。
+- FI-07 与 PROCESS-01 的 2021 普通库存发票/全流程借贷缺口保持开放。未连接 SAP、未实测，不计正式文章审核轮次。

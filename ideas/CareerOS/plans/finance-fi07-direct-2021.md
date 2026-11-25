@@ -81,3 +81,12 @@ root/consultant_plan 独立在 SAP Help 浏览器复读本节的六个页面正�
 边界：本页支持这个特定的先票—部分收货—再票、MAP 有库存覆盖、存在价格/数量差异的价值流转示例。图示用账户加减号，没有明确标为借方/贷方；不能将符号直接翻译成借贷方向。本页未明确写出无科目分配、税务前提或通用配置，不能代替标准普通库存无税采购的通用分录。另有一处正文称第二次发票会改变库存数量，但同一图示的库存数量从第二次发票前到后均为 180；保留这项来源内部不一致，不据正文或图示单独推广。普通库存采购借贷、税、自动科目和配置缺口仍未闭合。
 
 来源读取归属：/root/consultant_plan 首先检索并实读此页；Work 随后独立用浏览器复读固定版选择器、正文和图示。两次均未访问 SAP 系统或进行过账实测；本段是来源复核，不是第二角色对报告的正式审核，不计正式文章审核轮次。
+
+
+## 邻近对照：SAP Best Practices YCOA 的 WRX 示例（2025-FPS1，不是 2021 证据）
+
+来源：[WRX_GR/IR Clearing Account](https://help.sap.com/docs/s4hana-best-practices/ycoa-1f2ae10b96f740759d66e695f953aa8f/wrx-gr-ir-clearing-account?version=2025-FPS1)。/root/consultant_plan 直接在 SAP Help 浏览器读取；当前跳转地址的版本选择器显示 2025-FPS1，路径面包屑为 SAP_S4HANA_BEST_PRACTICES / YCOA / Account Determination / Material Management。其展开版本列表列有 2608、2602、2025-FPS1、2025-FPS0、2023-FPS02，没有 2021；这不证明其他 SAP 官方 2021 来源不存在，也不据此断定该 Best Practices 仅适用于某一部署版。
+
+该页面明确说明标准物料采购订单不得有科目分配，收货时借记库存、贷记 GR/IR。限定示例为 1 件，标准价 EUR 3、PO 净价 EUR 10：借库存 EUR 3（BSX）、借价格差异损失 EUR 7（PRD）、贷 GR/IR EUR 10（WRX）。这是有明确借贷栏的收货示例，可作解释机制的邻近对照。
+
+范围限制：版本为 2025-FPS1，不是 S/4HANA 2021 on-prem 固定版资料；它未提供普通库存发票过账分录，未说明税务条件，也未证明目标系统当前配置。因此不能用于关闭 FI-07 / PROCESS-01 的 2021 版本门槛或替代前述 2021 MAP 页面。/root/consultant_plan 实读本页，本 Work 在当前搜索服务可见索引但打开正文返回空，故保留读取归属，不冒称 Work 已复读原文。本次为 M3 来源研究，不计正式文章审核轮次。
