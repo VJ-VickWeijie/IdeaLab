@@ -47,3 +47,8 @@
 ## 普通库存物料发票补查（2026-11-25）
 
 `/root/consultant_plan` 通过浏览器实读 [Posting Example Warehouse Concept 4](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/d56edf94353d4beeabb7f9b90adf081a/eeedcc53a8b77214e10000000a174cb4.html?version=2021.000)，选择器为 2021 (Oct 2021)。该页为 Funds Management 与库存物料采购集成的特定仓库场景，涉及移动平均价、FM 更新设置、税及差额等前提；发票行出现 GR/IR 与供应商，但截图中借贷表头相对数据列错位，且页面没有金额。因此不能只据此将这两项明确判为借方或贷方，也不能推广到所有企业的普通库存采购。SAP Learning 的相关方向未固定 2021；印度运输服务税案例已有明确方向，但不是普通库存采购。当前仍未找到同时满足目标版本、普通库存采购及明确借贷方向的官方正文，保持待核。未连接 SAP 或进行文章审核。
+
+
+## GR/IR T 型账户的补充证据
+
+`/root/consultant_plan` 浏览器实读 [2021 GR/IR T 型账户](fi07-grir-taccount-2021.md)，`/root/audit_design_review` 独立复读正文及图：收货 2,000、部分发票 1,000 欧元的左右位置有明确图示，但图中未逐项标借贷，按左借右贷是会计惯例解释。原例未说明 PO 行无科目分配、税及全部条件；期末调整不是付款或实际清账。普通库存发票的完整目标版文字证据仍待核。

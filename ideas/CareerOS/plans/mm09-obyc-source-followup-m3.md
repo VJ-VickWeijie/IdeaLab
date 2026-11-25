@@ -38,3 +38,14 @@ SAP 官方公开材料现在可分别支持以下有限结论：SAP Learning 的
 ## 独立复核
 
 `/root/reader_plan` 独立实读两篇 SAP Learning 正文和 KBA 2615628、2782220 的公开预览，确认上述场景和产品范围。KBA 2782220 仅涉及已有成本中心等科目分配对象的 PO，不能等同无科目分配库存采购；Learning 未固定 2021/FPS，KBA Product 的 all versions 也不是固定 FPS 的完整方案。此次未读 KBA 登录后的全文，未实测，不计文章审核。
+
+
+## 后续检索（2026-11-25，未解除门禁）
+
+再次检索 SAP 官方 on-prem 帮助和 2021 固定文档后，尚未独立读取同时固定 2021 on-prem、覆盖普通估价库存采购收货的 BSX/WRX 和科目确定因素的正文。新增线索如下，均不得按目标版本直接证据统计：
+
+1. [Actual Costs](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/5e23dc8fe9be4fd496f8ab556667ea05/e7f14152fe4eaa1ae10000000a445394-2178.html) 为 S/4HANA on-prem CO 帮助页，搜索索引所读标记 **2023 Latest**，其 Goods Receipts 段区分外购收货和生产订单收货，另在 Production Accounting 小节说明 BSX 与库存账户、GBB/AUF 等生产场景配置。**2023 内容不可倒推 2021**，生产订单的 GBB/AUF 不是普通采购收货 WRX。尝试带 `version=2021.000` 的链接时网页工具报不可访问，未实读 2021 正文或版本选择器；已交协调者尝试浏览器选择版本。
+2. [What's New in SAP S/4HANA 2021 初版 PDF](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.000/en-US/WN_OP2021_EN.pdf) 的搜索索引中，§3.6.1.3、印刷页 133–134 提到 Automatic Account Determination app 配置 G/L assignment，并针对 FI-GL 列新交易键 BUL/BUU。直接 `open` 因文件过大失败，**仅索引，不是本次实读原文**；此节没有说明 BSX/WRX 或普通采购条件，也不证明 Fiori app 与 OBYC 的配置对象等价。
+3. [Valuation with Moving Average Price](https://help.sap.com/docs/PRODUCT_ID/7f47a6d9441c46ac86c96fd27f6015f0/bbd9b6ce0be14516ad7868da0982024a.html) 的搜索索引给出外购、移动平均价格、单层视角下的 100 件收货示例：BSX 借 240 欧元，WRX 贷 240 欧元。直接打开无可读正文，URL 含未解析的 `PRODUCT_ID`，版本也未核实；仅作为线索，不能计入 2021 依据、不能推广到其他价格控制或所有价格差异。
+
+已阅固定 2021 的采购收货和发票价值举例，另见 [P2P 估价补查](p2p-valuation-direct-2021.md)；其普通收货前提、先票后货及价格差异有明确范围，但也**不证明 BSX/WRX 或 OBYC 科目确定条件**。未连接 SAP 系统，也未执行或建议生产配置。

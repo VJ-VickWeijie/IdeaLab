@@ -93,3 +93,11 @@
 - `/root/reader_plan` 复读 `82410979` 的 CO-03 记录，确认独立审查仅覆盖两篇未固定 2021 的 Learning 课程，不覆盖 Central Finance PDF；该记录问题限此关闭。
 
 以上为来源规划资料复核，不计正式文章轮次。
+
+
+## GR/IR 图与科目确定的后续补查
+
+- `/root/consultant_plan` 浏览器读取 SAP 2021 Oct [GR/IR T 型账户](../../plans/fi07-grir-taccount-2021.md)，`/root/audit_design_review` 独立复读页面与图：收货 2,000、部分发票 1,000 欧元的账户左右位置可见；将其解释为借贷属于会计惯例，不是图示逐项文字标注。原例未明确普通库存 PO 无科目分配、税费等前提，期末调整/冲回不是付款或实际清账。
+- `/root/consultant_m3_review` 追加 MM-09 [检索记录](../../plans/mm09-obyc-source-followup-m3.md)，新候选为 2023 索引、无法读取的 2021 PDF 或未解析版本的索引，均未冒称目标版直接证据。普通估价采购 BSX/WRX 完整固定版证据仍未闭合。
+
+此轮是阶段资料研究，不计正式文章审核；未连接 SAP，M3 未通过，M4 未授权。
