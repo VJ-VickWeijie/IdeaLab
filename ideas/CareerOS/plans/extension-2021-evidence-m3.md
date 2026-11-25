@@ -48,3 +48,18 @@
 ## 独立复核
 
 `/root/reader_plan` 尝试打开前两页但正文为空，未冒称读到；之后 `/root/audit_design_review` 使用浏览器独立读取第1、2页，确认初版与 FPS01 版本、两个 app 和特定 Maintenance Plan API 例子。不能从 batch 推断原子性、幂等或其他 API 合同；审查者未核对第3、4项升级指南或 FAQ。不计正式文章审核。
+
+
+## 5. 2021 初版：BAPI_PO_CREATE1 采购订单自定义字段支持
+
+来源：[Extensibility Support for Purchase Orders](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/0fbc805785a0403d9f56beacf89c0ef4.html?version=2021.000)，SAP Help Portal，What's New in SAP S/4HANA 2021。
+
+读取方式：Work 通过 SAP Help 的只读页面接口读取固定的 2021.000 版本；版本名为 **2021 (Oct 2021)**，buildNo 351。返回正文 HTML 字符串的 SHA-256 为 972a6743523a8a99a4848ecb507d292e62970af03576d302a0b1ee2b43a05c5c；这是此次接口返回内容的摘要，不是 SAP 签名或永久档案。
+
+支持范围：页面说明本版增强了采购订单创建 BAPI_PO_CREATE1，并支持自定义字段；列出的 scope items 是 J45（Procurement of Direct Materials）、22Z（Procurement of Services）、BNX（Consumable Purchasing）、J13（Service and Material Procurement - Project-Based Services），组件为 MM-PUR 与 MM-FIO-PUR-PO。
+
+限制：这只支持“2021 初版在页面所列范围内提供采购订单 BAPI 自定义字段扩展支持”这一主张。页面没有解释字段结构映射、字段控制、实现代码、权限或发布合同，也没有说明 BAPI 的 COMMIT/ROLLBACK、更新任务或消息语义。不能由此推断任意自定义字段或任意采购单创建路径都适用；ABAP-04 的特定事务语义缺口仍开放。
+
+### 独立文献复核（2026-11-26，Asia/Shanghai）
+
+/root/consultant_plan 独立通过浏览器打开并阅读该 SAP Help 页面，版本选择器实际显示 2021 (Oct 2021)，并核对了页面正文、scope items 与组件范围；确认本节描述忠实且对事务边界的限制合理。复核者未检查 Work 的 pagecontent buildNo 或重新计算 HTML 摘要，未调用 BAPI、未访问 SAP 系统。本次仅属 M3 来源交叉核验，不计正式文章审核轮次。
