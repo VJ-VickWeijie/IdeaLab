@@ -36,3 +36,9 @@
 审查者另读 [SAP Learning：Purchasing (MM Integration)](https://learning.sap.com/courses/configuring-additional-settings-in-financial-accounting-in-sap-s-4hana/understanding-purchasing-mm-integration)，其中描述常见收货和发票的借贷方向；但该页面没有固定 2021/FPS，不能单独证明目标版本。另一个 2021 消耗物料示例的借贷表头与内容列在所见页面中存在对齐歧义，不作为确定方向的证据；库存采购发票的明确目标版借贷方向仍需进一步核实。先前委派 `/root/reader_m3_review` 独立复核时遇到用量限制而中断；随后 `/root/consultant_plan` 通过浏览器独立实读并确认版本、场景与借贷方向，指出 nonexcisable 应译为“不涉及消费税”，不能暗示不涉及所有税种。Work 已修正该表述，原审查者复读确认，译法问题限此关闭。均非 SAP 实机测试或文章审核。
 
 `/root/consultant_plan` 后续独立复读本文第三页发票资料，并实际读取采购订单收货示例；适用前提、部分收货及价格控制见 [P2P估价补查](p2p-valuation-direct-2021.md)。本文第四页前期过账仍未由该审查上下文独立复核。
+
+## 印度运输服务发票：目标版本限定案例
+
+`/root/consultant_plan` 浏览器实读 [SAP 2021 GTA Service Tax](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/240fcdcc71c640ea9aa9691500b34889/cf0d6d6be65444c4b4f37811b6e858bf.html?version=2021.000)，选择器显示 2021 (Oct 2021)，并查看截图核对借贷表格。原文为印度货物运输代理服务的特定税务示例，所列服务 15,000 INR、税率 12%，表格对应借 GR/IR 15,000、借服务税应收 1,800，贷供应商 15,000、贷服务税应付 1,800；两侧各 16,800。页面列有服务税与供应商预提税设置等条件。
+
+该例不能代表普通库存物料无税发票、其他税区或当前印度税法，也不证明具体企业实际清账、付款或系统配置；库存采购发票的目标版直接借贷例子仍待核实。`/root/audit_design_review` 已通过独立浏览器实读页面及截图，确认版本、四行借贷、税额、合计及特定条件；未连接 SAP，也不计正式文章审核。
