@@ -95,3 +95,7 @@ PP-05《生产订单与确认》已建立证据受限文章，状态 drafting；
 - 目标版依据：FSD v9.0/SP08 快照支持成本中心捕捉成本及期间 actual/plan；固定版 Migration Objects 2021.000 支持 controlling area 内成本中心定义和迁移范围中的 company-code data/validity；Central Finance 2021.001 仅在映射/初始加载语境支持 S/4HANA 成本要素与 G/L account 的关系。
 - 未闭合：成本中心字段级有效期、组织配置约束、成本要素类别和日常分配/自动规则、技术字段/表/API/CDS/权限；没有推广迁移场景到一般过账。FI-07 普通库存采购借贷、税务与自动科目规则未扩大或关闭。SAP 未连接，无实机验证。
 - 记录见 ideas/CareerOS/knowledge/CO/02-functions/cost-center-elements.md、ideas/CareerOS/reviews/work/2026-11-27-m4-co02-three-role-review.md、evidence-finance-m3.md。批次 A 仍 **8/50 reviewed、0/50 owner accepted**；全库正式接受 **3/99**。工作线 5 下一项为 CO-03《内部订单和费用归集》，开始前仅读取该篇准入及其来源登记。
+
+## 工作线 2 进度追记（2026-11-27，PP-06）
+
+PP-06《生产发料、收货与成本》正文按 M3 分流的“限缩可写”范围提交，状态 `drafting`。普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各完成 5 个同一 Work 上下文的模拟闭环，共 15；记录披露不是独立审查，也不计入 8/50 role-reviewed。正文范围以实际读取的 SAP S/4HANA 2021 SPS10 FSD 动态快照（Document Version 11.0，2026-07-22）支持的生产执行、库存增减、物料凭证、高层成本对象和 Kanban 限定例子为限；另引用固定版 2021.000 BJ5 订单对象页的已记录货物移动显示说明。估价金额、退料/冲销条件、差异/WIP/结算计算、FI/CO 凭证与科目、数据模型/API、权限、EWM/MES 仍待目标版证据；M3 关联 CO-04 正文当前分支不存在。未连接 SAP、未实测。工作线 2 下一篇为 SD-07；批次 A 与全库正式统计不变（8/50 reviewed、0/50 owner accepted、3/99 accepted）。
