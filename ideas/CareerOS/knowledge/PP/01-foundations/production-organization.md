@@ -1,0 +1,81 @@
+# PP-01｜生产业务与组织结构
+
+- 文章 ID：PP-01
+- 状态：drafting
+- 目标版本：SAP S/4HANA 2021 On-Premise
+- 当前稿件范围：记录固定版官方资料能够确认的制造范围标签，并列出生产组织、按库存/按订单及离散/流程制造的核心缺口。
+- 状态原因：现有固定版资料只支持特定制造 Scope Item 名称，不足以解释工厂的生产组织角色、按库存与按订单生产边界，以及离散和流程制造的业务差异。上述概念是本篇的核心学习目标，不能以动态 latest 页面、ECC 资料或常识补成 2021 产品事实。
+- SAP 系统：未连接；没有实机测试。
+
+## 1. 生产业务需要哪些边界
+
+本篇原定帮助学习者回答：
+
+1. 企业为什么要把生产地点和计划/执行责任组织起来？
+2. 工厂（Plant）在生产计划、物料计划和执行中承担什么角色？
+3. 按库存生产（Make-to-Stock）与按订单生产（Make-to-Order）如何区分？
+4. 离散制造（Discrete Manufacturing）与流程制造（Process Manufacturing）在对象和执行方式上有什么不同？
+5. 这些差异如何影响后续 BOM、MRP、生产订单、成本和库存？
+
+目前没有找到足以直接支持以上核心解释的 SAP S/4HANA 2021 On-Premise 固定版来源，因此本文不把通用 ERP 介绍、旧版 SAP ERP 文档或动态最新页面写成目标版本定论。
+
+## 2. 固定版资料当前能证明什么
+
+### 2.1 2021 年初始版中的命名范围
+
+SAP Help 的 SAP S/4HANA 2021（2021.000，Oct 2021）“CDS Views for Production Planning”页面把 BJ5、BJ8 和 J44 列为该生产计划 CDS 视图功能涉及的 Scope Items：
+
+- BJ5：Make-to-Stock Production - Discrete Manufacturing
+- BJ8：Make-to-Stock - Process Manufacturing Based on Production Order
+- J44：Material Requirements Planning
+
+这份材料可支持“2021 产品文档将这些名称用于相应功能范围”的陈述。它不能单独证明工厂组织结构、各 Scope Item 的完整业务流程、按订单生产的具体规则或每个系统实际启用了什么功能。
+
+### 2.2 2021 SPS04 文档中的制造场景名称
+
+SAP S/4HANA 2021 SPS04（2021.004）的 PI Sheet / work instruction HTML5 功能文档，在该功能适用范围中列出离散制造、若干流程制造、按订单流程制造等 Scope Item 名称。
+
+该清单证明的是这项 SPS04 文档功能所列的适用范围。它不是完整制造模式目录，也没有单独解释这些生产模式的组织、计划、库存或会计差异。
+
+## 3. 尚不能作为 2021 事实写入的内容
+
+以下主题在补到固定版直接来源前保持待核：
+
+- Plant 与公司代码、MRP 区域、生产供应区域、存储地点和工作中心之间的组织关系。
+- 哪些组织层级拥有主数据、计划数据或生产责任，以及哪些关系因客户配置而不同。
+- 按库存生产与按订单生产的需求关联、库存分段、计划方式和成本对象差异。
+- 离散制造与流程制造对 BOM/配方、Routing、生产/流程订单和报工确认的完整差异。
+- Scope Item 代码与产品能力、许可证、部署选项、激活状态之间的关系。
+- 由组织或制造模式推导出来的库存估价、FI/CO 分录、订单成本或结算结果。
+
+M3 来源登记引用的 FSD 页面是动态 latest URL。此前复核只确认其高层范围描述，并记录该 URL 的版本快照会变化；它不作为本稿的固定版直接证据。
+
+## 4. 可用于后续补证的记录表
+
+补证时，每个问题都要有单独的固定版来源，不能用某个 Scope Item 名称替代业务定义。
+
+| 待核主张 | 需要的直接资料 | 当前结论 |
+| --- | --- | --- |
+| 工厂在 2021 生产组织中的职责及组织分配 | 固定为 SAP S/4HANA 2021 On-Premise 的组织结构或产品帮助页面 | 未闭合 |
+| Make-to-Stock 与 Make-to-Order 的业务边界 | 2021 目标版流程/功能文档，明确需求、库存、订单与适用前提 | 未闭合 |
+| 离散与流程制造的区别 | 2021 目标版生产帮助，明确主数据对象、生产单据与执行差异 | 未闭合 |
+| 生产组织对 MRP、执行、库存和成本的影响 | 分别覆盖主张的 2021 直接证据；金额/会计结论需单独证据 | 未闭合 |
+| 当前客户系统是否具备某种模式或组织配置 | 目标系统只读核对及其权限/配置证据 | 未验证 |
+
+## 5. 当前可读的官方来源
+
+1. SAP Help Portal，“CDS Views for Production Planning”，SAP S/4HANA 2021（Oct 2021），version 2021.000。该页面列出 BJ5、BJ8、J44 为相关 Scope Items，并介绍该版本新增的 PP CDS views：  
+   https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b39ff179522b435584613620f5f4cdd5.html?locale=en-US&state=PRODUCTION&version=2021.000
+2. SAP Help Portal，“HTML5 Support for Browser-Based Process Management Applications”，SAP S/4HANA 2021 SPS04，version 2021.004。该页面列出此功能对应的多个离散/流程制造 Scope Items：  
+   https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/f8d355117a5f46dd91339076d2af47cc.html?version=2021.004
+3. M3 的 [逐篇范围、版本线索与依赖](../../plans/detail-logistics-v0.3.md)、[来源登记](../../plans/evidence-logistics-m3.md) 和 [SD/PP 来源贴合度复核](../../plans/sd-pp-source-fit-m3.md)记录了原计划范围和证据缺口。它们是规划/来源边界记录，不替代正式文章证据。
+4. SAP Help 的 FSD_OP2021_latest.pdf 为动态 URL；其标题虽然指向 SAP S/4HANA 2021，文件版本会变化。本文不把它当作固定版本 2021 证据：  
+   https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf
+
+## 6. 关联文章
+
+M3 计划把 PP-01 与 MM-01、PROCESS-05 关联。目前这些关联文章不在当前 PR 分支中，因此没有阅读其正文，也没有添加指向不存在文件的链接。生产流程、BOM、Routing、MRP、生产订单和成本主题应待后续相应文章完成后再互链。
+
+## 7. 当前学习建议
+
+在获得固定版资料前，只把 BJ5、BJ8、J44 当作官方文档中的产品范围标签来识别。不要凭这些名称推演客户组织、生产流程或账务结果。学习者可先把自己的疑问填写到第 4 节记录表，暂不将其当成 2021 的已证事实。

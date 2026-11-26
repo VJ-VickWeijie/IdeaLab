@@ -61,3 +61,7 @@ SD-06《销售配置查看》正文已建立，状态 drafting；15 个同上下
 - FI-11 同一上下文角色模拟完成 15 个质询—证据答复—修订—复核闭环（读者 5、配置顾问 5、开发者 5）；未声称独立专家或独立代理审查，因此不计入 role-reviewed 文章数。
 - 未推导 FI-07 普通库存采购借贷、税或自动科目规则；未连接 SAP，无实机验证。来源见 `evidence-finance-m3.md` 的 M4 FI-11 记录和 `reviews/work/2026-11-27-m4-fi11-three-role-review.md`。
 - 批次 A 全局 reviewed/accepted 计数保持不变：8/50、0/50；全库接受 3/99。工作线 5 下一项 CO-01。
+
+## 工作线 2 进度追记（2026-11-27，PP-01）
+
+PP-01《生产业务与组织结构》已建立 drafting 草稿，15 个同上下文角色视角闭环已记录；组织关系与生产模式核心证据未闭合，且没有独立审查，故不增加 reviewed/accepted 计数。工作线 2 当前两篇新增稿（SD-06、PP-01）均 drafting；总体进度以当前计划表和 HANDOFF 进度表为准。下一篇 PP-02。详见 [PP-01 正文](../knowledge/PP/01-foundations/production-organization.md) 和 [审查记录](../reviews/work/2026-11-27-m4-pp01-three-role-review.md)。
