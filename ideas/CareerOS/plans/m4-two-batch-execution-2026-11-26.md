@@ -77,3 +77,8 @@ PP-03《工作中心与工艺路线 Routing》已建立 drafting 草稿，并记
 ## 工作线 5 进度追记（2026-11-27，CO-01）
 
 CO-01《管理会计从零：成本与利润》按批准路径完成限缩范围正文和目标版来源补查。普通读者、资深 SAP 配置顾问、普通 SAP 开发人员视角各5个有效模拟闭环，共15；均在同一Work上下文，非独立审核。核心范围有 SAP S/4HANA 2021 Feature Scope Description v9.0/SP08 与 2021 Simplification List §8.1 支持；具体成本对象分配、分摊/结算、利润分析配置、表/API/权限仍不作通用断言。文章保持 drafting，待独立复核；批次A仍8/50 reviewed、0/50 owner accepted。工作线5下一篇CO-02；该篇完整研究材料尚未读取。
+
+
+## 工作线 2 进度追记（2026-11-27，PP-04）
+
+PP-04《需求、MRP 与计划订单》已按 M3 准入分流建立证据受限正文，状态 drafting；三角色视角各 5 个同上下文模拟闭环，共 15，不是独立审查，不计 reviewed/owner accepted。固定 2021.000 Help 仅支持 J44 的 Material Coverage 应用功能和 Planned Order API 条目；Operations Guide/FSD 实际读取为 2021 SPS10、文档版本 11.0（2026-07-22）。FSD URL 动态，已明确标注为 SPS10 快照，不冒充固定版初始 2021 证据。净需求/可用库存规则、批量算法与参数、库存及供给纳入、提议类型选择、客户配置、完整 API/数据模型及授权仍待核；纸面算术不代表 SAP 结果。批次 A 维持 8/50 reviewed、0/50 owner accepted；全库 owner accepted 3/99；SAP 实机测试 0。下一篇 PP-05，路径 knowledge/PP/02-functions/production-order.md。
