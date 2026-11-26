@@ -301,3 +301,12 @@
 - 批次 A reviewed/owner accepted 计数不变：**8/50、0/50**；全库正式接受 **3/99**。文章、闭环与证据登记分别见 [CO-02 正文](knowledge/CO/02-functions/cost-center-elements.md)、[CO-02 审查](reviews/work/2026-11-27-m4-co02-three-role-review.md)、[财务证据登记](plans/evidence-finance-m3.md)。
 - 本节提交前实时检查 PR #21：状态 open、未合并、目标 main；工作分支 careeros-v04-m4-batch1-20261126；当时工作分支 HEAD 为 488c888bcbaa8c223f60d175126861ffdeafd983。该值是本节提交前的 HEAD。
 - 工作线 5 下一项：CO-03《内部订单和费用归集》，按其准入路径和证据登记开始；本次没有预载 CO-03 完整研究资料。
+
+
+## 工作线 3 进度追记（2026-11-27，QM-04）
+
+- **QM-04《检验结果与使用决策》**已按准入路径建立证据受限文章，路径为 knowledge/QM/02-functions/results-usage-decision.md，状态 drafting。固定版 SAP Help 支持工作清单记录结果/作使用决策；在 planned samples 页面语境中，UD 有授权、批次释放、结果/特性/样本完成和无阻断状态等前提；库存相关批次在存在未过账数量时可于 UD 前、期间或之后过账，并区分特定代码的自动过账与周期作业自动 UD。
+- Work 角色视角记录见 reviews/work/2026-11-27-m4-workline-3-qm04-review.md：普通读者 5、资深 SAP 配置顾问 5、普通 SAP 开发人员 5，共 15 个同上下文模拟闭环；独立角色审查为 0，不代表真人专家或独立代理复核。
+- 文章仍为 drafting。一般结果录入字段/缺陷处理、自动 UD 完整资格、UD 撤销、移动类型、库存估价与 FI/CO 影响、具体角色/权限映射仍未闭合。EWM 不用于推导普通 IM 行为；PROCESS-06 正文在当前分支不存在。SAP 系统未连接、实机测试为 0。
+- QM-04 不改变批次 A **8/50 reviewed、0/50 owner accepted** 或全库正式接受 **3/99**；本次角色模拟不计正式 reviewed。
+- 工作线 3 下一篇：**QM-05《质量库存与采购生产集成》**，路径 knowledge/QM/02-functions/quality-stock-integration.md。按准入“暂缓核心”处理，逐篇读取固定版来源；特别避免用 EWM 例子代替一般 IM 库存与财务证据。
