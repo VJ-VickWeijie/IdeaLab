@@ -4,7 +4,7 @@
 
 ## 结论与证据等级
 
-SAP 官方公开材料现在可分别支持以下有限结论：SAP Learning 的无科目分配估价收货示例直接说明 BSX 库存、WRX GR/IR 和可能的 PRD；但该课程网页未标示 2021/FPS，其版本适用性尚需另证。SAP KBA 公开预览中，2615628、1963553 和 2782220 的产品均写明“S/4HANA all versions”，分别直接涉及 101 收货 BSX 科目确定、OBYC 的 BSX 配置问题以及采购订单收货 WRX 凭证行，但每篇仅支持自身具体上下文；这比未知版本的课程更接近 2021 适用证据，却不是专门固定于 2021 的完整操作说明。**因此普通库存采购收货从条件到 BSX/WRX 科目确定的单一、可公开阅读、明确固定于 S/4HANA 2021 on-prem 的完整原文仍未找到。MM-09 不应据此宣称版本固定证据已闭合。**
+SAP 官方公开材料支持的主张各有边界：SAP Learning 的无科目分配估价收货示例说明 BSX、WRX 和可能的 PRD，但课程未标示 2021/FPS；SAP KBA 公开预览的产品范围为“S/4HANA all versions”，各自只涉及 101 收货 BSX、OBYC 中 BSX 配置问题或特定采购收货 WRX 凭证行。2026-11-26 Work 直接读取了固定 2021 的 [两篇 GR/IR 页面](mm09-2021-grir-direct-m3.md)，支持有限的 GR/IR 科目关系，但关联页对库存科目使用“credit”措辞且未给借贷表；因此该来源不能确定方向，也不涉及 OBYC 交易键/条件。**普通采购收货从具体条件到 BSX/WRX 科目确定的完整、可直接读取的 S/4HANA 2021 on-prem 原文仍未找到；MM-09 保持未闭合。**
 
 ## 逐源记录
 
@@ -49,3 +49,8 @@ SAP 官方公开材料现在可分别支持以下有限结论：SAP Learning 的
 3. [Valuation with Moving Average Price](https://help.sap.com/docs/PRODUCT_ID/7f47a6d9441c46ac86c96fd27f6015f0/bbd9b6ce0be14516ad7868da0982024a.html) 的搜索索引给出外购、移动平均价格、单层视角下的 100 件收货示例：BSX 借 240 欧元，WRX 贷 240 欧元。直接打开无可读正文，URL 含未解析的 `PRODUCT_ID`，版本也未核实；仅作为线索，不能计入 2021 依据、不能推广到其他价格控制或所有价格差异。
 
 已阅固定 2021 的采购收货和发票价值举例，另见 [P2P 估价补查](p2p-valuation-direct-2021.md)；其普通收货前提、先票后货及价格差异有明确范围，但也**不证明 BSX/WRX 或 OBYC 科目确定条件**。未连接 SAP 系统，也未执行或建议生产配置。
+
+
+## 固定 S/4HANA 2021 GR/IR 页直接复读（2026-11-26）
+
+Work 通过 SAP Help 版本选择器直接读取 [Important Accounts for Invoice Verification](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/2d70b6531de6b64ce10000000a174cb4.html?version=2021.000) 与关联的 [Postings at Goods Receipt and Invoice Receipt](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/825eb6531de6b64ce10000000a174cb4.html?version=2021.000)；两个页面的版本选择器均显示 2021 (Oct 2021)。页面支持 GR/IR 的中间科目角色和收货/发票关系，但关联页写“credit the value ... to the stock account”，未列出借贷表。独立审查者 `/root/mm09_independent_2021_read` 直接复读两页，确认版本、有限支持范围及方向歧义。另一位顾问虽未能打开这两页，但独立读取的未固定版本 SAP Learning 示例明确写库存借方、GR/IR 贷方；它仅提示冲突，不是目标版裁决。此矛盾不据此认定 SAP 系统有错，不能擅自反向改写原文。两页均未列 OBYC 的 BSX/WRX 配置因素、估价/移动类型条件或权限；MM-09 仍未闭合，文献复核不计正式文章审核。详见[固定版直读记录](mm09-2021-grir-direct-m3.md)。

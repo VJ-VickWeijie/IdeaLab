@@ -160,3 +160,11 @@
 - `/root/consultant_plan` 在 SAP Help 版本选择器中切换并实读 **Manage Automatic Payments** 的 2021 (Oct 2021) 初版正文；支持排定付款建议或直接排定付款、状态查看、逾期发票识别/付款信息完整性检查，以及运行后创建 payment media 等有限主张。
 - 该页面不证明某张发票一定入选、支付运行必成功、银行接受支付介质、实际扣款或供应商到账。2021 初版“新输出管理”表与 2025 当前版不同，不能将后期功能倒推。
 - 更新 P2P 末端付款证据、PROCESS-01 物流台账及 M3 资源控制表。完整付款配置、逐笔会计凭证、异常和资金链仍未闭合；无 SAP 系统操作，不计正式文章审核轮次。
+
+
+## 2026-11-26｜MM-09 固定版 GR/IR 页面直读
+
+- Work 通过 SAP Help 版本选择器直接读到 [Important Accounts for Invoice Verification](../../plans/mm09-2021-grir-direct-m3.md) 及其关联的 Postings at Goods Receipt and Invoice Receipt 页面；两页均固定显示 2021 (Oct 2021)，关联 URL 为 `version=2021.000`。
+- 页面支持有限的 GR/IR 中间科目与收货/发票关系，但相关收货说明写“credit the value ... to the stock account”，正文无借贷表。独立上下文 `/root/mm09_independent_2021_read` 实读两页并确认版本及歧义；另一顾问读取了未固定 2021 的 Learning 采购收货示例，其借贷文字形成对照而不能替代目标版裁决。
+- 本来源不列 OBYC 的 BSX/WRX 确定因素、移动类型条件、配置权限，普通库存采购完整目标版规则仍缺。冲突不视为 SAP 系统错误、不自行改写；MM-09 与 M3 继续未闭合，M4 未授权。
+- 来源交叉核验不计正式文章审核轮次；无 SAP 实机测试。
