@@ -440,3 +440,11 @@
 - M3 仍未闭合：具体部分交货、订单/交货取消、拒绝与 PGI 冲销规则，及客户系统权限。FSD latest 当次记录为 Version 11.0（2026-07-22）、S/4HANA 2021 SPS10；文章披露动态链接与订单章节页码记录差异，不外推到 2021 初版或其他 FPS/SPS。
 - 批次 A 数字不变：**8/50 reviewed、0/50 owner accepted**；全库正式接受 **3/99**。SD-03 保持 drafting，不计 reviewed/accepted；未连接 SAP 系统。
 - 工作线 1 下一篇：**SD-04《定价、开票与应收集成》**。开始前仅加载 SD-04 自身的 M3 准入和证据资料，并重新读取 PR #21 最新 HEAD。
+
+## 工作线 1 进度追记（2026-11-27，SD-04）
+
+- **SD-04《定价、开票与应收集成》**正文：[knowledge/SD/02-functions/pricing-billing-ar.md](knowledge/SD/02-functions/pricing-billing-ar.md)，按 M3“限缩可写”边界保持 drafting。FSD 限定支持 billing due list、开票单据、冻结/过账/定时释放到会计，以及应收/清账的高层功能；正文不推断定价程序、税、收入确认、具体 AR/FI 凭证关系或实际银行资金。
+- 三角色审查记录：[reviews/work/2026-11-27-m4-sd04-three-role-review.md](reviews/work/2026-11-27-m4-sd04-three-role-review.md)。普通读者、配置顾问、开发人员 AI 角色各 5 个闭环，15/15 均由原角色复核 PASS；不是人类专家签核，也没有 SAP 实机/API/权限测试。
+- M3 来源补查于 2026-11-25 UTC 读取 FSD 动态 latest，报告标记 Version 11.0（2026-07-22）、S/4HANA 2021 SPS10；文章注明动态链接，不外推初版、其他 FPS/SPS 或客户系统。未闭合主题仍包括定价/税/收入确认及 FI 分录、客户系统实际 AR 关联、收款差异、银行资金与权限。
+- 批次 A 数字不变：**8/50 reviewed、0/50 owner accepted**；全库正式接受 **3/99**。SD-04 保持 drafting，不计 reviewed/accepted；未连接 SAP 系统。
+- 工作线 1 下一篇：**SD-05《SD 常用事务码导航》**。开始前只读取 SD-05 自身的 M3 准入和来源资料，并重新核验 PR #21 最新状态。
