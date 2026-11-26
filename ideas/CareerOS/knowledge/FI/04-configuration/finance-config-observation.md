@@ -19,12 +19,14 @@
 
 ### 例一：Automatic Account Determination 应用
 
-SAP《What's New in SAP S/4HANA 2021》§3.6.1.3 说明，可使用 **Automatic Account Determination** 应用配置总账科目分配（G/L account assignments）；文档说可在 App Finder 中按应用名称查找。条目标注范围项 J58、应用组件 FI-FIO-GL-CA，并注明功能自 SAP S/4HANA 2021 起可用。
+SAP《What's New in SAP S/4HANA 2021》§3.6.1.3 说明，可使用 **Automatic Account Determination** 应用配置总账科目分配（G/L account assignments）。用初学者的话说，这是为业务相关处理设置其总账科目归属；这句话不表示 SAP 在该条目中给出了具体业务触发因素或账户映射。文档说可在 App Finder 中按应用名称查找。
+
+条目把 J58 和 FI-FIO-GL-CA 分别列为范围项（scope item）与应用组件（application component）。它们是该公告的范围元数据，不证明具体客户系统已部署该功能、已激活对应范围，或某个公司代码/用户具有相应配置权限。`Available As Of SAP S/4HANA 2021` 是该公告的版本标记；本文没有核实每个 2021 FPS 或客户系统的实际状态。
 
 该发行说明列出的具体变化有明确限制：
 
-- `BUL` 与 `BUU` 是该公告列出的新交易键，适用于 **Prepare Intercompany Transactions** 过程；这不能当作所有过账业务的科目确定规则。
-- `*` 通配符的例子属于总账 **Integrate with HR Postings** 过程中输入客户或供应商账号的情形；不能推广成全系统账号搜索语法。
+- `BUL` 与 `BUU` 是该公告列出的新增交易键（transaction key，不是事务码/T-Code）。原文名称分别为 `Ledger-Specific CoCode Clearing` 与 `CoCode Clearing Between Differing Amts`；名称直译可作记忆辅助：“分类账限定的公司代码清算”和“不同金额之间的公司代码清算”。这只是名称翻译，不代表对完整业务规则的解释。SAP 把它们列为 **Prepare Intercompany Transactions** 过程中新增的可选键；不据此推导使用条件或其他公司的过账规则。
+- `*` 通配符仅在总账 **Integrate with HR Postings** 过程中输入客户或供应商账号的说明中出现，文档给出 `*12345` 示例。SAP 这一段没有定义完整匹配语义、输入校验或其他通配符形式，不能推广成全系统账号搜索语法。
 
 来源没有提供逐项总账账户映射、完整配置步骤或可安全执行的显示模式，也没有证明特定用户能打开或修改该应用。App Finder 的名称搜索提示只是文档中的导航线索，不是角色授权证明。
 
@@ -32,7 +34,7 @@ SAP《What's New in SAP S/4HANA 2021》§3.6.1.3 说明，可使用 **Automatic 
 
 ### 例二：GR/IR 科目上的 Extended Open Item Management 显示字段
 
-SAP S/4HANA 2021 固定版 Help Portal 页面 **Open Item Management in the Manage G/L Account Master Data App** 说明，**Extended Open Item Management** 字段用于表示某个收货/发票收据（GR/IR）总账科目是否启用了扩展未清项管理；相关变化也适用于文档称为 **Display G/L Account Centrally (`FS00`)** 的 SAP GUI 事务。SAP 说明，在相应功能已启用后，该字段显示在相关总账科目详情中，并且字段本身为只读（display only）。
+SAP S/4HANA 2021 固定版 Help Portal 页面 **Open Item Management in the Manage G/L Account Master Data App** 说明，**Extended Open Item Management** 是一个状态字段，用于表示某个收货/发票收据（GR/IR）总账科目是否启用了扩展未清项管理；相关变化也适用于文档称为 **Display G/L Account Centrally (`FS00`)** 的 SAP GUI 事务。SAP 说明，在相应功能已启用后，该字段显示在相关总账科目详情中，并且字段本身为只读（display only）。本文只介绍状态字段，不讲扩展未清项的清账行为。
 
 这只证明文档描述的特定字段属性。它不证明某个账号有权访问 FS00 或该 Fiori 应用，不证明整个页面只读，也不证明某客户系统已启用此功能。本文不提供启用程序或生产配置步骤。
 
@@ -60,7 +62,7 @@ SAP S/4HANA 2021 固定版 Help Portal 页面 **Open Item Management in the Mana
 2. “`BUL` 和 `BUU` 是所有公司间过账都应使用的键。”——证据不足；来源只把它们作为 Prepare Intercompany Transactions 过程中新可选的键。
 3. “可以在所有 FI 应用中用 `*12345` 搜索供应商。”——证据不足；来源的通配符示例只涉及 Integrate with HR Postings 的客户/供应商账号输入。
 4. “Extended Open Item Management 字段只读，所以用户肯定有权打开该账号。”——证据不足；字段只读属性不等于用户权限或系统部署状态。
-5. “`XLGCLR` 就是扩展未清项管理字段的数据库键。”——错误推断；来源将它关联到 Open Item Management by Ledger Group 字段。
+5. “`XLGCLR` 就是扩展未清项管理字段的数据库键。”——证据不足（来源将 `XLGCLR` 关联到另一个 Open Item Management by Ledger Group 字段，不能支持该断言）。
 
 ## 后续补证清单
 
