@@ -103,3 +103,16 @@ SEC/GAO/IRS来源只支持文本中确切内容，站点其他第三方内容或
 | E2. [Simplification List for SAP S/4HANA 2021](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=200)，Initial Shipment、FPS1/2，§8.1，印刷页200–201 | 转换背景下Universal Journal报告数据模型及内外部报告共同document store的高层说明；列出总账、资产会计、Controlling等不同业务活动。 | 把早期转换材料泛化到所有后续2021 SP，或推出每个业务步骤、过账、技术对象和授权完全相同。 |
 
 **CO-01 证据判断：**资料直接支持限缩入门目标：区分FI/CO所问问题、解释成本中心actual/plan报告及报告数据联系。尚未闭合成本对象分配前提、计划维护、统计指标具体分摊规则、内部订单与结算、利润分析定义/配置、底层表字段/API及用户权限。文章对此不作通用断言。SAP系统未连接，无实机验证。
+
+## M4 CO-02｜成本中心与成本要素
+日期：2026-11-27（Asia/Shanghai）
+
+- **M3 准入与路径：**“暂缓核心”；ideas/CareerOS/knowledge/CO/02-functions/cost-center-elements.md。本次只建立有证据边界的入门草稿，没有声称关闭核心门槛。
+- **E1：**[SAP S/4HANA 2021 Feature Scope Description](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)，v9.0，2025-07-23，标记适用于 SP08；§2.5.1.1.1，印刷页 23–24。直接支持按成本中心捕捉成本、成本中心产出与 activity types 相关，以及按选定期间查看 actual/plan。链接为 latest，记录的是实际读取版本快照。
+- **E2：**[Migration Objects for SAP S/4HANA 2021](https://help.sap.com/doc/69dd0f1ef0034261ab6e617e0b2beb21/2021.000/en-US/MigrationObjects_OP_EN.pdf)，固定版 2021.000 On-Premise；§1.35，印刷页 153–154：成本中心定义及迁移范围；成本中心属于 controlling area，定义依据可涉及功能、分配标准、地点、成本责任；迁移对象范围含 company-code data 与 validity，且迁移范围内按 company codes 推导 controlling areas。以上只按迁移对象语境支持，不是一般配置规则。
+- **E3：**[Central Finance 2021 On-Premise Implementation Guide](https://help.sap.com/doc/a9616f4a29354fc297c58499b754e3f8/2021.001/en-US/loio4857c0540cf5ef05e10000000a4450e5.pdf)，固定版 2021.001；§1.4.1.1，印刷页 15。Central Finance source/target mapping 说明 S/4HANA 目标模型中的成本要素属于 G/L account/chart-of-accounts 关系；并比较两者时间依赖背景。限定为 Central Finance 映射/初始加载语境，不推广为所有流程的字段、分类和配置规格。
+- **已支持的学习主张：**成本中心是组织责任／成本发生观察维度；成本要素的 S/4HANA 账户关系可在 E3 指定映射语境内说明；2021 功能范围支持成本中心实际/计划报告。
+- **仍缺直接证据：**成本中心字段级有效期和更改规则、公司代码与 controlling area 一般配置约束、成本要素类别与规则、日常费用分配和自动派生、完整 FI/CO 凭证行为、数据字段/键/API/CDS/权限。
+- Migration Objects 中的 secondary cost element 与 G/L/primary cost element 条目是源 ERP 到 S/4 的迁移对象说明，不据其名称推断目标 S/4 使用独立旧式 master data。
+- 不涉及普通库存采购完整借贷、税务和自动科目决定（FI-07 仍开放）。SAP 未连接，未做实机验证。
+- 审查记录：[CO-02 三角色视角闭环](../reviews/work/2026-11-27-m4-co02-three-role-review.md)。各角色 5 个同上下文模拟闭环；不是独立审查，不计正式 reviewed。
