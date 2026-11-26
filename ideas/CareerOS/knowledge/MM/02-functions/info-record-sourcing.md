@@ -1,6 +1,6 @@
 # MM-03｜采购信息记录与货源决定
 
-> 状态：drafting（追加复核问题修订中）｜M4 批次 A｜目标产品版本 SAP S/4HANA 2021 On-Premise。本文依据 SAP S/4HANA 2021 Feature Scope Description 文档版本 11.0（2021 SPS10，2026-07-22）所支持的高层功能范围；官方 PDF 使用动态 latest 链接，Work 于 2026-11-26 读取该版本。不将功能范围扩展为具体客户的 MRP 选择顺序、有效期字段规则或配置结果。
+> 状态：reviewed（18 个有效闭环：普通读者 5、资深 SAP 配置顾问 7、普通 SAP 开发人员 6；待所有者验收）｜M4 批次 A｜目标产品版本 SAP S/4HANA 2021 On-Premise。本文依据 SAP S/4HANA 2021 Feature Scope Description 文档版本 11.0（2021 SPS10，2026-07-22）所支持的高层功能范围；官方 PDF 使用动态 latest 链接，Work 于 2026-11-26 读取该版本。不将功能范围扩展为具体客户的 MRP 选择顺序、有效期字段规则或配置结果。
 
 ## 为什么采购要维护货源信息
 
