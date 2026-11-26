@@ -1,12 +1,12 @@
 # MM-08｜三角色闭环审查与证据边界记录
 
 - Article ID：`MM-08`
-- Reviewed artifact: `ideas/CareerOS/knowledge/MM/03-tcodes/transaction-index.md` 的修订稿，尚未提交到 PR #21。
+- 交接范围说明：此前记录对应的本地修订稿未提交到 PR #21；用户后续明确，旧稿三角色各 5 个初轮问题尚未对修订稿复核。不能用此前记录里的 PASS 字样证明那份不可读取的本地稿已复核。当前实际 PR 候选为文章提交 7eb37405554e293553985e434bd24cf0eb3449b9；本文件末尾的复核附录只针对该精确提交，不代表本地未提交文件。
 - Article status after review: **drafting**；三角色问题均已闭环，但材料凭证显示入口与通用 MIGO 导航仍缺足够的 SAP S/4HANA 2021 On-Premise 固定版证据。
 - Review window: 2026-11-27 00:22–00:24 Asia/Shanghai。
 - Author/Coordinator: 当前 Codex Work Mode 根上下文 `/root`。平台未向此任务暴露精确底层模型版本；未声称切换模型。
 - Review contexts: `/root/reader_mm08`、`/root/consultant_mm08`、`/root/developer_mm08`。三者为真实分开的 AI 子代理执行上下文；都不是人类 SAP 专家或认证意见。没有声称不同底层模型。
-- Round summary: ordinary reader 5/5, SAP configuration consultant perspective 5/5, SAP developer perspective 5/5; 15 个有效闭环，均由提出该问题的原上下文复核为 PASS。未发现需 reopen 的首轮问题。
+- Round summary: 本记录保留普通读者、配置顾问、开发者各 5 个原始问题及其证据、Work 答复、正文修改位置；对当前 PR 候选的实际原角色复核见末尾附录。该候选复核共 15 项（每角色 5 项）；只计可追溯到 exact commit 的新复核，不将本地未提交稿或旧 PASS 声明当成当前候选的验收。
 
 ## Evidence key
 
@@ -169,3 +169,52 @@ Reviewer context: `/root/developer_mm08`; AI review lens, not a human SAP develo
 - 15/15 role-specific review loops closed: ordinary reader 5, consultant perspective 5, developer perspective 5. Each loop includes an actual question, evidence-based Work response, a recorded revision decision/change, and recheck by the original reviewer context.
 - No reviewer reported a remaining defect in the revised statements above. This does **not** resolve the content evidence gate: there is still no sufficient fixed-version 2021 On-Premise source in this work package for a general MIGO navigation entry or the material-document display route.
 - Therefore MM-08 remains **drafting**, contributes **0** to the 8/50 role-reviewed total, and is not owner accepted. No SAP system, customer configuration, user authorization, or transaction execution was tested.
+
+## 实际 PR 候选复核附录（2026-11-27）
+
+- **复核对象**：文章 ideas/CareerOS/knowledge/MM/03-tcodes/transaction-index.md，精确提交 7eb37405554e293553985e434bd24cf0eb3449b9。此候选在现有 PR 文章基础上补入 SAP S/4HANA 2021 Best Practices《Administration Guide》§3.3.2 的 Embedded EWM 定义，并披露 PDF 封面日期 2024-07-05；未读取或声称提交用户交接所述的本地未提交副本。
+- **复核方式**：三个不同 AI 执行上下文各自针对本角色原有的 5 个问题，读取指定 GitHub 候选和本记录并重新核验 Work 答复/正文修改。以下复核结果取代之前对未明确版本修订稿的 PASS 声明。三者是独立上下文的 AI 角色视角，不代表不同底层模型、真人 SAP 专家认证或客户配置结论。
+- **来源实读范围**：普通读者和配置顾问视角直接读取上述 SAP Best Practices PDF 封面与 §3.3.2 p.53；配置顾问还读取 §3.5.4.5。普通读者未能直接读取 SAP Help HTML 与 SPS05 功能页，配置顾问未重新读取 S1/S2/S3/S5；这些条目的复核只依据本记录中的来源摘要和候选正文。开发者视角读取 GitHub 候选及记录，未重新打开 SAP 原始页面。Work 直接从浏览器读取同一 SAP PDF 封面与 p.53。没有连接 SAP 系统，没有实机、配置、API 或权限测试。
+- **结论**：三角色原有问题 15/15 通过当前候选复核；这些 PASS 仅关闭相应已提出的问题，不关闭文章核心证据门槛。通用 MIGO 导航与物料凭证显示入口仍缺 S/4HANA 2021 On-Premise 固定版直接证据，MM-08 继续保持 drafting，不计入 batch-A reviewed。
+
+### 普通读者原问题复核（原角色：/root/reader_mm08，5/5 PASS）
+
+原问题、证据、Work 答复与正文修改分别详见上文 R1.1–R1.5；该上下文重新读取 exact commit 并复核如下：
+
+| 原问题 | 当前正文修改/复核依据 | 原角色复核 |
+| --- | --- | --- |
+| R1.1 T-Code 用途与启动边界 | “这篇文章要解决什么”：把 T-Code 定义为索引词，不给未证实的启动步骤 | PASS；用途与边界清楚 |
+| R1.2 MM01/MM02/MM03 选码 | 入口表与“怎样从表中选入口”：没有逐代码映射，不能按顺序推断 | PASS；保留证据缺口 |
+| R1.3 采购订单学习场景 | 无写权限学习方式与文字练习，链接 MM-04/05/06 | PASS；没有虚构采购流程状态 |
+| R1.4 EWM/同步货物移动 | MIGO 段新增 §3.3.2 直接定义，并区分目标版本与 PDF 日期；SPS05 特例仍限定 | PASS；没有外推到所有部署/所有系统 |
+| R1.5 无写权限的练习 | 离线文字练习不要求访问、写入或过账 | PASS；无需生产系统权限 |
+
+**实际读取限制**：该读者直接读取官方 PDF 封面及 §3.3.2；SAP Help HTML 与 SPS05 功能页正文本轮不可读，相关判断按记录中的证据摘要核查。
+
+### 配置顾问原问题复核（原角色：/root/consultant_mm08，5/5 PASS）
+
+原问题、证据、Work 答复与正文修改分别详见上文 R1.6–R1.10；该上下文重新读取 exact commit 并复核如下：
+
+| 原问题 | 当前正文修改/复核依据 | 原角色复核 |
+| --- | --- | --- |
+| R1.6 代码族与相关应用功能归因 | 采购订单表格、入口选择说明区分父页代码族与相关应用说明 | PASS；没有推出逐代码模式 |
+| R1.7 创建流程的配置/授权边界 | 物料表与表后说明仅限来源描述的创建流程，不推广到 MM02/MM03 | PASS；适用范围准确 |
+| R1.8 MM01/MM02/MM03 动作映射 | 表格及文字练习明确组级证据不等于逐代码映射 | PASS；未按名称补推断 |
+| R1.9 Embedded EWM 定义及方案边界 | 新增 §3.3.2 p.53；披露 2024-07-05 封面日期；§3.5.4.5 仅针对指南所列范围项 | PASS；面向 2021 的指南目标与出版日期未混淆 |
+| R1.10 MIGO SPS05 特例 | MIGO 段及待核清单将其限为短文本场景，不作为通用导航 | PASS；无通用化推断 |
+
+**实际读取限制**：配置顾问直接读取官方 PDF 封面、§3.3.2 与 §3.5.4.5；本轮未重开 S1/S2/S3/S5 原始页面，因此 R1.6–R1.8、R1.10 基于原记录中的来源摘录与当前候选复核。
+
+### 开发者原问题复核（原角色：/root/developer_mm08，5/5 PASS）
+
+原问题、证据、Work 答复与正文修改分别详见上文 R1.11–R1.15；该上下文重新读取 exact commit 和本记录并复核如下：
+
+| 原问题 | 当前正文修改/复核依据 | 原角色复核 |
+| --- | --- | --- |
+| R1.11 MM01/MM02/MM03 逐码风险 | 表格和主数据说明保留组级证据与特定 MRP 字段限制 | PASS；未写成逐代码操作映射 |
+| R1.12 订单代码族/应用功能混同 | 采购订单表格与说明分开归因 | PASS；无 Fiori 或逐模式断言 |
+| R1.13 授权模型完整性 | 权限列、学习方式及未解决项声明不推断角色/账号权限 | PASS；没有系统验证声称 |
+| R1.14 MIGO SPS05 范围 | 保留 50 字符及同步 IM→嵌入式 EWM 条件，且 MIGO 通用范围仍待核 | PASS；未当作通用导航证据 |
+| R1.15 对象、输入输出与关联 | 对象表、技术边界和 MM-02/04/05/06 链接均在候选中 | PASS；未虚构字段/API 合同 |
+
+**实际读取限制**：开发者读取 GitHub 候选和审查记录；没有重新打开 SAP 原始页面，也没有执行系统、API 或权限验证。
