@@ -112,7 +112,8 @@
 - **FI-06《应付与应收》**：沿用既有 9/15（读者 4、顾问 4、开发者 1）；本次仅移除正文重复标题并续记状态，没有重复 M3 研究或旧闭环。子账/总账、目标版 open item/clearing、部分付款/剩余项目仍缺目标版直接证据，文章保持 `drafting`。续核记录见[既有审查档案](reviews/work/2026-11-26-m4-batch-a01-fi04-fi06-review.md)。
 - **FI-07《库存估价与 GR/IR》**：已建立目标版证据受限草稿，并记录 15 个同上下文角色视角模拟闭环（读者 5、顾问 5、开发者 5）；模拟不是独立审查，状态 `drafting`。固定 2021 页面支持 GR/IR 清账的有限条件，普通库存采购借贷、税和自动科目/OBYC 规则仍未闭合；未编造分录。详见[正文](knowledge/FI/02-functions/inventory-valuation-grir.md)和[Work 记录](reviews/work/2026-11-27-m4-workline-4-fi07-review.md)。
 - FI-07 的模拟闭环不计 formal reviewed；批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，正式接受总数仍为 **3/99**。
-- 工作线 4 当前游标：QM-06～QM-08、FI-04、FI-06、FI-07 均为受限 `drafting`；下一篇 **FI-08《结账与报表入门》**。逐篇核对固定 2021 余额结转/关账来源，不从 FI-07 或相邻主题外推完整月结、年结或地区规则。
+- **FI-08《结账与报表入门》**：依据 SAP S/4HANA 2021 固定版 What's New §3.6.1.23–25 建立范围受限草稿，说明账户余额结转到新财年、Schedule General Ledger Jobs / `FAGLGVTR` 作业入口描述、Balance Carryforward Status 应用的信息范围与旧应用时间线。完整月结/年结、期间启闭、模拟/过账、报表和中国制度仍缺直接证据，故 `drafting`。15 个同上下文角色模拟闭环（读者 5、顾问 5、开发者 5）不是独立审查，不计入 8/50 reviewed。详见[正文](knowledge/FI/02-functions/period-close-reporting.md)、[Work 记录](reviews/work/2026-11-27-m4-workline-4-fi08-review.md)和[财务证据台账](plans/evidence-finance-m3.md)。
+- 工作线 4 当前游标：QM-06～QM-08、FI-04、FI-06、FI-07、FI-08 均为受限 `drafting`；下一篇 **FI-09《FI 常用事务码导航》**。逐项核对目标版具体入口、版本、输入输出和权限，不能凭通用功能外推。
 - SAP 系统未连接；没有事务码、角色、配置或客户系统实测。
 
 ## 关键文件索引
@@ -122,6 +123,8 @@
 - [FI-04 公司代码/科目表/G/L](knowledge/FI/02-functions/company-code-gl.md)
 - [FI-05 凭证/过账/冲销](knowledge/FI/02-functions/posting-reversal.md)
 - [FI-06 应付/应收](knowledge/FI/02-functions/payables-receivables.md)
+- [FI-08 结账与报表入门（证据受限草稿）](knowledge/FI/02-functions/period-close-reporting.md)
+- [FI-08 Work 角色视角记录](reviews/work/2026-11-27-m4-workline-4-fi08-review.md)
 - [FI-04～FI-06 三角色审查与证据收尾记录](reviews/work/2026-11-26-m4-batch-a01-fi04-fi06-review.md)
 - [MM-01 组织结构文章](knowledge/MM/01-foundations/organization-objects.md)
 - [MM-01 三角色审查记录](reviews/work/2026-11-26-m4-mm01-three-role-review.md)
