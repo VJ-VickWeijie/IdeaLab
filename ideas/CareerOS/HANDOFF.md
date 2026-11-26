@@ -271,3 +271,12 @@
 - 尚未闭合：skip inspection/动态修改/不建批的完整规则，质量信息记录更广泛的供应商/工厂差异，普通 IM 与 EWM 的场景边界及财务凭证影响；移动类型 103 仅保留为固定版页面限定例子。未编写通用权限或事务码行为。
 - QM-02 保持 \`drafting\`，15 个同上下文模拟闭环不计正式 reviewed；批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，全库正式接受数仍为 **3/99**。SAP 实机测试为 0。
 - 下一篇：**QM-03《检验计划与检验特性》**，批准路径 \`knowledge/QM/02-functions/inspection-plan-characteristic.md\`。按逐篇准入只读取 QM-03 对应来源和依赖。
+
+
+## 工作线 2 进度追记（2026-11-27，PP-05）
+
+- **PP-05《生产订单与确认》**已建立证据受限草稿，状态 drafting，路径 knowledge/PP/02-functions/production-order.md。正文仅按固定 2021.000 Help 的 BJ5 订单管理、释放授权特例、确认 API 数据提议和订单对象页功能，以及动态 2021 SPS10 FSD 快照说明有限内容。
+- [PP-05 Work 角色视角记录](reviews/work/2026-11-27-m4-pp05-three-role-review.md)记载读者、资深配置顾问、普通开发人员各 5 个同上下文模拟闭环，共 15；不是独立审查或真人专家意见，不计正式 reviewed。
+- 订单状态全集、通用释放条件、部分/最终确认、撤销、确认与发料/收货联动、数据模型/API 合同、客户授权及 FI/CO 结果仍未闭合；不把确认直接等同于自动发料/入库。PROCESS-05 正文不在本分支，未引用。
+- 批次 A 正式进度保持 **8/50 reviewed、0/50 owner accepted**；全库正式接受 **3/99**。SAP 系统未连接；未执行订单/确认/API 实机测试。
+- 工作线 2 下一篇：**PP-06《生产发料、收货与成本》**，批准路径 knowledge/PP/02-functions/production-goods-cost.md；先核对该篇自身准入、来源和关联材料。
