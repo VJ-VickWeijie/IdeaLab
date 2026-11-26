@@ -9,7 +9,7 @@
 - 当前 PR：[PR #21｜CareerOS M4 全量分批建设](https://github.com/VJ-VickWeijie/IdeaLab/pull/21)，目标 `main`；开放、未合并。Work 不自行合并。
 - 工作分支：`careeros-v04-m4-batch1-20261126`。
 - PR #20 已合并到 `main`；基线提交 `db349fe68e1aa0560ba5546a6382ffe503d0f595`。
-- 本次 HANDOFF 更新前最近一次进度提交：`e52e786038ab796d4874ae3466a762ed5ff29cb3`；本 HANDOFF 提交会继续推进分支。新窗口接手时必须实时核查最新 HEAD。
+- 本次 HANDOFF 更新前最近一次进度提交：`1c898ecf5c0e7632601affeda6664b0ef5a38c71`；本 HANDOFF 提交会继续推进分支。新窗口接手时必须实时核查最新 HEAD。
 - AI-Workflow V1.1 固定 SHA：`939ec44036d89cd91622ab96b938be9f02479026`。未更改通用门禁。
 
 ## 里程碑、授权与产品边界
@@ -129,6 +129,8 @@
 - [MM-06 三角色审查记录](reviews/work/2026-11-26-m4-mm06-three-role-review.md)
 - [MM-07 价格单位、数量单位与换算](knowledge/MM/02-functions/price-unit-conversion.md)
 - [MM-07 三角色审查记录](reviews/work/2026-11-26-m4-mm07-three-role-review.md)
+- [PP-07 PP 常用事务码导航（证据受限草稿）](knowledge/PP/03-tcodes/transaction-index.md)
+- [PP-07 三角色审查记录](reviews/work/2026-11-27-m4-workline-3-pp07-review.md)
 - [首批 FI-01～FI-03 审核答复记录](reviews/work/2026-11-26-m4-batch01-round1-response.md)
 - [首批执行日志](reviews/work/2026-11-26-m4-batch01-execution-log.md)
 - [M3 99 项控制矩阵](plans/m3-item-control-matrix-v0.3.md)
@@ -162,3 +164,11 @@
 - PP-01《生产业务与组织结构》已建立证据受限草稿，状态 drafting；普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各有 5 个同上下文角色视角问题—答复—修订—复核循环。组织关系、MTS/MTO 与离散/流程制造核心解释仍缺固定版 2021 直接证据；这些循环不构成独立审查。
 - 本线截至此记录新增 SD-06、PP-01 两篇 drafting，新增 reviewed 数为 0、owner accepted 数为 0；总体统计以 HANDOFF 当前进度表为准，草稿不计 reviewed/accepted。SAP 系统未连接，实机验证仍为 0。
 - 工作线 2 下一篇：PP-02《物料清单 BOM》。PP-01 的来源范围、闭环和阻碍见 [审查记录](reviews/work/2026-11-27-m4-pp01-three-role-review.md) 与 [文章](knowledge/PP/01-foundations/production-organization.md)。
+
+
+## 工作线 3 进度（2026-11-27）
+
+- **PP-07《PP 常用事务码导航》**：状态 drafting。三种角色视角各完成 5 个有效闭环，共 15（普通读者 5、资深配置顾问 5、普通开发人员 5）；这些是同一 Work 上下文内的角色模拟，不是独立代理或真人专家审查。SAP Help 的 2021 (Oct 2021) 页面直接支持 CS03 显示物料 BOM，但页面属于 Retail 帮助内容；Routing、MRP、生产订单的逐码目标版来源及授权仍未闭合。
+- PP-07 的闭环不计入批次 A reviewed 数；正式进度仍为 **8/50 reviewed、0/50 owner accepted**，正式接受总数仍为 **3/99**。SAP 系统未连接，实机测试为 0。PP-02～PP-06、PP-08 依赖文章在当前分支尚未找到。
+- 本工作线下一篇：**PP-08《生产计划配置查看》**，路径以逐篇分流为准。PP-07 如取得新的固定版逐码直接证据，需回补来源、复核受影响主张后再判断状态。
+- 详见 [PP-07 正文](knowledge/PP/03-tcodes/transaction-index.md) 与 [审查记录](reviews/work/2026-11-27-m4-workline-3-pp07-review.md)。

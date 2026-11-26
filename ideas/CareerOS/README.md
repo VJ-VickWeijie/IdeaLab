@@ -1,6 +1,10 @@
 # CareerOS｜项目总入口（2026-11-26 更新）
 
 > 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。M3 已验收；M4 完整 99 篇分两批建设已获授权。FI-01～FI-03 已由所有者接受，正式接受 3/99。批次 A 已有 8/50 篇完成三角色审核、0/50 篇获所有者接受；其中 FI-05、MM-01～MM-07 已 reviewed，FI-04/FI-06 保持 drafting。下一篇为 MM-08《MM 常用事务码导航》。MM-06 审查记录见[三角色记录](reviews/work/2026-11-26-m4-mm06-three-role-review.md)，MM-07 审查记录见[三角色记录](reviews/work/2026-11-26-m4-mm07-three-role-review.md)。详见 [HANDOFF](HANDOFF.md) 与[两批执行计划](plans/m4-two-batch-execution-2026-11-26.md)。
+## 并行工作线进度（2026-11-27）
+
+- Workline 3：PP-07 已完成证据受限草稿与 15 个同一 Work 上下文内的角色模拟闭环（读者 5、配置顾问 5、开发者 5），仍为 drafting，不计入 8/50 reviewed。Routing、MRP、生产订单事务码的 S/4HANA 2021 On-Premise 直接来源和授权未闭合；下一篇为 PP-08。当前分支其他工作线进展见 [HANDOFF](HANDOFF.md)。
+
 ## 项目主旨
 利用工作日合规的碎片时间，建立**中文为主、保留英文术语**的 SAP 业务与技术知识网络，同时保留 24 个月职业成长课程。目标不只是记住 T-Code，而是理解企业为什么需要某个流程、完整业务/单据/物流/财务流、SAP 如何实现，以及跨模块关联；FI/CO 从零基础解释。长期发展方向是 SAP MM/QM + ABAP/S/4HANA 架构 + 企业 AI 集成。
 
