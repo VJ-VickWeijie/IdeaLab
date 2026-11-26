@@ -49,4 +49,4 @@
 
 ## 相关 M3 补充：内存 warning 与排障边界
 
-[ABAP-02 内存短转储与资源诊断补充](abap02-memory-dump-admin-boundary-m3.md)新增 SAP ABAP Platform 2021 (Oct 2021) 内存 quota soft-warning 与 hard-limit 资料：warning threshold 可产生不终止程序的 short dump，不能据此实现 TRY...CATCH 停止；同时记录 KBA 2180736、Support Content 通用诊断和一个 S/4HANA 2021 的有限同现案例。参数设置、目标系统运行行为及 warning 是否能及时提醒仍需系统侧确认。
+[ABAP-02 内存短转储与资源诊断补充](abap02-memory-dump-admin-boundary-m3.md)新增 SAP ABAP Platform 2021 (Oct 2021) 内存 quota soft-warning 与 hard-limit 资料：warning threshold 可产生不终止程序的 short dump，但现有来源不能证明应用可通过 TRY...CATCH 捕获并安全停止；同时记录 KBA 2180736、Support Content 通用诊断和一个 S/4HANA 2021 的有限同现案例。参数设置、目标系统运行行为及 warning 是否能及时提醒仍需系统侧确认。
