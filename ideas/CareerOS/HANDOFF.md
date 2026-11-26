@@ -9,7 +9,7 @@
 - 当前阶段 PR：PR #21｜M4 首批 3 篇 FI 基础文章，目标 main；等待所有者审阅，不由 Work 合并。
 - 工作分支：careeros-v04-m4-batch1-20261126。
 - PR #20 已合并到 main，合并提交 db349fe68e1aa0560ba5546a6382ffe503d0f595，是本次 M4 分支基线。
-- 本 HANDOFF 更新前的最近一次已核实分支提交：3e4b8002bfd4d917f8285945cc81167dcdf43fae。本次 HANDOFF 更新会产生新的提交；下个窗口须实时读取 PR #21 和分支 HEAD，不依赖静态 SHA。
+- 本 HANDOFF 更新前最新的审核记录修订提交：302c44ac8635a1127b02020b40072cb9c1b3cd59。本次 HANDOFF 同步会生成后续提交；下个窗口须实时读取 PR #21 和分支 HEAD，不依赖静态 SHA。
 - 固定 AI-Workflow V1.1：939ec44036d89cd91622ab96b938be9f02479026。未修改通用门禁。
 
 ## 里程碑、授权与产品决策
