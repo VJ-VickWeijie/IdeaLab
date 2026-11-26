@@ -138,3 +138,11 @@ SEC/GAO/IRS来源只支持文本中确切内容，站点其他第三方内容或
 - SAP S/4HANA 2021.002 Migration Objects §1.40（印刷页172–174）在迁移对象语境定义内部订单的监控成本用途；不将迁移规则或授权扩为日常业务事实。
 - SAP Learning 的真实/统计订单与结算课程未标发行版，仅用于概念说明和检索线索；不作为 2021 通用规则。2021.001 Central Finance §1.4.7.2 只支持其中央结算状态检查场景。
 - 未闭合：普通 2021 订单类型/真实统计处理、成本归集细则、预算检查触发、结算配置和接收方、权限、表/字段/API/CDS；没有 SAP 系统或客户配置验证。未推导 FI-07 普通库存借贷、税或自动科目。
+
+## M4 CO-04 证据范围与草稿记录（2026-11-27）
+
+- [文章](../knowledge/CO/02-functions/product-cost-variance-settlement.md)：状态 drafting。按 M3“暂缓核心”建立受限草稿，不声称完整制造成本流程已证实。
+- **E1**：[SAP S/4HANA 2021 FSD](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)，本次读到 v9.0（2025-07-23）/ SP08 快照，latest URL 动态。§2.6.1.1.2（印刷页28–29）支持不同制造方式关注销售订单、生产/流程订单或期间成本；§2.8.4.1（页75）描述生产订单实际成本可结算到一个或多个接收成本对象；§2.8.4.3（页79–82）支持重复制造按期间由产品成本收集器收集成本及偏差汇总；§2.8.4.4（页83–85）是特定 Kanban 场景的实际成本更新及期间 WIP/差异/结算功能。仅作 FSD 所列范围，不外推到每种制造方式、客户配置或 2021 全部 FPS。
+- **E2**：[Deferred Summarization of Production Costs](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b8102751e57e4de2ad50ec07253127e0.html?version=2021.000)，固定 S/4HANA 2021.000 条目 §3.6.1.26，印刷页159：特定延期汇总功能说明 journal entry details 从 ACDOCA 移到 ACDOCD、汇总细节保留于 ACDOCA。它不是 WIP/variance 算法或完整 CO 数据模型证明。
+- 读者、配置顾问、开发人员各 5 个同一 Work 上下文的模拟闭环；见 [CO-04 视角记录](../reviews/work/2026-11-27-m4-co04-three-role-review.md)。无独立复核，不计 reviewed；无 SAP 实机测试。
+- 未闭合：常规制造订单的 WIP/variance 公式、订单状态触发和结算规则/接收方、估价和 FI 分录条件、权限、T-Code、数据字段/键/API/CDS。未据此推出 FI-07 普通采购库存借贷、税或自动科目。
