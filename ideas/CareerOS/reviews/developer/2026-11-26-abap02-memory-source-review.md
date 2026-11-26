@@ -25,9 +25,19 @@ Work 接受该精度意见。基于该指南原文，不为 In Mem 额外赋予�
 
 修改提交：620d991bd4a736bd70d0ea9660ef942439b7fafe。
 
-### 修改后复核
+### 首次修改后的复读
 
-Work 已邀请同一独立开发审查上下文复读修改后的句子，并确认其余来源范围、TRY...CATCH 限定及管理员/开发责任边界。**修改后复核尚待回复**；收到回复前不标记该具体措辞问题关闭。
+独立开发审查者在 PR #20 head 32574a6ee04de819a06638e1eb0c3ae10a00a50f 复读来源记录以及相关资源表、摘要后，确认六个 2021 参数、软/硬限额、TRY...CATCH 边界、S4CORE 106 案例限定和 Additional Content/KBA preview 边界均准确。其提出三项进一步精度建议：
+
+1. 把 “S/4HANA 2021 对应的 ABAP Platform 文档” 改为精确说明两页选择器均为 ABAP Platform 2021 (Oct 2021)，但没有 S/4HANA 2021 S4CORE/FPS 标识或系统安装实证。
+2. 将 ST02 的 MaxUse/In Mem 表述明确限定为 Support Content 指南的第二个示例；它用于判断 uptime 内是否曾用满实例 EM，不是 dump 时快照，也不能单独将该次 dump 归因于全局 EM 用尽。
+3. 补入 SAP KBA 3435216 preview 的窄范围：其标题列 SESSIONMEM_QUOTA_WARNING，症状限定 kernel 7.8* 或更早版本，Product 显示 ABAP Platform all versions / S/4HANA 2020；只可支持名称与页面自述范围，不能外推 2021/FPS 或处理步骤。
+
+### Work 答复与第二次修订
+
+Work 接受上述三项意见。已在 [ABAP-02 来源记录](../../plans/abap02-memory-dump-admin-boundary-m3.md) 精确改写 ABAP Platform 2021 版本边界与 ST02 句子，并加入 KBA 3435216 preview 的限定证据。修改提交：893499ff65874f931af7c5e5c337bf810867896e。
+
+Work 已邀请同一审查上下文复读以上修订及相邻资源表/摘要。**第二次修改后的复核尚待回复**；在其复读前，不标记上述措辞问题关闭。
 
 ## 适用范围
 
