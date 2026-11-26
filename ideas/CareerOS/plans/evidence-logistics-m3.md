@@ -10,7 +10,7 @@
 
 | ID | 来源、产品/修订及具体页 | 本次实际读取并可支持的范围 | 未覆盖与门禁 |
 | --- | --- | --- | --- |
-| MM-01 | [SAP 采购组织结构，S/4HANA 2021 初始版](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/2b7eb65334e6b54ce10000000a174cb4.html?version=2021.000)；协调者及独立开发者均通过浏览器实际读取 `2021 (Oct 2021)` | 直接覆盖客户端、公司代码、工厂、采购组织与采购组的概念，及文中所述的组织关联、集中/分散采购 | 不代表每家企业的组织设置、所有模块关系和当前系统权限；该来源有限描述经独立复核 |
+| MM-01 | [SAP 采购组织结构，S/4HANA 2021 初始版](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/2b7eb65334e6b54ce10000000a174cb4.html?version=2021.000)；M3 阶段协调者和独立开发者曾读取；Work 于 2026-11-26 重新打开并确认选择器显示 `2021 (Oct 2021)` | 支持 Client、Company Code、Plant、Purchasing Organization、Purchasing Group 概念；Plant 必须归属公司代码且可分配给一个或多个采购组织；采购组织可分配或不分配公司代码，不分配时可为同一 Client 内公司代码采购但所涉 Plant 须分配给该采购组织；一个采购组可代表多个采购组织；页面还描述集中/分散方式、参考采购组织与本地组织关系，以及一个特定跨公司调拨并含 SD 交货/开票的场景。逐项适用边界见 [MM-01 正文](../knowledge/MM/01-foundations/organization-objects.md#s4hana-2021-页面明确支持的组织分配规则) | 本次新增规则为 Work 在固定版页面直接核对后的概述，顾问复核者无法在其工具中独立重开该版本；不得将它写成客户配置、法律责任、自动条件共享、跨公司通用流程或实际系统测试结论。来源不覆盖全部 IMG 配置、单据字段、权限和运行结果 |
 | MM-02 | [S：2021 初版/FPS01/FPS02；1.25，PDF 第 134 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=134)；§3.18 Business Partner Approach | BP 和 CVI 配置检查涉及 BP role category | 该段是迁移前提，非供应商角色全表及物料视图 |
 | MM-03 | [F：2021 SPS10；11.0，PDF 第 153 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=153)；§2.12.3.2 Source Assignment | 信息记录关联物料和供应商，并可按采购组织或工厂维护；货源清单/配额在该节 | 优先级、有效性和自动选择条件 |
 | MM-04 | [F：2021 SPS10；11.0，PDF 第 157 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=157)；§2.12.4.2 Requirements Processing | 采购申请及其处理功能 | PR→PO 各变体、审批配置与实际事务 |
@@ -84,3 +84,8 @@
 ## SD / PP 与流程章节定位复核
 
 `/root/consultant_plan` 逐项核查 SD/PP 来源，指出 SD-06 对应 SPS10 PDF 的配置功能位于第118页而不是117页，并提示 SD-07 只涉及特定转换字段；`/root/developer_m3_review` 指出 PROCESS-08 的委外小节应为 §2.8.4.7.1。Work 已修正这三处；`/root/consultant_plan` 已在 `d6049bc` 复核 SD-06/SD-07，`/root/developer_m3_review` 已在该提交复核 PROCESS-08，限上述定位与限定问题关闭。详见 [SD/PP 来源贴合度](sd-pp-source-fit-m3.md) 和 [流程来源贴合度](process-source-fit-m3.md)。上述文献是局部支持，不能代替完整流程、权限或目标系统实测。
+
+
+## M4 固定版来源重新核对（2026-11-26）
+
+针对 MM-01 的组织分配矩阵，Work 重新打开上列 SAP Help 页面并使用版本选择器确认 `2021 (Oct 2021)`。正文与台账所列规则按页面有限描述整理。独立读者/开发者复核了文章可读性与规则边界；独立配置顾问也复核了表述是否过度外推，但该复核工具无法重新打开固定版页面，因此不把该条写成第二次独立原文读取。官方页面链接可直接回查；更广的配置变体、客户权限、实际运行、法律责任和凭证结果仍未验证。
