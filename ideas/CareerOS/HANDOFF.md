@@ -1,7 +1,7 @@
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-26（Asia/Shanghai）  
-状态：**M3 已验收；M4 全量分批建设已获所有者授权；首批 FI-01～FI-03 已形成初稿，等待真实三角色审核。正式完成仍为 0/99。**
+状态：**M3 已验收；M4 全量分批建设已获所有者授权；FI-01～FI-03 首轮意见已答复并修订，三个原角色审查上下文的复核待完成。正式文章 0/99，有效闭环 0。**
 
 ## 当前仓库、分支与 PR
 
@@ -9,7 +9,7 @@
 - 当前 M4 PR：[PR #21｜M4 首批 3 篇 FI 基础文章草稿](https://github.com/VJ-VickWeijie/IdeaLab/pull/21)，open、draft；不合并。
 - 工作分支：careeros-v04-m4-batch1-20261126，目标分支 main。
 - PR #20 已合并，合并提交 db349fe68e1aa0560ba5546a6382ffe503d0f595，作为本次 M4 分支基线。
-- 首批内容工作包提交：cfc5f5bb66434bff464c4b5692d53c1720228ac0。本 HANDOFF 同步是后续独立提交；接手时请实时读取当前分支 HEAD 与 PR #21。
+- 首批初稿工作包提交：cfc5f5bb66434bff464c4b5692d53c1720228ac0；本轮首轮审核答复记录提交：5dae5b1aad7ec6545d5f9e95892198f6cb223fa3。最近一次状态同步提交（本 HANDOFF 更新前）：886aca16fde0a91f02efaba34b3a9c4183620a1f；本次 HANDOFF 同步将生成后续提交。接手时仍需实时核对 PR #21 和分支 HEAD。
 - 固定 AI-Workflow V1.1 SHA：939ec44036d89cd91622ab96b938be9f02479026。
 
 ## 里程碑、授权与决定
@@ -30,14 +30,13 @@
 - 实时核对 PR #20 已合并到 main（合并 SHA db349fe…），当前创建 M4 独立阶段 PR #21；没有开放的旧 PR 与本阶段冲突。
 - 重新读取 IdeaLab README、AGENTS、AI_WORKFLOW_INTEGRATION、CareerOS README、知识树、Work handoff、reviews README、FI 课程计划、99 项 triage、M3/M4 计划和证据台账。
 - 在固定 AI-Workflow SHA 读取 LIFECYCLE、TEAM、GATES、MODEL_SELECTION、WORK_CODEX。
-- 对 FI-01～FI-03 做了目标证据核验并建立逐主张边界。主要来源：财政部基本准则 2014 修订官方文本、2024 修订会计法、财政部 2014 会计基础考试大纲、财政部 2026 初级会计考试大纲、SAP S/4HANA 2021 001 Central Finance PDF 的有限英文术语说明。
-- 建立 M4 首批准入与来源计划，并写出三篇中文初稿。草稿不扩写五项未闭合风险，不宣称 SAP 实机验证。
+- 对 FI-01～FI-03 做了目标证据核验并建立逐主张边界。主要来源：财政部基本准则 2014 修订官方文本、2024 修订会计法、财政部 2014 会计基础考试大纲（只作历史教学参考）、2016 修订通知、财政部 2026 初级会计考试大纲（只作课程范围）、SAP S/4HANA 2021 001 Central Finance PDF 的有限英文术语说明。
+- 建立 M4 首批准入与来源计划，形成并修订三篇中文初稿。修订删除无直接 SAP 证据支持的流程/模块/自动化泛化表述，并区分中国法律凭证与 SAP 文档术语。
+- 普通读者、资深配置顾问、普通开发人员三个独立审查上下文首轮共提出 47 项意见，Work 已逐项答复并修订。逐项映射见 [首轮答复记录](reviews/work/2026-11-26-m4-batch01-round1-response.md)。三个原上下文还未复核，所以有效闭环数仍为 0；未连接 SAP 系统、未做实机测试。
 
 ## 正在执行／下一项明确任务
 
-开始首批真实三角色审核。每篇文章、每个角色按需 5～10 个有效闭环；每个闭环必须包含实质问题、Work 答复、修订判断/差异、该角色复核。三个角色为普通用户、资深 SAP 配置顾问、普通 SAP 开发人员。实际审查上下文和模型能力需如实记录；不能把模拟写成独立审查。严重缺陷未解决前不通过。
-
-首篇 FI-01 审核完成后，更新其审查记录、修订文稿及本 HANDOFF，再进入 FI-02、FI-03；按可恢复工作包提交 PR #21。
+将修订后的 FI-01～FI-03 分别交回三个原审查上下文，对 47 项意见逐项复核。记录各自确认或新增意见；只在原角色复核确认后才把对应问题计作有效闭环。若有严重问题或新增问题，继续修订和复验。每篇每角色至少完成 5 个有效闭环且无未关闭严重缺陷后，才可考虑接受文章。按可恢复工作包更新 HANDOFF 并提交 PR #21。
 
 ## 当前真实统计
 
@@ -46,7 +45,7 @@
 | 有初稿文章 | 3（FI-01、FI-02、FI-03） |
 | 正式接受文章 | 0/99 |
 | 三角色正式文章审核闭环 | 0 |
-| 当前批次角色审核 | 尚待启动 |
+| 当前批次角色审核 | 首轮 47 项已答复修订；原角色复核待完成，当前闭环 0 |
 | SAP 系统连接/实机测试 | 未连接/未执行 |
 | 11 个纯结构分类 | 已批准，仍不计文章 |
 
@@ -69,6 +68,7 @@
 - [FI-01](knowledge/FI/01-foundations/financial-accounting-for-beginners.md)
 - [FI-02](knowledge/FI/01-foundations/accounting-equation.md)
 - [FI-03](knowledge/FI/01-foundations/debit-credit.md)
+- [首轮答复与修订记录](reviews/work/2026-11-26-m4-batch01-round1-response.md)
 - [Work 执行记录](reviews/work/2026-11-26-m4-batch01-execution-log.md)
 - [M3/M4 方案及后续所有者决定](plans/m3-closeout-batched-m4-proposal-2026-11-26.md)
 - [多角色审核规则](reviews/README.md)
@@ -77,4 +77,4 @@
 
 ## 新窗口可直接使用的接手指令
 
-接手 IdeaLab 的 CareerOS。先实时查询 PR #21、分支 careeros-v04-m4-batch1-20261126 和 main 的状态/HEAD；然后读取本 HANDOFF、根 README/AGENTS/AI_WORKFLOW_INTEGRATION、CareerOS README、[M4 首批方案](plans/m4-batch-01-fundamentals-2026-11-26.md)、当前目标文章、对应真实角色审核记录及 reviews/README。M3 已验收，M4 已授权全量 99 篇按批建设；首批 FI-01～FI-03 已有初稿，但正式文章 0/99，审核闭环 0。先从 FI-01 的真实三角色审核闭环继续，不重复已完成来源研究，不将草稿/来源登记/计划当作正式文章，不越过五项开放风险，不自行合并 PR。每完成一个独立工作包，修订文章和审核记录、更新本 HANDOFF，并提交到 PR #21。
+接手 IdeaLab 的 CareerOS。先实时查询 PR #21、分支 careeros-v04-m4-batch1-20261126 和 main 的状态/HEAD；然后读取本 HANDOFF、根 README/AGENTS/AI_WORKFLOW_INTEGRATION、CareerOS README、[M4 首批方案](plans/m4-batch-01-fundamentals-2026-11-26.md)、当前目标文章、对应真实角色审核记录及 reviews/README。M3 已验收，M4 已授权完整 99 篇按批建设。首批 FI-01～FI-03 已完成三角色首轮答复修订；请从三个原审查上下文对 47 项意见进行复核开始。正式文章仍为 0/99，有效闭环 0。不要重复已完成来源研究，不将草稿/来源登记/计划当正式文章，不越过五项开放风险，不自行合并 PR。每完成一个工作包，更新文章、审核记录和本 HANDOFF，并提交 PR #21。
