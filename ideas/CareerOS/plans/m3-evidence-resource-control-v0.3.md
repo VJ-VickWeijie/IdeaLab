@@ -12,7 +12,7 @@
 | PROCESS-01 | [2021 P2P 固定来源](evidence-p2p-fi07-m3.md)、[估价](p2p-valuation-direct-2021.md)、[末端付款](p2p-payment-evidence-m3.md)；另有 YCOA 2025-FPS1 收货对照（非目标版）。 | Manage Automatic Payments 2021 初版支持排程/状态/payment media 功能；不证明逐笔应付分录、运行成功或银行扣款。端到端单据、普通配置、异常及真实资金仍缺。 | Work 按目标版逐事件补证，保持不将支付介质等同银行结算。 | 未闭合 |
 | MM-09 | [SAP Help 固定 2021 GR/IR 页面直读](mm09-2021-grir-direct-m3.md)：只支持 GR/IR 概念关系且暴露收货方向措辞歧义；[Simplification List](evidence-gap-four-m3.md)仅为材料账迁移 OBYC/IMG 示例；[详细 BSX/WRX 补查](mm09-obyc-source-followup-m3.md)。 | 普通采购/库存的 BSX/WRX 自动科目确定条件、估价与移动类型、配置入口及权限未证；2021 页面无借贷表，不能消解来源冲突。 | Work 继续逐项找目标版直接证据；未补齐前保持开放。 | 未闭合 |
 | ABAP-02 | [7.56 官方关键字与游标直接来源](abap-756-keyword-direct-m3.md)，已由另一上下文逐页复读；补上 PACKAGE SIZE/FAE 组合和 COMMIT/CALL DIALOG 边界 | 目标系统 FPS、具体程序内存/性能/并发验证、异常和资源上限；文献不能替代程序实测 | Work 已补来源和独立文献复核；后续仍需目标环境只读版本确认及获授权的非生产验证 | 未闭合 |
-| ABAP-04 | [2021 通用 BAPI 模型](bapi-transaction-search-m3.md)、无固定产品版本的 SAP 附加示例，以及[2021 PO 自定义字段扩展页面](extension-2021-evidence-m3.md)（独立顾问复读）。 | 新页面只支持自定义字段扩展，不覆盖 BAPI_PO_CREATE1 的提交、回滚、更新任务或消息语义；事务边界仍未闭合。 | Work 继续找目标函数文档或适用 Note；不可拼接资料冒称已证。 | 未闭合 |
+| ABAP-04 | [2021 通用模型、ECC/R/3 SAP Support Additional Content 直接阅读记录](bapi-transaction-search-m3.md)；[2021 PO 自定义字段扩展页面](extension-2021-evidence-m3.md)。两页 Support Content 已由 Work 与独立开发复核上下文分别直接阅读。 | ECC/R/3 示例有限支持 ME21N/BAPI 对应、TESTRUN、SE37 创建后提交序列、X 结构和 RETURN/调试线索；明示 Additional Content，未声明目标版本。目标 S/4HANA 2021 的函数级提交/回滚、更新任务、WAIT/RFC/LUW 边界及消息失败处理仍未闭合。 | Work 继续找目标版本函数文档或适用 SAP Note；不将 ECC 示例拼接为 2021 契约。 | 未闭合 |
 
 下一步按清单逐篇记录：**目标产品/FPS 与场景、关键主张、可访问的具体来源/章节、实际读取者和时间、支持与不支持范围、开放缺口、负责人及下一动作、独立复核状态、M3 判定**。一般 AI 原理与课程编排按各自合适来源判断，不强行套用 SAP 2021；涉及 SAP 接口仍需目标版本证据。目标版本不明、仅有索引或只有邻近主题时不标直接证据通过。文章事实逐项审查仍在 M4，M3 并不要求宣称所有文章已写成。
 
