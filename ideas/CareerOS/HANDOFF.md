@@ -60,11 +60,12 @@
 | MM-08 MM 常用事务码导航 | 15/15 AI 评审闭环 | drafting（不计入 8/50） | 物料凭证显示入口、通用 MIGO 导航仍缺固定版 2021 直接证据；GUI/Fiori 逐代码映射与权限未核实 |
 | CO-01 审查 | 普通读者、配置顾问、开发者视角模拟各5个闭环，共15；drafting，缺独立复核，不计reviewed；范围内证据充分 |
 | MM-09 采购与库存配置查看 | 15/15 AI 评审闭环 | drafting（不计入 8/50） | 普通无科目分配估价收货的固定版完整分录、OBYC/BSX/WRX 条件、方向冲突及只读路径/权限未闭合 |
+| MM-10 采购与库存数据模型 | 15/15 AI 原问题复核闭环 | drafting（不计入 8/50） | 完整 PR/PO/历史/物料凭证模型、键/基数、物理表/兼容视图、released API 与权限未闭合 |
 | FI-04 公司代码、会计科目表与总账科目 | 14/15 | drafting | SAP S/4HANA 2021 公司代码的一般定义/组织用途缺少直接证据 |
 | FI-05 会计凭证、过账与冲销 | 15/15 | reviewed | 等待后续所有者审阅；无已知严重角色问题 |
 | FI-06 应付与应收 | 9/15 | drafting | 客户/供应商子账与总账、目标版 open item/clearing、部分付款/剩余项目缺固定版证据 |
 
-工作线 1 下一项明确任务：继续批次 A 的 MM-10《采购库存数据模型与单据关系》，路径 knowledge/MM/05-data-model/purchasing-inventory.md。M3 分流为“暂缓核心”；先读取该篇自身控制、范围、证据和关联项，再按目标版直接证据收窄实体、事件与关系描述。PR/PO/历史/物料凭证的完整模型、精确键、基数、物理表/兼容视图与发布 API 均不得由邻近材料推断。MM-09 保持 drafting；其普通估价收货与 OBYC/BSX/WRX 核心证据仍未闭合。
+工作线 1 下一项明确任务：进入 SD-01。开始前按 M3 控制矩阵和逐篇准入分流，只读取 SD-01 所需的来源与依赖。MM-08、MM-09、MM-10 均保持 drafting；分别见下方工作线 1 进度记录，不计入正式 reviewed 数。MM-09 的普通估价收货及 OBYC/BSX/WRX 证据未闭合；MM-10 的完整技术模型、键、基数、物理表/兼容视图与 released API 未闭合。
 
 每个独立工作包都要提交文章、真实审核记录、状态和本 HANDOFF 更新到 PR #21。不要把计划、来源登记、导航或草稿统计成正式接受文章；不要合并 PR。
 
@@ -150,6 +151,8 @@
 - [MM-08 三角色审查记录](reviews/work/2026-11-27-m4-mm08-three-role-review.md)
 - [MM-09 采购与库存配置查看（证据受限草稿）](knowledge/MM/04-configuration/purchasing-inventory.md)
 - [MM-09 三角色审查记录](reviews/work/2026-11-27-m4-mm09-three-role-review.md)
+- [MM-10 采购与库存数据模型（证据受限草稿）](knowledge/MM/05-data-model/purchasing-inventory.md)
+- [MM-10 三角色审查记录](reviews/work/2026-11-27-m4-mm10-three-role-review.md)
 - [PP-07 PP 常用事务码导航（证据受限草稿）](knowledge/PP/03-tcodes/transaction-index.md)
 - [PP-07 三角色审查记录](reviews/work/2026-11-27-m4-workline-3-pp07-review.md)
 - [首批 FI-01～FI-03 审核答复记录](reviews/work/2026-11-26-m4-batch01-round1-response.md)
@@ -161,7 +164,7 @@
 
 ## 新窗口可直接使用的接手指令
 
-接手 GitHub 仓库 `VJ-VickWeijie/IdeaLab` 中的 CareerOS。先实时读取 PR #21、分支 `careeros-v04-m4-batch1-20261126`、`main` 和 PR #20 的状态及最新 HEAD；PR 不合并。然后读取本 HANDOFF、CareerOS README、[M4 两批执行计划](plans/m4-two-batch-execution-2026-11-26.md)、[本批 FI-04～FI-06 审查记录](reviews/work/2026-11-26-m4-batch-a01-fi04-fi06-review.md)、reviews/README、知识树和当前所选文章对应的控制矩阵/证据登记。M3 已验收；M4 全部 99 篇分批建设已授权。FI-01～FI-03 已获所有者肯定，正式接受 3/99。FI-05（15）、MM-01（16）、MM-02（15）、MM-03（18）、MM-04（18）、MM-05（15）、MM-06（15）、MM-07（15）均 reviewed、待所有者验收；MM-08 有 15 个 AI 评审闭环但因核心证据缺口保持 drafting，不计入 reviewed；批次 A 为 8/50 reviewed、0/50 owner accepted；下一篇 MM-10。不要重复 M0～M3 或已完成的研究；不要把草稿/来源登记算成正式文章；保留五项 M3 证据边界及 FI-04/FI-06 新阻碍；继续批次 A 中可独立写作的文章。每完成一个工作包，真实记录三角色问题、Work 答辩/修改、原角色复核及闭环数，更新本 HANDOFF 并提交到 PR #21。
+接手 GitHub 仓库 `VJ-VickWeijie/IdeaLab` 中的 CareerOS。先实时读取 PR #21、分支 `careeros-v04-m4-batch1-20261126`、`main` 和 PR #20 的状态及最新 HEAD；PR 不合并。然后读取本 HANDOFF、CareerOS README、[M4 两批执行计划](plans/m4-two-batch-execution-2026-11-26.md)、[本批 FI-04～FI-06 审查记录](reviews/work/2026-11-26-m4-batch-a01-fi04-fi06-review.md)、reviews/README、知识树和当前所选文章对应的控制矩阵/证据登记。M3 已验收；M4 全部 99 篇分批建设已授权。FI-01～FI-03 已获所有者肯定，正式接受 3/99。FI-05（15）、MM-01（16）、MM-02（15）、MM-03（18）、MM-04（18）、MM-05（15）、MM-06（15）、MM-07（15）均 reviewed、待所有者验收；MM-08、MM-09、MM-10 均因核心证据缺口保持 drafting，不计入 reviewed；批次 A 为 8/50 reviewed、0/50 owner accepted；工作线 1 下一篇 SD-01。不要重复 M0～M3 或已完成的研究；不要把草稿/来源登记算成正式文章；保留五项 M3 证据边界及 FI-04/FI-06 新阻碍；继续批次 A 中可独立写作的文章。每完成一个工作包，真实记录三角色问题、Work 答辩/修改、原角色复核及闭环数，更新本 HANDOFF 并提交到 PR #21。
 
 
 ## 工作线 2 进度追记（2026-11-27）
@@ -360,3 +363,11 @@
 - CO-04 文章初稿 da84d0d0d50f9671f013be518279ad4b90a60a2e；来源定位修订 fd549cf1a5a98114e6274850ab3463f6f68a534e；视角审查修订 3a7632303662ed58e5e6e65c22857f85375c17e7；Settlement 术语修订 beaa3d541e0439237b4d34284b9f4d714bd5353f；审查档案 c6d6e22f26a045c6c0319a8438892f36586f1b03；证据台账 3a7df8f3bd8975891293e57726f15e3a1f671b0e；执行计划 8a97f1d94b3a1076b0ea102ee465f5dc102018fc。
 - 下一篇：CO-05。开始前仅读取 CO-05 自身准入与证据登记，按目标版证据范围建立正文。
 
+
+
+## 工作线 1 进度追记（2026-11-27，MM-10）
+
+- **MM-10《采购与库存数据模型：从业务对象到待核技术关系》**正文为 `knowledge/MM/05-data-model/purchasing-inventory.md`；M3 准入为“暂缓核心”，状态保持 **drafting**。正文只教目标版来源支持的采购订单业务层级和 PR→PO 高层处理能力，不推断 PR/PO/历史/物料凭证的完整技术模型、字段键、基数、物理表/兼容视图、released API、组织范围或权限。
+- 三角色原问题复核记录：[MM-10 三角色审查](reviews/work/2026-11-27-m4-mm10-three-role-review.md)。普通读者、资深配置顾问视角、普通开发者视角分别完成 5/5 原问题复核，共 **15/15 个 AI 评审闭环**；三个独立 AI 上下文，未显示可核实模型型号，不代表真人专家、SAP 系统/API/权限测试。Help 页在本轮未能被复核上下文重新读取；限制已写入审查记录。
+- 批次 A 数字不变：**8/50 reviewed、0/50 owner accepted**；全库正式接受 **3/99**。MM-10 不计 reviewed 或 accepted；SAP 系统未连接，无实机/API/数据库/权限测试。
+- 工作线 1 下一篇：**SD-01**。依据 M3 控制矩阵和逐篇准入路径逐篇处理，不预载后续篇章的完整资料。
