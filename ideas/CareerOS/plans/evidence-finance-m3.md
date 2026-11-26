@@ -79,3 +79,16 @@ SEC/GAO/IRS来源只支持文本中确切内容，站点其他第三方内容或
 `/root/audit_design_review` 独立抽查 PR #20 原财务台账（blob `1d1b34a90a111df3c6a76665910000427e709dd7`）及相关规划：26 个 ID 无重复。审查者指出 SEC1 相关位置还应列出现金流量表，以及 GAO1 第3–4节的位置应为印刷页19–20而非18–19。协调者依据意见修正本台账，原审查上下文重新读取修改后本地文件确认这两处修正。SEC、GAO、IRS 仅在原记录注明的美国背景和具体范围内使用；审查者未能独立读取大型 SAP 2021 PDF，因此不能将 SAP 具体段落记成其独立验证。其他来源、主张与全部文章并未被本次抽样证明。
 
 本台账的原作者另做 [FI/CO 来源补查](finance-source-recheck-20261125.md)，该报告不是独立验收；其中中国财政部2014历史大纲及2016修订通知只作为研究线索，不是当前规则或 SAP 2021 证据，复用范围待确认。
+
+
+## M4 FI-11 证据复核（2026-11-27）
+
+本次只复核 FI-11 所需资料，没有加载其他 CO 文章的完整研究材料。
+
+| 来源 | 本次读取与支持范围 | 不能据此断言 |
+| --- | --- | --- |
+| S1. [SAP Simplification List for SAP S/4HANA 2021](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=200)，Initial Shipment、FPS1/2，§8.1，印刷页 200–201 | 2021 转换语境下 Universal Journal 的报告背景；部分总额/索引表变化；某些 compatibility view 的读取与写入说明。 | BKPF/ACDOCA/BSEG 完整字段、主键、基数、released API、权限；所有 FI/CO 数据都在一个物理表。 |
+| S2. [What's New in SAP S/4HANA 2021](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b8102751e57e4de2ad50ec07253127e0.html?version=2021.000)，§3.6.1.26 | 特定 deferred summarization 场景中，明细移至 ACDOCD、汇总后明细留在 ACDOCA。 | 通用 ACDOCA 粒度、主键或跨模块关系。 |
+| S3. [SAP Help：Journal Entry Item Cube](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/ee6ff9b281d8448f96b4fe6c89f2bdc8/0ee5e95760521070e10000000a44147b.html) | 当前页面描述 CDS view 的 ACDOCA 数据来源及部分授权前提；只作待查线索。 | 未锁定 2021 On-Premise，不计为目标版依据。 |
+
+复核结果：FI-11 仍为“暂缓核心”。固定版资料不足以支撑逐字段表、主键/基数、released CDS/API 与授权说明。文章只保留高层概念与边界，状态 drafting。SAP 系统未连接，无实机验证。

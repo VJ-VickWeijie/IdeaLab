@@ -53,3 +53,11 @@ FI-01～FI-03 已由所有者审阅肯定，正式接受数仍为 3/99。批次 
 ## 工作线 2 进度追记（2026-11-27）
 
 SD-06《销售配置查看》正文已建立，状态 drafting；15 个同上下文角色视角循环（普通读者 5、资深配置顾问 5、普通开发人员 5）已记录，但不构成独立审查，且通用 IMG/只读授权证据仍未闭合，因此不增加批次 A reviewed 数。当前总体计数仍为 8/50 reviewed、0/50 owner accepted，owner accepted 总数 3/99；SAP 实机测试 0。工作线 2 下一篇为 PP-01，当前准入为“暂缓核心”。详见 [SD-06 正文](../knowledge/SD/04-configuration/sales.md) 和 [审查记录](../reviews/work/2026-11-27-m4-sd06-three-role-review.md)。
+
+
+## 工作线 5 进度（2026-11-27）
+
+- FI-11《财务凭证与总账数据模型》已建立证据受限草稿，状态 `drafting`。目标版固定来源支持 Universal Journal 的报告背景和特定转换/功能说明；BKPF/ACDOCA/BSEG 的完整字段、主键、基数、released API/CDS 及权限仍缺逐字段官方依据。
+- FI-11 同一上下文角色模拟完成 15 个质询—证据答复—修订—复核闭环（读者 5、配置顾问 5、开发者 5）；未声称独立专家或独立代理审查，因此不计入 role-reviewed 文章数。
+- 未推导 FI-07 普通库存采购借贷、税或自动科目规则；未连接 SAP，无实机验证。来源见 `evidence-finance-m3.md` 的 M4 FI-11 记录和 `reviews/work/2026-11-27-m4-fi11-three-role-review.md`。
+- 批次 A 全局 reviewed/accepted 计数保持不变：8/50、0/50；全库接受 3/99。工作线 5 下一项 CO-01。
