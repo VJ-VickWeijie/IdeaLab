@@ -47,6 +47,6 @@
 /root/reader_plan 独立通过 curl 获取并实读上述六个 AS ABAP Release 756（©2021 SAP SE）页面，复核本报告的 INTO/APPENDING、分包、显式/隐式游标及提交/回滚表述。该上下文未计算哈希、未运行 SAP 或 ABAP。复核者提出两项精度修订：将 FOR ALL ENTRIES 与 PACKAGE SIZE 的页面提示从“可能”修正为文档明确的先读入全部选中行再分包；补充 CALL DIALOG 特殊场景中 SAP LUW 的例外及数据库提交仍发生。Work 已执行上述两项修订，复核者重新检查后确认两项语义修订准确，并指出 CALL DIALOG 特例应归于 Effect 中的特殊情形而非笼统归入 Hints；Work 接受并改为“文档另列”以精确定位。复核者随后指出，不应将该例外泛化至所有特殊调用；Work 按建议限定为 CALL DIALOG 被调程序中的特定情形，并保留 Hints 对数据库提交的说明，原复核者复读最终句后确认特例已限定在 CALL DIALOG 被调程序，且 Hints 的提交说明准确；此项文献交叉复核关闭。此为文献交叉复核，不计正式文章审核轮次。
 
 
-## 相关 M3 补充：内存 dump 排障边界
+## 相关 M3 补充：内存 warning 与排障边界
 
-[ABAP-02 内存短转储与资源诊断补充](abap02-memory-dump-admin-boundary-m3.md)记录 SAP KBA 2180736 公开预览及 SAP Help Support Content 指南的通用排障支持范围。两项资料可帮助区分系统资源诊断与定制代码分析，但均未固定 S/4HANA 2021/FPS；它们不构成 TRY...CATCH 语义、目标系统参数或系统测试的证明。
+[ABAP-02 内存短转储与资源诊断补充](abap02-memory-dump-admin-boundary-m3.md)新增 SAP ABAP Platform 2021 (Oct 2021) 内存 quota soft-warning 与 hard-limit 资料：warning threshold 可产生不终止程序的 short dump，不能据此实现 TRY...CATCH 停止；同时记录 KBA 2180736、Support Content 通用诊断和一个 S/4HANA 2021 的有限同现案例。参数设置、目标系统运行行为及 warning 是否能及时提醒仍需系统侧确认。
