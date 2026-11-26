@@ -21,7 +21,7 @@
 | T13 | [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/html/2005.11401v4)，2021-04-12 v4，2020 初版 | `Abstract`、§1–2；论文中的参数化/非参数化记忆与检索生成方法，非权限系统、安全或 SAP 实现规范。 |
 | T14 | [Toolformer](https://arxiv.org/html/2302.04761v1)，2023-02-09 v1 | `Abstract`、§2；论文讨论模型选择 API 和参数，不保证工具授权、生产可用性或 SAP 集成。 |
 | T15 | [SAP Gateway Authorization](https://help.sap.com/docs/ABAP_PLATFORM_NEW/68bf513362174d54b58cddec28794093/815c22518bc72214e10000000a44176d.html?version=202110.latest)，ABAP Platform 2021 Latest，具体 FPS 待确认 | 协调者通过浏览器实际读取 Gateway Security Guide 与 Authorization 子页：该页说明检查基于发起用户的授权对象。独立审查者已通过浏览器实际重读并确认此有限表述；不证明具体服务对象、用户权限或令牌方式。 |
-| T16 | [SAP Support：Purchasing BAPIs](https://help.sap.com/docs/SUPPORT_CONTENT/spmm/3362167428.html) 及[相关采购 BAPI 示例](https://help.sap.com/docs/SUPPORT_CONTENT/spmm/3362167600.html)，ECC；未声明 S/4HANA 2021 版本 | 协调者通过浏览器实际读取，材料涉及 `BAPI_PO_CREATE1` 与 `BAPI_TRANSACTION_COMMIT`。独立审查者已通过浏览器实际重读：该例以 ECC 为背景，且页面标为 SAP Support Content。不可据此证明 2021 特定 BAPI 事务及提交行为。 |
+| T16 | [SAP Support：Purchasing BAPIs](https://help.sap.com/docs/SUPPORT_CONTENT/spmm/3362167428.html) 及[How to create a Purchase Order with BAPI_PO_CREATE1](https://help.sap.com/docs/SUPPORT_CONTENT/spmm/3362167600.html)，ECC/R/3 背景；未声明 S/4HANA 2021 版本 | Work 与独立开发复核上下文分别直接读取两页。页面均标注 Additional Content（SAP 说明其不属于适用 SAP 条款定义的 Documentation）；有限支持 ME21N/BAPI_PO_CREATE1 对应、TESTRUN 无数据库效果、SE37 示例先调用创建再调用 `BAPI_TRANSACTION_COMMIT`、X 结构和 RETURN/调试线索。无目标版本选择器，未说明 2021 函数级提交/回滚、更新任务、WAIT 保证、RFC/LUW 边界或完整失败处理；不作为 S/4HANA 2021 契约。 |
 
 T1 使用动态 `latest` 地址，同一 URL 曾发生版本漂移。先前独立记录的该地址现版文件 SHA-256 为 `ad3c9913ee1f0cbe81e4ede4cb15192c4fcda6497dcf9ac0654dde04b541aaec`，大小 3,056,745 字节；**本次仅通过网页阅读正文，没有下载、计算哈希或归档对应文件**，无法独立确认该摘要与本次看到的字节一致。该 URL 不保证长期复现；内容替换或后续使用时需重新读取、计算哈希并核对证据段落，不得视为固定版资料。
 
@@ -34,7 +34,7 @@ T1 使用动态 `latest` 地址，同一 URL 曾发生版本漂移。先前独�
 | ABAP-01 | T1 §2.15.1 数据建模、BOPF，PDF 物理页 203–205 | 可支持字典、CDS 与业务对象封装数据/逻辑的基础概念；采购业务对象与事务映射、精准 FPS 未证。 | 部分可证，目标 FPS 待核 |
 | ABAP-02 | [SAP 7.56 SQL/游标关键字直接来源](abap-756-keyword-direct-m3.md)：Release 756（©2021），六页原文由研究者实读并有独立复核；含修订后的 FAE 分包与 CALL DIALOG 边界 | 可支持 INTO/APPENDING、PACKAGE SIZE、隐式/显式游标和提交/回滚的限定语义；不能推导所有系统会 dump 或分包能保证内存安全 | 目标系统 FPS、具体程序的内存/性能/并发、实际权限与异常仍未验证；来源不是系统实测 |
 | ABAP-03 | T2 `Additional Details` | 支持 SQLMD 特定版本选项；ABAP debugger、SAT/ST05 权限、执行影响及实际跟踪仍待单独核验。 | 部分可证，文档版本字段 FPS00；系统适用性待核 |
-| ABAP-04 | T3 `Transaction Control in Client`、`Comment`；T5 物理页 158–159；T16 ECC 采购例子；[2021 PO 扩展页面](extension-2021-evidence-m3.md) | SAP 2021 页面直接支持 BAPI_PO_CREATE1 采购订单创建的自定义字段扩展（限页面所列范围），但不谈事务；通用模型有例外，T5 是特定应用，T16 是 ECC。**不能据此推定 2021 采购 BAPI 的具体事务语义**。提交、回滚、更新任务与消息行为仍待目标函数证据。 | 自定义字段子命题部分可证；目标 BAPI 事务证据仍阻断 |
+| ABAP-04 | T3 通用事务模型；T5 特定 Dispute Management 场景；T16 ECC/R/3 SAP Support Additional Content（Work 与独立开发复核上下文直接读过）；[2021 PO 扩展页面](extension-2021-evidence-m3.md) | T16 仅有限支持 PO BAPI 对应、TESTRUN、SE37 测试序列（创建后提交）、X 结构及 RETURN/调试线索，且页面明示 Additional Content、ECC/R/3 背景、无目标版本选择器；2021 扩展页只支持自定义字段扩展。**不能拼接为 S/4HANA 2021 的函数级事务契约**。提交/回滚、更新任务、WAIT/RFC/LUW 和消息失败分支仍待直接证据。 | 辅助示例已直接读并独立复核；目标 BAPI 事务证据仍阻断 |
 | ABAP-05 | T4 §3.4.2.1.2，物理页 85–86；T10 物理页 24 | T4 支持 FPS01 特定 BAdI 的增强用途；T10 仅支持对应 MRP 场景。其他增强点、发布 API 和各系统配置未证。 | 部分可证，FPS01 特定对象 |
 | ABAP-06 | T5 PDF 物理页 158–159 | 指定 Dispute Management 场景分别有 RFC 对话调用和 BAPI 通信角色；不证明一般 RFC 事务、重试和幂等语义，也不能取代接口文档。 | 部分可证，FPS及接口级行为待核 |
 | ABAP-07 | [2021 ABAP 工具事务码来源](abap07-tool-evidence-m3.md)：作者实读 SE37、ST22、SAT、SE11 和 ST05 对应页面；独立复核仅覆盖 SE37 与 ST22，ST05 页面为 FPS02，其他页面版本各有限定 | 可支持若干具体工具入口及页面所述只读/执行差异；dump 可按登录 client 等权限规则查看，SAT 与 ST05 用途不同 | SE80 未取得直接资料；其余页面的独立复核、权限对象、目标系统 FPS 与实际操作影响仍待核，不能把文档存在等同系统授权 |
@@ -61,14 +61,14 @@ T1 使用动态 `latest` 地址，同一 URL 曾发生版本漂移。先前独�
 ## 阻断清单
 
 1. **ABAP-04** 新增的 [SAP 2021 PO 扩展页面](extension-2021-evidence-m3.md) 只支持 BAPI_PO_CREATE1 自定义字段扩展这一功能，不包含该采购 BAPI 的事务协议；仍缺目标 S/4HANA 2021 特定提交、回滚、更新任务与消息语义的公开可读直接资料。T3 旧版资料不得冒充目标函数事实。
-   补充线索：SAP 官方 [Function Module Test Sequence](https://help.sap.com/docs/SUPPORT_CONTENT/abap/3353523556.html) 和 [BAPI Purchase Order 示例](https://help.sap.com/docs/SUPPORT_CONTENT/ABAP/3353524339.html?locale=en-US&state=PRODUCTION&version=LATEST) 的搜索摘要涉及 `BAPI_PO_CREATE1` 与提交调用；**本次打开均返回零行，且摘要未固定 S/4HANA 2021 版本**，不能计为已阅读、不能证明目标版本事务行为。
+   补充来源：Work 与独立开发复核上下文直接读取 SAP [Purchasing BAPIs](https://help.sap.com/docs/SUPPORT_CONTENT/spmm/3362167428.html) 和 [BAPI_PO_CREATE1 采购订单示例](https://help.sap.com/docs/SUPPORT_CONTENT/spmm/3362167600.html)。两页均标有 Additional Content 声明并以 ECC/R/3 为背景；支持范围限于 BAPI/ME21N 对应、TESTRUN、SE37 示例的创建后提交序列、X 结构与 RETURN/调试提示。它们无 2021 版本选择器，不能证明目标版本函数级事务行为。此前其他 Function Module Test Sequence 页面在原研究上下文中打开零行的记录仍按当时结果保留，不等于这些新读页面。
 2. T1/T5/T10 是 2021 产品系列持续更新文档，虽可读但不能直接证明 2021 初始版/FPS01/FPS02 的全部功能。目标系统 FPS 未知；逐条标记所需 FPS 和证据，不由本台账推断。
 3. 26 个 ID 均有部分相关背景或子命题资料；部分仅为邻近背景，核心直接来源尚未完成；不少文章仍缺特定字段、接口、版本、授权、配置及异常的直接依据，不能宣称完整证据满足对应文章，也不自动等同 M3 出口要求全部达标。是否满足本项目 M3 每篇来源门槛由协调者结合具体范围和独立评审裁定。
 4. 无公司 SAP 环境、生产数据和实机验证。本文只核对公开资料；不执行指南中的配置/开发步骤。
 
 ## 恢复用量后的独立复核
 
-独立审查者 `/root/consultant_plan` 基于 PR #20 `0730c3fc66292c1ae22ff95a0d9b89847b930d70` 实际读取 T15 和 T16，并在当时根据 `Available As Of` 字段复核 T2 的修订。后续另一审查者发现页面底部还有标 FPS00 的 `Version` 字段，已由独立开发者复读；详见后续记录。T15 的 2021 Latest 页面可支持该授权检查概念，但不能推断特定服务角色；T16 页面为 ECC 背景的 SAP Support Content，不证明 S/4HANA 2021 的特定采购 BAPI 事务。T15/T16 的这次有限表述已完成独立来源复核，**ABAP-04 的目标版本事务依据仍未解决**；这不是正式文章审核。
+独立审查者 `/root/consultant_plan` 基于 PR #20 `0730c3fc66292c1ae22ff95a0d9b89847b930d70` 实际读取 T15 和 T16，并在当时根据 `Available As Of` 字段复核 T2 的修订。后续另一审查者发现页面底部还有标 FPS00 的 `Version` 字段，已由独立开发者复读；详见后续记录。T15 的 2021 Latest 页面可支持该授权检查概念，但不能推断特定服务角色。对 T16 的两篇 SAP Support Additional Content 页面，Work 与独立开发复核上下文在 2026-11-26 分别直接读取并确认其 ECC/R/3 背景、示例的有限内容及版本边界；不证明 S/4HANA 2021 采购 BAPI 事务契约。这些是 M3 来源交叉核验，不是正式文章审核。
 
 
 ## 追加技术来源（研究记录）
