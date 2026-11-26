@@ -1,7 +1,7 @@
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
-更新时间：2026-11-26（Asia/Shanghai）  
-状态：**M3 已验收；M4 完整 99 篇分两批建设已授权。FI-01～FI-03 所有者已接受（3/99）；FI-05、MM-01～MM-07 已完成三角色 review（15、16、15、18、18、15、15、15 个有效闭环），均待所有者验收。批次 A 进行中，8/50 reviewed、0/50 owner accepted；FI-04/FI-06 因证据缺口保持 drafting。**
+更新时间：2026-11-27（Asia/Shanghai）  
+状态：**M3 已验收；M4 完整 99 篇分两批建设已授权。FI-01～FI-03 所有者已接受（3/99）；FI-05、MM-01～MM-07 已完成三角色 review 并计入 8/50 reviewed。MM-08 三角色闭环 15/15，但固定版核心导航证据未闭合，保持 drafting，不计入 reviewed；批次 A 为 8/50 reviewed、0/50 owner accepted。FI-04/FI-06 继续 drafting。**
 
 ## 当前仓库、分支与 PR
 
@@ -57,11 +57,12 @@
 | MM-05 库存类型与货物移动 | 15/15 | reviewed（待所有者验收） | 不列未锁版移动代码；供应商寄售 K 权属、转移时点和 FI 估价仍待直接证据 |
 | MM-06 收货、退货与冲销 | 15/15 | reviewed（待所有者验收） | 冲销与退货的目标版单据操作、部分数量、发票顺序与 FI 影响没有足够直接证据；正文限缩到已证实业务意图与 FSD 能力 |
 | MM-07 价格单位、数量单位与换算 | 15/15 | reviewed（待所有者验收） | 不推断底层转换对象、接口字段覆盖、任意计价数量行为或发票匹配规则 |
+| MM-08 MM 常用事务码导航 | 15/15 AI 评审闭环 | drafting（不计入 8/50） | 物料凭证显示入口、通用 MIGO 导航仍缺固定版 2021 直接证据；GUI/Fiori 逐代码映射与权限未核实 |
 | FI-04 公司代码、会计科目表与总账科目 | 14/15 | drafting | SAP S/4HANA 2021 公司代码的一般定义/组织用途缺少直接证据 |
 | FI-05 会计凭证、过账与冲销 | 15/15 | reviewed | 等待后续所有者审阅；无已知严重角色问题 |
 | FI-06 应付与应收 | 9/15 | drafting | 客户/供应商子账与总账、目标版 open item/clearing、部分付款/剩余项目缺固定版证据 |
 
-下一项明确任务：继续批次 A，按批准路径 `knowledge/MM/03-tcodes/transaction-index.md` 建设 MM-08《MM 常用事务码导航》。先依 M3 逐篇分流和控制矩阵限定可写条目；逐事务核实目标版本用途、所作用对象、显示/修改边界及权限前提。只收录有目标版直接证据的导航条目；不能由业务功能推定事务码，也不把企业系统可见/可改权限当成一般产品规则。三角色各按需完成 5～10 个有效闭环，严重缺陷修复和原角色复核后才标 reviewed。MM-07 已完成审核，待所有者验收；FI-04/FI-06 继续保留在独立证据队列。
+下一项明确任务：继续批次 A 的 MM-09，按 M3 逐篇分流和控制矩阵核对普通估价库存收货、OBYC/BSX/WRX 方向的目标版证据。MM-08 已有 15 个三角色 AI 评审闭环，但固定版核心导航范围未闭合，保持 drafting；后续如补到物料凭证显示入口或通用 MIGO 导航的 2021 直接资料，须补正文并由原角色复核。MM-07 已完成审核，待所有者验收；FI-04/FI-06 继续保留在独立证据队列。
 
 每个独立工作包都要提交文章、真实审核记录、状态和本 HANDOFF 更新到 PR #21。不要把计划、来源登记、导航或草稿统计成正式接受文章；不要合并 PR。
 
@@ -135,6 +136,8 @@
 - [MM-06 三角色审查记录](reviews/work/2026-11-26-m4-mm06-three-role-review.md)
 - [MM-07 价格单位、数量单位与换算](knowledge/MM/02-functions/price-unit-conversion.md)
 - [MM-07 三角色审查记录](reviews/work/2026-11-26-m4-mm07-three-role-review.md)
+- [MM-08 MM 常用事务码导航（证据受限草稿）](knowledge/MM/03-tcodes/transaction-index.md)
+- [MM-08 三角色审查记录](reviews/work/2026-11-27-m4-mm08-three-role-review.md)
 - [PP-07 PP 常用事务码导航（证据受限草稿）](knowledge/PP/03-tcodes/transaction-index.md)
 - [PP-07 三角色审查记录](reviews/work/2026-11-27-m4-workline-3-pp07-review.md)
 - [首批 FI-01～FI-03 审核答复记录](reviews/work/2026-11-26-m4-batch01-round1-response.md)
@@ -146,7 +149,7 @@
 
 ## 新窗口可直接使用的接手指令
 
-接手 GitHub 仓库 `VJ-VickWeijie/IdeaLab` 中的 CareerOS。先实时读取 PR #21、分支 `careeros-v04-m4-batch1-20261126`、`main` 和 PR #20 的状态及最新 HEAD；PR 不合并。然后读取本 HANDOFF、CareerOS README、[M4 两批执行计划](plans/m4-two-batch-execution-2026-11-26.md)、[本批 FI-04～FI-06 审查记录](reviews/work/2026-11-26-m4-batch-a01-fi04-fi06-review.md)、reviews/README、知识树和当前所选文章对应的控制矩阵/证据登记。M3 已验收；M4 全部 99 篇分批建设已授权。FI-01～FI-03 已获所有者肯定，正式接受 3/99。FI-05（15）、MM-01（16）、MM-02（15）、MM-03（18）、MM-04（18）、MM-05（15）、MM-06（15）、MM-07（15）均 reviewed、待所有者验收；批次 A 为 8/50 reviewed、0/50 owner accepted；下一篇 MM-08。不要重复 M0～M3 或已完成的研究；不要把草稿/来源登记算成正式文章；保留五项 M3 证据边界及 FI-04/FI-06 新阻碍；继续批次 A 中可独立写作的文章。每完成一个工作包，真实记录三角色问题、Work 答辩/修改、原角色复核及闭环数，更新本 HANDOFF 并提交到 PR #21。
+接手 GitHub 仓库 `VJ-VickWeijie/IdeaLab` 中的 CareerOS。先实时读取 PR #21、分支 `careeros-v04-m4-batch1-20261126`、`main` 和 PR #20 的状态及最新 HEAD；PR 不合并。然后读取本 HANDOFF、CareerOS README、[M4 两批执行计划](plans/m4-two-batch-execution-2026-11-26.md)、[本批 FI-04～FI-06 审查记录](reviews/work/2026-11-26-m4-batch-a01-fi04-fi06-review.md)、reviews/README、知识树和当前所选文章对应的控制矩阵/证据登记。M3 已验收；M4 全部 99 篇分批建设已授权。FI-01～FI-03 已获所有者肯定，正式接受 3/99。FI-05（15）、MM-01（16）、MM-02（15）、MM-03（18）、MM-04（18）、MM-05（15）、MM-06（15）、MM-07（15）均 reviewed、待所有者验收；MM-08 有 15 个 AI 评审闭环但因核心证据缺口保持 drafting，不计入 reviewed；批次 A 为 8/50 reviewed、0/50 owner accepted；下一篇 MM-09。不要重复 M0～M3 或已完成的研究；不要把草稿/来源登记算成正式文章；保留五项 M3 证据边界及 FI-04/FI-06 新阻碍；继续批次 A 中可独立写作的文章。每完成一个工作包，真实记录三角色问题、Work 答辩/修改、原角色复核及闭环数，更新本 HANDOFF 并提交到 PR #21。
 
 
 ## 工作线 2 进度追记（2026-11-27）
@@ -194,3 +197,11 @@
 - PP-02 不增加批次 A reviewed/owner accepted 数量：仍为 8/50 reviewed、0/50 owner accepted；全库正式接受仍为 3/99。SAP 系统未连接，实机验证为 0。
 - 尚未闭合的核心：一般 BOM 数量/单位与计算、替代项选择和 lot size/有效日期/生产版本关系、一般有效期规则、组件缺失行为、表字段及 released API；SAP 官方固定版证据不足。M3 的 FSD_OP2021_latest.pdf 动态 URL 未作为固定版 2021 证据。
 - 工作线 2 下一篇：PP-03《工作中心与工艺路线 Routing》，路径以 M3 逐篇准入分流为准。开始前只读取 PP-03 对应的控制/分流/来源和关联文章。
+
+
+## 工作线 1 进度（2026-11-27，MM-08）
+
+- **MM-08《MM 常用事务码导航》**：已建立证据受限正文，路径 `knowledge/MM/03-tcodes/transaction-index.md`。固定版 SAP S/4HANA 2021 页面支持有限物料主数据事务族与采购订单事务族；MIGO 短文本仅列为 2021 SPS05 场景受限示例。未将事务家族证据扩展为逐代码模式/授权映射，也未添加缺乏 2021 固定版依据的 Fiori 分类。
+- 审查记录：`reviews/work/2026-11-27-m4-mm08-three-role-review.md`。普通读者、配置顾问视角、开发者视角各 5 个有效闭环，共 15；由三个独立 AI 子代理上下文完成，不代表人类 SAP 专家意见、不同模型证明或实机测试。原上下文完成复核，15/15 闭环。
+- 状态仍为 **drafting**，不计入批次 A reviewed（总计仍为 **8/50**），不计 owner accepted（**0/50**）；全库正式接受仍为 **3/99**。未闭合核心：物料凭证显示入口、通用 MIGO 导航的固定版 2021 On-Premise 直接证据；同时没有逐代码权限矩阵。SAP 系统未连接，未做实机验证。
+- 工作线 1 下一篇：**MM-09**。先按 M3 控制矩阵和逐篇准入路径处理普通估价库存收货、OBYC/BSX/WRX；按固定版证据边界写作，不因 MM-08 局部缺口停住后续工作。
