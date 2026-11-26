@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-26 更新）
 
-> 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。M3 已验收；M4 完整 99 篇分两批建设已获授权。FI-01～FI-03 已由所有者接受，正式接受 3/99。批次 A 已有 7/50 篇完成三角色审核、0/50 篇获所有者接受；其中 FI-05、MM-01～MM-06 已 reviewed，FI-04/FI-06 保持 drafting。下一篇为 MM-07《价格单位、数量单位与换算》。MM-06 审查记录见[三角色记录](reviews/work/2026-11-26-m4-mm06-three-role-review.md)。详见 [HANDOFF](HANDOFF.md) 与[两批执行计划](plans/m4-two-batch-execution-2026-11-26.md)。
+> 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。M3 已验收；M4 完整 99 篇分两批建设已获授权。FI-01～FI-03 已由所有者接受，正式接受 3/99。批次 A 已有 8/50 篇完成三角色审核、0/50 篇获所有者接受；其中 FI-05、MM-01～MM-07 已 reviewed，FI-04/FI-06 保持 drafting。下一篇为 MM-08《MM 常用事务码导航》。MM-06 审查记录见[三角色记录](reviews/work/2026-11-26-m4-mm06-three-role-review.md)，MM-07 审查记录见[三角色记录](reviews/work/2026-11-26-m4-mm07-three-role-review.md)。详见 [HANDOFF](HANDOFF.md) 与[两批执行计划](plans/m4-two-batch-execution-2026-11-26.md)。
 ## 项目主旨
 利用工作日合规的碎片时间，建立**中文为主、保留英文术语**的 SAP 业务与技术知识网络，同时保留 24 个月职业成长课程。目标不只是记住 T-Code，而是理解企业为什么需要某个流程、完整业务/单据/物流/财务流、SAP 如何实现，以及跨模块关联；FI/CO 从零基础解释。长期发展方向是 SAP MM/QM + ABAP/S/4HANA 架构 + 企业 AI 集成。
 
@@ -15,8 +15,8 @@
 - M3 已由所有者验收。
 - M4 已获授权：完整 99 篇分两批自主建设；首批 FI-01～FI-03 已获所有者肯定，正式接受 3/99。
 - 当前批次 A01：FI-04 公司代码/科目表/总账科目（14/15 项意见已闭环，核心定义证据未闭合，drafting）；FI-05 会计凭证/过账/冲销（三角色各 5 个有效闭环，reviewed）；FI-06 应付/应收（9/15 项意见已闭环，SAP 子账/清账/部分付款核心证据未闭合，drafting）。
-- 批次 A 已 reviewed：FI-05（15 个有效闭环）、MM-01（16）、MM-02（15）、MM-03（18）、MM-04（18）、MM-05（15）、MM-06（15）；均等待所有者验收。MM-02 七类信息表校准见[审查记录](reviews/work/2026-11-26-m4-mm02-three-role-review.md)；MM-03 的来源版本边界、供应商简称/来源对象区分和链接修正见[审查记录](reviews/work/2026-11-26-m4-mm03-three-role-review.md)；MM-04 的限额项/RFQ 入门解释、审批术语与证据边界见[审查记录](reviews/work/2026-11-26-m4-mm04-three-role-review.md)；MM-05 的库存范围、权属推论及移动类型证据边界见[审查记录](reviews/work/2026-11-26-m4-mm05-three-role-review.md)；MM-06 的三角色审核与退货/记录纠错边界见[审查记录](reviews/work/2026-11-26-m4-mm06-three-role-review.md)。下一篇为 MM-07《价格单位、数量单位与换算》。
-- 批次 A 50 篇、批次 B 46 篇，当前批次 A 为 7/50 role-reviewed、0/50 owner-accepted；文章逐项状态见 [HANDOFF](HANDOFF.md)。完整范围见[执行计划](plans/m4-two-batch-execution-2026-11-26.md)。证据受限文章不自动计为正式接受；独立文章不因局部证据缺口停摆。
+- 批次 A 已 reviewed：FI-05（15 个有效闭环）、MM-01（16）、MM-02（15）、MM-03（18）、MM-04（18）、MM-05（15）、MM-06（15）、MM-07（15）；均等待所有者验收。MM-02 七类信息表校准见[审查记录](reviews/work/2026-11-26-m4-mm02-three-role-review.md)；MM-03 的来源版本边界、供应商简称/来源对象区分和链接修正见[审查记录](reviews/work/2026-11-26-m4-mm03-three-role-review.md)；MM-04 的限额项/RFQ 入门解释、审批术语与证据边界见[审查记录](reviews/work/2026-11-26-m4-mm04-three-role-review.md)；MM-05 的库存范围、权属推论及移动类型证据边界见[审查记录](reviews/work/2026-11-26-m4-mm05-three-role-review.md)；MM-06 的三角色审核与退货/记录纠错边界见[审查记录](reviews/work/2026-11-26-m4-mm06-three-role-review.md)；MM-07《价格单位、数量单位与换算》完成三角色审核（15 个有效闭环）并待所有者验收，记录见[审查记录](reviews/work/2026-11-26-m4-mm07-three-role-review.md)。下一篇为 MM-08《MM 常用事务码导航》。
+- 批次 A 50 篇、批次 B 46 篇，当前批次 A 为 8/50 role-reviewed、0/50 owner-accepted；文章逐项状态见 [HANDOFF](HANDOFF.md)。完整范围见[执行计划](plans/m4-two-batch-execution-2026-11-26.md)。证据受限文章不自动计为正式接受；独立文章不因局部证据缺口停摆。
 - FI-07、PROCESS-01、MM-09、ABAP-02、ABAP-04 保持既有未闭合状态；本批不写依赖这些证据的 SAP 自动过账、采购完整借贷、内存阈值或 BAPI 专属合同断言。
 - 未连接 SAP 系统；本批没有实机测试。
 - 首批完整审核追踪见 [首轮意见答复与修订记录](reviews/work/2026-11-26-m4-batch01-round1-response.md)；当前批次提交与 PR 以 HANDOFF 和 M4 PR 的实时信息为准；不合并 PR。
