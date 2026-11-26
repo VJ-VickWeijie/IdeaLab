@@ -310,3 +310,12 @@
 - 文章仍为 drafting。一般结果录入字段/缺陷处理、自动 UD 完整资格、UD 撤销、移动类型、库存估价与 FI/CO 影响、具体角色/权限映射仍未闭合。EWM 不用于推导普通 IM 行为；PROCESS-06 正文在当前分支不存在。SAP 系统未连接、实机测试为 0。
 - QM-04 不改变批次 A **8/50 reviewed、0/50 owner accepted** 或全库正式接受 **3/99**；本次角色模拟不计正式 reviewed。
 - 工作线 3 下一篇：**QM-05《质量库存与采购生产集成》**，路径 knowledge/QM/02-functions/quality-stock-integration.md。按准入“暂缓核心”处理，逐篇读取固定版来源；特别避免用 EWM 例子代替一般 IM 库存与财务证据。
+
+## 工作线 2 进度追记（2026-11-27，PP-06）
+
+- **PP-06《生产发料、收货与成本》**正文与 Work 审查记录已提交至当前 PR，路径分别为 `knowledge/PP/02-functions/production-goods-cost.md` 与 `reviews/work/2026-11-27-m4-workline-2-pp06-three-role-review.md`；文章状态 `drafting`。
+- 三个角色视角各 5 个闭环，共 15 个同一 Work 上下文内的模拟循环，不是独立审查者或真人专家复核。文章及审核记录明确披露此限制，不计入正式 role-reviewed 数。
+- 正文的直接产品依据限于 SAP S/4HANA 2021 SPS10 FSD 动态链接实际读取快照（文档版本 11.0，2026-07-22），并引用固定 2021.000 BJ5 生产订单对象页的已记录货物移动显示范围。发料/收货数量方向和少量成本对象概览已限缩呈现。
+- 库存估价和实际金额、退料/冲销触发、差异/WIP/结算算法、FI/CO 科目与凭证关系、字段/API/权限、EWM/MES 集成仍未闭合；CO-04 正文在当前分支不存在。SAP 系统未连接，实机测试 0。
+- 工作线 2 当前已有 7 篇正文（SD-06、PP-01～PP-06），全部 drafting；累计模拟闭环 105（每篇各角色 5），不计 reviewed。批次 A 仍为 **8/50 reviewed、0/50 owner accepted**；全库正式接受为 **3/99**。
+- 工作线 2 下一篇：**SD-07《销售与交货数据模型》**，批准路径 `knowledge/SD/05-data-model/sales-delivery.md`；开始前只读取该篇自身控制/准入、来源和关联材料。
