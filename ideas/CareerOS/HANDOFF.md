@@ -253,3 +253,12 @@
 - 核心入门证据来自 SAP S/4HANA 2021 Feature Scope Description v9.0（适用于 SP08）的总账、成本中心与计划/实际报告说明，以及 2021 Simplification List §8.1 的有限 Universal Journal 背景。记录见 [CO-01 审查](reviews/work/2026-11-27-m4-co01-three-role-review.md) 和 [M4 财务证据登记](plans/evidence-finance-m3.md)。
 - 独立复核仍待完成；范围外的自动成本对象归属、计划维护、分摊/结算规则、利润分析配置、表/API/字段和权限仍不作通用断言。FI-07普通库存采购借贷、税及自动科目边界未扩展。SAP未连接，无实机测试。
 - 批次 A 正式 reviewed 仍为 8/50、owner accepted 为 0/50；全库 owner accepted 为 3/99。工作线 5 下一篇 CO-02《成本中心与成本要素》，路径 knowledge/CO/02-functions/cost-center-elements.md；接手时先读取其准入项与证据登记，本次未加载 CO-02 完整研究资料。
+
+
+## 工作线 2 进度追记（2026-11-27，PP-04）
+
+- **PP-04《需求、MRP 与计划订单》**已按 M3 准入路径建立证据受限正文，状态 drafting，路径 knowledge/PP/02-functions/mrp-planned-order.md。正文区分 MRP 的高层补货规划、计划订单与采购申请/生产订单，并把纸面算术标为非 SAP 算法/系统结果。
+- [PP-04 Work 角色视角记录](reviews/work/2026-11-27-m4-pp04-three-role-review.md)记载普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各 5 个同上下文模拟闭环，共 15；不是独立审查者或真人专家意见，不计入正式 reviewed 数。
+- 来源范围：固定版 SAP S/4HANA 2021.000 Help 仅支持 J44 的 Monitor Material Coverage 功能条目和 Planned Order API 范围；Operations Guide 及 Feature Scope Description 实际所读为 2021 SPS10、文档版本 11.0/2026-07-22。FSD URL 动态，文章只标为 SPS10 快照参考，不冒充固定 2021 初始版。
+- 净需求算法、批量/lot-sizing 参数、库存与收货纳入、计划提议类型选择、客户系统设置、完整 API/数据模型与权限仍未闭合。PP-04 保持 drafting；不增加批次 A reviewed 或 owner accepted 数。批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，全库正式接受 **3/99**；SAP 系统未连接，无实机测试。
+- 工作线 2 下一篇：**PP-05《生产订单与确认》**，批准路径 knowledge/PP/02-functions/production-order.md；开始前只读取该篇对应准入、来源及关联材料。
