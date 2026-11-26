@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-26 更新）
 
-> 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。CareerOS 项目级 M3 门禁调整已获所有者批准，当前进行 M3 收尾复核；M4 未授权。见[门禁调整与审批记录](plans/m3-closeout-batched-m4-proposal-2026-11-26.md)。
+> 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。CareerOS 项目级 M3 门禁调整已获所有者批准，三角色计划级收尾复核已通过；M3 阶段验收待所有者，M4 未授权。见[复核报告](reviews/work/2026-11-26-m3-gate-closeout-review.md)和[门禁调整记录](plans/m3-closeout-batched-m4-proposal-2026-11-26.md)。
 
 ## 项目主旨
 利用工作日合规的碎片时间，建立**中文为主、保留英文术语**的 SAP 业务与技术知识网络，同时保留 24 个月职业成长课程。目标不只是记住 T-Code，而是理解企业为什么需要某个流程、完整业务/单据/物流/财务流、SAP 如何实现，以及跨模块关联；FI/CO 从零基础解释。长期发展方向是 SAP MM/QM + ABAP/S/4HANA 架构 + 企业 AI 集成。
@@ -12,12 +12,12 @@
 4. **质量机制**：Work 负责写作、答辩和修订；普通用户、资深 SAP 配置顾问、普通 SAP 开发人员分别对每篇正式文章按需进行**5～10 个有效质询—答辩—修订—复核轮次**，三角色合计 15～30 轮，完整过程存入 GitHub。不得将同一模型的角色扮演冒充独立子代理。
 
 ## 当前真实进度（2026-11-26）
-- 所有者于 2026-11-26 明确批准 CareerOS 项目级 M3 门禁调整（不修改 AI-Workflow V1.1），Work 正按新的计划级出口完成独立 M3 收尾复核。99 项分流见 [文章级准入分类](plans/m3-item-readiness-triage-v0.3.md)；当前 M3 尚待本轮复核和所有者阶段验收，M4 仍未授权。
+- 所有者于 2026-11-26 明确批准 CareerOS 项目级 M3 门禁调整（不修改 AI-Workflow V1.1）；普通读者、资深 SAP 配置顾问、普通 SAP 开发人员的计划级收尾复核均已通过。M3 阶段验收仍待所有者，M4 仍未授权。详见 [M3 收尾复核报告](reviews/work/2026-11-26-m3-gate-closeout-review.md)与 [99 项分流](plans/m3-item-readiness-triage-v0.3.md)。
 - PR #19 的 V0.3 蓝图已合并；所有者已批准 M0、M1、M2、99 篇正式文章范围及 11 个纯结构导航分类。
-- 当前沿用 PR #20 完成批准后的 M3 收尾复核；历史来源登记中的五项核心缺口仍按文章级边界处理，M4 尚未授权。
-- 2026-11-26 独立门禁复核确认 99 项仍是计划级来源登记，逐篇独立判定、实际批次角色/额度与阶段审批未完成；FI-07、PROCESS-01、MM-09、ABAP-02、ABAP-04 保持未闭合。ABAP-02 的四处文档一致性问题已修订并复核关闭，但不代表系统验证或 M3 通过。详见 [M3 门禁复核记录](reviews/work/2026-11-26-m3-gate-audit.md)。
+- 五项历史来源缺口仍按文章级边界处理，不阻止与其无关且证据充分的文章进入未来批次；M4 尚未授权。
+- [旧门禁审计](reviews/work/2026-11-26-m3-gate-audit.md)的“不满足出口”结论仅适用于门禁调整批准前的旧标准。按批准后的计划级门禁，M3 规划出口经三角色复核通过；此结论不等于所有者已验收 M3 阶段。五项核心风险仍未闭合，须在相关文章及主张中限缩或暂缓。
 - 后续独立结构复核修正了 FI-03/FI-07/MM-09/PROCESS-01 四行证据台账的列错位和三篇 SAP Learning 的 GR/IR 归因；配置顾问复核后关闭这些文字问题。开发者另复核技术与 AI 26 项计划登记，发现负责人/下一步、阅读与独立复核元数据仍不完整；ABAP-04 状态歧义已修订并由开发者复核。详见 [M3 Work 修订记录](reviews/work/2026-11-26-m3-structure-review-remediation.md)、[配置顾问记录](reviews/consultant/2026-11-26-m3-sourcefit-structure-review.md) 与 [开发者技术结构审查](reviews/developer/2026-11-26-technical-sourcefit-structure-review.md)。
-- 已将 72 项物流/流程/FI/CO/课程草案与 27 项技术/AI/术语草案合并为 [M3 全量控制矩阵](plans/m3-item-control-matrix-v0.3.md)，与 manifest 自动比对为 99/99 个唯一 ID。矩阵已逐项列出 Work 负责人、当前登记状态、下一步与有限复核范围；目标版本/场景、实际阅读者/日期、逐项证据和独立复核基线仍未全部归一，不能视为 M3 出口通过。
+- [M3 控制矩阵](plans/m3-item-control-matrix-v0.3.md)、批准 manifest 与 [文章级分流](plans/m3-item-readiness-triage-v0.3.md) 均对应 99 个唯一 ID；分流为 65 项“限缩可写”和 34 项“暂缓核心”，不代表正文或 M4 准入。逐篇 claim-level 核实仍在相应 M4 批次进行。
 - 尚未编写正式知识库正文、完成正式三角色文章审查、SAP 实机验证或全库链接验收；规划和文献研究不计作 V0.3 交付。
 - ABAP-04 另由独立开发者直接复读四篇 ABAP Platform 2021 (Oct 2021) 官方通用 BAPI 事务文档：支持一般调用方管理 LUW、commit/rollback 与 update process；它们没有 BAPI_PO_CREATE1 专属 WAIT、提交例外或返回消息决策合同。此前 ECC/R/3 Additional Content 仅作有限背景，函数级缺口仍未闭合。详见 [BAPI 事务证据复查](plans/bapi-transaction-search-m3.md)。
 - ABAP-02 新增 ABAP Platform 2021 (Oct 2021) 会话内存 soft warning 证据：warning threshold 越界时写 short dump 但不终止程序；目前没有依据表明 ABAP TRY...CATCH 可捕获该 warning 或自动停止，且该机制不能保证避免后续硬限额/内存 dump。独立开发者已复核版本标签、ST02 示例边界和 KBA 3435216 公开预览范围，确认三项措辞准确；目标系统参数值、kernel/FPS 和非生产实测仍待核。详情见 [ABAP-02 内存诊断补充](plans/abap02-memory-dump-admin-boundary-m3.md)及 [Work 执行记录](reviews/work/2026-11-26-abap02-memory-review.md)。
