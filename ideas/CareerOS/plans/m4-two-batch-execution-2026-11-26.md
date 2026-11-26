@@ -73,3 +73,7 @@ PP-02《物料清单 BOM》已建立证据受限文章，状态 drafting；三�
 ## 工作线 2 进度追记（2026-11-27，PP-03）
 
 PP-03《工作中心与工艺路线 Routing》已建立 drafting 草稿，并记录普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各 5 个同上下文模拟闭环（共 15；不计独立 review）。证据限于 S/4HANA 2021 BJ5 Manage Routings、BJ8 Work Center OData API、3W4 operation PRT API，以及 PEO 专用 routing 结构；不将这些场景泛化。通用 Routing 顺序/选择、工作中心字段和成本/产能关系、与 BOM/生产版本的普遍替代/有效期关系仍未闭合。批次 A 维持 8/50 reviewed、0/50 owner accepted；接受数 3/99；实机测试 0。下一篇 PP-04。详见 [文章](../knowledge/PP/01-foundations/work-center-routing.md) 和 [审查记录](../reviews/work/2026-11-27-m4-pp03-three-role-review.md)。
+
+## 工作线 5 进度追记（2026-11-27，CO-01）
+
+CO-01《管理会计从零：成本与利润》按批准路径完成限缩范围正文和目标版来源补查。普通读者、资深 SAP 配置顾问、普通 SAP 开发人员视角各5个有效模拟闭环，共15；均在同一Work上下文，非独立审核。核心范围有 SAP S/4HANA 2021 Feature Scope Description v9.0/SP08 与 2021 Simplification List §8.1 支持；具体成本对象分配、分摊/结算、利润分析配置、表/API/权限仍不作通用断言。文章保持 drafting，待独立复核；批次A仍8/50 reviewed、0/50 owner accepted。工作线5下一篇CO-02；该篇完整研究材料尚未读取。
