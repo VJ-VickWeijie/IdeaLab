@@ -26,6 +26,25 @@
 3. 指南按平台/实现列举若干参数，并提及可由 RSMEMORY 临时调整额度；同时明确额度提高属于 system administrator 的判断，不能脱离应用需求一概调高。参数示例不是本项目提供的调优步骤，执行前必须确认目标系统 OS、memory implementation、kernel、实际参数和权限。
 4. 指南将责任分成两部分：确认 memory mechanism 工作正常后，application team 分析异常内存消耗；如果异常来自客户定制程序，再由开发该程序的团队分析代码。它没有说所有此类 dump 都应归咎于代码，也没有说都应通过增加系统额度处理。
 
+## 来源三：ABAP Platform 2021 内存软阈值和硬限额
+
+SAP ABAP Platform 2021 (Oct 2021) 文档由独立开发审查上下文直接读取：
+
+- [Parameter Reference of SAP Memory Management](https://help.sap.com/docs/ABAP_PLATFORM_NEW/f146e75588924fa4987b6c8f1a7a8c7e/493431b15cce5717e10000000a42189b.html?version=202110.000)
+- [Session Memory](https://help.sap.com/docs/ABAP_PLATFORM_NEW/f146e75588924fa4987b6c8f1a7a8c7e/11c6413c521e4a13adf7473af49e8291.html?version=202110.000)
+
+参数参考表列出六个按百分比设置的参数，默认值均为 0：常规会话内存 warning 的 em/sessionmem_warn 与 em/sessionmem_warn_nondia、扩展额度 em/sessionmem_ext 与 em/sessionmem_ext_nondia、扩展额度 warning 的 em/sessionmem_ext_warn 与 em/sessionmem_ext_warn_nondia。
+
+Session Memory 页面区分软阈值与硬限额：在会话内存 quota 尚未用尽时越过 warning threshold，会产生 runtime warning 和 short dump，但程序不会因此终止；超过硬 quota 则会终止程序并写正常 short dump。扩展额度只适用于页面指定的受控场景；页面明确 CL_MEMORY_EXEMPTION 仅可由 SAP 内部使用，不构成客户程序通用的申请接口。参数表可用于辨认系统配置项，不能据此改动客户系统。
+
+这两份资料说明，S/4HANA 2021 对应的 ABAP Platform 文档存在 Basis 侧的会话内存软阈值监控机制；但它不是 TRY...CATCH 的异常事件或停止信号。公开正文未说明应用程序可读取/捕获该 runtime warning，也不保证程序收到该警告后停止。具体系统是否配置、实际 kernel/FPS、参数值和权限都需要目标 Basis 环境确认。
+
+## 来源四：S/4HANA 2021 的 warning 与资源 dump 同时出现的有限案例
+
+[SAP KBA 3564988 - FINS_CFIN_AIF_ANALYZER: Internal task handler error ABAP session terminated](https://userapps.support.sap.com/sap/support/knowledge/en/3564988) 的公开预览由 Work 直接读取；它标注 S4CORE 106、SAP S/4HANA 2021。对于特定 Central Finance AIF Analyzer 报告，预览称 ST22 中可见 SESSIONMEM_QUOTA_WARNING、TSV_TNEW_OCCURS_NO_ROLL_MEMORY 和 TSV_TNEW_PAGE_ALLOC_FAILED。
+
+该公开预览可证明这些 dump 名称在一个 S/4HANA 2021 产品场景中被一并列出；它没有公开全文，未说明三者发生顺序、共同根因、参数设置或一般适用条件。因此不能据此断言 soft warning 必然能阻止 TSV dump，也不能把特定 CFIN 报告推广为普通 SELECT 内表场景或任何客户系统结论。
+
 ## 对 ABAP-02 的证据判定与文章边界
 
 - 与已直接阅读的 [ABAP 7.56 SQL/游标关键词页面](abap-756-keyword-direct-m3.md)合并理解：目标版关键字原文能限定 PACKAGE SIZE、FAE、游标和提交边界；本补充支持通用的 ST22/ST02 排障视角、单进程额度与全局压力的区分，以及管理员/开发团队的责任边界。
