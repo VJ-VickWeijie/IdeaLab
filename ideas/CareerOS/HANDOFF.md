@@ -1,7 +1,7 @@
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-27（Asia/Shanghai）  
-状态：**M3 已验收；M4 完整 99 篇分两批建设已授权。FI-01～FI-03 所有者已接受（3/99）；FI-05、MM-01～MM-07 已完成三角色 review 并计入 8/50 reviewed。MM-08、QM-01 各有15个视角闭环但目标版核心证据未闭合，保持 drafting；FI-04/FI-06 继续 drafting。CO-01 为证据充分的限缩草稿，15个同上下文模拟闭环未计reviewed；CO-02、CO-03均已建立证据受限草稿，各有15个同上下文模拟闭环，不计reviewed。CO-03普通订单结算、预算和权限等目标版证据仍不充分；CO-04普通生产订单的WIP/差异公式、状态条件和一般结算规则仍缺直接证据；CO-05已建立获利分析、FI与收款分层的证据受限drafting草稿，15个同上下文模拟闭环未计reviewed，普通销售其他确认时点、估值与客户配置仍未闭合。工作线1下一篇SD-02（SD-01保持drafting、不计reviewed）；工作线5下一篇CO-06。批次A为8/50 reviewed、0/50 owner accepted。**
+状态：**M3 已验收；M4 完整 99 篇分两批建设已授权。FI-01～FI-03 所有者已接受（3/99）；FI-05、MM-01～MM-07 已完成三角色 review 并计入 8/50 reviewed。MM-08、QM-01 各有15个视角闭环但目标版核心证据未闭合，保持 drafting；FI-04/FI-06 继续 drafting。CO-01 为证据充分的限缩草稿，15个同上下文模拟闭环未计reviewed；CO-02、CO-03均已建立证据受限草稿，各有15个同上下文模拟闭环，不计reviewed。CO-03普通订单结算、预算和权限等目标版证据仍不充分；CO-04普通生产订单的WIP/差异公式、状态条件和一般结算规则仍缺直接证据；CO-05已建立获利分析、FI与收款分层的证据受限drafting草稿，15个同上下文模拟闭环未计reviewed，普通销售其他确认时点、估值与客户配置仍未闭合。工作线1下一篇SD-02（SD-01保持drafting、不计reviewed）；工作线5已建立CO-06受限drafting草稿（15个同上下文模拟闭环，不计reviewed），下一篇CO-07。批次A为8/50 reviewed、0/50 owner accepted。**
 
 ## 当前仓库、分支与 PR
 
@@ -9,7 +9,7 @@
 - 当前 PR：[PR #21｜CareerOS M4 全量分批建设](https://github.com/VJ-VickWeijie/IdeaLab/pull/21)，目标 `main`；开放、未合并。Work 不自行合并。
 - 工作分支：`careeros-v04-m4-batch1-20261126`。
 - PR #20 已合并到 `main`；基线提交 `db349fe68e1aa0560ba5546a6382ffe503d0f595`。
-- 本工作包提交前实时读取 PR #21：open、未合并、base main；工作分支 HEAD 为 6d3aae117e3d8328fc97dbaa646b103064fb31e6。本工作包提交后以最新HEAD查询为准。
+- CO-06 提交前实时读取 PR #21：open、未合并、base main；分支 HEAD 为 d210ac2219d7a53ab65aad93080e03048520d7db。提交后以实时 ref 为准。
 - AI-Workflow V1.1 固定 SHA：`939ec44036d89cd91622ab96b938be9f02479026`。未更改通用门禁。
 
 ## 里程碑、授权与产品边界
@@ -392,3 +392,12 @@
 - 固定版 SAP Help API 页面索引支持该读取 API 在 S/4HANA 2021 的范围元数据。Sales Organization 固定版页在本轮工具中不可访问；该页仅依 M3 中独立顾问此前直接读取且版本选择器显示 `2021 (Oct 2021)` 的记录引用。组织配置、完整跨公司开票适用条件、单据角色和 FI 细节、客户 API 启用/权限仍未闭合；SAP 系统未连接、没有配置或 API 实测。
 - SD-01 的 15 个闭环不等于 M3 核心门槛通过，故不计 reviewed/accepted。批次 A 数字不变：**8/50 reviewed、0/50 owner accepted**；全库正式接受 **3/99**。
 - 工作线 1 下一篇：**SD-02《客户业务伙伴与物料主数据》**。开始前重新读取 SD-02 的 M3 准入、证据来源与当前 PR 分支状态。
+
+
+### 2026-11-27｜工作线 5：CO-06
+
+- CO-06《CO 常用入口导航：先分清查看、维护与过账》已按“暂缓核心”路径建立受限 drafting 草稿：`knowledge/CO/03-tcodes/controlling-transactions.md`；记录：`reviews/work/2026-11-27-m4-co06-three-role-review.md`。
+- 固定版 SAP S/4HANA 2021 What's New 和 2021.000 Help 支持少数具名 app 的功能描述（预算处理、内部订单 display/where-used/change log、成本要素组、物料价值链实际/估算分析、COGS split 分析）。这些不是完整 GUI T-Code 目录；本文不把 KSB1/KOB1/KE30 或其他代码凭经验写成已验证事实。
+- 未闭合：常用 GUI T-Code 的 2021 用途/输入输出/版本；成本中心实际/计划报表、内部订单实际行项目和一般获利分析报表映射；Fiori app ID、部署、业务目录/角色/授权、目标系统只读/修改边界。没有 SAP 系统连接或实机验证。
+- 普通读者、资深配置顾问、普通开发人员视角各 5 个同上下文模拟闭环，共 15；非独立审查，不计 8/50 reviewed。文章保持 drafting，批次 A 仍 8/50 reviewed、0/50 owner accepted，正式接受 3/99。
+- 工作线 5 下一篇：CO-07《管理会计配置查看》；开始前仅读取该篇准入项和单篇证据登记。

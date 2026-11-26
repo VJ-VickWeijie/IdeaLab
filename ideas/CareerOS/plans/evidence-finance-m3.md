@@ -160,3 +160,19 @@ SEC/GAO/IRS来源只支持文本中确切内容，站点其他第三方内容或
 CO-05 文章将收入确认、获利分析和应收收款/清账分别解释；用 F2 的开票/交货时点限缩说明 Margin Analysis，再与 FSD 中 Revenue Accounting and Reporting 和 Event-Based Revenue Recognition 的适用范围分开。COGS split 被限定为 S/4HANA 2021.000 的特定可配置功能，未推导 FI-07 普通库存分录。普通销售其他确认场景、客户估值/属性配置、字段/API/权限仍未闭合。
 
 普通读者、配置顾问、开发人员各 5 个同一 Work 上下文角色视角模拟闭环，共 15；不是独立评审，不计 8/50 reviewed。SAP 系统未连接，无实机、凭证、配置或权限测试。状态保持 drafting。
+
+## M4 CO-06 证据补查与受限导航稿（2026-11-27）
+
+本次只处理 CO-06《CO 常用入口导航》，未预载 CO-07/CO-08 的完整研究材料。文章：`../knowledge/CO/03-tcodes/controlling-transactions.md`；角色视角记录：`../reviews/work/2026-11-27-m4-co06-three-role-review.md`。按 M3“暂缓核心”准入建立受限 drafting 草稿。
+
+| 来源 | 实际核对及可支持范围 | 不能据此断言 |
+| --- | --- | --- |
+| E1. [What's New in SAP S/4HANA 2021 (Oct 2021)](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.000/en-US/WN_OP2021_EN.pdf)，§3.5.1.2、§3.5.1.4–3.5.1.8、§3.5.4.1、§3.5.5.1–3.5.5.2、§3.5.6.1。 | 固定 S/4HANA 2021 文档点名 Manage Cost Center Budgets、Manage Internal Orders (Version 2)、Where-Used List – Internal Orders、Change Log – Internal Orders、Commitments by Cost Center – Classic Commitment Management、Manage Cost Element Groups、Display Material Value Chain – Actual/Estimated Costs、Manage COGS Splits 等应用，并给出各自具体功能和部分前提。 | 不是完整 GUI T-Code/Fiori 目录；未逐项给出应用 ID、business catalog、business role、权限或客户系统部署情况；scope item 不等于已启用。 |
+| E2. [Change Log – Internal Orders](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/00ec2c96762d4587b976248bf2f4f12c.html?version=2021.000)，固定版 2021.000。 | 查看内部订单主数据变更内容、用户与时间。 | 不证明保留期限、字段全集、导出、角色授权或客户可用性。 |
+| E3. [Manage Cost Element Groups](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/daad5c6c4d764c2baa25b93a9fab7d82.html?locale=en-US&version=2021.000)，固定版 2021.000。 | 创建、编辑及显示成本要素组。 | 不证明只读访问、一般成本要素配置规则、输入输出或交易权限。 |
+| E4. [Display Material Value Chain – Actual Costs](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/18ddb677b64e455c945f4c4de9168e9e.html?locale=en-US&version=2021.000)，固定版 2021.000；与 E1 §3.5.5.1 对照。 | 特定产品成本分析 app 的名称/有限功能，包括利润中心显示选择及特定节点/边线成本组件拆分说明。 | 不证明所有产品成本、WIP、差异和结算应用，也不证明全部 Fiori role 或现场可用性。 |
+| E5. [Manage COGS Splits](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/f2bb8fe1f6c046a7a00797ddc02149f6.html?locale=en-US&state=PRODUCTION&version=2021.000)，固定版 2021.000；与 E1 §3.5.6.1 对照。 | J55 Margin Analysis 中用于分析已产生 COGS split postings 的特定应用范围。 | 不替代一般利润分析报表、普通销售/库存会计规则、FI-07 借贷/税/自动科目证据。 |
+
+本轮检索到的 SAP Help 动态产品援助页和其他版本入口没有用来补全目标版 T-Code。对 KSB1、KOB1、KE30 等常见候选，没有找到满足本篇门槛的固定 2021 原厂逐项映射，所以正文没有将其列为目标版已核实代码。一般成本中心实际/计划报表、内部订单实际行项目、完整 Margin Analysis 报表的目标版入口、输入输出与用户权限仍缺直接证据。
+
+普通读者、配置顾问、开发者视角各 5 个同一 Work 上下文模拟闭环，共 15；无独立 reviewer/真人 SAP 专家，故不计正式 reviewed。SAP 系统未连接，无 app、T-Code、报表、权限或过账实机验证。
