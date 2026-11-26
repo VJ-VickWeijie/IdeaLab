@@ -1,0 +1,135 @@
+# CareerOS V0.3｜M3 全量 99 项来源与工作控制矩阵
+
+快照：物流/FI/CO/课程部分取自 PR #20 head `9d0b9fa77de304d308c93a2607d9d5adb2cf5ace`；技术/AI/术语部分取自 head `486261346cd47c82c82f3fe9a125d8d335c7e253`。合并整理日期：2026-11-26。
+
+**本表是 M3 工作控制矩阵，不是正式文章、事实全面核验、审查通过或 M3 放行。** “部分”“未核验”“未闭合”表示来源登记状态；没有任何行可据此视为文章通过。未注明为已复核的范围都保留为未知。表中下一步是从现有缺口整理出的 Work 待办，并非已经执行的研究结果。
+
+来源登记、目标版本/场景、逐项主张及支持限制保留在所指原台账；这里不把同一份共享日期或通用读者归因到所有 ID。**逐 ID 的实际阅读者与日期、独立审查人/范围/日期/基线提交、完整版本和场景归一、M3 判定尚未全部收敛为一份可审计记录。** Work 将其作为后续逐项补录要求；对应字段缺失时须标“未知/待补”，不得推断。
+
+建议工作负责人：Work。此为当前工作分配，不证明未来批次容量或审核者可用额度已落实。正式正文和文章角色审查尚未开始：正式文章 0 篇、正式文章审核轮次 0。用户批准的每篇三角色按需 5–10 个有效闭环不计入本矩阵的计划审查统计。没有 SAP 实机验证或生产配置变更。
+
+## 技术、AI 与术语表（27 项）
+
+路径以 `ideas/CareerOS/` 为根。来源记录路径：E = `plans/evidence-tech-m3.md`；T = `plans/technical-source-fit-review-m3.md`；A = `plans/ai-source-fit-m3.md`。T 的 16 项是历史计划级贴合度判断，不能自动延伸到台账后续新增来源。AI 外部来源阅读及贴合度归属 `/root/developer_plan`；本次矩阵编制者没有重读 AI 外部资料。COMMON-01 单独引用术语表台账。各行状态与更详细支持/缺口见所指来源记录。
+
+| ID | 来源记录路径 | 当前登记状态 | 负责人 | Work 下一步 | 已有独立复核范围／未知 |
+| --- | --- | --- | --- | --- | --- |
+| ABAP-01 | E；T | 已登记部分基础概念；目标 FPS、采购映射待核。 | Work（容量待核实） | 选定采购对象，逐项查 2021 对象、程序、持久化和授权证据。 | 本人做过 T 的计划级贴合度复核；具体对象外部原文独立复读未记录。 |
+| ABAP-02 | E；`plans/abap-756-keyword-direct-m3.md`；`plans/abap02-memory-dump-admin-boundary-m3.md` | 已登记 7.56 特定 SQL/游标原文；目标系统参数、性能及异常未验证。 | Work（容量待核实） | 固定查询案例及行宽、数据量、并发假设，逐项核 2021/FPS、异常与内存依据并记录未知。 | `/root/reader_plan` 实读六页关键字并复核限定语义；另有 ABAP-02 内存材料独立复核，范围见对应记录；未实机。 |
+| ABAP-03 | E；T | 已登记 SQLMD 特定变化；调试和 trace 未逐项覆盖。 | Work（容量待核实） | 为 Debugger、SAT、ST05 分别补功能、授权和执行影响的目标版本来源。 | 本人读取 T2 的 2021 与版本 FPS00 字段；`/root/audit_design_review` 对历史 T 分类做计划级抽查，不等于实测。 |
+| ABAP-04 | E；`plans/bapi-transaction-search-m3.md`；`plans/extension-2021-evidence-m3.md` | 通用模型及扩展特例已登记；目标函数事务证据阻断未解除。 | Work（容量待核实） | 定向查 `BAPI_PO_CREATE1` 目标版函数文档与 Note，逐项记录提交、回滚、WAIT、RETURN 与失败边界；无法读到即保留缺口。 | 记录称通用模型有独立开发复核；`/root/consultant_plan` 独立复读 PO 自定义字段扩展，不能覆盖事务。 |
+| ABAP-05 | E；T | 已登记 FPS01 特定 BAdI 与 MRP 场景。 | Work（容量待核实） | 选定具体增强点，查调用条件、发布状态及适用 FPS，登记未覆盖情形。 | `/root/audit_design_review` 抽查历史 T 分类；其他增强点的独立原文复核未记录。 |
+| ABAP-06 | E；T | 已登记特定 RFC/BAPI 案例，非通用幂等证据。 | Work（容量待核实） | 选择具体接口，核事务、超时、回执、幂等与重试合同。 | 本人做过 T 的计划级贴合度复核；目标接口原文独立复读未知。 |
+| ABAP-07 | E；`plans/abap07-tool-evidence-m3.md`；T | 部分事务入口已有来源；SE80 等待补。 | Work（容量待核实） | 找 SE80 目标版原文，为每个入口列用途、执行影响、权限和 FPS。 | `/root/audit_design_review` 独立实读 SE37、ST22；未复读 SE11、SAT、ST05。 |
+| ABAP-08 | E；T | 已登记特定 BAdI 配置位置；只读入口和权限待核。 | Work（容量待核实） | 为具体配置项查行为、只读路径、所需权限和适用前提；不得执行激活。 | 本人做过 T 的计划级贴合度复核；具体系统只读权限未知。 |
+| ABAP-09 | E；T | 已登记字典概念；具体业务字段与关联缺口。 | Work（容量待核实） | 为虚构或选定业务对象核键、客户端、兼容对象及发布接口。 | 本人做过 T 的计划级贴合度复核；逐字段独立核验未记录。 |
+| S4HANA-01 | E；T | 已登记平台基础概念；部署及 FPS 不完整。 | Work（容量待核实） | 补目标版应用、HANA、Gateway/Fiori 拓扑及安装前提的直接来源。 | 本人做过 T 的计划级贴合度复核；完整架构独立复核未知。 |
+| S4HANA-02 | E；T | 已登记 SQLMD 功能；无基准测试。 | Work（容量待核实） | 查执行计划与分析工具的目标版本依据，设计可复现指标并标明尚未运行。 | 本人读过 T2 版本字段；其他分析步骤独立实读与实测未知。 |
+| S4HANA-03 | E；`plans/cds-dcl-2021-evidence-m3.md`；T | 已补 2021 CDS/DCL 个别直接证据；访问路径未全覆盖。 | Work（容量待核实） | 为每个计划访问路径补 DCL、服务授权及版本前提；列不适用路径。 | `/root/audit_design_review` 独立实读 DCL 示例及注解两页，未复读其余两页。 |
+| S4HANA-04 | E；T | 已登记 Gateway／OData 及限定授权背景。 | Work（容量待核实） | 选定具体服务，逐项核身份、权限对象、版本、异常和重试。 | T15 由协调者及 `/root/consultant_plan` 读过；本人未独立重读，具体服务未核。 |
+| S4HANA-05 | E；`plans/tech-followup-m3.md`；T | 已登记 RAP 概述与 2021 初版特定功能，完整矩阵待补。 | Work（容量待核实） | 按 managed/unmanaged、draft、EML、服务类型逐项收集 FPS 证据。 | `/root/developer_plan` 实读初版特性页面；本人未独立重读，全部特性独立复核未知。 |
+| S4HANA-06 | E；`plans/extension-2021-evidence-m3.md`；T | 已登记初版 Key User 与 FPS01 side-by-side 限定场景。 | Work（容量待核实） | 按具体扩展方式补 2021 发布契约、升级影响与回归依据。 | `/root/audit_design_review` 独立读取两项示例；未据此复核完整 Clean Core 规则。 |
+| S4HANA-07 | E；T | SQLMD/PFCG 局部登记，其余入口待核。 | Work（容量待核实） | 列实际计划入口，逐项查组件、权限、只读和操作影响。 | 本人读过 T2 版本字段；其余入口逐项独立复核未知。 |
+| S4HANA-08 | E；T | 已登记有限授权背景；服务注册与检查路径不足。 | Work（容量待核实） | 为具体服务建立配置→行为→授权查看→风险表，并逐项找版本来源。 | T15 已由协调者和 `/root/consultant_plan` 阅读；本人未独立重读，具体服务权限未知。 |
+| S4HANA-09 | E；T；`plans/pp09-order-material-key-m3.md` | 已登记统一日记账局部和特定确认实体键；物理关联未闭合。 | Work（容量待核实） | 分别查 MATDOC 物理键、兼容对象、业务凭证关联与发布 API，不把实体键当物理键。 | `/root/consultant_m3_review` 独立复核 PP-09 固定 SDK 包及实体键；不证明 MATDOC 物理键或系统行为。 |
+| AI-Integration-01 | E；A | 通用治理与特定 SAP 背景已登记；具体集成未证。 | Work（容量待核实） | 指定数据源和接口，查产品版本、认证及数据边界。 | `/root/developer_plan` 实读 A 所列资料并做贴合度复核；本次编制者未重读，后续独立复核未知。 |
+| AI-Integration-02 | E；A | 已登记 RAG 论文原理；生产权限和接口缺口。 | Work（容量待核实） | 查实际选定方案的授权、来源更新/删除及 SAP 读取接口，并设计失败案例。 | 同上；本次未重读 RAG 原文或验证实现。 |
+| AI-Integration-03 | E；A | 已登记 Toolformer 与限定 AIF 资料；具体调用合同未证。 | Work（容量待核实） | 选定 API，核发布、身份、审批、写入、幂等和超时分支。 | `/root/developer_plan` 实读 A 所列论文和 AIF 材料；具体 API 独立复核未知。 |
+| AI-Integration-04 | E；A | 已登记通用治理和特定 HCM 授权示例。 | Work（容量待核实） | 补特定部署的身份、文档 ACL、密钥、日志与留存来源；方案未定先细化。 | `/root/developer_plan` 实读 A 所列 NIST/安全材料；具体部署独立复核未知。 |
+| AI-Integration-05 | E；A | 已登记通用评估方向；尚无实测。 | Work（容量待核实） | 制定虚构测试集、分项指标、失败阈值和人工处理，注明待运行。 | `/root/developer_plan` 实读 A 所列 NIST 材料；测试结果不存在。 |
+| AI-Integration-06 | E；A | 已登记通用监控和特定 AIF 背景。 | Work（容量待核实） | 选定实际接口类型，查每项监控入口、组件、权限和失败处理；未选接口则需细化。 | `/root/developer_plan` 实读 A 所列 NIST/AIF 材料；具体监控入口复核未知。 |
+| AI-Integration-07 | E；A | 已登记限定 PFCG、Gateway 及治理背景，服务身份未证。 | Work（容量待核实） | 选定服务后核账号、角色、授权对象、连接和只读查看条件。 | `/root/developer_plan` 实读 A 所列部分材料；T15 由协调者及 `/root/consultant_plan` 实读，`/root/developer_plan` 本次未读 T15。 |
+| AI-Integration-08 | E；A | 已登记来源/溯源背景；数据模型仍是提案。 | Work（容量待核实） | 为虚构模型定义实体、键、版本、权限及删除规则，逐项补依据并评审。 | `/root/developer_plan` 实读 A 所列 RAG/NIST 材料；拟议模型尚无独立验收。 |
+| COMMON-01 | `plans/evidence-common-m3.md`；`plans/common-source-fit-m3.md` | 仅部分技术和一般财务术语有语境限定依据；整表未覆盖。 | Work（容量待核实） | 建逐词清单，绑定业务定义、适用产品/FPS、中文译名来源、例子及原文链接；未证词条保持待核。 | `/root/audit_design_review` 复读 SAP 迁移指南封面/词表及 SEC 资产负债表部分；未覆盖所有术语。OpenStax 依已有记录暂停作为生成依据；SAP 术语入口仅索引。 |
+
+## 物流、流程、FI/CO 与课程（72 项）
+
+来源记录均为 `[evidence-logistics-m3.md](evidence-logistics-m3.md)` 或 `[evidence-finance-m3.md](evidence-finance-m3.md)`。每个 ID 的当前状态、具体支持范围与缺口按其原台账条目；独立复核仅保留来源报告明示的有限范围。顾问草案确认本段 72 个 ID 与来源登记范围对应，但没有本次外部原文复读。
+
+| ID | 来源记录路径 | 当前登记状态 | 负责人 | Work 下一步 | 已有独立复核范围／未知 |
+| --- | --- | --- | --- | --- | --- |
+| MM-01 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 核对组织关联及其他模块关系；保留实际配置与权限待核。 | 前次开发者独立读固定版；本顾问该次未重开 |
+| MM-02 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 补查采购物料视图和供应商 BP 角色。 | 计划级对照；是否亲读见 MM/QM 复核报告 |
+| MM-03 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：优先级、有效性和自动选择条件。 | 计划级对照；是否亲读见 MM/QM 复核报告 |
+| MM-04 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：PR→PO 各变体、审批配置与实际事务。 | 计划级对照；是否亲读见 MM/QM 复核报告 |
+| MM-05 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：具体移动类型、特殊库存和价值影响。 | 计划级对照；是否亲读见 MM/QM 复核报告 |
+| MM-06 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：冲销与退货在单据及账务上的具体差异。 | 计划级对照；是否亲读见 MM/QM 复核报告 |
+| MM-07 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查订单单位规则、BAPI 字段覆盖和版本差异。 | 前次开发者独立读固定版；本顾问该次未重开 |
+| MM-08 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 逐事务核对用途、版本以及显示/修改权限。 | 计划级对照；是否亲读见 MM/QM 复核报告 |
+| MM-09 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未闭合 | Work（容量待核实） | 查找固定 2021 普通估价库存收货自动科目规则；保留方向冲突。 | 局部来源复核；普通收货规则未闭合 |
+| MM-10 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 补查并核对：PR/PO 完整模型、精确键、基数和发布 API。 | 计划级对照；是否亲读见 MM/QM 复核报告 |
+| SD-01 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查组织配置及跨公司开票适用范围。 | 独立顾问读取固定版组织关系，范围有限 |
+| SD-02 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查 BP grouping/编号、伙伴确定配置、字段/API 及权限。 | 四页中前两页独立复核；其余待核 |
+| SD-03 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：具体部分交货、取消与权限。 | 计划级对照；是否亲读见 SD/PP 复核报告 |
+| SD-04 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查收入确认、税和收款的适用条件。 | 计划级对照；是否亲读见 SD/PP 复核报告 |
+| SD-05 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 逐事务核对用途、版本和权限，补查 VA03。 | 计划级对照；是否亲读见 SD/PP 复核报告 |
+| SD-06 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：准确 IMG 节点、业务分支和访问权限。 | 计划级对照；是否亲读见 SD/PP 复核报告 |
+| SD-07 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：完整单据流字段、主键、接口及关联基数。 | 计划级对照；是否亲读见 SD/PP 复核报告 |
+| PP-01 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 补查并核对：组织结构及所有制造模式的业务边界。 | 计划级对照；是否亲读见 SD/PP 复核报告 |
+| PP-02 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：有效期、替代项选择和具体表/字段。 | 计划级对照；是否亲读见 SD/PP 复核报告 |
+| PP-03 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：工作中心完整定义、工序选择和成本/产能参数。 | 计划级对照；是否亲读见 SD/PP 复核报告 |
+| PP-04 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：净需求计算、批量、参数及客户具体系统差异。 | 计划级对照；是否亲读见 SD/PP 复核报告 |
+| PP-05 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：各订单状态、下达、报工与回退条件。 | 计划级对照；是否亲读见 SD/PP 复核报告 |
+| PP-06 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：库存估价、成本和结算账务。 | 计划级对照；是否亲读见 SD/PP 复核报告 |
+| PP-07 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 逐项查证 PP 事务用途、版本和权限。 | 计划级对照；是否亲读见 SD/PP 复核报告 |
+| PP-08 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 补查生产计划配置查看路径及规则。 | 计划级对照；是否亲读见 SD/PP 复核报告 |
+| PP-09 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 查证物理表键、关联基数、发布 API；区分 SDK 实体键。 | material BOM、DDL source 和 SDK 实体键局部复核 |
+| QM-01 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：质量组织、用户角色、设置和触发前提。 | 计划级对照；是否亲读见 MM/QM 复核报告 |
+| QM-02 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查配置、供应商/质量信息记录差异、EWM 和财务凭证。 | 固定版自动建批条件页局部复核 |
+| QM-03 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：计划选择规则、抽样参数和具体字段。 | 计划级对照；是否亲读见 MM/QM 复核报告 |
+| QM-04 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：UD 与自动/手工库存过账、撤销及业务条件。 | 计划级对照；是否亲读见 MM/QM 复核报告 |
+| QM-05 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 补查一般 IM 质量库存与财务影响。 | FSD EWM 页码独立复核；一般 IM 未证 |
+| QM-06 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 逐事务核对补丁适用性与权限。 | 计划级对照；是否亲读见 MM/QM 复核报告 |
+| QM-07 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 核对目标初版适用性、检验类型激活与权限。 | 独立复核 FPS01 特定比较符 |
+| QM-08 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 查证初版适用性、检验对象表键、关联和 CDS 发布。 | 独立复核 FPS01 指定 CDS 的有限描述 |
+| FI-01 | [evidence-finance-m3.md](evidence-finance-m3.md) | 部分 | Work（容量待核实） | 补查并核对：采购事件的单据、库存、价值和资金的SAP 2021触发条件及地区会计规则。 | 计划级对照；部分来源非复核者亲读 |
+| FI-02 | [evidence-finance-m3.md](evidence-finance-m3.md) | 部分 | Work（容量待核实） | 补查地区规则和拟议案例的适用边界。 | 计划级对照；部分来源非复核者亲读 |
+| FI-03 | [evidence-finance-m3.md](evidence-finance-m3.md) | 部分 | Work（容量待核实） | 补查适用地区现行规范、科目例外和 SAP 过账依据。 | 草稿 PDF 与考试大纲局部独立复核 |
+| FI-04 | [evidence-finance-m3.md](evidence-finance-m3.md) | 部分 | Work（容量待核实） | 补查日常组织关系、主数据字段、过账及 FS00 权限。 | Direct Transfer 迁移对象有限描述独立复核 |
+| FI-05 | [evidence-finance-m3.md](evidence-finance-m3.md) | 部分 | Work（容量待核实） | 补查并核对：复式会计分录、各单据冲销条件、期间与GUI事务仍缺直接依据。 | 计划级对照；部分来源非复核者亲读 |
+| FI-06 | [evidence-finance-m3.md](evidence-finance-m3.md) | 部分 | Work（容量待核实） | 补查 2021 发票、部分付款、清账及税币条件。 | 计划级对照；部分来源非复核者亲读 |
+| FI-07 | [evidence-finance-m3.md](evidence-finance-m3.md) | 未闭合 | Work（容量待核实） | 补查固定 2021 普通库存采购分录及自动科目规则。 | 目标版个别材料及未锁版本课程局部复核 |
+| FI-08 | [evidence-finance-m3.md](evidence-finance-m3.md) | 部分 | Work（容量待核实） | 补查并核对：完整月结/年结和国内制度需2021专题及适用地区证据。 | 计划级对照；部分来源非复核者亲读 |
+| FI-09 | [evidence-finance-m3.md](evidence-finance-m3.md) | 未核验 | Work（容量待核实） | 逐项核对 GUI/Fiori 入口、版本、输入输出及权限。 | 计划级对照；部分来源非复核者亲读 |
+| FI-10 | [evidence-finance-m3.md](evidence-finance-m3.md) | 未核验 | Work（容量待核实） | 补查账户映射、配置路径及只读权限。 | 固定版公告未由配置顾问独立直读 |
+| FI-11 | [evidence-finance-m3.md](evidence-finance-m3.md) | 未核验 | Work（容量待核实） | 补查并核对：BKPF/ACDOCA主键、字段、基数、发布API和权限尚需逐字段文档或有权系统确认。 | 计划级对照；部分来源非复核者亲读 |
+| CO-01 | [evidence-finance-m3.md](evidence-finance-m3.md) | 部分 | Work（容量待核实） | 补查 FI/CO 视角及集成的直接依据。 | 计划级对照；部分来源非复核者亲读 |
+| CO-02 | [evidence-finance-m3.md](evidence-finance-m3.md) | 未核验 | Work（容量待核实） | 补查并核对：SAP成本中心主数据、成本要素与总账关系和组织条件。 | 计划级对照；部分来源非复核者亲读 |
+| CO-03 | [evidence-finance-m3.md](evidence-finance-m3.md) | 部分 | Work（容量待核实） | 补查普通内部订单归集、统计、结算及权限。 | 两篇未锁版本课程局部独立复核 |
+| CO-04 | [evidence-finance-m3.md](evidence-finance-m3.md) | 未核验 | Work（容量待核实） | 补查制造成本、WIP、差异与结算的目标版依据。 | 计划级对照；部分来源非复核者亲读 |
+| CO-05 | [evidence-finance-m3.md](evidence-finance-m3.md) | 部分 | Work（容量待核实） | 补查 2021 获利分析维度、销售/FI 集成及确认时点。 | 计划级对照；部分来源非复核者亲读 |
+| CO-06 | [evidence-finance-m3.md](evidence-finance-m3.md) | 未核验 | Work（容量待核实） | 逐项核对 CO 事务入口、版本、用途及权限。 | 计划级对照；部分来源非复核者亲读 |
+| CO-07 | [evidence-finance-m3.md](evidence-finance-m3.md) | 未核验 | Work（容量待核实） | 补查并核对：其他成本中心/内部订单/结算设置和IMG只读入口缺逐项来源。 | 计划级对照；部分来源非复核者亲读 |
+| CO-08 | [evidence-finance-m3.md](evidence-finance-m3.md) | 未核验 | Work（容量待核实） | 补查并核对：CO对象、字段、主键、基数、兼容视图和API需逐项2021资料，不作未经证实推断。 | 计划级对照；部分来源非复核者亲读 |
+| PROCESS-01 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未闭合 | Work（容量待核实） | 逐事件补查固定 2021 普通库存采购借贷、税、配置、异常及付款。 | 重点来源局部独立复核；完整链未证 |
+| PROCESS-02 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：应收收款/清账复核、目标初版/FPS固定资料、逐科目分录/税、部分交货与异常及目标系统条件。 | FSD 订单、交货、开票页局部复读 |
+| PROCESS-03 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查直接转储及 PO-STO 分支、在途与估价条件。 | 计划级对照；是否亲读见流程复核报告 |
+| PROCESS-04 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 按变体补查组织、税、分录、清算及异常。 | 固定版跨公司变体有限描述独立复核 |
+| PROCESS-05 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：计划→生产→成本结算的完整流程及价值分录。 | 计划级对照；是否亲读见流程复核报告 |
+| PROCESS-06 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：目标系统设置、EWM及移动类型/凭证字段、财务影响、异常和冲销情形仍待逐项核验。 | 固定版使用决策及库存过账页局部复核 |
+| PROCESS-07 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：企业实际关账顺序、管理会计和分录。 | 计划级对照；是否亲读见流程复核报告 |
+| PROCESS-08 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：所有委外采购变体的货权/库存/会计和付款。 | 计划级对照；是否亲读见流程复核报告 |
+| PROCESS-09 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 按场景核对合同货权、税、分录及结算变体。 | 固定版寄售有限描述独立复核 |
+| PROCESS-10 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：退货与收货冲销、后续已开票时的凭证与资金。 | 计划级对照；是否亲读见流程复核报告 |
+| PROCESS-11 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：差异容差、自动冻结与付款释放各触发条件。 | 计划级对照；是否亲读见流程复核报告 |
+| PROCESS-12 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：退货、退款、抵扣和税务的所有变体及必要前提。 | 计划级对照；是否亲读见流程复核报告 |
+| COURSE-01 | [evidence-finance-m3.md](evidence-finance-m3.md) | 未核验 | Work（容量待核实） | 整理路线目标、时长和可选练习；正文链接待后续阶段。 | 计划级对照；部分来源非复核者亲读 |
+| COURSE-02 | [evidence-finance-m3.md](evidence-finance-m3.md) | 未核验 | Work（容量待核实） | 登记 FI-01、MM-01、PROCESS-01 正文与证据依赖。 | 计划级对照；部分来源非复核者亲读 |
+| COURSE-03 | [evidence-finance-m3.md](evidence-finance-m3.md) | 未核验 | Work（容量待核实） | 补查地区适用依据，登记 FI/CO 正文及答案依赖。 | 计划级对照；部分来源非复核者亲读 |
+| COURSE-04 | [evidence-finance-m3.md](evidence-finance-m3.md) | 未核验 | Work（容量待核实） | 登记 MM/QM、单位换算及流程原文的证据依赖。 | 计划级对照；部分来源非复核者亲读 |
+| COURSE-05 | [evidence-finance-m3.md](evidence-finance-m3.md) | 未核验 | Work（容量待核实） | 登记 12 篇流程主文及审核依赖；链接待正文建成。 | 计划级对照；部分来源非复核者亲读 |
+| COURSE-06 | [evidence-finance-m3.md](evidence-finance-m3.md) | 未核验 | Work（容量待核实） | 登记技术原文、目标版接口及权限依据依赖。 | 计划级对照；部分来源非复核者亲读 |
+| COURSE-07 | [evidence-finance-m3.md](evidence-finance-m3.md) | 未核验 | Work（容量待核实） | 补查许可可用的 AI 资料，登记 SAP 接口和课程原文依赖。 | 计划级对照；部分来源非复核者亲读 |
+
+## 覆盖与门禁
+
+- ID 数量：技术/AI 26 + COMMON-01 术语表 1 + 物流/流程/FI/CO/课程 72 = **99 项**。
+- 项目范围：MM 10、SD 7、PP 9、QM 8、PROCESS 12、FI 11、CO 8、COURSE 7、ABAP 9、S4HANA 9、AI-Integration 8、COMMON 1。
+- 表内独立复核记录只保留此前有明示的局部范围；此矩阵没有证明所有 99 项都已经由独立角色复读。技术 26 项的逐项结构审查见 [开发者报告](../reviews/developer/2026-11-26-technical-sourcefit-structure-review.md)；物流/业务/FI/课程 72 项结构抽查见 [配置顾问报告](../reviews/consultant/2026-11-26-m3-sourcefit-structure-review.md)。
+- 尚待 Work 对 99 项逐行确认或补写：目标版本与场景、支持的关键主张/精确来源、实际读取者和日期、未支持边界、Work 负责人/下一动作、独立复核者/范围/日期/提交基线、逐项 M3 结论。当前列出的“未核验/未知/待细化”必须继续维持，不能因有来源链接改成通过。
+- 另需落实实际批次 writer、三个独立审核上下文和可用额度/容量；在当前 M3 门禁通过并取得所有者批准前，不开始 M4 正式文章编写与审核。
+- M3 出口仍未满足；FI-07、PROCESS-01、MM-09、ABAP-02、ABAP-04 五项重点阻碍未关闭。阶段审批及资源落实未完成。**M4 未授权。**
+
+## 草案来源与过程说明
+
+本矩阵合并两个独立上下文按 Work 请求产生的结构草案，并经 Work 规范化表头与负责人字段。两份子范围草案分别校对了其对应源文件的 ID 覆盖，无重复缺失；本次合并后需再与已批准 manifest 做一次程序化的 99 ID 唯一性核对。编制草案不重读 SAP 原文、无系统访问、非正式文章审查轮次。
