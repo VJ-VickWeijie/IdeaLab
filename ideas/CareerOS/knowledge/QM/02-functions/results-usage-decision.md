@@ -74,7 +74,7 @@ SAP S/4HANA 2021 固定版 Usage Decision for Inspection Lot 页面在其 planne
 
 - [QM-02《检验类型与检验批》](inspection-type-lot.md)只支持采购收货检验批创建、检验批库存相关性和有限库存过账关系；它不证明本篇未列明的结果字段、完整 UD 资格或撤销规则。
 - [QM-03《检验计划与检验特性》](inspection-plan-characteristic.md)只支持 2021 FPS01 的计划工作清单材料筛选变化及 2021.000 的计划业务事件范围；其草稿未闭合一般检验特性、样本计算或选择规则。本篇不把未闭合内容当作结果记录字段证据。
-- [PROCESS-06《质量至放行：来料检验》](../../../business-processes/Quality-to-Release/incoming-inspection.md)在当前 PR #21 分支中不存在，本篇不借用计划中的流程描述作为已审核事实。
+- PROCESS-06《质量至放行：来料检验》正文在当前 PR #21 分支中不存在；本篇不借用计划中的流程描述作为已审核事实。
 - QM-01 的动态 FSD latest 摘录只记作 M3 来源线索，不用于本篇固定版主张。
 - SAP 系统未连接；正文只作文献核验，不代表客户配置或真实过账行为已验证。
 
