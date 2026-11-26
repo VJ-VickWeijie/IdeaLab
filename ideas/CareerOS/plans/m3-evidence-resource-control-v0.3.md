@@ -8,9 +8,9 @@
 
 | ID | 已读取的有限依据及版本 | 未闭合的问题 | 工作负责人及下一步 | 判定 |
 | --- | --- | --- | --- | --- |
-| FI-07 | [SAP 2021 FI-07 直接证据补查](finance-fi07-direct-2021.md)：含 GR/IR、MAP 特例；固定版 Account Determination 已独立复读；三篇 SAP Learning 通用收货/科目课程亦由独立顾问复读，未固定 2021；YCOA 2025-FPS1 仅邻近对照。 | 通用 Learning 一页的发票 GR/IR 方向与另两页冲突；不构成勘误或目标版裁决。2021 普通库存前提/借贷、税、OBYC映射、完整配置及付款链仍缺。 | 保留冲突和版本边界，继续补目标版明确前提、分录方向及过程证据。 | 未闭合 |
-| PROCESS-01 | [2021 P2P 固定来源](evidence-p2p-fi07-m3.md)含发票因素、估价与末端付款；三篇通用 SAP Learning 由独立顾问复读但未固定 2021。 | 一篇通用课程的 IR 借贷句与另外两篇不一致；目标版 “credits” 与符号图也未消歧。固定版逐笔分录、配置、异常及实际资金链仍缺。 | 保留文献冲突，逐事件寻找目标版证据；不得把支付介质等同银行扣款。 | 未闭合 |
-| MM-09 | 固定 2021 GR/IR 与 Account Determination 页面由 Work/独立上下文复读；另有三篇 SAP Learning 一般页面由独立配置顾问复读，未锁定 2021。 | 发票数据类别已支持；通用 Learning 因素对照有用，但其中一页 IR 借贷说法与另两页冲突，不能裁决目标版。OBYC/BSX/WRX、估价/移动类型和权限仍未证。 | 保留冲突，继续寻找固定目标版普通估价库存收货的配置/交易键规则；必要时保留开放缺口。 | 未闭合 |
+| FI-07 | [SAP 2021 FI-07 直接证据补查](finance-fi07-direct-2021.md)：含 GR/IR、MAP 特例；固定版 Account Determination 已独立复读；三篇通用 SAP Learning 未固定 2021；YCOA 2025-FPS1 仅邻近对照。另有[普通采购借贷补查](p2p-2021-posting-followup-m3.md)。 | 独立顾问未取得明确无科目分配的 2021 初版普通库存采购完整借贷原文；Learning 方向冲突不构成勘误。税、OBYC 映射和完整配置仍缺。 | 保留冲突和版本边界，继续补目标版明确前提及分录方向。 | 未闭合 |
+| PROCESS-01 | [2021 P2P 固定来源](evidence-p2p-fi07-m3.md)含发票因素、估价与末端付款；[普通采购借贷补查](p2p-2021-posting-followup-m3.md)未找到固定初版完整借贷页。 | Learning 的 IR 方向冲突，2021 页面 credits 与符号图未消歧；逐笔凭证、配置、异常及实际资金链仍缺。 | 保留冲突，逐事件寻找目标版证据；不得把付款介质等同银行扣款。 | 未闭合 |
+| MM-09 | 固定版 Account Determination 支持发票科目数据类别，但不列 OBYC；[普通采购借贷补查](p2p-2021-posting-followup-m3.md)未找到固定初版明确普通库存采购借贷原文。 | Learning 有方向冲突且版本未锁定；BSX/WRX/T030、估价/移动类型、权限及完整配置仍未证。 | 保留来源边界，继续找目标版本普通库存场景的直接配置/交易键规则。 | 未闭合 |
 | ABAP-02 | [7.56 官方关键字与游标直接来源](abap-756-keyword-direct-m3.md)经独立复读；补上 PACKAGE SIZE/FAE 组合和 COMMIT/CALL DIALOG 边界。新增 [2021 内存阈值与诊断边界](abap02-memory-dump-admin-boundary-m3.md)：独立开发者直接读取 ABAP Platform 2021 (Oct 2021) 参数参考与 Session Memory 页面；KBA 3564988 预览含 S/4HANA 2021 的有限例子。 | 2021 文档确认软阈值参数默认 0；阈值触发 warning short dump 但不终止程序，硬限额会终止。没有证据表明应用程序可用 TRY...CATCH 捕获 warning 或安全停止；目标系统实际 kernel/FPS、参数值、行宽/并发实测和安全上限仍未闭合。 | Work 已补文献与边界，待独立开发审查者复读本次扩展并确认 ST22/ST02措辞；仍需目标环境只读版本确认及获授权的非生产验证 | 未闭合 |
 | ABAP-04 | [ABAP-04 来源复查](bapi-transaction-search-m3.md)：ABAP Platform 2021 (Oct 2021) 的通用 BAPI 事务模型及对话/分布式/示例页面由独立开发者直接复核；另有 ECC/R/3 Support Additional Content 和 2021 PO 扩展公告。 | 2021 文档支持通用调用方控制 LUW、commit/rollback、update process；没有 BAPI_PO_CREATE1 专属事务、WAIT 或返回消息决策合同。IDoc Type A/E 规则限包装器场景；ECC示例不升级为2021函数事实。 | 保留函数级阻断，继续找目标版本 BAPI_PO_CREATE1 文档或可核验 Note；不执行系统操作。 | 未闭合 |
 
