@@ -130,3 +130,11 @@ SEC/GAO/IRS来源只支持文本中确切内容，站点其他第三方内容或
 已建立[证据受限草稿](../knowledge/FI/04-configuration/finance-config-observation.md)及[Work 角色视角记录](../reviews/work/2026-11-27-m4-workline-4-fi10-review.md)：普通学习者、配置顾问、开发人员各 5 个同上下文模拟闭环，共 15；不是独立审查，不计 formal reviewed。FI-10 仍为 `drafting`。
 
 补证尝试：SAP Help 的 Manage Posting Periods 页面未能通过本次工具打开固定 `version=2021.000` 页面；可见的未锁版页面不作为 S/4HANA 2021 直接证据。公司代码、科目表、期间、收付款配置、完整账户映射、配置路径和只读/写入授权仍是开放项。SAP 系统未连接，无实机验证。
+
+### M4 Workline 5｜CO-03 内部订单（2026-11-27）
+
+- [文章](../knowledge/CO/02-functions/internal-orders.md) 与 [三角色视角记录](../reviews/work/2026-11-27-m4-co03-three-role-review.md) 已建立。记录来自同一 Work 上下文的读者、配置顾问、开发者视角模拟各 5 轮；不代表独立审核者，不计入 8/50 reviewed。文章状态仍为 drafting。
+- SAP S/4HANA 2021 FSD v9.0 / SP08 §2.5.1.1.1（印刷页23–24）支持 internal orders 属于成本核算主数据、按选定期间报告计划/实际；latest URL 的版本快照不外推至全部 2021 FPS。
+- SAP S/4HANA 2021.002 Migration Objects §1.40（印刷页172–174）在迁移对象语境定义内部订单的监控成本用途；不将迁移规则或授权扩为日常业务事实。
+- SAP Learning 的真实/统计订单与结算课程未标发行版，仅用于概念说明和检索线索；不作为 2021 通用规则。2021.001 Central Finance §1.4.7.2 只支持其中央结算状态检查场景。
+- 未闭合：普通 2021 订单类型/真实统计处理、成本归集细则、预算检查触发、结算配置和接收方、权限、表/字段/API/CDS；没有 SAP 系统或客户配置验证。未推导 FI-07 普通库存借贷、税或自动科目。
