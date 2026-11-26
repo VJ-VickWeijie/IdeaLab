@@ -22,7 +22,7 @@
 ### 正文明确支持的诊断框架
 
 1. 指南区分两个可能场景：单个 work process 达到其获分配的 memory quota；或多个进程同时申请资源，导致 application server 总内存压力触及全局阈值。单凭短转储名称不能分辨这两种情形。
-2. 指南建议从该次 ST22 short dump 的 **Memory consumption** 区域查看实际 EM、Heap 等使用值，并与 ST02 中的当前内存参数作对照。ST02 的历史 MaxUse / In Mem 观察不应误称为某一瞬间的 dump 快照。
+2. 指南建议从该次 ST22 short dump 的 **Memory consumption** 区域查看实际 EM、Heap 等使用值，并与 ST02 中的当前内存参数作对照。指南建议把 ST02 SAP MEMORY 表的 MaxUse 与 In Mem 放在一起对照，用于判断 uptime 内是否曾用满 EM；这不是该 dump 时刻的快照。dump 时的进程用量应先看该次 ST22 的 Memory consumption 区域。
 3. 指南按平台/实现列举若干参数，并提及可由 RSMEMORY 临时调整额度；同时明确额度提高属于 system administrator 的判断，不能脱离应用需求一概调高。参数示例不是本项目提供的调优步骤，执行前必须确认目标系统 OS、memory implementation、kernel、实际参数和权限。
 4. 指南将责任分成两部分：确认 memory mechanism 工作正常后，application team 分析异常内存消耗；如果异常来自客户定制程序，再由开发该程序的团队分析代码。它没有说所有此类 dump 都应归咎于代码，也没有说都应通过增加系统额度处理。
 
