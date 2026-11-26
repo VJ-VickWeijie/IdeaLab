@@ -31,7 +31,7 @@ SAP S/4HANA 2021 FSD v9.0 / SP08 在 Product Cost Management 章节说明，成�
 ### 生产订单与产品成本收集器
 
 - **制造订单（Manufacturing Order）**：可以按单个生产订单或流程订单观察成本；FSD 的 Product Cost Management 概览将其作为按库存生产的成本分析方向。[E1]
-- **产品成本收集器（Product Cost Collector）**：FSD 在特定 Kanban 成本核算说明中，展示另一种期间性成本观察方式；该段不是所有生产订单的通用规则。[E1]
+- **产品成本收集器（Product Cost Collector）**：FSD 在重复制造章节说明，物料流可按比成本收集更细的层级来计划和监控，而成本按期间收集；收集器汇总一个会计期间的完整产量，偏差会合并。FSD 将此与离散制造中按生产订单细看成本的方向作比较。[E1] Kanban 章节另提供一个特定补货场景的成本说明，不能推广到所有制造方式。[E1]
 
 内部订单、成本中心、制造订单、销售订单和产品成本收集器承担的业务语境不同。本文不判断具体公司应选哪一种，亦不把它们当作可互换对象。
 
@@ -40,7 +40,7 @@ SAP S/4HANA 2021 FSD v9.0 / SP08 在 Product Cost Management 章节说明，成�
 设想一家虚构饮料厂在本月生产一批果汁。下面只用来读懂业务问题，不是客户系统步骤：
 
 1. 管理者先问，成本要按这批订单逐批观察，还是希望在重复生产中按期间观察。FSD 描述制造方式会影响 Product Cost Accounting 的侧重点。[E1]
-2. 假设这个示例采用 FSD 特定 Kanban 成本核算段落中的内部生产场景。该段说明，某些物流事务（如货物发出或确认）可触发产品成本收集器的实际成本更新；货物收货则冲减该收集器的成本余额。此证据仅限该段的 replenishment/costing 场景。[E1]
+2. 假设这个示例采用 FSD 的 Kanban 生产补货场景。§2.8.4.4 说明，按生产订单/流程订单分析批次成本或按期间分析时，可选择订单或收集器作为成本观察对象；特定例子说明货物发出/确认可更新收集器实际成本，收货价值则记入其贷方。此证据只限该 Kanban 段落。[E1]
 3. 在该 Kanban 段落中，FSD 列出的期末功能包括分摊模板费用、按实际价格重估活动、计算间接费用、计算当期在制品、计算当期差异，以及将 WIP 和差异结算到其他应用组件。[E1]
 4. 这些功能名称能说明管理者会在期末分析未完工产品价值和成本偏差，但不能由此得出目标公司的完整运行顺序、计算公式、订单状态条件或 FI 会计分录。
 
@@ -101,7 +101,7 @@ SAP S/4HANA 2021.000 的 Deferred Summarization of Production Costs 说明，特
 
 ## 参考资料
 
-- **E1** [SAP S/4HANA 2021 Feature Scope Description](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)：本次读取的 FSD 文档版本 9.0（2025-07-23），适用于 SAP S/4HANA 2021 SP08。相关章节：§2.6.1.1.2 Product Cost Management（印刷页 28–29）；§2.8.4.1 production completion（印刷页 75）；§2.8.4.4/2.8.4.4? Cost Accounting for Kanban（印刷页 84–85，具体以该版本章节标题为准）。链接为 latest 动态地址；版本快照仅能确认 SP08，不能代表全部 2021 FPS。
+- **E1** [SAP S/4HANA 2021 Feature Scope Description](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)：本次读取的 FSD 文档版本 9.0（2025-07-23），适用于 SAP S/4HANA 2021 SP08。相关章节：§2.6.1.1.2 Product Cost Management（印刷页 28–29）；§2.8.4.1 production completion（印刷页 75）；§2.8.4.3 Repetitive Manufacturing（印刷页 79–82）；§2.8.4.4 Kanban（印刷页 83–85）。链接为 latest 动态地址；本次可读快照仅确认 SP08，不能代表全部 2021 FPS。
 - **E2** [SAP What's New in SAP S/4HANA 2021：Deferred Summarization of Production Costs](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b8102751e57e4de2ad50ec07253127e0.html?version=2021.000)：固定 2021.000 页面说明其特定延期汇总行为；不把该数据变化扩写为一般 CO 模型。
 
 ---
