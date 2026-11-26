@@ -200,4 +200,6 @@
 
 ## 2026-11-26｜FI-10 自动科目确定应用公告
 
-Work 直接读取 SAP《What's New in SAP S/4HANA 2021》§3.6.1.3（PDF 印刷页 134）。原文说明 Automatic Account Determination app 用于配置 G/L account assignments，2021 年该 FI/J58、FI-FIO-GL-CA 范围加入 areas 与 transaction keys。此为 FI 配置应用变化公告，不是完整配置指南，不说明具体账户映射、设置路径、角色/权限或只读入口；也不能套用于 MM 的 OBYC/BSX/WRX。独立复核尚未完成。FI-10 仅获有限目标版本支持，配置缺口未关闭；不计正式文章审查轮次。
+Work 直接读取 SAP《What's New in SAP S/4HANA 2021》§3.6.1.3（PDF 印刷页 133–134）。原文说明 Automatic Account Determination app 用于配置 G/L account assignments；标注 J58、FI-FIO-GL-CA、Available As Of SAP S/4HANA 2021。表中 BUL（Ledger-Specific CoCode Clearing）与 BUU（CoCode Clearing Between Differing Amts）两个新增 transaction keys 限于 Prepare Intercompany Transactions；另有 `*` 通配符用于 Integrate with HR Postings 的客户/供应商账号输入。
+
+该公告不是完整配置指南，不提供具体科目映射、完整设置路径、角色/权限或只读入口，也不能套用于 MM OBYC/BSX/WRX。配置顾问 `/root/consultant_m3_review` 尝试独立打开指定 PDF，但其工具因文件超过 10 MB 无法读取；其搜索索引只作为辅助线索，不计独立直读或复核。FI-10 仅获有限目标版本证据，配置缺口未关闭；不计正式文章审查轮次。
