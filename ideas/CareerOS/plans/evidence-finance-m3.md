@@ -176,3 +176,14 @@ CO-05 文章将收入确认、获利分析和应收收款/清账分别解释；�
 本轮检索到的 SAP Help 动态产品援助页和其他版本入口没有用来补全目标版 T-Code。对 KSB1、KOB1、KE30 等常见候选，没有找到满足本篇门槛的固定 2021 原厂逐项映射，所以正文没有将其列为目标版已核实代码。一般成本中心实际/计划报表、内部订单实际行项目、完整 Margin Analysis 报表的目标版入口、输入输出与用户权限仍缺直接证据。
 
 普通读者、配置顾问、开发者视角各 5 个同一 Work 上下文模拟闭环，共 15；无独立 reviewer/真人 SAP 专家，故不计正式 reviewed。SAP 系统未连接，无 app、T-Code、报表、权限或过账实机验证。
+
+
+## M4 CO-07 证据补查与受限配置观察稿（2026-11-27）
+
+本次只处理 CO-07《管理会计配置查看》，未预载 CO-08 研究材料。文章：`../knowledge/CO/04-configuration/controlling-config-observation.md`；角色视角记录：`../reviews/work/2026-11-27-m4-co07-three-role-review.md`。按 M3“暂缓核心”准入建立受限 drafting 草稿。
+
+| 来源 | 实际核对及可支持范围 | 不能据此断言 |
+| --- | --- | --- |
+| E1. [What's New in SAP S/4HANA 2021 (Oct 2021)](https://help.sap.com/doc/4eefc5f2d826408f91a999687d31780f/2021/en-US/WN_OP2021__EN.pdf)，§3.5.1.3 “Block Intercompany Postings”。 | 固定 2021 资料说明这是新的 CO-OM/Overhead Cost Controlling 配置活动（scope J54）；可允许全部、阻止全部，或仅允许指定 sender/receiver company code 组合的 CO intercompany postings；给出 Controlling → Cost Center Accounting → Actual Postings → Intercompany Postings → Block Intercompany Postings 路径。 | 默认值、优先级、底层表/字段/API、T-Code、只读模式、用户角色/权限、客户实际设置、传输与运行日志均未给出。也不支持 FI intercompany posting、普通成本分摊/结算、税务或任何 FI 分录推论。 |
+
+其余成本中心、成本要素、内部订单、结算规则、分配周期和只读 IMG/权限入口没有逐项目标版来源，本篇未补写路径。普通读者、配置顾问、开发人员视角各 5 个同一 Work 上下文模拟闭环，共 15；无独立 reviewer/真人专家，故不计正式 reviewed。未连接 SAP、未实机查看或修改配置、未传输或运行过账。

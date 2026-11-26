@@ -1,7 +1,7 @@
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-27（Asia/Shanghai）  
-状态：**M3 已验收；M4 完整 99 篇分两批建设已授权。FI-01～FI-03 所有者已接受（3/99）；FI-05、MM-01～MM-07 已完成三角色 review 并计入 8/50 reviewed。MM-08、QM-01 各有15个视角闭环但目标版核心证据未闭合，保持 drafting；FI-04/FI-06 继续 drafting。CO-01 为证据充分的限缩草稿，15个同上下文模拟闭环未计reviewed；CO-02、CO-03均已建立证据受限草稿，各有15个同上下文模拟闭环，不计reviewed。CO-03普通订单结算、预算和权限等目标版证据仍不充分；CO-04普通生产订单的WIP/差异公式、状态条件和一般结算规则仍缺直接证据；CO-05已建立获利分析、FI与收款分层的证据受限drafting草稿，15个同上下文模拟闭环未计reviewed，普通销售其他确认时点、估值与客户配置仍未闭合。工作线1下一篇SD-03（SD-01/SD-02均保持drafting、不计reviewed）；工作线5已建立CO-06受限drafting草稿（15个同上下文模拟闭环，不计reviewed），下一篇CO-07。批次A为8/50 reviewed、0/50 owner accepted。**
+状态：**M3 已验收；M4 完整 99 篇分两批建设已授权。FI-01～FI-03 所有者已接受（3/99）；FI-05、MM-01～MM-07 已完成三角色 review 并计入 8/50 reviewed。MM-08、QM-01 各有15个视角闭环但目标版核心证据未闭合，保持 drafting；FI-04/FI-06 继续 drafting。CO-01 为证据充分的限缩草稿，15个同上下文模拟闭环未计reviewed；CO-02、CO-03均已建立证据受限草稿，各有15个同上下文模拟闭环，不计reviewed。CO-03普通订单结算、预算和权限等目标版证据仍不充分；CO-04普通生产订单的WIP/差异公式、状态条件和一般结算规则仍缺直接证据；CO-05已建立获利分析、FI与收款分层的证据受限drafting草稿，15个同上下文模拟闭环未计reviewed，普通销售其他确认时点、估值与客户配置仍未闭合。工作线1下一篇SD-03（SD-01/SD-02均保持drafting、不计reviewed）；工作线5已完成CO-06、CO-07两篇受限drafting（各15个同上下文模拟闭环，均不计reviewed），下一篇CO-08。批次A为8/50 reviewed、0/50 owner accepted。**
 
 ## 当前仓库、分支与 PR
 
@@ -413,3 +413,12 @@
 - M3 记录四个 SAP Help 页面既有直接复读（版本选择器显示 `2021 (Oct 2021)`）；本轮检索无法重新打开前三个固定版页面，Field Status 页仅有固定版索引正文可读。没有用未固定版来源补缺；SAP 系统未连接，无客户数据、配置、API 或权限实测。
 - SD-02 15 个闭环不等于 M3 核心证据门槛通过，故不计 reviewed/accepted。批次 A 数字不变：**8/50 reviewed、0/50 owner accepted**；全库正式接受 **3/99**。
 - 工作线 1 下一篇：**SD-03《销售订单与交货机制》**。开始前重新读取 SD-03 的 M3 准入、证据来源及当前 PR 分支状态。
+
+
+### 2026-11-27｜工作线 5：CO-07
+
+- CO-07《管理会计配置查看：从一条可证实的规则开始》已按“暂缓核心”准入建立受限 drafting 草稿：`knowledge/CO/04-configuration/controlling-config-observation.md`；记录：`reviews/work/2026-11-27-m4-co07-three-role-review.md`。
+- 固定 SAP S/4HANA 2021 What's New §3.5.1.3 支持 Block Intercompany Postings 一项 CO-OM 配置及其 IMG 路径：全部允许、全部阻止或仅允许特定发送方/接收方公司代码组合。没有扩展为一般跨公司 FI、分摊、结算或会计分录规则。
+- 未闭合：其他成本中心/成本要素/内部订单/结算与分配设置的目标版证据；IMG display-only 路径、T-Code、业务角色/权限对象、客户当前配置和传输影响。SAP 系统未连接，没有执行或修改配置。
+- 普通读者、资深配置顾问、普通开发人员视角各 5 个同上下文模拟闭环，共 15；不是独立审查，不计 8/50 reviewed。文章保持 drafting；批次 A 仍 8/50 reviewed、0/50 owner accepted，正式接受 3/99。
+- 工作线 5 下一篇：CO-08《管理会计数据模型》；开始前仅读取该篇准入项和单篇证据登记。

@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-27 更新）
 
-> 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。M3 已验收；M4 完整 99 篇分两批建设已获授权。FI-01～FI-03 已由所有者接受，正式接受 3/99。批次 A 有 8/50 篇正式完成三角色 review、0/50 篇获所有者接受；FI-05、MM-01～MM-07 已 reviewed，FI-04/FI-06 保持 drafting。MM-08、MM-09、MM-10、QM-01 均因目标版核心证据缺口保持 drafting，不计正式 reviewed；CO-01、CO-02、CO-03、CO-04 均为证据受限 drafting 草稿，各有普通读者、配置顾问、开发人员视角各 5 个同上下文模拟闭环，不计正式 reviewed；CO-03 的普通订单结算/预算/权限，CO-04 的常规生产订单 WIP/差异公式、状态条件和结算规则仍缺直接证据；CO-05 为受限 drafting 草稿，15 个同上下文模拟闭环不计 reviewed，普通销售其他收入确认/估值配置仍有缺口。工作线 1 下一项 SD-03（SD-01、SD-02 均为 drafting、不计 reviewed）；工作线 5 已完成 CO-06 受限 drafting（不计 reviewed），下一项 CO-07；其他并行游标见 [HANDOFF](HANDOFF.md)。
+> 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。M3 已验收；M4 完整 99 篇分两批建设已获授权。FI-01～FI-03 已由所有者接受，正式接受 3/99。批次 A 有 8/50 篇正式完成三角色 review、0/50 篇获所有者接受；FI-05、MM-01～MM-07 已 reviewed，FI-04/FI-06 保持 drafting。MM-08、MM-09、MM-10、QM-01 均因目标版核心证据缺口保持 drafting，不计正式 reviewed；CO-01、CO-02、CO-03、CO-04 均为证据受限 drafting 草稿，各有普通读者、配置顾问、开发人员视角各 5 个同上下文模拟闭环，不计正式 reviewed；CO-03 的普通订单结算/预算/权限，CO-04 的常规生产订单 WIP/差异公式、状态条件和结算规则仍缺直接证据；CO-05 为受限 drafting 草稿，15 个同上下文模拟闭环不计 reviewed，普通销售其他收入确认/估值配置仍有缺口。工作线 1 下一项 SD-03（SD-01、SD-02 均为 drafting、不计 reviewed）；工作线 5 已完成 CO-06、CO-07 两篇受限 drafting（均不计 reviewed），下一项 CO-08；其他并行游标见 [HANDOFF](HANDOFF.md)。
 ## 并行工作线进度（2026-11-27）
 
 - Workline 1：SD-01《销售业务与组织结构》已提交证据受限草稿及三角色审查记录；普通读者、配置顾问视角、开发者视角各 5 个原问题闭环，共 15/15 AI 问题—答复—修订—原角色复核。固定版组织配置和跨公司开票适用范围仍未闭合，文章保持 drafting，不计入 8/50 reviewed；批次 A 仍 0/50 owner accepted。下一篇 SD-02。详见 [SD-01 正文](knowledge/SD/01-foundations/organization.md)、[审查记录](reviews/work/2026-11-27-m4-sd01-three-role-review.md) 与 [HANDOFF](HANDOFF.md)。
@@ -149,3 +149,8 @@ CO-05《获利分析与 FI 集成：收入、成本与收款分清》已建立�
 ### M4 Workline 5｜CO-06（2026-11-27）
 
 CO-06《CO 常用入口导航》已建立受限 drafting 草稿，依据固定 SAP S/4HANA 2021 What's New 与 2021.000 Help，仅记录有目标版文档支持的少数 app 功能。常用 GUI T-Code、成本中心/订单/一般获利分析报表映射、app ID、部署及权限仍未闭合；不把 KSB1/KOB1/KE30 写成已核实。普通读者、配置顾问、开发人员视角各 5 个同 Work 上下文模拟闭环，共 15；不是独立审查、不计 reviewed。无 SAP 实机验证。下一项 CO-07。批次 A 仍 8/50 reviewed、0/50 owner accepted；正式接受 3/99。详见 `knowledge/CO/03-tcodes/controlling-transactions.md`、`reviews/work/2026-11-27-m4-co06-three-role-review.md` 与 `plans/evidence-finance-m3.md`。
+
+
+### M4 Workline 5｜CO-07（2026-11-27）
+
+CO-07《管理会计配置查看》按“暂缓核心”准入建立受限 drafting 草稿。固定 SAP S/4HANA 2021 What's New §3.5.1.3 仅支持 Block Intercompany Postings 一项 CO-OM 配置、其允许/阻止范围及 IMG 路径；未补写其它配置、只读路径、T-Code、角色权限或客户设置。三角色各 5 个同上下文模拟闭环，共 15；非独立审查、不计 reviewed。未连接 SAP、未改配置。下一项 CO-08。批次 A 仍 8/50 reviewed、0/50 owner accepted；正式接受 3/99。详见 `knowledge/CO/04-configuration/controlling-config-observation.md`、`reviews/work/2026-11-27-m4-co07-three-role-review.md` 与 `plans/evidence-finance-m3.md`。

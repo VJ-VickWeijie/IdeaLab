@@ -133,3 +133,8 @@ CO-04《产品成本、生产差异与结算》按 M3 “暂缓核心”路径�
 ## Workline 5｜CO-06（2026-11-27）
 
 CO-06《CO 常用入口导航：先分清查看、维护与过账》按 M3“暂缓核心”建立受限 drafting 草稿。固定 S/4HANA 2021 What's New 与 2021.000 Help 页面支持少数点名 Fiori app 的功能描述，包括内部订单查看/变更记录、预算处理、成本要素组、物料价值链及 COGS split 分析；这些资料不足以形成完整 CO GUI T-Code 清单。常见 KSB1/KOB1/KE30 未列为目标版已核实代码。app ID、角色/目录授权、现场部署、成本中心/订单/获利分析标准报表入口、输出与权限仍有缺口。三种角色视角各 5 个同一 Work 上下文模拟闭环，共 15；非独立 reviewer，不计入批次 A reviewed。未连接 SAP、未实测。下一篇 CO-07；批次 A 仍 8/50 reviewed、0/50 owner accepted，全库正式接受 3/99。
+
+
+## Workline 5｜CO-07（2026-11-27）
+
+CO-07《管理会计配置查看：从一条可证实的规则开始》按 M3“暂缓核心”准入建立受限 drafting 草稿。固定 SAP S/4HANA 2021 What's New §3.5.1.3 支持一条具体的 Block Intercompany Postings 配置：CO intercompany postings 可全部允许、全部阻止或仅允许特定发送方/接收方公司代码组合，并列出 IMG 路径。该证据不支持一般成本中心/内部订单/结算设置、IMG 只读模式、权限角色或客户当前值；这些仍未闭合。三角色视角各 5 个同上下文模拟闭环，共 15；非独立 review，不计 reviewed。无 SAP 实机或配置更改。下一篇 CO-08；批次 A 仍 8/50 reviewed、0/50 owner accepted，全库正式接受 3/99。
