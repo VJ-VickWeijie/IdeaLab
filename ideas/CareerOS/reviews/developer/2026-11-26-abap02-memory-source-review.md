@@ -37,7 +37,7 @@ Work 接受该精度意见。基于该指南原文，不为 In Mem 额外赋予�
 
 Work 接受上述三项意见。已在 [ABAP-02 来源记录](../../plans/abap02-memory-dump-admin-boundary-m3.md) 精确改写 ABAP Platform 2021 版本边界与 ST02 句子，并加入 KBA 3435216 preview 的限定证据。修改提交：893499ff65874f931af7c5e5c337bf810867896e。
 
-Work 已邀请同一审查上下文复读以上修订及相邻资源表/摘要。**第二次修改后的复核尚待回复**；在其复读前，不标记上述措辞问题关闭。
+独立开发者随后在 PR #20 head `63b9bd07c00277d683f4595875061edcc130d6c6` 复读修订版及相关记录，并确认三项范围/精度意见均准确：版本标签未冒充 S4CORE/FPS；ST02 仅是 uptime 示例而非 dump 快照或单独归因；KBA 3435216 仅保留其公开预览列出的名称、kernel 与 Product 范围。上述措辞问题关闭。Work 的逐项答复及提交链见 [Work 执行记录](../work/2026-11-26-abap02-memory-review.md)。
 
 ## 适用范围
 
