@@ -65,3 +65,7 @@ SD-06《销售配置查看》正文已建立，状态 drafting；15 个同上下
 ## 工作线 2 进度追记（2026-11-27，PP-01）
 
 PP-01《生产业务与组织结构》已建立 drafting 草稿，15 个同上下文角色视角闭环已记录；组织关系与生产模式核心证据未闭合，且没有独立审查，故不增加 reviewed/accepted 计数。工作线 2 当前两篇新增稿（SD-06、PP-01）均 drafting；总体进度以当前计划表和 HANDOFF 进度表为准。下一篇 PP-02。详见 [PP-01 正文](../knowledge/PP/01-foundations/production-organization.md) 和 [审查记录](../reviews/work/2026-11-27-m4-pp01-three-role-review.md)。
+
+## 工作线 2 进度追记（2026-11-27，PP-02）
+
+PP-02《物料清单 BOM》已建立证据受限文章，状态 drafting；三角色各有 5 个已闭合的同上下文角色视角循环（共 15），不代表独立 review，故不计入 reviewed 或 owner accepted。固定版 2021 来源支持多层结构、有限 BOM versioning 配置说明及 make-to-stock repetitive manufacturing 确认场景的日期示例；通用数量/单位计算、替代项选择/有效期关系、组件缺失规则及数据字段/API 仍未闭合。批次 A 维持 8/50 reviewed、0/50 owner accepted，owner accepted 总数 3/99，SAP 实机测试 0。下一项 PP-03《工作中心与工艺路线 Routing》，以 M3 准入分流批准路径为准。详见 [文章](../knowledge/PP/01-foundations/bom.md) 与 [审查记录](../reviews/work/2026-11-27-m4-pp02-three-role-review.md)。
