@@ -227,4 +227,4 @@ Work 直接读取 [SAP《What's New in SAP S/4HANA 2021》](https://help.sap.com
 - Work 与独立开发审查上下文分别直接读取 SAP KBA 2180736 公开预览：该 KBA 标注 ABAP Platform / SAP NetWeaver all versions，并明确其面向系统管理员；登录全文不可见，未将预览内容扩写为操作步骤。
 - Work 与独立开发审查上下文又分别直接打开 SAP Help 的 TSV_TNEW_PAGE_ALLOC_FAILED Support Content 指南。该页标注 Additional Content、没有目标版/FPS 范围；直接正文区分单 work process 额度与 application server 全局内存压力，说明 ST22/ST02 的观测方式及 system administrator 与 application team 的责任分工。
 - Work 新增 [ABAP-02 内存诊断边界记录](../../plans/abap02-memory-dump-admin-boundary-m3.md)，将参数和 RSMEMORY 例子限定为资料中的通用排障内容，不作为 S/4HANA 2021 指令或调优建议；并明确不能据此证明 TRY...CATCH 可预警/捕获目标场景，不能提供普适安全行数。
-- 独立开发审查者已收到复读任务，待其对记录中的 MaxUse/In Mem 时点、系统管理员/开发责任及版本边界完成复核。此项为 M3 来源审查，不计正式文章审核轮次；ABAP-02、M3 未闭合，M4 未授权。
+- 独立开发者复读来源记录后指出 ST02 MaxUse/In Mem 的“历史观察”措辞有歧义；Work 已改写为两者共同对照 uptime 期间状态，并将该 dump 时点用量定位到 ST22 Memory consumption。原审查者已受邀复核修订，状态待回复。完整意见、Work 答复和修订提交记录见 [开发审查日志](../../reviews/developer/2026-11-26-abap02-memory-source-review.md)。此项为 M3 来源审查，不计正式文章审核轮次；ABAP-02、M3 未闭合，M4 未授权。
