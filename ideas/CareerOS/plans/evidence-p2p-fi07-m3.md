@@ -50,4 +50,4 @@ Work 直接读取 [Account Determination](https://help.sap.com/docs/SAP_S4HANA_O
 - [SAP Learning: Managing Goods Movements](https://learning.sap.com/courses/exploring-end-to-end-business-processes-in-sap/managing-goods-movements_d7cf8543-eb45-490b-810a-237bbd17485f)
 - [SAP Learning: Managing Closing Activities in Materials Management](https://learning.sap.com/courses/configuring-the-financial-closing-in-sap-s-4hana/managing-closing-activities-in-materials-management)
 
-第一篇支持有限的自动科目确定因素，但在发票步骤将 GR/IR 写作贷方，与另两篇的发票借 GR/IR、贷供应商表述不一致；后两篇分别明确收货借库存/贷 GR/IR，第二篇还明确三步采购流程中发票方向。三页均未固定到 2021/FPS，不用来裁决 2021 Help 的措辞，也不视为 SAP 勘误。正式文章和文章审核轮次仍为 0。
+第一篇 Describing Automatic Account Determination 支持有限的自动科目确定因素，但其发票步骤把 GR/IR 写作贷方；这与第三篇 Managing Closing Activities in Materials Management 明确的发票借 GR/IR、贷供应商不一致。第二篇 Managing Goods Movements 的 Integration to Finance 只明确特定采购收货借库存/贷 GR/IR，不提供发票方向。三页均未固定到 2021/FPS，不用来裁决 2021 Help 的措辞，也不视为 SAP 勘误。正式文章和文章审核轮次仍为 0。
