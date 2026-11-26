@@ -21,7 +21,7 @@
 | FI-07 | **直接（有限）**：SAP 2021 初版限定收货/发票账户、印度特定服务税案例及 MAP 库存覆盖的先票—收货—再票图文；图示只用正负，不标借贷。**邻近（非目标版）**：SAP Best Practices YCOA 2025-FPS1 明确标准 PO 无科目分配下收货借库存/贷 GR/IR 及价格差异。**缺口**：2021 普通库存无税前提和借贷明确的标准分录、credits/图示歧义、发票分录、实际清账、自动科目和完整配置。 |
 | FI-08 | **直接**：S21 特定余额结转状态及作业。**邻近**：IRS1 美国税务会计方法。**缺口**：2021 月年结步骤、期间启闭、模拟/过账与适用地区规则。 |
 | FI-09 | **直接**：S21 特定 GR/IR 清账应用的模式。**邻近**：一般功能范围不能构成事务清单。**缺口**：每项 GUI/Fiori 的作用、版本、输入输出、权限及只读/更新区分。 |
-| FI-10 | **直接**：S21 限定扩展未清项字段及启用条件；F3 仅未读摘要。**缺口**：科目、账期、自动科目、付款等 2021 配置节点、配置影响及只读查看权限。 |
+| FI-10 | **直接（有限）**：S21 限定扩展未清项字段及启用条件；S/4HANA 2021 What's New §3.6.1.3（印刷页134）说明 Automatic Account Determination app 配置 G/L account assignments，且 FI/J58、FI-FIO-GL-CA 范围新增 areas 与 transaction keys。**缺口**：具体账户、完整设置步骤、角色/权限、只读查看及 FI app 与具体过账规则的映射；该公告不支持 MM OBYC/BSX/WRX。 |
 | FI-11 | **直接**：SI21 限定 FIN 数据模型/兼容背景，S21 限定 ACDOCA/ACDOCD 成本汇总。**缺口**：BKPF/ACDOCA 与业务单据的字段、键、基数、视图/API 和授权逐项 2021 证据。 |
 
 ## CO：8 项
@@ -60,3 +60,8 @@
 ## 后续更新：CO-03
 
 [内部订单补查](co03-internal-order-evidence-m3.md)补充两篇未锁定 2021 的 SAP Learning 概念资料及 2021.001 Central Finance 特定结算场景；两篇 Learning 经独立复读，不能用来证明普通订单的所有 2021 功能、配置或例外。原初评保留为当时状态。
+
+
+## 后续更新：FI-10 自动科目确定应用
+
+SAP《What's New in SAP S/4HANA 2021》§3.6.1.3（印刷页134）为 FI-10 增加目标版本直接证据：Automatic Account Determination app 用于配置 G/L account assignments；2021 新增内容位于 FI/J58、FI-FIO-GL-CA 范围，涉及 areas 和 transaction keys。该变化公告不列出完整配置步骤、账户映射、权限或只读角色，且不涉及 MM 的 OBYC/BSX/WRX。故仅将来源贴合度从未读摘要更新为“有限直接支持”，不关闭 FI-10 的配置证据缺口；本次不属于文章审核。
