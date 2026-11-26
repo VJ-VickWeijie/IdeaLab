@@ -27,7 +27,7 @@ Reviewer context: `/root/reader_mm08`; each item was rechecked by the same origi
 - **Evidence:** S1 仅为固定版事务清单；未查到适用于所有目标界面的统一启动步骤。
 - **Work response:** 不添加未经固定版来源支持的界面点击/执行步骤。把 T-Code 说明为 SAP 帮助资料里的短代码和查找索引词，并明确具体系统的启动方式不属于本篇已证范围。
 - **Change ref:** Article “这篇文章要解决什么”。
-- **Original role recheck:** PASS；用途与界面操作边界清楚，未新增无来源步骤。
+- **历史复核标记**：此前版本记为 PASS；该标记不作为当前 PR 候选的复核证据。当前 exact-commit 原角色复核见下方附录。
 - **Status/context/timestamp:** closed; author `/root`, reviewer `/root/reader_mm08`; `2026-11-27 (Asia/Shanghai)`.
 
 ### R1.2 — 如何从 MM01/MM02/MM03 中选择
@@ -36,7 +36,7 @@ Reviewer context: `/root/reader_mm08`; each item was rechecked by the same origi
 - **Evidence:** S1 将三代码与“创建、修改和显示”按组列示，没有逐代码映射。
 - **Work response:** 不从名称或顺序推断。明确该来源不足以确认 `MM01=create / MM02=change / MM03=display` 的一一对应，本篇暂不能指导逐代码选择。
 - **Change ref:** Article “怎样从表中选入口？”及物料主数据表格。
-- **Original role recheck:** PASS；来源边界和不可据此选择入口的限制明确。
+- **历史复核标记**：此前版本记为 PASS；该标记不作为当前 PR 候选的复核证据。当前 exact-commit 原角色复核见下方附录。
 - **Status/context/timestamp:** closed; author `/root`, reviewer `/root/reader_mm08`; `2026-11-27 (Asia/Shanghai)`.
 
 ### R1.3 — 为什么查看采购订单
@@ -45,7 +45,7 @@ Reviewer context: `/root/reader_mm08`; each item was rechecked by the same origi
 - **Evidence:** S3 支持相关应用能查找、查看和编辑订单；MM-04、MM-05、MM-06 是项目内对应业务文章。
 - **Work response:** 增加“查看现有采购订单”的文字练习并链接 MM-04、MM-05、MM-06 获取业务背景；不在导航索引中复述完整流程或新增业务状态断言。
 - **Change ref:** Article “无写权限时的学习方式”。
-- **Original role recheck:** PASS；例子能引导读者按对象查表，并把流程背景交给相应文章。
+- **历史复核标记**：此前版本记为 PASS；该标记不作为当前 PR 候选的复核证据。当前 exact-commit 原角色复核见下方附录。
 - **Status/context/timestamp:** closed; author `/root`, reviewer `/root/reader_mm08`; `2026-11-27 (Asia/Shanghai)`.
 
 ### R1.4 — EWM 与同步货物移动术语
@@ -54,7 +54,7 @@ Reviewer context: `/root/reader_mm08`; each item was rechecked by the same origi
 - **Evidence:** S5 把该短文本功能限定在同步 IM→EWM 的嵌入式场景；S6 只列 Best Practices 范围项的激活后步骤。
 - **Work response:** 补充 EWM 英文全称、把“同步”限定为该页面所述场景，并说明 Best Practices 范围项只针对其方案；强调这只是短文本证据示例，不是理解通用导航的前提。
 - **Change ref:** Article “MIGO 与物料凭证”及 EWM 说明段。
-- **Original role recheck:** PASS；读者可将其识别为窄范围版本说明，且无需先学习 EWM。
+- **历史复核标记**：此前版本记为 PASS；该标记不作为当前 PR 候选的复核证据。当前 exact-commit 原角色复核见下方附录。
 - **Status/context/timestamp:** closed; author `/root`, reviewer `/root/reader_mm08`; `2026-11-27 (Asia/Shanghai)`.
 
 ### R1.5 — 无写权限时的练习
@@ -63,7 +63,7 @@ Reviewer context: `/root/reader_mm08`; each item was rechecked by the same origi
 - **Evidence:** 文章的学习边界要求不依赖生产写权限；S1/S3 只支撑对象入口族，不足以给出逐代码授权结论。
 - **Work response:** 增加虚构的主数据/采购订单识别情境，让读者按对象找资料并练习识别证据边界，不要求登录或操作系统。
 - **Change ref:** Article “文字练习（无需登录 SAP）”。
-- **Original role recheck:** PASS；练习可在离线阅读中完成且不暗示未经证实的代码映射。
+- **历史复核标记**：此前版本记为 PASS；该标记不作为当前 PR 候选的复核证据。当前 exact-commit 原角色复核见下方附录。
 - **Status/context/timestamp:** closed; author `/root`, reviewer `/root/reader_mm08`; `2026-11-27 (Asia/Shanghai)`.
 
 ## SAP configuration consultant perspective — 5/5 closed
@@ -76,7 +76,7 @@ Reviewer context: `/root/consultant_mm08`; AI review lens, not a human consultan
 - **Evidence:** S3 分别支持父页所列事务族和关联应用页的功能说明；后者没有逐代码授权分配。
 - **Work response:** 将表格表述改为“父页面标题确认事务族；相关应用页面描述应用层操作”，并明确不扩展成逐代码模式映射或授权矩阵。
 - **Change ref:** Article 采购订单表格及“怎样从表中选入口？”段。
-- **Original role recheck:** PASS；代码族与应用行为分开。
+- **历史复核标记**：此前版本记为 PASS；该标记不作为当前 PR 候选的复核证据。当前 exact-commit 原角色复核见下方附录。
 - **Status/context/timestamp:** closed; author `/root`, reviewer `/root/consultant_mm08`; `2026-11-27 (Asia/Shanghai)`.
 
 ### R1.7 — 物料主数据配置和授权限制的适用范围
@@ -85,7 +85,7 @@ Reviewer context: `/root/consultant_mm08`; AI review lens, not a human consultan
 - **Evidence:** S2 是创建流程页面，不能说明 MM02/MM03 的完整模式或授权模型。
 - **Work response:** 明确该限制仅针对来源描述的创建流程，不推广到 MM02/MM03。
 - **Change ref:** Article 物料主数据表格和解释段。
-- **Original role recheck:** PASS；适用范围收窄准确。
+- **历史复核标记**：此前版本记为 PASS；该标记不作为当前 PR 候选的复核证据。当前 exact-commit 原角色复核见下方附录。
 - **Status/context/timestamp:** closed; author `/root`, reviewer `/root/consultant_mm08`; `2026-11-27 (Asia/Shanghai)`.
 
 ### R1.8 — 逐代码操作映射
@@ -94,7 +94,7 @@ Reviewer context: `/root/consultant_mm08`; AI review lens, not a human consultan
 - **Evidence:** S1 只有组级 “create, change and display” 描述。
 - **Work response:** 明确未验证 MM01=create、MM02=change、MM03=display 的逐代码映射，不以代码顺序推断。
 - **Change ref:** Article “怎样从表中选入口？”段。
-- **Original role recheck:** PASS；没有从组级证据补成逐代码事实。
+- **历史复核标记**：此前版本记为 PASS；该标记不作为当前 PR 候选的复核证据。当前 exact-commit 原角色复核见下方附录。
 - **Status/context/timestamp:** closed; author `/root`, reviewer `/root/consultant_mm08`; `2026-11-27 (Asia/Shanghai)`.
 
 ### R1.9 — EWM Best Practices 指南范围
@@ -103,7 +103,7 @@ Reviewer context: `/root/consultant_mm08`; AI review lens, not a human consultan
 - **Evidence:** S6 只针对该指南列出的 Best Practices 范围项。
 - **Work response:** 明确这不表示每套 S/4HANA On-Premise 系统都使用或必须激活该范围，也不将指南作为所有 EWM 部署形态的定义。
 - **Change ref:** Article “MIGO 与物料凭证”及 EWM 说明段。
-- **Original role recheck:** PASS；部署范围和结论强度均受限。
+- **历史复核标记**：此前版本记为 PASS；该标记不作为当前 PR 候选的复核证据。当前 exact-commit 原角色复核见下方附录。
 - **Status/context/timestamp:** closed; author `/root`, reviewer `/root/consultant_mm08`; `2026-11-27 (Asia/Shanghai)`.
 
 ### R1.10 — MIGO SPS05 特例是否变成通用条目
@@ -112,7 +112,7 @@ Reviewer context: `/root/consultant_mm08`; AI review lens, not a human consultan
 - **Evidence:** S5 只支持短文本功能与特定同步 IM→嵌入式 EWM 条件。
 - **Work response:** 用醒目标记说明该段是版本/场景受限示例，不是已核实的 MIGO 通用导航；材料凭证显示入口和通用导航仍保持未决。
 - **Change ref:** Article “MIGO 与物料凭证”首句及缺口表。
-- **Original role recheck:** PASS；没有把特例推广到一般 MIGO。
+- **历史复核标记**：此前版本记为 PASS；该标记不作为当前 PR 候选的复核证据。当前 exact-commit 原角色复核见下方附录。
 - **Status/context/timestamp:** closed; author `/root`, reviewer `/root/consultant_mm08`; `2026-11-27 (Asia/Shanghai)`.
 
 ## SAP developer perspective — 5/5 closed
@@ -125,7 +125,7 @@ Reviewer context: `/root/developer_mm08`; AI review lens, not a human SAP develo
 - **Evidence:** S1 为组级描述，没有逐代码拆分。
 - **Work response:** 明确正文和练习均不确认一一对应，并指出单靠此表不能选出逐代码入口。
 - **Change ref:** Article 物料主数据表格、“怎样从表中选入口？”及文字练习。
-- **Original role recheck:** PASS；没有误导读者以未经证实映射操作系统。
+- **历史复核标记**：此前版本记为 PASS；该标记不作为当前 PR 候选的复核证据。当前 exact-commit 原角色复核见下方附录。
 - **Status/context/timestamp:** closed; author `/root`, reviewer `/root/developer_mm08`; `2026-11-27 (Asia/Shanghai)`.
 
 ### R1.12 — 代码族与相关应用功能混同
@@ -134,7 +134,7 @@ Reviewer context: `/root/developer_mm08`; AI review lens, not a human SAP develo
 - **Evidence:** S3 的父页标题列出代码族；子页描述应用级功能，没有逐代码模式矩阵。
 - **Work response:** 在表格及导航说明中分开两种证据，并明确缺少逐代码模式映射与授权矩阵；不加入未经证实的 Fiori 分类。
 - **Change ref:** Article 采购订单表格及“怎样从表中选入口？”段。
-- **Original role recheck:** PASS；两层证据及分类边界清楚。
+- **历史复核标记**：此前版本记为 PASS；该标记不作为当前 PR 候选的复核证据。当前 exact-commit 原角色复核见下方附录。
 - **Status/context/timestamp:** closed; author `/root`, reviewer `/root/developer_mm08`; `2026-11-27 (Asia/Shanghai)`.
 
 ### R1.13 — 授权模型不完整
@@ -143,7 +143,7 @@ Reviewer context: `/root/developer_mm08`; AI review lens, not a human SAP develo
 - **Evidence:** S2/S3 只提到必要授权和具体条件；未列授权对象或企业角色。
 - **Work response:** 明确不提供授权对象、完整角色模型或个体账号结论；未连接系统、未做授权测试。
 - **Change ref:** Article 表格“显示、修改与权限边界”列及练习说明。
-- **Original role recheck:** PASS；无越界权限结论。
+- **历史复核标记**：此前版本记为 PASS；该标记不作为当前 PR 候选的复核证据。当前 exact-commit 原角色复核见下方附录。
 - **Status/context/timestamp:** closed; author `/root`, reviewer `/root/developer_mm08`; `2026-11-27 (Asia/Shanghai)`.
 
 ### R1.14 — SPS05 文本长度和嵌入式 EWM 条件
@@ -152,7 +152,7 @@ Reviewer context: `/root/developer_mm08`; AI review lens, not a human SAP develo
 - **Evidence:** S5 明确最多 50 个字符，并将 MIGO 中输入文本限定于同步库存管理到嵌入式 EWM 场景。
 - **Work response:** 补入最多 50 字符，标为 SPS05 示例，并说明该条件不支撑其他 MIGO 操作或 EWM 部署形态。
 - **Change ref:** Article “MIGO 与物料凭证”及 EWM 说明。
-- **Original role recheck:** PASS；版本与场景限定完整。
+- **历史复核标记**：此前版本记为 PASS；该标记不作为当前 PR 候选的复核证据。当前 exact-commit 原角色复核见下方附录。
 - **Status/context/timestamp:** closed; author `/root`, reviewer `/root/developer_mm08`; `2026-11-27 (Asia/Shanghai)`.
 
 ### R1.15 — 对象、输入/输出与关联文章
@@ -161,7 +161,7 @@ Reviewer context: `/root/developer_mm08`; AI review lens, not a human SAP develo
 - **Evidence:** S1/S3 支持物料主数据记录和采购订单对象，但没有通用字段级输入/输出、API 或结构合同；M3 MM-08 目标要求补业务关联。
 - **Work response:** 明确列出两个对象；说明来源未提供字段级 I/O/API 合同，因此不编写字段映射；加入 MM-02、MM-04、MM-05、MM-06 关联阅读链接。
 - **Change ref:** Article“表格中……”段和“文字练习”段。
-- **Original role recheck:** PASS（范围受限）；对象和继续阅读路径足够，技术 I/O 缺口被如实保留，文章继续 drafting。
+- **历史复核标记**：此前版本记为 PASS；该标记不作为当前 PR 候选的复核证据。当前 exact-commit 原角色复核见下方附录。
 - **Status/context/timestamp:** closed; author `/root`, reviewer `/root/developer_mm08`; `2026-11-27 (Asia/Shanghai)`.
 
 ## Outcome and remaining blocker
