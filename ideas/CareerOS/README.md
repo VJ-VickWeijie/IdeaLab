@@ -18,6 +18,7 @@
 - 另直接读取并由独立上下文复读固定为 2021 (Oct 2021) 的 Account Determination 页面，补得发票科目确定的数据类别；它不列 OBYC/BSX/WRX 配置键或借贷分录，MM-09/FI-07/P2P 仍未闭合。
 - 已建立 99 项 [M3 来源登记与复核记录](reviews/summary/m3-evidence-review-2026-11-25.md)；各项来源支持范围、版本与剩余缺口持续记录，未完成项不标通过。
 - FI-10 另补读 SAP S/4HANA 2021 What's New §3.6.1.3（印刷页133–134），范围限 J58/FI-FIO-GL-CA：BUL、BUU 键属于 Prepare Intercompany Transactions，`*` 通配符涉及 Integrate with HR Postings 客户/供应商账号输入。它不是完整配置指南；配置顾问因 PDF 超出读取工具 10 MB 限制未能独立直读，搜索索引未计独立复核；不外推至 MM OBYC。详见 [FI/CO 证据登记](plans/evidence-finance-m3.md) 和 [贴合度复核](plans/finance-source-fit-review-m3.md)。
+- 配置顾问独立复读三篇未固定 2021/FPS 的 SAP Learning 科目确定/收货/关账页面：一般性材料因素可辅助理解，但一页把发票时 GR/IR 写作贷方，与另两页写的借 GR/IR/贷供应商不一致。此冲突已记入 MM-09、FI-07、PROCESS-01 证据计划，不作为 SAP 勘误或 2021 结论；来源和边界见 [MM-09 补查](plans/mm09-obyc-source-followup-m3.md) 与 [FI-07 补查](plans/finance-fi07-direct-2021.md)。
 - 原始 M0 项目记录与 24 个月路线保留在下方，原始状态文字属于历史记录，以本节为当前状态。
 
 ## Work 接手顺序与后续工作
