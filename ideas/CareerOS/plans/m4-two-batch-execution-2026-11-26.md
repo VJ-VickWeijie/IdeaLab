@@ -82,3 +82,8 @@ CO-01《管理会计从零：成本与利润》按批准路径完成限缩范围
 ## 工作线 2 进度追记（2026-11-27，PP-04）
 
 PP-04《需求、MRP 与计划订单》已按 M3 准入分流建立证据受限正文，状态 drafting；三角色视角各 5 个同上下文模拟闭环，共 15，不是独立审查，不计 reviewed/owner accepted。固定 2021.000 Help 仅支持 J44 的 Material Coverage 应用功能和 Planned Order API 条目；Operations Guide/FSD 实际读取为 2021 SPS10、文档版本 11.0（2026-07-22）。FSD URL 动态，已明确标注为 SPS10 快照，不冒充固定版初始 2021 证据。净需求/可用库存规则、批量算法与参数、库存及供给纳入、提议类型选择、客户配置、完整 API/数据模型及授权仍待核；纸面算术不代表 SAP 结果。批次 A 维持 8/50 reviewed、0/50 owner accepted；全库 owner accepted 3/99；SAP 实机测试 0。下一篇 PP-05，路径 knowledge/PP/02-functions/production-order.md。
+
+
+## 工作线 2 进度追记（2026-11-27，PP-05）
+
+PP-05《生产订单与确认》已建立证据受限文章，状态 drafting；三角色各 5 个同上下文模拟闭环，共 15，不是独立审查，不计 reviewed/owner accepted。固定版 2021.000 Help 支持 BJ5 范围的 Manage Production Orders、释放中的特定文档授权检查、Production Order Confirmation API 的数据提议及订单页货物移动显示；动态 FSD 只按 2021 SPS10 文档版本 11.0（2026-07-22）快照标注引用。订单状态全集、通用释放条件、部分/最终确认及撤销、确认与发料/收货联动、数据模型/API 完整合同、客户权限及 FI/CO 影响仍未闭合。批次 A 维持 8/50 reviewed、0/50 owner accepted；全库 owner accepted 3/99；SAP 实机测试 0。下一篇 PP-06，路径 knowledge/PP/02-functions/production-goods-cost.md。
