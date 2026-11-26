@@ -115,7 +115,8 @@
 - **FI-07《库存估价与 GR/IR》**：已建立目标版证据受限草稿，并记录 15 个同上下文角色视角模拟闭环（读者 5、顾问 5、开发者 5）；模拟不是独立审查，状态 `drafting`。固定 2021 页面支持 GR/IR 清账的有限条件，普通库存采购借贷、税和自动科目/OBYC 规则仍未闭合；未编造分录。详见[正文](knowledge/FI/02-functions/inventory-valuation-grir.md)和[Work 记录](reviews/work/2026-11-27-m4-workline-4-fi07-review.md)。
 - FI-07 的模拟闭环不计 formal reviewed；批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，正式接受总数仍为 **3/99**。
 - **FI-08《结账与报表入门》**：依据 SAP S/4HANA 2021 固定版 What's New §3.6.1.23–25 建立范围受限草稿，说明账户余额结转到新财年、Schedule General Ledger Jobs / `FAGLGVTR` 作业入口描述、Balance Carryforward Status 应用的信息范围与旧应用时间线。完整月结/年结、期间启闭、模拟/过账、报表和中国制度仍缺直接证据，故 `drafting`。15 个同上下文角色模拟闭环（读者 5、顾问 5、开发者 5）不是独立审查，不计入 8/50 reviewed。详见[正文](knowledge/FI/02-functions/period-close-reporting.md)、[Work 记录](reviews/work/2026-11-27-m4-workline-4-fi08-review.md)和[财务证据台账](plans/evidence-finance-m3.md)。
-- 工作线 4 当前游标：QM-06～QM-08、FI-04、FI-06、FI-07、FI-08 均为受限 `drafting`；下一篇 **FI-09《FI 常用事务码导航》**。逐项核对目标版具体入口、版本、输入输出和权限，不能凭通用功能外推。
+- **FI-09《FI 常用事务码导航》**：依据 SAP S/4HANA 2021 What's New §3.6.1.15 建立单项证据草稿，仅记录 `FGRIR_CLEARING` 的菜单路径、显示/模拟/真实更新模式和 Extended Open Item Management 条件。完整 GUI/Fiori 事务码索引、每项输入输出/权限及目标系统可用性仍未闭合，状态 `drafting`。15 个同上下文角色模拟闭环（读者 5、顾问 5、开发者 5）不是独立审查，不计 reviewed。详见[正文](knowledge/FI/03-tcodes/finance-transactions.md)、[Work 记录](reviews/work/2026-11-27-m4-workline-4-fi09-review.md)和[财务证据台账](plans/evidence-finance-m3.md)。
+- 工作线 4 当前游标：QM-06～QM-08、FI-04、FI-06、FI-07、FI-08、FI-09 均为受限 `drafting`；下一篇 **FI-10《财务配置查看》**。按控制矩阵逐项核对固定版配置公告、设置路径、账户映射和只读权限，不从 FI-09 或其他主题外推。
 - SAP 系统未连接；没有事务码、角色、配置或客户系统实测。
 
 ## 关键文件索引
@@ -127,6 +128,8 @@
 - [FI-06 应付/应收](knowledge/FI/02-functions/payables-receivables.md)
 - [FI-08 结账与报表入门（证据受限草稿）](knowledge/FI/02-functions/period-close-reporting.md)
 - [FI-08 Work 角色视角记录](reviews/work/2026-11-27-m4-workline-4-fi08-review.md)
+- [FI-09 FI 常用事务码导航（单项证据受限草稿）](knowledge/FI/03-tcodes/finance-transactions.md)
+- [FI-09 Work 角色视角记录](reviews/work/2026-11-27-m4-workline-4-fi09-review.md)
 - [FI-04～FI-06 三角色审查与证据收尾记录](reviews/work/2026-11-26-m4-batch-a01-fi04-fi06-review.md)
 - [MM-01 组织结构文章](knowledge/MM/01-foundations/organization-objects.md)
 - [MM-01 三角色审查记录](reviews/work/2026-11-26-m4-mm01-three-role-review.md)
