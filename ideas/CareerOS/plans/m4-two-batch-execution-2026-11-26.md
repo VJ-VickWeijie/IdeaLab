@@ -105,7 +105,7 @@ PP-06《生产发料、收货与成本》正文按 M3 分流的“限缩可写�
 
 FI-10《财务配置查看》按 M3“暂缓核心”准入建立目标版证据受限草稿，状态 `drafting`。SAP S/4HANA 2021 What's New §3.6.1.3 仅支持 Automatic Account Determination app 用途及公告中的限定变化；固定版 2021.000 Help §3.6.1.16 仅支持 GR/IR 账户的 Extended Open Item Management 字段与 display-only 属性。公司代码、科目表、过账期间、收付款配置、完整账户映射、精确配置路径和角色授权仍缺目标版直接证据。没有外推 FI 来源到 MM OBYC/BSX/WRX，也没有连接 SAP 或做实机验证。
 
-Work 在同一上下文以普通学习者、资深 SAP 配置顾问、普通 SAP 开发人员三个视角各完成 5 个模拟质询—证据答复—修订判断—复核闭环，共 15；没有独立代理/真人专家签核，不计入正式 8/50 reviewed。记录见 [文章](../knowledge/FI/04-configuration/finance-config-observation.md) 和 [角色视角审查记录](../reviews/work/2026-11-27-m4-workline-4-fi10-review.md)。工作线 4 已完成所分配的新建与续核文章，FI-10 为本线最后一篇，无下一篇在本线范围内。
+Work 初稿阶段在同一上下文以普通学习者、资深 SAP 配置顾问、普通 SAP 开发人员三个视角各完成 5 个模拟闭环；随后三个独立 AI 子代理上下文各完成 5 个质询—证据答复—修订判断—原角色复验闭环，共 15。子代理不是真人专家，模型 ID 未显示。核心证据缺口仍在，因此文章继续 drafting、不计入正式 8/50 reviewed。记录见 [文章](../knowledge/FI/04-configuration/finance-config-observation.md) 和 [角色视角审查记录](../reviews/work/2026-11-27-m4-workline-4-fi10-review.md)。工作线 4 已完成所分配的新建与续核文章，FI-10 为本线最后一篇，无下一篇在本线范围内。
 
 ### M4 Workline 5 CO-03｜2026-11-27
 
