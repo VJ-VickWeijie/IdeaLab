@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-27 更新）
 
-> 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。M3 已验收；M4 完整 99 篇分两批建设已获授权。FI-01～FI-03 已由所有者接受，正式接受 3/99。批次 A 有 8/50 篇正式完成三角色 review、0/50 篇获所有者接受；FI-05、MM-01～MM-07 已 reviewed，FI-04/FI-06 保持 drafting。MM-08、QM-01 的角色视角闭环仍为 drafting，不计正式 reviewed；CO-01 的同上下文角色模拟也保持 drafting，待独立复核。工作线 1 下一项 MM-09；工作线 5 下一项 CO-02；其他并行游标见 [HANDOFF](HANDOFF.md)。
+> 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。M3 已验收；M4 完整 99 篇分两批建设已获授权。FI-01～FI-03 已由所有者接受，正式接受 3/99。批次 A 有 8/50 篇正式完成三角色 review、0/50 篇获所有者接受；FI-05、MM-01～MM-07 已 reviewed，FI-04/FI-06 保持 drafting。MM-08、QM-01 的角色视角闭环仍为 drafting，不计正式 reviewed；CO-01、CO-02、CO-03 均为证据受限 drafting 草稿，各有普通读者、配置顾问、开发人员视角各 5 个同上下文模拟闭环，不计正式 reviewed；CO-03 的普通订单结算、预算、权限和数据模型证据仍不充分。工作线 1 下一项 MM-09；工作线 5 下一项 CO-04；其他并行游标见 [HANDOFF](HANDOFF.md)。
 ## 并行工作线进度（2026-11-27）
 
 - Workline 3：PP-07 已完成证据受限草稿与 15 个同一 Work 上下文内的角色模拟闭环（读者 5、配置顾问 5、开发者 5），仍为 drafting，不计入 8/50 reviewed。Routing、MRP、生产订单事务码的 S/4HANA 2021 On-Premise 直接来源和授权未闭合；下一篇为 PP-08。当前分支其他工作线进展见 [HANDOFF](HANDOFF.md)。
@@ -123,3 +123,10 @@ Work 应先建立细粒度覆盖矩阵，按阶段门禁开展全范围内容建
 ### M4 工作线 5｜CO-02 进度（2026-11-27）
 
 CO-02《成本中心与成本要素》已建立证据受限草稿，保持 drafting；普通读者、资深 SAP 配置顾问、普通 SAP 开发人员视角各 5 个同上下文模拟闭环，共 15，不是独立审核，不计正式 reviewed。成本中心主数据有效期和组织设置、成本要素类别及日常分配/自动规则仍待 2021 目标版直接证据；Central Finance 的账户关系只按该映射语境引用。批次 A 仍为 8/50 reviewed、0/50 owner accepted，全库 owner accepted 为 3/99。详见 [文章](knowledge/CO/02-functions/cost-center-elements.md)、[审查记录](reviews/work/2026-11-27-m4-co02-three-role-review.md) 和 [证据登记](plans/evidence-finance-m3.md)。
+
+## 工作线 5 更新：CO-03（2026-11-27）
+
+- CO-03《内部订单和费用归集》已建立证据受限草稿：[正文](knowledge/CO/02-functions/internal-orders.md)、[三角色闭环记录](reviews/work/2026-11-27-m4-co03-three-role-review.md)、[证据台账](plans/evidence-finance-m3.md)。
+- 同一 Work 上下文角色模拟闭环：普通读者 5、资深 SAP 配置顾问 5、普通 SAP 开发人员 5；无独立复核，不计入批次 A 的 **8/50 reviewed**。批次 A 仍为 **0/50 owner accepted**；全库已接受 **3/99**。
+- 无 SAP 实机测试、客户配置/权限核验。普通订单真实/统计处理、预算控制和结算规则仍缺直接目标版证据；未推导 FI-07 普通库存借贷、税或自动科目。
+- 下一篇：CO-04。开始前仅读取该篇自身准入和证据登记。
