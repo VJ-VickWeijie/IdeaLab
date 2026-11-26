@@ -76,7 +76,7 @@ SAP 2021 的功能资料支持 flexible workflow 的存在及高层能力，但�
 ### 参考思路
 
 - **MRP 需求**：先识别为内部 PR；FSD 支持 MRP 需求可产生 PR。还要核实适用的来源与审批设置。可以基于 PR 创建 PO，但不能只凭“MRP 已产生 PR”推断自动生成 PO。
-- **未完全明确的服务需求**：仍是内部 PR；目标版来源提到未计划服务/材料可用限额项表达。审批以及后续 PO 的具体限额、服务记录和财务处理仍须查对应资料。
+- **未完全明确的服务需求**：仍是内部 PR。SAP Help 2021.000 的“My Purchase Requisitions”页面在列明的范围项中说明，限额项可用于下单时无法详细说明的计划外服务或材料，并可定义预期值和总额上限。初学者可先把它理解为“需求细节尚未完整时，为这一采购项目设定预期金额与总额边界”；它不等于已明确的服务清单，也不说明审批、合同调用或后续发票的完整规则。该页面是特定应用范围的资料，不据此概括所有 PR 创建路径。
 - **多项已批准需求与合同**：FSD 支持将多个 PR 汇总到一个 PO；引用现有合同可能发起合同调用。它不保证题设必须合并成一张 PO，也不提供合并条件或合同调用的全部规则。
 
 以上只是按已列来源自检的方向，不是标准答案中的固定系统步骤。
@@ -98,6 +98,7 @@ SAP 2021 的功能资料支持 flexible workflow 的存在及高层能力，但�
 1. [SAP S/4HANA 2021 On-Premise Feature Scope Description，动态 latest 链接](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=157)，§2.12.4.2 Requirements Processing，PDF 正文页 157–158。本文于 2026-11-26 读取；M3 台账的 SHA-256 `ad3c9913ee1f0cbe81e4ede4cb15192c4fcda6497dcf9ac0654dde04b541aaec` 只对应 2026-11-25 的读取，不是本文此次读取的字节快照；本次未保留独立文件哈希，精确字节级复现受限。
 2. [SAP S/4HANA 2021 On-Premise Feature Scope Description，动态 latest 链接](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=159)，§2.12.4.3 Purchase Order Processing，PDF 正文页 159–160：支持 PO 的业务定义、基于 PR/既有 PO/信息记录/合同参考或从头创建、合同调用、账户分配/自由文本项目以及 flexible workflow。具体审批结果取决于 workflow 设置。
 3. [Manage Workflows for Purchase Requisitions，SAP Help 2021.000](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/4c20737d1b69420a9b6c7b4c481be6f5.html?version=2021.000)：固定 2021.000 页面记录 PR 工作流应用的部分能力，包括限额项目工作流、退回修改及工作流期限等。本文只用它确认该版所记录的应用能力，不据此推断客户完整配置、适用矩阵或运行结果。
-4. M3 物流来源台账：[evidence-logistics-m3.md](../../../plans/evidence-logistics-m3.md)。MM-04 的逐项来源与缺口记录仍以台账为准。
+4. [My Purchase Requisitions，SAP Help 2021.000](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b8272f1725d74e5aaa527558422a0361.html?locale=en-US&version=2021.000)：页面标示 SAP S/4HANA 2021（Oct 2021）及范围项 18J、1XI、O8J；其“Limit items”说明支持在指定应用范围内将下单时无法详细说明的计划外服务/材料表示为限额项，并设定预期值与总额上限。它不证明所有 PR 创建方式都具有同一字段或行为，也不覆盖客户审批矩阵、服务明细或后续发票规则。
+5. M3 物流来源台账：[evidence-logistics-m3.md](../../../plans/evidence-logistics-m3.md)。MM-04 的逐项来源与缺口记录仍以台账为准。
 
 本文是个人学习材料，不构成采购政策、审批授权、系统配置或生产操作建议。
