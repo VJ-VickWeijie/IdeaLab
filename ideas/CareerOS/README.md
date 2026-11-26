@@ -13,7 +13,7 @@
 - PR #19 的 V0.3 蓝图已合并；所有者已批准 M0、M1、M2、99 篇正式文章范围及 11 个纯结构导航分类。
 - PR #20 分支继续补充 M3 逐篇来源与版本证据；M3 尚未通过，M4 尚未授权。
 - 尚未编写正式知识库正文、完成正式三角色文章审查、SAP 实机验证或全库链接验收；规划和文献研究不计作 V0.3 交付。
-- ABAP-04 补读并独立复核两页 SAP Support Additional Content：有限支持 BAPI_PO_CREATE1/ME21N 对应、TESTRUN、SE37 创建后提交示例、X 结构及 RETURN；页面为 ECC/R/3 且无 2021 版本选择器，不能证明目标事务语义，ABAP-04 仍未闭合。
+- ABAP-04 另由独立开发者直接复读四篇 ABAP Platform 2021 (Oct 2021) 官方通用 BAPI 事务文档：支持一般调用方管理 LUW、commit/rollback 与 update process；它们没有 BAPI_PO_CREATE1 专属 WAIT、提交例外或返回消息决策合同。此前 ECC/R/3 Additional Content 仅作有限背景，函数级缺口仍未闭合。详见 [BAPI 事务证据复查](plans/bapi-transaction-search-m3.md)。
 - 今日直接读取 SAP Help 的两篇 S/4HANA 2021 (Oct 2021) GR/IR 页面，补充了有限的科目关系说明；其中一页收货方向用词与其他示例不一致；另补入 MAP 无库存覆盖的数量/价差特例，但未明确无科目分配且无完整借贷表。未证明 OBYC 配置因素，MM-09 仍未闭合。
 - 另直接读取并由独立上下文复读固定为 2021 (Oct 2021) 的 Account Determination 页面，补得发票科目确定的数据类别；它不列 OBYC/BSX/WRX 配置键或借贷分录，MM-09/FI-07/P2P 仍未闭合。
 - 已建立 99 项 [M3 来源登记与复核记录](reviews/summary/m3-evidence-review-2026-11-25.md)；各项来源支持范围、版本与剩余缺口持续记录，未完成项不标通过。
