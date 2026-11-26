@@ -41,3 +41,13 @@
 Work 直接读取 [Account Determination](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/ed84b70c199d4470ae2e5ccb93b2e45b/2a70b6531de6b64ce10000000a174cb4.html?version=2021.000)，版本选择器显示 2021 (Oct 2021)；独立上下文 `/root/mm09_independent_2021_read` 直接复读同一页面并确认版本和有限摘要。页面说明供应商账户/金额、物料估价类/价格控制/物料科目、PO 价格与收货状态、净额/总额设置及 G/L 科目类别如何参与发票过账科目确定；库存是否覆盖发票数量应视为过账时的库存状态比较，不是静态主数据字段。
 
 此页不说明采购收货 OBYC 交易键、BSX/WRX 配置映射或借贷分录，也不证明发票必定入账/付款。它补充 PROCESS-01 与 FI-07 的目标版发票决策因素，但不闭合标准采购 PO→GR→IR→AP→实际付款及其逐笔会计链；正式正文和审核轮次仍为 0。
+
+
+## 2026-11-26｜通用 SAP Learning 来源独立复核
+
+/root/consultant_m3_review 直接复读三篇 SAP Learning 页面：
+- [SAP Learning: Describing Automatic Account Determination](https://learning.sap.com/courses/cross-functional-customizing-in-sap-s-4hana-materials-management/describing-automatic-account-determination)
+- [SAP Learning: Managing Goods Movements](https://learning.sap.com/courses/exploring-end-to-end-business-processes-in-sap/managing-goods-movements_d7cf8543-eb45-490b-810a-237bbd17485f)
+- [SAP Learning: Managing Closing Activities in Materials Management](https://learning.sap.com/courses/configuring-the-financial-closing-in-sap-s-4hana/managing-closing-activities-in-materials-management)
+
+第一篇支持有限的自动科目确定因素，但在发票步骤将 GR/IR 写作贷方，与另两篇的发票借 GR/IR、贷供应商表述不一致；后两篇分别明确收货借库存/贷 GR/IR，第二篇还明确三步采购流程中发票方向。三页均未固定到 2021/FPS，不用来裁决 2021 Help 的措辞，也不视为 SAP 勘误。正式文章和文章审核轮次仍为 0。
