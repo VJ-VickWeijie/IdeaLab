@@ -186,3 +186,11 @@
 - M3 PP-08 证据行将 SAP S/4HANA 2021 Simplification List PDF 第 623 页描述为生产版本迁移；本轮核对 PDF 目录发现第 623 页为 Browser-based Process Instruction-Sheets/Electronic Work Instructions，第 617 页为 Simplified Sourcing。文章未使用该旧行支持 PP 配置；本次只记录此错配，没有修改共享 M3 矩阵或证据台账。
 - 一般订单类型、排程/确认、MRP 参数、工厂配置及目标系统的授权只读查看入口仍未闭合；PP-01 仍 drafting、PP-04/PP-05 当前不在分支中。故 PP-08 保持 `drafting`，15 个闭环不增加正式 reviewed 数。批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，全库正式接受 **3/99**；SAP 系统未连接，未做配置或实机测试。
 - 下一篇：**PP-09《生产主数据与订单数据模型》**，批准路径 `knowledge/PP/05-data-model/production.md`。按准入先只读取该篇对应来源与依赖。
+
+## 工作线 2 进度追记（2026-11-27，PP-02）
+
+- PP-02《物料清单 BOM》已按批准路径建立固定版证据受限文章，状态 drafting。正文只说明 2021 固定版资料支持的多层结构、BOM versioning 配置条目，以及按库存重复制造确认场景中的 explosion date/BOM version 例子。
+- 角色视角记录：[PP-02 三角色视角工作记录](reviews/work/2026-11-27-m4-pp02-three-role-review.md)。普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各完成 5 个问题—证据答复—修订—原视角复核闭环，共 15 个同一 Work 上下文角色视角模拟循环；未声称独立审查或真人专家意见。
+- PP-02 不增加批次 A reviewed/owner accepted 数量：仍为 8/50 reviewed、0/50 owner accepted；全库正式接受仍为 3/99。SAP 系统未连接，实机验证为 0。
+- 尚未闭合的核心：一般 BOM 数量/单位与计算、替代项选择和 lot size/有效日期/生产版本关系、一般有效期规则、组件缺失行为、表字段及 released API；SAP 官方固定版证据不足。M3 的 FSD_OP2021_latest.pdf 动态 URL 未作为固定版 2021 证据。
+- 工作线 2 下一篇：PP-03《工作中心与工艺路线 Routing》，路径以 M3 逐篇准入分流为准。开始前只读取 PP-03 对应的控制/分流/来源和关联文章。
