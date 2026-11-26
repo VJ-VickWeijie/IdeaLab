@@ -1,7 +1,7 @@
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-27（Asia/Shanghai）  
-状态：**M3 已验收；M4 完整 99 篇分两批建设已授权。FI-01～FI-03 所有者已接受（3/99）；FI-05、MM-01～MM-07 已完成三角色 review 并计入 8/50 reviewed。MM-08、MM-09 各有 15 个 AI 评审闭环，但都因核心证据缺口保持 drafting，不计入 reviewed；批次 A 为 8/50 reviewed、0/50 owner accepted。FI-04/FI-06 继续 drafting。**
+状态：**M3 已验收；M4 完整 99 篇分两批建设已授权。FI-01～FI-03 所有者已接受（3/99）；FI-05、MM-01～MM-07 已完成三角色 review 并计入 8/50 reviewed。MM-08、QM-01 各有15个视角闭环但目标版核心证据未闭合，保持 drafting；FI-04/FI-06 继续 drafting。CO-01 为证据充分的限缩草稿，15个同上下文模拟闭环未计reviewed。批次A为8/50 reviewed、0/50 owner accepted。**
 
 ## 当前仓库、分支与 PR
 
@@ -9,7 +9,7 @@
 - 当前 PR：[PR #21｜CareerOS M4 全量分批建设](https://github.com/VJ-VickWeijie/IdeaLab/pull/21)，目标 `main`；开放、未合并。Work 不自行合并。
 - 工作分支：`careeros-v04-m4-batch1-20261126`。
 - PR #20 已合并到 `main`；基线提交 `db349fe68e1aa0560ba5546a6382ffe503d0f595`。
-- 本次 HANDOFF 更新前最近一次进度提交：`1c898ecf5c0e7632601affeda6664b0ef5a38c71`；本 HANDOFF 提交会继续推进分支。新窗口接手时必须实时核查最新 HEAD。
+- 本工作包提交前实时读取 PR #21：open、未合并、base main；工作分支 HEAD 为 6d3aae117e3d8328fc97dbaa646b103064fb31e6。本工作包提交后以最新HEAD查询为准。
 - AI-Workflow V1.1 固定 SHA：`939ec44036d89cd91622ab96b938be9f02479026`。未更改通用门禁。
 
 ## 里程碑、授权与产品边界
@@ -58,12 +58,13 @@
 | MM-06 收货、退货与冲销 | 15/15 | reviewed（待所有者验收） | 冲销与退货的目标版单据操作、部分数量、发票顺序与 FI 影响没有足够直接证据；正文限缩到已证实业务意图与 FSD 能力 |
 | MM-07 价格单位、数量单位与换算 | 15/15 | reviewed（待所有者验收） | 不推断底层转换对象、接口字段覆盖、任意计价数量行为或发票匹配规则 |
 | MM-08 MM 常用事务码导航 | 15/15 AI 评审闭环 | drafting（不计入 8/50） | 物料凭证显示入口、通用 MIGO 导航仍缺固定版 2021 直接证据；GUI/Fiori 逐代码映射与权限未核实 |
+| CO-01 审查 | 普通读者、配置顾问、开发者视角模拟各5个闭环，共15；drafting，缺独立复核，不计reviewed；范围内证据充分 |
 | MM-09 采购与库存配置查看 | 15/15 AI 评审闭环 | drafting（不计入 8/50） | 普通无科目分配估价收货的固定版完整分录、OBYC/BSX/WRX 条件、方向冲突及只读路径/权限未闭合 |
 | FI-04 公司代码、会计科目表与总账科目 | 14/15 | drafting | SAP S/4HANA 2021 公司代码的一般定义/组织用途缺少直接证据 |
 | FI-05 会计凭证、过账与冲销 | 15/15 | reviewed | 等待后续所有者审阅；无已知严重角色问题 |
 | FI-06 应付与应收 | 9/15 | drafting | 客户/供应商子账与总账、目标版 open item/clearing、部分付款/剩余项目缺固定版证据 |
 
-下一项明确任务：继续批次 A 的 MM-10《采购库存数据模型与单据关系》，路径 knowledge/MM/05-data-model/purchasing-inventory.md。M3 分流为“暂缓核心”；先读取该篇自身控制、范围、证据和关联项，再按目标版直接证据收窄实体、事件与关系描述。PR/PO/历史/物料凭证的完整模型、精确键、基数、物理表/兼容视图与发布 API 均不得由邻近材料推断。MM-09 保持 drafting；其普通估价收货与 OBYC/BSX/WRX 核心证据仍未闭合。
+工作线 1 下一项明确任务：继续批次 A 的 MM-10《采购库存数据模型与单据关系》，路径 knowledge/MM/05-data-model/purchasing-inventory.md。M3 分流为“暂缓核心”；先读取该篇自身控制、范围、证据和关联项，再按目标版直接证据收窄实体、事件与关系描述。PR/PO/历史/物料凭证的完整模型、精确键、基数、物理表/兼容视图与发布 API 均不得由邻近材料推断。MM-09 保持 drafting；其普通估价收货与 OBYC/BSX/WRX 核心证据仍未闭合。
 
 每个独立工作包都要提交文章、真实审核记录、状态和本 HANDOFF 更新到 PR #21。不要把计划、来源登记、导航或草稿统计成正式接受文章；不要合并 PR。
 
@@ -88,7 +89,7 @@
 | 指标 | 数量/状态 |
 | --- | --- |
 | 正式接受文章 | **3/99**（FI-01～FI-03） |
-| 批次 A | **8/50 已角色 reviewed（FI-05、MM-01～MM-07）；0/50 已由所有者接受。** FI-04/FI-06 仍 drafting |
+| 批次 A | **8/50 已角色 reviewed（FI-05、MM-01～MM-07）；0/50 已由所有者接受。** FI-04/FI-06、MM-08、QM-01 和 CO-01 均为 drafting |
 | 批次 B | **0/46 开始**；待批次 A 完成 |
 | FI-01～FI-03 角色审核闭环 | 52 |
 | MM-01 审查 | 16 个有效闭环：普通读者 5、配置顾问 5、开发者 6；reviewed，待所有者验收 |
@@ -245,3 +246,10 @@
 - 审查记录 reviews/work/2026-11-27-m4-mm09-three-role-review.md：普通读者、配置顾问视角、开发者视角各 5 个有效闭环，共 15。三个分开的 AI 子代理上下文已各自复核通过；不代表人类 SAP 专家意见、不同模型证明或系统验证。
 - 状态为 **drafting**，不计入 reviewed（批次 A 仍为 **8/50**）、不计 owner accepted（**0/50**）；全库正式接受仍为 **3/99**。未闭合：普通无科目分配估价收货的固定版完整借贷方向；OBYC/BSX/WRX 触发条件和精确科目映射；估价/移动类型等条件；方向措辞冲突解释；GUI/Fiori 只读路径与权限。SAP 系统未连接，没有实机测试。
 - 工作线 1 下一篇：**MM-10《采购库存数据模型与单据关系》**，路径 knowledge/MM/05-data-model/purchasing-inventory.md。按逐篇分流为“暂缓核心”，先核对固定版证据，不将 MM-09 或其他邻近文章的范围外推为完整模型。
+
+## 工作线 5 进度（2026-11-27，CO-01）
+
+- CO-01《管理会计从零：成本与利润》已按批准路径建立限缩草稿；当前状态 drafting。普通读者、配置顾问、开发者视角各完成 5 个有效闭环，共 15；均为同一 Work 上下文模拟，不是独立审核，故不计正式 reviewed。
+- 核心入门证据来自 SAP S/4HANA 2021 Feature Scope Description v9.0（适用于 SP08）的总账、成本中心与计划/实际报告说明，以及 2021 Simplification List §8.1 的有限 Universal Journal 背景。记录见 [CO-01 审查](reviews/work/2026-11-27-m4-co01-three-role-review.md) 和 [M4 财务证据登记](plans/evidence-finance-m3.md)。
+- 独立复核仍待完成；范围外的自动成本对象归属、计划维护、分摊/结算规则、利润分析配置、表/API/字段和权限仍不作通用断言。FI-07普通库存采购借贷、税及自动科目边界未扩展。SAP未连接，无实机测试。
+- 批次 A 正式 reviewed 仍为 8/50、owner accepted 为 0/50；全库 owner accepted 为 3/99。工作线 5 下一篇 CO-02《成本中心与成本要素》，路径 knowledge/CO/02-functions/cost-center-elements.md；接手时先读取其准入项与证据登记，本次未加载 CO-02 完整研究资料。
