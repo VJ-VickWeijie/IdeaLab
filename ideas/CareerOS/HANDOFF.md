@@ -222,3 +222,12 @@
 - [PP-03 三角色视角记录](reviews/work/2026-11-27-m4-pp03-three-role-review.md)记录普通读者、资深配置顾问、普通开发人员各 5 个闭环，共 15 个同上下文角色模拟循环；不构成独立 review 或真人专家意见。
 - 通用工序顺序/选择、工作中心完整定义、Routing 与 BOM/生产版本的替代和有效期关系、产能/成本参数与公式仍未闭合，故 PP-03 不计 reviewed/owner accepted。批次 A 保持 8/50 reviewed、0/50 owner accepted；正式接受 3/99；SAP 实机测试 0。
 - 工作线 2 下一篇：PP-04《需求、MRP 与计划订单》，路径以 M3 逐篇准入分流为准；开始前只读取 PP-04 自身控制、来源和关联文章。
+
+
+## 工作线 3 进度追记（2026-11-27，QM-01）
+
+- **QM-01《质量管理业务与组织对象》**已建立证据受限草稿 `knowledge/QM/01-foundations/quality-organization.md`，状态 `drafting`。固定版 SAP Help version 2021.000 支持 QM-IM 应用从检验批工作清单记录结果/作使用决策，并列出 1FM、1MP、1E1、1MR 范围项；该页未证明质量组织、用户角色或检验触发。
+- 审查记录 `reviews/work/2026-11-27-m4-workline-3-qm01-review.md` 记载同一 Work 上下文内普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各 5 个有效闭环，共 15；不代表独立代理或真人专家审查。
+- M3 所引 FSD_OP2021_latest.pdf 为动态版本；本篇未用其快照支持固定版触发规则。MM-01 已 reviewed 但只支持采购组织模型；PP-01 仍 drafting；PROCESS-06 当前不在分支。
+- 质量组织/角色、检验批创建触发、工厂/主数据设置和库存/财务结果仍未闭合。QM-01 保持 `drafting`，不增加正式 reviewed 数；批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，全库正式接受 **3/99**。SAP 系统未连接、无实机测试。
+- 下一篇：**QM-02《检验类型与检验批》**，批准路径 `knowledge/QM/02-functions/inspection-type-lot.md`。按逐篇准入先读取该篇来源与依赖。
