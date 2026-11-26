@@ -8,7 +8,7 @@
 - 仓库：[VJ-VickWeijie/IdeaLab](https://github.com/VJ-VickWeijie/IdeaLab)
 - 活跃 PR：[PR #20｜V0.3 阶段评审、范围与来源计划](https://github.com/VJ-VickWeijie/IdeaLab/pull/20)，状态 open、未合并；不得自行合并。
 - 工作分支：`careeros-v03-m0-review-20261125`，目标分支 `main`。
-- 在本次 HANDOFF 同步提交前，实时核实 PR #20：head `b507408bb6dba2f9e8efee75ff3ae5f61e704137`，159 commits，69 changed files，mergeable/clean；本 HANDOFF 更新本身会再产生一个提交。**接手时必须实时读取 PR #20 和工作分支的 head；本节记录的 SHA 是 HANDOFF 提交前的最后一次核实值。**
+- 在本次 HANDOFF 同步提交前，实时核实 PR #20：head `8a7332b010bb949560bf2c5c2c6fe35e2ab1edcf`，161 commits，69 changed files；PR open、未合并。本 HANDOFF 更新本身会再产生一个提交。**接手时必须实时读取 PR #20 和工作分支的 head；本节记录的 SHA 是 HANDOFF 提交前的最后一次核实值。**
 - PR #20 之后没有更新的 PR；PR #19 已于 2026-11-25 合并。
 - 本轮最新 M3 收尾报告：[2026-11-26 M3 门禁收尾独立复核](reviews/work/2026-11-26-m3-gate-closeout-review.md)，报告提交 `b87f80d4246ea082ad76ad9ccea7d31fb253056e`。三角色主要内容复核基线为 `ebdd45c1da8c410b460626645a274d0278bbf54b`；审批状态澄清复核至 `ef9bd5478a765ef6b01bbdf850af06459f02d4e7`。AI-Workflow 固定 SHA：`939ec44036d89cd91622ab96b938be9f02479026`。
 
@@ -32,7 +32,7 @@
 - 为全部 99 个文章 ID 建立保守计划级分流，逐项保留矩阵登记状态、标题/路径、来源与细化计划链接及下一步；与 manifest、控制矩阵逐项比对一致。当前为 65 项“限缩可写”、34 项“暂缓核心”，没有全文就绪分类。
 - 三个独立角色对 M3 计划出口完成复核并通过；后续窄范围复核确认门禁调整、M3 阶段验收及 M4 授权三种状态表述清楚。
 - 修复 triage 原状态字段的追溯问题，更新 README 与旧计划状态；旧门禁结论和批准前评估已明确标注为历史记录。
-- 创建本次 M3 收尾复核报告。该计划复核不计正式文章审核轮次；没有重做 SAP 来源研究或实机测试。
+- 创建本次 M3 收尾复核报告，并同步资源控制计划的当前结论。该计划复核不计正式文章审核轮次；没有重做 SAP 来源研究或实机测试。
 - PR #20 描述与 HANDOFF 应保持同步；本次提交只更新文档，不合并 PR。
 
 ## 正在执行／下一项明确任务
