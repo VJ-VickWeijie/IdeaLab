@@ -240,7 +240,7 @@ Work 直接读取 [SAP《What's New in SAP S/4HANA 2021》](https://help.sap.com
 
 ## 2026-11-26｜普通 P2P 收货/发票借贷目标版复查
 
-- 独立配置顾问复读三篇 SAP Learning 普通采购示例，发现一篇发票 GR/IR 方向与另外两篇不一致；三页均未固定 S/4HANA 2021/FPS，不能用于裁定目标版。
+- 独立配置顾问复读三篇 SAP Learning 普通采购示例：Describing Automatic Account Determination 把发票时 GR/IR 写作贷方；Managing Closing Activities 明确发票借 GR/IR、贷供应商；Managing Goods Movements 只明确限定收货借库存、贷 GR/IR，不提供发票方向。前两篇的发票方向存在不一致；三页均未固定 S/4HANA 2021/FPS，不能裁定目标版。
 - 顾问尝试 SAP Financial Operations 的 2021.000 候选页面，只获得 2025 FPS02 搜索索引；索引涉及初始库存等特定情境、按 GR/IR 正负数列示，未证明普通库存采购的无科目分配前提，也没有本轮直接读到 2021 正文。
 - Work 将独立研究报告收入 [P2P 普通采购借贷补查](../../plans/p2p-2021-posting-followup-m3.md)，并更新 M3 资源表；普通估价库存场景的 2021 直接借贷、BSX/WRX/T030 仍未闭合。正式文章审核轮次不增加，FI-07、MM-09、PROCESS-01 与 M3 继续未通过。
 
@@ -257,3 +257,10 @@ Work 直接读取 [SAP《What's New in SAP S/4HANA 2021》](https://help.sap.com
 - `/root/audit_design_review` 在 PR #20 head `bb6ee527` 审阅资源控制计划、99 项 manifest、来源复核摘要、README 及重点来源记录，结论为**未满足当前计划定义的 M3 出口**：99 项仍是计划级登记；五项重点阻碍 FI-07、PROCESS-01、MM-09、ABAP-02、ABAP-04 未闭合；逐篇独立判定、实际批次角色/额度/容量和阶段所有者审批尚未完成。
 - 该审查指出 ABAP-02 有 TRY...CATCH 证据语气、KBA 3564988 的 2021 范围、过时复核状态，以及摘要未同步 7.56 已核文献语义等问题。Work 在 `03d45d0`、`4562383`、`4baf137` 修订，并记录于 [门禁审查 Work 日志](../../reviews/work/2026-11-26-m3-gate-audit.md)。
 - 同一审查上下文在 PR #20 head `4baf137` 复读四处指定修订，确认文字问题可在所述有限范围关闭；未重读 SAP 原文、未访问系统，也未进行正式文章审查。M3 总体仍未通过，M4 未授权。
+
+
+## 2026-11-26｜M3 来源台账结构与 GR/IR 归因修订
+
+- 独立配置顾问指出财务台账 FI-03/FI-07 与物流台账 MM-09/PROCESS-01 的表格行单元格数超出表头；Work 将来源与支持范围、缺口、下一步及未闭合状态合并回有名列。顾问在提交 `d785335327bd31dd4eb6eed48d144ee2704db6ec` 复核两张台账：财务表 26 行均为 3 列，物流表 46 行均为 4 列，四行字段归属修订确认。
+- Work 更正 `evidence-p2p-fi07-m3.md`、`finance-source-fit-review-m3.md`、`finance-fi07-direct-2021.md`、`evidence-finance-m3.md`、`evidence-logistics-m3.md` 与 README：发票方向冲突只发生在 Describing Automatic Account Determination 与 Managing Closing Activities 两页；Managing Goods Movements 只明确限定收货方向。顾问复核这些页面后仍发现 PR 描述和本摘要各一处旧误述，Work 已在本轮逐项更正。
+- 顾问确认相关更正只关闭该次来源归因与表格结构问题；未重读 SAP 原文、未访问系统。FI-07、MM-09、PROCESS-01 的业务证据缺口不变。正式文章审核轮次为 0，M3 未通过，M4 未授权。
