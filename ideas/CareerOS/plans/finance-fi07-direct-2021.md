@@ -101,3 +101,8 @@ root/consultant_plan 独立在 SAP Help 浏览器复读本节的六个页面正�
 ## MAP 无库存覆盖页面独立复读（2026-11-26）
 
 `/root/mm09_independent_2021_read` 独立读取上述页面，确认版本选择器为 2021 (Oct 2021)；其摘要范围与本文一致：收货/领用/发票价差关系可支持 MAP 无库存覆盖场景，但正文没有完整借贷表，且未明确是无科目分配采购，不能作为普通库存采购通用分录或 OBYC 配置依据。此为 M3 来源交叉核验，不计正式文章审查轮次，无 SAP 实机验证。
+
+
+## 2026-11-26｜通用 SAP Learning 的独立交叉核对
+
+配置顾问 /root/consultant_m3_review 独立直接复读 [SAP Learning: Describing Automatic Account Determination](https://learning.sap.com/courses/cross-functional-customizing-in-sap-s-4hana-materials-management/describing-automatic-account-determination)，确认其一般性估价收货例、BSX/WRX 键及公司代码/科目表、估价范围/分组、物料类型/估价类、业务/移动类型、库存覆盖等因素；该课程未固定 2021/FPS。审查者同时发现该页的发票说明称 GR/IR 在发票时 credited，与另两篇 SAP Learning 页面不一致：[SAP Learning: Managing Goods Movements](https://learning.sap.com/courses/exploring-end-to-end-business-processes-in-sap/managing-goods-movements_d7cf8543-eb45-490b-810a-237bbd17485f) 在 Integration to Finance 明确采购收货借库存、贷 GR/IR；[SAP Learning: Managing Closing Activities in Materials Management](https://learning.sap.com/courses/configuring-the-financial-closing-in-sap-s-4hana/managing-closing-activities-in-materials-management) 明确收货借库存/消费、贷 GR/IR，以及发票借 GR/IR、贷供应商，并允许 GR/IR 顺序互换。上述页面不是目标版固定证据；不据此宣称已确认 SAP 误植/勘误，或推演所有税、价差与采购变体。它们仅用于记录跨来源冲突并提示需继续寻找目标版清晰原文。此独立来源复核不计正式文章审核轮次。
