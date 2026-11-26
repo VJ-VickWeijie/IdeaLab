@@ -1,6 +1,6 @@
 # MM-04｜采购申请与订单机制
 
-> 状态：drafting｜M4 批次 A｜目标产品版本 SAP S/4HANA 2021 On-Premise。本文的流程主张依据 SAP S/4HANA 2021 Feature Scope Description 文档版本 11.0（2021 SPS10，2026-07-22）所列高层功能；该官方 PDF 使用动态 `latest` 链接，Work 于 2026-11-26 读取。它不提供所有客户的 PR→PO 转换规则、工作流条件、事务权限或实机结果。
+> 状态：reviewed（18 个有效闭环：普通读者 5、资深 SAP 配置顾问 6、普通 SAP 开发人员 7；待所有者验收）｜M4 批次 A｜目标产品版本 SAP S/4HANA 2021 On-Premise。本文的流程主张依据 SAP S/4HANA 2021 Feature Scope Description 文档版本 11.0（2021 SPS10，2026-07-22）所列高层功能；该官方 PDF 使用动态 `latest` 链接，Work 于 2026-11-26 读取。它不提供所有客户的 PR→PO 转换规则、工作流条件、事务权限或实机结果。
 
 ## 先理解两张单据为什么分开
 
