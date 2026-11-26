@@ -262,3 +262,12 @@
 - 来源范围：固定版 SAP S/4HANA 2021.000 Help 仅支持 J44 的 Monitor Material Coverage 功能条目和 Planned Order API 范围；Operations Guide 及 Feature Scope Description 实际所读为 2021 SPS10、文档版本 11.0/2026-07-22。FSD URL 动态，文章只标为 SPS10 快照参考，不冒充固定 2021 初始版。
 - 净需求算法、批量/lot-sizing 参数、库存与收货纳入、计划提议类型选择、客户系统设置、完整 API/数据模型与权限仍未闭合。PP-04 保持 drafting；不增加批次 A reviewed 或 owner accepted 数。批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，全库正式接受 **3/99**；SAP 系统未连接，无实机测试。
 - 工作线 2 下一篇：**PP-05《生产订单与确认》**，批准路径 knowledge/PP/02-functions/production-order.md；开始前只读取该篇对应准入、来源及关联材料。
+
+## 工作线 3 进度追记（2026-11-27，QM-02）
+
+- **QM-02《检验类型与检验批》**已按 M3 准入路径建立证据受限文章 \`knowledge/QM/02-functions/inspection-type-lot.md\`，当前状态 \`drafting\`。正文区分 inspection lot origin、inspection type 和 inspection lot；只写固定版 SAP Help 支持的采购收货建批条件、质量信息记录中的两个页面特定用例、收货去向与检验批库存相关性、结果规格和 UD/过账关系。
+- [QM-02 Work 角色视角记录](reviews/work/2026-11-27-m4-workline-3-qm02-review.md)记载普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各 5 个闭环，共 15 个同一 Work 上下文角色模拟；不是独立代理、第二模型或真人专家复核。
+- 目标版来源沿用 [QM-02 固定版研究记录](plans/qm-gr-inspection-2021-m3.md)，该记录称五个 SAP Help 页面版本选择器均显示 2021 (Oct 2021)，并记载独立复读覆盖自动收货建批条件页与库存过账时点页。本轮未重新打开版本选择器、未连接 SAP，也未验证客户系统。
+- 尚未闭合：skip inspection/动态修改/不建批的完整规则，质量信息记录更广泛的供应商/工厂差异，普通 IM 与 EWM 的场景边界及财务凭证影响；移动类型 103 仅保留为固定版页面限定例子。未编写通用权限或事务码行为。
+- QM-02 保持 \`drafting\`，15 个同上下文模拟闭环不计正式 reviewed；批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，全库正式接受数仍为 **3/99**。SAP 实机测试为 0。
+- 下一篇：**QM-03《检验计划与检验特性》**，批准路径 \`knowledge/QM/02-functions/inspection-plan-characteristic.md\`。按逐篇准入只读取 QM-03 对应来源和依赖。
