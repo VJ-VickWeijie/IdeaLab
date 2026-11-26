@@ -9,7 +9,7 @@
 
 ## MRP 先解决什么问题
 
-物料需求计划（Material Requirements Planning，MRP）要协助计划人员查看某种材料的需求与供应是否需要进一步处理。按 SAP 的 SAP S/4HANA 2021 Feature Scope Description（FSD）当前文件版本，MRP 的高层目标是检查材料可用情况；计划运行发现短缺时，可以产生采购申请（purchase requisition）或计划订单（planned order）等补货提议。需求示例包括销售、库存调拨和生产需求；FSD 也描述了供需监控工具和库存/需求清单。
+物料需求计划（Material Requirements Planning，MRP）要协助计划人员查看某种材料的需求与供应是否需要进一步处理。按 SAP 的 SAP S/4HANA 2021 Feature Scope Description（FSD）当前文件版本，MRP 的高层目标是检查材料可用情况；计划运行发现短缺时，可以产生采购申请（purchase requisition）或计划订单（planned order）等补货提议。需求示例包括销售、库存调拨和生产需求；FSD 也描述了供需监控工具和库存/需求清单。该 FSD 还把 MRP 说明为覆盖需求与供应要素，但不考虑现有产能；产能计划用于在满足需求时间/数量的同时考虑能力约束。此区分只按动态 FSD 的 2021 SPS10 快照表述，不是固定 2021.000 的证据。
 
 这里的证据有一个重要限制：SAP FSD 的文件 URL 是动态的。本文实际读取到的文件封面标为《SAP S/4HANA 2021 Feature Scope Description》文档版本 11.0，日期 2026-07-22，对应 SAP S/4HANA 2021 SPS10。以下引用只按该 SPS10 文件快照说明，不把它说成 2021 初始版的静态页面，也不外推到其他版本或客户设置。
 
