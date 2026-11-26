@@ -181,3 +181,10 @@
 - Work 与独立开发复核上下文分别直接阅读 SAP Help 的 [Purchasing BAPIs](https://help.sap.com/docs/SUPPORT_CONTENT/spmm/3362167428.html) 和 [BAPI_PO_CREATE1 采购示例](https://help.sap.com/docs/SUPPORT_CONTENT/spmm/3362167600.html)。两页均标有 SAP Additional Content 免责声明，背景为 ECC/R/3，未声明 S/4HANA 2021。
 - 可有限记录 PO BAPI 与 ME21N 对应、TESTRUN 不产生数据库效果、SE37 测试序列为创建后调用 BAPI_TRANSACTION_COMMIT、X 结构及 RETURN/调试提示。独立开发复核确认上述摘录没有越过页面范围。
 - 这不能证明目标版本的函数级提交时机、回滚、更新任务、WAIT 保证、RFC/LUW 边界或失败处理。ABAP-04 与 M3 保持未闭合；未操作 SAP 系统、不计正式文章审核轮次，M4 未授权。
+
+
+## 2026-11-26｜ABAP-04 SAP Help 第二轮定向检索
+
+- 对 `BAPI_PO_CREATE1`、commit/rollback、更新任务与 S/4HANA 2021 作定向检索，未发现新的目标版本函数级事务文件。
+- 搜索摘要发现的通用 dialog/BAPI 事务页面没有锁定目标版本；SAP ERP 6.0 EHP8 的 Processing BAPIs 内容属于 inbound IDoc 处理语境。对这三页尝试打开均返回零行，因此只登记为搜索线索，未作为直接证据。
+- 结果不改变 ABAP-04 未闭合状态；后续需目标版本函数文档/适用 Note，或获授权系统的只读 SE37 文档核验。无 SAP 系统访问或执行，不计正式文章审核轮次。
