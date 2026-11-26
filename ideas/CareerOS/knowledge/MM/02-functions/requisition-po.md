@@ -54,7 +54,7 @@ SAP S/4HANA 2021 FSD 明确列举了“根据 PR 创建 PO”“多个 PR 汇总
 
 - **PR 审批**：决定内部需求是否能继续进入采购处理。FSD 描述了 release strategy 与 flexible workflow 两种相关机制；自动/单步/多步审批、审批人分配和退回修改等具体描述属于 flexible workflow，不据此推导 release strategy 的配置或状态规则。
 - **PO 审批**：在对外采购指令层面控制是否审批或自动放行。可把“自动审批”理解为 PR 流程处理内部需求，把“自动放行”理解为 PO 流程处理采购订单；这是两个单据上的不同工作流关口。FSD 分别描述这两种能力，本文不把它们等同为同一机制或状态，也不推断自动处理的具体状态变化。是否必须审批或自动放行取决于 PO workflow 设置；某些关键修改是否重新触发审批也由系统设置决定。
-- **创建后续单据**：审批结论、来源分配和 PO/合同/RFQ 的创建是相关但不同的业务决定。不能把“已批准 PR”简化为“系统必然自动生成 PO”。
+- **创建后续单据**：审批结论、来源分配和 PO、合同或询价（Request for Quotation，RFQ）的创建是相关但不同的业务决定。询价用于向潜在供应商征集报价，帮助寻找合适来源；S/4HANA 2021 FSD 在没有来源或存在多个潜在来源时列出这一选择。详见 [MM-03](info-record-sourcing.md)。不能把“已批准 PR”简化为“系统必然自动生成 PO”。
 
 SAP 2021 的功能资料支持 flexible workflow 的存在及高层能力，但本篇不提供金额阈值、采购组织/公司代码审批矩阵、代理人确定逻辑、角色配置、重启字段、release code、具体 IMG 路径或配置传输流程。实际配置还受启用的产品范围、组织、单据类型、授权及企业规则影响；在没有固定版直接资料或客户系统核验时，这些均不写成通用事实。
 
@@ -80,7 +80,7 @@ SAP 2021 的功能资料支持 flexible workflow 的存在及高层能力，但�
 - **多项已批准需求与合同**：FSD 支持将多个 PR 汇总到一个 PO；引用现有合同可能发起合同调用。它不保证题设必须合并成一张 PO，也不提供合并条件或合同调用的全部规则。
 
 以上只是按已列来源自检的方向，不是标准答案中的固定系统步骤。
-合格答案不需要写出某个固定事务码，也不能擅自假定每条 PR 的转换比例、审批阈值或会计结果。应能区分 PR、PO、合同和 RFQ 的业务角色；若题目要求具体的系统状态/配置结果，应指出需要目标版本资料或真实系统权限核实。
+合格答案不需要写出某个固定事务码，也不能擅自假定每条 PR 的转换比例、审批阈值或会计结果。应能区分 PR、PO、合同与询价（RFQ）的业务角色；若题目要求具体的系统状态/配置结果，应指出需要目标版本资料或真实系统权限核实。
 
 ## 与其他文章的关系
 
@@ -97,7 +97,8 @@ SAP 2021 的功能资料支持 flexible workflow 的存在及高层能力，但�
 
 1. [SAP S/4HANA 2021 On-Premise Feature Scope Description，动态 latest 链接](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=157)，§2.12.4.2 Requirements Processing，PDF 正文页 157–158。本文于 2026-11-26 读取；M3 台账的 SHA-256 `ad3c9913ee1f0cbe81e4ede4cb15192c4fcda6497dcf9ac0654dde04b541aaec` 只对应 2026-11-25 的读取，不是本文此次读取的字节快照；本次未保留独立文件哈希，精确字节级复现受限。
 2. [SAP S/4HANA 2021 On-Premise Feature Scope Description，动态 latest 链接](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=159)，§2.12.4.3 Purchase Order Processing，PDF 正文页 159–160：支持 PO 的业务定义、基于 PR/既有 PO/信息记录/合同参考或从头创建、合同调用、账户分配/自由文本项目以及 flexible workflow。具体审批结果取决于 workflow 设置。
-3. [Manage Workflows for Purchase Requisitions，SAP Help 2021.000](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/4c20737d1b69420a9b6c7b4c481be6f5.html?version=2021.000)：固定 2021.000 页面记录 PR 工作流应用的部分能力，包括限额项目工作流、退回修改及工作流期限等。本文只用它确认该版所记录的应用能力，不据此推断客户完整配置、适用矩阵或运行结果。
+3. [SAP S/4HANA 2021 On-Premise Feature Scope Description，§2.12.3.2 Source Assignment，PDF 正文第 152–154 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=153)：在无来源或存在多个潜在来源时，通过询价（RFQ）寻找合适来源的高层能力；不提供详细供应商选择算法。
+4. [Manage Workflows for Purchase Requisitions，SAP Help 2021.000](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/4c20737d1b69420a9b6c7b4c481be6f5.html?version=2021.000)：固定 2021.000 页面记录 PR 工作流应用的部分能力，包括限额项目工作流、退回修改及工作流期限等。本文只用它确认该版所记录的应用能力，不据此推断客户完整配置、适用矩阵或运行结果。
 4. [My Purchase Requisitions，SAP Help 2021.000](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b8272f1725d74e5aaa527558422a0361.html?locale=en-US&version=2021.000)：页面标示 SAP S/4HANA 2021（Oct 2021）及范围项 18J、1XI、O8J；其“Limit items”说明支持在指定应用范围内将下单时无法详细说明的计划外服务/材料表示为限额项，并设定预期值与总额上限。它不证明所有 PR 创建方式都具有同一字段或行为，也不覆盖客户审批矩阵、服务明细或后续发票规则。
 5. M3 物流来源台账：[evidence-logistics-m3.md](../../../plans/evidence-logistics-m3.md)。MM-04 的逐项来源与缺口记录仍以台账为准。
 
