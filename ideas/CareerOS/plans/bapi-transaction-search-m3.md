@@ -73,3 +73,14 @@ Work 与独立开发复核上下文分别直接打开并读取以下两页；两
 - [Processing BAPIs](https://help.sap.com/docs/SAP_ERP/c5a8d544836649a1af6eaef358d08e3f/4cfed0190b2a3d8ee10000000a42189e.html?locale=en-US&q=BAPI+Return+Parameters+Error+Handling&state=PRODUCTION&version=6.18.latest) 是 SAP ERP 6.0 EHP8 的 inbound IDoc/BAPI 处理流程，摘要中的包级提交/回滚属于该集成处理上下文，不能套用于单独调用采购 BAPI。此次页面正文未能读取。
 
 以上三页在本次打开操作中均返回 SAP Help 零行；其索引摘要仅用于登记检索结果，不作为本文事实依据。搜索还重复返回了已记录的 ECC/R/3 SAP Support Additional Content 示例，没有新增 2021 直接证据。下一步须寻找目标系统函数文档/适用 SAP Note，或在获授权的目标版本系统只读核对 SE37 文档；不做配置、不执行 BAPI。ABAP-04 保持未闭合，不计正式文章审核轮次。
+
+
+## 2026-11-26｜ABAP Platform 2021 通用事务模型的独立开发复核
+
+/root/bapi_independent_developer_review 通过版本选择器直接读取以下 SAP Help 原文；各页均显示 ABAP Platform 2021 (Oct 2021)：
+- [Transaction Model for Developing BAPIs](https://help.sap.com/docs/ABAP_PLATFORM_NEW/166400f6be7b46e8adc6b90fd20f3516/4d5b102ba1483d8fe10000000a42189e.html?version=202110.000)：一般 BAPI 应支持事务一致性和显式调用方控制；通常由调用方在同一 SAP LUW 决定 commit/rollback；数据库变更应使用 update process，BAPI 不应引发独立 LUW。文档提醒少数自带 COMMIT 的例外应由该函数文档和 SAP Note 0131838 记录；它没有说明 BAPI_PO_CREATE1 是否为例外。
+- [Programming Dialog Applications](https://help.sap.com/docs/ABAP_PLATFORM_NEW/166400f6be7b46e8adc6b90fd20f3516/4dd38ee78e316634e10000000a42189b.html?version=202110.000)：支持 dialog 应用的通用事务控制及 Return 消息概念；没有规定 BAPI_PO_CREATE1 的 Return 类型如何决定提交/回滚。
+- [Programming Distributed Applications](https://help.sap.com/docs/ABAP_PLATFORM_NEW/166400f6be7b46e8adc6b90fd20f3516/4dd3cfdec1b964dfe10000000a42189e.html?version=202110.000)：涵盖同步 RFC BAPI 与 ALE/IDoc 处理；Type A/E 状态和 commit/rollback 行为属于该 IDoc 包装器流程，不能推广为所有调用方处理规则。
+- [Example: BAPI Transaction Model (Without Commit)](https://help.sap.com/docs/ABAP_PLATFORM_NEW/166400f6be7b46e8adc6b90fd20f3516/4d5bfea2db8618b5e10000000a42189e.html?version=202110.000)：展示多个 BAPI 调用如何在同一连接中由调用方显式结束事务；属于通用示例，不是采购函数实现说明。
+
+开发复核者另检索了采购函数名、提交/回滚、WAIT、update task、RFC/LUW 等组合；没有找到目标版 BAPI_PO_CREATE1 专属事务或 WAIT 契约。检索未发现不证明 SAP 官方资料不存在。公开 SAP Support Additional Content 及旧版 SAP Note 镜像不冒充 2021 官方函数合同；未连接 SAP、未执行代码、不计正式文章审核轮次。ABAP-04 与 M3 仍未闭合。
