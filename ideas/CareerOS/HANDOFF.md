@@ -206,3 +206,12 @@
 - 审查记录：`reviews/work/2026-11-27-m4-mm08-three-role-review.md`。普通读者、配置顾问视角、开发者视角各 5 个有效闭环，共 15；由三个独立 AI 子代理上下文完成，不代表人类 SAP 专家意见、不同模型证明或实机测试。原上下文完成复核，15/15 闭环。
 - 状态仍为 **drafting**，不计入批次 A reviewed（总计仍为 **8/50**），不计 owner accepted（**0/50**）；全库正式接受仍为 **3/99**。未闭合核心：物料凭证显示入口、通用 MIGO 导航的固定版 2021 On-Premise 直接证据；同时没有逐代码权限矩阵。SAP 系统未连接，未做实机验证。
 - 工作线 1 下一篇：**MM-09**。先按 M3 控制矩阵和逐篇准入路径处理普通估价库存收货、OBYC/BSX/WRX；按固定版证据边界写作，不因 MM-08 局部缺口停住后续工作。
+
+
+## 工作线 3 进度追记（2026-11-27，PP-09）
+
+- **PP-09《生产主数据与订单数据模型》**已建立证据受限文章 `knowledge/PP/05-data-model/production.md`，状态 `drafting`。正文只覆盖 2021 Simplified Sourcing 中 production version/BOM/routing 的有限关系与 MTO/MTP 例外、特定 EHS 选择条件中的对象名称、MATDOC 与 MKPF/MSEG 兼容读取说明，以及 M3 已登记的特定生产确认 OData entity key。
+- 审查记录 `reviews/work/2026-11-27-m4-workline-3-pp09-review.md` 记载同一 Work 上下文内普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各 5 个有效闭环，共 15；不代表独立代理或真人专家审查。本轮复读已有 SDK 源码核对记录，未重新下载源包。
+- 未闭合：一般生产对象物理键/外键/关联基数、MATDOC 主键与订单关联、目标系统 API 元数据/发布和权限；PP-02/03/05 依赖文档当前不在分支。M3 控制矩阵无独立 PP-09 行，S4HANA-09 仅为邻接通用门禁；本次没有修改共享矩阵。
+- PP-09 保持 `drafting`，不增加正式 reviewed 数。批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，全库正式接受 **3/99**；SAP 系统未连接，无数据库/API 实机验证。
+- 工作线 3 下一篇：**QM-01《质量管理业务与组织对象》**，路径 `knowledge/QM/01-foundations/quality-organization.md`。按准入逐篇读取其来源和依赖。
