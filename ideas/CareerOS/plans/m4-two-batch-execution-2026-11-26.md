@@ -117,3 +117,7 @@ CO-03《内部订单和费用归集》已按 M3 “限缩可写”路径建立�
 SD-07《销售与交货数据模型》按 M3 “限缩可写”准入建立目标版证据受限文章，路径 `../knowledge/SD/05-data-model/sales-delivery.md`，状态 `drafting`。Work 在同一上下文模拟普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各 5 个闭环，共 15 个；每项包括质询、来源答辩、修订和原视角复核，但不是独立专家/代理审查，不增加正式 reviewed 数。固定 SAP 2021 Simplification List §36.8 支持的状态简化、VBFA 简化、单据类别和索引表变化均按 system conversion 语境限定；2021.000 API 示例仅是销售订单模拟 API；FSD 11.0/SPS10 动态快照仅用于高层开票至 FI 能力。完整 VBFA 和后续单据的字段、键、基数、组织映射、SD-FI 凭证关系、released API/CDS 合同及权限仍待核；SD-03/SD-04 正文当前分支不存在。未连接 SAP、未实测。
 
 工作线 2 分配的 8 篇文章（SD-06、SD-07、PP-01～PP-06）均为 drafting，累计 120 个同上下文模拟闭环；本线正式独立 role-reviewed 为 0/8。批次 A 正式计数仍 8/50 reviewed、0/50 owner accepted，全库正式接受 3/99。本线已完成分配范围，无下一篇。
+
+### M4 Workline 5 CO-04｜2026-11-27
+
+CO-04《产品成本、生产差异与结算》按 M3 “暂缓核心”路径建立了受限 drafting 草稿：[文章](../knowledge/CO/02-functions/product-cost-variance-settlement.md)、[三角色视角记录](../reviews/work/2026-11-27-m4-co04-three-role-review.md)、[证据台账](evidence-finance-m3.md)。SAP S/4HANA 2021 FSD v9.0/SP08 快照支持制造方式影响成本观察对象、生产订单成本向一个或多个成本对象结算、重复制造期间性成本收集，以及特定 Kanban 场景的 WIP/差异和期末能力；2021.000 Deferred Summarization 仅说明特定数据汇总功能。普通生产订单 WIP/variance 公式、状态触发、一般结算规则/接收方和 FI 分录仍未由直接目标版证据闭合。普通读者、配置顾问、开发者视角各 5 个同上下文模拟闭环（共15）；不是独立 review，不计 reviewed。无 SAP 实机或用户权限验证；未推导 FI-07 采购库存借贷、税或自动科目。批次 A 仍 **8/50 reviewed、0/50 owner accepted**，owner accepted 为 **3/99**。工作线 5 下一篇 CO-05；开始前仅读取 CO-05 自身准入与证据登记。
