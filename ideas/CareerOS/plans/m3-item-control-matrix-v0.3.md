@@ -1,3 +1,6 @@
+Warning: truncated output (original token count: 12633)
+Total output lines: 136
+
 # CareerOS V0.3｜M3 全量 99 项来源与工作控制矩阵
 
 快照：物流/FI/CO/课程部分取自 PR #20 head `9d0b9fa77de304d308c93a2607d9d5adb2cf5ace`；技术/AI/术语部分取自 head `486261346cd47c82c82f3fe9a125d8d335c7e253`。合并整理日期：2026-11-26。
@@ -56,30 +59,13 @@
 | MM-06 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：冲销与退货在单据及账务上的具体差异。 | 计划级对照；是否亲读见 MM/QM 复核报告；[MM/QM 复核记录](review-evidence-mm-qm-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
 | MM-07 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查订单单位规则、BAPI 字段覆盖和版本差异。 | 前次开发者独立读固定版；本顾问该次未重开；[MM/QM 复核记录](review-evidence-mm-qm-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
 | MM-08 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 逐事务核对用途、版本以及显示/修改权限。 | 计划级对照；是否亲读见 MM/QM 复核报告；[MM/QM 复核记录](review-evidence-mm-qm-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| MM-09 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未闭合 | Work（容量待核实） | 查找固定 2021 普通估价库存收货自动科目规则；保留方向冲突。 | 局部来源复核；普通收货规则未闭合；[MM/QM 复核记录](review-evidence-mm-qm-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| MM-10 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 补查并核对：PR/PO 完整模型、精确键、基数和发布 API。 | 计划级对照；是否亲读见 MM/QM 复核报告；[MM/QM 复核记录](review-evidence-mm-qm-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| SD-01 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查组织配置及跨公司开票适用范围。 | 独立顾问读取固定版组织关系，范围有限；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| SD-02 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查 BP grouping/编号、伙伴确定配置、字段/API 及权限。 | 四页中前两页独立复核；其余待核；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| SD-03 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：具体部分交货、取消与权限。 | 计划级对照；是否亲读见 SD/PP 复核报告；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| SD-04 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查收入确认、税和收款的适用条件。 | 计划级对照；是否亲读见 SD/PP 复核报告；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| SD-05 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 逐事务核对用途、版本和权限，补查 VA03。 | 计划级对照；是否亲读见 SD/PP 复核报告；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| SD-06 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：准确 IMG 节点、业务分支和访问权限。 | 计划级对照；是否亲读见 SD/PP 复核报告；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| SD-07 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：完整单据流字段、主键、接口及关联基数。 | 计划级对照；是否亲读见 SD/PP 复核报告；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| PP-01 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 补查并核对：组织结构及所有制造模式的业务边界。 | 计划级对照；是否亲读见 SD/PP 复核报告；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| PP-02 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：有效期、替代项选择和具体表/字段。 | 计划级对照；是否亲读见 SD/PP 复核报告；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| PP-03 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：工作中心完整定义、工序选择和成本/产能参数。 | 计划级对照；是否亲读见 SD/PP 复核报告；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| PP-04 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：净需求计算、批量、参数及客户具体系统差异。 | 计划级对照；是否亲读见 SD/PP 复核报告；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| PP-05 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：各订单状态、下达、报工与回退条件。 | 计划级对照；是否亲读见 SD/PP 复核报告；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| PP-06 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：库存估价、成本和结算账务。 | 计划级对照；是否亲读见 SD/PP 复核报告；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| PP-07 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 逐项查证 PP 事务用途、版本和权限。 | 计划级对照；是否亲读见 SD/PP 复核报告；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| PP-08 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 补查生产计划配置查看路径及规则。 | 计划级对照；是否亲读见 SD/PP 复核报告；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| PP-09 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 查证物理表键、关联基数、发布 API；区分 SDK 实体键。 | material BOM、DDL source 和 SDK 实体键局部复核；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
+| MM-09 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未闭合 | Work（容量待核实） | 查找固定 2021 普通估价库存收货自动科目规则；保留方向冲突。 | 局部来源复核；普通收货…1633 tokens truncated…发布 API；区分 SDK 实体键。 | material BOM、DDL source 和 SDK 实体键局部复核；[SD/PP 复核记录](sd-pp-source-fit-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
 | QM-01 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：质量组织、用户角色、设置和触发前提。 | 计划级对照；是否亲读见 MM/QM 复核报告；[MM/QM 复核记录](review-evidence-mm-qm-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
 | QM-02 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查配置、供应商/质量信息记录差异、EWM 和财务凭证。 | 固定版自动建批条件页局部复核；[MM/QM 复核记录](review-evidence-mm-qm-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
 | QM-03 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：计划选择规则、抽样参数和具体字段。 | 计划级对照；是否亲读见 MM/QM 复核报告；[MM/QM 复核记录](review-evidence-mm-qm-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
 | QM-04 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分 | Work（容量待核实） | 补查并核对：UD 与自动/手工库存过账、撤销及业务条件。 | 计划级对照；是否亲读见 MM/QM 复核报告；[MM/QM 复核记录](review-evidence-mm-qm-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
 | QM-05 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 补查一般 IM 质量库存与财务影响。 | FSD EWM 页码独立复核；一般 IM 未证；[MM/QM 复核记录](review-evidence-mm-qm-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
-| QM-06 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验 | Work（容量待核实） | 逐事务核对补丁适用性与权限。 | 计划级对照；是否亲读见 MM/QM 复核报告；[MM/QM 复核记录](review-evidence-mm-qm-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
+| QM-06 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 部分（仅 2021 固定版来源中的有限移除/替代、导航变化及授权操作类别） | Work（本次 Work 单上下文角色模拟；独立复核待完成） | 继续逐事务核对目标版用途、输入输出、显示/修改边界和权限；完整索引未闭合。 | Work 于 2026-11-27 直接读取《Simplification List》§31.2–31.4 并建[受限草稿](../knowledge/QM/03-tcodes/transaction-index.md)及[同上下文模拟记录](../reviews/work/2026-11-27-m4-workline-4-qm06-review.md)。实际用户权限、逐事务映射、系统可用性未知。 |
 | QM-07 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验（完整目标范围；已有 FPS01 比较符限定复核） | Work（容量待核实） | 核对目标初版适用性、检验类型激活与权限。 | 独立复核 FPS01 特定比较符；[MM/QM 复核记录](review-evidence-mm-qm-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
 | QM-08 | [evidence-logistics-m3.md](evidence-logistics-m3.md) | 未核验（目标初版完整范围；已有 FPS01 指定 CDS 限定复核） | Work（容量待核实） | 查证初版适用性、检验对象表键、关联和 CDS 发布。 | 独立复核 FPS01 指定 CDS 的有限描述；[MM/QM 复核记录](review-evidence-mm-qm-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
 | FI-01 | [evidence-finance-m3.md](evidence-finance-m3.md) | 部分 | Work（容量待核实） | 补查并核对：采购事件的单据、库存、价值和资金的SAP 2021触发条件及地区会计规则。 | 计划级对照；部分来源非复核者亲读；[FI/CO/课程复核记录](finance-source-fit-review-m3.md)。逐项实际阅读者、日期、复核提交 SHA 未全部归一；未在所引记录明确的字段为未知。 |
