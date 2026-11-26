@@ -62,3 +62,14 @@ Work 与独立开发复核上下文分别直接打开并读取以下两页；两
 独立开发复核确认了上述有限摘录和版本边界。不能从这些旧版附加示例推出目标 S/4HANA 2021 的完整函数合同、提交时机规则、回滚策略、更新任务/WAIT 保证、RFC/LUW 边界或失败分支；也未证明目标 SAP 系统可用性。它们是检索线索与有限背景，不补齐 ABAP-04 的目标版本证据门槛。
 
 **状态**：SAP Support 页面现已由 Work 与独立开发复核上下文分别直接阅读；ABAP-04 函数级 2021 事务、提交/回滚、更新任务与失败消息语义仍待目标版本直接依据。未操作 SAP 系统、未执行代码、不计正式文章审核轮次；M3 仍未通过。
+
+
+## 2026-11-26｜SAP Help 目标函数事务的第二轮定向检索
+
+围绕 `BAPI_PO_CREATE1`、`BAPI_TRANSACTION_COMMIT`、`COMMIT WORK`、`ROLLBACK`、更新任务及 S/4HANA 2021 组合检索 SAP Help。结果仍未发现同时固定目标版本并直接说明 `BAPI_PO_CREATE1` 事务合同的新页面。下列是检索线索，不能算直接阅读全文或目标版本证据：
+
+- [Programming Dialog Applications](https://help.sap.com/docs/ABAP_PLATFORM_NEW/166400f6be7b46e8adc6b90fd20f3516/4dd38ee78e316634e10000000a42189b.html) 的索引摘要描述 dialog application 对多个 BAPI 的一般 commit/rollback 控制；页面未固定 2021 版本，也未指名采购 BAPI。此次网页打开正文为零行。
+- [Transaction Model for Developing BAPIs](https://help.sap.com/docs/PRODUCT_ID/fe1c8e016c551014ba0ec92da35a91ee/4d5b102ba1483d8fe10000000a42189e.html) 的索引摘要描述通用调用方控制事务及历史例外；此 URL 未给出目标产品/FPS，且没有采购函数特定承诺。此次网页打开正文为零行。它不能替代本文前述版本选择器锁定 2021 的通用事务模型，也不增加 `BAPI_PO_CREATE1` 证据。
+- [Processing BAPIs](https://help.sap.com/docs/SAP_ERP/c5a8d544836649a1af6eaef358d08e3f/4cfed0190b2a3d8ee10000000a42189e.html?locale=en-US&q=BAPI+Return+Parameters+Error+Handling&state=PRODUCTION&version=6.18.latest) 是 SAP ERP 6.0 EHP8 的 inbound IDoc/BAPI 处理流程，摘要中的包级提交/回滚属于该集成处理上下文，不能套用于单独调用采购 BAPI。此次页面正文未能读取。
+
+以上三页在本次打开操作中均返回 SAP Help 零行；其索引摘要仅用于登记检索结果，不作为本文事实依据。搜索还重复返回了已记录的 ECC/R/3 SAP Support Additional Content 示例，没有新增 2021 直接证据。下一步须寻找目标系统函数文档/适用 SAP Note，或在获授权的目标版本系统只读核对 SE37 文档；不做配置、不执行 BAPI。ABAP-04 保持未闭合，不计正式文章审核轮次。
