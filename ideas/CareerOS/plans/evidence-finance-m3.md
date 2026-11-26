@@ -116,3 +116,17 @@ SEC/GAO/IRS来源只支持文本中确切内容，站点其他第三方内容或
 - Migration Objects 中的 secondary cost element 与 G/L/primary cost element 条目是源 ERP 到 S/4 的迁移对象说明，不据其名称推断目标 S/4 使用独立旧式 master data。
 - 不涉及普通库存采购完整借贷、税务和自动科目决定（FI-07 仍开放）。SAP 未连接，未做实机验证。
 - 审查记录：[CO-02 三角色视角闭环](../reviews/work/2026-11-27-m4-co02-three-role-review.md)。各角色 5 个同上下文模拟闭环；不是独立审查，不计正式 reviewed。
+
+
+## M4 FI-10 来源复核与文章状态（2026-11-27）
+
+本次对 FI-10 做目标文章级核对；本节为 M4 补记，不改写上表 M3 计划快照。
+
+| 资料 | 直接支持的主张 | 不支持的推论 |
+| --- | --- | --- |
+| [SAP《What's New in SAP S/4HANA 2021》§3.6.1.3](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.000/en-US/WN_OP2021_EN.pdf)，印刷页 133–134 | Automatic Account Determination app 可配置 G/L account assignments；条目标 J58、FI-FIO-GL-CA、Available As Of S/4HANA 2021。BUL/BUU 两个新增 transaction keys 限 Prepare Intercompany Transactions；星号通配符仅在 Integrate with HR Postings 输入 customer/supplier account 的说明中出现。 | 完整映射、全部过账规则、通用 IMG 路径、只读模式、角色授权和客户系统可用性。不得外推到 MM 的 OBYC/BSX/WRX。 |
+| [SAP Help Portal，Open Item Management in the Manage G/L Account Master Data App，固定版本 2021.000](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/95c14c3ac4884b8ba46b7da9738fd391.html?locale=en-US&state=PRODUCTION&version=2021.000)，§3.6.1.16 | Extended Open Item Management 字段表示相关 GR/IR 总账科目是否启用该功能；文档也指向相关 SAP GUI 事务 Display G/L Account Centrally（FS00），并说相应功能启用后该字段为 display only。XLGCLR 对应的是另一个 Open Item Management by Ledger Group 字段。 | 具体账号的角色授权、客户系统是否启用、全页面只读属性、该扩展字段的表/键/API 或启用步骤。本文不提供也不建议执行启用步骤。 |
+
+已建立[证据受限草稿](../knowledge/FI/04-configuration/finance-config-observation.md)及[Work 角色视角记录](../reviews/work/2026-11-27-m4-workline-4-fi10-review.md)：普通学习者、配置顾问、开发人员各 5 个同上下文模拟闭环，共 15；不是独立审查，不计 formal reviewed。FI-10 仍为 `drafting`。
+
+补证尝试：SAP Help 的 Manage Posting Periods 页面未能通过本次工具打开固定 `version=2021.000` 页面；可见的未锁版页面不作为 S/4HANA 2021 直接证据。公司代码、科目表、期间、收付款配置、完整账户映射、配置路径和只读/写入授权仍是开放项。SAP 系统未连接，无实机验证。
