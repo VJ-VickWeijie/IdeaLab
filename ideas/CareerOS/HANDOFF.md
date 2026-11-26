@@ -215,3 +215,10 @@
 - 未闭合：一般生产对象物理键/外键/关联基数、MATDOC 主键与订单关联、目标系统 API 元数据/发布和权限；PP-02/03/05 依赖文档当前不在分支。M3 控制矩阵无独立 PP-09 行，S4HANA-09 仅为邻接通用门禁；本次没有修改共享矩阵。
 - PP-09 保持 `drafting`，不增加正式 reviewed 数。批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，全库正式接受 **3/99**；SAP 系统未连接，无数据库/API 实机验证。
 - 工作线 3 下一篇：**QM-01《质量管理业务与组织对象》**，路径 `knowledge/QM/01-foundations/quality-organization.md`。按准入逐篇读取其来源和依赖。
+
+## 工作线 2 进度追记（2026-11-27，PP-03）
+
+- PP-03《工作中心与工艺路线 Routing》已建立目标版证据受限文章，状态 drafting。固定版材料支持 BJ5 的 Manage Routings 搜索/创建/更改导航、BJ8 范围 Work Center OData API 数据类别、3W4 范围 Routing operation 的 PRT 读取，以及 PEO 专用 shop-floor routing 结构；这些场景在正文中分开限定。
+- [PP-03 三角色视角记录](reviews/work/2026-11-27-m4-pp03-three-role-review.md)记录普通读者、资深配置顾问、普通开发人员各 5 个闭环，共 15 个同上下文角色模拟循环；不构成独立 review 或真人专家意见。
+- 通用工序顺序/选择、工作中心完整定义、Routing 与 BOM/生产版本的替代和有效期关系、产能/成本参数与公式仍未闭合，故 PP-03 不计 reviewed/owner accepted。批次 A 保持 8/50 reviewed、0/50 owner accepted；正式接受 3/99；SAP 实机测试 0。
+- 工作线 2 下一篇：PP-04《需求、MRP 与计划订单》，路径以 M3 逐篇准入分流为准；开始前只读取 PP-04 自身控制、来源和关联文章。
