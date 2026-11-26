@@ -210,3 +210,10 @@ Work 直接读取 [SAP《What's New in SAP S/4HANA 2021》](https://help.sap.com
 - /root/consultant_m3_review 直接读取 [Describing Automatic Account Determination](https://learning.sap.com/courses/cross-functional-customizing-in-sap-s-4hana-materials-management/describing-automatic-account-determination)：仅支持通用因素和教学场景；页内发票步骤把 GR/IR 写作 credited。
 - 同一顾问直接读取 [Managing Goods Movements](https://learning.sap.com/courses/exploring-end-to-end-business-processes-in-sap/managing-goods-movements_d7cf8543-eb45-490b-810a-237bbd17485f) 与 [Managing Closing Activities in Materials Management](https://learning.sap.com/courses/configuring-the-financial-closing-in-sap-s-4hana/managing-closing-activities-in-materials-management)：两页写收货借库存/消费、贷 GR/IR；关账课程还写发票借 GR/IR、贷供应商。三页均未锁定 S/4HANA 2021/FPS。
 - 此为真实 M3 来源交叉复核，确认存在同一通用课程内及不同页面间的方向表述冲突；不把它认作 SAP 勘误，也不能用非目标版本定裁目标版。Work 将冲突保留并同步到 MM-09、FI-07、PROCESS-01 计划记录。正式文章审核轮次不增加，M3 仍未通过、M4 未授权。 本轮 9 份已修改 Markdown 文档共检查 43 个唯一相对文件目标，全部存在；未检查锚点及全部外链。
+
+
+## 2026-11-26｜ABAP-04 通用 BAPI 事务模型独立复核
+
+- `/root/bapi_independent_developer_review` 直接通过版本选择器读取四篇 ABAP Platform 2021 (Oct 2021) SAP Help 页面：Transaction Model for Developing BAPIs、Programming Dialog Applications、Programming Distributed Applications、Example: BAPI Transaction Model (Without Commit)。
+- 目标版通用文档支持调用方显式管理 SAP LUW/commit/rollback 和 update process；对话应用 Return 消息、RFC BAPI 和 IDoc 包装器流程有各自说明。少数含内部 COMMIT 的 BAPI 是文档要求说明的例外；IDoc Type A/E 规则不能推广到一般 BAPI 调用。
+- 未找到 BAPI_PO_CREATE1 专属的 2021 commit/rollback/WAIT/消息错误合同；搜索未发现不等于资料不存在。通用模型不能证实采购函数实现，ABAP-04 仍未闭合。未连接 SAP、不执行代码、不计正式文章审核轮次；M3 未通过、M4 未授权。
