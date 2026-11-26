@@ -14,7 +14,7 @@
 ## 当前真实进度（2026-11-26）
 - 所有者于 2026-11-26 明确批准 CareerOS 项目级 M3 门禁调整（不修改 AI-Workflow V1.1），Work 正按新的计划级出口完成独立 M3 收尾复核。99 项分流见 [文章级准入分类](plans/m3-item-readiness-triage-v0.3.md)；当前 M3 尚待本轮复核和所有者阶段验收，M4 仍未授权。
 - PR #19 的 V0.3 蓝图已合并；所有者已批准 M0、M1、M2、99 篇正式文章范围及 11 个纯结构导航分类。
-- PR #20 分支继续补充 M3 逐篇来源与版本证据；M3 尚未通过，M4 尚未授权。
+- 当前沿用 PR #20 完成批准后的 M3 收尾复核；历史来源登记中的五项核心缺口仍按文章级边界处理，M4 尚未授权。
 - 2026-11-26 独立门禁复核确认 99 项仍是计划级来源登记，逐篇独立判定、实际批次角色/额度与阶段审批未完成；FI-07、PROCESS-01、MM-09、ABAP-02、ABAP-04 保持未闭合。ABAP-02 的四处文档一致性问题已修订并复核关闭，但不代表系统验证或 M3 通过。详见 [M3 门禁复核记录](reviews/work/2026-11-26-m3-gate-audit.md)。
 - 后续独立结构复核修正了 FI-03/FI-07/MM-09/PROCESS-01 四行证据台账的列错位和三篇 SAP Learning 的 GR/IR 归因；配置顾问复核后关闭这些文字问题。开发者另复核技术与 AI 26 项计划登记，发现负责人/下一步、阅读与独立复核元数据仍不完整；ABAP-04 状态歧义已修订并由开发者复核。详见 [M3 Work 修订记录](reviews/work/2026-11-26-m3-structure-review-remediation.md)、[配置顾问记录](reviews/consultant/2026-11-26-m3-sourcefit-structure-review.md) 与 [开发者技术结构审查](reviews/developer/2026-11-26-technical-sourcefit-structure-review.md)。
 - 已将 72 项物流/流程/FI/CO/课程草案与 27 项技术/AI/术语草案合并为 [M3 全量控制矩阵](plans/m3-item-control-matrix-v0.3.md)，与 manifest 自动比对为 99/99 个唯一 ID。矩阵已逐项列出 Work 负责人、当前登记状态、下一步与有限复核范围；目标版本/场景、实际阅读者/日期、逐项证据和独立复核基线仍未全部归一，不能视为 M3 出口通过。
