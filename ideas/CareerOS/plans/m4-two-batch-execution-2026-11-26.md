@@ -87,3 +87,11 @@ PP-04《需求、MRP 与计划订单》已按 M3 准入分流建立证据受限�
 ## 工作线 2 进度追记（2026-11-27，PP-05）
 
 PP-05《生产订单与确认》已建立证据受限文章，状态 drafting；三角色各 5 个同上下文模拟闭环，共 15，不是独立审查，不计 reviewed/owner accepted。固定版 2021.000 Help 支持 BJ5 范围的 Manage Production Orders、释放中的特定文档授权检查、Production Order Confirmation API 的数据提议及订单页货物移动显示；动态 FSD 只按 2021 SPS10 文档版本 11.0（2026-07-22）快照标注引用。订单状态全集、通用释放条件、部分/最终确认及撤销、确认与发料/收货联动、数据模型/API 完整合同、客户权限及 FI/CO 影响仍未闭合。批次 A 维持 8/50 reviewed、0/50 owner accepted；全库 owner accepted 3/99；SAP 实机测试 0。下一篇 PP-06，路径 knowledge/PP/02-functions/production-goods-cost.md。
+
+## 工作线 5 进度追记（2026-11-27，CO-02）
+
+- CO-02《成本中心与成本要素》已按批准路径建立限缩草稿，当前状态 **drafting**；M3 分流仍为“暂缓核心”。
+- 本篇角色视角闭环：普通读者 5、资深 SAP 配置顾问 5、普通 SAP 开发人员 5，共 15 个同一 Work 上下文模拟闭环；不代表独立审查者或真人专家，不计入批次 A reviewed。
+- 目标版依据：FSD v9.0/SP08 快照支持成本中心捕捉成本及期间 actual/plan；固定版 Migration Objects 2021.000 支持 controlling area 内成本中心定义和迁移范围中的 company-code data/validity；Central Finance 2021.001 仅在映射/初始加载语境支持 S/4HANA 成本要素与 G/L account 的关系。
+- 未闭合：成本中心字段级有效期、组织配置约束、成本要素类别和日常分配/自动规则、技术字段/表/API/CDS/权限；没有推广迁移场景到一般过账。FI-07 普通库存采购借贷、税务与自动科目规则未扩大或关闭。SAP 未连接，无实机验证。
+- 记录见 ideas/CareerOS/knowledge/CO/02-functions/cost-center-elements.md、ideas/CareerOS/reviews/work/2026-11-27-m4-co02-three-role-review.md、evidence-finance-m3.md。批次 A 仍 **8/50 reviewed、0/50 owner accepted**；全库正式接受 **3/99**。工作线 5 下一项为 CO-03《内部订单和费用归集》，开始前仅读取该篇准入及其来源登记。
