@@ -265,12 +265,12 @@
 
 ## 工作线 3 进度追记（2026-11-27，QM-02）
 
-- **QM-02《检验类型与检验批》**已按 M3 准入路径建立证据受限文章 \`knowledge/QM/02-functions/inspection-type-lot.md\`，当前状态 \`drafting\`。正文区分 inspection lot origin、inspection type 和 inspection lot；只写固定版 SAP Help 支持的采购收货建批条件、质量信息记录中的两个页面特定用例、收货去向与检验批库存相关性、结果规格和 UD/过账关系。
+- **QM-02《检验类型与检验批》**已按 M3 准入路径建立证据受限文章 `knowledge/QM/02-functions/inspection-type-lot.md`，当前状态 `drafting`。正文区分 inspection lot origin、inspection type 和 inspection lot；只写固定版 SAP Help 支持的采购收货建批条件、质量信息记录中的两个页面特定用例、收货去向与检验批库存相关性、结果规格和 UD/过账关系。
 - [QM-02 Work 角色视角记录](reviews/work/2026-11-27-m4-workline-3-qm02-review.md)记载普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各 5 个闭环，共 15 个同一 Work 上下文角色模拟；不是独立代理、第二模型或真人专家复核。
 - 目标版来源沿用 [QM-02 固定版研究记录](plans/qm-gr-inspection-2021-m3.md)，该记录称五个 SAP Help 页面版本选择器均显示 2021 (Oct 2021)，并记载独立复读覆盖自动收货建批条件页与库存过账时点页。本轮未重新打开版本选择器、未连接 SAP，也未验证客户系统。
 - 尚未闭合：skip inspection/动态修改/不建批的完整规则，质量信息记录更广泛的供应商/工厂差异，普通 IM 与 EWM 的场景边界及财务凭证影响；移动类型 103 仅保留为固定版页面限定例子。未编写通用权限或事务码行为。
-- QM-02 保持 \`drafting\`，15 个同上下文模拟闭环不计正式 reviewed；批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，全库正式接受数仍为 **3/99**。SAP 实机测试为 0。
-- 下一篇：**QM-03《检验计划与检验特性》**，批准路径 \`knowledge/QM/02-functions/inspection-plan-characteristic.md\`。按逐篇准入只读取 QM-03 对应来源和依赖。
+- QM-02 保持 `drafting`，15 个同上下文模拟闭环不计正式 reviewed；批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，全库正式接受数仍为 **3/99**。SAP 实机测试为 0。
+- 下一篇：**QM-03《检验计划与检验特性》**，批准路径 `knowledge/QM/02-functions/inspection-plan-characteristic.md`。按逐篇准入只读取 QM-03 对应来源和依赖。
 
 
 ## 工作线 2 进度追记（2026-11-27，PP-05）
@@ -280,3 +280,11 @@
 - 订单状态全集、通用释放条件、部分/最终确认、撤销、确认与发料/收货联动、数据模型/API 合同、客户授权及 FI/CO 结果仍未闭合；不把确认直接等同于自动发料/入库。PROCESS-05 正文不在本分支，未引用。
 - 批次 A 正式进度保持 **8/50 reviewed、0/50 owner accepted**；全库正式接受 **3/99**。SAP 系统未连接；未执行订单/确认/API 实机测试。
 - 工作线 2 下一篇：**PP-06《生产发料、收货与成本》**，批准路径 knowledge/PP/02-functions/production-goods-cost.md；先核对该篇自身准入、来源和关联材料。
+
+## 工作线 3 进度追记（2026-11-27，QM-03）
+
+- **QM-03《检验计划与检验特性》**已按准入路径建立固定版证据受限草稿 \`knowledge/QM/02-functions/inspection-plan-characteristic.md\`，状态 \`drafting\`。正文只用 S/4HANA 2021 FPS01《What's New》记录的 Manage Inspection Plans 工作清单按材料筛选变化，以及 2021.000 Business Events for Inspection Plans 条目的 create/update/delete 事件范围。
+- 文章提交：\`0188dcd250fcb2d55ca8545f4f14f4e83a37e9fe\`；[Work 角色视角审查记录](reviews/work/2026-11-27-m4-workline-3-qm03-review.md)提交：\`d76af3cb1e28c4f2f9121f2156f22eb4b07d1189\`。
+- 三个角色各有 5 个同一 Work 上下文模拟闭环，共 15；不代表独立代理、第二模型或真人专家审查。SAP 系统未连接，未执行计划、特性、应用、权限或 API 实机测试。
+- M3 原检验规划概述来自动态 FSD latest，本篇未用它作固定版 2021 证据；正文没有写完整计划结构、特性字段、plant/validity/lot-size 选择规则、sampling 参数或客户系统可用性。上述准入核心仍未闭合，故 QM-03 保持 \`drafting\`，不计正式 reviewed。
+- QM-03 不增加正式计数：批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，全库正式接受数仍为 **3/99**。下一篇：**QM-04《结果记录与使用决策》**，批准路径 \`knowledge/QM/02-functions/results-usage-decision.md\`；按逐篇准入只读取 QM-04 对应来源和依赖。
