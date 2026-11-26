@@ -95,7 +95,7 @@ SAP 2021 的功能资料支持 flexible workflow 的存在及高层能力，但�
 
 ## 目标版本来源与限制
 
-1. [SAP S/4HANA 2021 On-Premise Feature Scope Description，动态 latest 链接] 本文于 2026-11-26 读取；M3 台账的 SHA-256 `ad3c9913ee1f0cbe81e4ede4cb15192c4fcda6497dcf9ac0654dde04b541aaec` 只对应 2026-11-25 的读取，不是本文此次读取的字节快照；本次未保留独立文件哈希，精确字节级复现受限。
+1. [SAP S/4HANA 2021 On-Premise Feature Scope Description，动态 latest 链接](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=157)，§2.12.4.2 Requirements Processing，PDF 正文页 157–158。本文于 2026-11-26 读取；M3 台账的 SHA-256 `ad3c9913ee1f0cbe81e4ede4cb15192c4fcda6497dcf9ac0654dde04b541aaec` 只对应 2026-11-25 的读取，不是本文此次读取的字节快照；本次未保留独立文件哈希，精确字节级复现受限。
 2. [SAP S/4HANA 2021 On-Premise Feature Scope Description，动态 latest 链接](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=159)，§2.12.4.3 Purchase Order Processing，PDF 正文页 159–160：支持 PO 的业务定义、基于 PR/既有 PO/信息记录/合同参考或从头创建、合同调用、账户分配/自由文本项目以及 flexible workflow。具体审批结果取决于 workflow 设置。
 3. [Manage Workflows for Purchase Requisitions，SAP Help 2021.000](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/4c20737d1b69420a9b6c7b4c481be6f5.html?version=2021.000)：固定 2021.000 页面记录 PR 工作流应用的部分能力，包括限额项目工作流、退回修改及工作流期限等。本文只用它确认该版所记录的应用能力，不据此推断客户完整配置、适用矩阵或运行结果。
 4. M3 物流来源台账：[evidence-logistics-m3.md](../../../plans/evidence-logistics-m3.md)。MM-04 的逐项来源与缺口记录仍以台账为准。
