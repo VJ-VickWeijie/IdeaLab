@@ -1,7 +1,7 @@
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-27（Asia/Shanghai）  
-状态：**M3 已验收；M4 完整 99 篇分两批建设已授权。FI-01～FI-03 所有者已接受（3/99）；FI-05、MM-01～MM-07 已完成三角色 review 并计入 8/50 reviewed。MM-08、QM-01 各有15个视角闭环但目标版核心证据未闭合，保持 drafting；FI-04/FI-06 继续 drafting。CO-01 为证据充分的限缩草稿，15个同上下文模拟闭环未计reviewed；CO-02、CO-03均已建立证据受限草稿，各有15个同上下文模拟闭环，不计reviewed。CO-03普通订单结算、预算和权限等目标版证据仍不充分。工作线5下一篇CO-04。批次A为8/50 reviewed、0/50 owner accepted。**
+状态：**M3 已验收；M4 完整 99 篇分两批建设已授权。FI-01～FI-03 所有者已接受（3/99）；FI-05、MM-01～MM-07 已完成三角色 review 并计入 8/50 reviewed。MM-08、QM-01 各有15个视角闭环但目标版核心证据未闭合，保持 drafting；FI-04/FI-06 继续 drafting。CO-01 为证据充分的限缩草稿，15个同上下文模拟闭环未计reviewed；CO-02、CO-03均已建立证据受限草稿，各有15个同上下文模拟闭环，不计reviewed。CO-03普通订单结算、预算和权限等目标版证据仍不充分；CO-04普通生产订单的WIP/差异公式、状态条件和一般结算规则仍缺直接证据。工作线5下一篇CO-05。批次A为8/50 reviewed、0/50 owner accepted。**
 
 ## 当前仓库、分支与 PR
 
@@ -350,3 +350,13 @@
 - 完整 VBFA/后续单据字段、主键、关联基数、组织映射、FI 凭证关系、released API/CDS 合同和权限仍未闭合；不提供生产 JOIN。M3 关联的 SD-03、SD-04 正文文件当前分支不存在。SAP 系统未连接、未执行实机测试。
 - 工作线 2 已完成分配的 8 篇正文（SD-06、SD-07、PP-01～PP-06）；全部 drafting，累计 120 个同上下文模拟闭环（每篇读者/顾问/开发者各 5），本线正式独立 role-reviewed 为 0/8。批次 A 正式 reviewed 仍 **8/50**、owner accepted **0/50**；全库正式接受仍 **3/99**。SAP 实机测试为 0。
 - 本次更新前已重新读取 PR #21：open、未合并、目标 `main`；基于工作分支 HEAD `7c36b5db4904e6a18e61c293a854ab2c8c4c38d6`。PR 不合并。本工作线范围已完成；本线下一篇为“无”，后续需另行分配。
+
+## M4 工作线 5 更新：CO-04（2026-11-27）
+
+- 提交前实时复核 PR #21：open、未合并、base main；工作分支 careeros-v04-m4-batch1-20261126，本次 HANDOFF 更新前 HEAD 为 f74d9461fcd24461477da49100e1ebf2ccfb6a47。PR 不合并。
+- CO-04《产品成本、生产差异与结算》文章：[knowledge/CO/02-functions/product-cost-variance-settlement.md](knowledge/CO/02-functions/product-cost-variance-settlement.md)，状态 drafting，路径遵循 M3 “暂缓核心”边界。SAP S/4HANA 2021 FSD v9.0/SP08 快照支持制造方式影响成本观察对象、生产订单成本向接收对象结算、重复制造按期间收集，以及特定 Kanban 场景的期末 WIP/差异能力；2021.000 Deferred Summarization 是独立技术功能。普通生产订单公式、状态条件和结算规则/接收方未闭合。
+- 角色视角记录：[reviews/work/2026-11-27-m4-co04-three-role-review.md](reviews/work/2026-11-27-m4-co04-three-role-review.md)：读者 5、配置顾问 5、开发者 5，同一 Work 上下文模拟；非独立审查，不计 8/50 reviewed。没有 SAP 实机、目标 FPS 或用户权限验证；无 FI-07 普通库存借贷/税/自动科目推导。
+- 证据台账：[plans/evidence-finance-m3.md](plans/evidence-finance-m3.md)；两批执行计划已同步。
+- CO-04 文章初稿 da84d0d0d50f9671f013be518279ad4b90a60a2e；来源定位修订 fd549cf1a5a98114e6274850ab3463f6f68a534e；视角审查修订 3a7632303662ed58e5e6e65c22857f85375c17e7；Settlement 术语修订 beaa3d541e0439237b4d34284b9f4d714bd5353f；审查档案 c6d6e22f26a045c6c0319a8438892f36586f1b03；证据台账 3a7df8f3bd8975891293e57726f15e3a1f671b0e；执行计划 8a97f1d94b3a1076b0ea102ee465f5dc102018fc。
+- 下一篇：CO-05。开始前仅读取 CO-05 自身准入与证据登记，按目标版证据范围建立正文。
+
