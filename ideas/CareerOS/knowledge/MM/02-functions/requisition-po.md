@@ -99,7 +99,7 @@ SAP 2021 的功能资料支持 flexible workflow 的存在及高层能力，但�
 2. [SAP S/4HANA 2021 On-Premise Feature Scope Description，动态 latest 链接](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=159)，§2.12.4.3 Purchase Order Processing，PDF 正文页 159–160：支持 PO 的业务定义、基于 PR/既有 PO/信息记录/合同参考或从头创建、合同调用、账户分配/自由文本项目以及 flexible workflow。具体审批结果取决于 workflow 设置。
 3. [SAP S/4HANA 2021 On-Premise Feature Scope Description，§2.12.3.2 Source Assignment，PDF 正文第 152–154 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=153)：在无来源或存在多个潜在来源时，通过询价（RFQ）寻找合适来源的高层能力；不提供详细供应商选择算法。
 4. [Manage Workflows for Purchase Requisitions，SAP Help 2021.000](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/4c20737d1b69420a9b6c7b4c481be6f5.html?version=2021.000)：固定 2021.000 页面记录 PR 工作流应用的部分能力，包括限额项目工作流、退回修改及工作流期限等。本文只用它确认该版所记录的应用能力，不据此推断客户完整配置、适用矩阵或运行结果。
-4. [My Purchase Requisitions，SAP Help 2021.000](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b8272f1725d74e5aaa527558422a0361.html?locale=en-US&version=2021.000)：页面标示 SAP S/4HANA 2021（Oct 2021）及范围项 18J、1XI、O8J；其“Limit items”说明支持在指定应用范围内将下单时无法详细说明的计划外服务/材料表示为限额项，并设定预期值与总额上限。它不证明所有 PR 创建方式都具有同一字段或行为，也不覆盖客户审批矩阵、服务明细或后续发票规则。
-5. M3 物流来源台账：[evidence-logistics-m3.md](../../../plans/evidence-logistics-m3.md)。MM-04 的逐项来源与缺口记录仍以台账为准。
+5. [My Purchase Requisitions，SAP Help 2021.000](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b8272f1725d74e5aaa527558422a0361.html?locale=en-US&version=2021.000)：页面标示 SAP S/4HANA 2021（Oct 2021）及范围项 18J、1XI、O8J；其“Limit items”说明支持在指定应用范围内将下单时无法详细说明的计划外服务/材料表示为限额项，并设定预期值与总额上限。它不证明所有 PR 创建方式都具有同一字段或行为，也不覆盖客户审批矩阵、服务明细或后续发票规则。
+6. M3 物流来源台账：[evidence-logistics-m3.md](../../../plans/evidence-logistics-m3.md)。MM-04 的逐项来源与缺口记录仍以台账为准。
 
 本文是个人学习材料，不构成采购政策、审批授权、系统配置或生产操作建议。
