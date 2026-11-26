@@ -50,3 +50,15 @@
 同一开发者和独立顾问实读 [Function Module Test Sequence](https://help.sap.com/docs/SUPPORT_CONTENT/abap/3353523556.html)，其 SAP Support Additional Content 示例演示顺序调用 PO 创建和提交、检查 RETURN 及设置 WAIT = 'X'；该页面无目标产品/FPS 标识，并提示 Additional Content 不属于 SAP 条款中定义的 Documentation。示例不能视为目标函数的 2021 产品契约、完整回滚规则或执行授权。此前本文件中搜索工具打开为空的记录保留为当时结果，后续浏览器实读不应倒写为原研究者已读。
 
 **状态**：2021 通用 BAPI 模型直接证据已找到并独立复核；2021 采购函数级事务、消息、回滚及实机行为仍待核。未操作 SAP 系统，未进行正式文章审核。
+
+
+## 2026-11-26｜SAP Support Additional Content 直接阅读与独立复核
+
+Work 与独立开发复核上下文分别直接打开并读取以下两页；两页均出现 SAP 的 Additional Content 说明，明确表示其不属于适用 SAP General Terms and Conditions 所定义的 Documentation。内容背景是 ECC/R/3，页面没有 S/4HANA 2021 版本选择器。
+
+1. [Purchasing BAPIs](https://help.sap.com/docs/SUPPORT_CONTENT/spmm/3362167428.html)：页面说明 BAPI_PO_CREATE1 与 ME21N 的对应关系，讨论 X 结构字段标记、RETURN 消息/调试，并称需调用 BAPI_TRANSACTION_COMMIT 才能永久保存 BAPI 更改。
+2. [How to create a Purchase Order with the help of BAPI_PO_CREATE1](https://help.sap.com/docs/SUPPORT_CONTENT/spmm/3362167600.html)：包含 SE37 示例中的 TESTRUN（不产生数据库效果）及测试序列 BAPI_PO_CREATE1 后接 BAPI_TRANSACTION_COMMIT；页面提到 ME21N 功能对应关系，同时承认技术差异/缺项。
+
+独立开发复核确认了上述有限摘录和版本边界。不能从这些旧版附加示例推出目标 S/4HANA 2021 的完整函数合同、提交时机规则、回滚策略、更新任务/WAIT 保证、RFC/LUW 边界或失败分支；也未证明目标 SAP 系统可用性。它们是检索线索与有限背景，不补齐 ABAP-04 的目标版本证据门槛。
+
+**状态**：SAP Support 页面现已由 Work 与独立开发复核上下文分别直接阅读；ABAP-04 函数级 2021 事务、提交/回滚、更新任务与失败消息语义仍待目标版本直接依据。未操作 SAP 系统、未执行代码、不计正式文章审核轮次；M3 仍未通过。
