@@ -21,7 +21,7 @@
 | FI-07 | **直接（有限）**：SAP 2021 初版限定收货/发票账户、印度特定服务税案例及 MAP 库存覆盖的先票—收货—再票图文；图示只用正负，不标借贷。**邻近（非目标版）**：SAP Best Practices YCOA 2025-FPS1 明确标准 PO 无科目分配下收货借库存/贷 GR/IR 及价格差异。**缺口**：2021 普通库存无税前提和借贷明确的标准分录、credits/图示歧义、发票分录、实际清账、自动科目和完整配置。 |
 | FI-08 | **直接**：S21 特定余额结转状态及作业。**邻近**：IRS1 美国税务会计方法。**缺口**：2021 月年结步骤、期间启闭、模拟/过账与适用地区规则。 |
 | FI-09 | **直接**：S21 特定 GR/IR 清账应用的模式。**邻近**：一般功能范围不能构成事务清单。**缺口**：每项 GUI/Fiori 的作用、版本、输入输出、权限及只读/更新区分。 |
-| FI-10 | **直接（有限）**：S21 限定扩展未清项字段及启用条件；SAP《What's New in SAP S/4HANA 2021》§3.6.1.3（印刷页133–134）说明 Automatic Account Determination app 用于配置 G/L account assignments，范围为 J58、FI-FIO-GL-CA、Available As Of S/4HANA 2021。表中 BUL、BUU 两个新 transaction keys 限于 Prepare Intercompany Transactions；`*` 通配符用于 Integrate with HR Postings 的客户/供应商账号输入。**缺口**：具体账户、完整设置步骤、角色/权限、只读查看及 FI app 与具体过账规则的映射；该公告不支持 MM OBYC/BSX/WRX。 |
+| FI-10 | **直接（有限）**：S21 限定扩展未清项字段及启用条件；[SAP《What's New in SAP S/4HANA 2021》](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.000/en-US/WN_OP2021_EN.pdf) §3.6.1.3（印刷页133–134）说明 Automatic Account Determination app 用于配置 G/L account assignments，范围为 J58、FI-FIO-GL-CA、Available As Of S/4HANA 2021。表中 BUL、BUU 两个新 transaction keys 限于 Prepare Intercompany Transactions；`*` 通配符用于 Integrate with HR Postings 的客户/供应商账号输入。**缺口**：具体账户、完整设置步骤、角色/权限、只读查看及 FI app 与具体过账规则的映射；该公告不支持 MM OBYC/BSX/WRX。 |
 | FI-11 | **直接**：SI21 限定 FIN 数据模型/兼容背景，S21 限定 ACDOCA/ACDOCD 成本汇总。**缺口**：BKPF/ACDOCA 与业务单据的字段、键、基数、视图/API 和授权逐项 2021 证据。 |
 
 ## CO：8 项
