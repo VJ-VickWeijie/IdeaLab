@@ -286,8 +286,8 @@
 
 ## 工作线 3 进度追记（2026-11-27，QM-03）
 
-- **QM-03《检验计划与检验特性》**已按准入路径建立固定版证据受限草稿 \`knowledge/QM/02-functions/inspection-plan-characteristic.md\`，状态 \`drafting\`。正文只用 S/4HANA 2021 FPS01《What's New》记录的 Manage Inspection Plans 工作清单按材料筛选变化，以及 2021.000 Business Events for Inspection Plans 条目的 create/update/delete 事件范围。
-- 文章提交：\`0188dcd250fcb2d55ca8545f4f14f4e83a37e9fe\`；[Work 角色视角审查记录](reviews/work/2026-11-27-m4-workline-3-qm03-review.md)提交：\`d76af3cb1e28c4f2f9121f2156f22eb4b07d1189\`。
+- **QM-03《检验计划与检验特性》**已按准入路径建立固定版证据受限草稿 `knowledge/QM/02-functions/inspection-plan-characteristic.md`，状态 `drafting`。正文只用 S/4HANA 2021 FPS01《What's New》记录的 Manage Inspection Plans 工作清单按材料筛选变化，以及 2021.000 Business Events for Inspection Plans 条目的 create/update/delete 事件范围。
+- 文章提交：`0188dcd250fcb2d55ca8545f4f14f4e83a37e9fe`；[Work 角色视角审查记录](reviews/work/2026-11-27-m4-workline-3-qm03-review.md)提交：`d76af3cb1e28c4f2f9121f2156f22eb4b07d1189`。
 - 三个角色各有 5 个同一 Work 上下文模拟闭环，共 15；不代表独立代理、第二模型或真人专家审查。SAP 系统未连接，未执行计划、特性、应用、权限或 API 实机测试。
-- M3 原检验规划概述来自动态 FSD latest，本篇未用它作固定版 2021 证据；正文没有写完整计划结构、特性字段、plant/validity/lot-size 选择规则、sampling 参数或客户系统可用性。上述准入核心仍未闭合，故 QM-03 保持 \`drafting\`，不计正式 reviewed。
-- QM-03 不增加正式计数：批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，全库正式接受数仍为 **3/99**。下一篇：**QM-04《结果记录与使用决策》**，批准路径 \`knowledge/QM/02-functions/results-usage-decision.md\`；按逐篇准入只读取 QM-04 对应来源和依赖。
+- M3 原检验规划概述来自动态 FSD latest，本篇未用它作固定版 2021 证据；正文没有写完整计划结构、特性字段、plant/validity/lot-size 选择规则、sampling 参数或客户系统可用性。上述准入核心仍未闭合，故 QM-03 保持 `drafting`，不计正式 reviewed。
+- QM-03 不增加正式计数：批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，全库正式接受数仍为 **3/99**。下一篇：**QM-04《结果记录与使用决策》**，批准路径 `knowledge/QM/02-functions/results-usage-decision.md`；按逐篇准入只读取 QM-04 对应来源和依赖。
