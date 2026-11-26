@@ -1,6 +1,6 @@
 # MM-01｜组织结构与采购业务对象
 
-> 状态：drafting｜M4 批次 A｜目标版本 SAP S/4HANA 2021 On-Premise。本文纳入固定版官方组织说明直接支持的基础概念与组织分配规则；企业实际配置、权限和运行结果未验证。  
+> 状态：reviewed（16 个有效闭环）｜M4 批次 A｜等待所有者验收｜目标版本 SAP S/4HANA 2021 On-Premise。本文纳入固定版官方组织说明直接支持的基础概念与组织分配规则；企业实际配置、权限和运行结果未验证。  
 > 证据边界：S/4HANA 2021 初版 SAP Help 的采购组织结构页面可以支持 client、company code、plant、purchasing organization、purchasing group 的有限概念说明及其中描述的组织关系、集中/分散采购方式；不能代表每家企业的真实组织或当前系统设置。来源登记见 [M3 物流证据台账](../../../plans/evidence-logistics-m3.md#mm-01)。
 
 ## 为什么要先看组织结构
