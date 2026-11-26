@@ -235,3 +235,10 @@ Work 直接读取 [SAP《What's New in SAP S/4HANA 2021》](https://help.sap.com
 - 独立开发者直接读取 SAP Help ABAP Platform 2021 (Oct 2021) 的 Parameter Reference 与 Session Memory 页面。六个常规/扩展 warning/quota 参数均以百分比列示且默认值为 0；warning threshold 越界会写 short dump、程序不中止，硬 quota 超限会终止程序。该机制是平台侧会话内存监控，不能据此认定为 TRY...CATCH 信号或应用代码停止接口。
 - Work 直接读取 SAP KBA 3564988 公开预览：S4CORE 106 / SAP S/4HANA 2021 的特定 CFIN AIF Analyzer 场景列出 SESSIONMEM_QUOTA_WARNING 与 TSV_TNEW_OCCURS_NO_ROLL_MEMORY、TSV_TNEW_PAGE_ALLOC_FAILED。预览没有发生顺序和一般根因，不推断警告可以预防后续 dump。
 - Work 已将以上来源及边界写入 [ABAP-02 内存诊断补充](../../plans/abap02-memory-dump-admin-boundary-m3.md)，并更新 M3 资源表与 7.56 关键字页的相关链接。独立开发者已受邀复核更新后全文；具体措辞复核待回复。ABAP-02 仍未闭合：目标系统配置、kernel/FPS、进程实测及安全停止上限未知；正式文章审核轮次为 0，M3 未通过，M4 未授权。
+
+
+## 2026-11-26｜普通 P2P 收货/发票借贷目标版复查
+
+- 独立配置顾问复读三篇 SAP Learning 普通采购示例，发现一篇发票 GR/IR 方向与另外两篇不一致；三页均未固定 S/4HANA 2021/FPS，不能用于裁定目标版。
+- 顾问尝试 SAP Financial Operations 的 2021.000 候选页面，只获得 2025 FPS02 搜索索引；索引涉及初始库存等特定情境、按 GR/IR 正负数列示，未证明普通库存采购的无科目分配前提，也没有本轮直接读到 2021 正文。
+- Work 将独立研究报告收入 [P2P 普通采购借贷补查](../../plans/p2p-2021-posting-followup-m3.md)，并更新 M3 资源表；普通估价库存场景的 2021 直接借贷、BSX/WRX/T030 仍未闭合。正式文章审核轮次不增加，FI-07、MM-09、PROCESS-01 与 M3 继续未通过。
