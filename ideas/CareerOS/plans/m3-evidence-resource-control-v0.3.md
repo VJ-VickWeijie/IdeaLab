@@ -8,7 +8,7 @@
 
 | ID | 已读取的有限依据及版本 | 未闭合的问题 | 工作负责人及下一步 | 判定 |
 | --- | --- | --- | --- | --- |
-| FI-07 | [2021 直接来源与邻近对照](finance-fi07-direct-2021.md)：含六页 SAP Help 2021、MAP 有库存覆盖案例；另记 YCOA WRX 2025-FPS1 明确借贷示例（非目标版）。 | 2021 MAP 图无借贷标签且正文/数量图不一致；2025 对照不证明 2021 on-prem，也不含库存发票；普通库存无税前提、借贷、自动科目和配置仍缺。 | 保持未闭合，继续找目标版直接依据。 | 未闭合 |
+| FI-07 | [2021 直接来源与邻近对照](finance-fi07-direct-2021.md)：含 GR/IR、MAP 有库存/无库存覆盖例；另记 YCOA WRX 2025-FPS1 明确收货借贷示例（非目标版）。 | MAP 页面没有完整借贷表且采购无科目分配条件未明确；2021 页面 `credits stock account` 与其他示例仍有歧义；普通库存发票、税、自动科目和配置仍缺。 | 保持未闭合，继续找目标版有清楚分录方向和前提的直接资料。 | 未闭合 |
 | PROCESS-01 | [2021 P2P 固定来源](evidence-p2p-fi07-m3.md)、[估价](p2p-valuation-direct-2021.md)、[末端付款](p2p-payment-evidence-m3.md)；另有 YCOA 2025-FPS1 收货对照（非目标版）。 | Manage Automatic Payments 2021 初版支持排程/状态/payment media 功能；不证明逐笔应付分录、运行成功或银行扣款。端到端单据、普通配置、异常及真实资金仍缺。 | Work 按目标版逐事件补证，保持不将支付介质等同银行结算。 | 未闭合 |
 | MM-09 | [SAP Help 固定 2021 GR/IR 页面直读](mm09-2021-grir-direct-m3.md)：只支持 GR/IR 概念关系且暴露收货方向措辞歧义；[Simplification List](evidence-gap-four-m3.md)仅为材料账迁移 OBYC/IMG 示例；[详细 BSX/WRX 补查](mm09-obyc-source-followup-m3.md)。 | 普通采购/库存的 BSX/WRX 自动科目确定条件、估价与移动类型、配置入口及权限未证；2021 页面无借贷表，不能消解来源冲突。 | Work 继续逐项找目标版直接证据；未补齐前保持开放。 | 未闭合 |
 | ABAP-02 | [7.56 官方关键字与游标直接来源](abap-756-keyword-direct-m3.md)，已由另一上下文逐页复读；补上 PACKAGE SIZE/FAE 组合和 COMMIT/CALL DIALOG 边界 | 目标系统 FPS、具体程序内存/性能/并发验证、异常和资源上限；文献不能替代程序实测 | Work 已补来源和独立文献复核；后续仍需目标环境只读版本确认及获授权的非生产验证 | 未闭合 |

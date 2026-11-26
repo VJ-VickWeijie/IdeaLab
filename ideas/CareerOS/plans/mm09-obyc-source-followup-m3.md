@@ -54,3 +54,11 @@ SAP 官方公开材料支持的主张各有边界：SAP Learning 的无科目分
 ## 固定 S/4HANA 2021 GR/IR 页直接复读（2026-11-26）
 
 Work 通过 SAP Help 版本选择器直接读取 [Important Accounts for Invoice Verification](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/2d70b6531de6b64ce10000000a174cb4.html?version=2021.000) 与关联的 [Postings at Goods Receipt and Invoice Receipt](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/825eb6531de6b64ce10000000a174cb4.html?version=2021.000)；两个页面的版本选择器均显示 2021 (Oct 2021)。页面支持 GR/IR 的中间科目角色和收货/发票关系，但关联页写“credit the value ... to the stock account”，未列出借贷表。独立审查者 `/root/mm09_independent_2021_read` 直接复读两页，确认版本、有限支持范围及方向歧义。另一位顾问虽未能打开这两页，但独立读取的未固定版本 SAP Learning 示例明确写库存借方、GR/IR 贷方；它仅提示冲突，不是目标版裁决。此矛盾不据此认定 SAP 系统有错，不能擅自反向改写原文。两页均未列 OBYC 的 BSX/WRX 配置因素、估价/移动类型条件或权限；MM-09 仍未闭合，文献复核不计正式文章审核。详见[固定版直读记录](mm09-2021-grir-direct-m3.md)。
+
+
+## 2026-11-26｜OBYC 与库存估价候选页面的版本读取失败
+
+- SAP Help 搜索索引中的 [Inventory Management and Physical Inventory](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/91b21005dded4984bcccf4a69ae1300c/199d86d0f85e4ea982a529c6e0409660-363.html) 提到估价区域/库存价值管理；尝试打开其 `version=2021.000` 地址时，SAP Help 返回 “Page Not Found”。该页面未读到正文或版本选择器，搜索摘要不能计为 2021 证据。
+- [Extended Open Item Management: FAQ](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/651d8af3ea974ad1a4d74449122c620e/e03dc67ea7354354bf5d2b23cf575a8c.html) 的搜索索引涉及 WRX/FR1/FR3 与估价类变化后账户确定风险；尝试 `version=2021.000` 地址亦返回 “Page Not Found”。本次没有直接核对正文及版本，索引片段不作为目标版依据。
+
+这仅记录上述两个版本化页面路径无法读取，不据此推断相关内容不存在于 S/4HANA 2021；MM-09 的 OBYC 条件、估价与权限证据仍待核。

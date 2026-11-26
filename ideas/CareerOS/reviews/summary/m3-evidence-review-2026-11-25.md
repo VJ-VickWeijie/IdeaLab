@@ -168,3 +168,9 @@
 - 页面支持有限的 GR/IR 中间科目与收货/发票关系，但相关收货说明写“credit the value ... to the stock account”，正文无借贷表。独立上下文 `/root/mm09_independent_2021_read` 实读两页并确认版本及歧义；另一顾问读取了未固定 2021 的 Learning 采购收货示例，其借贷文字形成对照而不能替代目标版裁决。
 - 本来源不列 OBYC 的 BSX/WRX 确定因素、移动类型条件、配置权限，普通库存采购完整目标版规则仍缺。冲突不视为 SAP 系统错误、不自行改写；MM-09 与 M3 继续未闭合，M4 未授权。
 - 来源交叉核验不计正式文章审核轮次；无 SAP 实机测试。
+
+## 2026-11-26｜FI-07 MAP 无库存覆盖案例补查
+
+- Work 读取 SAP S/4HANA 2021 (Oct 2021) [Example: Material with MAP Without Stock Coverage](../../plans/finance-fi07-direct-2021.md)：支持 PO 价格收货/GR/IR、移动平均价领用，以及发票价差按仍有库存数量分流至库存或差异费用的特定案例。
+- `/root/mm09_independent_2021_read` 独立复读该页并确认版本与摘要范围；页面没有完整借贷表，也没有明确采购订单无科目分配前提，不能作为普通采购分录或 OBYC 依据。
+- FI-07 与 PROCESS-01 仍未闭合；该来源研究不计正式文章审核轮次，无 SAP 实机验证。MM-09 另有两个精确 `version=2021.000` 候选路径返回 Page Not Found，已如实登记为无法读取，不推断资料不存在。
