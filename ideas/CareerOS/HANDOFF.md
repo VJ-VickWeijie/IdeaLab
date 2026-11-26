@@ -318,8 +318,8 @@
 - 三个角色视角各 5 个闭环，共 15 个同一 Work 上下文内的模拟循环，不是独立审查者或真人专家复核。文章及审核记录明确披露此限制，不计入正式 role-reviewed 数。
 - 正文的直接产品依据限于 SAP S/4HANA 2021 SPS10 FSD 动态链接实际读取快照（文档版本 11.0，2026-07-22），并引用固定 2021.000 BJ5 生产订单对象页的已记录货物移动显示范围。发料/收货数量方向和少量成本对象概览已限缩呈现。
 - 库存估价和实际金额、退料/冲销触发、差异/WIP/结算算法、FI/CO 科目与凭证关系、字段/API/权限、EWM/MES 集成仍未闭合；CO-04 正文在当前分支不存在。SAP 系统未连接，实机测试 0。
-- 工作线 2 当前已有 7 篇正文（SD-06、PP-01～PP-06），全部 drafting；累计模拟闭环 105（每篇各角色 5），不计 reviewed。批次 A 仍为 **8/50 reviewed、0/50 owner accepted**；全库正式接受为 **3/99**。
-- 工作线 2 下一篇：**SD-07《销售与交货数据模型》**，批准路径 `knowledge/SD/05-data-model/sales-delivery.md`；开始前只读取该篇自身控制/准入、来源和关联材料。
+- 工作线 2 已有 8 篇正文（SD-06、SD-07、PP-01～PP-06），全部 drafting；累计模拟闭环 120（每篇各角色 5），本线正式独立 role-reviewed 为 0/8。批次 A 仍为 **8/50 reviewed、0/50 owner accepted**；全库正式接受为 **3/99**。
+- SD-07 后续结果见下方同名进度追记；当前分配范围已完成。
 
 
 ## 工作线 3 收尾（2026-11-27）
@@ -340,3 +340,13 @@
 - 审查记录：[reviews/work/2026-11-27-m4-co03-three-role-review.md](reviews/work/2026-11-27-m4-co03-three-role-review.md)。证据记录：[plans/evidence-finance-m3.md](plans/evidence-finance-m3.md)。两批执行计划已同步。
 - 本文提交 b4da71fc1d043d95d7beecfce11561ac43af7122；角色视角修订 8fdcf35d1960194b12f3c23eaccb887924ec764b；审查记录 fb3ba1b7b38c8f53865e99de2c66cc4a8b1577aa；证据台账 bd716b35088b86989aefece26c52172039b89b17；执行计划 d6f274693efd0a47d4ac9c78ed2b05886140e234。
 - 下一项：CO-04。开始前仅读取 CO-04 自身准入、证据登记和依赖，不提前加载后续文章的完整研究材料。
+
+
+## 工作线 2 进度追记（2026-11-27，SD-07）
+
+- **SD-07《销售与交货数据模型》**已按 M3 准入分流的“限缩可写”范围建立正文，路径为 `knowledge/SD/05-data-model/sales-delivery.md`，状态 `drafting`。
+- 普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各有 5 个同一 Work 上下文模拟闭环，共 15；Work 在每个闭环中记录质询、官方来源答辩、文章修订和原视角复核。没有独立审查者或真人专家参与，不计入批次 A reviewed 数。记录见 [SD-07 Work 审查记录](reviews/work/2026-11-27-m4-workline-2-sd07-three-role-review.md)。
+- 正文按固定 SAP S/4HANA 2021《Simplification List》§36.8 限于状态表/对应对象、VBFA 简化、单据类别及冗余索引变更；明确其 system conversion 语境。固定 2021.000 What's New 中的 API_SALES_ORDER_SIMULATION_SRV 仅作为销售订单模拟 API 的窄范围例子。动态 FSD 只按实际读取 SPS10 快照标注，用于开票可过账至 Financial Accounting 的高层说明。
+- 完整 VBFA/后续单据字段、主键、关联基数、组织映射、FI 凭证关系、released API/CDS 合同和权限仍未闭合；不提供生产 JOIN。M3 关联的 SD-03、SD-04 正文文件当前分支不存在。SAP 系统未连接、未执行实机测试。
+- 工作线 2 已完成分配的 8 篇正文（SD-06、SD-07、PP-01～PP-06）；全部 drafting，累计 120 个同上下文模拟闭环（每篇读者/顾问/开发者各 5），本线正式独立 role-reviewed 为 0/8。批次 A 正式 reviewed 仍 **8/50**、owner accepted **0/50**；全库正式接受仍 **3/99**。SAP 实机测试为 0。
+- 本次更新前已重新读取 PR #21：open、未合并、目标 `main`；基于工作分支 HEAD `7c36b5db4904e6a18e61c293a854ab2c8c4c38d6`。PR 不合并。本工作线范围已完成；本线下一篇为“无”，后续需另行分配。

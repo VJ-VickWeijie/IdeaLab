@@ -110,3 +110,10 @@ Work 在同一上下文以普通学习者、资深 SAP 配置顾问、普通 SAP
 ### M4 Workline 5 CO-03｜2026-11-27
 
 CO-03《内部订单和费用归集》已按 M3 “限缩可写”路径建立证据受限草稿，路径为 `knowledge/CO/02-functions/internal-orders.md`。普通读者、资深配置顾问、普通 SAP 开发人员视角各完成 5 个同一 Work 上下文模拟闭环，共 15；未独立复核，不计入批次 A reviewed，文章状态 drafting。正文逐项区分目标版 FSD v9.0/SP08 和迁移文档、未标发行版的 SAP Learning、2021.001 Central Finance 专项范围。普通订单结算/接收方、真实/统计通用规则、预算触发、配置、权限、数据模型/API 仍待直接证据；无 SAP 实机测试，不推导 FI-07 库存借贷、税或自动科目。详见 [CO-03 文章](../knowledge/CO/02-functions/internal-orders.md)、[闭环记录](../reviews/work/2026-11-27-m4-co03-three-role-review.md) 与 [证据边界](evidence-finance-m3.md)。批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，正式接受数 **3/99**。工作线 5 下一篇 CO-04；开始前仅读取 CO-04 自身准入与证据登记。
+
+
+## 工作线 2 进度追记（2026-11-27，SD-07）
+
+SD-07《销售与交货数据模型》按 M3 “限缩可写”准入建立目标版证据受限文章，路径 `../knowledge/SD/05-data-model/sales-delivery.md`，状态 `drafting`。Work 在同一上下文模拟普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各 5 个闭环，共 15 个；每项包括质询、来源答辩、修订和原视角复核，但不是独立专家/代理审查，不增加正式 reviewed 数。固定 SAP 2021 Simplification List §36.8 支持的状态简化、VBFA 简化、单据类别和索引表变化均按 system conversion 语境限定；2021.000 API 示例仅是销售订单模拟 API；FSD 11.0/SPS10 动态快照仅用于高层开票至 FI 能力。完整 VBFA 和后续单据的字段、键、基数、组织映射、SD-FI 凭证关系、released API/CDS 合同及权限仍待核；SD-03/SD-04 正文当前分支不存在。未连接 SAP、未实测。
+
+工作线 2 分配的 8 篇文章（SD-06、SD-07、PP-01～PP-06）均为 drafting，累计 120 个同上下文模拟闭环；本线正式独立 role-reviewed 为 0/8。批次 A 正式计数仍 8/50 reviewed、0/50 owner accepted，全库正式接受 3/99。本线已完成分配范围，无下一篇。
