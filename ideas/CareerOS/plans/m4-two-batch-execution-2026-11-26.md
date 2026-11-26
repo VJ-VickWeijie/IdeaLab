@@ -138,3 +138,8 @@ CO-06《CO 常用入口导航：先分清查看、维护与过账》按 M3“暂
 ## Workline 5｜CO-07（2026-11-27）
 
 CO-07《管理会计配置查看：从一条可证实的规则开始》按 M3“暂缓核心”准入建立受限 drafting 草稿。固定 SAP S/4HANA 2021 What's New §3.5.1.3 支持一条具体的 Block Intercompany Postings 配置：CO intercompany postings 可全部允许、全部阻止或仅允许特定发送方/接收方公司代码组合，并列出 IMG 路径。该证据不支持一般成本中心/内部订单/结算设置、IMG 只读模式、权限角色或客户当前值；这些仍未闭合。三角色视角各 5 个同上下文模拟闭环，共 15；非独立 review，不计 reviewed。无 SAP 实机或配置更改。下一篇 CO-08；批次 A 仍 8/50 reviewed、0/50 owner accepted，全库正式接受 3/99。
+
+
+## Workline 5｜CO-08（2026-11-27）
+
+CO-08《管理会计数据模型：理解统一日记账，但不猜表关系》按 M3“暂缓核心”准入建立受限 drafting 草稿。固定 2021 Simplification List §8.1 仅支持财务报告统一文档存储和特定转换语境的兼容视图背景；What's New 2021 §3.5.6.4 支持 Margin Analysis 的 ACDOCA 窄范围关联；2021.000 Deferred Summarization of Production Costs 只支持特殊生产成本汇总情境中 ACDOCA/ACDOCD 的 detail/aggregate 变化。成本对象字段、主键、基数、组织关系、兼容对象物理状态、released API/CDS 和权限仍缺逐项证据。普通读者、配置顾问、开发者各 5 个同一 Work 上下文模拟闭环，共 15；非独立 review，不计 reviewed。未连接 SAP、未执行数据库/API 查询。CO-08 完成本工作线 5 所分配文章；批次 A 仍 8/50 reviewed、0/50 owner accepted，全库正式接受 3/99。

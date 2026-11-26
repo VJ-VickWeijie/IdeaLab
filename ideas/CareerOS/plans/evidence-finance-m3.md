@@ -187,3 +187,16 @@ CO-05 文章将收入确认、获利分析和应收收款/清账分别解释；�
 | E1. [What's New in SAP S/4HANA 2021 (Oct 2021)](https://help.sap.com/doc/4eefc5f2d826408f91a999687d31780f/2021/en-US/WN_OP2021__EN.pdf)，§3.5.1.3 “Block Intercompany Postings”。 | 固定 2021 资料说明这是新的 CO-OM/Overhead Cost Controlling 配置活动（scope J54）；可允许全部、阻止全部，或仅允许指定 sender/receiver company code 组合的 CO intercompany postings；给出 Controlling → Cost Center Accounting → Actual Postings → Intercompany Postings → Block Intercompany Postings 路径。 | 默认值、优先级、底层表/字段/API、T-Code、只读模式、用户角色/权限、客户实际设置、传输与运行日志均未给出。也不支持 FI intercompany posting、普通成本分摊/结算、税务或任何 FI 分录推论。 |
 
 其余成本中心、成本要素、内部订单、结算规则、分配周期和只读 IMG/权限入口没有逐项目标版来源，本篇未补写路径。普通读者、配置顾问、开发人员视角各 5 个同一 Work 上下文模拟闭环，共 15；无独立 reviewer/真人专家，故不计正式 reviewed。未连接 SAP、未实机查看或修改配置、未传输或运行过账。
+
+
+## M4 CO-08 证据补查与受限数据模型稿（2026-11-27）
+
+本次只处理 CO-08《管理会计数据模型》，未读取其他文章的完整研究材料。文章：`../knowledge/CO/05-data-model/controlling-data-model.md`；角色视角记录：`../reviews/work/2026-11-27-m4-co08-three-role-review.md`。按 M3“暂缓核心”准入建立受限 drafting 草稿。
+
+| 来源 | 直接支持范围 | 版本/边界与未支持项 |
+| --- | --- | --- |
+| E1. [Simplification List for SAP S/4HANA 2021 – Initial Shipment, FPS 1 & 2](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf)，v1.25，§8.1，印刷页200–201。 | 统一日记账改变财务报告交易数据存储方式；报告可从同一 document store 读取并以 account 为统一元素。该节也描述特定 Simple Finance/早期 S/4HANA 转换背景中的 totals/application-index compatibility views，并说明 SELECT 兼容与写访问限制。 | 此为报告/转换背景，不是完整 2021 CO 对象 schema。早期转换示例不证明每个 2021 FPS 的运行时物理表。未提供本文所需 CO 字段、主键、基数、对象关系或 API。 |
+| E2. [What's New in SAP S/4HANA 2021](https://help.sap.com/doc/4eefc5f2d826408f91a999687d31780f/2021/en-US/WN_OP2021__EN.pdf)，§3.5.6.4，印刷页122。 | Margin Analysis 是 account-based profitability analysis；相关 values 和 characteristics posted to accounts in ACDOCA。 | 限于 Margin Analysis 方案，不扩展到 costing-based CO-PA、所有 CO 对象或客户启用状态。 |
+| E3. [Deferred Summarization of Production Costs](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b8102751e57e4de2ad50ec07253127e0.html?version=2021.000)，固定版 2021.000。 | 特定 deferred summarization 功能把详细 journal-entry 信息移动到 ACDOCD，汇总信息保留在 ACDOCA；属于异常大数据量下的特殊功能，并有报告粒度限制。 | 不代表普通生产成本数据流或一般 CO persistence，不提供 ACDOCA/ACDOCD 关系键、对象基数、完整字段或客户数据。 |
+
+缺口仍包括成本中心、内部订单、生产订单等 CO 对象字段/主键/组织范围及与日记账的基数关系；COSP/COSS/COEP 候选对象在目标 FPS 的物理/兼容视图状态；released CDS/API、调用方式和授权。正文未给出 SQL/JOIN 或普遍表映射。普通读者、配置顾问、开发者视角各 5 个同一 Work 上下文模拟闭环，共 15；没有独立 reviewer/真人专家，故不计正式 reviewed。未读取 DDIC、客户表数据、接口或权限。

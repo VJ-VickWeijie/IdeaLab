@@ -1,7 +1,7 @@
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-27（Asia/Shanghai）  
-状态：**M3 已验收；M4 完整 99 篇分两批建设已授权。FI-01～FI-03 所有者已接受（3/99）；FI-05、MM-01～MM-07 已完成三角色 review 并计入 8/50 reviewed。MM-08、QM-01 各有15个视角闭环但目标版核心证据未闭合，保持 drafting；FI-04/FI-06 继续 drafting。CO-01 为证据充分的限缩草稿，15个同上下文模拟闭环未计reviewed；CO-02、CO-03均已建立证据受限草稿，各有15个同上下文模拟闭环，不计reviewed。CO-03普通订单结算、预算和权限等目标版证据仍不充分；CO-04普通生产订单的WIP/差异公式、状态条件和一般结算规则仍缺直接证据；CO-05已建立获利分析、FI与收款分层的证据受限drafting草稿，15个同上下文模拟闭环未计reviewed，普通销售其他确认时点、估值与客户配置仍未闭合。工作线1下一篇SD-03（SD-01/SD-02均保持drafting、不计reviewed）；工作线5已完成CO-06、CO-07两篇受限drafting（各15个同上下文模拟闭环，均不计reviewed），下一篇CO-08。批次A为8/50 reviewed、0/50 owner accepted。**
+状态：**M3 已验收；M4 完整 99 篇分两批建设已授权。FI-01～FI-03 所有者已接受（3/99）；FI-05、MM-01～MM-07 已完成三角色 review 并计入 8/50 reviewed。MM-08、QM-01 各有15个视角闭环但目标版核心证据未闭合，保持 drafting；FI-04/FI-06 继续 drafting。CO-01 为证据充分的限缩草稿，15个同上下文模拟闭环未计reviewed；CO-02、CO-03均已建立证据受限草稿，各有15个同上下文模拟闭环，不计reviewed。CO-03普通订单结算、预算和权限等目标版证据仍不充分；CO-04普通生产订单的WIP/差异公式、状态条件和一般结算规则仍缺直接证据；CO-05已建立获利分析、FI与收款分层的证据受限drafting草稿，15个同上下文模拟闭环未计reviewed，普通销售其他确认时点、估值与客户配置仍未闭合。工作线1下一篇SD-03（SD-01/SD-02均保持drafting、不计reviewed）；工作线5已完成CO-06～CO-08三篇受限drafting（各15个同上下文模拟闭环，均不计reviewed）；FI-11、CO-01～CO-08文章和记录均已建立，待正式审查及所有者验收。批次A为8/50 reviewed、0/50 owner accepted。**
 
 ## 当前仓库、分支与 PR
 
@@ -422,3 +422,12 @@
 - 未闭合：其他成本中心/成本要素/内部订单/结算与分配设置的目标版证据；IMG display-only 路径、T-Code、业务角色/权限对象、客户当前配置和传输影响。SAP 系统未连接，没有执行或修改配置。
 - 普通读者、资深配置顾问、普通开发人员视角各 5 个同上下文模拟闭环，共 15；不是独立审查，不计 8/50 reviewed。文章保持 drafting；批次 A 仍 8/50 reviewed、0/50 owner accepted，正式接受 3/99。
 - 工作线 5 下一篇：CO-08《管理会计数据模型》；开始前仅读取该篇准入项和单篇证据登记。
+
+
+### 2026-11-27｜工作线 5：CO-08（本线最后一篇）
+
+- CO-08《管理会计数据模型：理解统一日记账，但不猜表关系》已按“暂缓核心”准入建立受限 drafting 草稿：`knowledge/CO/05-data-model/controlling-data-model.md`；记录：`reviews/work/2026-11-27-m4-co08-three-role-review.md`。
+- 证据仅限三项：固定 2021 Simplification List §8.1 的报告存储/特定转换兼容视图背景；What's New 2021 §3.5.6.4 的 Margin Analysis/ACDOCA 窄范围；固定 2021.000 deferred production-cost summarization 的 ACDOCA/ACDOCD 特定案例。
+- 未闭合：成本中心、内部订单、生产订单等 CO 对象字段、键、基数、组织范围与日记账关系；候选 COSP/COSS/COEP 的目标 2021 FPS 物理对象/兼容视图状态；released CDS/API 和权限。正文未给出未经证实 JOIN 或 SQL。没有 SAP 实机/数据库/API/权限测试。
+- 普通读者、配置顾问、开发人员视角各 5 个同上下文模拟闭环，共 15；非独立 review，不计 8/50 reviewed。文章保持 drafting；批次 A 仍 8/50 reviewed、0/50 owner accepted，正式接受 3/99。
+- 工作线 5 的 FI-11、CO-01～CO-08 分配已全部推进到文章/审查记录阶段；本线没有下一篇待处理文章。全部草稿仍待独立角色审查与所有者验收。
