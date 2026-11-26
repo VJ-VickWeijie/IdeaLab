@@ -69,3 +69,7 @@ PP-01《生产业务与组织结构》已建立 drafting 草稿，15 个同上�
 ## 工作线 2 进度追记（2026-11-27，PP-02）
 
 PP-02《物料清单 BOM》已建立证据受限文章，状态 drafting；三角色各有 5 个已闭合的同上下文角色视角循环（共 15），不代表独立 review，故不计入 reviewed 或 owner accepted。固定版 2021 来源支持多层结构、有限 BOM versioning 配置说明及 make-to-stock repetitive manufacturing 确认场景的日期示例；通用数量/单位计算、替代项选择/有效期关系、组件缺失规则及数据字段/API 仍未闭合。批次 A 维持 8/50 reviewed、0/50 owner accepted，owner accepted 总数 3/99，SAP 实机测试 0。下一项 PP-03《工作中心与工艺路线 Routing》，以 M3 准入分流批准路径为准。详见 [文章](../knowledge/PP/01-foundations/bom.md) 与 [审查记录](../reviews/work/2026-11-27-m4-pp02-three-role-review.md)。
+
+## 工作线 2 进度追记（2026-11-27，PP-03）
+
+PP-03《工作中心与工艺路线 Routing》已建立 drafting 草稿，并记录普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各 5 个同上下文模拟闭环（共 15；不计独立 review）。证据限于 S/4HANA 2021 BJ5 Manage Routings、BJ8 Work Center OData API、3W4 operation PRT API，以及 PEO 专用 routing 结构；不将这些场景泛化。通用 Routing 顺序/选择、工作中心字段和成本/产能关系、与 BOM/生产版本的普遍替代/有效期关系仍未闭合。批次 A 维持 8/50 reviewed、0/50 owner accepted；接受数 3/99；实机测试 0。下一篇 PP-04。详见 [文章](../knowledge/PP/01-foundations/work-center-routing.md) 和 [审查记录](../reviews/work/2026-11-27-m4-pp03-three-role-review.md)。
