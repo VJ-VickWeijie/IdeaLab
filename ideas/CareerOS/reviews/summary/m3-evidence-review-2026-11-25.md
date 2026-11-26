@@ -203,3 +203,10 @@
 Work 直接读取 [SAP《What's New in SAP S/4HANA 2021》](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.000/en-US/WN_OP2021_EN.pdf) §3.6.1.3（PDF 印刷页 133–134）。原文说明 Automatic Account Determination app 用于配置 G/L account assignments；标注 J58、FI-FIO-GL-CA、Available As Of SAP S/4HANA 2021。表中 BUL（Ledger-Specific CoCode Clearing）与 BUU（CoCode Clearing Between Differing Amts）两个新增 transaction keys 限于 Prepare Intercompany Transactions；另有 `*` 通配符用于 Integrate with HR Postings 的客户/供应商账号输入。
 
 该公告不是完整配置指南，不提供具体科目映射、完整设置路径、角色/权限或只读入口，也不能套用于 MM OBYC/BSX/WRX。配置顾问 `/root/consultant_m3_review` 尝试独立打开指定 PDF，但其工具因文件超过 10 MB 无法读取；其搜索索引只作为辅助线索，不计独立直读或复核。FI-10 仅获有限目标版本证据，配置缺口未关闭；不计正式文章审查轮次。
+
+
+## 2026-11-26｜SAP Learning GR/IR 方向的独立顾问交叉核对
+
+- /root/consultant_m3_review 直接读取 [Describing Automatic Account Determination](https://learning.sap.com/courses/cross-functional-customizing-in-sap-s-4hana-materials-management/describing-automatic-account-determination)：仅支持通用因素和教学场景；页内发票步骤把 GR/IR 写作 credited。
+- 同一顾问直接读取 [Managing Goods Movements](https://learning.sap.com/courses/exploring-end-to-end-business-processes-in-sap/managing-goods-movements_d7cf8543-eb45-490b-810a-237bbd17485f) 与 [Managing Closing Activities in Materials Management](https://learning.sap.com/courses/configuring-the-financial-closing-in-sap-s-4hana/managing-closing-activities-in-materials-management)：两页写收货借库存/消费、贷 GR/IR；关账课程还写发票借 GR/IR、贷供应商。三页均未锁定 S/4HANA 2021/FPS。
+- 此为真实 M3 来源交叉复核，确认存在同一通用课程内及不同页面间的方向表述冲突；不把它认作 SAP 勘误，也不能用非目标版本定裁目标版。Work 将冲突保留并同步到 MM-09、FI-07、PROCESS-01 计划记录。正式文章审核轮次不增加，M3 仍未通过、M4 未授权。
