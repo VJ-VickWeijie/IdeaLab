@@ -264,3 +264,10 @@ Work 直接读取 [SAP《What's New in SAP S/4HANA 2021》](https://help.sap.com
 - 独立配置顾问指出财务台账 FI-03/FI-07 与物流台账 MM-09/PROCESS-01 的表格行单元格数超出表头；Work 将来源与支持范围、缺口、下一步及未闭合状态合并回有名列。顾问在提交 `d785335327bd31dd4eb6eed48d144ee2704db6ec` 复核两张台账：财务表 26 行均为 3 列，物流表 46 行均为 4 列，四行字段归属修订确认。
 - Work 更正 `evidence-p2p-fi07-m3.md`、`finance-source-fit-review-m3.md`、`finance-fi07-direct-2021.md`、`evidence-finance-m3.md`、`evidence-logistics-m3.md` 与 README：发票方向冲突只发生在 Describing Automatic Account Determination 与 Managing Closing Activities 两页；Managing Goods Movements 只明确限定收货方向。顾问复核这些页面后仍发现 PR 描述和本摘要各一处旧误述，Work 已在本轮逐项更正。
 - 顾问确认相关更正只关闭该次来源归因与表格结构问题；未重读 SAP 原文、未访问系统。FI-07、MM-09、PROCESS-01 的业务证据缺口不变。正式文章审核轮次为 0，M3 未通过，M4 未授权。
+
+
+## 2026-11-26｜技术与 AI 26 项来源登记结构复核
+
+- 独立开发者对 PR #20 head `d785335327bd31dd4eb6eed48d144ee2704db6ec` 检查技术 26 项（ABAP 9、S/4HANA 9、AI 8）的 ID、路径、有限来源、支持/缺口字段；确认登记覆盖存在，但不构成逐篇事实核验或 M3 判定。AI 来源复核归属保留为 `/root/developer_plan`，本次审查者没有重新阅读全部 AI 外部来源。
+- 结构审查指出负责人/下一步与实际阅读/独立审查元数据未覆盖所有 ID，独立复核范围只是部分样本；并指出 ABAP-04 状态短语有歧义。Work 于 `4862613` 改为“函数级证据缺口仍在，阻断未解除”，开发者在该提交复核确认。
+- 全量技术/AI 项目级缺口与 26 行分类记录见 [开发者结构复核](../../reviews/developer/2026-11-26-technical-sourcefit-structure-review.md)。该审查未重读全部外部 SAP 来源、未访问 SAP 系统；正式文章仍为 0、正式审核轮次仍为 0，M3 未通过，M4 未授权。
