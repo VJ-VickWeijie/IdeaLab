@@ -92,3 +92,14 @@ SEC/GAO/IRS来源只支持文本中确切内容，站点其他第三方内容或
 | S3. [SAP Help：Journal Entry Item Cube](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/ee6ff9b281d8448f96b4fe6c89f2bdc8/0ee5e95760521070e10000000a44147b.html) | 当前页面描述 CDS view 的 ACDOCA 数据来源及部分授权前提；只作待查线索。 | 未锁定 2021 On-Premise，不计为目标版依据。 |
 
 复核结果：FI-11 仍为“暂缓核心”。固定版资料不足以支撑逐字段表、主键/基数、released CDS/API 与授权说明。文章只保留高层概念与边界，状态 drafting。SAP 系统未连接，无实机验证。
+
+## M4 CO-01 证据复核（2026-11-27）
+
+本次只处理 CO-01《管理会计从零：成本与利润》，不预载 CO-02～CO-08 的完整研究材料。M3 原 CO-01 行仍是当时的证据快照；以下目标版来源补充其 FI/CO 视角及集成证据，不改写其他 CO 项状态。
+
+| 来源 | 本次读取与支持范围 | 不能据此断言 |
+| --- | --- | --- |
+| E1. [SAP S/4HANA 2021 Feature Scope Description](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)，文档版本9.0（2025-07-23，适用于2021 SP08），§2.5.1.1.1，印刷页23–24；§2.5.2.1.1，印刷页27–28 | General Ledger财务会计用途；Overhead Cost Accounting按成本中心捕捉成本、以activity types描述成本中心产出、统计关键指标可作期末分摊基础；按选定期间报告成本中心等对象的actual与plan；Universal Journal相关报告范围及内外部核算协调。 | 客户实际配置、强制成本中心分配、计划自动生成、具体分摊算法、所有CO活动统一过账、利润分析方案、表/字段/API/CDS、权限或系统验证。 |
+| E2. [Simplification List for SAP S/4HANA 2021](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=200)，Initial Shipment、FPS1/2，§8.1，印刷页200–201 | 转换背景下Universal Journal报告数据模型及内外部报告共同document store的高层说明；列出总账、资产会计、Controlling等不同业务活动。 | 把早期转换材料泛化到所有后续2021 SP，或推出每个业务步骤、过账、技术对象和授权完全相同。 |
+
+**CO-01 证据判断：**资料直接支持限缩入门目标：区分FI/CO所问问题、解释成本中心actual/plan报告及报告数据联系。尚未闭合成本对象分配前提、计划维护、统计指标具体分摊规则、内部订单与结算、利润分析定义/配置、底层表字段/API及用户权限。文章对此不作通用断言。SAP系统未连接，无实机验证。
