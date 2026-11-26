@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-26 更新）
 
-> 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。本轮 M3 收尾及 M4 分批建设仍为待所有者批准提案：[方案](plans/m3-closeout-batched-m4-proposal-2026-11-26.md)。
+> 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。CareerOS 项目级 M3 门禁调整已获所有者批准，当前进行 M3 收尾复核；M4 未授权。见[门禁调整与审批记录](plans/m3-closeout-batched-m4-proposal-2026-11-26.md)。
 
 ## 项目主旨
 利用工作日合规的碎片时间，建立**中文为主、保留英文术语**的 SAP 业务与技术知识网络，同时保留 24 个月职业成长课程。目标不只是记住 T-Code，而是理解企业为什么需要某个流程、完整业务/单据/物流/财务流、SAP 如何实现，以及跨模块关联；FI/CO 从零基础解释。长期发展方向是 SAP MM/QM + ABAP/S/4HANA 架构 + 企业 AI 集成。
