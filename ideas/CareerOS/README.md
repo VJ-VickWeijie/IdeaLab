@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-26 更新）
 
-> 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。M3 已验收；M4 完整 99 篇分两批建设已获授权。FI-01～FI-03 已获所有者肯定，正式接受 3/99。批次 A 中 FI-05、MM-01、MM-02 已完成三角色审核，均等待所有者验收；批次 A 当前 3/50 reviewed、0/50 所有者接受。FI-04/FI-06 保持 drafting，FI-04～FI-06 首轮审查共 38/45 条意见闭环。下一篇为 MM-03。详见 [HANDOFF](HANDOFF.md)、[两批执行计划](plans/m4-two-batch-execution-2026-11-26.md)、[A01 FI 审查记录](reviews/work/2026-11-26-m4-batch-a01-fi04-fi06-review.md)、[MM-01 审查记录](reviews/work/2026-11-26-m4-mm01-three-role-review.md) 和 [MM-02 审查记录](reviews/work/2026-11-26-m4-mm02-three-role-review.md)。
+> 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。M3 已验收；M4 完整 99 篇分两批建设已获授权。FI-01～FI-03 已获所有者肯定，正式接受 3/99。批次 A 中 FI-05、MM-01、MM-02、MM-03 已完成三角色审核，均等待所有者验收；批次 A 当前 4/50 reviewed、0/50 所有者接受。FI-04/FI-06 保持 drafting，FI-04～FI-06 首轮审查共 38/45 条意见闭环。下一篇为 MM-04。详见 [HANDOFF](HANDOFF.md)、[两批执行计划](plans/m4-two-batch-execution-2026-11-26.md)、[A01 FI 审查记录](reviews/work/2026-11-26-m4-batch-a01-fi04-fi06-review.md)、[MM-01 审查记录](reviews/work/2026-11-26-m4-mm01-three-role-review.md) 和 [MM-02 审查记录](reviews/work/2026-11-26-m4-mm02-three-role-review.md)、[MM-03 审查记录](reviews/work/2026-11-26-m4-mm03-three-role-review.md)。
 ## 项目主旨
 利用工作日合规的碎片时间，建立**中文为主、保留英文术语**的 SAP 业务与技术知识网络，同时保留 24 个月职业成长课程。目标不只是记住 T-Code，而是理解企业为什么需要某个流程、完整业务/单据/物流/财务流、SAP 如何实现，以及跨模块关联；FI/CO 从零基础解释。长期发展方向是 SAP MM/QM + ABAP/S/4HANA 架构 + 企业 AI 集成。
 
@@ -15,7 +15,7 @@
 - M3 已由所有者验收。
 - M4 已获授权：完整 99 篇分两批自主建设；首批 FI-01～FI-03 已获所有者肯定，正式接受 3/99。
 - 当前批次 A01：FI-04 公司代码/科目表/总账科目（14/15 项意见已闭环，核心定义证据未闭合，drafting）；FI-05 会计凭证/过账/冲销（三角色各 5 个有效闭环，reviewed）；FI-06 应付/应收（9/15 项意见已闭环，SAP 子账/清账/部分付款核心证据未闭合，drafting）。
-- 批次 A 已 reviewed：FI-05 会计凭证/过账/冲销（15 个有效闭环）、MM-01 组织结构/采购业务对象（16 个）、MM-02 物料主数据/BP（15 个）；均等待所有者验收。MM-02 的七类信息表已按 SAP 2021 固定页面校准，细节见[三角色审核记录](reviews/work/2026-11-26-m4-mm02-three-role-review.md)。下一篇为 MM-03《采购信息记录、货源清单与配额安排》。
+- 批次 A 已 reviewed：FI-05 会计凭证/过账/冲销（15 个有效闭环）、MM-01 组织结构/采购业务对象（16 个）、MM-02 物料主数据/BP（15 个）、MM-03 采购信息记录与货源决定（18 个）；均等待所有者验收。MM-02 七类信息表校准见[三角色审核记录](reviews/work/2026-11-26-m4-mm02-three-role-review.md)；MM-03 的来源版本边界、供应商简称/来源对象区分和相对链接修正见[三角色审核记录](reviews/work/2026-11-26-m4-mm03-three-role-review.md)。下一篇为 MM-04《采购申请与订单机制》。
 - 批次 A 50 篇、批次 B 46 篇，完整范围见[执行计划](plans/m4-two-batch-execution-2026-11-26.md)。证据受限文章不自动计为正式接受；独立文章不因局部证据缺口停摆。
 - FI-07、PROCESS-01、MM-09、ABAP-02、ABAP-04 保持既有未闭合状态；本批不写依赖这些证据的 SAP 自动过账、采购完整借贷、内存阈值或 BAPI 专属合同断言。
 - 未连接 SAP 系统；本批没有实机测试。
