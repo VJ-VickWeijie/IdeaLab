@@ -77,3 +77,10 @@ Work 通过 SAP Help 版本选择器直接读取 [Important Accounts for Invoice
 页面还将“可用库存是否少于发票数量”列在物料主数据信息列表之下。独立审查建议将其解释为发票过账时的**库存覆盖状态比较**，不写成静态物料主数据字段。
 
 **证据边界**：页面支持 S/4HANA 2021 发票科目确定所考虑的数据类别，但没有说明 OBYC、BSX、WRX、交易键、估价分组、账户修改码、移动类型条件、具体账户映射或配置入口/权限；也不提供逐笔借贷分录。它不能关闭普通采购收货自动科目确定门槛，也不解决 GR/IR 页面的收货方向措辞冲突。该来源是 MM-09、FI-07 与 PROCESS-01 的有限补充，不是完整规则或实机证据，文献复核不计正式文章审核轮次。
+
+
+## 2026-11-26｜SAP Learning 科目确定页的独立顾问复核
+
+- /root/consultant_m3_review 直接读取 [SAP Learning: Describing Automatic Account Determination](https://learning.sap.com/courses/cross-functional-customizing-in-sap-s-4hana-materials-management/describing-automatic-account-determination)：网页正文行 139–150 说明 posting key 区分借贷/科目类型，并列标准 PO、无科目分配项的库存、GR/IR、价差、供应商及进项税科目类别；行 183–205 描述公司代码/科目表、工厂及估价范围/估价分组、物料类型/估价类、移动类型、发票流程及库存覆盖等因素。标准价示例中的账号与金额为教学样例；不能声称每个交易键都会使用所有因素。
+- 审查者发现同一页发票步骤（行 134）写 GR/IR 被 credited，与收货贷 GR/IR 后在发票时借记的通常流程表达相冲突。作为对照，审查者又直接读取 [SAP Learning: Managing Goods Movements](https://learning.sap.com/courses/exploring-end-to-end-business-processes-in-sap/managing-goods-movements_d7cf8543-eb45-490b-810a-237bbd17485f)（§Integration to Finance，行 198–206）和 [SAP Learning: Managing Closing Activities in Materials Management](https://learning.sap.com/courses/configuring-the-financial-closing-in-sap-s-4hana/managing-closing-activities-in-materials-management)（§Goods Receipt and Invoice Receipt Postings → Three-Step Reconciliation Procedure，行 147–153）：前者明确限采购收货示例为借库存/贷 GR/IR；后者写收货借库存或消费/贷 GR/IR、发票借 GR/IR/贷供应商，并说明收货与发票顺序可互换。
+- 三页均未标识 S/4HANA 2021 或 FPS；这些 SAP Learning 页面只能作为一般概念和文献互校，不是目标版固定证据。该冲突不等于 SAP 已发布勘误，不能用它裁决目标版页面或将借贷模板推广到税、差异及其他采购变体。未连接 SAP、不计正式文章审核轮次。
