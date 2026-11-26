@@ -17,6 +17,7 @@
 - 今日直接读取 SAP Help 的两篇 S/4HANA 2021 (Oct 2021) GR/IR 页面，补充了有限的科目关系说明；其中一页收货方向用词与其他示例不一致；另补入 MAP 无库存覆盖的数量/价差特例，但未明确无科目分配且无完整借贷表。未证明 OBYC 配置因素，MM-09 仍未闭合。
 - 另直接读取并由独立上下文复读固定为 2021 (Oct 2021) 的 Account Determination 页面，补得发票科目确定的数据类别；它不列 OBYC/BSX/WRX 配置键或借贷分录，MM-09/FI-07/P2P 仍未闭合。
 - 已建立 99 项 [M3 来源登记与复核记录](reviews/summary/m3-evidence-review-2026-11-25.md)；各项来源支持范围、版本与剩余缺口持续记录，未完成项不标通过。
+- FI-10 另补读 SAP S/4HANA 2021 What's New §3.6.1.3（印刷页133–134），范围限 J58/FI-FIO-GL-CA：BUL、BUU 键属于 Prepare Intercompany Transactions，`*` 通配符涉及 Integrate with HR Postings 客户/供应商账号输入。它不是完整配置指南；配置顾问因 PDF 超出读取工具 10 MB 限制未能独立直读，搜索索引未计独立复核；不外推至 MM OBYC。详见 [FI/CO 证据登记](plans/evidence-finance-m3.md) 和 [贴合度复核](plans/finance-source-fit-review-m3.md)。
 - 原始 M0 项目记录与 24 个月路线保留在下方，原始状态文字属于历史记录，以本节为当前状态。
 
 ## Work 接手顺序与后续工作
