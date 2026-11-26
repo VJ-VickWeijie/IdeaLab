@@ -1,7 +1,7 @@
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-27（Asia/Shanghai）  
-状态：**M3 已验收；M4 完整 99 篇分两批建设已授权。FI-01～FI-03 所有者已接受（3/99）；FI-05、MM-01～MM-07 已完成三角色 review 并计入 8/50 reviewed。MM-08、QM-01 各有15个视角闭环但目标版核心证据未闭合，保持 drafting；FI-04/FI-06 继续 drafting。CO-01 为证据充分的限缩草稿，15个同上下文模拟闭环未计reviewed。批次A为8/50 reviewed、0/50 owner accepted。**
+状态：**M3 已验收；M4 完整 99 篇分两批建设已授权。FI-01～FI-03 所有者已接受（3/99）；FI-05、MM-01～MM-07 已完成三角色 review 并计入 8/50 reviewed。MM-08、QM-01 各有15个视角闭环但目标版核心证据未闭合，保持 drafting；FI-04/FI-06 继续 drafting。CO-01 为证据充分的限缩草稿，15个同上下文模拟闭环未计reviewed；CO-02、CO-03均已建立证据受限草稿，各有15个同上下文模拟闭环，不计reviewed。CO-03普通订单结算、预算和权限等目标版证据仍不充分。工作线5下一篇CO-04。批次A为8/50 reviewed、0/50 owner accepted。**
 
 ## 当前仓库、分支与 PR
 
@@ -331,3 +331,12 @@
 - QM-05 正文提交 2a1f7d9565915eeaf4689cb20eb8817d6c15de25，审查记录提交 6a6f58c9ba90de59e0c062544054a80a20fd613a。
 - 本工作线不改变批次 A **8/50 reviewed、0/50 owner accepted**；全库正式接受仍为 **3/99**。PR #21 保持开放、未合并。
 - 本工作线分配范围已完成；本线内没有下一篇。后续文章须由协调者另行分配。
+
+## M4 工作线 5 更新：CO-03（2026-11-27）
+
+- 提交前实时复核 PR #21：open、未合并、base main；工作分支 careeros-v04-m4-batch1-20261126，本次 HANDOFF 更新前 HEAD 为 d6f274693efd0a47d4ac9c78ed2b05886140e234。PR 不合并。
+- CO-03《内部订单和费用归集》正文：[knowledge/CO/02-functions/internal-orders.md](knowledge/CO/02-functions/internal-orders.md)，状态 drafting；同上下文角色视角闭环为普通读者 5、资深配置顾问 5、普通 SAP 开发人员 5。没有独立角色审查、SAP 实机测试或客户权限检查，不计入 8/50 reviewed。
+- 目标版证据范围：FSD v9.0/SP08 支持成本核算主数据与期间计划/实际报告；2021.002 迁移对象给出迁移语境的定义；SAP Learning 未锁发行版，仅作概念说明；2021.001 Central Finance 仅限中心结算状态检查。普通订单真实/统计规则、归集、预算、结算接收方、权限和数据模型仍有缺口。没有推导 FI-07 普通库存借贷、税或自动科目。
+- 审查记录：[reviews/work/2026-11-27-m4-co03-three-role-review.md](reviews/work/2026-11-27-m4-co03-three-role-review.md)。证据记录：[plans/evidence-finance-m3.md](plans/evidence-finance-m3.md)。两批执行计划已同步。
+- 本文提交 b4da71fc1d043d95d7beecfce11561ac43af7122；角色视角修订 8fdcf35d1960194b12f3c23eaccb887924ec764b；审查记录 fb3ba1b7b38c8f53865e99de2c66cc4a8b1577aa；证据台账 bd716b35088b86989aefece26c52172039b89b17；执行计划 d6f274693efd0a47d4ac9c78ed2b05886140e234。
+- 下一项：CO-04。开始前仅读取 CO-04 自身准入、证据登记和依赖，不提前加载后续文章的完整研究材料。
