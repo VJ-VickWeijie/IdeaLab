@@ -22,7 +22,7 @@
 ### 正文明确支持的诊断框架
 
 1. 指南区分两个可能场景：单个 work process 达到其获分配的 memory quota；或多个进程同时申请资源，导致 application server 总内存压力触及全局阈值。单凭短转储名称不能分辨这两种情形。
-2. 指南建议从该次 ST22 short dump 的 **Memory consumption** 区域查看实际 EM、Heap 等使用值，并与 ST02 中的当前内存参数作对照。指南建议把 ST02 SAP MEMORY 表的 MaxUse 与 In Mem 放在一起对照，用于判断 uptime 内是否曾用满 EM；这不是该 dump 时刻的快照。dump 时的进程用量应先看该次 ST22 的 Memory consumption 区域。
+2. 指南建议从该次 ST22 short dump 的 **Memory consumption** 区域查看实际 EM、Heap 等使用值，并与 ST02 中的当前内存参数作对照。指南的第二个示例将 ST02 SAP MEMORY 表中的 MaxUse 与 In Mem 对照，用于判断在当前 uptime 内至少曾有一次用满实例可用 Extended Memory 的情形；这个比较不是所选 dump 时刻的快照，也不能单凭它认定该次 dump 就是全局 EM 用尽造成的。该次进程用量应先看对应 ST22 short dump 的 Memory consumption 区域。
 3. 指南按平台/实现列举若干参数，并提及可由 RSMEMORY 临时调整额度；同时明确额度提高属于 system administrator 的判断，不能脱离应用需求一概调高。参数示例不是本项目提供的调优步骤，执行前必须确认目标系统 OS、memory implementation、kernel、实际参数和权限。
 4. 指南将责任分成两部分：确认 memory mechanism 工作正常后，application team 分析异常内存消耗；如果异常来自客户定制程序，再由开发该程序的团队分析代码。它没有说所有此类 dump 都应归咎于代码，也没有说都应通过增加系统额度处理。
 
@@ -37,9 +37,15 @@ SAP ABAP Platform 2021 (Oct 2021) 文档由独立开发审查上下文直接读�
 
 Session Memory 页面区分软阈值与硬限额：在会话内存 quota 尚未用尽时越过 warning threshold，会产生 runtime warning 和 short dump，但程序不会因此终止；超过硬 quota 则会终止程序并写正常 short dump。扩展额度只适用于页面指定的受控场景；页面明确 CL_MEMORY_EXEMPTION 仅可由 SAP 内部使用，不构成客户程序通用的申请接口。参数表可用于辨认系统配置项，不能据此改动客户系统。
 
-这两份资料说明，S/4HANA 2021 对应的 ABAP Platform 文档存在 Basis 侧的会话内存软阈值监控机制；但它不是 TRY...CATCH 的异常事件或停止信号。公开正文未说明应用程序可读取/捕获该 runtime warning，也不保证程序收到该警告后停止。具体系统是否配置、实际 kernel/FPS、参数值和权限都需要目标 Basis 环境确认。
+这两份 SAP Help 页面的版本选择器均为 ABAP Platform 2021 (Oct 2021)，其参数表和正文列有 Basis profile 层的会话内存软阈值机制。它们不标注 S/4HANA 2021 的 S4CORE 版本或具体 FPS，也不证明任一目标系统实际安装、启用或配置了这些参数；目标系统仍需由 Basis 核实。该机制不是 TRY...CATCH 的异常事件或停止信号。公开正文未说明应用程序可读取/捕获该 runtime warning，也不保证程序收到该警告后停止。
 
-## 来源四：S/4HANA 2021 的 warning 与资源 dump 同时出现的有限案例
+## 来源四：SAP KBA 3435216 公开预览中的 warning 名称与版本范围
+
+[SAP KBA 3435216 - SESSIONMEM_QUOTA_WARNING](https://userapps.support.sap.com/sap/support/knowledge/en/3435216) 的公开预览由 Work 与独立开发审查上下文直接读取。预览标题列出 SESSIONMEM_QUOTA_WARNING；Symptom 写明 SAP kernel 7.8* or older version 的系统报告 SESSIONMEM_QUOTA_WARNING 与 SESSIONMEM_QUOTA_EXT_WARNING；Product 标为 ABAP platform all versions / SAP S/4HANA 2020。页面注明完整版需 SAP for Me 登录。
+
+该预览只支持转储名称及其自述版本范围；不能由 SAP S/4HANA 2020 产品条目外推 2021/FPS 行为，也不提供原因、处理步骤、参数默认值或 TRY...CATCH 关系。2021 参数行为应以来源三的固定版本 SAP Help 为依据。
+
+## 来源五：S/4HANA 2021 的 warning 与资源 dump 同时出现的有限案例
 
 [SAP KBA 3564988 - FINS_CFIN_AIF_ANALYZER: Internal task handler error ABAP session terminated](https://userapps.support.sap.com/sap/support/knowledge/en/3564988) 的公开预览由 Work 直接读取；它标注 S4CORE 106、SAP S/4HANA 2021。对于特定 Central Finance AIF Analyzer 报告，预览称 ST22 中可见 SESSIONMEM_QUOTA_WARNING、TSV_TNEW_OCCURS_NO_ROLL_MEMORY 和 TSV_TNEW_PAGE_ALLOC_FAILED。
 
