@@ -62,3 +62,18 @@ Work 通过 SAP Help 版本选择器直接读取 [Important Accounts for Invoice
 - [Extended Open Item Management: FAQ](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/651d8af3ea974ad1a4d74449122c620e/e03dc67ea7354354bf5d2b23cf575a8c.html) 的搜索索引涉及 WRX/FR1/FR3 与估价类变化后账户确定风险；尝试 `version=2021.000` 地址亦返回 “Page Not Found”。本次没有直接核对正文及版本，索引片段不作为目标版依据。
 
 这仅记录上述两个版本化页面路径无法读取，不据此推断相关内容不存在于 S/4HANA 2021；MM-09 的 OBYC 条件、估价与权限证据仍待核。
+
+## 2026-11-26｜固定 S/4HANA 2021 Account Determination 页面
+
+[Account Determination](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/ed84b70c199d4470ae2e5ccb93b2e45b/2a70b6531de6b64ce10000000a174cb4.html?version=2021.000) 由 Work 直接在浏览器打开；版本选择器显示 **2021 (Oct 2021)**，页面说明该版本文档未随之后续版本更新。独立上下文 `/root/mm09_independent_2021_read` 后续直接重读相同 URL，确认版本与以下限定摘要。另一顾问 `/root/consultant_m3_review` 在其执行环境无法打开固定版正文；其非固定版本搜索索引仅作排查线索，不计本次独立复读。
+
+页面将发票过账的科目确定描述为综合使用输入、系统信息与系统设置：
+
+- 发票录入的供应商账户和金额信息；
+- 物料主数据的估价类、价格控制类型及物料对应科目；
+- 已过账单据中的采购订单价格、是否已过账收货；
+- 系统设置中的净额/总额过账方式及需使用的总账科目。
+
+页面还将“可用库存是否少于发票数量”列在物料主数据信息列表之下。独立审查建议将其解释为发票过账时的**库存覆盖状态比较**，不写成静态物料主数据字段。
+
+**证据边界**：页面支持 S/4HANA 2021 发票科目确定所考虑的数据类别，但没有说明 OBYC、BSX、WRX、交易键、估价分组、账户修改码、移动类型条件、具体账户映射或配置入口/权限；也不提供逐笔借贷分录。它不能关闭普通采购收货自动科目确定门槛，也不解决 GR/IR 页面的收货方向措辞冲突。该来源是 MM-09、FI-07 与 PROCESS-01 的有限补充，不是完整规则或实机证据，文献复核不计正式文章审核轮次。
