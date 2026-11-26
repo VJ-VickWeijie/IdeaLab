@@ -431,3 +431,12 @@
 - 未闭合：成本中心、内部订单、生产订单等 CO 对象字段、键、基数、组织范围与日记账关系；候选 COSP/COSS/COEP 的目标 2021 FPS 物理对象/兼容视图状态；released CDS/API 和权限。正文未给出未经证实 JOIN 或 SQL。没有 SAP 实机/数据库/API/权限测试。
 - 普通读者、配置顾问、开发人员视角各 5 个同上下文模拟闭环，共 15；非独立 review，不计 8/50 reviewed。文章保持 drafting；批次 A 仍 8/50 reviewed、0/50 owner accepted，正式接受 3/99。
 - 工作线 5 的 FI-11、CO-01～CO-08 分配已全部推进到文章/审查记录阶段；本线没有下一篇待处理文章。全部草稿仍待独立角色审查与所有者验收。
+
+
+## 工作线 1 进度追记（2026-11-27，SD-03）
+
+- **SD-03《销售订单与交货机制》**正文：[knowledge/SD/02-functions/sales-delivery.md](knowledge/SD/02-functions/sales-delivery.md)，按 M3“限缩可写”处置保持 drafting。FSD 只支撑受限场景下销售订单处理、sell-from-stock 的出库交货关系、交货处理活动及 PGI 库存影响；正文不推断固定状态机、技术单据流键、库存数据/API 合同、实际送达或所有权。
+- 三角色审查记录：[reviews/work/2026-11-27-m4-sd03-three-role-review.md](reviews/work/2026-11-27-m4-sd03-three-role-review.md)。普通读者、配置顾问、开发人员 AI 角色视角各 5 个闭环，15/15 均经原角色复核 PASS；不代表人类专家意见，也没有 SAP 实机/API/权限测试。
+- M3 仍未闭合：具体部分交货、订单/交货取消、拒绝与 PGI 冲销规则，及客户系统权限。FSD latest 当次记录为 Version 11.0（2026-07-22）、S/4HANA 2021 SPS10；文章披露动态链接与订单章节页码记录差异，不外推到 2021 初版或其他 FPS/SPS。
+- 批次 A 数字不变：**8/50 reviewed、0/50 owner accepted**；全库正式接受 **3/99**。SD-03 保持 drafting，不计 reviewed/accepted；未连接 SAP 系统。
+- 工作线 1 下一篇：**SD-04《定价、开票与应收集成》**。开始前仅加载 SD-04 自身的 M3 准入和证据资料，并重新读取 PR #21 最新 HEAD。
