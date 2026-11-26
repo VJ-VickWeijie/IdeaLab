@@ -188,3 +188,11 @@
 - 对 `BAPI_PO_CREATE1`、commit/rollback、更新任务与 S/4HANA 2021 作定向检索，未发现新的目标版本函数级事务文件。
 - 搜索摘要发现的通用 dialog/BAPI 事务页面没有锁定目标版本；SAP ERP 6.0 EHP8 的 Processing BAPIs 内容属于 inbound IDoc 处理语境。对这三页尝试打开均返回零行，因此只登记为搜索线索，未作为直接证据。
 - 结果不改变 ABAP-04 未闭合状态；后续需目标版本函数文档/适用 Note，或获授权系统的只读 SE37 文档核验。无 SAP 系统访问或执行，不计正式文章审核轮次。
+
+
+## 2026-11-26｜MM-09 / FI-07 / PROCESS-01：固定版 Account Determination 复核
+
+- Work 在 SAP Help 浏览器直接读取 [Account Determination](../../plans/mm09-obyc-source-followup-m3.md) 所链接的固定页面，版本选择器显示 S/4HANA 2021 (Oct 2021)；独立上下文 `/root/mm09_independent_2021_read` 随后直接重读相同页面并确认版本和内容边界。
+- 页面有限支持发票科目确定所考虑的数据类别：发票输入的供应商账户/金额、物料主数据的估价类/价格控制/物料对应科目、已过账单据的 PO 价格/收货状态，以及系统设置的净额/总额方式/G/L 科目。库存是否覆盖发票数量应描述为过账时库存状态比较，不是静态主数据字段。
+- 页面没有提供 OBYC、BSX、WRX、交易键、估价分组、账户修改码、移动类型条件、具体科目映射、配置入口/权限或借贷凭证；不解决 GR/IR 收货方向歧义。
+- `/root/consultant_m3_review` 无法直接打开此固定 URL；其未固定版本的搜索索引仅提供辅助线索，不计独立复读。已成功的独立复读由 `/root/mm09_independent_2021_read` 完成。以上仅为 M3 来源核对，不计正式文章审核轮次；MM-09、FI-07、PROCESS-01 及 M3 仍未闭合，M4 未授权。
