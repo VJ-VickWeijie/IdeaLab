@@ -174,3 +174,10 @@
 - Work 读取 SAP S/4HANA 2021 (Oct 2021) [Example: Material with MAP Without Stock Coverage](../../plans/finance-fi07-direct-2021.md)：支持 PO 价格收货/GR/IR、移动平均价领用，以及发票价差按仍有库存数量分流至库存或差异费用的特定案例。
 - `/root/mm09_independent_2021_read` 独立复读该页并确认版本与摘要范围；页面没有完整借贷表，也没有明确采购订单无科目分配前提，不能作为普通采购分录或 OBYC 依据。
 - FI-07 与 PROCESS-01 仍未闭合；该来源研究不计正式文章审核轮次，无 SAP 实机验证。MM-09 另有两个精确 `version=2021.000` 候选路径返回 Page Not Found，已如实登记为无法读取，不推断资料不存在。
+
+
+## 2026-11-26｜ABAP-04 SAP Support 页面直接阅读复核
+
+- Work 与独立开发复核上下文分别直接阅读 SAP Help 的 [Purchasing BAPIs](https://help.sap.com/docs/SUPPORT_CONTENT/spmm/3362167428.html) 和 [BAPI_PO_CREATE1 采购示例](https://help.sap.com/docs/SUPPORT_CONTENT/spmm/3362167600.html)。两页均标有 SAP Additional Content 免责声明，背景为 ECC/R/3，未声明 S/4HANA 2021。
+- 可有限记录 PO BAPI 与 ME21N 对应、TESTRUN 不产生数据库效果、SE37 测试序列为创建后调用 BAPI_TRANSACTION_COMMIT、X 结构及 RETURN/调试提示。独立开发复核确认上述摘录没有越过页面范围。
+- 这不能证明目标版本的函数级提交时机、回滚、更新任务、WAIT 保证、RFC/LUW 边界或失败处理。ABAP-04 与 M3 保持未闭合；未操作 SAP 系统、不计正式文章审核轮次，M4 未授权。
