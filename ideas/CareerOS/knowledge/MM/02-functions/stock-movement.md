@@ -24,7 +24,7 @@ SAP S/4HANA 2021 的功能范围文件强调，任何造成库存变化的交易
 
 特殊库存（Special Stock）不是“可用/不可用”的另一种说法。作为学习者的检查框架，可以把它视为需要进一步核实库存对象、用途或权属的线索；这句话是提问方法，不是本文已证明的统一系统规则。
 
-固定版 SAP Help 2021.000 的 “Consignment” 条目提到供应商寄售特殊库存 K，但其技术细节标明 **Functional Localization: Localized for Brazil**，范围项为 2LG、2NY。因此它只作为这个特定范围的功能例子，不证明所有 S/4HANA 2021 On-Premise 场景中的一般所有权规则。对于“货物放在企业场地是否属于企业”这一问题，本文要求学习者查适用版本与业务场景的直接资料；当前来源没有闭合权属、所有权转移时点、估价规则或消耗分录。
+SAP S/4HANA 2021 FSD 的库存报告清单分别列出供应商寄售库存，以及“提供给分包商、存放在供应商场地但仍归企业所有”的库存。由这两个不同例子可以作出一个**学习推论**：物理地点本身不足以判断权属；这不是供应商寄售 K 的具体权属规则。固定版 SAP Help 2021.000 的 “Consignment” 条目提到供应商寄售特殊库存 K，但其技术细节标明 **Functional Localization: Localized for Brazil**，范围项为 2LG、2NY；它只支持该特定范围的功能例子。供应商寄售 K 的具体所有权、转移时点、估价和消耗分录仍须按适用场景查直接资料。
 
 ## 货物移动与移动类型：记录发生了什么
 
@@ -74,7 +74,7 @@ M3 对 MM-09、FI-07 和 PROCESS-01 的登记仍未闭合普通估价库存收�
 
 ## 目标版本来源与限制
 
-1. [SAP S/4HANA 2021 On-Premise Feature Scope Description，动态 latest，§2.13.1.1 Goods Movement，PDF 正文页 168–169](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=168)：版本 11.0（2021 SPS10，2026-07-22）。支持库存变更的单据原则、收货增加库存、发出减少库存及相关高层能力。该动态 PDF 于 2026-11-26 读取但未留存该日独立文件哈希；M3 台账前言中 SHA-256 对应 2026-11-25 读取。
+1. [SAP S/4HANA 2021 On-Premise Feature Scope Description，动态 latest，库存报告页 166–167 与 §2.13.1.1 Goods Movement，PDF 正文页 168–169](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=166)：版本 11.0（2021 SPS10，2026-07-22）。库存报告页分别列出供应商寄售库存与存放在分包商处但归企业所有的库存；这是“地点不足以单独判定权属”的学习推论，不证明供应商寄售 K 的具体权属。§2.13.1.1 支持库存变更的单据原则、收货增加库存、发出减少库存及相关高层能力（可由 [正文页 168–169](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=168) 查看）。该动态 PDF 于 2026-11-26 读取但未留存该日独立文件哈希；M3 台账前言中 SHA-256 对应 2026-11-25 读取。
 2. [Transfer Stock – In Plant，SAP Help 2021.000](https://help.sap.com/docs/PRODUCT_ID/e296651f454c4284ade361292c633d69/389f644cf32542719153e2743e258143.html?locale=en-US&state=PRODUCTION&version=2021.000)：页面标示 SAP S/4HANA 2021（Oct 2021），范围项 BMC（Core Inventory Management）；列出的非限制使用、冻结和质量检验库存限于该应用描述的厂内序列化库存转移。不能据此推断所有库存转移类型及完整库存定义。
 3. [Consignment，SAP Help 2021.000](https://help.sap.com/docs/PRODUCT_ID/e296651f454c4284ade361292c633d69/a63343ce18ea497e8b2c625c1a84f2f4.html?locale=en-US&state=PRODUCTION&version=2021.000)：页面标示 SAP S/4HANA 2021（Oct 2021）；技术细节限定为 Brazil localization、范围项 2LG/2NY。只支持该特定范围内供应商寄售特殊库存 K 的功能例子，不证明其他地区/范围的完整寄售或权属规则。
 4. [Stocks in the Material Master Record](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/91b21005dded4984bcccf4a69ae1300c/fc62bd534f22b44ce10000000a174cb4.html) 与 [The Movement Type Concept](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/91b21005dded4984bcccf4a69ae1300c/1663bd534f22b44ce10000000a174cb4.html)：SAP Help On-Premise 概念页，本次检索未捕获可确认的版本选择器/修订。库存状态释义和移动类型介绍只作一般术语参考，不当作目标版完整定义或具体代码/估价/配置证据。若正文需要依赖其细节，须另补固定版 2021 直接资料.
