@@ -106,3 +106,7 @@ PP-06《生产发料、收货与成本》正文按 M3 分流的“限缩可写�
 FI-10《财务配置查看》按 M3“暂缓核心”准入建立目标版证据受限草稿，状态 `drafting`。SAP S/4HANA 2021 What's New §3.6.1.3 仅支持 Automatic Account Determination app 用途及公告中的限定变化；固定版 2021.000 Help §3.6.1.16 仅支持 GR/IR 账户的 Extended Open Item Management 字段与 display-only 属性。公司代码、科目表、过账期间、收付款配置、完整账户映射、精确配置路径和角色授权仍缺目标版直接证据。没有外推 FI 来源到 MM OBYC/BSX/WRX，也没有连接 SAP 或做实机验证。
 
 Work 在同一上下文以普通学习者、资深 SAP 配置顾问、普通 SAP 开发人员三个视角各完成 5 个模拟质询—证据答复—修订判断—复核闭环，共 15；没有独立代理/真人专家签核，不计入正式 8/50 reviewed。记录见 [文章](../knowledge/FI/04-configuration/finance-config-observation.md) 和 [角色视角审查记录](../reviews/work/2026-11-27-m4-workline-4-fi10-review.md)。工作线 4 已完成所分配的新建与续核文章，FI-10 为本线最后一篇，无下一篇在本线范围内。
+
+### M4 Workline 5 CO-03｜2026-11-27
+
+CO-03《内部订单和费用归集》已按 M3 “限缩可写”路径建立证据受限草稿，路径为 `knowledge/CO/02-functions/internal-orders.md`。普通读者、资深配置顾问、普通 SAP 开发人员视角各完成 5 个同一 Work 上下文模拟闭环，共 15；未独立复核，不计入批次 A reviewed，文章状态 drafting。正文逐项区分目标版 FSD v9.0/SP08 和迁移文档、未标发行版的 SAP Learning、2021.001 Central Finance 专项范围。普通订单结算/接收方、真实/统计通用规则、预算触发、配置、权限、数据模型/API 仍待直接证据；无 SAP 实机测试，不推导 FI-07 库存借贷、税或自动科目。详见 [CO-03 文章](../knowledge/CO/02-functions/internal-orders.md)、[闭环记录](../reviews/work/2026-11-27-m4-co03-three-role-review.md) 与 [证据边界](evidence-finance-m3.md)。批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，正式接受数 **3/99**。工作线 5 下一篇 CO-04；开始前仅读取 CO-04 自身准入与证据登记。
