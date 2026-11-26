@@ -34,11 +34,11 @@ SEC/GAO/IRS来源只支持文本中确切内容，站点其他第三方内容或
 | --- | --- | --- |
 | FI-01 | SEC1“Balance Sheets”“Income Statements”；SEC2第1–2页支持基本财务对象/应付应收解释。 | 采购事件的单据、库存、价值和资金的SAP 2021触发条件及地区会计规则尚缺。 |
 | FI-02 | SEC1“Balance Sheets”、SEC2第1页直接支持资产=负债+权益的基础概念。 | 美国教育示例不证明中国企业特定制度、税务或SAP配置。 |
-| FI-03 | [财政部 2026 修订征求意见稿与考试大纲补查](fi03-mof-2026-evidence-m3.md)：独立复核覆盖草稿 PDF 与考试大纲 | 草稿列出银行存款、应付账款、折旧与坏账准备的限定例子；考试大纲覆盖借贷记账等知识范围，可作初学者概念线索 | 征求意见稿不是已生效规则，考试大纲不是详细分录教材；当前适用规范、所有科目/例外、中国企业场景及 SAP 过账仍待权威资料核验，不构成法律结论 |
+| FI-03 | [财政部 2026 修订征求意见稿与考试大纲补查](fi03-mof-2026-evidence-m3.md)：独立复核覆盖草稿 PDF 与考试大纲。草稿列出银行存款、应付账款、折旧与坏账准备的限定例子；考试大纲覆盖借贷记账等知识范围，可作初学者概念线索。 | 征求意见稿不是已生效规则，考试大纲不是详细分录教材；当前适用规范、所有科目/例外、中国企业场景及 SAP 过账仍待权威资料核验，不构成法律结论。 |
 | FI-04 | [SAP 2021 FI 总账迁移对象](fi04-gl-2021-evidence-m3.md)在限定 Direct Transfer 情景说明选定公司代码推导科目表、两类视图及 FS00 的 Display/Change；经独立复核。SEC1 与 S21 另提供各自有限背景。 | 日常组织基数、公司代码/报表边界、主数据字段及过账、FS00 实际权限仍需核验，迁移情景不可普遍推广。 |
 | FI-05 | S21 §3.6.1.8描述特定 Manage Journal Entries 应用中的凭证分析与冲销功能。 | 复式会计分录、各单据冲销条件、期间与GUI事务仍缺直接依据；不得凭已暂停教材补足。 |
 | FI-06 | SEC2第2页说明应收/应付的基本含义；S21 Finance相关条目列出特定客户和供应商项目应用。 | SAP 2021发票、过账、部分支付、付款清账及税币条件仍缺可读专题；美国教育资料不是中国准则。 |
-| FI-07 | [SAP 2021 初版 FI-07 直接证据补查](finance-fi07-direct-2021.md)：MAP 数量/价差特例及 GR/IR 页面歧义；固定 2021 Account Determination 由 Work/独立上下文复读。另有 SAP Learning 的一般性科目确定、收货和关账课程已由独立顾问直接复读，但未锁定 2021；YCOA 2025-FPS1 仅邻近对照。 | Learning 的一页对发票 GR/IR 方向与另两页冲突；其通用因素不能裁决固定版；2021 普通库存借贷前提、税、发票、自动科目/OBYC映射及完整配置仍缺。 | 保留矛盾与版本边界，继续寻找目标版前提清晰、分录方向明确的普通库存采购证据。 | 未闭合 |
+| FI-07 | [SAP 2021 初版 FI-07 直接证据补查](finance-fi07-direct-2021.md)：MAP 数量/价差特例及 GR/IR 页面歧义；固定 2021 Account Determination 由 Work/独立上下文复读。另有 SAP Learning 一般性科目确定、收货和关账课程的独立复读（未锁定 2021）。Learning 课程间的发票方向冲突仅发生在 Describing Automatic Account Determination 与 Managing Closing Activities；Managing Goods Movements 只明确限定收货方向。YCOA 2025-FPS1 仅作邻近对照。 | 通用课程不能裁决固定版；2021 普通库存借贷前提、税、发票、自动科目/OBYC映射及完整配置仍缺。下一步：继续寻找目标版前提清晰、分录方向明确的普通库存采购证据。判定：未闭合。 |
 | FI-08 | S21 §3.6.1.24–25支持2021余额结转状态及特定作业；IRS1 Introduction仅提供美国税务语境下会计期间/方法线索。 | 完整月结/年结和国内制度需2021专题及适用地区证据；无实机操作。 |
 | FI-09 | S21 §3.6.1.15列特定GR/IR清账入口及显示/模拟/更新模式。 | 不可把整个程序称作只读；完整GUI与Fiori索引逐项版本、输入输出、权限及影响尚缺。 |
 | FI-10 | S21 §3.6.1.16限特定GR/IR扩展未清项字段及启用条件；[SAP《What's New in SAP S/4HANA 2021》](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.000/en-US/WN_OP2021_EN.pdf) §3.6.1.3（印刷页133–134）说明 Automatic Account Determination app 用于配置 G/L account assignments；范围为 J58、FI-FIO-GL-CA、Available As Of S/4HANA 2021。表中列出 BUL（Ledger-Specific CoCode Clearing）和 BUU（CoCode Clearing Between Differing Amts）新 transaction keys，限 Prepare Intercompany Transactions；另列 `*` 通配符可用于 Integrate with HR Postings 的客户/供应商账号输入。 | 应用公告不是完整配置指南：科目表、账户映射、设置路径、角色/权限及只读入口仍需逐项核验；FI app 变化不能推及 MM OBYC/BSX/WRX。未授权不做系统更改。 |
