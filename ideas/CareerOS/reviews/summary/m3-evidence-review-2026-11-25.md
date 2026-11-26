@@ -227,14 +227,14 @@ Work 直接读取 [SAP《What's New in SAP S/4HANA 2021》](https://help.sap.com
 - Work 与独立开发审查上下文分别直接读取 SAP KBA 2180736 公开预览：该 KBA 标注 ABAP Platform / SAP NetWeaver all versions，并明确其面向系统管理员；登录全文不可见，未将预览内容扩写为操作步骤。
 - Work 与独立开发审查上下文又分别直接打开 SAP Help 的 TSV_TNEW_PAGE_ALLOC_FAILED Support Content 指南。该页标注 Additional Content、没有目标版/FPS 范围；直接正文区分单 work process 额度与 application server 全局内存压力，说明 ST22/ST02 的观测方式及 system administrator 与 application team 的责任分工。
 - Work 新增 [ABAP-02 内存诊断边界记录](../../plans/abap02-memory-dump-admin-boundary-m3.md)，将参数和 RSMEMORY 例子限定为资料中的通用排障内容，不作为 S/4HANA 2021 指令或调优建议；并明确不能据此证明 TRY...CATCH 可预警/捕获目标场景，不能提供普适安全行数。
-- 独立开发者复读来源记录后指出 ST02 MaxUse/In Mem 的“历史观察”措辞有歧义；Work 已改写为两者共同对照 uptime 期间状态，并将该 dump 时点用量定位到 ST22 Memory consumption。原审查者已受邀复核修订，状态待回复。完整意见、Work 答复和修订提交记录见 [开发审查日志](../../reviews/developer/2026-11-26-abap02-memory-source-review.md)。此项为 M3 来源审查，不计正式文章审核轮次；ABAP-02、M3 未闭合，M4 未授权。
+- 独立开发者复读来源记录后指出 ST02 MaxUse/In Mem 的“历史观察”措辞有歧义；Work 已改写为两者共同对照 uptime 期间状态，并将该 dump 时点用量定位到 ST22 Memory consumption。同一独立开发者随后复核了版本措辞、ST02 示例边界及 KBA 3435216 的公开预览范围，确认相关修订准确并关闭这三项文字问题。完整意见、Work 答复、修改与复验见 [开发审查日志](../../reviews/developer/2026-11-26-abap02-memory-source-review.md)和 [Work 执行记录](../../reviews/work/2026-11-26-abap02-memory-review.md)。此项为 M3 来源审查，不计正式文章审核轮次；ABAP-02、M3 未闭合，M4 未授权。
 
 
 ## 2026-11-26｜ABAP-02 2021 会话内存 warning 机制补证
 
 - 独立开发者直接读取 SAP Help ABAP Platform 2021 (Oct 2021) 的 Parameter Reference 与 Session Memory 页面。六个常规/扩展 warning/quota 参数均以百分比列示且默认值为 0；warning threshold 越界会写 short dump、程序不中止，硬 quota 超限会终止程序。该机制是平台侧会话内存监控，不能据此认定为 TRY...CATCH 信号或应用代码停止接口。
 - Work 直接读取 SAP KBA 3564988 公开预览：S4CORE 106 / SAP S/4HANA 2021 的特定 CFIN AIF Analyzer 场景列出 SESSIONMEM_QUOTA_WARNING 与 TSV_TNEW_OCCURS_NO_ROLL_MEMORY、TSV_TNEW_PAGE_ALLOC_FAILED。预览没有发生顺序和一般根因，不推断警告可以预防后续 dump。
-- Work 已将以上来源及边界写入 [ABAP-02 内存诊断补充](../../plans/abap02-memory-dump-admin-boundary-m3.md)，并更新 M3 资源表与 7.56 关键字页的相关链接。独立开发者已受邀复核更新后全文；具体措辞复核待回复。ABAP-02 仍未闭合：目标系统配置、kernel/FPS、进程实测及安全停止上限未知；正式文章审核轮次为 0，M3 未通过，M4 未授权。
+- Work 已将以上来源及边界写入 [ABAP-02 内存诊断补充](../../plans/abap02-memory-dump-admin-boundary-m3.md)，并更新 M3 资源表与 7.56 关键字页的相关链接。独立开发者在 PR #20 head `63b9bd07c00277d683f4595875061edcc130d6c6` 已复读修订稿并确认版本边界、ST02 限定与 KBA 3435216 预览范围准确；这三项措辞问题关闭。ABAP-02 整体仍未闭合：目标系统配置、kernel/FPS、进程实测及安全停止上限未知；正式文章审核轮次为 0，M3 未通过，M4 未授权。
 
 
 ## 2026-11-26｜普通 P2P 收货/发票借贷目标版复查
@@ -242,3 +242,10 @@ Work 直接读取 [SAP《What's New in SAP S/4HANA 2021》](https://help.sap.com
 - 独立配置顾问复读三篇 SAP Learning 普通采购示例，发现一篇发票 GR/IR 方向与另外两篇不一致；三页均未固定 S/4HANA 2021/FPS，不能用于裁定目标版。
 - 顾问尝试 SAP Financial Operations 的 2021.000 候选页面，只获得 2025 FPS02 搜索索引；索引涉及初始库存等特定情境、按 GR/IR 正负数列示，未证明普通库存采购的无科目分配前提，也没有本轮直接读到 2021 正文。
 - Work 将独立研究报告收入 [P2P 普通采购借贷补查](../../plans/p2p-2021-posting-followup-m3.md)，并更新 M3 资源表；普通估价库存场景的 2021 直接借贷、BSX/WRX/T030 仍未闭合。正式文章审核轮次不增加，FI-07、MM-09、PROCESS-01 与 M3 继续未通过。
+
+
+## 2026-11-26｜ABAP-02 内存来源修订的独立复验结果
+
+- 同一独立开发者复读 `893499f` 后修订及相关 M3 记录，确认 ABAP Platform 2021 与 S4CORE/FPS 的边界、ST02 uptime 示例的限定、KBA 3435216 的 warning/kernel/Product 范围均与实际来源一致。
+- 上述三项措辞问题关闭；这不是正式文章审查轮次。ABAP-02 的目标系统配置、kernel/FPS、内存画像及获授权的非生产验证仍未取得，因此 ABAP-02、M3 仍未通过，M4 未授权。
+- 真实答复、修订提交及复核上下文见 [开发者审查日志](../../reviews/developer/2026-11-26-abap02-memory-source-review.md)与 [Work 执行记录](../../reviews/work/2026-11-26-abap02-memory-review.md)。
