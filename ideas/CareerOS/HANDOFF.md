@@ -1,7 +1,7 @@
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-27（Asia/Shanghai）  
-状态：**M3 已验收；M4 完整 99 篇分两批建设已授权。FI-01～FI-03 所有者已接受（3/99）；FI-05、MM-01～MM-07 已完成三角色 review 并计入 8/50 reviewed。MM-08、QM-01 各有15个视角闭环但目标版核心证据未闭合，保持 drafting；FI-04/FI-06 继续 drafting。CO-01 为证据充分的限缩草稿，15个同上下文模拟闭环未计reviewed；CO-02、CO-03均已建立证据受限草稿，各有15个同上下文模拟闭环，不计reviewed。CO-03普通订单结算、预算和权限等目标版证据仍不充分；CO-04普通生产订单的WIP/差异公式、状态条件和一般结算规则仍缺直接证据。工作线5下一篇CO-05。批次A为8/50 reviewed、0/50 owner accepted。**
+状态：**M3 已验收；M4 完整 99 篇分两批建设已授权。FI-01～FI-03 所有者已接受（3/99）；FI-05、MM-01～MM-07 已完成三角色 review 并计入 8/50 reviewed。MM-08、QM-01 各有15个视角闭环但目标版核心证据未闭合，保持 drafting；FI-04/FI-06 继续 drafting。CO-01 为证据充分的限缩草稿，15个同上下文模拟闭环未计reviewed；CO-02、CO-03均已建立证据受限草稿，各有15个同上下文模拟闭环，不计reviewed。CO-03普通订单结算、预算和权限等目标版证据仍不充分；CO-04普通生产订单的WIP/差异公式、状态条件和一般结算规则仍缺直接证据；CO-05已建立获利分析、FI与收款分层的证据受限drafting草稿，15个同上下文模拟闭环未计reviewed，普通销售其他确认时点、估值与客户配置仍未闭合。工作线5下一篇CO-06。批次A为8/50 reviewed、0/50 owner accepted。**
 
 ## 当前仓库、分支与 PR
 
@@ -371,3 +371,12 @@
 - 三角色原问题复核记录：[MM-10 三角色审查](reviews/work/2026-11-27-m4-mm10-three-role-review.md)。普通读者、资深配置顾问视角、普通开发者视角分别完成 5/5 原问题复核，共 **15/15 个 AI 评审闭环**；三个独立 AI 上下文，未显示可核实模型型号，不代表真人专家、SAP 系统/API/权限测试。Help 页在本轮未能被复核上下文重新读取；限制已写入审查记录。
 - 批次 A 数字不变：**8/50 reviewed、0/50 owner accepted**；全库正式接受 **3/99**。MM-10 不计 reviewed 或 accepted；SAP 系统未连接，无实机/API/数据库/权限测试。
 - 工作线 1 下一篇：**SD-01**。依据 M3 控制矩阵和逐篇准入路径逐篇处理，不预载后续篇章的完整资料。
+
+
+## 工作线 5 进度追记｜CO-05（2026-11-27）
+
+- **文章与状态：**[CO-05《获利分析与 FI 集成：收入、成本与收款分清》](knowledge/CO/02-functions/profitability-fi.md) 按 M3“限缩可写”路径建立证据受限草稿，状态 **drafting**；[逐篇角色视角记录](reviews/work/2026-11-27-m4-co05-three-role-review.md)。
+- **证据：**FSD latest 直接打开为 SAP S/4HANA 2021 v11.0/SP10，搜索索引另有 v9.0/SP08 缓存，均已披露动态链接/支持包限制；固定版 Simplification List v1.25 §12.13 只覆盖 Initial Shipment/FPS1/2 的 Margin Analysis 发票/交货时点及 FI 映射范围；What’s New 2021 §3.5.6.4、2021.000 Manage COGS Splits 支持术语和特定 COGS 功能。
+- **三角色闭环：**普通读者 5、资深配置顾问 5、普通开发人员 5，共15个同一 Work 上下文角色模拟闭环（均有质询、来源答复、文本修订和同视角复核）；不是独立 reviewer，不计正式 reviewed。
+- **开放项：**客户 FPS、Margin Analysis 之外普通销售/合同的确认时点、客户估值/属性配置、完整 COGS split 规则、CO 数据模型/API/权限未闭合。FI-07 普通库存借贷/税/自动科目仍未推导；无 SAP 实机、客户配置、凭证或权限测试。
+- 批次 A 保持 **8/50 reviewed、0/50 owner accepted**；正式接受 **3/99**。工作线 5 下一篇 **CO-06**；开始前只加载 CO-06 自身准入和证据材料。

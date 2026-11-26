@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-27 更新）
 
-> 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。M3 已验收；M4 完整 99 篇分两批建设已获授权。FI-01～FI-03 已由所有者接受，正式接受 3/99。批次 A 有 8/50 篇正式完成三角色 review、0/50 篇获所有者接受；FI-05、MM-01～MM-07 已 reviewed，FI-04/FI-06 保持 drafting。MM-08、MM-09、MM-10、QM-01 均因目标版核心证据缺口保持 drafting，不计正式 reviewed；CO-01、CO-02、CO-03、CO-04 均为证据受限 drafting 草稿，各有普通读者、配置顾问、开发人员视角各 5 个同上下文模拟闭环，不计正式 reviewed；CO-03 的普通订单结算/预算/权限，CO-04 的常规生产订单 WIP/差异公式、状态条件和结算规则仍缺直接证据。工作线 1 下一项 SD-01；工作线 5 下一项 CO-05；其他并行游标见 [HANDOFF](HANDOFF.md)。
+> 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。M3 已验收；M4 完整 99 篇分两批建设已获授权。FI-01～FI-03 已由所有者接受，正式接受 3/99。批次 A 有 8/50 篇正式完成三角色 review、0/50 篇获所有者接受；FI-05、MM-01～MM-07 已 reviewed，FI-04/FI-06 保持 drafting。MM-08、MM-09、MM-10、QM-01 均因目标版核心证据缺口保持 drafting，不计正式 reviewed；CO-01、CO-02、CO-03、CO-04 均为证据受限 drafting 草稿，各有普通读者、配置顾问、开发人员视角各 5 个同上下文模拟闭环，不计正式 reviewed；CO-03 的普通订单结算/预算/权限，CO-04 的常规生产订单 WIP/差异公式、状态条件和结算规则仍缺直接证据；CO-05 为受限 drafting 草稿，15 个同上下文模拟闭环不计 reviewed，普通销售其他收入确认/估值配置仍有缺口。工作线 1 下一项 SD-01；工作线 5 下一项 CO-06；其他并行游标见 [HANDOFF](HANDOFF.md)。
 ## 并行工作线进度（2026-11-27）
 
 - Workline 3：PP-07 已完成证据受限草稿与 15 个同一 Work 上下文内的角色模拟闭环（读者 5、配置顾问 5、开发者 5），仍为 drafting，不计入 8/50 reviewed。Routing、MRP、生产订单事务码的 S/4HANA 2021 On-Premise 直接来源和授权未闭合；下一篇为 PP-08。当前分支其他工作线进展见 [HANDOFF](HANDOFF.md)。
@@ -137,3 +137,8 @@ CO-02《成本中心与成本要素》已建立证据受限草稿，保持 draft
 - 角色视角模拟：普通读者 5、资深 SAP 配置顾问 5、普通 SAP 开发人员 5；均在同一 Work 上下文，不是独立复核，不计入批次 A 的 **8/50 reviewed**。批次 A 仍 **0/50 owner accepted**；全库 owner accepted **3/99**。
 - 2021 FSD v9.0/SP08 快照支持方法和对象范围概览、重复制造的期间成本收集、特定 Kanban WIP/差异能力及生产订单接收对象概览；普通生产订单公式、状态触发、结算规则/接收方仍缺直接来源。无 SAP 实机/权限验证，未推导 FI-07 通用采购库存借贷、税或自动科目。
 - 下一篇：CO-05；开始前仅读取其自身准入和证据登记。
+
+
+## Workline 5｜CO-05（2026-11-27）
+
+CO-05《获利分析与 FI 集成：收入、成本与收款分清》已建立证据受限 drafting 草稿。目标版 FSD latest 直接读取 v11.0/SP10，旧索引仍缓存 v9.0/SP08，文章披露动态来源边界；固定版 SAP 2021 Simplification List §12.13 仅支持 Initial Shipment/FPS1/2 的 Margin Analysis 开票/交货时点。普通读者、配置顾问、开发者视角各 5 个同上下文模拟闭环，共15，非独立审查，不计 8/50 reviewed。普通销售其他确认时点、客户估值/配置、完整成本拆分规则、技术模型/API/权限仍有缺口；无 SAP 实机验证。下一项 CO-06。批次 A 数字仍为 8/50 reviewed、0/50 owner accepted；正式接受 3/99。

@@ -146,3 +146,17 @@ SEC/GAO/IRS来源只支持文本中确切内容，站点其他第三方内容或
 - **E2**：[Deferred Summarization of Production Costs](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b8102751e57e4de2ad50ec07253127e0.html?version=2021.000)，固定 S/4HANA 2021.000 条目 §3.6.1.26，印刷页159：特定延期汇总功能说明 journal entry details 从 ACDOCA 移到 ACDOCD、汇总细节保留于 ACDOCA。它不是 WIP/variance 算法或完整 CO 数据模型证明。
 - 读者、配置顾问、开发人员各 5 个同一 Work 上下文的模拟闭环；见 [CO-04 视角记录](../reviews/work/2026-11-27-m4-co04-three-role-review.md)。无独立复核，不计 reviewed；无 SAP 实机测试。
 - 未闭合：常规制造订单的 WIP/variance 公式、订单状态触发和结算规则/接收方、估价和 FI 分录条件、权限、T-Code、数据字段/键/API/CDS。未据此推出 FI-07 普通采购库存借贷、税或自动科目。
+## M4 CO-05 证据补查与草稿状态（2026-11-27）
+
+本次只处理 CO-05《获利分析与 FI 集成》，未预载后续 CO-06～CO-08 的完整研究资料。文章：`knowledge/CO/02-functions/profitability-fi.md`；三角色视角记录：`reviews/work/2026-11-27-m4-co05-three-role-review.md`。按 M3“限缩可写”路径建立 drafting 草稿。
+
+| 来源 | 本次直接支持的范围 | 不能据此断言 |
+| --- | --- | --- |
+| E1. [SAP S/4HANA 2021 Feature Scope Description（On-Premise）](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)，直接打开的 latest 文档版本11.0（2026-07-22，SP10）。§2.6.1.1.3（印刷页29–30）、§2.6.1.1.4（页30）、§2.6.2.1.1（页31–32）、§2.6.2.1.3（页34–35）、§2.6.4.2.1（页46–47）。搜索索引也返回过旧 v9.0/SP08 快照；URL 动态，版本范围需明确。 | v11.0/SP10 直接支持市场细分（产品、产品组、客户、客户组、销售组织）、收入/销售成本、成本中心间接费用的定期分配；预测会计早于实际财务日记账；Revenue Accounting and Reporting 的合同/履约义务/履约事件；特定项目 Event-Based Revenue Recognition；应收销售/物流触发、总账同步及来款清账。 | 所有销售的统一收入确认时点、客户系统 FPS、完整销售单据链、客户合同/配置、成本估值/贡献毛利通用公式、市场属性派生和分配算法。 |
+| E2. [Simplification List for SAP S/4HANA 2021，Initial Shipment、FPS 1 & 2](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf)，v1.25（2022-05-25）；§8.1（印刷页200–201）、§12.13（页307–308）。 | 稳定的 S/4HANA On-Premise 2021 初始版/FPS1/2 文件：统一文档存储的转换语境；Margin Analysis 与 costing-based CO-PA 区别；在 §12.13 的 Margin Analysis 语境中，收入开票时点、COGS 交货时点、延迟开票时成本先显示的可能性；收入和销售扣减条件映射到账户并生成 FI 过账的范围。 | 不代表后续 FPS/客户设置；不等于所有合同的收入会计政策，也不支持未列配置的 price condition、估值、完整 COGS 科目规则。 |
+| E3. [What’s New in SAP S/4HANA 2021](https://help.sap.com/doc/4eefc5f2d826408f91a999687d31780f/2021/en-US/WN_OP2021__EN.pdf)，§3.5.6.4，印刷页122。 | Margin Analysis 术语以及 account-based / ACDOCA 窄范围描述。 | 客户启用状态、CO-PA 全部持久化方式、字段/主键/API/权限。 |
+| E4. [New App “Manage COGS Splits”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/f2bb8fe1f6c046a7a00797ddc02149f6.html?locale=en-US&state=PRODUCTION&version=2021.000)，固定版2021.000。 | 一个需相应 Customizing 的 COGS 成本组件拆分场景及其分析应用。 | 普通采购库存完整借贷、税、自动科目或所有客户销售的统一规则。 |
+
+CO-05 文章将收入确认、获利分析和应收收款/清账分别解释；用 F2 的开票/交货时点限缩说明 Margin Analysis，再与 FSD 中 Revenue Accounting and Reporting 和 Event-Based Revenue Recognition 的适用范围分开。COGS split 被限定为 S/4HANA 2021.000 的特定可配置功能，未推导 FI-07 普通库存分录。普通销售其他确认场景、客户估值/属性配置、字段/API/权限仍未闭合。
+
+普通读者、配置顾问、开发人员各 5 个同一 Work 上下文角色视角模拟闭环，共 15；不是独立评审，不计 8/50 reviewed。SAP 系统未连接，无实机、凭证、配置或权限测试。状态保持 drafting。

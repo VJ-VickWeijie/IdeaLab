@@ -121,3 +121,10 @@ SD-07《销售与交货数据模型》按 M3 “限缩可写”准入建立目�
 ### M4 Workline 5 CO-04｜2026-11-27
 
 CO-04《产品成本、生产差异与结算》按 M3 “暂缓核心”路径建立了受限 drafting 草稿：[文章](../knowledge/CO/02-functions/product-cost-variance-settlement.md)、[三角色视角记录](../reviews/work/2026-11-27-m4-co04-three-role-review.md)、[证据台账](evidence-finance-m3.md)。SAP S/4HANA 2021 FSD v9.0/SP08 快照支持制造方式影响成本观察对象、生产订单成本向一个或多个成本对象结算、重复制造期间性成本收集，以及特定 Kanban 场景的 WIP/差异和期末能力；2021.000 Deferred Summarization 仅说明特定数据汇总功能。普通生产订单 WIP/variance 公式、状态触发、一般结算规则/接收方和 FI 分录仍未由直接目标版证据闭合。普通读者、配置顾问、开发者视角各 5 个同上下文模拟闭环（共15）；不是独立 review，不计 reviewed。无 SAP 实机或用户权限验证；未推导 FI-07 采购库存借贷、税或自动科目。批次 A 仍 **8/50 reviewed、0/50 owner accepted**，owner accepted 为 **3/99**。工作线 5 下一篇 CO-05；开始前仅读取 CO-05 自身准入与证据登记。
+## Workline 5 进度｜CO-05（2026-11-27）
+
+- **CO-05《获利分析与 FI 集成：收入、成本与收款分清》**已按 M3“限缩可写”建立 drafting 草稿：`knowledge/CO/02-functions/profitability-fi.md`；角色视角记录：`reviews/work/2026-11-27-m4-co05-three-role-review.md`。
+- 目标版资料有限支持：SAP S/4HANA 2021 FSD 直接打开 latest 为 v11.0/SP10（2026-07-22），支持市场细分、预测/实际、特定收入确认、总账和 AR 高层范围；latest 动态且旧搜索索引曾返回 v9.0/SP08，已在正文披露。固定 F2 Simplification List v1.25 覆盖 Initial Shipment/FPS1/2，§12.13 支持该 Margin Analysis 范围的收入开票、COGS 交货时点和相应 FI 条件映射；What’s New 2021 §3.5.6.4 及固定版2021.000 Manage COGS Splits 补充术语/特定功能。
+- 仍缺：Margin Analysis 以外普通销售/合同的通用收入确认事件，客户实际估值/属性派生，全部 COGS split 设置，完整维度/贡献毛利公式，字段/API/权限。客户 FPS 未知；FI-07 普通库存借贷、税与自动科目仍开放，本文不推导。
+- 普通读者 5、资深配置顾问 5、普通开发者 5 个同一 Work 上下文模拟闭环；15 个问题均完成证据答复、修订和同视角复核，但不是独立审查，故不计 formal reviewed。无 SAP 系统测试。
+- 批次 A 数字不变：**8/50 reviewed、0/50 owner accepted**；CareerOS 正式接受 **3/99**。下一篇 CO-06；开始前只加载 CO-06 自身准入与证据。
