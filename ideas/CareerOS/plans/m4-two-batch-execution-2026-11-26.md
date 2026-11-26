@@ -99,3 +99,10 @@ PP-05《生产订单与确认》已建立证据受限文章，状态 drafting；
 ## 工作线 2 进度追记（2026-11-27，PP-06）
 
 PP-06《生产发料、收货与成本》正文按 M3 分流的“限缩可写”范围提交，状态 `drafting`。普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各完成 5 个同一 Work 上下文的模拟闭环，共 15；记录披露不是独立审查，也不计入 8/50 role-reviewed。正文范围以实际读取的 SAP S/4HANA 2021 SPS10 FSD 动态快照（Document Version 11.0，2026-07-22）支持的生产执行、库存增减、物料凭证、高层成本对象和 Kanban 限定例子为限；另引用固定版 2021.000 BJ5 订单对象页的已记录货物移动显示说明。估价金额、退料/冲销条件、差异/WIP/结算计算、FI/CO 凭证与科目、数据模型/API、权限、EWM/MES 仍待目标版证据；M3 关联 CO-04 正文当前分支不存在。未连接 SAP、未实测。工作线 2 下一篇为 SD-07；批次 A 与全库正式统计不变（8/50 reviewed、0/50 owner accepted、3/99 accepted）。
+
+
+## 工作线 4 进度追记（2026-11-27，FI-10）
+
+FI-10《财务配置查看》按 M3“暂缓核心”准入建立目标版证据受限草稿，状态 `drafting`。SAP S/4HANA 2021 What's New §3.6.1.3 仅支持 Automatic Account Determination app 用途及公告中的限定变化；固定版 2021.000 Help §3.6.1.16 仅支持 GR/IR 账户的 Extended Open Item Management 字段与 display-only 属性。公司代码、科目表、过账期间、收付款配置、完整账户映射、精确配置路径和角色授权仍缺目标版直接证据。没有外推 FI 来源到 MM OBYC/BSX/WRX，也没有连接 SAP 或做实机验证。
+
+Work 在同一上下文以普通学习者、资深 SAP 配置顾问、普通 SAP 开发人员三个视角各完成 5 个模拟质询—证据答复—修订判断—复核闭环，共 15；没有独立代理/真人专家签核，不计入正式 8/50 reviewed。记录见 [文章](../knowledge/FI/04-configuration/finance-config-observation.md) 和 [角色视角审查记录](../reviews/work/2026-11-27-m4-workline-4-fi10-review.md)。工作线 4 已完成所分配的新建与续核文章，FI-10 为本线最后一篇，无下一篇在本线范围内。
