@@ -1,4 +1,6 @@
-# CareerOS｜项目总入口（2026-11-25 更新）
+# CareerOS｜项目总入口（2026-11-26 更新）
+
+> 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。CareerOS 项目级 M3 门禁调整已获所有者批准，三角色计划级收尾复核已通过；M3 阶段验收待所有者，M4 未授权。见[复核报告](reviews/work/2026-11-26-m3-gate-closeout-review.md)和[门禁调整记录](plans/m3-closeout-batched-m4-proposal-2026-11-26.md)。
 
 ## 项目主旨
 利用工作日合规的碎片时间，建立**中文为主、保留英文术语**的 SAP 业务与技术知识网络，同时保留 24 个月职业成长课程。目标不只是记住 T-Code，而是理解企业为什么需要某个流程、完整业务/单据/物流/财务流、SAP 如何实现，以及跨模块关联；FI/CO 从零基础解释。长期发展方向是 SAP MM/QM + ABAP/S/4HANA 架构 + 企业 AI 集成。
@@ -7,13 +9,25 @@
 1. **模块知识库**：MM、SD、PP、QM、FI、CO，以及 ABAP/S4HANA/AI 技术专题。各模块分基础概念、功能知识、T-Code、配置、数据模型；配置独立建栏，并与 T-Code 索引互链。
 2. **统一业务流程库**：单模块与跨模块的完整端到端业务均集中管理；P2P、O2C、跨公司 STO、生产、质量、R2R 等；模块页通过链接引用，不重复维护全文。
 3. **系统学习课程**：沿用长期路线，提供推荐阅读和可选练习；不强制每天操作 SAP。
-4. **质量机制**：Work 负责写作、答辩和修订；普通用户、资深 SAP 配置顾问、普通 SAP 开发人员分别对每篇正式文章进行**至少 20 个有效质询—答辩—修订—复核轮次**，合计至少 60 轮，完整过程存入 GitHub。不得将同一模型的角色扮演冒充独立子代理。
+4. **质量机制**：Work 负责写作、答辩和修订；普通用户、资深 SAP 配置顾问、普通 SAP 开发人员分别对每篇正式文章按需进行**5～10 个有效质询—答辩—修订—复核轮次**，三角色合计 15～30 轮，完整过程存入 GitHub。不得将同一模型的角色扮演冒充独立子代理。
 
-## 当前真实进度
-- **已完成**：职业背景与约束记录、初步 24 个月路线；V0.3 产品方向和审查角色要求在对话中确认。
-- **本次 PR 拟交付**：V0.3 知识目录蓝图、Work 完整建设任务、审查档案规则及 README 交接更新。
-- **尚未完成**：知识正文批量编写、三角色审查轮次、全库链接验证、V0.3 验收。不能将本次蓝图 PR 视为知识库完工。
-- **里程碑治理**：旧记录为 M0 草案；V0.3 的内容建设仍需按 AI-Workflow V1.1 核对阶段授权，不能因为已规划就自动视为 M4 获批。
+## 当前真实进度（2026-11-26）
+- 所有者于 2026-11-26 明确批准 CareerOS 项目级 M3 门禁调整（不修改 AI-Workflow V1.1）；普通读者、资深 SAP 配置顾问、普通 SAP 开发人员的计划级收尾复核均已通过。M3 阶段验收仍待所有者，M4 仍未授权。详见 [M3 收尾复核报告](reviews/work/2026-11-26-m3-gate-closeout-review.md)与 [99 项分流](plans/m3-item-readiness-triage-v0.3.md)。
+- PR #19 的 V0.3 蓝图已合并；所有者已批准 M0、M1、M2、99 篇正式文章范围及 11 个纯结构导航分类。
+- 五项历史来源缺口仍按文章级边界处理，不阻止与其无关且证据充分的文章进入未来批次；M4 尚未授权。
+- [旧门禁审计](reviews/work/2026-11-26-m3-gate-audit.md)的“不满足出口”结论仅适用于门禁调整批准前的旧标准。按批准后的计划级门禁，M3 规划出口经三角色复核通过；此结论不等于所有者已验收 M3 阶段。五项核心风险仍未闭合，须在相关文章及主张中限缩或暂缓。
+- 后续独立结构复核修正了 FI-03/FI-07/MM-09/PROCESS-01 四行证据台账的列错位和三篇 SAP Learning 的 GR/IR 归因；配置顾问复核后关闭这些文字问题。开发者另复核技术与 AI 26 项计划登记，发现负责人/下一步、阅读与独立复核元数据仍不完整；ABAP-04 状态歧义已修订并由开发者复核。详见 [M3 Work 修订记录](reviews/work/2026-11-26-m3-structure-review-remediation.md)、[配置顾问记录](reviews/consultant/2026-11-26-m3-sourcefit-structure-review.md) 与 [开发者技术结构审查](reviews/developer/2026-11-26-technical-sourcefit-structure-review.md)。
+- [M3 控制矩阵](plans/m3-item-control-matrix-v0.3.md)、批准 manifest 与 [文章级分流](plans/m3-item-readiness-triage-v0.3.md) 均对应 99 个唯一 ID；分流为 65 项“限缩可写”和 34 项“暂缓核心”，不代表正文或 M4 准入。逐篇 claim-level 核实仍在相应 M4 批次进行。
+- 尚未编写正式知识库正文、完成正式三角色文章审查、SAP 实机验证或全库链接验收；规划和文献研究不计作 V0.3 交付。
+- ABAP-04 另由独立开发者直接复读四篇 ABAP Platform 2021 (Oct 2021) 官方通用 BAPI 事务文档：支持一般调用方管理 LUW、commit/rollback 与 update process；它们没有 BAPI_PO_CREATE1 专属 WAIT、提交例外或返回消息决策合同。此前 ECC/R/3 Additional Content 仅作有限背景，函数级缺口仍未闭合。详见 [BAPI 事务证据复查](plans/bapi-transaction-search-m3.md)。
+- ABAP-02 新增 ABAP Platform 2021 (Oct 2021) 会话内存 soft warning 证据：warning threshold 越界时写 short dump 但不终止程序；目前没有依据表明 ABAP TRY...CATCH 可捕获该 warning 或自动停止，且该机制不能保证避免后续硬限额/内存 dump。独立开发者已复核版本标签、ST02 示例边界和 KBA 3435216 公开预览范围，确认三项措辞准确；目标系统参数值、kernel/FPS 和非生产实测仍待核。详情见 [ABAP-02 内存诊断补充](plans/abap02-memory-dump-admin-boundary-m3.md)及 [Work 执行记录](reviews/work/2026-11-26-abap02-memory-review.md)。
+- 今日直接读取 SAP Help 的两篇 S/4HANA 2021 (Oct 2021) GR/IR 页面，补充了有限的科目关系说明；其中一页收货方向用词与其他示例不一致；另补入 MAP 无库存覆盖的数量/价差特例，但未明确无科目分配且无完整借贷表。未证明 OBYC 配置因素，MM-09 仍未闭合。
+- 另直接读取并由独立上下文复读固定为 2021 (Oct 2021) 的 Account Determination 页面，补得发票科目确定的数据类别；它不列 OBYC/BSX/WRX 配置键或借贷分录，MM-09/FI-07/P2P 仍未闭合。
+- 已建立 99 项 [M3 来源登记与复核记录](reviews/summary/m3-evidence-review-2026-11-25.md)；各项来源支持范围、版本与剩余缺口持续记录，未完成项不标通过。
+- FI-10 另补读 SAP S/4HANA 2021 What's New §3.6.1.3（印刷页133–134），范围限 J58/FI-FIO-GL-CA：BUL、BUU 键属于 Prepare Intercompany Transactions，`*` 通配符涉及 Integrate with HR Postings 客户/供应商账号输入。它不是完整配置指南；配置顾问因 PDF 超出读取工具 10 MB 限制未能独立直读，搜索索引未计独立复核；不外推至 MM OBYC。详见 [FI/CO 证据登记](plans/evidence-finance-m3.md) 和 [贴合度复核](plans/finance-source-fit-review-m3.md)。
+- 配置顾问独立复读三篇未固定 2021/FPS 的 SAP Learning 科目确定/收货/关账页面：Describing Automatic Account Determination 的发票步骤写 GR/IR 贷方，与 Managing Closing Activities 的发票借 GR/IR、贷供应商不一致；Managing Goods Movements 只明确限定收货借库存/贷 GR/IR，不支持发票方向。此冲突已记入 MM-09、FI-07、PROCESS-01 证据计划，不作为 SAP 勘误或 2021 结论；来源和边界见 [MM-09 补查](plans/mm09-obyc-source-followup-m3.md) 与 [FI-07 补查](plans/finance-fi07-direct-2021.md)。
+- 普通 P2P 收货/发票借贷方向又做了一轮 2021 初版检索；独立顾问未找到明确无科目分配库存采购全分录的可读官方原文，Learning 文献有方向冲突，2021 候选页仅见 2025 FPS02 搜索索引。FI-07、MM-09、PROCESS-01 保持未闭合，详见 [P2P 普通采购借贷补查](plans/p2p-2021-posting-followup-m3.md)。
+- 原始 M0 项目记录与 24 个月路线保留在下方，原始状态文字属于历史记录，以本节为当前状态。
 
 ## Work 接手顺序与后续工作
 先按 [IdeaLab 启动规范](../../AGENTS.md) 阅读仓库及固定 AI-Workflow 版本，再读：
@@ -22,7 +36,7 @@
 - [多角色审查与过程记录规范](reviews/README.md)
 - [原有成长路线](plans/roadmap-v0.1.md)
 
-Work 应先建立细粒度覆盖矩阵，按阶段门禁开展全范围内容建设，组织三个角色逐篇至少 20 轮有效审查并保存真实记录，修复问题、验证链接，最后通过 PR 交用户审批；**不得只交三五篇样板，不得自行合并**。公司 SAP 环境只读/受限，严禁擅改配置、上传企业敏感资料或声称做过未执行的测试。
+Work 应先建立细粒度覆盖矩阵，按阶段门禁开展全范围内容建设，组织三个角色逐篇各 5～10 轮有效审查并保存真实记录，修复问题、验证链接，最后通过 PR 交用户审批；**不得只交三五篇样板，不得自行合并**。公司 SAP 环境只读/受限，严禁擅改配置、上传企业敏感资料或声称做过未执行的测试。
 
 ---
 
@@ -79,3 +93,4 @@ Work 应先建立细粒度覆盖矩阵，按阶段门禁开展全范围内容建
 ## 文档
 - [初始职业背景与约束](notes/2026-11-23-baseline.md)
 - [初步学习与阶段规划](plans/roadmap-v0.1.md)
+
