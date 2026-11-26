@@ -291,3 +291,13 @@
 - 三个角色各有 5 个同一 Work 上下文模拟闭环，共 15；不代表独立代理、第二模型或真人专家审查。SAP 系统未连接，未执行计划、特性、应用、权限或 API 实机测试。
 - M3 原检验规划概述来自动态 FSD latest，本篇未用它作固定版 2021 证据；正文没有写完整计划结构、特性字段、plant/validity/lot-size 选择规则、sampling 参数或客户系统可用性。上述准入核心仍未闭合，故 QM-03 保持 `drafting`，不计正式 reviewed。
 - QM-03 不增加正式计数：批次 A 仍为 **8/50 reviewed、0/50 owner accepted**，全库正式接受数仍为 **3/99**。下一篇：**QM-04《结果记录与使用决策》**，批准路径 `knowledge/QM/02-functions/results-usage-decision.md`；按逐篇准入只读取 QM-04 对应来源和依赖。
+
+## 工作线 5 进度追记（2026-11-27，CO-02）
+
+- CO-02《成本中心与成本要素》已按批准路径建立证据受限文章，状态 **drafting**，M3“暂缓核心”门槛未全部关闭。正文仅以 SAP S/4HANA 2021 FSD v9.0/SP08 快照、固定版 Migration Objects 2021.000 和 Central Finance 2021.001 指南支持有限主张。
+- 记录三角色视角闭环：普通读者 5、资深 SAP 配置顾问 5、普通 SAP 开发人员 5，共 15 个同 Work 上下文模拟闭环；没有独立审查者或真人专家参与，不计 reviewed。
+- 仍缺：成本中心主数据字段级有效期和组织配置约束、成本要素类别及日常分配/自动规则、通用凭证行为、表字段/键/API/CDS 和权限。Central Finance 对成本要素与总账账户的说明仅限其映射与初始加载场景；迁移范围/迁移源结构不外推为普通应用模型。
+- FI-07 普通库存采购完整借贷、税务与自动科目边界保持开放；SAP 未连接，无实机测试。
+- 批次 A reviewed/owner accepted 计数不变：**8/50、0/50**；全库正式接受 **3/99**。文章、闭环与证据登记分别见 [CO-02 正文](knowledge/CO/02-functions/cost-center-elements.md)、[CO-02 审查](reviews/work/2026-11-27-m4-co02-three-role-review.md)、[财务证据登记](plans/evidence-finance-m3.md)。
+- 本节提交前实时检查 PR #21：状态 open、未合并、目标 main；工作分支 careero s-v04-m4-batch1-20261126；当时工作分支 HEAD 为 488c888bcbaa8c223f60d175126861ffdeafd983。该值是本节提交前的 HEAD。
+- 工作线 5 下一项：CO-03《内部订单和费用归集》，按其准入路径和证据登记开始；本次没有预载 CO-03 完整研究资料。
