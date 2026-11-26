@@ -48,3 +48,8 @@
 | SAP 实机测试 | 0；未连接 |
 
 FI-01～FI-03 已由所有者审阅肯定，正式接受数仍为 3/99。批次 A 目前有 8 篇完成三角色审查：FI-05（15）、MM-01（16）、MM-02（15）、MM-03（18）、MM-04（18）、MM-05（15）、MM-06（15）、MM-07（15）个有效闭环，均待所有者验收；尚未将其计入 accepted。FI-04/FI-06 文章级证据缺口与首轮 38/45 项状态见 A01 记录，不阻挡独立文章。MM-06 审查见 `reviews/work/2026-11-26-m4-mm06-three-role-review.md`；MM-07 正文与三角色审核见 `knowledge/MM/02-functions/price-unit-conversion.md` 及 `reviews/work/2026-11-26-m4-mm07-three-role-review.md`。下一工作包为 MM-08《MM 常用事务码导航》，按批准路径 `knowledge/MM/03-tcodes/transaction-index.md` 建设；逐事务核实目标版用途、对象、权限和显示/修改边界，只有已证实条目进入正文，不用业务功能范围推定事务码。每个工作包提交文章、真实审核记录、状态与 HANDOFF 到 PR #21；新窗口优先读取 HANDOFF、本计划及当前所需文件，不载入全部 99 篇历史记录。PR 不自动合并。
+
+
+## 工作线 2 进度追记（2026-11-27）
+
+SD-06《销售配置查看》正文已建立，状态 drafting；15 个同上下文角色视角循环（普通读者 5、资深配置顾问 5、普通开发人员 5）已记录，但不构成独立审查，且通用 IMG/只读授权证据仍未闭合，因此不增加批次 A reviewed 数。当前总体计数仍为 8/50 reviewed、0/50 owner accepted，owner accepted 总数 3/99；SAP 实机测试 0。工作线 2 下一篇为 PP-01，当前准入为“暂缓核心”。详见 [SD-06 正文](../knowledge/SD/04-configuration/sales.md) 和 [审查记录](../reviews/work/2026-11-27-m4-sd06-three-role-review.md)。

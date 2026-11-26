@@ -132,3 +132,11 @@
 ## 新窗口可直接使用的接手指令
 
 接手 GitHub 仓库 `VJ-VickWeijie/IdeaLab` 中的 CareerOS。先实时读取 PR #21、分支 `careeros-v04-m4-batch1-20261126`、`main` 和 PR #20 的状态及最新 HEAD；PR 不合并。然后读取本 HANDOFF、CareerOS README、[M4 两批执行计划](plans/m4-two-batch-execution-2026-11-26.md)、[本批 FI-04～FI-06 审查记录](reviews/work/2026-11-26-m4-batch-a01-fi04-fi06-review.md)、reviews/README、知识树和当前所选文章对应的控制矩阵/证据登记。M3 已验收；M4 全部 99 篇分批建设已授权。FI-01～FI-03 已获所有者肯定，正式接受 3/99。FI-05（15）、MM-01（16）、MM-02（15）、MM-03（18）、MM-04（18）、MM-05（15）、MM-06（15）、MM-07（15）均 reviewed、待所有者验收；批次 A 为 8/50 reviewed、0/50 owner accepted；下一篇 MM-08。不要重复 M0～M3 或已完成的研究；不要把草稿/来源登记算成正式文章；保留五项 M3 证据边界及 FI-04/FI-06 新阻碍；继续批次 A 中可独立写作的文章。每完成一个工作包，真实记录三角色问题、Work 答辩/修改、原角色复核及闭环数，更新本 HANDOFF 并提交到 PR #21。
+
+
+## 工作线 2 进度追记（2026-11-27）
+
+- SD-06《销售配置查看》已建立正文草稿，状态 drafting；三种角色视角各完成 5 个同上下文问题—答复—修订—复核循环，共 15 个。它们不是独立审查或真人专家意见。准确的通用销售 IMG 分支、目标系统只读访问路径/授权，以及交货、开票与科目决定证据仍未闭合。
+- SD-06 的 15 个角色视角循环不计入批次 A reviewed 数：批次 A 仍为 8/50 reviewed、0/50 owner accepted；CareerOS 正式接受仍为 3/99。SAP 系统未连接、实机验证为 0。
+- 工作线 2 下一篇：PP-01《生产业务与组织结构》，路径以逐篇分流为准；该项当前分流为“暂缓核心”，须先建立主张级准入，核心制造模式边界缺证时继续 drafting。
+- 详细内容及闭环字段见 [SD-06 审查记录](reviews/work/2026-11-27-m4-sd06-three-role-review.md) 与 [文章](knowledge/SD/04-configuration/sales.md)。
