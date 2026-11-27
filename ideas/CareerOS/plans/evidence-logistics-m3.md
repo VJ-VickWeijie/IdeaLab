@@ -118,3 +118,14 @@ Work 于 2026-11-26 从 SAP 官方 S/4HANA 2021 动态 FSD 直接定位 §2.12.4
 - “Pricing in Sales Documents”搜索结果来自未标定版本的通用 SAP Help 页；页面未能直接打开，也不能证明其适用于 S/4HANA 2021 On-Premise，未作为目标版依据。此次搜索命中的税务、Billing Processing、Condition Technique 等内容标记为 2025 FPS01 或其他较新版本，明确排除。
 - 对 `FSD_OP2021_latest.pdf` 的搜索索引出现较早的 Version 9.0 / 2025 摘录，与 M3 已直接打开并记录的 Version 11.0（2026-07-22，S/4HANA 2021 SPS10）不是同一动态响应。本轮继续以此前直接读取的版本记录为本篇现有高层证据，不将较旧搜索摘录混入，也不宣称固定初版。
 - **结论与下一步**：没有获得可直接复读的 2021 固定版资料，足以支撑通用条件定价、币种/税、收入确认与具体 FI 借贷、付款/银行资金关系。后续应逐项寻找 SAP 官方 2021.000/明确 FPS 的直接正文或可复核归档，逐项限定业务条件；在此之前 SD-04 保持 Draft。SD-03、FI-06 虽在分支存在但均 Draft；M3 依赖 PROCESS-02 当前不在批次 A 分支，不能用其替代证据。未连接 SAP、未执行系统/API/配置/权限测试。
+
+
+## 2026-11-27 逐篇来源复核｜SD-05 常用事务码导航
+
+- 批次 A 当前正文 blob 5604d5f31b6b2b78e40cd5304b87eb172e8fb6db、M3 “未核验／暂缓核心”行、逐篇范围和三角色审查记录已重新逐项读取。正文正确地把目标版缺口明列为通用订单/交货/开票入口、用途及读写边界、逐入口输入/输出、GUI/Fiori 与 App ID 映射、授权。
+- SAP 官方固定版本 2021.000 的 [GTS 销售单据合规检查](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/fcb3125da2904febade3759c5c4dfbb7.html?version=2021.000)搜索摘录明确写出：完成集成并激活 GTS 后，VA01/VA02/VA03 等 app 可查看状态，且限于该功能与其 Scope Items。直接 open 返回零行；本轮把官方索引中可见的原文片段仅用于核对这些逐项名词，不扩大成通用标准导航、输入/输出或权限证据。
+- SAP 官方固定版本 2021.000 的 [Brazil Tab in Billing Transactions](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/86a74f326eab4891a61977005007753d.html?version=2021.000)搜索摘录逐列 VF01、VF02、VF03、VF03_ITEM、VF07，并说明该国别页签在输入巴西公司代码时可见，Scope Item BD9。直接 open 也返回零行；只使用可见摘录中的名称及条件，不推断完整通用国家目录、权限或税务行为。
+- SAP 官方静态 [Simplification List for SAP S/4HANA 2021 v1.25](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=951)本轮可直接打开，封面范围为 Initial Shipment、FPS01、FPS02。§49.8（印刷页 951）仅支持旧版本转换到 S/4HANA 1610 或更高版时，特征值 Fast data entry 与 Configuration 页签合并、VA01/VA02/VA03 等为示例及 DIMP_SDUD/实际使用条件；不支持通用代码用途、屏幕输入输出或授权。正文当前边界与该原文相符。
+- 搜索所得无版本 EWM/ERP 事务列表及 S/4HANA Cloud 2608 导航页不作为固定 S/4HANA 2021 On-Premise 证据；这些页面即使出现 VL03N 等入口，也不能补本篇目标版通用交货入口。
+- **准入决定**：固定版证据只闭合三个局部情境中的入口名；M3 核心仍要求通用销售、交货、开票导航，以及用途/输入输出/类别/权限逐入口核验。SD-05 继续 Draft，不将局部证据升格为目录完整。后续需找到可直接复读的 2021 On-Premise Help/本地文档，并对照用户获准的目标系统核验应用类别/权限；在取得证据前不列通用交货代码。
+- 未连接 SAP；未执行事务码、系统配置、API、权限或实机测试。
