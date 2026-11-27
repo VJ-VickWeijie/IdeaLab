@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-27 更新）
 
-> 当前交接入口：[HANDOFF.md](HANDOFF.md)。实时基线：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并至 `main`，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该基线建立，当前按顺序完成至 PP-01；其精确正文 blob 为 `2c8d036bcedc137e5a0cc13ee1846719d2006bd9`，仍为 Draft。新 PR 尚未创建。当前全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。工作线游标：W1 已完成、W2 PP-02、W3 PP-07、W4 QM-06、W5 FI-11。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
+> 当前交接入口：[HANDOFF.md](HANDOFF.md)。实时基线：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并至 `main`，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该基线建立，当前按顺序完成至 PP-02；PP-02 精确正文 blob 为 `c87f31763c7137af445cc8c0f1267280b08dfb6c`，仍为 Draft。新 PR 尚未创建。当前全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。工作线游标：W1 已完成、W2 PP-03、W3 PP-07、W4 QM-06、W5 FI-11。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
 
 ## 当前进度（2026-11-27）
 
@@ -12,7 +12,7 @@
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 篇 Draft |
 | 5 | FI-11、CO-01～CO-08 | 9 篇 Draft |
 
-当前工作线游标：W1 已完成、W2 PP-02、W3 PP-07、W4 QM-06、W5 FI-11。PP-01 经三个独立 AI reviewer-context 各 5 项复核，最终正文边界审查均 PASS；Plant 组织职责、MTS/MTO、离散/流程制造及其业务影响仍缺固定 2021 直接证据，因此继续 Draft、计数不变。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
+当前工作线游标：W1 已完成、W2 PP-03、W3 PP-07、W4 QM-06、W5 FI-11。PP-01 与 PP-02 均经三个独立 AI reviewer-context 各 5 项复核；仅当前边界表述通过，核心目标证据仍缺，因此两篇继续 Draft、计数不变。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
 
 ## 历史进度日志（当时快照；以当前对账报告为准）
 
@@ -191,3 +191,5 @@ CO-08《管理会计数据模型》按“暂缓核心”准入建立受限 draft
 - **Workline 2 收尾检查点（SD-07）**：SD-07 已新增对固定版《Simplification List》§36.9 的早期 VBFA/STUFE 历史边界说明，并按转换目标、新安装起始/曾经版本及特定重建路径精确限定；SAP 官方 API 2021 页面仅以索引摘录使用，direct open 为 0 行。读者、顾问、开发三个独立 AI reviewer-context 针对精确正文各完成 5 项质询—答复—修订—原角色复核，均 5/5 PASS。M3 核心字段、键、基数、接口、组织关系、SD-FI 关系及系统权限仍未闭合，SD-07 保持 Draft，不计 Role Reviewed。批次 A 仍 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 Owner Accepted 3/99；批次 B 0/46 未开始。下一篇 PP-01。未连接 SAP、未做系统测试。
 
 - **Workline 2 收尾检查点（PP-01）**：最终正文 blob `2c8d036bcedc137e5a0cc13ee1846719d2006bd9` 仅采用固定 2021.000 官方索引范围标签和固定 SPS04 PDF 的 PI Sheet/work-instruction HTML5 功能范围；新增 Customizing 激活边界句，去除来源表重复条目。读者、配置顾问、开发者三个独立 AI reviewer-context 针对最终正文各 5 项 PASS（限证据边界），但 Plant 组织、MTS/MTO、离散/流程制造和相关成本库存影响仍未闭合，PP-01 保持 Draft、不计 Role Reviewed。批次 A 仍 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 Owner Accepted 3/99；批次 B 0/46 未开始。W2 下一篇 PP-02。PR #21 已合并；新 PR 尚未创建。未连接 SAP、未做系统测试。
+
+- **Workline 2 收尾检查点（PP-02）**：正文 blob `c87f31763c7137af445cc8c0f1267280b08dfb6c` 将 P1–P4 限定为固定 2021.000 SAP 官方搜索索引摘录，四个 canonical HTML 均没有可读正文。新增根节点/header界限、ASM-110树位置澄清，以及 versioning 配置与重复制造确认日期选版的区分。读者、配置顾问、开发三个独立 reviewer-context 各完成 5 项，最终 15/15 PASS（只表示表达边界安全）；数量/单位、一般选版、组件缺失和数据模型仍缺证据，PP-02 保持 Draft。批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99 Owner Accepted；批次 B 0/46 未开始。下一篇 PP-03。PR #21 已合并；新 PR 尚未创建。未连接 SAP、未做系统测试。
