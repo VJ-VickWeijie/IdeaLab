@@ -98,7 +98,7 @@ PP-05《生产订单与确认》已建立证据受限文章，状态 drafting；
 
 ## 工作线 2 进度追记（2026-11-27，PP-06）
 
-PP-06《生产发料、收货与成本》正文按 M3 分流的“限缩可写”范围提交，状态 `drafting`。普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各完成 5 个同一 Work 上下文的模拟闭环，共 15；记录披露不是独立审查，也不计入 8/50 role-reviewed。正文范围以实际读取的 SAP S/4HANA 2021 SPS10 FSD 动态快照（Document Version 11.0，2026-07-22）支持的生产执行、库存增减、物料凭证、高层成本对象和 Kanban 限定例子为限；另引用固定版 2021.000 BJ5 订单对象页的已记录货物移动显示说明。估价金额、退料/冲销条件、差异/WIP/结算计算、FI/CO 凭证与科目、数据模型/API、权限、EWM/MES 仍待目标版证据；M3 关联 CO-04 正文当前分支不存在。未连接 SAP、未实测。工作线 2 下一篇为 SD-07；批次 A 与全库正式统计不变（8/50 reviewed、0/50 owner accepted、3/99 accepted）。
+PP-06《生产发料、收货与成本》正文按 M3 分流的“限缩可写”范围提交，状态 `drafting`。普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各完成 5 个同一 Work 上下文的模拟闭环，共 15；记录披露不是独立审查，也不计入 8/50 role-reviewed。正文范围以实际读取的 SAP S/4HANA 2021 SPS10 FSD 动态快照（Document Version 11.0，2026-07-22）支持的生产执行、库存增减、物料凭证、高层成本对象和 Kanban 限定例子为限；另引用固定版 2021.000 BJ5 订单对象页的已记录货物移动显示说明。估价金额、退料/冲销条件、差异/WIP/结算计算、FI/CO 凭证与科目、数据模型/API、权限、EWM/MES 仍待目标版证据；首次较早分支核对时 CO-04 返回 404，后续 HEAD 复核已确认其正文存在但仍为 Draft（见 PP-06 收尾检查点）；未连接 SAP、未实测。工作线 2 下一篇为 SD-07；批次 A 与全库正式统计不变（8/50 reviewed、0/50 owner accepted、3/99 accepted）。
 
 
 ## 工作线 4 进度追记（2026-11-27，FI-10）
@@ -143,3 +143,8 @@ CO-07《管理会计配置查看：从一条可证实的规则开始》按 M3“
 ## Workline 5｜CO-08（2026-11-27）
 
 CO-08《管理会计数据模型：理解统一日记账，但不猜表关系》按 M3“暂缓核心”准入建立受限 drafting 草稿。固定 2021 Simplification List §8.1 仅支持财务报告统一文档存储和特定转换语境的兼容视图背景；What's New 2021 §3.5.6.4 支持 Margin Analysis 的 ACDOCA 窄范围关联；2021.000 Deferred Summarization of Production Costs 只支持特殊生产成本汇总情境中 ACDOCA/ACDOCD 的 detail/aggregate 变化。成本对象字段、主键、基数、组织关系、兼容对象物理状态、released API/CDS 和权限仍缺逐项证据。普通读者、配置顾问、开发者各 5 个同一 Work 上下文模拟闭环，共 15；非独立 review，不计 reviewed。未连接 SAP、未执行数据库/API 查询。CO-08 完成本工作线 5 所分配文章；批次 A 仍 8/50 reviewed、0/50 owner accepted，全库正式接受 3/99。
+
+
+## 工作线 2 收尾检查点追记（2026-11-27，PP-06）
+
+PP-06 已完成逐篇核查与目标版来源补查。动态 FSD v11.0/SPS10 仅用于标示其生产执行、库存变化、成本对象及 Kanban 高层范围；固定 2021.000/BJ5 的 Order Split 官方索引仅补充该特定拆分功能的 262 父订单冲回、261 子订单发料和组件成本重过账，并披露规范 HTML 直开不可读。估价/价格控制、一般退料或冲销、WIP/差异/结算算法、FI/CO 科目/凭证、字段/API/权限与 EWM/MES 仍缺固定版直接证据。CO-04 在已合并 main/当前收尾分支中存在但为 Draft，旧记录中“PR #21 分支不存在”是较早快照，不再是实时状态。独立读者、配置顾问、开发者 AI reviewer-context 各对最终正文完成 5 项复核；同 Work 旧 15 轮另行标记。PP-06 继续 Draft，不计 Role Reviewed。工作线 2 全部 8 篇已处理；批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 Owner Accepted 3/99；批次 B 0/46 未开始。下一工作线 3，从 PP-07 开始。未连接 SAP，未实测。

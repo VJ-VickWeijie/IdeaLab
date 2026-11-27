@@ -183,3 +183,12 @@ Work 于 2026-11-26 从 SAP 官方 S/4HANA 2021 动态 FSD 直接定位 §2.12.4
 - 支持和缺口：SPS10 FSD 只补齐概念层关系，不给 Routing operation 详细字段/选择，工厂适用性，替代/有效期/数量选择，Work Center 完整字段与工序指派，standard values/formula/capacity requirements/成本估算，BOM-component-to-operation 精确关系，生产版本冲突处理，客户配置/授权。FSD 中 same-line/alternate work center 分组只用于汇总产能评估，不支持路线、operation 或订单自动切换结论。
 - 独立审查：普通读者、资深 SAP 配置顾问、普通 SAP 开发者三个独立 AI reviewer-context 各对最终正文 blob 完成 5 个问题和原角色复核，共 15/15 PASS（仅来源范围与措辞边界）。三者建议文章保持 Draft；M3 核心未闭合，因此不计 Role Reviewed。原有 15 项同 Work 角色模拟作为历史，不计独立审查。
 - 未连接 SAP；未执行实机、配置、数据库、API、权限或客户设置测试。
+
+## PP-06｜2026-11-27 目标版成本/估价补查
+
+- **准入目标**：M3 triage 仍为“限缩可写”；detail-logistics 要求核对组件领退料、完工入库、成本归集/差异/结算；逐篇证据登记要求补库存估价、成本和结算账务。M3 控制矩阵没有 PP-06 专属行；此项不构成豁免。
+- **动态 S/4HANA 2021 SPS10 来源直接重读**：[FSD 文档](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)：当前直接打开版本 11.0（2026-07-22），文档历史将其对应为 SPS10；该 `latest` URL 非固定 2021.000。§2.13.1.1（PDF pp.168–169）支持 goods issue 减库存、goods receipt 增库存及相应 material document 的高层描述；§2.8.4.1（p.75）概述生产完工、TECO/关闭差异及结算接收方；§2.8.4.2（pp.76–77）列出生产执行任务、生产确认可能更新成本及若干示例动作；§2.6.1.1.2（pp.28–29）区分按订单成本和重复制造期间成本对象；§2.8.4.4（pp.84–85）给出 Kanban/重复制造限定场景，不能外推到一般离散订单。动态版本差异和未归档当前 PDF 哈希的限制见对应文章及 PP-06 审查记录。
+- **固定版 2021.000 的窄范围补证**：[Order Split with Component Transfer (No By-Product)](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b17fc052b1a3456cad0bf29ee6d14021.html?version=2021.000)，BJ5。SAP 官方版本条目的搜索摘要说明，该拆单功能会把父订单组件 goods issue 以 262 冲回、再以 261 对子订单发料，并重新过账实际组件成本；另列订单拆分设置和 BAdI 依赖。本轮规范 HTML direct open 返回 0 行，因此仅作标注受限的官方索引证据；它不是一般退料、冲销、移动类型、估价或 FI/CO 规则。
+- **检索到但排除的成本资料**：SAP Help “Production Cost Posting in Financial Accounting”“Goods Receipts in Cost Object Controlling”“Settlement in Product Cost by Order or Period”“Variance Calculation”“Goods Issue for the Manufacturing Order”“Goods Receipt for the Manufacturing Order” 的当前搜索片段含估价、订单成本、FI 过账或方差/结算信息，但这些页面本轮没有可核验的固定 2021.000 版本标签；尝试给其中三篇成本会计页面追加 `version=2021.000` 后，读取工具返回不可访问。故未以这些当前/无版本页面补写 S/4HANA 2021 通用金额、FI 科目或结算规则。
+- **仍未闭合**：普通订单及不同价格控制/库存覆盖条件下的实际估价金额；发料/退料和收货的标准或移动平均价影响；成本归集与活动/间接费的适用前提；WIP/差异的计算基础、周期/累计分支；默认结算规则、接收方与金额分配；FI/CO 科目和会计凭证明细；通用字段/API/授权。固定 2021 拆单示例只关闭一项特定功能描述，不能证明上述核心目标。
+- **依赖与边界**：PP-02、PP-05、CO-04 文件均已在当前收尾分支，但仍为 Draft；不作为已 Role Reviewed 的证据。PROCESS-05 不在批次 A 收尾分支。未连接 SAP，未执行库存过账、订单结算、数据库、API、权限或会计分录测试。PP-06 继续 Draft。

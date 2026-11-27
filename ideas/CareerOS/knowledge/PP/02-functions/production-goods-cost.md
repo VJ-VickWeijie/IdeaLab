@@ -66,19 +66,22 @@ M3 逐篇分流将本篇列为“限缩可写”，要求补查库存估价、�
 - 结算规则、接收方、成本要素、总账科目、凭证行及跨模块过账；
 - 与 PP-05 生产确认、物料凭证、FI/CO 凭证之间的目标版字段、键、基数和 released API 合同。
 
+固定版资料还给出一个很窄的例外：S/4HANA 2021.000 的 *Order Split with Component Transfer (No By-Product)* 官方 Help 条目描述，在该生产订单拆分功能中，组件实际成本会重新过账；父订单组件发料以 262 冲回，再按 261 对子订单发料。它只说明这一特定拆单功能，不是一般退料、普通冲销或所有生产订单的移动类型规则；配置选项和 BAdI 前提也属于该功能范围。本轮该版本页面的官方搜索索引可读，但规范 HTML 直开为 0 行，因此这里仅按可见索引摘要记录，不扩充到估价金额、总账科目或通用会计分录。
+
 这些是本文的证据缺口，不表示 SAP 不支持相应功能。未取得与主张匹配的 SAP S/4HANA 2021 On-Premise 直接依据前，不把常见配置、移动类型、价格控制或配置路径写成系统通用事实。
 
 ## 与相关文章的边界
 
 - [PP-02｜物料清单 BOM](../01-foundations/bom.md) 可用于理解订单组件来自 BOM 这一知识关联；该文仍未证实通用组件数量、替代项选择和有效期规则，本文不据此计算领料量。
 - [PP-05｜生产订单与确认](production-order.md) 区分订单、确认和货物移动；本文承接其事件边界，不把报工说成自动过账开关。
-- M3 将 CO-04《产品成本、差异与结算》列为成本关联文章，批准路径为 `knowledge/CO/02-functions/product-cost-variance-settlement.md`。该正文目前已在 PR #21 分支中，但仍为 Draft，尚不能作为已审查依赖或闭合本篇估价/成本/结算证据。
+- M3 将 CO-04《产品成本、差异与结算》列为成本关联文章，批准路径为 `knowledge/CO/02-functions/product-cost-variance-settlement.md`。该正文已在 PR #21 合并后的 `main` 基线中，仍为 Draft，尚不能作为已审查依赖或闭合本篇估价/成本/结算证据。
 - M3 的 [物流来源登记](../../../plans/evidence-logistics-m3.md)、[逐篇范围和依赖](../../../plans/detail-logistics-v0.3.md)、[逐篇准入分流](../../../plans/m3-item-readiness-triage-v0.3.md) 与 [SD/PP 来源贴合度](../../../plans/sd-pp-source-fit-m3.md) 是范围控制资料，不替代产品事实来源。
 
 ## 目标版本资料及其支持边界
 
-1. SAP Help Portal，[SAP S/4HANA 2021 Feature Scope Description](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)。实际读取文件标识为 Document Version 11.0（2026-07-22），标注 SAP S/4HANA 2021 / SPS10。§2.6.1.1.2（PDF 第 28–29 页）只支持产品成本对象类型的概述；§2.8.4.2（第 75–77 页）支持生产执行任务、确认可能触发的示例业务操作及高层结算说明；§2.8.4.4（第 84–85 页）提供 Kanban 成本核算的受限例子；§2.13.1.1（第 168–169 页）支持库存 goods issue / goods receipt 与库存增减、物料凭证的概述。该 PDF URL 含 `latest`，动态性已披露，本文不把当前快照冒充固定版 2021 初版，也不把 Kanban 示例泛化。
+1. SAP Help Portal，[SAP S/4HANA 2021 Feature Scope Description](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)。实际读取文件标识为 Document Version 11.0（2026-07-22），标注 SAP S/4HANA 2021 / SPS10。§2.6.1.1.2（PDF 第 28–29 页）只支持产品成本对象类型的概述；§2.8.4.1（第 75 页）支持生产完工、TECO/关闭差异与高层结算接收方说明；§2.8.4.2（第 76–77 页）支持生产执行任务及确认可能触发的示例业务操作；§2.8.4.4（第 84–85 页）提供 Kanban 成本核算的受限例子；§2.13.1.1（第 168–169 页）支持库存 goods issue / goods receipt 与库存增减、物料凭证的概述。该 PDF URL 含 `latest`，动态性已披露，本文不把当前快照冒充固定版 2021 初版，也不把 Kanban 示例泛化。
 2. SAP Help Portal，[Production Order Object Page](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/1813394db23d45aca434092495c4feae.html?version=2021.000)，S/4HANA 2021.000 / BJ5。仅支持该生产订单对象页可查看已记录货物移动的有限说明；页面/角色授权取决于场景，不能替代成本或 FI/CO 分录依据。
 3. SAP S/4HANA 2021 [What's New in FPS01](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.001/en-US/WN_OP2021_FPS01_EN.pdf)，仅作为 PP-PEO FPS01 的特殊例子：相关组件组装动作使用的 planned goods issue 文档设置有特定参数。该特殊 PEO 场景不代表标准离散制造订单的通用发料配置，正文不据此推广。
+4. SAP Help Portal，[Order Split with Component Transfer (No By-Product)](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b17fc052b1a3456cad0bf29ee6d14021.html?version=2021.000)，SAP S/4HANA 2021.000 / BJ5。官方版本条目的索引摘要说明：该拆单功能将父订单组件发料以 262 冲回、对子订单以 261 发料，并重新过账实际组件成本；功能依赖订单拆分设置和 BAdI。规范 HTML direct open 为 0 行可读正文；本篇仅保留这一特定功能的范围说明，不推导普通退料、通用冲销或完整估价/FI/CO 规则。
 
 SAP 系统未连接。本文没有执行库存、订单、成本或结算交易；也没有验证客户配置、角色、估价或会计分录。

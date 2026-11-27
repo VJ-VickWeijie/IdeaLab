@@ -1,7 +1,7 @@
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-27（Asia/Shanghai）  
-**当前实时快照**：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已于该提交合并，绝不再向其追加。本次收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该 main 建立，按顺序完成至 PP-05；PP-05 最终正文 blob `1fffe1c2b6e8e0817e785f64c11f62e6763a58e0`，仍为 Draft。PP-05 工作包已提交到该分支（`4d9e8d7eeb6fa7cf00f33da3df64cd4e63fb3b9e`）；新 PR 尚未创建。全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A 9/50 Role Reviewed（FI-05、MM-01～MM-07、SD-01）、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。五条工作线依次有 8、8、8、9、9 篇。
+**当前实时快照**：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已于该提交合并，绝不再向其追加。本次收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该 main 建立，按顺序完成至 PP-06；PP-06 最终正文 blob `0ae98aa16e2e38d6468f6a2967e342cfc3eed59e`，仍为 Draft。PP-06 正文和收尾记录已随当前分支提交；新 PR 尚未创建。全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A 9/50 Role Reviewed（FI-05、MM-01～MM-07、SD-01）、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。五条工作线依次有 8、8、8、9、9 篇。
 **独立性与状态**：同一 Work 上下文角色模拟不计 Role Reviewed；15/15 PASS 不自动通过证据门禁。本轮 SD-01 经精确正文独立 AI 角色复核后计入 Role Reviewed；SD-02、SD-07 与 PP-01 的独立 AI 复核通过了当前文案/证据边界检查，但各自仍有 M3 核心证据缺口，保持 Draft。PP-01、PP-02、PP-03 的三角色 reviewer-context 各 5 项均在最终正文上 PASS（仅证据边界/措辞）；三篇 M3 核心证据仍未闭合。PP-03 的 FSD 动态 v11/SPS10 与先前 v9/SPS08 抓取差异已记录，正文只按 v11 概念摘录表述。没有推定所有者接受。未连接 SAP，未执行实机、配置、数据库、API 或权限测试。
 **流程版本**：固定 SHA `939ec44036d89cd91622ab96b938be9f02479026` 未更换；IdeaLab 接入文档称 V1.1 正式版，而该固定提交 README 仍称“候选版本”，矛盾已记录于审计报告，待所有者决定是否升级。
 
@@ -52,7 +52,7 @@ PP-05《生产订单与确认》最终正文 blob `1fffe1c2b6e8e0817e785f64c11f6
 
 PP-04 最终正文 blob `26d1459be3a9f6999dacc414fb8ca634da793cda`。补入动态 FSD v11.0/SPS10 中 MRP 与 capacity planning 的范围区分，并将 2021.000 J44 与 Planned Orders API 的固定版官方搜索索引摘要明确标为索引证据；对应 canonical HTML 直开为 0 可读行。动态 FSD 同一路径旧索引曾显示 v9.0/SPS08，正文只引用已直接核对的 v11 内容并披露无本地 PDF 哈希。2025 FPS01 动态 Help 页面和转换专用 Simplification List 均没有被当作 2021 通用算法证据。普通读者、配置顾问、开发者三个独立 AI reviewer-context 针对最终正文各完成 5 个有效质询及原角色复核，15/15 PASS 仅表示证据边界与措辞通过； reviewer-context 是独立 AI 上下文，不是人工 SAP 专家。净需求/库存与日期纳入、批量规则、采购来源、计划日期/firming/MRP Live 差异及 API 完整字段和权限仍未闭合，故 PP-04 保持 Draft，不计 Role Reviewed。未连接 SAP、未做实机或 API/数据库/权限测试。详见[正文](knowledge/PP/02-functions/mrp-planned-order.md)、[审查记录](reviews/work/2026-11-27-m4-pp04-three-role-review.md)、[证据台账](plans/evidence-logistics-m3.md)与[逐篇审计](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
 
-## 当前执行状态与准确游标（2026-11-27；PP-05 检查点）
+## 当前执行状态与准确游标（2026-11-27；PP-06 检查点）
 
 - M4 批次 A 全部 50 篇文件均已在 main：当前 9 篇 Role Reviewed、0 篇 Owner Accepted、41 篇 Draft；全库 Owner Accepted 3/99。
 - 批次 B 仍为 0/46；只有批次 A 全部完成且用户在本窗口明确批准后才能开工。
@@ -61,14 +61,18 @@ PP-04 最终正文 blob `26d1459be3a9f6999dacc414fb8ca634da793cda`。补入动�
 
 | 工作线 | 当前文章 | 文章状态 | 下一游标 |
 | --- | --- | --- | --- |
-| 1 | MM-08～MM-10、SD-01～SD-05 | 1 Role Reviewed、7 Draft | 已完成，转 W2 PP-06 |
-| 2 | SD-06～SD-07、PP-01～PP-06 | 8 Draft | PP-06 |
+| 1 | MM-08～MM-10、SD-01～SD-05 | 1 Role Reviewed、7 Draft | 已完成 |
+| 2 | SD-06～SD-07、PP-01～PP-06 | 8 Draft | 已完成 |
 | 3 | PP-07～PP-09、QM-01～QM-05 | 8 Draft | PP-07 |
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 Draft | QM-06 |
 | 5 | FI-11、CO-01～CO-08 | 9 Draft | FI-11 |
 
-**当前执行顺序**：工作线 1 已完成；工作线 2 已处理 SD-06、SD-07、PP-01～PP-05，下一篇 PP-06，之后按用户指定的工作线顺序推进。核心证据无法补齐时，记录已查来源、具体缺口和下一步，文章继续 Draft 并转下一篇。只有目标版证据足以支持其学习目标且完成可核验的独立角色复核，才可记 Role Reviewed。Owner Accepted 只由用户明确批准。
-**本次工作包更新**：PP-05 保持 Draft。三类独立 AI reviewer-context 对精确最终正文完成 15 项复核并全部 PASS；但一般订单状态机、释放条件、确认取消与凭证逆转、库存触发及恢复、完整 API 合同、客户授权和 FI/CO 影响等 M3 核心缺口仍在，故不计 Role Reviewed。动态 FSD SPS10 范围、固定 2021.000 Help 索引边界及版本差异均已记录。批次计数不变，AI-Workflow SHA 未更换。
+**当前执行顺序**：工作线 1 已完成；工作线 2 已处理 SD-06、SD-07、PP-01～PP-06，现转工作线 3 的 PP-07，之后按用户指定的工作线顺序推进。核心证据无法补齐时，记录已查来源、具体缺口和下一步，文章继续 Draft 并转下一篇。只有目标版证据足以支持其学习目标且完成可核验的独立角色复核，才可记 Role Reviewed。Owner Accepted 只由用户明确批准。
+**最近工作包更新**：PP-06 保持 Draft。三个独立 AI reviewer-context 对精确最终正文各完成 5 项复核；当前的 M3 核心成本估价、退料/冲销、WIP/差异/结算和 FI/CO 过账证据仍不足，故不计 Role Reviewed。动态 FSD SPS10 范围、固定 2021.000 Order Split 索引边界及读取限制均已记录。批次计数不变，AI-Workflow SHA 未更换。
+## 最近工作包（工作线 2）：PP-06（2026-11-27）
+
+PP-06《生产发料、收货与成本》最终正文 blob `0ae98aa16e2e38d6468f6a2967e342cfc3eed59e`。动态 SAP S/4HANA 2021 FSD v11.0/SPS10 仅支持高层生产执行、库存变动/物料凭证、成本对象概览及 Kanban 限定例子；固定 2021.000/BJ5 Order Split 官方索引仅描述特定拆单功能中的父订单 262 冲回、对子订单 261 发料及组件成本重过账，canonical HTML 直开无可读正文。固定版一般估价、退料/冲销、WIP/差异/结算、FI/CO 凭证/科目、字段/API、权限及 EWM/MES 仍无充分直接证据。三个独立 AI reviewer-context（读者、配置顾问、开发者）各复核 5 项；复核通过只说明边界表达，不代替 M3 核心证据门槛，故 PP-06 保持 Draft，不计 Role Reviewed。PP-02、PP-05、CO-04 均在当前分支但仍 Draft，不作为已审查依赖。W2 完成；下一篇 W3 PP-07。批次 A 仍 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99；批次 B 0/46。未连接 SAP，未做实机、配置、数据库、API 或权限测试。详见[正文](knowledge/PP/02-functions/production-goods-cost.md)、[审查记录](reviews/work/2026-11-27-m4-workline-2-pp06-three-role-review.md)、[证据台账](plans/evidence-logistics-m3.md)与[逐篇审计](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
+
 ## 未解决问题与证据边界
 
 继承自 M3 的主题级开放边界，限制相关主张，但不阻止独立文章：

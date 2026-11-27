@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-27 更新）
 
-> 当前交接入口：[HANDOFF.md](HANDOFF.md)。实时基线：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并至 `main`，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该基线建立，当前按顺序完成至 PP-05；PP-05 精确正文 blob 为 `1fffe1c2b6e8e0817e785f64c11f62e6763a58e0`，仍为 Draft。PP-05 工作包已提交到该分支（`4d9e8d7eeb6fa7cf00f33da3df64cd4e63fb3b9e`）；新 PR 尚未创建。当前全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。工作线游标：W1 已完成、W2 PP-06、W3 PP-07、W4 QM-06、W5 FI-11。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
+> 当前交接入口：[HANDOFF.md](HANDOFF.md)。实时基线：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并至 `main`，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该基线建立，当前按顺序完成至 PP-06；PP-06 精确正文 blob 为 `0ae98aa16e2e38d6468f6a2967e342cfc3eed59e`，仍为 Draft。PP-06 正文和收尾记录已随当前分支提交；新 PR 尚未创建。当前全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。工作线游标：W1、W2 已完成、W3 PP-07、W4 QM-06、W5 FI-11。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
 
 ## 当前进度（2026-11-27）
 
@@ -12,7 +12,11 @@
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 篇 Draft |
 | 5 | FI-11、CO-01～CO-08 | 9 篇 Draft |
 
-当前工作线游标：W1 已完成、W2 PP-06、W3 PP-07、W4 QM-06、W5 FI-11。PP-01～PP-05 均经三个独立 AI reviewer-context 各 5 项复核；五篇只通过边界表达检查，M3 核心证据仍缺，继续 Draft、计数不变。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
+当前工作线游标：W1、W2 已完成、W3 PP-07、W4 QM-06、W5 FI-11。PP-01～PP-06 均经三个独立 AI reviewer-context 各 5 项复核；六篇只通过边界表达检查，M3 核心证据仍缺，继续 Draft、计数不变。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
+
+## PP-06 工作包更新（2026-11-27）
+
+PP-06 最终正文 blob 为 `0ae98aa16e2e38d6468f6a2967e342cfc3eed59e`。证据仅限实际读取的动态 SAP S/4HANA 2021 FSD v11.0/SPS10 高层生产执行、库存移动、成本对象概览与 Kanban 特例；固定 SAP S/4HANA 2021.000/BJ5 的 Order Split 索引只支持该特定功能中父订单 262 冲回、子订单 261 发料和实际组件成本重过账，HTML 直开为 0 行可读正文。该窄例不支持一般退料、估价金额、WIP/差异/结算算法、FI/CO 科目、完整 API/数据模型、权限或 EWM/MES 通则。普通读者、配置顾问、开发者的独立 AI reviewer-context 对最终正文各完成 5 项质询与原角色复核，均确认边界表述通过；其中配置顾问指出一处 FSD 章节页码映射错误，已修正并由三角色对新哈希复验。核心证据仍缺，PP-06 继续 Draft，计数不变。PP-02、PP-05、CO-04 在当前分支均存在但为 Draft，不作为已审查依赖。W2 已完成，下一工作线游标 W3 PP-07。批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99；批次 B 0/46 未开始。未连接 SAP，未做实机、配置、数据库、API 或权限测试。详见[正文](knowledge/PP/02-functions/production-goods-cost.md)、[审查记录](reviews/work/2026-11-27-m4-workline-2-pp06-three-role-review.md)、[证据台账](plans/evidence-logistics-m3.md)和[逐篇审计](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
 
 ## PP-05 工作包更新（2026-11-27）
 
