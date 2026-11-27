@@ -1,18 +1,18 @@
 # CareerOS｜项目总入口（2026-11-27 更新）
 
-> 当前交接入口：[HANDOFF.md](HANDOFF.md)。实时基线：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并至 `main`，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该基线建立；本检查点变更前分支 HEAD `c43f011639c8fe1f9fa424732ed94fb10362bfb4`，新 PR 尚未创建。当前全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
+> 当前交接入口：[HANDOFF.md](HANDOFF.md)。实时基线：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并至 `main`，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该基线建立；SD-03 工作包开始时分支 HEAD `e1eb921a345c7add12a8b89bc2ec252a99cdfa3d`，新 PR 尚未创建。当前全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
 
 ## 当前进度（2026-11-27）
 
 | 工作线 | 当前文章 | 状态 |
 | --- | --- | --- |
-| 1 | MM-08～MM-10、SD-01～SD-05（下一游标 SD-03） | 1 Role Reviewed，7 Draft |
+| 1 | MM-08～MM-10、SD-01～SD-05（下一游标 SD-04） | 1 Role Reviewed，7 Draft |
 | 2 | SD-06～SD-07、PP-01～PP-06 | 8 篇 Draft |
 | 3 | PP-07～PP-09、QM-01～QM-05 | 8 篇 Draft |
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 篇 Draft |
 | 5 | FI-11、CO-01～CO-08 | 9 篇 Draft |
 
-当前工作线游标：W1 SD-03、W2 SD-06、W3 PP-07、W4 QM-06、W5 FI-11。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
+当前工作线游标：W1 SD-04、W2 SD-06、W3 PP-07、W4 QM-06、W5 FI-11。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
 
 ## 历史进度日志（当时快照；以当前对账报告为准）
 
@@ -20,7 +20,7 @@
 
 - Workline 1：SD-01《销售业务与组织结构》已提交证据受限草稿及三角色审查记录；普通读者、配置顾问视角、开发者视角各 5 个原问题闭环，共 15/15 AI 问题—答复—修订—原角色复核。固定版组织配置和跨公司开票适用范围仍未闭合，文章保持 drafting，不计入 8/50 reviewed；批次 A 仍 0/50 owner accepted。下一篇 SD-02。详见 [SD-01 正文](knowledge/SD/01-foundations/organization.md)、[审查记录](reviews/work/2026-11-27-m4-sd01-three-role-review.md) 与 [HANDOFF](HANDOFF.md)。
 - Workline 1：SD-02《客户业务伙伴与物料主数据》已提交限缩草稿和三角色审查记录；普通读者、配置顾问视角、开发者视角各完成 5 个原问题闭环，共 15/15 AI 问题—答复—修订—原角色复核。BP grouping/编号、完整伙伴确定配置、物料销售视图/字段/API/权限仍未闭合，保持 drafting、不计入 8/50 reviewed；批次 A 仍为 0/50 owner accepted。下一篇 SD-03。详见 [SD-02 正文](knowledge/SD/01-foundations/customer-product-master.md)、[审查记录](reviews/work/2026-11-27-m4-sd02-three-role-review.md) 与 [HANDOFF](HANDOFF.md)。
-- Workline 1：SD-03《销售订单与交货机制》已提交受限 drafting 正文及三角色审查记录；reader_mm08、consultant_mm08、developer_mm08 三个 AI 角色视角各完成 5 个闭环，所有原问题均经原角色复核 PASS。FSD latest 当次记录为 S/4HANA 2021 SPS10 Version 11.0，动态来源和订单章节页码记录差异已披露；具体部分交货、订单/交货取消、PGI 冲销和权限仍未闭合，因此不计入 8/50 reviewed 或 owner accepted。未连接 SAP、未做系统测试。下一篇 SD-04。详见 [SD-03 正文](knowledge/SD/02-functions/sales-delivery.md)、[审查记录](reviews/work/2026-11-27-m4-sd03-three-role-review.md) 与 [HANDOFF](HANDOFF.md)。
+- Workline 1：SD-03《销售订单与交货机制》已对当前精确正文（blob `dade5b834076bb588fc90b2cfc796d1efa43fdbb`）完成三个独立 AI reviewer-context 各 5 项复核；顾问因 PDF 提取截断产生的 C2 FAIL 已在直接复读 SAP 官方 FSD §2.13.2.1 后撤回，现为 15/15 PASS，正文无需修改。该动态来源识别为 S/4HANA 2021 SPS10 Version 11.0；一般部分交货、取消/拒绝、普通 PGI 冲销和权限仍未闭合，因此保持 Draft，不计 reviewed 或 owner accepted。未连接 SAP、未做系统测试。当前下一篇 SD-04。详见 [SD-03 正文](knowledge/SD/02-functions/sales-delivery.md)、[审查记录](reviews/work/2026-11-27-m4-sd03-three-role-review.md) 与 [HANDOFF](HANDOFF.md)。
 - Workline 1：SD-04《定价、开票与应收集成》已提交受限 drafting 正文及三角色审查记录；reader_mm08、consultant_mm08、developer_mm08 三个 AI 角色视角各完成 5 个闭环，原角色复核 15/15 PASS。FSD 来源限于动态 latest 当次记录的 S/4HANA 2021 SPS10 Version 11.0；读取日期、版本映射与动态链接边界已披露。条件定价、税、收入确认/FI 分录、实际 AR 关联、收款差异、银行资金和权限仍未闭合，因此不计入 8/50 reviewed 或 owner accepted；未连接 SAP、未测 API/权限。当时下一篇 SD-05，现已完成；当前下一项 MM-08。详见 [SD-04 正文](knowledge/SD/02-functions/pricing-billing-ar.md)、[审查记录](reviews/work/2026-11-27-m4-sd04-three-role-review.md) 与 [HANDOFF](HANDOFF.md)。
 - Workline 1：SD-05《SD 常用事务码导航》已提交证据受限正文与三角色审查记录；普通读者、配置顾问、开发者视角各完成 5 个首轮问题闭环，原角色复核 15/15 PASS。固定版证据只支持 GTS 合规状态与巴西账单页等限定场景，以及 Simplification List §49.8 的特定迁移说明；通用销售/交货/开票逐码用途、交货入口、GUI/Fiori、App ID、输入输出和权限仍未闭合，故保持 drafting，不计入 8/50 reviewed 或 owner accepted。未连接 SAP、未做系统/API/配置/权限测试。当时下一项 MM-08，现已完成当前 PR 候选复核；用户交接所述本地副本因执行环境不可用未读取，未当作已提交或已审核；当前下一项 MM-09。详见 [SD-05 正文](knowledge/SD/03-tcodes/transaction-index.md)、[审查记录](reviews/work/2026-11-27-m4-sd05-three-role-review.md) 与 [HANDOFF](HANDOFF.md)。
 - Workline 1：MM-08《MM 常用事务码导航》已将 PR 候选修订至提交 7eb37405554e293553985e434bd24cf0eb3449b9，并由原普通读者、资深配置顾问、普通开发人员视角各复核 5 个原问题，共 15/15 PASS；审查记录附录见 [MM-08 三角色审查记录](reviews/work/2026-11-27-m4-mm08-three-role-review.md)。新补入 2021 Best Practices《Administration Guide》§3.3.2 p.53 的嵌入式 EWM 范围定义，并如实标出 PDF 封面日期 2024-07-05。物料凭证显示入口、通用 MIGO 导航仍缺固定版直接证据，GUI/Fiori/App ID、输入输出与权限仍不完整，故保持 drafting、不计 8/50 reviewed 或 owner accepted。执行环境不可用，未读取用户交接所述未提交本地副本；本条只描述 PR 候选。未连接 SAP、未做实机/API/配置/权限测试。下一项 MM-09。详见 [MM-08 正文](knowledge/MM/03-tcodes/transaction-index.md) 与 [HANDOFF](HANDOFF.md)。
@@ -175,3 +175,5 @@ CO-07《管理会计配置查看》按“暂缓核心”准入建立受限 draft
 ### M4 Workline 5｜CO-08（2026-11-27）
 
 CO-08《管理会计数据模型》按“暂缓核心”准入建立受限 drafting 草稿。固定版资料支持统一报告存储的转换背景、Margin Analysis 与 ACDOCA 的特定关联，以及 deferred summarization 下 ACDOCA/ACDOCD 的特殊生产成本案例；不支持 CO 对象字段、键、基数、一般持久化、API/权限或客户表结构。三角色各 5 个同上下文模拟闭环，共 15；非独立审查、不计 reviewed。未连接 SAP，未查 DDIC/数据库/API。工作线 5 所分配文章已完成推进（全部草稿待独立角色审查/所有者验收）；批次 A 仍 8/50 reviewed、0/50 owner accepted，正式接受 3/99。详见 `knowledge/CO/05-data-model/controlling-data-model.md`、`reviews/work/2026-11-27-m4-co08-three-role-review.md` 和 `plans/evidence-finance-m3.md`。
+
+- Workline 1 收尾检查点（SD-03）：正文保持 Draft；精确正文复核 15/15 PASS，官方 FSD 来源归因复核通过，但 M3 核心流程与权限缺口未解决。批次 A 仍为 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库为 3/99 Owner Accepted。当前工作线游标为 SD-04。
