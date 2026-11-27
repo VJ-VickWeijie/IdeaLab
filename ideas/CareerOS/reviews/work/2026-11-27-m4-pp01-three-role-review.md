@@ -10,12 +10,12 @@
 
 ## 1. 准入判断
 
-M3 逐篇分流将 PP-01 标为“暂缓核心”。其核心包括生产组织与制造模式边界。M3 控制矩阵进一步要求核查组织结构、工厂归属及制造模式差异。原 M3 证据贴合度复核指出，FSD §2.8.3.1 的高层 MRP 说明不证明 Plant 组织关系、按库存/按订单规则、离散/流程制造差异。
+M3 逐篇分流将 PP-01 标为“暂缓核心”。detail-logistics 规划要求补生产组织、工厂角色及 MTS/MTO、离散/流程制造边界。复读已验收的 M3 控制矩阵，未发现 PP-01 或 PP-01～PP-09 单独行，因此不将这些具体要求归述为矩阵的 PP-01 专属条款。原 M3 证据贴合度复核指出，动态 FSD §2.8.3.1 的高层 MRP 说明不证明 Plant 组织关系、按库存/按订单规则、离散/流程制造差异。
 
 本次能直接核对的固定版官方材料只支持狭窄范围标签：
 
-- SAP S/4HANA 2021.000 的 CDS Views for Production Planning 页面列出 BJ5、BJ8、J44。
-- SAP S/4HANA 2021 SPS04 的 HTML5 support 页面在该功能上下文列出多个离散与流程制造 Scope Items。
+- SAP S/4HANA 2021.000 的官方检索索引列出 BJ5、BJ8、J44；该 Help HTML 页面本轮 direct open 返回 0 行，未直接复读正文。
+- SAP S/4HANA 2021 SPS04 固定静态 PDF §3.1.1 / 印刷页 13 在 PI Sheet / work instruction HTML5 功能上下文中列出若干 MTS/MTO、离散/流程制造 Scope Item 名称。
 
 它们不足以关闭文章中心学习目标。故只写证据边界和学习问题清单，文章保持 drafting。
 
@@ -23,9 +23,9 @@ M3 逐篇分流将 PP-01 标为“暂缓核心”。其核心包括生产组织�
 
 | Ref | 固定版官方资料 | 直接支持 | 不支持 |
 | --- | --- | --- | --- |
-| P1 | SAP Help, “CDS Views for Production Planning,” SAP S/4HANA 2021 (Oct 2021), version 2021.000。https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b39ff179522b435584613620f5f4cdd5.html?locale=en-US&state=PRODUCTION&version=2021.000 | 页面说明本版本新增生产计划 CDS views，并列出 BJ5、BJ8、J44 的 Scope Item 名称。 | 工厂组织结构、Scope Item 完整业务意义、实际系统激活、MTS/MTO 规则及制造模式流程。 |
-| P2 | SAP Help, “HTML5 Support for Browser-Based Process Management Applications,” SAP S/4HANA 2021 SPS04, version 2021.004。https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/f8d355117a5f46dd91339076d2af47cc.html?version=2021.004 | 此 HTML5 功能的适用范围列表含离散制造和多项流程制造 Scope Item，包括特定按订单流程制造。 | 全部制造类型清单、生产组织规则、各类型差异或客户系统能力。 |
-| P3 | SAP Help FSD_OP2021_latest.pdf，动态 URL。https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf | 仅作为 M3 来源记录的功能概览定位线索。 | 动态快照可变；不作为固定版 2021/FPS 直接证据。 |
+| P1 | SAP Help, “CDS Views for Production Planning,” SAP S/4HANA 2021 (Oct 2021), version 2021.000。官方检索索引显示页面新增生产计划 CDS views，并列出 BJ5、BJ8、J44；本轮页面 direct open 为 0 行，未直接复读正文。https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b39ff179522b435584613620f5f4cdd5.html?locale=en-US&state=PRODUCTION&version=2021.000 | 索引可支持有限产品范围标签。 | Plant 组织结构、Scope Item 完整业务意义、实际系统激活、MTS/MTO 规则及制造模式流程。 |
+| P2 | SAP《What's New in SAP S/4HANA 2021 SPS04》，Document Version 1.0（2023-05-17），§3.1.1，印刷页 13，静态 PDF 已直接复读。https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.004/en-US/WN_OP2021_SPS04_EN.pdf#page=13 | 列出 PI Sheet / work instruction HTML5 浏览器功能适用的特定 Scope Item 名称，包括 MTS discrete、MTS process orders、MTO process manufacturing 等。 | 仅属该功能的范围标签，不是完整制造类型目录、流程/组织定义、成本/库存规则或客户启用证据。 |
+| P3 | SAP Help FSD_OP2021_latest.pdf，动态 URL；本轮 direct open 显示 Document Version 11.0（2026-07-22），SAP S/4HANA 2021 SPS10。https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf | 仅作版本快照和高层功能概览线索。 | latest 会变；不能冒充 2021.000 固定证据，也不支持完整组织/模式差异。 |
 | M3 记录 | detail-logistics-v0.3.md、evidence-logistics-m3.md、sd-pp-source-fit-m3.md | 确认本篇批准范围、原来源状态与缺口。 | 规划登记不替代文章主张的产品资料。 |
 
 ## 3. 有效闭环
@@ -166,3 +166,11 @@ M3 逐篇分流将 PP-01 标为“暂缓核心”。其核心包括生产组织�
 - CareerOS owner accepted：3/99。
 - 下一篇：PP-02《物料清单 BOM》，路径以 M3 逐篇分流为准。
 - SAP 实机测试：0。
+
+## 2026-11-27｜M3 矩阵边界与官方来源续核
+
+- **M3 矩阵更正**：本次重读 `m3-item-control-matrix-v0.3.md`，全表无 PP-01 或 PP-01～PP-09 独立行。早先把“控制矩阵要求核查组织/制造模式”写成具体 PP-01 要求，归因不准确，现改正。PP-01 门槛来自逐篇 triage（“暂缓核心”）、detail-logistics 和 evidence-logistics 条目；不修改已验收矩阵，也不把缺失行视作豁免。
+- **P1 索引读取限制**：SAP Help 固定版 2021.000 “CDS Views for Production Planning”官方索引显示 BJ5、BJ8、J44 和新增 PP CDS views；HTML direct open 返回 0 行。P1 只支持官方索引可见的有限范围标签。
+- **P2 固定 PDF 直接复读**：SAP《What's New in SAP S/4HANA 2021 SPS04》Document Version 1.0（2023-05-17），§3.1.1 / 印刷页 13，列出适用于 PI Sheet / work instruction HTML5 支持功能的 MTS discrete、MTS process、MTO process 等 Scope Item 名称。它不定义完整制造模式。
+- **排除的近似资料**：检索到的 Plant/Corporate Structure 页面为 2025 版；通用 Make-to-Order 与 MRP Area 页面未锁定 S/4HANA 2021 On-Premise；BJE 页面适用 S/4HANA Cloud 2021。均未用于本文目标版事实。
+- **核心门禁**：SPS04 静态清单仍只支撑特定功能的模式名称，未补足 Plant 生产组织职责、MTS/MTO 需求/库存边界、离散/流程制造差异、成本和权限。PP-01 继续 Draft。未连接 SAP，未做系统或权限测试。
