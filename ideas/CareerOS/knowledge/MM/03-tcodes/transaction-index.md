@@ -37,7 +37,7 @@
 
 SAP S/4HANA 2021 Best Practices《Administration Guide to Implementation of SAP S/4HANA 2021 with SAP Best Practices》的 §3.3.2 “Defining the Scope of Embedded Extended Warehouse Management (EWM)”（PDF 页 53）直接定义了该指南中的嵌入式 EWM：EWM 作为 SAP S/4HANA On-Premise 系统的一部分提供，并可与同一系统、同一 client 中的本地 ERP storage locations 集成。该 PDF 封面标示日期 2024-07-05；本文将它准确标为面向 S/4HANA 2021 的 Best Practices 指南，不把封面日期当作 2021 年出版证明，也不把这一方案范围外推为所有 EWM 部署形态、仓库权限或事务码的通用定义。
 
-这里的 **EWM** 是 Extended Warehouse Management（扩展仓库管理）。SAP 2021 SPS05 页面所说的“同步货物移动”，仅指该页面描述的 Inventory Management 与 EWM 之间的同步处理场景；该功能页面中的 “embedded in SAP S/4HANA” 是这一特定功能的适用条件。前述 §3.3.2 是该 2021 Best Practices 指南对其嵌入式 EWM 方案的定义；指南中的范围项及激活后步骤不表示每个 SAP S/4HANA On-Premise 系统都使用或必须激活这些范围项，也不定义所有 EWM 部署形态。本篇不把 MIGO 短文本特例扩展到其他 EWM 场景，也不要求读者先掌握 EWM 才能学习 MM 事务导航。
+这里的 **EWM** 是 Extended Warehouse Management（扩展仓库管理）。SAP 2021 SPS05 页面所说的“同步货物移动”，仅指该页面描述的 Inventory Management 与 EWM 之间的同步处理场景；该功能页面中的 “embedded in SAP S/4HANA” 是这一特定功能的适用条件。前述 §3.3.2 是该 2021 Best Practices 指南对其嵌入式 EWM 方案的定义；这里的“范围项”是该指南为嵌入式 EWM 场景列出、供 Solution Builder 选择的项目；它不是每套 SAP S/4HANA 系统都必须采用的配置。指南中的范围项及激活后步骤不表示每个 SAP S/4HANA On-Premise 系统都使用或必须激活这些范围项，也不定义所有 EWM 部署形态。本篇不把 MIGO 短文本特例扩展到其他 EWM 场景，也不要求读者先掌握 EWM 才能学习 MM 事务导航。
 
 所以在以下内容核实前，本文不把 `MIGO` 填成通用收货/发货/转储操作总入口，也不将窄场景中的材料凭证 app 名称扩写成一般导航结论：
 
