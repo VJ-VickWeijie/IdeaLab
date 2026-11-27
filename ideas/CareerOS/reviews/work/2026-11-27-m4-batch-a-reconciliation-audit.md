@@ -4,7 +4,7 @@
 - 仓库：VJ-VickWeijie/IdeaLab
 - PR #21：[已合并](https://github.com/VJ-VickWeijie/IdeaLab/pull/21)，合并提交 `c026b3862c9a083c95cffb096f93e141276cfba5`；以下为当时开放状态的历史审计快照，不代表当前 PR 状态。
 - 原审计快照：PR #21 旧工作分支 `careeros-v04-m4-batch1-20261126`，HEAD `41131a194e332c50d98183a092caf41f98105a74`，main `db349fe68e1aa0560ba5546a6382ffe503d0f595`；其当时记录的 282 commits、113 changed files（+10,200 / -108）、开放状态、评论/检查数据仅描述旧快照。
-- 本次收尾新基线：PR #21 合并后的 main 为 `c026b3862c9a083c95cffb096f93e141276cfba5`；工作分支 `careeros-v04-m4-batch-a-closeout-20261127`，本次 SD-05 工作包开始前分支 HEAD `4d6c1f1c86e5f1bc16f7ea491ae958015547b3d5`；后续工作包提交会继续推进此分支。新 PR 尚未创建；完成批次 A 收尾后创建并保持开放。
+- 本次收尾新基线：PR #21 合并后的 main 为 `c026b3862c9a083c95cffb096f93e141276cfba5`；工作分支 `careeros-v04-m4-batch-a-closeout-20261127`，本次 SD-06 工作包开始前分支 HEAD `5543a92912570a387afe3be4a6d29c3eeff67260`；后续工作包提交会继续推进此分支。新 PR 尚未创建；完成批次 A 收尾后创建并保持开放。
 - 本文是逐篇对账和阻塞审计，不是所有者审阅包；42 篇原 Draft 已逐篇审计。本轮对 SD-01、SD-02、SD-03 精确正文重新执行独立 AI reviewer-context 复核；SD-04 当前正文则与既有 15 项独立 reviewer-context 记录、M3 门禁和来源直接对账，不将协调者复读计作新独立复核。状态按目标版证据和 M3 范围判断，不将同上下文模拟当作正式 Role Reviewed。
 - 全程未连接 SAP；没有执行 SAP 实机、配置、数据库、API 或权限测试。
 
@@ -44,7 +44,7 @@ M3 准入取自 [逐篇准入与证据分流](../../plans/m3-item-readiness-tria
 | SD-03 | [SD-03 正文](../../knowledge/SD/02-functions/sales-delivery.md) | 限缩可写 | 当前正文 blob `dade5b834076bb588fc90b2cfc796d1efa43fdbb`；动态 FSD Version 11.0 / S/4HANA 2021 SPS10 已精确定位 §2.13.2.1，支持 sell-from-stock 与三种交货参照类型；M3 的部分交货、取消/拒绝、一般 PGI 冲销及权限仍未闭合。 | [评审记录](2026-11-27-m4-sd03-three-role-review.md)；当前精确正文 15/15 PASS，顾问先前 C2 FAIL 已在直接复读同节后撤回 | **Draft**；仅正文/来源边界通过复核，不以此代替仍缺的核心规则与权限证据 |
 | SD-04 | [SD-04 正文](../../knowledge/SD/02-functions/pricing-billing-ar.md) | 限缩可写 | 当前正文 blob `7d349641c104cffa49f375ec2b5107a5a9f5dda6` 保留动态 FSD Version 11.0 / 2021 SPS10 的开票/AR 高层功能描述；未获可直接复读的固定 2021 证据支持通用定价、税、收入确认/FI 分录、实际 AR 关联、收款差异/银行资金与权限。依赖 SD-03、FI-06 为 Draft，PROCESS-02 不在批次 A 分支。 | [评审记录](2026-11-27-m4-sd04-three-role-review.md)；既有 15/15 独立 AI reviewer-context 记录已逐项对照当前正文；本轮仅来源/依赖复核，不新增闭环 | **Draft**；文章主题级核心目标仍有缺口；后续取得固定版可复读证据并完成原角色复核后再评估 |
 | SD-05 | [SD-05 正文](../../knowledge/SD/03-tcodes/transaction-index.md) | 暂缓核心 | 当前正文 blob `5604d5f31b6b2b78e40cd5304b87eb172e8fb6db`；固定 2021 GTS/Brazil Help 摘录只支持局部入口名，静态 Simplification List §49.8 只支持特征值快速录入的特定迁移例码；通用销售/交货/开票导航、逐码用途、输入输出、GUI/Fiori 与权限未闭合。 | [评审记录](2026-11-27-m4-sd05-three-role-review.md)；既有 15/15 独立 AI reviewer-context 闭环逐项对照，来源读取限制已补记 | **Draft**；M3 暂缓核心目标未满足；来源记录没有升级为完整入口目录 |
-| SD-06 | [SD-06 正文](../../knowledge/SD/04-configuration/sales.md) | 限缩可写 | 文章保留价格用途、特定审批和 2021 FPS01 订阅场景的窄示例；通用 IMG 节点、业务分支及系统只读/授权路径未核。 | [评审记录](2026-11-27-m4-sd06-three-role-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
+| SD-06 | [SD-06 正文](../../knowledge/SD/04-configuration/sales.md) | 限缩可写 | 当前正文 blob `48293fd49ac07ad4ee42ad3ed9b4f48e59a3b1a8` 的三个固定版示例经复核；通用 IMG 节点/行为、业务分支、交货/开票与科目决定、系统只读/授权路径仍未核。M3 控制矩阵无 SD-01～SD-07 独立行。 | [评审记录](2026-11-27-m4-sd06-three-role-review.md)；15 项同一 Work 上下文角色模拟，不计独立复核 | **Draft**；按 triage/detail-logistics 门禁保留边界，补足独立审查与目标版证据后再评估 |
 | SD-07 | [SD-07 正文](../../knowledge/SD/05-data-model/sales-delivery.md) | 限缩可写 | 固定简化资料支持转换语境下部分状态表/字段变更；动态 FSD 只支持高层开票能力；单据流字段、主外键/基数、released API/CDS 和权限未闭合。 | [评审记录](2026-11-27-m4-workline-2-sd07-three-role-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | PP-01 | [PP-01 正文](../../knowledge/PP/01-foundations/production-organization.md) | 暂缓核心 | 现有固定材料仅支持少数产品范围标签；生产组织关系、工厂归属及按库存/按订单、离散/流程制造的业务边界未闭合。 | [评审记录](2026-11-27-m4-pp01-three-role-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | PP-02 | [PP-02 正文](../../knowledge/PP/01-foundations/bom.md) | 限缩可写 | 固定版来源支持有限多层 BOM 与特定版本能力；数量/UoM、替代项选择、有效期、组件缺失和具体表字段规则仍不足。M3 矩阵无独立 PP-02 行，逐篇准入有记录。 | [评审记录](2026-11-27-m4-pp02-three-role-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
@@ -81,7 +81,7 @@ M3 准入取自 [逐篇准入与证据分流](../../plans/m3-item-readiness-tria
 
 ## 依赖项实时纠错
 
-上次记录中有文章把已经加入当前 PR 分支、但尚未 Role Reviewed 的依赖文章写成“文件不存在”。基线 HEAD 已包含这些文件：SD-03、SD-04、PP-02、PP-03、PP-04、PP-05、PP-06、PP-08、CO-04。审计后已在对应文章与审查日志中改成“文件存在但仍是 Draft，不能用作已审查依赖”。PROCESS-02、PROCESS-05、PROCESS-06 仍不在批次 A 分支，相关“不存在”说明仍准确。PP-01 对 MM-01 的依赖也已更新为当前状态；M3 控制矩阵缺少 PP-02、PP-03、PP-04、PP-05、PP-09 独立行这一事实被保留，逐篇准入记录仍是对应范围依据。
+上次记录中有文章把已经加入当前 PR 分支、但尚未 Role Reviewed 的依赖文章写成“文件不存在”。基线 HEAD 已包含这些文件：SD-03、SD-04、PP-02、PP-03、PP-04、PP-05、PP-06、PP-08、CO-04。审计后已在对应文章与审查日志中改成“文件存在但仍是 Draft，不能用作已审查依赖”。PROCESS-02、PROCESS-05、PROCESS-06 仍不在批次 A 分支，相关“不存在”说明仍准确。PP-01 对 MM-01 的依赖也已更新为当前状态；重新读取 M3 控制矩阵确认其当前表没有 SD-01～SD-07 或 PP-01～PP-09 的任何独立行（先前只列出若干 PP 缺行，范围不完整）。矩阵缺行不取消逐篇准入/范围要求；本审计不改写已验收 M3 文件，也不从相邻行推导要求。
 
 ## FI-04 续核与版本边界
 
@@ -89,7 +89,7 @@ M3 准入取自 [逐篇准入与证据分流](../../plans/m3-item-readiness-tria
 
 ## M3 准入记录缺行与 AI-Workflow 固定版矛盾
 
-1. M3 逐篇分流覆盖 PP-02、PP-03、PP-04、PP-05、PP-09，但 [M3 控制矩阵](../../plans/m3-item-control-matrix-v0.3.md)缺少这些 ID 的独立矩阵行。此处只记录并继续按逐篇准入/证据记录审查；没有改写 M3 已验收范围或从相邻 ID 推导要求。
+1. 重读 [M3 控制矩阵](../../plans/m3-item-control-matrix-v0.3.md) 的 ID 列后，确认未列 SD-01～SD-07 与 PP-01～PP-09 的独立矩阵行；尽管矩阵称物流/流程/财务等覆盖 72 项，其表内没有这些 SD/PP 行。对 SD 与 PP 继续按各自 M3 逐篇准入、detail-logistics 和 evidence 记录执行；此审计只记录矩阵缺行，不修改 M3 已验收文件，也不据缺行免除门禁或从邻近 ID 推导要求。
 2. [IdeaLab 接入规范](../../../../docs/AI_WORKFLOW_INTEGRATION.md)把固定 SHA `939ec44036d89cd91622ab96b938be9f02479026` 的 AI-Workflow V1.1 描述为已合并正式版本；同一固定提交的 [AI-Workflow README](https://github.com/VJ-VickWeijie/AI-Workflow/blob/939ec44036d89cd91622ab96b938be9f02479026/README.md)仍将 V1.1 标为“候选版本”。固定生命周期、组队、质量门禁和 Work/Codex 规范已核读。依既有所有者指示，本次不更换 SHA，不把冲突当作升级授权。
 
 ## 本轮处理与下一游标
@@ -163,3 +163,15 @@ IdeaLab 根 README 与 docs/AI_WORKFLOW_INTEGRATION.md 将 SHA 939ec44036d89cd91
 - **下一工作线游标**：W1 已完成；W2 SD-06；W3 PP-07；W4 QM-06；W5 FI-11。
 - 来源和审查记录更新见 [物流证据台账](../../plans/evidence-logistics-m3.md) 与 [SD-05 审查记录](2026-11-27-m4-sd05-three-role-review.md)。
 - 未连接 SAP；未执行实机、配置、API、权限或事务测试。
+
+
+## 新分支收尾检查点 6：SD-06（2026-11-27）
+
+- **工作包起点**：SD-06 前分支 HEAD `5543a92912570a387afe3be4a6d29c3eeff67260`；main 合并基线不变。
+- **正文**：SD-06 blob `48293fd49ac07ad4ee42ad3ed9b4f48e59a3b1a8`，未修改。Condition Purpose 2021.000、借项申请审批 2021.000 两个官方 Help 页面经索引摘录核对但 HTML direct open 不可读；2021 FPS01 PSFX 固定 PDF p.96–97 已直接复读。三例均是窄场景，不能替代通用 SD 配置与权限范围。
+- **M3 来源与状态**：逐篇准入为“限缩可写”，要求准确 IMG 节点、业务分支和访问权限；detail-logistics 还包括文档类型、交货/开票、定价、科目决定与组织/主数据前提。SD-06 保持 Draft。
+- **矩阵完整性**：复核发现 M3 控制矩阵没有 SD-01～SD-07 或 PP-01～PP-09 任一独立 ID 行。此为既有已验收资料中的结构缺口；本轮不更改该矩阵，按逐篇准入和范围继续审查。
+- **审查性质**：既有 15 项为同一 Work 上下文角色模拟，不能计正式 Role Reviewed；本轮来源复核也不新增独立审查闭环。
+- **计数**：批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99 Owner Accepted；批次 B 0/46 未开始。
+- **工作线游标**：W1 已完成；W2 SD-07；W3 PP-07；W4 QM-06；W5 FI-11。
+- 未连接 SAP；未做 IMG、事务码、配置、权限或系统测试。
