@@ -144,7 +144,7 @@ Work 于 2026-11-26 从 SAP 官方 S/4HANA 2021 动态 FSD 直接定位 §2.12.4
 ## SD-07 2026-11-27 固定版来源续核
 
 - 官方 SAP《Simplification List for SAP S/4HANA 2021》Document Version 1.25（2022-05-25）封面明确覆盖 Initial Shipment、FPS 1、FPS 2。本轮直接打开该静态 PDF 并复读 §36.8–36.9：§36.8 印刷页 789–790 说明 VBUK/VBUP 状态字段迁入列明的单据表、VBFA 简化、VBTYP/VBTYPL 变化及特定追加字段转换前提；不构成完整 DDIC/API 数据字典。
-- §36.9（印刷页 791–793）讨论早期目标发行版和系统历史：1511/1610 初期对 VBFA 的 STUFE、间接关系有特定变化，后续版本重新存储间接关系；该段指出表及内容不兼容变化、直接读取 VBFA 的客户代码需检查，部分具体历史转换需要文档流重建。它不提供 SAP S/4HANA 2021 的完整键、字段、关系基数/API 合同，也不能确定当前客户系统经历过哪条转换路径。正文已新增这条范围边界，不把它推广成 2021 通用规则。
-- 固定版 SAP Help “OData API: Sales Order - Simulate (A2X)” 搜索结果给出 2021-10、Available As Of SAP S/4HANA 2021、Scope Item BD9，以及 API_SALES_ORDER_SIMULATION_SRV 的头/项目级扩展属性；页面 direct open 返回 0 行。本证据只支撑销售订单模拟 API 的窄例，不是完整发布接口目录/字段合同或目标系统授权证明。
+- §36.9（印刷页 791–793）分开列出特定历史条件：转换目标为 1511 SP00–SP03 或 1610 SP00–SP01；或新安装系统的起始/曾经版本为 1511 SP00–SP03 或 1610 SP00–SP01。它记录早期版本中 STUFE/间接关系的变化及 1709 SP00、1610 SP02、1511 SP04 起恢复存储的历史。明确列出的重建场景为：转换至 1610 SP00/SP01 或 1511 SP00–SP03；新安装于 1610 SP00/SP01/SP02 或 1511 SP00–SP04。该段提醒检查直接读取 VBFA 的客户代码，但不是 S/4HANA 2021 通用行为/键合同，也不表示一般 2021 系统缺少间接关系或需要重建；客户系统具体转换历史仍未核。正文据此更正了条件和重建范围。
+- 固定版 SAP Help “OData API: Sales Order - Simulate (A2X)” 官方检索索引摘录显示 2021-10、Available As Of SAP S/4HANA 2021、Scope Item BD9，以及 API_SALES_ORDER_SIMULATION_SRV 的头/项目级扩展属性；本轮页面 direct open 返回 0 行，未直接复读正文。本项只作为官方索引可见的窄范围模拟 API 线索，不称完整发布接口目录/字段合同、目标系统可用性或授权证明。
 - 官方动态 FSD PDF direct open 显示 Version 11.0（2026-07-22），封面为 SAP S/4HANA 2021；本来源只支持正文标明的 SPS10 高层开票范围，不能代表固定 2021.000 初始版。
 - **门禁结论**：M3 “限缩可写”仍要求单据流字段、主键、接口及关联基数。§36.9 是历史分支，不闭合这些目标；SD-03/04、FI-11 仍为 Draft。SD-07 继续 Draft，未执行 SE16、数据库、ABAP、API 或权限测试。
