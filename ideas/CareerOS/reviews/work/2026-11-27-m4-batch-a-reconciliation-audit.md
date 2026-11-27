@@ -36,7 +36,7 @@ M3 准入取自 [逐篇准入与证据分流](../../plans/m3-item-readiness-tria
 
 | ID | 正文 | M3 准入 | 已核正文的目标版证据边界与未解决风险 | 既有审查证据 | 建议状态 |
 | --- | --- | --- | --- | --- | --- |
-| MM-08 | [MM-08 正文](../../knowledge/MM/03-tcodes/transaction-index.md) | 暂缓核心 | 目标版固定来源只确认有限物料主数据/采购入口；通用 MIGO 与物料凭证显示入口、完整导航映射和用户权限仍缺直接证据。 | [评审记录](2026-11-27-m4-mm08-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
+| MM-08 | [MM-08 正文](../../knowledge/MM/03-tcodes/transaction-index.md) | 暂缓核心 | 固定版 2021 SPS05 资料确认特定嵌入式 EWM 同步移动中的 MIGO 短文本及 Display Material Document List app；通用 MIGO 操作导航、一般物料凭证显示范围/入口代码、完整导航映射和用户权限仍缺直接证据。 | [评审记录](2026-11-27-m4-mm08-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | MM-09 | [MM-09 正文](../../knowledge/MM/04-configuration/purchasing-inventory.md) | 暂缓核心 | 普通估价库存收货的借贷方向、OBYC/BSX/WRX 触发与映射仍缺固定版完整证据；记录保留来源方向冲突，且无客户只读/授权测试。 | [评审记录](2026-11-27-m4-mm09-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | MM-10 | [MM-10 正文](../../knowledge/MM/05-data-model/purchasing-inventory.md) | 暂缓核心 | PR/PO/采购历史/物料凭证完整键、字段、基数、物理表/兼容视图、released API 与权限未闭合；FSD 当前可见版本是动态 SPS10 快照。 | [评审记录](2026-11-27-m4-mm10-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | SD-01 | [SD-01 正文](../../knowledge/SD/01-foundations/organization.md) | 限缩可写 | 固定版证据可支持有限组织关系；完整组织配置、跨公司开票适用条件、客户配置/API/权限仍未核。PROCESS-02 未进入批次 A 分支。 | [评审记录](2026-11-27-m4-sd01-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |

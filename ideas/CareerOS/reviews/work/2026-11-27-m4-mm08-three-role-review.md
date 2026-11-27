@@ -218,3 +218,9 @@ Reviewer context: `/root/developer_mm08`; AI review lens, not a human SAP develo
 | R1.15 对象、输入输出与关联 | 对象表、技术边界和 MM-02/04/05/06 链接均在候选中 | PASS；未虚构字段/API 合同 |
 
 **实际读取限制**：开发者读取 GitHub 候选和审查记录；没有重新打开 SAP 原始页面，也没有执行系统、API 或权限验证。
+
+## 2026-11-27 固定版资料追加核对（未构成角色复核）
+
+SAP S/4HANA 2021 SPS05 官方页面 [Add Short Text to Goods Movement](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/f5d3e1005efd4e86acf9a65abf428082/ee4e8d80dc2d4625a08329d995128aea.html?version=2021.005) 直接说明：特定的 Inventory Management 与嵌入式 EWM 同步货物移动场景可在 Post Goods Movement（transaction `MIGO`）输入项目短文本；对应文本可在 Display Material Document List app 中查看。本轮已将这一窄主张补入正文，明确不外推到一般 MIGO 导航、全部物料凭证显示或权限。
+
+此改动发生在此前 15 项独立 AI 角色复核的文章基线之后。当前未重新调用原审查上下文，也未完成原角色复核；本附录是来源登记与作者侧状态更新，不是新的角色闭环。MM-08 继续保持 `drafting`，不计正式 Role Reviewed。

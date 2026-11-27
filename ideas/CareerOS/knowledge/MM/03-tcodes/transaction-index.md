@@ -33,17 +33,17 @@
 
 ## MIGO 与物料凭证：本稿尚未建立通用导航映射
 
-**仅作版本/场景受限的证据示例，不是已核实的 MIGO 通用导航条目。** 目前读到的固定版直接证据之一，是 SAP S/4HANA 2021 SPS05 的 “Add Short Text to Goods Movement”。它支持的范围很窄：货物移动/转储项目级短文本（最多 50 个字符）；对于库存管理到 EWM 的同步货物移动，资料明确限定为 S/4HANA 中嵌入式 EWM 场景，并指出可在 Post Goods Movement（transaction `MIGO`）中输入该文本。该功能页不能单独证明 MIGO 的完整用途、所有模式、材料凭证显示路径或一般权限边界。
+**仅作版本/场景受限的证据示例，不是已核实的 MIGO 通用导航条目。** 目前读到的固定版直接证据之一，是 SAP S/4HANA 2021 SPS05 的 “Add Short Text to Goods Movement”。它支持的范围很窄：货物移动/转储项目级短文本（最多 50 个字符）；对于库存管理到 EWM 的同步货物移动，资料明确限定为 S/4HANA 中嵌入式 EWM 场景，并指出可在 Post Goods Movement（transaction `MIGO`）中输入该文本。该功能页不能单独证明 MIGO 的完整用途、所有模式、一般材料凭证显示入口或权限边界。它只说明上述短文本可以在对应物料凭证中通过 **Display Material Document List** app 查看；这不足以证明一般物料凭证显示的适用范围、GUI 事务码、所有模式或用户权限。
 
 SAP S/4HANA 2021 Best Practices《Administration Guide to Implementation of SAP S/4HANA 2021 with SAP Best Practices》的 §3.3.2 “Defining the Scope of Embedded Extended Warehouse Management (EWM)”（PDF 页 53）直接定义了该指南中的嵌入式 EWM：EWM 作为 SAP S/4HANA On-Premise 系统的一部分提供，并可与同一系统、同一 client 中的本地 ERP storage locations 集成。该 PDF 封面标示日期 2024-07-05；本文将它准确标为面向 S/4HANA 2021 的 Best Practices 指南，不把封面日期当作 2021 年出版证明，也不把这一方案范围外推为所有 EWM 部署形态、仓库权限或事务码的通用定义。
 
 这里的 **EWM** 是 Extended Warehouse Management（扩展仓库管理）。SAP 2021 SPS05 页面所说的“同步货物移动”，仅指该页面描述的 Inventory Management 与 EWM 之间的同步处理场景；该功能页面中的 “embedded in SAP S/4HANA” 是这一特定功能的适用条件。前述 §3.3.2 是该 2021 Best Practices 指南对其嵌入式 EWM 方案的定义；指南中的范围项及激活后步骤不表示每个 SAP S/4HANA On-Premise 系统都使用或必须激活这些范围项，也不定义所有 EWM 部署形态。本篇不把 MIGO 短文本特例扩展到其他 EWM 场景，也不要求读者先掌握 EWM 才能学习 MM 事务导航。
 
-所以在以下内容核实前，本文不把 `MIGO` 填成通用收货/发货/转储操作总入口，也不列材料凭证显示代码或 Fiori 应用清单：
+所以在以下内容核实前，本文不把 `MIGO` 填成通用收货/发货/转储操作总入口，也不将窄场景中的材料凭证 app 名称扩写成一般导航结论：
 
-1. SAP S/4HANA 2021 On-Premise 对 MIGO 通用职责与所覆盖业务对象的直接固定版说明；
-2. 目标版材料凭证显示入口、它的对象与显示/修改边界；
-3. 如需将 Fiori 应用并入导航表，逐应用核对 2021 On-Premise 的直接资料和 app ID；
+1. SAP S/4HANA 2021 On-Premise 对 MIGO 通用职责、业务对象和常见模式的直接固定版说明；
+2. 一般物料凭证显示入口、目标版适用范围及 GUI 事务码/显示与修改边界；当前只确认一个嵌入式 EWM 同步短文本示例中的 **Display Material Document List** app；
+3. 如需将其他 Fiori 应用并入导航表，逐应用核对 2021 On-Premise 的直接资料和 app ID；
 4. 对任一代码或应用的系统级授权结论，须在具体系统中验证；本项目没有连接 SAP 系统，故本稿不作此类结论。
 
 ## 无写权限时的学习方式
@@ -61,12 +61,12 @@ SAP S/4HANA 2021 Best Practices《Administration Guide to Implementation of SAP 
 2. **物料主数据视图与组织层级边界**：[Creating a Material Master Record — SAP S/4HANA 2021 (Oct 2021)](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/f7fddfe4caca43dd967ac4c9ce6a70e4/36528c53f894ee23e10000000a174cb4.html?locale=en-US&version=2021.000)。本文只引用视图受物料类型配置影响、部门数据维护存在授权前提等限制。
 3. **采购订单单屏事务族与操作边界**：[Purchase Order – Single-Screen Transaction (ME21N, ME22N, and ME23N), SAP S/4HANA 2021 (Oct 2021)](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/7e80b65334e6b54ce10000000a174cb4.html?version=2021.000)；[Create, Change, and Display Purchase Orders, same fixed version](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/af9ef57f504840d2b81be8667206d485/8780b65334e6b54ce10000000a174cb4.html?version=2021.000)。支持页面标题中的事务族以及授权、单据状态边界，不作为每个代码的唯一模式/权限矩阵。
 4. **MM01/MM02/MM03 特定 MRP 字段变更**：[Simplification List for SAP S/4HANA 2021, PDF page 151](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=151)。只用于说明证据范围有限，不用于扩展事务导航主张。
-5. **MIGO 短文本特例**：[Add Short Text to Goods Movement — What's New in SAP S/4HANA 2021 SPS05](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/f5d3e1005efd4e86acf9a65abf428082/ee4e8d80dc2d4625a08329d995128aea.html?version=2021.005)。只支持该 SPS05 功能及文中明确的同步 IM→嵌入式 EWM 条件。
+5. **MIGO 与物料凭证列表的受限示例**：[Add Short Text to Goods Movement — What's New in SAP S/4HANA 2021 SPS05](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/f5d3e1005efd4e86acf9a65abf428082/ee4e8d80dc2d4625a08329d995128aea.html?version=2021.005)。支持在特定 EWM 同步货物移动场景中通过 MIGO 输入项目短文本，并用 Display Material Document List app 查看对应物料凭证中的文本；不证明通用 MIGO 导航、一般物料凭证显示范围或权限。
 6. **嵌入式 EWM 的直接定义与方案边界**：[Administration Guide to Implementation of SAP S/4HANA 2021 with SAP Best Practices, §3.3.2, PDF p.53](https://help.sap.com/doc/b4447b6727684f13917622cf63e1eb98/2021/en-US/AdminGuideS4HANAImpl_HELP_EN.pdf#page=53)。该节把 Embedded EWM 定义为 EWM 作为 SAP S/4HANA On-Premise 系统的一部分提供，并可集成到同一系统和 client 中的本地 ERP storage locations。PDF 封面显示 2024-07-05；这是面向 S/4HANA 2021 的 Best Practices 指南，不作为“2021 年发布”的证据。指南 §3.5.4.5 的激活后步骤也只适用于其所列方案范围项；两者均不作为通用产品架构、系统部署或权限结论。
 
 ## 当前未解决项
 
-- **核心缺口**：尚未取得足以支撑“材料凭证显示入口”与 MIGO 通用导航用途的 2021 On-Premise 固定版直接资料。本文状态保持 `drafting`。
+- **核心缺口**：尚未取得足以支撑一般物料凭证显示入口/范围与 MIGO 通用导航用途的 2021 On-Premise 固定版直接资料。2021 SPS05 资料只支持特定 EWM 短文本查看 app。本文状态保持 `drafting`。
 - 没有将较新版事务索引或 Fiori app ID 表推回 2021。
 - 没有连接 SAP 系统，没有测试 GUI/Fiori、账号权限、角色、配置或单据结果。
 - 在核心导航范围补足并完成原角色复核前，不计入 `reviewed`。
