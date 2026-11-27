@@ -102,3 +102,10 @@ Work 于 2026-11-26 从 SAP 官方 S/4HANA 2021 动态 FSD 直接定位 §2.12.4
 - **访问限制**：官方固定版链接 `https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/19b977e649f14e32830563367b2429ab.html?version=2021.000` 在本轮直接打开返回零行；上述内容只从 SAP 官方搜索索引摘录观察到，未能直接复读全文。本条仅登记为目标版窄场景候选，不作为普通 sell-from-stock 的 PGI reversal 规则、客户权限证明或已核实操作指引，不提升准入/审查状态。
 - 同轮搜索还找到 `Fixing Quantities and Dates in Sales Documents` 的 2025.001 页面与 `Goods Issue Reversal` 的 2025 FPS02 页面；它们不是固定 S/4HANA 2021 证据，未用于 SD-03 的结论。
 - M3 对 SD-03 的开放项仍包括一般部分交货、销售/交货取消或拒绝、普通 PGI 冲销规则及客户权限。除非取得可直接读取的适用版来源，否则文章维持 Draft；该搜索附录不改变原 M3 限缩准入。
+
+
+## 2026-11-27 FSD 精确定位补充｜SD-03 出库交货来源
+
+再次直接定位 SAP 官方 `FSD_OP2021_latest.pdf` §2.13.2.1 *Delivery Management*（本轮已识别文档 Version 11.0，2026-07-22，S/4HANA 2021 SPS10）：PDF 正文对 Outbound Deliveries 列出 sell-from-stock、returns 和 stock transfer 场景；同节 Key Features 又明确出库交货可以“with reference to a sales order”、“with reference to a stock transport order”或“without any reference”（SAP Help PDF 提取行 4337–4340、4375；打印页约 177–179）。因此，SD-03 正文中把 sell-from-stock 作为受限示意、同时明确交货可从其他场景产生并非所有 delivery 都源自销售订单的来源归因，能由该动态 SPS10 文件对应章节支持；无需为此更改文章。
+
+此补充只解决上述有限来源定位，不将动态 FSD 升格为不可变的 S/4HANA 2021 初始版依据；正文仍需保留 SPS10 边界。一般部分交货、订单/交货取消或拒绝、普通 PGI 冲销及客户权限仍未闭合。此前登记的固定 2021 4RQ 特殊 3PL 索引候选仍不可用于这些一般规则。
