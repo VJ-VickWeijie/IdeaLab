@@ -1,8 +1,8 @@
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-27（Asia/Shanghai）  
-**当前实时快照**：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已于该提交合并，绝不再向其追加。本次收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该 main 建立；SD-06 工作包开始时分支 HEAD `5543a92912570a387afe3be4a6d29c3eeff67260`；SD-07 工作包开始时分支 HEAD `0faa75e4bdea9dbc393cc6df089176d307b2d17e`；新 PR 尚未创建。全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A 9/50 Role Reviewed（FI-05、MM-01～MM-07、SD-01）、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。五条工作线依次有 8、8、8、9、9 篇。
-**独立性与状态**：同一 Work 上下文角色模拟不计 Role Reviewed；15/15 PASS 不自动通过证据门禁。本轮 SD-01 经精确正文独立 AI 角色复核后计入 Role Reviewed；SD-02 虽完成新的精确正文 15/15 复核，M3 范围缺口仍未闭合，保持 Draft。没有推定所有者接受。未连接 SAP，未执行实机、配置、数据库、API 或权限测试。
+**当前实时快照**：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已于该提交合并，绝不再向其追加。本次收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该 main 建立，按顺序完成至 PP-01；PP-01 最终正文 blob `2c8d036bcedc137e5a0cc13ee1846719d2006bd9`，仍为 Draft。新 PR 尚未创建。全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A 9/50 Role Reviewed（FI-05、MM-01～MM-07、SD-01）、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。五条工作线依次有 8、8、8、9、9 篇。
+**独立性与状态**：同一 Work 上下文角色模拟不计 Role Reviewed；15/15 PASS 不自动通过证据门禁。本轮 SD-01 经精确正文独立 AI 角色复核后计入 Role Reviewed；SD-02、SD-07 与 PP-01 的独立 AI 复核通过了当前文案/证据边界检查，但各自仍有 M3 核心证据缺口，保持 Draft。PP-01 三角色 reviewer-context 各 5 项均 PASS，不代表生产组织与制造模式学习目标已证。没有推定所有者接受。未连接 SAP，未执行实机、配置、数据库、API 或权限测试。
 **流程版本**：固定 SHA `939ec44036d89cd91622ab96b938be9f02479026` 未更换；IdeaLab 接入文档称 V1.1 正式版，而该固定提交 README 仍称“候选版本”，矛盾已记录于审计报告，待所有者决定是否升级。
 
 ## 当前仓库、分支与 PR
@@ -44,8 +44,8 @@
 - MM-07《价格单位、数量单位与换算》完成 15 个有效闭环：普通读者 5、配置顾问 5、开发者 5；状态 reviewed，待所有者验收。正文区分 PO 订单单位、订单价格单位和教学用计价数量，例题假设已限定；未推断单位因子存储字段、发票匹配或 BAPI 字段覆盖根因。记录见 `reviews/work/2026-11-26-m4-mm07-three-role-review.md`。
 - 没有连接 SAP 系统或执行实机测试；没有声称验证客户配置、权限或生产凭证。
 
-- **最近工作包（工作线 2）**：SD-07 精确正文 blob `7a00a76187960d5279c8052071731bc9742efb7a` 已完成读者、顾问、开发三个独立 AI reviewer-context 各 5 项复核，15/15 PASS。新增固定 2021 Simplification List §36.9 的早期 VBFA 历史边界，精确区分旧版本转换与新安装条件；S3 固定版 API 页面仅使用 SAP 官方索引摘录（direct open 0 行）。M3 的完整字段/键/基数/组织关系/SD-FI/API/CDS/权限证据仍缺，故文章保持 Draft，不计 Role Reviewed。当前游标 W2 PP-01。详见 SD-07 review、证据台账和实时审计。
-## 当前执行状态与准确游标（2026-11-27；SD-07 检查点）
+- **最近工作包（工作线 2）**：PP-01 最终正文 blob `2c8d036bcedc137e5a0cc13ee1846719d2006bd9` 已完成读者、配置顾问、开发三个独立 AI reviewer-context 各 5 项复核，15/15 PASS（限证据边界）。P1 是固定 2021.000 官方索引，页面 direct open 0 行；P2 固定 SPS04 PDF 仅列 PI Sheet/work-instruction HTML5 功能范围标签，并已说明 enhancement 激活不证明客户系统 Scope Item 许可/部署/启用。Plant 组织、MTS/MTO、离散/流程制造及其业务影响仍缺固定版直接证据，故保持 Draft，不计 Role Reviewed。当前游标 W2 PP-02。详见 PP-01 review、证据台账和实时审计。
+## 当前执行状态与准确游标（2026-11-27；PP-01 检查点）
 
 - M4 批次 A 全部 50 篇文件均已在 main：当前 9 篇 Role Reviewed、0 篇 Owner Accepted、41 篇 Draft；全库 Owner Accepted 3/99。
 - 批次 B 仍为 0/46；只有批次 A 全部完成且用户在本窗口明确批准后才能开工。
@@ -60,8 +60,8 @@
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 Draft | QM-06 |
 | 5 | FI-11、CO-01～CO-08 | 9 Draft | FI-11 |
 
-**当前执行顺序**：工作线 1 已完成；工作线 2 已处理 SD-06、SD-07，下一篇 PP-01，之后按用户指定的工作线顺序推进。核心证据无法补齐时，记录已查来源、具体缺口和下一步，文章继续 Draft 并转下一篇。只有目标版证据足以支持其学习目标且完成可核验的独立角色复核，才可记 Role Reviewed。Owner Accepted 只由用户明确批准。
-**本次工作包更新**：SD-07 保持 Draft；固定版 §36.9 仅补足早期 VBFA 版本历史，字段、键、基数、接口、组织约束和 SD-FI 关系仍未闭合。三独立 AI 角色视角各 5/5 PASS，但不替代 M3 目标版证据门禁。W2 下一篇 PP-01；批次计数不变，AI-Workflow SHA 未更换。
+**当前执行顺序**：工作线 1 已完成；工作线 2 已处理 SD-06、SD-07、PP-01，下一篇 PP-02，之后按用户指定的工作线顺序推进。核心证据无法补齐时，记录已查来源、具体缺口和下一步，文章继续 Draft 并转下一篇。只有目标版证据足以支持其学习目标且完成可核验的独立角色复核，才可记 Role Reviewed。Owner Accepted 只由用户明确批准。
+**本次工作包更新**：PP-01 保持 Draft；P1/P2 仅支持有限 Scope Item 标签，Plant 组织职责、MTS/MTO 规则、离散/流程差异与成本/库存影响仍未闭合。读者、配置顾问、开发三个独立 AI reviewer-context 各 5 项均 PASS，但仅确认边界安全，不替代 M3 目标版证据门禁。W2 下一篇 PP-02；批次计数不变，AI-Workflow SHA 未更换。
 ## 未解决问题与证据边界
 
 继承自 M3 的主题级开放边界，限制相关主张，但不阻止独立文章：
@@ -170,7 +170,7 @@ PR #21 已合并，不要向该 PR 追加提交。批次 A 收尾从 `main` HEAD
 
 - SD-06《销售配置查看》已建立正文草稿，状态 drafting；三种角色视角各完成 5 个同上下文问题—答复—修订—复核循环，共 15 个。它们不是独立审查或真人专家意见。准确的通用销售 IMG 分支、目标系统只读访问路径/授权，以及交货、开票与科目决定证据仍未闭合。
 - SD-06 的 15 个角色视角循环不计入批次 A reviewed 数：批次 A 仍为 8/50 reviewed、0/50 owner accepted；CareerOS 正式接受仍为 3/99。SAP 系统未连接、实机验证为 0。
-- 工作线 2 下一篇：PP-01《生产业务与组织结构》，路径以逐篇分流为准；该项当前分流为“暂缓核心”，须先建立主张级准入，核心制造模式边界缺证时继续 drafting。
+- 工作线 2 下一篇：PP-02《物料清单 BOM》。PP-01 已按“暂缓核心”分流核实，最终正文仍 Draft；核心制造模式边界缺证时不以安全措辞升级。
 - 详细内容及闭环字段见 [SD-06 审查记录](reviews/work/2026-11-27-m4-sd06-three-role-review.md) 与 [文章](knowledge/SD/04-configuration/sales.md)。
 
 
@@ -182,11 +182,12 @@ PR #21 已合并，不要向该 PR 追加提交。批次 A 收尾从 `main` HEAD
 - FI-11 不增加批次 A 的 8/50 reviewed 数量，也不改变 0/50 owner accepted、3/99 全库接受数。SAP 系统未连接，未做实机测试。
 - 本工作线下一项：CO-01《管理会计从零：成本与利润》。届时只读取该篇控制项、准入分流和证据登记；本次未加载 CO-01～CO-08 的其他文章级研究材料。
 
-## 工作线 2 进度追记（2026-11-27，PP-01）
+## 工作线 2 进度追记（2026-11-27，PP-01 收尾）
 
-- PP-01《生产业务与组织结构》已建立证据受限草稿，状态 drafting；普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各有 5 个同上下文角色视角问题—答复—修订—复核循环。组织关系、MTS/MTO 与离散/流程制造核心解释仍缺固定版 2021 直接证据；这些循环不构成独立审查。
-- 本线截至此记录新增 SD-06、PP-01 两篇 drafting，新增 reviewed 数为 0、owner accepted 数为 0；总体统计以 HANDOFF 当前进度表为准，草稿不计 reviewed/accepted。SAP 系统未连接，实机验证仍为 0。
-- 工作线 2 下一篇：PP-02《物料清单 BOM》。PP-01 的来源范围、闭环和阻碍见 [审查记录](reviews/work/2026-11-27-m4-pp01-three-role-review.md) 与 [文章](knowledge/PP/01-foundations/production-organization.md)。
+- PP-01《生产业务与组织结构》最终正文 blob `2c8d036bcedc137e5a0cc13ee1846719d2006bd9`；P1 仅为固定 2021.000 官方索引（direct open=0），P2 是 2021 SPS04 静态 PDF，限于 PI Sheet/work-instruction HTML5 功能范围。已补入 Customizing enhancement 激活只针对该 HTML5 功能、不证明 Scope Item 客户许可/部署/启用的说明，并清理重复来源条目。
+- 原有 15 个同一 Work 上下文角色模拟与新增独立复核分开记录。读者、配置顾问、开发三个独立 AI reviewer-context 各提出 5 项；作者逐项答复并限定/核对最终正文，最终各 5/5 PASS。此 PASS 仅确认当前证据边界，不代表目标学习内容已证。
+- Plant 生产组织职责、MTS/MTO 业务规则、离散/流程制造差异及其对 BOM/MRP/订单/库存/成本的影响仍缺足够固定版直接证据。PP-01 保持 Draft，批次 A 仍 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99 Owner Accepted；批次 B 0/46 未开始。SAP 未连接，未做实机、配置或权限测试。
+- 工作线 2 下一篇：PP-02《物料清单 BOM》。详情见 [审查记录](reviews/work/2026-11-27-m4-pp01-three-role-review.md)、[证据台账](plans/evidence-logistics-m3.md)、[审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md) 与 [文章](knowledge/PP/01-foundations/production-organization.md)。
 
 
 ## 工作线 3 进度（2026-11-27）
