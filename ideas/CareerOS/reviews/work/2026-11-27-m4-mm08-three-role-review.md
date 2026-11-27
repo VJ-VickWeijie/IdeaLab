@@ -224,3 +224,17 @@ Reviewer context: `/root/developer_mm08`; AI review lens, not a human SAP develo
 SAP S/4HANA 2021 SPS05 官方页面 [Add Short Text to Goods Movement](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/f5d3e1005efd4e86acf9a65abf428082/ee4e8d80dc2d4625a08329d995128aea.html?version=2021.005) 直接说明：特定的 Inventory Management 与嵌入式 EWM 同步货物移动场景可在 Post Goods Movement（transaction `MIGO`）输入项目短文本；对应文本可在 Display Material Document List app 中查看。本轮已将这一窄主张补入正文，明确不外推到一般 MIGO 导航、全部物料凭证显示或权限。
 
 此改动发生在此前 15 项独立 AI 角色复核的文章基线之后。当前未重新调用原审查上下文，也未完成原角色复核；本附录是来源登记与作者侧状态更新，不是新的角色闭环。MM-08 继续保持 `drafting`，不计正式 Role Reviewed。
+
+
+## Closeout 精确正文复核（2026-11-27，批次 A 新工作分支）
+
+- **文章基线**：新工作分支 careeros-v04-m4-batch-a-closeout-20261127，提交 e7aa15b4d75bf68de02e882655177832a8c2df7a；正文路径 ideas/CareerOS/knowledge/MM/03-tcodes/transaction-index.md，blob 07ad59f5a02a0642698977451bdd817db8e6781c。
+- **复核性质**：协调者先修改正文；随后三个分离的 AI reviewer-context 对新增措辞做针对性复核。它们与当前作者/协调者上下文分离，但不代表不同基础模型、真人 SAP 专家或外部认证。本附录不把上文历史复核伪称为重新执行的 15 个全新闭环。
+
+| 角色视角 | 本轮针对的正文变化 | 结果与边界 |
+| --- | --- | --- |
+| 普通读者替补上下文 /root/review_reader_mm08_10 | 将“范围项”解释限定为指南中的 Solution Builder 选择项；将 SPS05 app 查看说明与 MIGO 场景拆开 | **PASS**。定义清楚，不扩大产品配置、MIGO 通用导航或权限结论。该上下文直接读取 SAP Best Practices PDF p.53；SPS05 HTML 本轮未能重开，本文未增加该来源主张。 |
+| 配置顾问替补上下文 /root/review_consultant_mm08_10 | 同上，并检查顾问原问题 R1.6–R1.10 在精确正文中的适用性 | **PASS**。范围项仅限指南方案；SPS05 两项主张分别陈述。2021.000 S1/S2/S3 Help 页面本轮无法重开，相关判断依据正文和原记录中的直接读取摘录；SPS05 固定页面/PDF与 Best Practices PDF 已核对。 |
+| 开发者替补上下文 /root/review_developer_mm08_10 | 同上，并核对 API、数据模型及权限边界 | **PASS**。没有新增一般数据契约、API、MIGO 导航或权限断言；SPS05 页/PDF与 Best Practices p.53 支持文中窄主张。未做任何系统测试。 |
+
+此轮修订已解决普通读者提出的“范围项”释义问题，并按顾问建议分开相邻的 SPS05 app/MIGO 说明。未发现需要继续改正文的项。**MM-08 仍为 drafting**：通用 MIGO 导航职责、一般材料凭证显示范围/GUI 入口仍没有足够的 SAP S/4HANA 2021 On-Premise 固定版直接证据。本文不计入正式 Role Reviewed，也不计 Owner Accepted。无 SAP 实机、配置、数据库、API 或权限测试。
