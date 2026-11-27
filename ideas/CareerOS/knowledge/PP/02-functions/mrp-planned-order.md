@@ -54,7 +54,7 @@ SAP 2021 SPS10 的 FSD 说，计划运行检查材料可用性，并在发现短
 
 ### 本轮目标版来源续核
 
-本轮另查 SAP Help Portal 中的 “Net Requirements Calculation for MRP”“Material Requirements Planning Procedure”“Calculating Procurement Quantity” 和 “Lot-Sizing Procedures”。官方搜索结果当前显示这些页面属于 SAP S/4HANA 2025 FPS01（2026 年 2 月），不作为 2021 版算法证据。对相同页面追加 `version=2021.000` 后，官方页面读取工具返回不可访问/无可读内容；因此这次没有取得可核验的固定 2021.000 正文。同一路径的 FSD 搜索索引仍显示 v9.0/SPS08，但直接打开的 PDF 文档历史列到 v11.0/SPS10；两种检索输出不一致，不能把搜索索引快照当成直接文件的当前版本。文章仅保留对已直接读取并记录的 v11.0 快照的限缩引用，并披露动态 URL 和未归档哈希的复核限制。当前可读取的 2021.000 “Monitor Material Coverage” 页面只说明 J44 应用的供需监控能力，仍不支持底层算法。
+本轮另查 SAP Help Portal 中的 “Net Requirements Calculation for MRP”“Material Requirements Planning Procedure”“Calculating Procurement Quantity” 和 “Lot-Sizing Procedures”。官方搜索结果当前显示这些页面属于 SAP S/4HANA 2025 FPS01（2026 年 2 月），不作为 2021 版算法证据。对相同页面追加 `version=2021.000` 后，官方页面读取工具返回不可访问/无可读内容；因此这次没有取得可核验的固定 2021.000 正文。同一路径的 FSD 搜索索引仍显示 v9.0/SPS08，但直接打开的 PDF 文档历史列到 v11.0/SPS10；两种检索输出不一致，不能把搜索索引快照当成直接文件的当前版本。文章仅保留对已直接读取并记录的 v11.0 快照的限缩引用，并披露动态 URL 和未归档哈希的复核限制。SAP 官方检索索引可见的 2021.000 “Monitor Material Coverage” 摘要只说明 J44 应用的供需监控能力；规范 HTML 直开为 0 行，不支持底层算法。
 
 此结果只记录本轮资料检索与读取限制，不表示 SAP 2021 从未发布相关说明；在取得目标版直接资料前，净需求、可用量、批量和参数规则继续列为缺口。没有用 2025 FPS01 或其他版本资料补写系统行为。
 
