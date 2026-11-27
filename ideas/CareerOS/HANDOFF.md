@@ -1,7 +1,7 @@
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-27（Asia/Shanghai）  
-**当前实时快照**：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已于该提交合并，绝不再向其追加。本次收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该 main 建立，按顺序完成至 PP-05；PP-05 最终正文 blob `1fffe1c2b6e8e0817e785f64c11f62e6763a58e0`，仍为 Draft。PP-05 工作包正在同步提交；新 PR 尚未创建。全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A 9/50 Role Reviewed（FI-05、MM-01～MM-07、SD-01）、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。五条工作线依次有 8、8、8、9、9 篇。
+**当前实时快照**：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已于该提交合并，绝不再向其追加。本次收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该 main 建立，按顺序完成至 PP-05；PP-05 最终正文 blob `1fffe1c2b6e8e0817e785f64c11f62e6763a58e0`，仍为 Draft。PP-05 工作包已提交到该分支（`4d9e8d7eeb6fa7cf00f33da3df64cd4e63fb3b9e`）；新 PR 尚未创建。全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A 9/50 Role Reviewed（FI-05、MM-01～MM-07、SD-01）、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。五条工作线依次有 8、8、8、9、9 篇。
 **独立性与状态**：同一 Work 上下文角色模拟不计 Role Reviewed；15/15 PASS 不自动通过证据门禁。本轮 SD-01 经精确正文独立 AI 角色复核后计入 Role Reviewed；SD-02、SD-07 与 PP-01 的独立 AI 复核通过了当前文案/证据边界检查，但各自仍有 M3 核心证据缺口，保持 Draft。PP-01、PP-02、PP-03 的三角色 reviewer-context 各 5 项均在最终正文上 PASS（仅证据边界/措辞）；三篇 M3 核心证据仍未闭合。PP-03 的 FSD 动态 v11/SPS10 与先前 v9/SPS08 抓取差异已记录，正文只按 v11 概念摘录表述。没有推定所有者接受。未连接 SAP，未执行实机、配置、数据库、API 或权限测试。
 **流程版本**：固定 SHA `939ec44036d89cd91622ab96b938be9f02479026` 未更换；IdeaLab 接入文档称 V1.1 正式版，而该固定提交 README 仍称“候选版本”，矛盾已记录于审计报告，待所有者决定是否升级。
 
