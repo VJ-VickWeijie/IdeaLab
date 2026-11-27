@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-27 更新）
 
-> 当前交接入口：[HANDOFF.md](HANDOFF.md)。实时基线：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并至 `main`，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该基线建立，当前按顺序完成至 PP-02；PP-02 精确正文 blob 为 `c87f31763c7137af445cc8c0f1267280b08dfb6c`，仍为 Draft。新 PR 尚未创建。当前全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。工作线游标：W1 已完成、W2 PP-03、W3 PP-07、W4 QM-06、W5 FI-11。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
+> 当前交接入口：[HANDOFF.md](HANDOFF.md)。实时基线：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并至 `main`，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该基线建立，当前按顺序完成至 PP-03；PP-03 精确正文 blob 为 `a84cbe704635ee67f58ce5d55c1db75b06086bc0`，仍为 Draft。新 PR 尚未创建。当前全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。工作线游标：W1 已完成、W2 PP-04、W3 PP-07、W4 QM-06、W5 FI-11。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
 
 ## 当前进度（2026-11-27）
 
@@ -12,7 +12,11 @@
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 篇 Draft |
 | 5 | FI-11、CO-01～CO-08 | 9 篇 Draft |
 
-当前工作线游标：W1 已完成、W2 PP-03、W3 PP-07、W4 QM-06、W5 FI-11。PP-01 与 PP-02 均经三个独立 AI reviewer-context 各 5 项复核；仅当前边界表述通过，核心目标证据仍缺，因此两篇继续 Draft、计数不变。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
+当前工作线游标：W1 已完成、W2 PP-04、W3 PP-07、W4 QM-06、W5 FI-11。PP-01、PP-02、PP-03 均经三个独立 AI reviewer-context 各 5 项复核；三篇只通过边界表达检查，M3 核心证据仍缺，继续 Draft、计数不变。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
+
+## PP-03 工作包更新（2026-11-27）
+
+PP-03 最终正文 blob 为 a84cbe704635ee67f58ce5d55c1db75b06086bc0。动态 SAP S/4HANA 2021 FSD v11.0/SPS10 支持概念层的 Routing 工序顺序、Work Center 用途及生产版本指定 BOM/Routing；动态 FSD v9/SPS08 与 v11/SPS10 的抓取差异已如实记录。固定 2021.000 BJ5 Manage Routings 与 BJ8 Work Center API 只依据官方索引可见摘要，HTML direct open 均为 0 行。三个独立 AI reviewer-context（普通读者、配置顾问、开发者）各完成 5 项质询和最终正文复核，15/15 PASS 仅代表范围/措辞通过。工序选择、替代/有效期、完整 Work Center 定义及成本/产能参数仍未闭合，PP-03 保持 Draft，不计 Role Reviewed。批次 A 仍 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99 Owner Accepted；批次 B 0/46。W2 下一篇 PP-04；PR #21 已合并，新 PR 尚未创建。未连接 SAP、未做系统测试。详见 [PP-03 正文](knowledge/PP/01-foundations/work-center-routing.md)、[审查记录](reviews/work/2026-11-27-m4-pp03-three-role-review.md) 和 [证据台账](plans/evidence-logistics-m3.md)。
 
 ## 历史进度日志（当时快照；以当前对账报告为准）
 
