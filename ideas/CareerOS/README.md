@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-27 更新）
 
-> 当前交接入口：[HANDOFF.md](HANDOFF.md)。实时基线：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并至 `main`，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该基线建立；SD-05 工作包开始时分支 HEAD `4d6c1f1c86e5f1bc16f7ea491ae958015547b3d5`，新 PR 尚未创建。当前全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
+> 当前交接入口：[HANDOFF.md](HANDOFF.md)。实时基线：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并至 `main`，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该基线建立；SD-06 工作包开始时分支 HEAD `5543a92912570a387afe3be4a6d29c3eeff67260`，新 PR 尚未创建。当前全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
 
 ## 当前进度（2026-11-27）
 
@@ -12,7 +12,7 @@
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 篇 Draft |
 | 5 | FI-11、CO-01～CO-08 | 9 篇 Draft |
 
-当前工作线游标：W1 已完成、W2 SD-06、W3 PP-07、W4 QM-06、W5 FI-11。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
+当前工作线游标：W1 已完成、W2 SD-07、W3 PP-07、W4 QM-06、W5 FI-11。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
 
 ## 历史进度日志（当时快照；以当前对账报告为准）
 
@@ -183,3 +183,6 @@ CO-08《管理会计数据模型》按“暂缓核心”准入建立受限 draft
 
 
 - Workline 1 收尾检查点（SD-05）：文章保持 Draft。固定 2021 资料仅支持 GTS/Brazil 特定场景的若干入口名和特征值快速录入迁移示例；未支撑通用 SD 导航及权限目录。工作线 1 的 8 篇已逐篇核对，1 Role Reviewed、7 Draft，现进入 W2 SD-06。批次 A 总数 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted。
+
+
+- Workline 2 收尾检查点（SD-06）：正文仍 Draft。固定 2021 的价格用途、特定借项审批和 FPS01 订阅价格三个示例已逐源核对；准确通用 IMG 节点、业务分支和只读权限证据仍缺，既有 15 项审查为同上下文模拟。重核 M3 控制矩阵发现 SD-01～07 与 PP-01～09 均无独立矩阵行，逐篇门禁仍按 triage/detail-logistics 执行。批次 A 仍 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；下一游标 SD-07。
