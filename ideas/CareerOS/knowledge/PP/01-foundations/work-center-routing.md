@@ -1,86 +1,77 @@
-# PP-03｜工作中心与工艺路线（Routing）：先识别对象和证据边界
+# PP-03｜工作中心与工艺路线（Routing）：把组成、工序和工作地点分开
 
-> 状态：drafting（证据受限草稿；同上下文角色视角闭环不等于独立 review）｜M4 批次 A｜目标版本：SAP S/4HANA 2021 On-Premise。固定版资料目前只支持若干特定产品入口与 PEO 场景；通用工序顺序、Routing 与工作中心的完整关系、选择/有效期规则及成本/产能计算仍未闭合。
+> 状态：Draft（概念主线已补证；选择、成本/产能计算等 M3 核心细节仍缺目标版直接依据）｜M4 批次 A｜目标版本：SAP S/4HANA 2021 On-Premise。本文使用一份动态 FSD 中实际读取到的 2021 SPS08 文档快照，并单独列出固定版 2021.000 应用资料；不把 SPS08 快照称作 2021.000 初始版或客户系统结果。
 
-## 本篇要学什么
+## 先区分三个问题
 
-PP-02 先看产品由哪些组成项构成；PP-03 原定继续了解工作中心（Work Center）与工艺路线（Routing）。两者在学习上是不同问题，但本篇只会陈述 SAP S/4HANA 2021 固定资料能够直接支持的内容。**不能把产品说明中的“可搜索 Routing”或某个 PEO 专用路线模型，直接当成所有标准 PP 场景的完整业务定义。**
+制造一个产品时，可以把基础问题拆成三项：
 
-## 2021 固定资料能确认的几件事
+1. **用哪些组件？** BOM（Bill of Material，物料清单）描述组成产品的组件。
+2. **要做哪些工序，按什么顺序做？** 在离散制造中，Routing（工艺路线）描述生产材料所需的工序/步骤及其顺序。
+3. **在哪些资源上做？** Work Center（工作中心）用于表示机器、生产线、员工或员工组等生产对象/人员；工序会关联到相应工作中心。
 
-### 1. 离散制造场景中的 Routing 应用入口
+SAP S/4HANA 2021 的 FSD 在一份明确标为 SPS08 的文档快照中，将工作中心与 BOM、Routing 放在生产计划与控制的主数据背景里；并说明工作中心用于排程、成本、产能计划和简化工序维护。它把离散制造的 Routing 描述为工序/步骤及其顺序，并说其中包含相应工作中心和所需 BOM 组件的信息。以上是概念层描述，不等于字段、计算公式或客户现场配置规则。
 
-S/4HANA 2021.000 的 “Manage Routings” 页面说明，该应用用于搜索现有 routings，并导航到创建新 Routing 或更改已有 Routing 的应用。页面标注 Scope Item BJ5（Make-to-Stock Production - Discrete Manufacturing）及组件 PP-BD-RTG。
+## Routing 与 Work Center 在概念上怎样配合
 
-这说明目标版文档在这个特定范围内提供了 Routing 管理入口。该页没有说明完整工序结构、工序选择、工厂适用性、替代 Routing、有效日期或作业时间公式，因此不能仅凭此页面编写这些规则；创建/更改入口也不是只读入口。
+| 对象 | 回答的问题 | 2021 SPS08 FSD 快照直接支持的概念 | 本文不据此推断 |
+| --- | --- | --- | --- |
+| BOM | 产品由什么组成？ | BOM 是组成产品的组件清单；Routing 描述中也会涉及所需 BOM 组件。 | BOM 与工序组件如何精确分配、用量/单位、有效日期、缺件处理。 |
+| Routing | 制造时要做哪些步骤、顺序如何？ | Routing 描述生产产品所需的工序/步骤及顺序；离散制造中可作为创建生产订单的基础。 | 工序编号规则、替代路线选择、有效期/数量区间、工序状态及详细选择算法。 |
+| Work Center | 哪些对象或人员参与生产、在哪里执行？ | 可表示机器、生产线、员工或员工组；与 BOM/Routing 一起用于排程、成本、产能计划和简化工序维护。 | 主数据完整字段、公式、标准值、成本中心/作业类型映射、产能日历和实际授权。 |
+| Production Version | 多种生产方式中，哪一组 BOM 与 Routing 用于某材料？ | FSD 说明材料可能有多个 BOM 和 Routing；分配给材料的 production version（生产版本）用于定义生产所用的 BOM 与 Routing。 | 生产版本的创建前提、日期/数量选择算法、缺失或重叠版本的处理。 |
 
-### 2. 工作中心资料的一个特定 API 范围
+### 一个仅用于理解对象的例子
 
-S/4HANA 2021.000 的 “OData API: Work Center” 条目说明，这个 OData V4 服务可以创建、读取和更新 work centers，并列出若干数据实体类别：header、description、cost center allocation、pooled capacity assignment、capacity header、capacity description、capacity intervals 和 capacity shifts。页面限定 Scope Item BJ8（Make-to-Stock - Process Manufacturing Based on Process Order）。
+假设虚构成品 FG-100 由 BOM 列出零件 A、B；生产过程先加工零件 A，再把 A 与 B 装配。Routing 用来表达这些生产步骤及其先后顺序；每个步骤可关联执行该工作的 Work Center，例如某台机器或装配线。
 
-这份资料只支持该服务及其目标版文档范围。它不能证明每个客户都启用了该 API，也不能说明所有制造场景中的工作中心定义、字段必填性、产能公式、成本计算或用户授权。因为服务包含 create/update，本篇不把它当成安全只读入口。
+这是概念示意，不是可直接录入 SAP 的主数据样例。没有真实物料、工厂、工序编号、工作中心编号、数量、时间、成本值或有效期，也不展示 SAP 的选版结果。
 
-### 3. “Routing operation”一词在另一特定范围中的用法
+## 生产版本只说明 BOM 与 Routing 的配对关系
 
-S/4HANA 2021.000 的 “OData API: Production Routing” 条目在 Scope Item 3W4（Third-Party Shop Floor Execution - Discrete Industry）中提到：可读取 Production Routing 中某 operation 所需的生产资源/工具（Production Resources and Tools，PRT），包括 Material PRT、Equipment PRT、Miscellaneous PRT 和 Document PRT。
+若材料有多种 BOM 或 Routing，生产版本是理解“为该材料指定哪一组 BOM 与 Routing”的关键对象。2021 SPS08 FSD 快照支持这个配对关系的概念。它没有在该段给出生产版本选择优先级、有效日期、批量范围或冲突处理规则，所以不能从“生产版本会指定组合”进一步推导出系统在任意订单日期和数量下如何自动选中某一版。
 
-这说明该范围的官方文档使用了 routing operation 和 PRT 这些对象名称；它不支持所有场景下的完整 Routing 结构、工序顺序、工作中心分配规则或可用 API 的授权结论。
+这与 PP-02 的 BOM 组件结构主题相连，但本篇不替 PP-02 补写数量、替代项或缺件行为。后续 MRP、生产订单和配置文章也须分别核对各自规则。
 
-### 4. PEO 专用的 shop-floor routing 示例
+## 固定 2021.000 资料能够确认的特定入口
 
-另一份固定的 SAP S/4HANA 2021 PEO-ERP Implementation Guide 描述了 PEO（Production Engineering and Operations）中的 shop-floor routing：它由 operations 组成；每个 operation 至少有一个 operation activity；在同一 work center 处理的 operation activities 会归入同一个 operation。该指南还把 shop-floor routing、版本、MBOM 和生产版本放在 PEO 的专用上下文中讨论。
+SAP Help 的固定 2021.000 “Manage Routings” 页面说明，在 Scope Item BJ5（按库存生产—离散制造）范围内，该应用可搜索现有 Routing，并导航到创建/更改应用。这确认了特定场景的应用入口；不构成所有 PP 场景都可用、用户只读或已经获授权的证明。
 
-可以把它当作“目标版本存在一种更细的 PEO shop-floor routing 模型”的例子。它不是标准 PP routing 的通用定义；本篇不把 PEO 的对象层级、effectivity、版本或 BOM 关联方式推广到其它路线类型。
+同一固定版本的 “OData API: Work Center” 条目描述 BJ8（基于流程订单的按库存流程制造）中的一个 OData V4 服务，支持创建、读取和更新 Work Center，并列出 header、description、cost center allocation、pooled capacity assignment、capacity header、capacity description、capacity intervals 和 capacity shifts 等实体类别。此条目只说明该版本文档中的服务能力和范围；不证明客户已启用服务、当前用户已获授权，也不提供通用工作中心字段合同或成本/产能公式。因为它包含写入能力，不能把它当成只读查询入口。
 
-## 工作中心和 Routing：可以先分开问的问题
+因此，固定版应用/接口文档与 SPS08 FSD 快照承担不同作用：前者证明特定应用或 API 范围，后者提供概念主线。二者不应合并成一个“所有场景都适用”的规则清单。
 
-| 名称 | 固定版资料直接支持的范围 | 目前不能据此推出 |
-| --- | --- | --- |
-| Routing | BJ5 的 Manage Routings 应用可搜索现有 Routing，并导航到创建/更改应用；3W4 的 API 文档提及 operation 所需的 PRT。 | 所有 Routing 如何表示完整加工顺序、操作控制、版本、替代或有效期。 |
-| Work Center | BJ8 的特定 OData API 资料列出工作中心和 capacity/cost-center 相关实体类别。 | 通用工作中心定义、产能计算公式、成本归集/结算方式、组织分配和每个用户的授权。 |
-| PEO shop-floor routing | 2021 PEO 专用指南描述 operations、operation activities 以及同一工作中心活动的分组。 | 经典 routing 与 PEO routing 完全同构，或所有 S/4HANA 2021 PP 用户都有这些应用/权限。 |
-| BOM 与 Routing 的选择关系 | PP-02 文章记录 BOM 层级结构；PP-03 只能指出 M3 把两篇列为关联主题。 | 通用生产版本、替代 BOM/替代 Routing、日期/数量选择和同步规则。 |
+## PEO 专用路线是边界案例，不是通用 Routing 定义
 
-表内“不能推出”表示当前文章证据不足，不是否定目标产品可能存在相应规则。
+2021 PEO-ERP Implementation Guide 另有 shop-floor routing（车间路线）及其版本、MBOM 等专用模型。这类 PEO 说明可以作为“存在专用路线模型”的版本例子，但不能把 PEO 的对象层级、effectivity 或版本关联方式推广到普通 PP Routing。本文不以 PEO 指南填补标准离散制造的路线选择和产能计算缺口。
 
-## 暂不写成 2021 通用规则的核心问题
+## 仍未闭合的 M3 内容
 
-M3 将本篇批准为“限缩可写”，并要求补证工作中心完整定义、工序选择、成本/产能参数，以及 Routing 的替代/有效期和与 BOM 的关系。现有固定版来源没有闭合这些目标。
+M3 将 PP-03 标为“限缩可写”，并要求补查工作中心完整定义、工序选择和成本/产能参数。本次可安全说明概念主线，但下列核心细节仍缺少可直接复核的 S/4HANA 2021 资料，因此本文继续保持 Draft：
 
-因此，本篇暂不提供：
+- Routing 的完整工序字段、编号/顺序细节、工厂适用性、替代路线及日期/数量选择。
+- 工序如何分配 Work Center，以及 standard values、formula、capacity requirements、成本估算之间的准确关系。
+- Work Center 的完整字段/组织层级、成本分配和产能参数；FSD 中“用于成本/产能计划”的高层用途不能替代这些细节。
+- 生产版本、BOM、Routing 与批量/有效期的具体选择和冲突处理。
+- BOM 组件与工序的精确关联、单位/用量、缺失组件、客户配置与授权。
 
-- 一般离散制造 Routing 的工序顺序、工序编号/子工序或默认选择算法。
-- 标准 Routing 与工作中心的字段映射、作业时间、公式、capacity requirement 或成本计算。
-- Routing/BOM alternative、production version、lot size、validity date 之间的普遍选版规则。
-- 客户工厂、工作中心、成本中心、产能日历或成本控制数据的实际配置与授权。
-- 物理表、字段键、关联基数、API release 状态或可执行的读/改步骤。
+下一步应分别补到可读的 2021.000 固定版产品帮助/配置说明或明确标注 FPS/SPS 的直接资料，再决定这些结论是否可用于学习示例。不得用当前动态 FSD、其他产品版本、客户配置或经验公式补齐通用规则。
 
-上述项目需要固定版 2021 的逐项直接来源；PEO 专用指南、动态 FSD 快照或经验做法都不能替代这些证据。
+## 离线练习：先分清对象，再标出未核实规则
 
-## 离线练习：识别“路线对象”而不模拟系统规则
+1. 在“组件组成”栏画 BOM，在“步骤与顺序”栏画 Routing，在“执行资源”栏写 Work Center。
+2. 选一个虚构产品，用三种不同颜色分别标注组件、工序和工作地点；不要添加 SAP 编号、公式、有效期或选择结果。
+3. 把“生产版本指定 BOM 与 Routing 组合”写成一条已由 SPS08 FSD 概念支持的说明；把数量范围、有效期和选版条件列在“仍待证据核实”栏。
+4. 读固定版 2021.000 Manage Routings 页面时，只记录它明确支持的动作：搜索、导航到创建、导航到更改；不要把导航入口写成当前用户的权限承诺。
 
-无需 SAP 登录，可以把下面的问题写在纸上：
+练习不要求连接 SAP，也不表示任何客户系统已经配置或经过实测。
 
-1. 将 PP-02 的“组件组成结构”与本篇的“Routing 管理对象”分成两个问题栏。
-2. 读 BJ5 Manage Routings 页面，记下它明确支持的入口动作：搜索、导航至创建、导航至更改。
-3. 读 PEO 专用指南片段，标注它明确出现的层级：shop-floor routing → operation → operation activity；旁边写明“仅 PEO 示例”。
-4. 对工序选择、工序排序、工作中心分配、耗时和成本计算标记“待目标版资料核实”，不填写猜测值。
+## 目标版本资料与证据边界
 
-这项练习只训练证据分层，不代表任何客户系统已配置或实测，也不要求执行创建/更改操作。
+1. SAP Help，[“Manage Routings”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/9a63a564ff1c4194843dec4c37dfb033.html?locale=en-US&version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000，Scope Item BJ5。固定版本索引可见内容支持搜索 Routing 并导航至创建/更改应用；本轮直接打开 HTML 为 0 可读行，因此不扩展其结论。
+2. SAP Help，[“OData API: Work Center”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/f7e7144c65a647c3a68d84db06bc54c4.html?locale=en-US&version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000，Scope Item BJ8。固定版本索引可见内容支持该特定服务的操作与实体类别；本轮直接打开 HTML 为 0 可读行。
+3. SAP，[S/4HANA 2021 Feature Scope Description](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)，§2.7.2.2 “Master Recipe/Routing Management”，PDF pp.64–65。此 URL 为动态 `latest`；本轮 2026-11-27 直接打开返回 Document Version 9.0（2025-07-23），对应 S/4HANA 2021 SPS08。本文只按该读取快照使用其中概念描述，不称其为固定 2021.000、初始版或其他 FPS/SPS 证据。SAP Help 对同一路径的索引另返回 Document Version 11.0（2026-07-22）；为避免混合不同快照，本篇未将其加入证据。
+4. SAP，[PEO-ERP Implementation Guide for S/4HANA 2021](https://help.sap.com/doc/1fc98f1186c147679a500745f95fd327/2021/en-US/S4HANA_PEO_Implementation_Guide.pdf)，仅作 PEO 专用路线的边界示例；不推广为标准 PP Routing 规则。
+5. M3 范围及待核对项目：[逐篇范围、版本线索与依赖](../../../plans/detail-logistics-v0.3.md)、[逐篇准入分流](../../../plans/m3-item-readiness-triage-v0.3.md)、[M3 来源登记](../../../plans/evidence-logistics-m3.md)。这些计划文件不是 SAP 产品事实来源。
 
-## 与关联文章的边界
-
-- [PP-01｜生产业务与组织结构](production-organization.md) 仍因工厂组织关系和制造模式核心证据不足而保持 drafting；本篇不借用它未证实的组织结论。
-- [PP-02｜物料清单（BOM）](bom.md) 当前解释固定版资料支持的 BOM 层级结构，数量与选版仍有缺口。PP-03 不因此补写 BOM 选择规则。
-- M3 将 PP-03 与 PP-01、PP-02 关联；PP-04 的 MRP 关系在下篇再按其自身材料核验。本次未读取 PP-04 正文。
-
-## 目标版本官方来源
-
-1. SAP Help Portal，[“Manage Routings”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/9a63a564ff1c4194843dec4c37dfb033.html?locale=en-US&version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000，Scope Item BJ5。支持特定离散制造范围内搜索已有 Routing 并导航到创建/更改应用。
-2. SAP Help Portal，[“OData API: Work Center”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/f7e7144c65a647c3a68d84db06bc54c4.html?locale=en-US&version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000，Scope Item BJ8。支持该 OData V4 服务及其列出的 work-center/capacity 数据类别；不是只读或所有场景的权限证明。
-3. SAP Help Portal，[“OData API: Production Routing”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/470053ffc09249bea07e09bd113d0cf9.html?locale=en-US&state=PRODUCTION&version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000，Scope Item 3W4。只支持文档说明的 operation PRT 读取能力与资源类型。
-4. SAP Help Portal，[“Manage Shop Floor Routings”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/7cb8c2893d224d0bbe47c4102d136a12.html?locale=en-US&state=PRODUCTION&version=2021.000)，S/4HANA 2021。仅用于说明 PEO shop-floor routing 的专用版本/header/effectivity 资料，不作标准 routing 通则。
-5. SAP，[PEO-ERP Implementation Guide for SAP S/4HANA 2021](https://help.sap.com/doc/1fc98f1186c147679a500745f95fd327/2021/en-US/S4HANA_PEO_Implementation_Guide.pdf)，§“Operation Activities”及相关 PEO 章节，PDF 第 94 页附近。仅支持 PEO 专用 shop-floor routing 模型；不得推广到全部 PP routing。
-6. M3 范围和原来源登记：[逐篇范围、版本线索与依赖](../../../plans/detail-logistics-v0.3.md)、[逐篇准入分流](../../../plans/m3-item-readiness-triage-v0.3.md)、[物流来源登记](../../../plans/evidence-logistics-m3.md)、[SD/PP 来源贴合度复核](../../../plans/sd-pp-source-fit-m3.md)。这些是计划/范围记录，不替代产品事实证据。
-
-M3 原记录引用的 FSD_OP2021_latest.pdf 是动态 URL；本稿不以当前快照证明固定版 2021 事实。SAP 系统未连接；未执行或声称执行实机测试。
+SAP 系统未连接；未执行实机、配置、数据库、API 或权限测试。
