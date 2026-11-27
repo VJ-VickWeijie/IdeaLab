@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-27 更新）
 
-> 当前交接入口：[HANDOFF.md](HANDOFF.md)。截至本次审计基线 HEAD `41131a194e332c50d98183a092caf41f98105a74`：PR #21 开放、未合并；全库 Owner Accepted 3/99（FI-01～FI-03），Role Reviewed 8/50（FI-05、MM-01～MM-07），批次 A Draft 42/50、Owner Accepted 0/50，批次 B 尚未开始（0/46）。五条工作线逐篇状态和证据缺口见[实时对账审计](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。无同上下文模拟升级为 Role Reviewed，无所有者接受推定。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；“正式版/候选版本”标记差异见审计报告。
+> 当前交接入口：[HANDOFF.md](HANDOFF.md)。实时起点：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并至 `main`，合并提交相同。旧工作分支 `careeros-v04-m4-batch1-20261126` 最终 HEAD 为 `02c5ee4518aeb9f079ea81cf1b949a21608f7d19`。本次批次 A 收尾从该 `main` 新建分支 `careeros-v04-m4-batch-a-closeout-20261127`，新 PR 尚未创建。当前对账起始计数沿用 main 上最后核实值：全库 Owner Accepted 3/99（FI-01～FI-03），Role Reviewed 8/50（FI-05、MM-01～MM-07），批次 A Draft 42/50、Owner Accepted 0/50，批次 B 0/46 未开始；逐篇状态会在本轮审计后更新。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；其 README 与 IdeaLab 的正式版本标记差异继续记录。
 
 ## 当前进度（2026-11-27）
 
@@ -12,9 +12,11 @@
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 篇 Draft |
 | 5 | FI-11、CO-01～CO-08 | 9 篇 Draft |
 
-当前下一游标为 MM-08。每篇的 M3 准入、目标版证据、审查记录、具体缺口和建议状态见实时审计报告。批次 B 只能在批次 A 全部完成并获用户明确批准后开始；PR #21 不自行合并。
+当前下一游标为 MM-08。每篇的 M3 准入、目标版证据、审查记录、具体缺口和建议状态见实时审计报告。本轮新建分支收尾批次 A；新 PR 创建后保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
 
 ## 历史进度日志（当时快照；以当前对账报告为准）
+
+> 以下条目记录各自写入时的状态；其中 PR #21 曾处于开放状态，后来已合并至 main。
 
 - Workline 1：SD-01《销售业务与组织结构》已提交证据受限草稿及三角色审查记录；普通读者、配置顾问视角、开发者视角各 5 个原问题闭环，共 15/15 AI 问题—答复—修订—原角色复核。固定版组织配置和跨公司开票适用范围仍未闭合，文章保持 drafting，不计入 8/50 reviewed；批次 A 仍 0/50 owner accepted。下一篇 SD-02。详见 [SD-01 正文](knowledge/SD/01-foundations/organization.md)、[审查记录](reviews/work/2026-11-27-m4-sd01-three-role-review.md) 与 [HANDOFF](HANDOFF.md)。
 - Workline 1：SD-02《客户业务伙伴与物料主数据》已提交限缩草稿和三角色审查记录；普通读者、配置顾问视角、开发者视角各完成 5 个原问题闭环，共 15/15 AI 问题—答复—修订—原角色复核。BP grouping/编号、完整伙伴确定配置、物料销售视图/字段/API/权限仍未闭合，保持 drafting、不计入 8/50 reviewed；批次 A 仍为 0/50 owner accepted。下一篇 SD-03。详见 [SD-02 正文](knowledge/SD/01-foundations/customer-product-master.md)、[审查记录](reviews/work/2026-11-27-m4-sd02-three-role-review.md) 与 [HANDOFF](HANDOFF.md)。
