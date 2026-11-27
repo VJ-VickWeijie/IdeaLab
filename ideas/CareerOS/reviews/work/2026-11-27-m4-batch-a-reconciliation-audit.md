@@ -4,7 +4,7 @@
 - 仓库：VJ-VickWeijie/IdeaLab
 - PR #21：[已合并](https://github.com/VJ-VickWeijie/IdeaLab/pull/21)，合并提交 `c026b3862c9a083c95cffb096f93e141276cfba5`；以下为当时开放状态的历史审计快照，不代表当前 PR 状态。
 - 原审计快照：PR #21 旧工作分支 `careeros-v04-m4-batch1-20261126`，HEAD `41131a194e332c50d98183a092caf41f98105a74`，main `db349fe68e1aa0560ba5546a6382ffe503d0f595`；其当时记录的 282 commits、113 changed files（+10,200 / -108）、开放状态、评论/检查数据仅描述旧快照。
-- 本次收尾新基线：PR #21 合并后的 main 为 `c026b3862c9a083c95cffb096f93e141276cfba5`；工作分支 `careeros-v04-m4-batch-a-closeout-20261127`，本检查点变更前 HEAD `a7ce7083d060306a929a28692d8ea4a4ec8657ab`。新 PR 尚未创建；完成批次 A 收尾后创建并保持开放。
+- 本次收尾新基线：PR #21 合并后的 main 为 `c026b3862c9a083c95cffb096f93e141276cfba5`；工作分支 `careeros-v04-m4-batch-a-closeout-20261127`，本次收尾处理 SD-03 前分支 HEAD `e1eb921a345c7add12a8b89bc2ec252a99cdfa3d`；后续工作包提交会继续推进此分支。新 PR 尚未创建；完成批次 A 收尾后创建并保持开放。
 - 本文是逐篇对账和阻塞审计，不是所有者审阅包；42 篇原 Draft 已逐篇审计。本轮对 SD-01、SD-02 精确正文重新执行独立角色复核；状态按目标版证据和 M3 范围判断，不将同上下文模拟当作正式 Role Reviewed。
 - 全程未连接 SAP；没有执行 SAP 实机、配置、数据库、API 或权限测试。
 
@@ -41,7 +41,7 @@ M3 准入取自 [逐篇准入与证据分流](../../plans/m3-item-readiness-tria
 | MM-10 | [MM-10 正文](../../knowledge/MM/05-data-model/purchasing-inventory.md) | 暂缓核心 | PR/PO/采购历史/物料凭证完整键、字段、基数、物理表/兼容视图、released API 与权限未闭合；FSD 当前可见版本是动态 SPS10 快照。 | [评审记录](2026-11-27-m4-mm10-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | SD-01 | [SD-01 正文](../../knowledge/SD/01-foundations/organization.md) | 限缩可写 | 三个独立 AI reviewer-context 对精确正文 blob `1b2f9c6d1bde5cbf7f526fd3819ccf3f46338b29` 各完成 5 项复核，15/15 PASS；M3 支持限缩组织关系目标。固定版完整组织配置、跨公司开票条件、客户配置/API/权限仍未证，但明确排除于本篇范围。 | [复核记录](2026-11-27-m4-sd01-three-role-review.md)；当前 exact-body 15/15；未声称真人专家或系统测试 | **Role Reviewed**；等待所有者审阅，尚未 Owner Accepted |
 | SD-02 | [SD-02 正文](../../knowledge/SD/01-foundations/customer-product-master.md) | 限缩可写 | 精确正文 blob `587017266695199e2d8855da6981e09d612d0b72` 由三个独立 AI reviewer-context 各完成 5 项复核，15/15 PASS，现文未越界；但 BP grouping/编号、完整伙伴确定配置、物料销售字段/组织键/API、客户实际配置和权限仍属 M3 补查缺口，固定版 grouping 来源未补证。 | [复核记录](2026-11-27-m4-sd02-three-role-review.md)；当前 exact-body 15/15；独立 AI 视角，非真人专家 | **Draft**；核心数据模型范围未闭合，不仅凭 15/15 升级 |
-| SD-03 | [SD-03 正文](../../knowledge/SD/02-functions/sales-delivery.md) | 限缩可写 | 流程核心证据主要为动态 FSD Version 11.0 / S/4HANA 2021 SPS10 快照；具体部分交货、取消/拒绝/冲销和权限未闭合，页码定位曾有差异。 | [评审记录](2026-11-27-m4-sd03-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
+| SD-03 | [SD-03 正文](../../knowledge/SD/02-functions/sales-delivery.md) | 限缩可写 | 当前正文 blob `dade5b834076bb588fc90b2cfc796d1efa43fdbb`；动态 FSD Version 11.0 / S/4HANA 2021 SPS10 已精确定位 §2.13.2.1，支持 sell-from-stock 与三种交货参照类型；M3 的部分交货、取消/拒绝、一般 PGI 冲销及权限仍未闭合。 | [评审记录](2026-11-27-m4-sd03-three-role-review.md)；当前精确正文 15/15 PASS，顾问先前 C2 FAIL 已在直接复读同节后撤回 | **Draft**；仅正文/来源边界通过复核，不以此代替仍缺的核心规则与权限证据 |
 | SD-04 | [SD-04 正文](../../knowledge/SD/02-functions/pricing-billing-ar.md) | 限缩可写 | 动态 FSD SPS10 仅支持高层开票/AR 能力；定价条件、税、收入确认、实际 FI/AR 关系、收款/银行资金及权限未闭合。 | [评审记录](2026-11-27-m4-sd04-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | SD-05 | [SD-05 正文](../../knowledge/SD/03-tcodes/transaction-index.md) | 暂缓核心 | 直接证据仅覆盖 GTS/巴西等受限入口与迁移关键词；通用 SD 逐码用途、VA03、交货/开票导航、GUI/Fiori 映射和权限未闭合。 | [评审记录](2026-11-27-m4-sd05-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | SD-06 | [SD-06 正文](../../knowledge/SD/04-configuration/sales.md) | 限缩可写 | 文章保留价格用途、特定审批和 2021 FPS01 订阅场景的窄示例；通用 IMG 节点、业务分支及系统只读/授权路径未核。 | [评审记录](2026-11-27-m4-sd06-three-role-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
@@ -127,3 +127,15 @@ IdeaLab 根 README 与 docs/AI_WORKFLOW_INTEGRATION.md 将 SHA 939ec44036d89cd91
 - **计数**：批次 A 9/50 Role Reviewed（原 8 篇 + SD-01）、41/50 Draft、0/50 Owner Accepted；全库 3/99 Owner Accepted；批次 B 0/46 未开始。
 - **提交**：SD-01 review `92fdc920645a39c55d371ff2082900a3cc910624`；SD-01 状态行 `d66b6770ff90643d67ef1cd59407630c8883153e`；SD-02 exact-body review `a7ce7083d060306a929a28692d8ea4a4ec8657ab`；本检查点审计提交由本次更新生成。
 - 未连接 SAP；无实机、配置、数据库、API 或权限测试。
+
+
+## 新分支收尾检查点 3：SD-03（2026-11-27）
+
+- **工作包起点**：本检查点从工作分支 HEAD `e1eb921a345c7add12a8b89bc2ec252a99cdfa3d` 开始；主分支基线仍为合并提交 `c026b3862c9a083c95cffb096f93e141276cfba5`。
+- **文章与正文**：SD-03 正文 blob `dade5b834076bb588fc90b2cfc796d1efa43fdbb` 未修改，仍为 Draft。SAP 官方动态 FSD Version 11.0（2026-07-22；S/4HANA 2021 SPS10）§2.13.2.1 直接列出 sell-from-stock、returns、stock transfer，并写明 sales order、stock transport order、无参照三类出库交货来源。
+- **复核**：三个独立 AI reviewer-context 针对上述精确正文各复核 5 个有效问题，15/15 PASS。顾问首轮因提取截断把 C2 误判为 FAIL；复读同一官方 PDF 的后半段后撤回 FAIL、改为 PASS。更正已经记录在 [SD-03 逐篇审查记录](2026-11-27-m4-sd03-three-role-review.md)。这不代表真人专家签核。
+- **状态理由**：M3 核心缺口仍开放：一般部分交货、订单/交货取消或拒绝、普通 PGI 冲销，以及客户授权。4RQ 特殊 3PL 搜索摘录无法支撑普通销售流程的冲销规则；SD-03 不计 Role Reviewed。
+- **计数未变化**：全库 Owner Accepted 3/99；批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。
+- **工作线游标**：W1 下一个 SD-04；W2 SD-06；W3 PP-07；W4 QM-06；W5 FI-11。
+- **审查记录提交**：`4cf54e3ad5d10a1c5d2ba742384a05f83980bf61`。本审计检查点之后续写时以分支实时 HEAD 为准。
+- 未连接 SAP；未执行实机、配置、数据库、API 或权限测试。
