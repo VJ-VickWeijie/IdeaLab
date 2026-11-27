@@ -33,11 +33,11 @@
 
 ## MIGO 与物料凭证：本稿尚未建立通用导航映射
 
-**仅作版本/场景受限的证据示例，不是已核实的 MIGO 通用导航条目。** 目前读到的固定版直接证据之一，是 SAP S/4HANA 2021 SPS05 的 “Add Short Text to Goods Movement”。它支持的范围很窄：货物移动/转储项目级短文本（最多 50 个字符）；对于库存管理到 EWM 的同步货物移动，资料明确限定为 S/4HANA 中嵌入式 EWM 场景，并指出可在 Post Goods Movement（transaction `MIGO`）中输入该文本。该功能页不能单独证明 MIGO 的完整用途、所有模式、一般材料凭证显示入口或权限边界。它只说明上述短文本可以在对应物料凭证中通过 **Display Material Document List** app 查看；这不足以证明一般物料凭证显示的适用范围、GUI 事务码、所有模式或用户权限。
+**仅作版本/场景受限的证据示例，不是已核实的 MIGO 通用导航条目。** 目前读到的固定版直接证据之一，是 SAP S/4HANA 2021 SPS05 的 “Add Short Text to Goods Movement”。它支持的范围很窄：货物移动/转储项目级短文本（最多 50 个字符）。该功能页另说明，这项短文本可在对应物料凭证中通过 **Display Material Document List** app 查看。它也说明，在 Inventory Management 到 EWM 的同步货物移动场景中，只有 EWM embedded in SAP S/4HANA 时，才可在 Post Goods Movement（transaction `MIGO`）中输入该文本。前一条 app 说明不证明一般物料凭证显示的适用范围、GUI 事务码、所有模式或用户权限；后一条 MIGO 特例不证明 MIGO 的完整用途、一般导航或权限边界。
 
 SAP S/4HANA 2021 Best Practices《Administration Guide to Implementation of SAP S/4HANA 2021 with SAP Best Practices》的 §3.3.2 “Defining the Scope of Embedded Extended Warehouse Management (EWM)”（PDF 页 53）直接定义了该指南中的嵌入式 EWM：EWM 作为 SAP S/4HANA On-Premise 系统的一部分提供，并可与同一系统、同一 client 中的本地 ERP storage locations 集成。该 PDF 封面标示日期 2024-07-05；本文将它准确标为面向 S/4HANA 2021 的 Best Practices 指南，不把封面日期当作 2021 年出版证明，也不把这一方案范围外推为所有 EWM 部署形态、仓库权限或事务码的通用定义。
 
-这里的 **EWM** 是 Extended Warehouse Management（扩展仓库管理）。SAP 2021 SPS05 页面所说的“同步货物移动”，仅指该页面描述的 Inventory Management 与 EWM 之间的同步处理场景；该功能页面中的 “embedded in SAP S/4HANA” 是这一特定功能的适用条件。前述 §3.3.2 是该 2021 Best Practices 指南对其嵌入式 EWM 方案的定义；这里的“范围项”是该指南为嵌入式 EWM 场景列出、供 Solution Builder 选择的项目；它不是每套 SAP S/4HANA 系统都必须采用的配置。指南中的范围项及激活后步骤不表示每个 SAP S/4HANA On-Premise 系统都使用或必须激活这些范围项，也不定义所有 EWM 部署形态。本篇不把 MIGO 短文本特例扩展到其他 EWM 场景，也不要求读者先掌握 EWM 才能学习 MM 事务导航。
+这里的 **EWM** 是 Extended Warehouse Management（扩展仓库管理）。SAP 2021 SPS05 页面所说的“同步货物移动”，仅指该页面描述的 Inventory Management 与 EWM 之间的同步处理场景；该功能页面中的 “embedded in SAP S/4HANA” 是这一特定功能的适用条件。前述 §3.3.2 是该 2021 Best Practices 指南对其嵌入式 EWM 方案的定义；指南在这一方案中列出供 Solution Builder 选择的范围项。本段仅说明指南范围，不据此断言其他 SAP S/4HANA 系统必须采用或激活这些范围项，也不定义所有 EWM 部署形态。指南中的激活后步骤同样只适用于所列方案范围项。本篇不把 MIGO 短文本特例扩展到其他 EWM 场景，也不要求读者先掌握 EWM 才能学习 MM 事务导航。
 
 所以在以下内容核实前，本文不把 `MIGO` 填成通用收货/发货/转储操作总入口，也不将窄场景中的材料凭证 app 名称扩写成一般导航结论：
 
