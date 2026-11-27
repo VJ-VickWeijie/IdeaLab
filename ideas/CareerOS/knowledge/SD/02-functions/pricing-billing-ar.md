@@ -58,6 +58,6 @@ M3 对以下主题没有足够的 S/4HANA 2021 直接证据，本文只把它们
 
 ## 来源与版本边界
 
-1. SAP 官方 [SAP S/4HANA 2021 Feature Scope Description（FSD）](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)：§2.10.2.8 *Sales Billing*，M3 补查记录定位 PDF 第 126 页；包括从 billing due list 项目创建单据的例子、开票冻结、开票过账向 Accounts Receivable 传递、输出及定时释放到会计等有限功能。§2.6.2.1.6（PDF 第 38–39 页）用于客户未清项、收款分配和手工/自动清账的高层说明。
-2. M3 来源记录于 2026-11-25 UTC 读取该动态链接。报告记载 PDF 封面为 Version 11.0（2026-07-22），Document History 将该版标为 S/4HANA 2021 SPS10；本文结论仅限该次读取的 SPS10 快照，不外推至 2021 初版、其他 FPS/SPS 或客户系统。URL 含 latest，不是不可变链接。详见 [M3 准入行](../../../plans/m3-item-readiness-triage-v0.3.md)、[逐篇范围](../../../plans/detail-logistics-v0.3.md)、[物流证据台账](../../../plans/evidence-logistics-m3.md) 和 [PROCESS-02 来源补查](../../../plans/o2c-direct-2021-m3.md)。
+1. SAP 官方 [SAP S/4HANA 2021 Feature Scope Description（FSD）](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)：§2.10.2.8 *Sales Billing* 支持 billing due list 项目、billing document、过账向 Accounts Receivable 传递、冻结及释放到会计等高层功能；§2.6.2.1.6 *Accounts Receivable* 支持客户未清项、收款分配及手工/自动清账的高层说明。本轮直接打开的 PDF 将 Sales Billing 定位为正文页 125–126、Accounts Receivable 为页 38；这只支持表中限定概述，不支持本文列出的定价/税/收入确认和客户系统技术关系。
+2. 本轮打开的该动态 latest PDF 的 Document History 列出 Version 11.0（2026-07-22），对应 SAP S/4HANA 2021 SPS10；结论限于所确认的 SPS10 文档范围，不反推 2021 初始版或其他 FPS/SPS。此次浏览器打开未下载 PDF 字节或重算哈希；M3 台账中的哈希只对应此前保存的快照。URL 含 latest，不是不可变文件，复用时应重新确认文档历史。详见 [M3 准入行](../../../plans/m3-item-readiness-triage-v0.3.md)、[逐篇范围](../../../plans/detail-logistics-v0.3.md)、[物流证据台账](../../../plans/evidence-logistics-m3.md) 和 [PROCESS-02 来源补查](../../../plans/o2c-direct-2021-m3.md)。
 3. 未闭合：定价条件/程序、税、收入确认和 FI 分录、客户系统中的实际应收关联、收款/清账差异、银行资金证据与权限。本文未连接 SAP 系统，未测试单据、API、配置或权限；因此状态保持 drafting。
