@@ -66,3 +66,11 @@ M3 留存的 QM-02 来源研究称五个 SAP Help 页面的版本选择器均为
 - **E2**：SAP 官方搜索结果直接链接 version=2021.000《Business Events for Inspection Plans》，显示版本 2021 (Oct 2021) 及计划 create/update/delete 的事件范围；本轮直接打开固定 HTML 为 0 行。正文已把事实归因到搜索结果，不称重读页面正文，也不推出 API 字段、键、发布状态、订阅、授权或选择规则。
 - 本轮搜索到的未锁版本 Manage Inspection Plans/Processing of Inspection Characteristics 页面含较完整的计划对象、操作、特性、Sampling 和角色说明；因不能固定到 S/4HANA 2021 目标版本，未用作本篇正面证据。M3 的动态 FSD latest 为 SPS10 11.0（2026-07-22），仅作版本边界记录，不用于固定版规则。
 - M3 核心缺口仍在：计划/工序/特性结构、计划选择与工厂/有效期/批量规则、特性字段、抽样参数/公式、无匹配计划行为。新增的塑料外壳裂纹例子是明示虚构的概念练习，不代表 SAP 数据字段或计算。未连接 SAP、未核客户系统，也未做 API/权限测试。
+
+## M4 QM-04 来源访问复核记录（2026-11-27；作者侧，不计独立来源复读）
+
+- 搜索了并尝试直开三个固定 SAP Help 链接：Manage Inspection Lots、Usage Decision for Inspection Lot、Stock Postings，均使用 `version=2021.000`。Manage Inspection Lots 链接返回 0 行；后两者不可访问。
+- 有版本参数的官方 Manage Inspection Lots 搜索摘要显示 S/4HANA 2021 (Oct 2021) 并列出结果记录与 UD 工作清单动作。仅按索引摘要记录；不把它记作页面正文直接读取。
+- Usage Decision 未锁版本检索结果没有显示足以确认 2021.000 的版本标签；Stock Postings 当前可读检索结果标为 2025 FPS01。两者均未用作 2021 肯定证据。
+- 既有 M3 记录中关于多个页面选择器和局部复读的说明已保留；此次失败访问不推翻历史记录，但无法复现的细节在 QM-04 正文中不作为本轮确认规则。
+- 本段是作者侧来源读取记录，不是独立角色审查，也不是独立 SAP 专家签核或系统测试。

@@ -4,8 +4,8 @@ Total output lines: 533
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-27（Asia/Shanghai）  
-**当前实时快照**：`main` 起始基线 `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并并关闭，不再追加。收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 已顺序推进至 QM-03；最终正文 blob `eba555f35a4f9eca54e58d040634cc48acb16132` 经三个独立 AI reviewer-context 各完成 5 项复核，按来源边界修订并对最终正文复验通过（15/15）。QM-03 仍因计划/工序/特性关系、计划选择和有效性、抽样规则及无计划行为缺少固定版目标证据而 Draft。E1 为直接读取的 FPS01 工作清单筛选变更；E2 为 version=2021.000 官方搜索结果，固定 HTML 本轮打开 0 行；未锁版 Help 和动态 FSD 未用于补缺。新 PR 尚未创建。全库 Owner Accepted 3/99；批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。工作线游标：W1、W2 已完成；W3 QM-04；W4 QM-06；W5 FI-11。
-**独立性与状态**：同一 Work 上下文角色模拟不计 Role Reviewed；15/15 PASS 不自动通过证据门禁。SD-01 经精确正文独立 AI 角色复核后计入 Role Reviewed；SD-02、SD-07、PP-01、PP-07、PP-08、PP-09、QM-01、QM-02、QM-03 的独立 AI 复核通过当前文案/证据边界检查，但仍有 M3 核心证据缺口，保持 Draft。QM-03 的三个 reviewer-context 对最终 blob 各完成 5 项复核，新增塑料外壳裂纹练习明确为虚构概念题，不暗示 SAP 字段/抽样规则。没有推定所有者接受。未连接 SAP，未执行实机、配置、数据库、API 或权限测试。
+**当前实时快照**：`main` 起始基线 `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并并关闭，不再追加。收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 已顺序推进至 QM-04；最终正文 blob `3227bc617f569998a528b9bf7f7efc5abcff3d33` 经普通读者、资深 SAP 配置顾问和普通 SAP 开发人员三个独立 AI reviewer-context 各完成 5 项复核并对精确正文复验通过（15/15）。固定版可核对范围仅为带 `version=2021.000` 链接的 Manage Inspection Lots 官方搜索摘要；本轮固定 HTML 直开为 0 行/不可访问，未锁版或 2025 FPS01 搜索内容排除。QM-04 仍因结果/缺陷、UD 条件/自动化、库存过账/撤销、财务和权限证据不足而 Draft。新 PR 尚未创建。全库 Owner Accepted 3/99；批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。工作线游标：W1、W2 已完成；W3 QM-05；W4 QM-06；W5 FI-11。
+**独立性与状态**：同一 Work 上下文角色模拟不计 Role Reviewed；15/15 PASS 不自动通过证据门禁。SD-01 经精确正文独立 AI 角色复核后计入 Role Reviewed；SD-02、SD-07、PP-01、PP-07、PP-08、PP-09、QM-01～QM-04 的独立 AI 复核通过当前文案/证据边界检查，但各自仍有 M3 核心证据缺口，保持 Draft。QM-04 三个 reviewer-context 对最终 blob 各完成 5 项复核，保守删除未在固定版正文中复读的 UD/库存肯定规则；PROCESS-06 正文在批次 B 开始前仍未建设。没有推定所有者接受。未连接 SAP，未执行实机、配置、数据库、API 或权限测试。
 **流程版本**：固定 SHA `939ec44036d89cd91622ab96b938be9f02479026` 未更换；IdeaLab 接入文档称 V1.1 正式版，而该固定提交 README 仍称“候选版本”，矛盾已记录于审计报告，待所有者决定是否升级。
 
 ## 当前仓库、分支与 PR
@@ -70,8 +70,8 @@ PP-04 最终正文 blob `26d1459be3a9f6999dacc414fb8ca634da793cda`。补入动�
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 Draft | QM-06 |
 | 5 | FI-11、CO-01～CO-08 | 9 Draft | FI-11 |
 
-**当前执行顺序**：工作线 1 已完成；工作线 2 已处理 SD-06、SD-07、PP-01～PP-06；工作线 3 已处理 PP-07～PP-09、QM-01～QM-03，下一篇 QM-04，之后按用户指定的工作线顺序推进。核心证据无法补齐时，记录已查来源、具体缺口和下一步，文章继续 Draft 并转下一篇。只有目标版证据足以支持其学习目标且完成可核验的独立角色复核，才可记 Role Reviewed。Owner Accepted 只由用户明确批准。
-**最近工作包更新**：QM-03 保持 Draft。最终正文 blob `eba555f35a4f9eca54e58d040634cc48acb16132` 经三种独立 AI reviewer-context 各 5 项复核，最终边界检查 15/15 通过；有限证据仅证明 FPS01 按材料筛选和 2021.000 计划 CRUD 事件，不能闭合 M3 计划/特性/抽样核心目标。直接来源读取范围、固定版本搜索结果限制、未锁版页面排除、虚构练习边界和具体缺口均已写入正文、审查与证据记录。计数不变；W3 下一篇 QM-04；AI-Workflow SHA 未更换。
+**当前执行顺序**：工作线 1 已完成；工作线 2 已处理 SD-06、SD-07、PP-01～PP-06；工作线 3 已处理 PP-07～PP-09、QM-01～QM-04，下一篇 QM-05，之后按用户指定的工作线顺序推进。核心证据无法补齐时，记录已查来源、具体缺口和下一步，文章继续 Draft 并转下一篇。只有目标版证据足以支持其学习目标且完成可核验的独立角色复核，才可记 Role Reviewed。Owner Accepted 只由用户明确批准。
+**最近工作包更新**：QM-04 保持 Draft。对固定版 Manage Inspection Lots 官方搜索摘要的有限内容作版本链接标注；UD 与 Stock Postings 固定正文本轮未能读取，未锁版本 / 2025 FPS01 内容排除。三个独立 AI reviewer-context 对最终正文各完成 5 项精确正文复核（15/15），没有声称 SAP 实测。细节及遗留证据列于正文、QM-04 审查记录和 M4 来源补记。批次计数不变；W3 下一篇 QM-05；AI-Workflow SHA 未更换。
 ## 最近工作包（工作线 2）：PP-06（2026-11-27）
 
 PP-06《生产发料、收货与成本》最终正文 blob `0ae98aa16e2e38d6468f6a2967e342cfc3eed59e`。动态 SAP S/4HANA 2021 FSD v11.0/SPS10 仅支持高层生产执行、库存变动/物料凭证、成本对象概览及 Kanban 限定例子；固定 2021.000/BJ5 Order Split 官方索引仅描述特定拆单功能中的父订单 262 冲回、对子订单 261 发料及组件成本重过账，canonical HTML 直开无可读正文。固定版一般估价、退料/冲销、WIP/差异/结算、FI/CO 凭证/科目、字段/API、权限及 EWM/MES 仍无充分直接证据。三个独立 AI reviewer-context（读者、配置顾问、开发者）各复核 5 项；复核通过只说明边界表达，不代替 M3 核心证据门槛，故 PP-06 保持 Draft，不计 Role Reviewed。PP-02、PP-05、CO-04 均在当前分支但仍 Draft，不作为已审查依赖。W2 完成；下一篇 W3 PP-07。批次 A 仍 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99；批次 B 0/46。未连接 SAP，未做实机、配置、数据库、API 或权限测试。详见[正文](knowledge/PP/02-functions/production-goods-cost.md)、[审查记录](reviews/work/2026-11-27-m4-workline-2-pp06-three-role-review.md)、[证据台账](plans/evidence-logistics-m3.md)与[逐篇审计](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
@@ -433,3 +433,7 @@ QM-02 最终正文 blob `53b91de8ccaebf5b69c1a7519e60b023555ee874` 经三个独�
 ## 工作线 3 收尾检查点｜QM-03（2026-11-27）
 
 已逐篇核对 QM-03 正文、M3 控制矩阵/准入、目标版来源、旧审查记录及 QM-01/QM-02 依赖状态。原 15 项同一 Work 上下文角色模拟不计独立审查；三个独立 AI reviewer-context 对最终正文 blob `eba555f35a4f9eca54e58d040634cc48acb16132` 各完成 5 项质询—证据答复—修订判断—原角色复核（15/15 范围与表述检查通过）。SAP S/4HANA 2021 FPS01 What's New §4.3.1 PDF 本轮直接打开，支持 Manage Inspection Plans worklist 按材料筛选及其 FPS01 范围；version=2021.000 Business Events 官方搜索结果显示计划 create/update/delete 事件，但固定 HTML 打开为 0 行，按搜索结果归因。未锁版本 Help 与动态 FSD v11.0/SPS10 排除在固定版正面证据外。添加的塑料外壳裂纹练习是虚构概念例子，不是 SAP 特性字段、抽样参数或算法。计划/工序/特性关系、计划与工厂/用途/有效期/批量选择、特性字段、抽样过程/计算、无计划/多计划处理及客户权限仍未闭合，故 QM-03 继续 Draft、不计 Role Reviewed。QM-01 与 QM-02 均为 Draft，依赖不能替代目标证据。全库 Owner Accepted 3/99；批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；批次 B 0/46。W3 下一篇 QM-04；W4 QM-06；W5 FI-11。PR #21 已合并，新 PR 尚未创建。未连接 SAP，未做实机、配置、数据库、API 或权限测试。
+
+## 工作线 3 收尾检查点｜QM-04（2026-11-27）
+
+QM-04 正文 blob `3227bc617f569998a528b9bf7f7efc5abcff3d33`。读者、资深配置顾问、开发人员三个独立 AI reviewer-context 各完成 5 项最终正文复核（15/15）；原先的 15 个同 Work 角色模拟仍不计独立审查。作者本轮直接尝试打开固定版 Manage Inspection Lots / Usage Decision / Stock Postings 链接，分别返回 0 行、不可访问、不可访问。带 version=2021.000 的 Manage Inspection Lots 官方检索结果显示工作清单可记录结果并作 UD；只按版本化链接下的官方索引摘要保留，不称直接复读正文。Usage Decision 的当前未锁版结果无可核验固定版本标签；Stock Postings 当前结果为 2025 FPS01，均排除在 2021 肯定规则外。文章已移除无法复读的 UD 前提、处理方式、库存目标/时点和类型 3 自动过账规则，继续 Draft。M3 缺口：结果/缺陷细节、UD 条件与自动化、库存过账与撤销、财务影响、权限和 EWM/普通 IM 边界。QM-02/QM-03 仍 Draft；PROCESS-06 属批次 B、尚无正文。批次 A 仍 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99；批次 B 0/46。W3 下一篇 QM-05；W4 QM-06；W5 FI-11。PR #21 已合并；新 PR 尚未创建。未连接 SAP，未做实机、配置、数据库、API 或权限测试。
