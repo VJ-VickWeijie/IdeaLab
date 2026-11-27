@@ -2,9 +2,9 @@
 
 - 审计日期：2026-11-27（Asia/Shanghai）
 - 仓库：VJ-VickWeijie/IdeaLab
-- PR：[#21](https://github.com/VJ-VickWeijie/IdeaLab/pull/21)，base `main`，工作分支 `careeros-v04-m4-batch1-20261126`
-- 审计基线：PR/分支 HEAD `41131a194e332c50d98183a092caf41f98105a74`；与上次历史参考 SHA 相同。main HEAD `db349fe68e1aa0560ba5546a6382ffe503d0f595`。
-- 基线 PR 规模：282 commits、113 changed files（+10,200 / -108）；PR 开放、未合并。PR 评论、review submissions 为空；该 HEAD 没有返回 commit statuses/checks。
+- PR #21：[已合并](https://github.com/VJ-VickWeijie/IdeaLab/pull/21)，合并提交 `c026b3862c9a083c95cffb096f93e141276cfba5`；以下为当时开放状态的历史审计快照，不代表当前 PR 状态。
+- 原审计快照：PR #21 旧工作分支 `careeros-v04-m4-batch1-20261126`，HEAD `41131a194e332c50d98183a092caf41f98105a74`，main `db349fe68e1aa0560ba5546a6382ffe503d0f595`；其当时记录的 282 commits、113 changed files（+10,200 / -108）、开放状态、评论/检查数据仅描述旧快照。
+- 本次收尾新基线：PR #21 合并后的 main 为 `c026b3862c9a083c95cffb096f93e141276cfba5`；工作分支 `careeros-v04-m4-batch-a-closeout-20261127`，当前 HEAD `b9d0ac5ce2a6419bd43b71aa07225e29d0a4ee87`。新 PR 尚未创建；完成批次 A 收尾后创建并保持开放。
 - 本文是逐篇对账和阻塞审计，不是所有者审阅包：42 篇仍为 Draft，尚未满足所有者审阅包触发条件。当前轮没有重新运行角色闭环或独立复核；表中审查项来自逐篇现存记录，未把同上下文模拟当作正式 Role Reviewed。
 - 全程未连接 SAP；没有执行 SAP 实机、配置、数据库、API 或权限测试。
 
@@ -98,8 +98,23 @@ M3 准入取自 [逐篇准入与证据分流](../../plans/m3-item-readiness-tria
 - FI-04 的官方目标版搜索结果追加到正文和 FI-04/FI-06 合并审查记录；未因旧版或窄范围来源填补证据缺口。
 - 新增本报告；同步更新 CareerOS README、HANDOFF 与 PR 描述。
 - **没有改任何文章为 Role Reviewed 或 Owner Accepted；没有开始批次 B。**
-- 下一项可执行游标：以本报告逐篇差距表为唯一当前队列，从工作线 1 的 MM-08→MM-10 继续补固定版直接资料；每项先锁定证据版本与具体主张，再修订并安排满足独立性要求的角色复核。若证据不能补齐，记录缺口后转下一篇，不降门槛。
+- 历史审计的下一游标为 MM-08；本轮已从 PR #21 合并后的 main 开始，先完成工作线 1 的 MM-08～MM-10 逐篇复核，并于下方追加当前收尾检查点。
 
 ## 不得推定
 
-“15/15 PASS”、阅读完成、文章已存在、沉默或 Work 判断均不构成所有者接受。批次 A 仍需逐篇证据与正式 Role Reviewed 完成；所有 Owner Accepted 仍等待用户在当前窗口明确批准。PR #21 保持开放，不合并。
+“15/15 PASS”、阅读完成、文章已存在、沉默或 Work 判断均不构成所有者接受。批次 A 仍需逐篇证据与正式 Role Reviewed 完成；所有 Owner Accepted 仍等待用户在当前窗口明确批准。PR #21 已合并；本轮不会向 PR #21 追加提交。批次 A 新工作分支的新 PR 尚未创建，创建后必须保持开放，不得合并。
+
+
+## 新分支收尾检查点 1：MM-08～MM-10（2026-11-27）
+
+- **实际游标**：工作线 1，已核 MM-08、MM-09、MM-10；接下来依序进入 SD-01～SD-05。
+- **MM-08**：正文在分支提交 e7aa15b4d75bf68de02e882655177832a8c2df7a 收窄了 Solution Builder scope item 的说明，并拆开 SPS05 Display Material Document List 查看与 MIGO 场景；当前正文 blob 07ad59f5a02a0642698977451bdd817db8e6781c。三角色 AI reviewer-context 对本次文字变化通过，无必改项。通用 MIGO 导航与一般物料凭证显示入口仍缺 2021 On-Premise 固定版直接证据，故 Draft。
+- **MM-09**：未修改。普通无科目分配估价库存收货的固定版借贷方向与 OBYC/BSX/WRX 触发映射仍缺直接证据；并保留 Help/Learning 方向表述冲突。无客户配置/权限验证，Draft。
+- **MM-10**：未修改。PR/PO/历史/物料凭证的精确键、字段、基数、物理存储与兼容视图、released API 及 Client/组织/权限边界仍未闭合；FSD 是动态 SPS10 快照，Draft。另发现 M3 控制矩阵没有 MM-10 独立行；不据此推导新准入，也未改写该已验收矩阵。
+- **计数未变化**：全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A Role Reviewed 8/50（FI-05、MM-01～MM-07）；Draft 42/50；批次 B 46 篇未开始。MM-08～MM-10 均未升级，也未被 Owner Accepted。
+- **提交**：MM-08 正文 e7aa15b4d75bf68de02e882655177832a8c2df7a；MM-08 审查记录 b9d0ac5ce2a6419bd43b71aa07225e29d0a4ee87；本检查点审计提交待写入。
+- 未连接 SAP，未执行实机、配置、数据库、API 或权限测试。
+
+### AI-Workflow 版本标签差异
+
+IdeaLab 根 README 与 docs/AI_WORKFLOW_INTEGRATION.md 将 SHA 939ec44036d89cd91622ab96b938be9f02479026 描述为正式 V1.1；该固定提交自己的 README 把 V1.1 标为“候选版本”。已记录差异，未更换 SHA。
