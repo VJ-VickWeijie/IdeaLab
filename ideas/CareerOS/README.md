@@ -1,18 +1,18 @@
 # CareerOS｜项目总入口（2026-11-27 更新）
 
-> 当前交接入口：[HANDOFF.md](HANDOFF.md)。实时基线：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并至 `main`，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该基线建立；SD-03 工作包开始时分支 HEAD `e1eb921a345c7add12a8b89bc2ec252a99cdfa3d`，新 PR 尚未创建。当前全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
+> 当前交接入口：[HANDOFF.md](HANDOFF.md)。实时基线：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并至 `main`，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该基线建立；SD-04 工作包开始时分支 HEAD `c95b98e25059a0be6a0779d4ade009e18a9f1a2a`，新 PR 尚未创建。当前全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
 
 ## 当前进度（2026-11-27）
 
 | 工作线 | 当前文章 | 状态 |
 | --- | --- | --- |
-| 1 | MM-08～MM-10、SD-01～SD-05（下一游标 SD-04） | 1 Role Reviewed，7 Draft |
+| 1 | MM-08～MM-10、SD-01～SD-05（下一游标 SD-05） | 1 Role Reviewed，7 Draft |
 | 2 | SD-06～SD-07、PP-01～PP-06 | 8 篇 Draft |
 | 3 | PP-07～PP-09、QM-01～QM-05 | 8 篇 Draft |
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 篇 Draft |
 | 5 | FI-11、CO-01～CO-08 | 9 篇 Draft |
 
-当前工作线游标：W1 SD-04、W2 SD-06、W3 PP-07、W4 QM-06、W5 FI-11。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
+当前工作线游标：W1 SD-05、W2 SD-06、W3 PP-07、W4 QM-06、W5 FI-11。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
 
 ## 历史进度日志（当时快照；以当前对账报告为准）
 
@@ -177,3 +177,6 @@ CO-07《管理会计配置查看》按“暂缓核心”准入建立受限 draft
 CO-08《管理会计数据模型》按“暂缓核心”准入建立受限 drafting 草稿。固定版资料支持统一报告存储的转换背景、Margin Analysis 与 ACDOCA 的特定关联，以及 deferred summarization 下 ACDOCA/ACDOCD 的特殊生产成本案例；不支持 CO 对象字段、键、基数、一般持久化、API/权限或客户表结构。三角色各 5 个同上下文模拟闭环，共 15；非独立审查、不计 reviewed。未连接 SAP，未查 DDIC/数据库/API。工作线 5 所分配文章已完成推进（全部草稿待独立角色审查/所有者验收）；批次 A 仍 8/50 reviewed、0/50 owner accepted，正式接受 3/99。详见 `knowledge/CO/05-data-model/controlling-data-model.md`、`reviews/work/2026-11-27-m4-co08-three-role-review.md` 和 `plans/evidence-finance-m3.md`。
 
 - Workline 1 收尾检查点（SD-03）：正文保持 Draft；精确正文复核 15/15 PASS，官方 FSD 来源归因复核通过，但 M3 核心流程与权限缺口未解决。批次 A 仍为 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库为 3/99 Owner Accepted。当前工作线游标为 SD-04。
+
+
+- Workline 1 收尾检查点（SD-04）：当前正文与既有 15/15 独立 AI reviewer-context 记录逐项对账；本轮补查没有找到可直接复读的固定 2021 通用定价/税/收入/资金依据，因此正文不改、仍 Draft。依赖 SD-03/FI-06 为 Draft，PROCESS-02 不在批次 A 分支。批次 A 仍为 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；当前下一篇 SD-05。
