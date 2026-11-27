@@ -6,7 +6,7 @@
 
 学习物料清单（Bill of Material，BOM）时，可以先问一个问题：**一个产品或装配件的组成结构是什么？**
 
-SAP S/4HANA 2021 的固定版 “Manage Multilevel Bill of Material” 页面说明，该应用可以展示多层 BOM 的层级树，先显示 BOM header，再显示嵌套的组件、装配件和物料。这个描述足以帮助我们读懂“父级下面还有组成项”的结构；但该页面不是完整 BOM 业务规则手册，也没有给出所有 BOM 类型、数量算法或订单选择规则。
+SAP Help 官方搜索索引中的固定 2021.000 “New App: Manage Multilevel Bill of Material” 条目显示，该应用可展示多层 BOM 层级树，先显示 BOM header，再列出嵌套 components、assemblies 和 material。当前版本化 Help HTML direct open 为 0 行，未直接复读完整正文；以下只使用官方索引可见文本。索引条目不是完整 BOM 业务规则手册，也没有给出所有 BOM 类型、数量算法或订单选择规则。
 
 本篇因而只把 BOM 介绍为一种组成结构的学习对象。它没有据此推断物料需求计划、成本、生产订单或会计凭证一定如何处理；这些关系需在各自文章中按目标版资料单独核实。
 
@@ -16,7 +16,7 @@ SAP S/4HANA 2021 的固定版 “Manage Multilevel Bill of Material” 页面说
 
 - **父级/装配件（assembly）**：下面还可以展开出更低层的组成结构。
 - **组件（component）**：列在一个父级 BOM 下面的组成项；它可能是单个物料，也可能还有自己的下层结构。
-- **BOM header**：当前所查看 BOM 的头部信息。固定版页面确认该应用先显示 BOM header，再呈现其嵌套列表；本篇不进一步定义 header 的字段。
+- **BOM header**：当前所查看 BOM 的头部信息。2021.000 官方索引摘录显示，该应用先显示 BOM header，再呈现其嵌套列表；本篇不进一步定义 header 的字段。
 
 这是对 2021 页面中树结构描述的入门读法，并不代表所有 BOM item category、物料类型或制造场景都完全相同。
 
@@ -34,13 +34,13 @@ SAP S/4HANA 2021 的固定版 “Manage Multilevel Bill of Material” 页面说
 
 ## 2021 版资料能确认的有限版本信息
 
-“S/4HANA 2021 What's New” 固定版资料包含 BOM 版本控制相关条目：
+SAP Help 官方索引中三个固定 2021.000 “What's New”条目包含 BOM versioning 相关说明；本轮三个版本化 HTML direct open 均为 0 行，未直接复读完整页面正文，以下只按可见索引文字记录有限功能：
 
-1. 页面说明可以使用 Customizing 条目 “Define Additional Control Data” 启用 BOM versioning。
-2. 另一条目说明，对某个 BOM usage，可以在 Customizing “Define Control Data for BOM Usage” 中指定 version-controlled BOM 的手动或自动 versioning。
+1. 官方索引摘录显示，可使用 Customizing 条目 “Define Additional Control Data” 启用 BOM versioning。
+2. 另一条官方索引摘录显示，对某个 BOM usage，可以在 Customizing “Define Control Data for BOM Usage” 中指定 version-controlled BOM 的手动或自动 versioning。
 3. 这些条目只确认目标版本存在相关配置能力和设置名称；没有给出完整 IMG 路径、客户当前设置、版本与替代 BOM/生产版本的对应规则，也不表示所有 BOM usage 都启用了版本控制。
 
-目标版还有一个范围很窄的例子：“Confirm Repetitive Manufacturing” 页面说明，在按库存重复制造（make-to-stock repetitive manufacturing）的该确认场景中，可以使用 BOM explosion date 决定创建确认时有效的 BOM version。该页面把能力限定在这个场景。不要把这句话扩展成“所有生产订单都会按同一日期自动选择 BOM”，也不要据此推导通用的有效期或替代项优先级。
+目标版还有一个范围很窄的例子：固定 2021.000 “Confirm Repetitive Manufacturing” 的官方索引摘录显示，在按库存重复制造（make-to-stock repetitive manufacturing）的确认场景中，可使用 BOM explosion date 确定创建确认时有效的 BOM version。该版本化 Help HTML direct open 为 0 行，未直接复读完整页面正文。该页面把能力限定在这个场景。不要把这句话扩展成“所有生产订单都会按同一日期自动选择 BOM”，也不要据此推导通用的有效期或替代项优先级。
 
 ## 本篇暂不解释的规则
 
@@ -48,8 +48,8 @@ M3 批准范围还包括 BOM 用量、替代项、有效日期/版本，以及�
 
 | 学习问题 | 本篇能做的说明 | 仍待目标版直接证据 |
 | --- | --- | --- |
-| 一个产品的下层结构如何表示？ | 2021 固定版应用页支持多层树、BOM header 与嵌套组件/装配件/物料的展示。 | 不同 BOM 类型、用途和生产场景的完整结构规则。 |
-| BOM versioning 是否存在？ | 2021 What's New 页面记录了启用 BOM versioning 及按 BOM usage 设置手动/自动 versioning 的配置条目。 | 全部配置细节、默认值、版本生成规则以及客户系统当前状态。 |
+| 一个产品的下层结构如何表示？ | 固定 2021.000 官方索引摘录支持该应用可展示多层树、BOM header 与嵌套组件/装配件/物料。 | 不同 BOM 类型、用途和生产场景的完整结构规则。 |
+| BOM versioning 是否存在？ | 固定 2021.000 官方索引摘录记录了启用 BOM versioning 及按 BOM usage 设置手动/自动 versioning 的有限配置说明。 | 全部配置细节、默认值、版本生成规则以及客户系统当前状态。 |
 | 哪个替代项会被生产选中？ | 目前不作通用结论。 | 目标版本的替代 BOM、lot size、有效期、生产版本和选择策略之间的逐项关系。 |
 | 一个成品需要多少组件？ | 目前不做数量运算或单位换算。 | BOM item quantity、base quantity、单位和固定数量等目标版直接依据及计算边界。 |
 | 组件缺失、失效或被排除时会怎样？ | 不推测其会被忽略、报错或由系统自动补齐。 | 缺失/失效条件、爆炸结果、错误或后续业务动作的直接资料。 |
@@ -76,10 +76,10 @@ M3 批准范围还包括 BOM 用量、替代项、有效日期/版本，以及�
 
 ## 目标版本官方来源
 
-1. SAP Help Portal，[“New App: Manage Multilevel Bill of Material”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/40fea7f7ca7d446c800d992088133f69.html?locale=en-US&version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000。支持多层树、BOM header 与嵌套组件/装配件/物料，以及页面所列应用权限范围；该应用支持 display and maintain，并非只读工具。
-2. SAP Help Portal，[“Configuration to Define Versioning of Bill of Material”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/354d3184ad4449f6b515029199e69de9.html?version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000。支持启用 BOM versioning 的配置项名称；不支持推导完整 IMG 路径或客户设置。
-3. SAP Help Portal，[“Configuration to Maintain Manual or Automatic Versioning for BOM Usage”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/d9fae6cc2c684445b25cee45bf30502a.html?locale=en-US&version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000。支持按 BOM usage 设置手动/自动 versioning 的有限说明。
-4. SAP Help Portal，[“Confirm Repetitive Manufacturing”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/87921c2813d94507b725eec99b4e979c.html?locale=en-US&version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000。仅支持 make-to-stock repetitive manufacturing 确认场景中的 BOM explosion date 与有效 BOM version 示例。
+1. SAP Help Portal，[“New App: Manage Multilevel Bill of Material”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/40fea7f7ca7d446c800d992088133f69.html?locale=en-US&version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000。官方检索索引摘录显示多层树、BOM header、嵌套组件/装配件/物料，以及 BOM Engineer business role template 授权说明；版本化 Help HTML direct open 返回 0 行，本轮未直接复读完整正文。索引显示应用支持 display and maintain，不应称为只读工具。
+2. SAP Help Portal，[“Configuration to Define Versioning of Bill of Material”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/354d3184ad4449f6b515029199e69de9.html?version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000。官方检索索引摘录显示可用 “Define Additional Control Data” 启用 BOM versioning；版本化 Help HTML direct open 返回 0 行，未直接复读完整正文。不支持推导完整 IMG 路径或客户设置。
+3. SAP Help Portal，[“Configuration to Maintain Manual or Automatic Versioning for BOM Usage”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/d9fae6cc2c684445b25cee45bf30502a.html?locale=en-US&version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000。SAP 官方检索索引摘录显示可为特定 BOM usage 选择手动或自动 versioning；版本化 Help HTML direct open 返回 0 行，未直接复读完整正文。不支持推导默认值、算法及全部 BOM usage 覆盖。
+4. SAP Help Portal，[“Confirm Repetitive Manufacturing”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/87921c2813d94507b725eec99b4e979c.html?locale=en-US&version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000。官方检索索引摘录显示，make-to-stock repetitive manufacturing 确认场景可用 BOM explosion date 确定有效 BOM version；版本化 Help HTML direct open 返回 0 行，未直接复读完整正文。该有限说明不支持通用 BOM 选版规则。
 5. M3 范围/证据台账：[逐篇范围、版本线索与依赖](../../../plans/detail-logistics-v0.3.md)、[逐篇准入分流](../../../plans/m3-item-readiness-triage-v0.3.md)、[物流来源登记](../../../plans/evidence-logistics-m3.md)、[SD/PP 来源贴合度复核](../../../plans/sd-pp-source-fit-m3.md)。这些记录用于解释批准范围和来源限制，不是 BOM 产品规则的替代证据。
 
 M3 来源台账所列 FSD_OP2021_latest.pdf 是动态 URL；本稿不把该文件当前快照当成固定版 2021 证据。没有连接 SAP 系统；没有执行或声称执行实机测试。
