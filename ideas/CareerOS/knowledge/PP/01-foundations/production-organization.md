@@ -41,7 +41,7 @@ SAP《What's New in SAP S/4HANA 2021 SPS04》静态 PDF（Document Version 1.0�
 - Make-to-Order Production - Process Manufacturing
 - Make-to-Stock with Co- and By-Products - Process Manufacturing
 
-该固定版直接来源仅证明这些名称出现在 PI Sheet / work instruction 浏览器功能的适用范围中。它不是完整制造模式目录，也未解释各模式的组织、计划、库存、需求或会计差异。
+该固定版直接来源仅证明这些名称出现在 PI Sheet / work instruction 浏览器功能的适用范围中。它不是完整制造模式目录，也未解释各模式的组织、计划、库存、需求或会计差异。 文档中“激活相应 enhancement”的要求针对该 HTML5 浏览器功能，不证明列出的 Scope Item 在任何客户系统中已获许可、部署或启用。
 
 ## 3. 尚不能作为 2021 事实写入的内容
 
@@ -74,9 +74,6 @@ M3 来源登记引用的 FSD 页面是动态 latest URL。此前复核只确认�
    https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b39ff179522b435584613620f5f4cdd5.html?locale=en-US&state=PRODUCTION&version=2021.000
 2. SAP Help Portal，《What's New in SAP S/4HANA 2021 SPS04》，Document Version 1.0（2023-05-17），§3.1.1，印刷页 13。本文直接复读静态 PDF；其 Scope Item 清单只绑定 PI Sheet / work instruction 的 HTML5 浏览器功能：  
    https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.004/en-US/WN_OP2021_SPS04_EN.pdf#page=13
-3. M3 的 [逐篇范围、版本线索与依赖](../../plans/detail-logistics-v0.3.md)、[来源登记](../../plans/evidence-logistics-m3.md) 和 [SD/PP 来源贴合度复核](../../plans/sd-pp-source-fit-m3.md)记录了原计划范围和证据缺口。它们是规划/来源边界记录，不替代正式文章证据。
-4. SAP Help 的 FSD_OP2021_latest.pdf 为动态 URL；其标题虽然指向 SAP S/4HANA 2021，文件版本会变化。本文不把它当作固定版本 2021 证据：  
-   https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf
 3. M3 的 [逐篇范围、版本线索与依赖](../../plans/detail-logistics-v0.3.md)、[来源登记](../../plans/evidence-logistics-m3.md) 和 [SD/PP 来源贴合度复核](../../plans/sd-pp-source-fit-m3.md)记录了原计划范围和证据缺口。它们是规划/来源边界记录，不替代正式文章证据。
 4. SAP Help 的 FSD_OP2021_latest.pdf 为动态 URL；其标题虽然指向 SAP S/4HANA 2021，文件版本会变化。本文不把它当作固定版本 2021 证据：  
    https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf
