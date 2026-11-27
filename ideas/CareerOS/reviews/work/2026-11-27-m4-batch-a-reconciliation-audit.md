@@ -4,7 +4,7 @@
 - 仓库：VJ-VickWeijie/IdeaLab
 - PR #21：[已合并](https://github.com/VJ-VickWeijie/IdeaLab/pull/21)，合并提交 `c026b3862c9a083c95cffb096f93e141276cfba5`；以下为当时开放状态的历史审计快照，不代表当前 PR 状态。
 - 原审计快照：PR #21 旧工作分支 `careeros-v04-m4-batch1-20261126`，HEAD `41131a194e332c50d98183a092caf41f98105a74`，main `db349fe68e1aa0560ba5546a6382ffe503d0f595`；其当时记录的 282 commits、113 changed files（+10,200 / -108）、开放状态、评论/检查数据仅描述旧快照。
-- 本次收尾新基线：PR #21 合并后的 main 为 `c026b3862c9a083c95cffb096f93e141276cfba5`；工作分支 `careeros-v04-m4-batch-a-closeout-20261127`，本次 SD-06 工作包开始前分支 HEAD `5543a92912570a387afe3be4a6d29c3eeff67260`；后续工作包提交会继续推进此分支。新 PR 尚未创建；完成批次 A 收尾后创建并保持开放。
+- 本次收尾新基线：PR #21 合并后的 main 为 `c026b3862c9a083c95cffb096f93e141276cfba5`；工作分支 `careeros-v04-m4-batch-a-closeout-20261127`，SD-06 工作包开始前分支 HEAD `5543a92912570a387afe3be4a6d29c3eeff67260`；SD-07 工作包开始前分支 HEAD `0faa75e4bdea9dbc393cc6df089176d307b2d17e`；后续包提交继续推进此分支。新 PR 尚未创建；完成批次 A 收尾后创建并保持开放。
 - 本文是逐篇对账和阻塞审计，不是所有者审阅包；42 篇原 Draft 已逐篇审计。本轮对 SD-01、SD-02、SD-03 精确正文重新执行独立 AI reviewer-context 复核；SD-04 当前正文则与既有 15 项独立 reviewer-context 记录、M3 门禁和来源直接对账，不将协调者复读计作新独立复核。状态按目标版证据和 M3 范围判断，不将同上下文模拟当作正式 Role Reviewed。
 - 全程未连接 SAP；没有执行 SAP 实机、配置、数据库、API 或权限测试。
 
@@ -45,7 +45,7 @@ M3 准入取自 [逐篇准入与证据分流](../../plans/m3-item-readiness-tria
 | SD-04 | [SD-04 正文](../../knowledge/SD/02-functions/pricing-billing-ar.md) | 限缩可写 | 当前正文 blob `7d349641c104cffa49f375ec2b5107a5a9f5dda6` 保留动态 FSD Version 11.0 / 2021 SPS10 的开票/AR 高层功能描述；未获可直接复读的固定 2021 证据支持通用定价、税、收入确认/FI 分录、实际 AR 关联、收款差异/银行资金与权限。依赖 SD-03、FI-06 为 Draft，PROCESS-02 不在批次 A 分支。 | [评审记录](2026-11-27-m4-sd04-three-role-review.md)；既有 15/15 独立 AI reviewer-context 记录已逐项对照当前正文；本轮仅来源/依赖复核，不新增闭环 | **Draft**；文章主题级核心目标仍有缺口；后续取得固定版可复读证据并完成原角色复核后再评估 |
 | SD-05 | [SD-05 正文](../../knowledge/SD/03-tcodes/transaction-index.md) | 暂缓核心 | 当前正文 blob `5604d5f31b6b2b78e40cd5304b87eb172e8fb6db`；固定 2021 GTS/Brazil Help 摘录只支持局部入口名，静态 Simplification List §49.8 只支持特征值快速录入的特定迁移例码；通用销售/交货/开票导航、逐码用途、输入输出、GUI/Fiori 与权限未闭合。 | [评审记录](2026-11-27-m4-sd05-three-role-review.md)；既有 15/15 独立 AI reviewer-context 闭环逐项对照，来源读取限制已补记 | **Draft**；M3 暂缓核心目标未满足；来源记录没有升级为完整入口目录 |
 | SD-06 | [SD-06 正文](../../knowledge/SD/04-configuration/sales.md) | 限缩可写 | 当前正文 blob `48293fd49ac07ad4ee42ad3ed9b4f48e59a3b1a8` 的三个固定版示例经复核；通用 IMG 节点/行为、业务分支、交货/开票与科目决定、系统只读/授权路径仍未核。M3 控制矩阵无 SD-01～SD-07 独立行。 | [评审记录](2026-11-27-m4-sd06-three-role-review.md)；15 项同一 Work 上下文角色模拟，不计独立复核 | **Draft**；按 triage/detail-logistics 门禁保留边界，补足独立审查与目标版证据后再评估 |
-| SD-07 | [SD-07 正文](../../knowledge/SD/05-data-model/sales-delivery.md) | 限缩可写 | 固定简化资料支持转换语境下部分状态表/字段变更；动态 FSD 只支持高层开票能力；单据流字段、主外键/基数、released API/CDS 和权限未闭合。 | [评审记录](2026-11-27-m4-workline-2-sd07-three-role-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
+| SD-07 | [SD-07 正文](../../knowledge/SD/05-data-model/sales-delivery.md) | 限缩可写 | 固定 2021 Simplification List §36.8 仅支持转换语境中的状态模型变化；§36.9 说明特定早期系统历史，不是 2021 通用关系规则。动态 FSD 11.0/SPS10 仅支持开票至 FI 高层能力；固定 API 2021 索引仅为模拟属性增强摘录、direct open 0 行。VBFA/后续单据字段、键、基数、组织限制、SD-FI 字段关系、released API/CDS 与本地权限未闭合。 | [评审记录](2026-11-27-m4-workline-2-sd07-three-role-review.md)；原 15 条同上下文模拟；另有读者/顾问/开发 3 个独立 AI reviewer-context 各 5 项、精确正文 15/15 PASS | **Draft**；正文范围复核通过，但 M3 核心目标及目标系统证据未闭合，不因角色复核 PASS 升级 |
 | PP-01 | [PP-01 正文](../../knowledge/PP/01-foundations/production-organization.md) | 暂缓核心 | 现有固定材料仅支持少数产品范围标签；生产组织关系、工厂归属及按库存/按订单、离散/流程制造的业务边界未闭合。 | [评审记录](2026-11-27-m4-pp01-three-role-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | PP-02 | [PP-02 正文](../../knowledge/PP/01-foundations/bom.md) | 限缩可写 | 固定版来源支持有限多层 BOM 与特定版本能力；数量/UoM、替代项选择、有效期、组件缺失和具体表字段规则仍不足。M3 矩阵无独立 PP-02 行，逐篇准入有记录。 | [评审记录](2026-11-27-m4-pp02-three-role-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | PP-03 | [PP-03 正文](../../knowledge/PP/01-foundations/work-center-routing.md) | 限缩可写 | 目标版资料覆盖几个特定 Routing/API/PEO 范围；工作中心一般定义、工序/选择顺序、有效期、成本与产能参数未闭合。M3 矩阵无独立 PP-03 行，逐篇准入有记录。 | [评审记录](2026-11-27-m4-pp03-three-role-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
@@ -175,3 +175,14 @@ IdeaLab 根 README 与 docs/AI_WORKFLOW_INTEGRATION.md 将 SHA 939ec44036d89cd91
 - **计数**：批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99 Owner Accepted；批次 B 0/46 未开始。
 - **工作线游标**：W1 已完成；W2 SD-07；W3 PP-07；W4 QM-06；W5 FI-11。
 - 未连接 SAP；未做 IMG、事务码、配置、权限或系统测试。
+
+
+## 新分支收尾检查点 7：SD-07（2026-11-27）
+
+- **工作包起点**：SD-07 前分支 HEAD `0faa75e4bdea9dbc393cc6df089176d307b2d17e`；main 合并基线为 PR #21 合并后的 `c026b3862c9a083c95cffb096f93e141276cfba5`。
+- **正文**：SD-07 当前精确正文 blob `7a00a76187960d5279c8052071731bc9742efb7a`。新增固定清单 §36.9 历史边界，按来源分列旧系统转换目标、新安装起始/曾经版本及文档流重建条件；不声称 2021 一般系统当前关系状态或要求普遍重建。S3 已明确标为 SAP 官方固定版索引摘录，direct open 为 0 行。
+- **独立审查**：原有每角色 5 项是同一 Work 上下文模拟；收尾时读者、顾问、开发三个独立 AI reviewer-context 对上述精确正文各提 5 项质询，作者逐项答复/修订并由原角色复核，最终每角色 5/5 PASS。非真人 SAP 专家意见、非系统验证；审查通过不代表 M3 证据门槛通过。
+- **M3 与状态**：M3 readiness 为“限缩可写”，仍要求完整单据流字段、主键、接口与关联基数；依赖 SD-03、SD-04、FI-11 均为 Draft。SD-07 保持 Draft。没有固定版证据闭合 VBFA/后续单据键与基数、组织约束、SD 至 FI 字段引用、完整发布 API/CDS 合同或目标系统授权。
+- **计数**：批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99 Owner Accepted；批次 B 0/46 未开始。
+- **游标**：W1 已完成；W2 下一篇 PP-01；W3 PP-07；W4 QM-06；W5 FI-11。
+- 未连接 SAP；未执行 SE16、数据库、ABAP、API、配置或权限测试。
