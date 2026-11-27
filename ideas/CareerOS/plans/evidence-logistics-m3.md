@@ -158,3 +158,13 @@ Work 于 2026-11-26 从 SAP 官方 S/4HANA 2021 动态 FSD 直接定位 §2.12.4
 - **门禁与 M3 记录**：M3 triage 将 PP-01 标为“暂缓核心”，detail-logistics 要求组织/工厂角色及 MTS/MTO、离散/流程制造边界。复读已验收 M3 控制矩阵，未发现 PP-01 或 PP-01～PP-09 单独行；不能将它归述为 PP-01 专属矩阵条款。具体要求来自逐篇 triage/detail-logistics 与 evidence-logistics 条目。本轮不改已验收矩阵。当前固定版证据仍只支持有限范围标签，不足以支持本篇核心学习目标，PP-01 保持 Draft。未连接 SAP，未做系统/权限测试。
 - **P2 激活范围补充**：同一固定 SPS04 PDF 的 Effects on Customizing 说明，需在 Customizing 激活对应 enhancement 才启用该 HTML5 支持；此条件针对 PI Sheet / work instruction 浏览器功能，不证明任何客户系统对清单中的制造 Scope Item 已获许可、已部署或已启用。SAP 官方固定 PDF：https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.004/en-US/WN_OP2021_SPS04_EN.pdf#page=13。
 - **最终正文与独立复核**：PP-01 最终正文 blob `2c8d036bcedc137e5a0cc13ee1846719d2006bd9` 已由三个独立 AI reviewer-context（读者、配置顾问、开发者）各完成 5 项“质询—作者答复/修订判断—复核”，15/15 均 PASS，仅确认当前证据边界安全。M3 核心学习目标仍未被证明，文章保持 Draft，不计 Role Reviewed；复核过程见 [PP-01 审查记录](../reviews/work/2026-11-27-m4-pp01-three-role-review.md)。未连接 SAP，未做系统、配置或权限测试。
+
+## PP-02 2026-11-27 固定版来源访问续核
+
+- **M3 范围**：逐篇分流将 PP-02 标为“限缩可写”，后续需补查 BOM 有效期、替代项选择及具体表/字段；detail-logistics 将 BOM 结构、替代、用量、有效日期、版本与组件缺失都列为目标，并要求虚构产品与组件的数量练习和有条件选择说明。已验收 M3 控制矩阵无 PP-02 单独行，具体文章门槛来自 triage/detail-logistics/evidence 记录。
+- **P1｜New App: Manage Multilevel Bill of Material**：固定 SAP S/4HANA 2021.000 官方检索索引显示层级树、BOM header 与嵌套 components/assemblies/material；索引同时显示应用支持 display and maintain，权限与 BOM Engineer business role template 对应。版本化 Help HTML 本轮 direct open 返回 0 行，未直接复读完整正文；不把索引摘录写成完整应用文档或通用 BOM 规则。
+- **P2｜Configuration to Define Versioning of Bill of Material**：固定 2021.000 官方索引显示可经 “Define Additional Control Data” 启用 BOM versioning。版本化 Help HTML direct open 返回 0 行，未直接复读正文；不据此推断完整 IMG 路径、默认值或客户系统设置。
+- **P3｜Configuration to Maintain Manual or Automatic Versioning for BOM Usage**：固定 2021.000 官方索引显示，version-controlled BOM 的特定 BOM usage 可配置 manual/automatic versioning。版本化 Help HTML 本轮未返回可读正文（工具访问错误）；仅按官方索引摘录记录有限能力，不据此推断全部 usage、编号算法或默认行为。
+- **P4｜Confirm Repetitive Manufacturing**：固定 2021.000 官方索引显示，仅在 make-to-stock repetitive manufacturing 确认场景中，可用 BOM explosion date 确定创建确认时有效的 BOM version。版本化 Help HTML direct open 返回 0 行，未直接复读正文；不外推至一般生产订单、其他制造模式或通用选版规则。
+- **补证搜索及排除**：对 BOM item/base quantity、alternate BOM/validity、缺失组件和通用选择规则的 SAP 官方搜索，出现的可读通用资料分别标记为 2025 FPS01/其他动态版或 SAP ERP EHP8；未用于 2021 On-Premise 主张。Maintenance Bill of Material 2021 API 只针对设备/功能位置 BOM，不替代 PP 物料 BOM 数据模型。未找到足以闭合 PP-02 用量/单位、有效期、替代项优先、组件缺失及表/字段/API 核心目标的固定版直接正文。
+- **文章处理**：正文已限定为可见的官方检索索引摘录，明确 P1–P4 的页面正文无法直接复读；核心缺口保持在文章与 review 记录中。PP-02 保持 Draft，不计 Role Reviewed；SAP 未连接，未执行系统、配置、数据库、API 或权限测试。
