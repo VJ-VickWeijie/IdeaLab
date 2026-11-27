@@ -1,7 +1,7 @@
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-27（Asia/Shanghai）  
-**当前实时快照**：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已于该提交合并，绝不再向其追加。本次收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该 main 建立，按顺序完成至 PP-03；PP-03 最终正文 blob `a84cbe704635ee67f58ce5d55c1db75b06086bc0`，仍为 Draft。新 PR 尚未创建。全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A 9/50 Role Reviewed（FI-05、MM-01～MM-07、SD-01）、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。五条工作线依次有 8、8、8、9、9 篇。
+**当前实时快照**：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已于该提交合并，绝不再向其追加。本次收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该 main 建立，按顺序完成至 PP-04；PP-04 最终正文 blob `26d1459be3a9f6999dacc414fb8ca634da793cda`，仍为 Draft。最新收尾提交 `f1cc02048585b54c0e5330d0701b18aef2bc54eb`；新 PR 尚未创建。全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A 9/50 Role Reviewed（FI-05、MM-01～MM-07、SD-01）、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。五条工作线依次有 8、8、8、9、9 篇。
 **独立性与状态**：同一 Work 上下文角色模拟不计 Role Reviewed；15/15 PASS 不自动通过证据门禁。本轮 SD-01 经精确正文独立 AI 角色复核后计入 Role Reviewed；SD-02、SD-07 与 PP-01 的独立 AI 复核通过了当前文案/证据边界检查，但各自仍有 M3 核心证据缺口，保持 Draft。PP-01、PP-02、PP-03 的三角色 reviewer-context 各 5 项均在最终正文上 PASS（仅证据边界/措辞）；三篇 M3 核心证据仍未闭合。PP-03 的 FSD 动态 v11/SPS10 与先前 v9/SPS08 抓取差异已记录，正文只按 v11 概念摘录表述。没有推定所有者接受。未连接 SAP，未执行实机、配置、数据库、API 或权限测试。
 **流程版本**：固定 SHA `939ec44036d89cd91622ab96b938be9f02479026` 未更换；IdeaLab 接入文档称 V1.1 正式版，而该固定提交 README 仍称“候选版本”，矛盾已记录于审计报告，待所有者决定是否升级。
 
@@ -44,8 +44,11 @@
 - MM-07《价格单位、数量单位与换算》完成 15 个有效闭环：普通读者 5、配置顾问 5、开发者 5；状态 reviewed，待所有者验收。正文区分 PO 订单单位、订单价格单位和教学用计价数量，例题假设已限定；未推断单位因子存储字段、发票匹配或 BAPI 字段覆盖根因。记录见 `reviews/work/2026-11-26-m4-mm07-three-role-review.md`。
 - 没有连接 SAP 系统或执行实机测试；没有声称验证客户配置、权限或生产凭证。
 
-- **最近工作包（工作线 2）**：PP-03 最终正文 blob `a84cbe704635ee67f58ce5d55c1db75b06086bc0` 已由普通读者、配置顾问、开发三个独立 AI reviewer-context 各完成 5 项质询和原角色复核，15/15 PASS 仅代表证据边界/措辞检查。正文以动态 SAP S/4HANA 2021 FSD v11.0/SPS10 支持概念主线，记录同一路径曾返回 v9/SPS08 的来源差异；固定 2021.000 BJ5/BJ8 Help HTML 直开均为 0 行。工序选择、替代/有效期、Work Center 完整定义及成本/产能细节仍未闭合，因此 PP-03 保持 Draft，不计 Role Reviewed。当前游标 W2 PP-04。详见 PP-03 review、证据台账和实时审计。
-## 当前执行状态与准确游标（2026-11-27；PP-03 检查点）
+## 最近工作包（工作线 2）：PP-04（2026-11-27）
+
+PP-04 最终正文 blob `26d1459be3a9f6999dacc414fb8ca634da793cda`。补入动态 FSD v11.0/SPS10 中 MRP 与 capacity planning 的范围区分，并将 2021.000 J44 与 Planned Orders API 的固定版官方搜索索引摘要明确标为索引证据；对应 canonical HTML 直开为 0 可读行。动态 FSD 同一路径旧索引曾显示 v9.0/SPS08，正文只引用已直接核对的 v11 内容并披露无本地 PDF 哈希。2025 FPS01 动态 Help 页面和转换专用 Simplification List 均没有被当作 2021 通用算法证据。普通读者、配置顾问、开发者三个独立 AI reviewer-context 针对最终正文各完成 5 个有效质询及原角色复核，15/15 PASS 仅表示证据边界与措辞通过； reviewer-context 是独立 AI 上下文，不是人工 SAP 专家。净需求/库存与日期纳入、批量规则、采购来源、计划日期/firming/MRP Live 差异及 API 完整字段和权限仍未闭合，故 PP-04 保持 Draft，不计 Role Reviewed。未连接 SAP、未做实机或 API/数据库/权限测试。详见[正文](knowledge/PP/02-functions/mrp-planned-order.md)、[审查记录](reviews/work/2026-11-27-m4-pp04-three-role-review.md)、[证据台账](plans/evidence-logistics-m3.md)与[逐篇审计](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
+
+## 当前执行状态与准确游标（2026-11-27；PP-04 检查点）
 
 - M4 批次 A 全部 50 篇文件均已在 main：当前 9 篇 Role Reviewed、0 篇 Owner Accepted、41 篇 Draft；全库 Owner Accepted 3/99。
 - 批次 B 仍为 0/46；只有批次 A 全部完成且用户在本窗口明确批准后才能开工。
@@ -54,14 +57,14 @@
 
 | 工作线 | 当前文章 | 文章状态 | 下一游标 |
 | --- | --- | --- | --- |
-| 1 | MM-08～MM-10、SD-01～SD-05 | 1 Role Reviewed、7 Draft | 已完成，转 W2 PP-04 |
-| 2 | SD-06～SD-07、PP-01～PP-06 | 8 Draft | PP-04 |
+| 1 | MM-08～MM-10、SD-01～SD-05 | 1 Role Reviewed、7 Draft | 已完成，转 W2 PP-05 |
+| 2 | SD-06～SD-07、PP-01～PP-06 | 8 Draft | PP-05 |
 | 3 | PP-07～PP-09、QM-01～QM-05 | 8 Draft | PP-07 |
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 Draft | QM-06 |
 | 5 | FI-11、CO-01～CO-08 | 9 Draft | FI-11 |
 
-**当前执行顺序**：工作线 1 已完成；工作线 2 已处理 SD-06、SD-07、PP-01、PP-02、PP-03，下一篇 PP-04，之后按用户指定的工作线顺序推进。核心证据无法补齐时，记录已查来源、具体缺口和下一步，文章继续 Draft 并转下一篇。只有目标版证据足以支持其学习目标且完成可核验的独立角色复核，才可记 Role Reviewed。Owner Accepted 只由用户明确批准。
-**本次工作包更新**：PP-03 保持 Draft。SAP 动态 FSD v11.0/SPS10 仅补上 Routing、Work Center 与生产版本的概念主线；该 URL 曾有 v9.0/SPS08 抓取，来源差异和无固定哈希已披露。固定 BJ5 Manage Routings 与 BJ8 Work Center API 的官方索引页面直开均 0 行。读者、配置顾问、开发三个独立 AI reviewer-context 各 5 项最终均 PASS，仅确认范围表达安全；工序/替代/有效期选择、Work Center 完整定义及成本/产能参数仍未闭合。W2 下一篇 PP-04；批次计数不变，AI-Workflow SHA 未更换。
+**当前执行顺序**：工作线 1 已完成；工作线 2 已处理 SD-06、SD-07、PP-01～PP-04，下一篇 PP-05，之后按用户指定的工作线顺序推进。核心证据无法补齐时，记录已查来源、具体缺口和下一步，文章继续 Draft 并转下一篇。只有目标版证据足以支持其学习目标且完成可核验的独立角色复核，才可记 Role Reviewed。Owner Accepted 只由用户明确批准。
+**本次工作包更新**：PP-04 保持 Draft。三类独立 AI reviewer-context 在精确最终正文上完成 15 项边界/措辞复核并全部 PASS；但净需求、数量与日期规则、采购来源、firming/计划方式及完整 API 合同等 M3 核心缺口仍在，故不计 Role Reviewed。证据来源版本、动态 FSD 检索差异和 fixed Help 索引页直开无可读正文均已记录。批次计数不变，AI-Workflow SHA 未更换。
 ## 未解决问题与证据边界
 
 继承自 M3 的主题级开放边界，限制相关主张，但不阻止独立文章：

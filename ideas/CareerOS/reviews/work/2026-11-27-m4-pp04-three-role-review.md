@@ -3,7 +3,7 @@
 - 日期：2026-11-27（Asia/Shanghai；仅记录日期，未保留每轮具体时分）
 - 工作包：CareerOS M4 批次 A，工作线 2
 - 文章路径：ideas/CareerOS/knowledge/PP/02-functions/mrp-planned-order.md
-- 审核基线：文章修订提交 668098d2c3b3ccbaf5a371edef8ee90c42673b77
+- 原同上下文审查基线：文章修订提交 668098d2c3b3ccbaf5a371edef8ee90c42673b77；独立 AI 复核最终正文 blob：`26d1459be3a9f6999dacc414fb8ca634da793cda`，远端提交 `f1cc02048585b54c0e5330d0701b18aef2bc54eb`
 - 状态：drafting
 - 角色视角闭环：普通读者 5/5；资深 SAP 配置顾问 5/5；普通 SAP 开发人员 5/5；合计 15/15。
 - 独立性：同一 Work 上下文内的角色视角模拟，不是独立审查者、真人专家或独立 Agent；不计正式三角色独立审查。
@@ -173,9 +173,47 @@ S/4HANA 2021 Operations Guide 版本历史列出 1.0（2021-10-13，初始版）
 
 ## 4. 结论与未闭合事项
 
-- 普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各完成 5 个同上下文角色视角闭环，共 15 个；不是独立审查或真人专家评审。
-- 高层 MRP/计划订单说明只引用明确标注的 S/4HANA 2021 SPS10 动态 FSD 快照。固定版 2021.000 Help 仅支持特定监控应用和 Planned Order API 条目；SPS10 Operations Guide 用于运维前提边界。
-- 净需求算法、批量算法/参数、库存与收货纳入规则、计划提议选择、客户配置、完整数据模型和授权均未闭合。纸面算术不是 SAP 系统结果。
-- 核心学习目标仍不足以写成完整目标版 MRP 指南；文章保持 drafting，不增加批次 A reviewed 数或 owner accepted 数。
+- 原记录中的普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各 5 轮，共 15 轮，全部是同一 Work 上下文的角色模拟；这些历史模拟不计独立审查。
+- 另由三个分开的 AI reviewer-context 对最终正文各提出 5 个不同质询，Work 逐项答复并更新正文/来源说明后，原角色对精确最终 blob `26d1459be3a9f6999dacc414fb8ca634da793cda` 复核 5/5；15/15 PASS 仅代表本轮证据边界、来源可读性和措辞安全，不是真人 SAP 专家意见，也不替代 M3 内容门槛。
+- 高层 MRP/计划订单说明只引用明确标注的 S/4HANA 2021 SPS10 动态 FSD 快照。固定版 2021.000 的 J44 监控摘要和 Planned Order API 范围来自 SAP 官方检索索引；两条规范 HTML direct open 均 0 行可读正文。SPS10 Operations Guide 仅用于运维准备提示。2021 Simplification List §3.24 限于转换/升级语境。
+- 净需求算法、批量算法/参数、库存与收货纳入规则、计划提议选择、日期/运行模式差异、客户配置、完整数据模型/API 契约和授权均未闭合。纸面算术不是 SAP 系统结果。
+- **状态：Draft；不增加批次 A Role Reviewed 或 Owner Accepted 计数。**核心学习目标仍不足以构成完整目标版 MRP 指南。
+- 本轮未连接 SAP，未执行 MRP、配置、数据库、API 或权限测试。三个 reviewer-context 均为独立 AI 上下文而非真人专家。
 - 下一篇：PP-05《生产订单与确认》，路径 ideas/CareerOS/knowledge/PP/02-functions/production-order.md。开始前只读 PP-05 对应准入、来源及关联文章。
+
+## 5. 独立 AI reviewer-context 质询与原角色复核（2026-11-27）
+
+本节记录三个独立 AI reviewer-context 对最终正文的审查。所有轮次的审阅正文为 blob `26d1459be3a9f6999dacc414fb8ca634da793cda`；该 blob 已通过 GitHub `fetch_blob` 和分支文件读取核对。以下每轮均包括实质质询、来源判断、Work 回答/修订决定及原角色复核。记录日期精确到日，没有记录每轮时分。
+
+### 普通读者 reviewer-context
+
+| 轮次 | 质询与证据 | Work 答复、修订和位置 | 原角色复核/状态 |
+|---|---|---|---|
+| R-01 | “期初可用数量 25”是否为 SAP 计算量？固定 J44 索引只支持应用级监控，FSD 不给具体库存纳入算法。 | 将它改为“题目给定期初余额 25（不是 SAP 算出的可用库存）”；库存/预留/收货纳入仍未知。正文“需求短缺不等于固定的计划订单数量”。 | PASS：纸面余额含义清楚；closed-after-independent-recheck；executor_context：独立 AI 普通读者。 |
+| R-02 | 预计供应 15 是否可抵扣需求日后的需求？目标版日期/提前期算法未找到。 | 明确仅按题目假设供应在需求日及时到达，排除不同日期和提前期；不推导日期净额规则。正文算术练习。 | PASS：题设与 SAP 日期规则分开；closed-after-independent-recheck；独立 AI 普通读者。 |
+| R-03 | 计划订单日期是否意味着产能已核实、工序已排定或可执行？SPS10 FSD 说 MRP 与考虑能力约束的 capacity planning 分开。 | 新增“提议及日期不等于产能已核实、工序已排定或生产已获准执行”，并限于 SPS10 FSD 概念边界。正文“计划订单是什么”后。 | PASS：计划日期未被描述为生产承诺；closed-after-independent-recheck；独立 AI 普通读者。 |
+| R-04 | MRP view/type 前提是否等于完整计划运行资格？Operations Guide 是 SPS10 运维提示，不证明客户材料参加某次运行。 | 改明 MRP view/type 是运维准备提示而非完整资格清单；未验证运行范围和客户材料状态。正文“2021 版可直接确认的有限入口”第 3 项。 | PASS：前提未被写成充分条件；closed-after-independent-recheck；独立 AI 普通读者。 |
+| R-05 | MRP Live 与经典计划是否等价或可互换？没有找到目标版直证。 | 将运行模式差异与等价性列为未决；排除检索命中的 2025 FPS01 内容。正文“还需要补证的核心规则”。 | PASS：无跨版本外推；closed-after-independent-recheck；独立 AI 普通读者。 |
+
+### 资深 SAP 配置顾问 reviewer-context
+
+| 轮次 | 质询与证据 | Work 答复、修订和位置 | 原角色复核/状态 |
+|---|---|---|---|
+| C-01 | 哪些库存/收货/预留和需求日期参与净需求？SPS10 FSD 只支持高层覆盖/短缺，J44 不是净需求手册。 | 不编造完整要素清单或公式；明确表格只是需核的供需对象，核心缺口仍列净需求、库存/收货、日期、分段规则。 | PASS：未将概念供需表述扩成可用量公式；closed-after-independent-recheck；独立 AI 配置顾问。 |
+| C-02 | `50−25−15=10` 是否会被读作 SAP 提议量？lot-size、最小/最大批量、舍入、损耗和安全库存计算顺序仍无固定 2021 正文。 | 明确 25/15 为题设、10 只为纸面余额而非计划订单数；2025 FPS01 搜索页及无法读取的同名 2021.000 页面不用于目标版算法。 | PASS：算例用途安全；lot-size 核心仍未闭合；closed-after-independent-recheck；独立 AI 配置顾问。 |
+| C-03 | 自制/外购/特殊采购、BOM/生产版本如何决定提议类型与转换？FSD 只支持 SPS10 有限转换对象边界。 | 仅保留 FSD 列出的有限转换路径及重复制造例外；共同决定 proposal 的规则不推导，继续列为缺口。 | PASS：未泛化选择算法；closed-after-independent-recheck；独立 AI 配置顾问。 |
+| C-04 | 日期、planning time fence、MRP Live/经典、变更/再生计划和客户设置如何影响结果？Operations Guide 不是业务算法证据。 | 计划日期与产能承诺分开；日期/时界/firming/模式差异和客户设置继续待核；运维资料限制为 SPS10 准备提示。 | PASS：未混淆业务计划结果、产能与运维前提；closed-after-independent-recheck；独立 AI 配置顾问。 |
+| C-05 | 固定版 J44/API 页面可否支撑算法、完整字段/权限或客户启用？ | 补明两项固定版内容仅来自 SAP 官方检索索引摘要，规范 HTML direct open 均 0 行；不声称 MRP run、完整合同、授权或客户启用。正文有限入口第 1–2 项。 | PASS：索引摘要来源和读取限制透明；closed-after-independent-recheck；独立 AI 配置顾问。 |
+
+### 普通 SAP 开发人员 reviewer-context
+
+| 轮次 | 质询与证据 | Work 答复、修订和位置 | 原角色复核/状态 |
+|---|---|---|---|
+| D-01 | FSD 动态 `latest` 是否被误作固定 2021.000？直接 PDF 文档历史列 v11/SPS10，搜索索引仍显示 v9/SPS08。 | 正文记录直接文档历史与旧索引差异、未归档 PDF 哈希；主张只限直接读到的 SPS10。 | PASS：版本范围未混写；closed-after-independent-recheck；独立 AI 开发者。 |
+| D-02 | 纸面 10 件是否暗示 SAP 可用库存或采购提议数量？ | 25 明确不是 SAP 算出的可用库存；10 只回答题目设定的余额差，不是 SAP 算法/订单结果。 | PASS：无数量或算法外推；closed-after-independent-recheck；独立 AI 开发者。 |
+| D-03 | 是否从高层 proposal/转换说明推出 lot-size、通用提议类型或所有场景生命周期？ | 保留有限转换例子；lot sizing、特殊采购、BOM/生产版本组合选择及提议决定继续作为核心缺口；迁移清单限于转换语境。 | PASS：有限来源未扩成通用规则；closed-after-independent-recheck；独立 AI 开发者。 |
+| D-04 | API CRUD 是否暗示 MRP run、数据库字段/键或权限？ | 只说官方索引列出的 API_PLANNED_ORDERS CRUD、BJ5/J44 范围和 V4 建议；明示 direct open 0 行及无完整字段合同、物理模型、运行触发或授权证据。 | PASS：API/模型边界清楚；closed-after-independent-recheck；独立 AI 开发者。 |
+| D-05 | Operations Guide 是否被读作算法、客户设置或测试证据？ | 仅用于 SPS10 运维前提提示；未连接 SAP，未做 MRP、配置、数据库、API 或权限测试。 | PASS：未声称客户实测；closed-after-independent-recheck；独立 AI 开发者。 |
+
+三个独立 AI reviewer-context 对最终精确正文均报告 5/5 PASS（合计 15/15）。PASS 仅指本节质询的表达和来源边界已安全回应；三人均建议保持 Draft，因为目标版 MRP 核心证据缺口未闭合。独立上下文不等于真人 SAP 专家审查或系统验证。
 
