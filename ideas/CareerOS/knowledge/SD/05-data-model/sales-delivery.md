@@ -44,7 +44,9 @@ SAP《Simplification List for SAP S/4HANA 2021》版本 1.25（2022-05-25），�
 
 ## 3. 单据流、关联基数和会计凭证：目前能说到哪里
 
-目前读取的固定版 SD 数据模型条目没有列出 VBFA 的完整字段、键或关联基数，也没有给出销售单据项目到交货项目、交货到开票或开票到财务凭证的完整关系映射。因此，本文不提供主键表、外键表、JOIN 示例或“一个来源单据必然生成一个后续单据”的规则。
+固定版 Simplification List §36.8 仅说明 VBFA 数据流表发生简化，没有在该条目列出完整字段、键或关联基数。相邻 §36.9“VBFA - Indirect Docflow Relationships”补充的是历史版本边界：它讨论转换或安装目标为 1511 SP00–SP03、1610 SP00–SP01 等早期版本的情形，记录早期版本曾移除 STUFE、仅存直接关系，并说明间接关系后来从 1709 SP00、1610 SP02、1511 SP04 等版本起恢复；同时指出 VBFA 及其内容发生不兼容变化。该条目提醒开发者检查直接读取 VBFA 的自定义代码，也提到部分历史转换需要重建文档流。它没有给出 SAP S/4HANA 2021 的完整字段/键/基数合同，也不能判定某个客户系统的转换历史或要求其执行重建。
+
+因此，当前固定版资料仍未给出销售单据项目到交货项目、交货到开票或开票到财务凭证的完整关系映射。本文不提供主键表、外键表、JOIN 示例或“一个来源单据必然生成一个后续单据”的规则。
 
 SAP S/4HANA 2021 Feature Scope Description 的动态官方 PDF 快照，文档版本 11.0，日期 2026-07-22，标识为 SPS10。其 §2.10.2.8 概括说明可创建和管理开票单据、将其过账到 Financial Accounting。这个来源支持“存在开票到财务会计的业务处理能力”这一高层描述；它没有据此给出财务凭证字段、主键、引用基数或收入、税和收款规则。该 PDF URL 含 latest，本文将它明确作为**实际读取的 SPS10 快照**，不冒充固定版 2021.000 页面或初版资料。[S2]
 
@@ -93,6 +95,7 @@ SAP S/4HANA 2021 Feature Scope Description 的动态官方 PDF 快照，文档�
 ## 来源与版本
 
 - **S1｜固定版 2021 转换清单**：[SAP Simplification List for SAP S/4HANA 2021](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=789)，Document Version 1.25（2022-05-25），覆盖 Initial Shipment、FPS 1/2，§36.8，印刷页 789–790。本文用于状态表、VBFA、单据类别、索引表及追加字段转换的有限主张；不是完整数据字典或接口合同。
+- **S1b｜同一固定清单中的版本历史补充**：§36.9“VBFA - Indirect Docflow Relationships”，印刷页 791–793（[PDF 第 791 页起](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=791)）。只用于说明早期目标版本的 VBFA 间接关系迁移历史及直接读取自定义代码的检查提醒；不作为 S/4HANA 2021 通用键/字段/基数规则。
 - **S2｜动态版本快照**：[SAP S/4HANA 2021 Feature Scope Description](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=126)，实际读取 Document Version 11.0（2026-07-22），SAP S/4HANA 2021 SPS10，§2.10.2.8，印刷页 126。本文仅用于开票可过账至 Financial Accounting 的高层功能说明；动态 latest 链接不作为固定版 2021.000 证据。
 - **S3｜固定版 API 增强记录**：[SAP What's New 2021.000：OData API Sales Order - Simulate (A2X)](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b5fb42a0a0b747c18ff491f4a2f3d054.html?ai=true&version=2021.000)，页面版本 2021（2021-10），scope item BD9。本文只据其说明该模拟 API 的窄范围增强，不据此发布完整接口清单。
 
