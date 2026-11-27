@@ -18,7 +18,7 @@
 | 批次 B 未开始 | 0/46 已启动 | PROCESS-01～12、ABAP-01～09、S4HANA-01～09、AI-Integration-01～08、COMMON-01、COURSE-01～07 |
 | **合计** | **99** | 3 accepted + 9 reviewed + 41 Draft + 46 not started |
 
-批次 A 现有 **9 Role Reviewed、41 Draft、0 Owner Accepted**；PP-01 本工作包经独立角色复核后仍为 Draft，计数不变。SD-01 仍是本轮唯一新增 Role Reviewed。全库 Owner Accepted 仍 3/99；批次 B 46 篇未开始，须等批次 A 完成并经用户明确批准。
+批次 A 现有 **9 Role Reviewed、41 Draft、0 Owner Accepted**；PP-01、PP-09 经独立角色复核后仍为 Draft，计数不变。PP-09 三个独立 AI reviewer-context 对精确正文各完成 5 项边界复核，但一般物理键、关系基数、目标系统元数据与权限未闭合。SD-01 仍是本轮唯一新增 Role Reviewed。全库 Owner Accepted 仍 3/99；批次 B 46 篇未开始，须等批次 A 完成并经用户明确批准。
 
 ## 五条工作线逐篇状态
 
@@ -54,7 +54,7 @@ M3 准入取自 [逐篇准入与证据分流](../../plans/m3-item-readiness-tria
 | PP-06 | [PP-06 正文](../../knowledge/PP/02-functions/production-goods-cost.md) | 限缩可写 | 最终正文 blob `0ae98aa16e2e38d6468f6a2967e342cfc3eed59e`。动态 FSD 实际读取为 v11.0/SPS10；固定 2021.000/BJ5 官方索引仅支持 Order Split 特定功能中的 262 父订单冲回、261 子订单发料及组件成本重过账，HTML 直开 0 行。一般估价、退料/冲销、WIP/差异/结算算法、FI/CO 分录与科目、API/模型/权限及 EWM/MES 仍未闭合。 | [评审记录](2026-11-27-m4-workline-2-pp06-three-role-review.md)；既有 15 个同 Work 模拟另列；读者/配置顾问/开发者独立 AI reviewer-context 各对最终精确正文完成 5 项质询—作者答复—原角色复核；顾问发现的 FSD 章节页码错位已修正，三角色对新正文复验 15/15 PASS（仅边界，不是真人或实机验证） | **Draft**；核心成本估价和结算学习目标未由目标版证据支撑；不计 Role Reviewed 或 Owner Accepted |
 | PP-07 | [PP-07 正文](../../knowledge/PP/03-tcodes/transaction-index.md) | 暂缓核心 | 精确正文 blob `5695c3b0c499707e877474a2c5a2842998b0da40`。CS03 只按固定 `2021.000` 官方索引摘要记录有限显示/输入/Item Overview 线索，Retail 范围清楚，Help HTML 直开 0 行；CA03、MD04、CO03 仅有版本或特定问题场景的 KBA 预览线索。固定版逐码任务指南、输入/结果、Routing/MRP/订单显示导航和权限仍未闭合。 | [PP-07 复核记录](2026-11-27-m4-workline-3-pp07-review.md)：首轮顾问识别 CS03 归因过强，作者修订；读者、配置顾问、开发者三个独立 AI reviewer-context 对最终精确正文各 5 项复核，15/15 PASS（边界检查，不是真人/实机验证）。旧 15 项同 Work 模拟另列 | **Draft**；M3 核心门槛仍未满足，不计 Role Reviewed 或 Owner Accepted |
 | PP-08 | [PP-08 正文](../../knowledge/PP/04-configuration/production.md) | 暂缓核心 | 最终 blob `39203dad38372889c85a6f5253a8dade0dc2e1b5`。固定版仅支持 Scheduling Margin Key、2021 FPS01 专属 handler 和 Change Record 官方索引摘要；动态 Operations Guide v11.0/SPS10 只支持 MRP Records 报表前提。一般订单/MRP/工厂配置及受权只读入口未闭合；PP-01、PP-04～PP-06 均为 Draft。 | [评审记录](2026-11-27-m4-workline-3-pp08-review.md)：原 15 项同上下文模拟另列；三种独立 AI reviewer-context 最终各 5/5 PASS。首轮发现动态 Ops Guide 被置于固定版范围，作者修订来源分类、矩阵和两份来源台账后复核通过。 | **Draft**；M3 核心门槛仍未满足，不计 Role Reviewed 或 Owner Accepted |
-| PP-09 | [PP-09 正文](../../knowledge/PP/05-data-model/production.md) | 限缩可写 | 证据为少量 BOM/Routing、订单对象/兼容性及 SDK VDM entity-key 示例；一般物理键、关联基数、MATDOC 键/API 契约/权限未闭合。M3 矩阵无 PP-09 行；S4HANA-09 不替代。 | [评审记录](2026-11-27-m4-workline-3-pp09-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
+| PP-09 | [PP-09 正文](../../knowledge/PP/05-data-model/production.md) | 限缩可写 | 固定 2021 资料仅支持简化 sourcing 的部分业务引用、特定 EHS 选择条件对象名和 MATDOC 兼容读取；SDK 记录支持特定确认 VDM entity 的五键。一般物理键/外键、关联基数、MATDOC 与订单关联、运行时 API 元数据/发布/权限未闭合；2025 FPS01 搜索结果未用作 2021 证据。M3 矩阵无 PP-09 行；S4HANA-09 不替代。 | [评审记录](2026-11-27-m4-workline-3-pp09-review.md)：旧 15 轮为同一 Work 模拟；读者、配置顾问、开发者独立 AI reviewer-context 对最终 blob 各 5 项复核（15/15 边界 PASS），未要求正文修改。依赖摘要已修正。 | **Draft**；独立复核确认边界表达，但核心数据模型目标未闭合，不计 Role Reviewed 或 Owner Accepted。下一步寻找固定版官方 DDIC/CDS/API 元数据及关联键；无合适证据时保留阻塞。 |
 | QM-01 | [QM-01 正文](../../knowledge/QM/01-foundations/quality-organization.md) | 限缩可写 | 2021.000 Manage Inspection Lots 支持应用范围及记录结果/UD；组织映射、检验触发、用户角色、库存/财务与权限未证。 | [评审记录](2026-11-27-m4-workline-3-qm01-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | QM-02 | [QM-02 正文](../../knowledge/QM/02-functions/inspection-type-lot.md) | 限缩可写 | 固定 2021 Help 支持特定收货建批与库存关系；skip/avoid、供应商质量信息记录、EWM 与 FI 边界仍缺直接证据。 | [评审记录](2026-11-27-m4-workline-3-qm02-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | QM-03 | [QM-03 正文](../../knowledge/QM/02-functions/inspection-plan-characteristic.md) | 限缩可写 | FPS01 business-event 范围及 2021.000 事件页只支持有限活动；计划选择、抽样参数、特性字段与有效性规则不足。 | [评审记录](2026-11-27-m4-workline-3-qm03-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
@@ -274,3 +274,12 @@ IdeaLab 根 README 与 docs/AI_WORKFLOW_INTEGRATION.md 将 SHA 939ec44036d89cd91
 - **独立复核**：首轮三种独立 AI reviewer-context 指出动态文档版本分类不清；作者修订后，普通读者、资深配置顾问、普通开发者对最终精确正文各完成 5 项质询—证据答复—修订判断—复核，15/15 PASS。原 15 项同一 Work 上下文模拟不计独立审查。此结果只确认边界表达，不代表真人 SAP 专家意见，也不关闭 M3 核心门槛。
 - **状态和计数**：PP-08 保持 Draft，不计 Role Reviewed/Owner Accepted。全库 Owner Accepted 3/99；批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。W1、W2 完成；W3 下一篇 PP-09；W4 QM-06；W5 FI-11。
 - **执行边界与 PR**：未连接 SAP，未做配置、实机、数据库、API 或权限测试。PR #21 已合并；新 PR 尚未创建，批次 A 收尾后创建并保持开放，不合并。
+
+## M4 批次 A 收尾检查点｜PP-09（2026-11-27）
+
+- **本工作包基线**：处理前收尾分支 HEAD `a901c69bf59da1e65c16f33660a63b1a92090027`；main 起点仍为合并提交 `c026b3862c9a083c95cffb096f93e141276cfba5`。
+- **正文核查**：PP-09 正文 blob `df8768bef910bf09a87687d1c89630d80e78bd21` 与独立 reviewer-context 读取的精确正文一致。三角色复核均确认现有窄范围主张和来源边界可保留；未要求正文修改。三角色既有同 Work 15 轮仍仅是作者角色模拟。
+- **证据与缺口**：SAP 2021 Simplification List §27.35、§24.5 和特定 EHS 选择条件仅支持正文所限定的关系/对象名；SDK 3.59/3.70 生成源码记录只支持特定 VDM entity key。再次检索到的 SAP Help API 变更页标注 2025 FPS01，未用于 2021 结论。一般生产/BOM/routing/确认/物料凭证物理键、外键、关联基数、目标系统 API 元数据/发布/授权仍未闭合。PP-02、PP-03、PP-05 当前均在分支但为 Draft；不能作为已审查依赖。
+- **独立复核**：普通读者、资深 SAP 配置顾问、普通 SAP 开发人员三个独立 AI reviewer-context 各对精确正文完成 5 项挑战—证据答复—修订判断—最终角色复核，共 15/15 边界项 PASS。此结果不是真人专家签核，不代表 M3 核心门禁关闭。
+- **状态与游标**：PP-09 保持 Draft，不计 Role Reviewed/Owner Accepted。全库 Owner Accepted 3/99；批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。W1、W2 已完成；W3 下一篇 QM-01；W4 QM-06；W5 FI-11。
+- **PR 与执行边界**：PR #21 已合并；新 PR 尚未创建，待批次 A 全部达到 Role Reviewed 后创建并保持开放，不合并。未连接 SAP，未执行实机、数据库、API、配置或权限测试。

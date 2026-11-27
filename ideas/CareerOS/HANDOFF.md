@@ -4,8 +4,8 @@ Total output lines: 533
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-27（Asia/Shanghai）  
-**当前实时快照**：`main` 起始基线 `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并，不再向其追加。本次收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 已按顺序推进至 PP-08；最终正文 blob `39203dad38372889c85a6f5253a8dade0dc2e1b5`，PP-08 仍为 Draft。读者、配置顾问、开发者独立 AI reviewer-context 对最终正文各完成 5 项复核（15/15 PASS，仅边界表达，不满足 M3 核心门槛）；首轮发现 Operations Guide 被放在固定版示例中，已修订为动态 v11.0／SPS10 并同步来源台账，最终复核通过。正文、审查、来源台账、审计、README 和本 HANDOFF 已更新。新 PR 尚未创建。全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A 9/50 Role Reviewed（FI-05、MM-01～MM-07、SD-01）、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。五条工作线依次有 8、8、8、9、9 篇。
-**独立性与状态**：同一 Work 上下文角色模拟不计 Role Reviewed；15/15 PASS 不自动通过证据门禁。本轮 SD-01 经精确正文独立 AI 角色复核后计入 Role Reviewed；SD-02、SD-07、PP-01、PP-07、PP-08 的独立 AI 复核通过当前文案/证据边界检查，但各自仍有 M3 核心证据缺口，保持 Draft。PP-01、PP-02、PP-03、PP-07、PP-08 的三角色 reviewer-context 各 5 项均在最终正文上 PASS（仅证据边界/措辞）；PP-07 首轮 CS03 来源归因过强，PP-08 首轮动态 Operations Guide 版本边界不清，均已按质询修订并复验。五篇的 M3 核心证据仍未闭合。PP-03 与 PP-08 的动态 SPS10 文档版本均已单独标记，未冒充冻结初版。没有推定所有者接受。未连接 SAP，未执行实机、配置、数据库、API 或权限测试。
+**当前实时快照**：`main` 起始基线 `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并，不再向其追加。本次收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 已顺序推进至 PP-09；PP-09 精确正文 blob `df8768bef910bf09a87687d1c89630d80e78bd21` 保持 Draft。读者、配置顾问、开发者三个独立 AI reviewer-context 各完成 5 项边界复核（15/15 PASS）；无需修改正文，但一般生产数据物理键、关联基数、运行时 API 元数据与权限仍缺。PP-02、PP-03、PP-05 在当前分支均存在但为 Draft。审查记录、M3 证据补查、批次审计及本 HANDOFF/README 已更新。新 PR 尚未创建。全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A 9/50 Role Reviewed（FI-05、MM-01～MM-07、SD-01）、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。五条工作线依次有 8、8、8、9、9 篇。
+**独立性与状态**：同一 Work 上下文角色模拟不计 Role Reviewed；15/15 PASS 不自动通过证据门禁。本轮 SD-01 经精确正文独立 AI 角色复核后计入 Role Reviewed；SD-02、SD-07、PP-01、PP-07、PP-08、PP-09 的独立 AI 复核通过当前文案/证据边界检查，但各自仍有 M3 核心证据缺口，保持 Draft。PP-01、PP-02、PP-03、PP-07、PP-08、PP-09 的三角色 reviewer-context 各 5 项均在最终正文上 PASS（仅证据边界/措辞）；PP-07 首轮 CS03 来源归因过强，PP-08 首轮动态 Operations Guide 版本边界不清，均已按质询修订并复验。五篇的 M3 核心证据仍未闭合。PP-03 与 PP-08 的动态 SPS10 文档版本均已单独标记，未冒充冻结初版。没有推定所有者接受。未连接 SAP，未执行实机、配置、数据库、API 或权限测试。
 **流程版本**：固定 SHA `939ec44036d89cd91622ab96b938be9f02479026` 未更换；IdeaLab 接入文档称 V1.1 正式版，而该固定提交 README 仍称“候选版本”，矛盾已记录于审计报告，待所有者决定是否升级。
 
 ## 当前仓库、分支与 PR
@@ -66,11 +66,11 @@ PP-04 最终正文 blob `26d1459be3a9f6999dacc414fb8ca634da793cda`。补入动�
 | --- | --- | --- | --- |
 | 1 | MM-08～MM-10、SD-01～SD-05 | 1 Role Reviewed、7 Draft | 已完成 |
 | 2 | SD-06～SD-07、PP-01～PP-06 | 8 Draft | 已完成 |
-| 3 | PP-07～PP-09、QM-01～QM-05 | 8 Draft | PP-09 |
+| 3 | PP-07～PP-09、QM-01～QM-05 | 8 Draft | QM-01 |
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 Draft | QM-06 |
 | 5 | FI-11、CO-01～CO-08 | 9 Draft | FI-11 |
 
-**当前执行顺序**：工作线 1 已完成；工作线 2 已处理 SD-06、SD-07、PP-01～PP-06；工作线 3 已处理 PP-07、PP-08，下一篇 PP-09，之后按用户指定的工作线顺序推进。核心证据无法补齐时，记录已查来源、具体缺口和下一步，文章继续 Draft 并转下一篇。只有目标版证据足以支持其学习目标且完成可核验的独立角色复核，才可记 Role Reviewed。Owner Accepted 只由用户明确批准。
+**当前执行顺序**：工作线 1 已完成；工作线 2 已处理 SD-06、SD-07、PP-01～PP-06；工作线 3 已处理 PP-07～PP-09，下一篇 QM-01，之后按用户指定的工作线顺序推进。核心证据无法补齐时，记录已查来源、具体缺口和下一步，文章继续 Draft 并转下一篇。只有目标版证据足以支持其学习目标且完成可核验的独立角色复核，才可记 Role Reviewed。Owner Accepted 只由用户明确批准。
 **最近工作包更新**：PP-06 保持 Draft。三个独立 AI reviewer-context 对精确最终正文各完成 5 项复核；当前的 M3 核心成本估价、退料/冲销、WIP/差异/结算和 FI/CO 过账证据仍不足，故不计 Role Reviewed。动态 FSD SPS10 范围、固定 2021.000 Order Split 索引边界及读取限制均已记录。批次计数不变，AI-Workflow SHA 未更换。
 ## 最近工作包（工作线 2）：PP-06（2026-11-27）
 
@@ -417,3 +417,7 @@ PR #21 已合并，不要向该 PR 追加提交。批次 A 收尾从 `main` HEAD
 - 通用订单类型/排程/确认/MRP 参数/工厂配置和受权只读入口仍缺固定版直接证据；PP-01、PP-04、PP-05、PP-06 存在但均为 Draft，未作为已审查依赖。PP-08 不计 Role Reviewed 或 Owner Accepted。
 - 全库 Owner Accepted 3/99；批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。W1、W2 完成；W3 下一篇 PP-09；W4 QM-06；W5 FI-11。
 - 未连接 SAP；未执行配置、实机、数据库、API 或权限测试。PR #21 已合并，新 PR 尚未创建，待批次 A 收尾完成后创建并保持开放，不合并。
+
+## 最近工作包（工作线 3）：PP-09（2026-11-27）
+
+PP-09 精确正文 blob `df8768bef910bf09a87687d1c89630d80e78bd21` 经普通读者、资深 SAP 配置顾问和普通 SAP 开发人员三个独立 AI reviewer-context 各五项复核，15/15 仅通过证据边界与表述检查；不代表真人专家意见、M3 核心门禁关闭或系统验证，正文无需修改并继续 Draft。SAP S/4HANA 2021 固定资料支持简化 sourcing 的部分 BOM/routing/production version 关系、特定 EHS 选择条件和 MATDOC 兼容读取；SDK 记录支持特定确认 VDM entity 的逻辑键。一般生产对象物理键、外键、关联基数、运行时 API 元数据/发布/授权仍未闭合；PP-02、PP-03、PP-05 已存在但都为 Draft。PP-09 review 顶部的过期依赖句已改正。计数不变：全库 Owner Accepted 3/99；批次 A Role Reviewed 9/50、Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。W1、W2 已完成；W3 下一篇 QM-01；W4 QM-06；W5 FI-11。PR #21 已合并，新 PR 尚未创建。未连接 SAP，未做实机、数据库、API、配置或权限测试。

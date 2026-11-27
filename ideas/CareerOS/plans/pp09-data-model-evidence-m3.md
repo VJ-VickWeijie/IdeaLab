@@ -56,3 +56,9 @@ SAP 当前 [Production Order Item CDS](https://help.sap.com/docs/SAP_S4HANA_ON-P
 ## 后续补查：生产确认 OData 生成模型
 
 在本报告原先的“CDS / API 待核”判断之后，`/root/developer_m3_review` 获取了 SAP 固定 SDK 3.59 与 3.70 的源码及版本说明，`/root/consultant_m3_review` 独立复读来源和本地源码，见[生产确认与物料凭证实体字段](pp09-order-material-key-m3.md)。该特定生成 OData entity 的五项 `@Key` 和非键 OrderID/OrderItem 获部分支持，但不是 MATDOC 物理键、通用订单关联、系统 `$metadata` 或 API 已授权的证明；上述未闭合事项继续保留。
+
+## M4 目标版本续核（2026-11-27）
+
+- 复读 SAP 官方《Simplification List for SAP S/4HANA 2021 — Initial Shipment, FPS01 & FPS02》PDF：封面版本范围与 §27.35、§24.5、EHS 特定选择条件均按文章限定使用。官方 Cloud SDK release notes 中，3.59.0 条目说明其更新到 SAP S/4HANA On-Premise 2021 VDM，3.70.0 条目说明更新到 2021 FPS02；此为生成 VDM 的版本定位，不代表目标客户系统 FPS 或物理数据库键。
+- 2026-11-27 对 SAP Help 官方站点再次查询 `ProdnOrdConfMatlDocItmType`、Production Order Confirmation 2021 On-Premise 与 MATDOC/生产订单键。检索到的可读 API 变更页面标记为 SAP S/4HANA 2025 FPS01（其内容仅说明该版 API 1.4.0 的变更），未作为 2021 固定版证据；未找到足以证明一般生产物理键、外键、关联基数或客户系统运行时 `$metadata`/授权的直接资料。该 2025 页面仅作排除范围记录：[OData API: Production Order Confirmation — 2025 FPS01](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/f5d3e1005efd4e86acf9a65abf428082/d98c121b7da04ed1830f9d99ab8c2b44.html?version=2025.001)。
+- 处理结论不变：PP-09 证据为部分支持；一般物理键、关系基数、MATDOC 与订单关联、目标 API 元数据/发布/授权仍是核心缺口。不得从当前版动态文档或生成 SDK entity key 推导。没有系统连接、SQL、API 或权限测试。
