@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-27 更新）
 
-> 当前交接入口：[HANDOFF.md](HANDOFF.md)。main 起始基线 `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 已顺序推进至 PP-07；正文精确 blob `5695c3b0c499707e877474a2c5a2842998b0da40`，仍为 Draft。三种独立 AI reviewer-context 对该正文各完成 5 项复核（15/15 PASS，仅边界表达）；三角色分别同意核心目标和权限证据仍缺。新工作包正在提交，新 PR 尚未创建。当前全库 Owner Accepted 3/99；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。工作线游标：W1、W2 已完成、W3 PP-08、W4 QM-06、W5 FI-11。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
+> 当前交接入口：[HANDOFF.md](HANDOFF.md)。main 起始基线 `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 已顺序推进至 PP-08；正文精确 blob `39203dad38372889c85a6f5253a8dade0dc2e1b5`，仍为 Draft。三种独立 AI reviewer-context 对最终正文各完成 5 项复核（15/15 PASS，仅边界表达）；首轮发现 Operations Guide 的动态 v11.0/SPS10 版本被放入固定版示例，已修订并同步两份来源台账，复核通过。通用配置与只读授权证据仍缺。新 PR 尚未创建。当前全库 Owner Accepted 3/99；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。工作线游标：W1、W2 已完成、W3 PP-09、W4 QM-06、W5 FI-11。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
 
 ## 当前进度（2026-11-27）
 
@@ -12,11 +12,15 @@
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 篇 Draft |
 | 5 | FI-11、CO-01～CO-08 | 9 篇 Draft |
 
-当前工作线游标：W1、W2 已完成、W3 PP-08、W4 QM-06、W5 FI-11。PP-01～PP-07 均经三个独立 AI reviewer-context 各 5 项复核；当前三角色复核只确认边界表达，M3 核心证据仍缺的文章继续 Draft、计数不变。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
+当前工作线游标：W1、W2 已完成、W3 PP-09、W4 QM-06、W5 FI-11。PP-01～PP-08 均经三个独立 AI reviewer-context 各 5 项最终正文复核；复核只确认边界表达，M3 核心证据仍缺的文章继续 Draft、计数不变。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
 
 ## PP-07 工作包更新（2026-11-27）
 
-PP-07 最终正文 blob 为 `5695c3b0c499707e877474a2c5a2842998b0da40`。固定 `2021.000` 的 CS03 Help 正文本轮无法读取，只依据官方检索索引摘要记录有限显示、输入与 Item Overview 线索，并明确 Retail / Fashion and Vertical Business 范围；CA03、MD04、CO03 只有特定问题或名称关联的 SAP Support KBA 预览。三位独立 AI reviewer-context 各对该精确正文完成 5 项质询—证据答复—作者修订判断—原角色复核，15/15 PASS；配置顾问首轮指出“逐步说明”归因过强，作者修正为索引摘要，三位角色对最终哈希复验。完整 Routing、MRP、生产订单导航、输入/结果及权限仍未闭合，PP-07 保持 Draft，不增加 Role Reviewed。W3 下一篇 PP-08。未连接 SAP，未做实机或权限测试。详见[正文](knowledge/PP/03-tcodes/transaction-index.md)、[审查记录](reviews/work/2026-11-27-m4-workline-3-pp07-review.md)、[证据台账](plans/evidence-logistics-m3.md)和[逐篇审计](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
+PP-07 最终正文 blob 为 `5695c3b0c499707e877474a2c5a2842998b0da40`。固定 `2021.000` 的 CS03 Help 正文本轮无法读取，只依据官方检索索引摘要记录有限显示、输入与 Item Overview 线索，并明确 Retail / Fashion and Vertical Business 范围；CA03、MD04、CO03 只有特定问题或名称关联的 SAP Support KBA 预览。三位独立 AI reviewer-context 各对该精确正文完成 5 项质询—证据答复—作者修订判断—原角色复核，15/15 PASS；配置顾问首轮指出“逐步说明”归因过强，作者修正为索引摘要，三位角色对最终哈希复验。完整 Routing、MRP、生产订单导航、输入/结果及权限仍未闭合，PP-07 保持 Draft，不增加 Role Reviewed。当时 W3 下一篇 PP-08，现 PP-08 已处理，下一篇为 PP-09。未连接 SAP，未做实机或权限测试。详见[正文](knowledge/PP/03-tcodes/transaction-index.md)、[审查记录](reviews/work/2026-11-27-m4-workline-3-pp07-review.md)、[证据台账](plans/evidence-logistics-m3.md)和[逐篇审计](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
+
+## PP-08 工作包更新（2026-11-27）
+
+PP-08 最终正文 blob 为 `39203dad38372889c85a6f5253a8dade0dc2e1b5`，状态 Draft。固定版来源支持 Scheduling Margin Key、2021 FPS01 特定 action-handler 设置及 Change Record 2021.000 官方索引摘录；Operations Guide PDF 是动态文档 v11.0（2026-07-22），对应 S/4HANA 2021 SPS10，仅引用其 MRP Records 报表前提，不作固定初版或通用 MRP 证据。M3 来源台账第 623 页错配已纠正，p.617 也已注明为 Simplified Sourcing。三种独立 AI reviewer-context 各对最终精确正文完成 5 项复核，15/15 PASS；首轮提出的动态版本分类缺陷已修改并复核通过。通用订单类型、排程/确认、MRP 参数、工厂配置、受权只读入口仍无足够固定版证据；PP-08 保持 Draft，不增加 Role Reviewed。依赖 PP-01、PP-04、PP-05、PP-06 均存在但为 Draft，未作已审查依据。批次 A 仍 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99 Owner Accepted；批次 B 0/46 未开始。W3 下一篇 PP-09。未连接 SAP，未做配置、实机、数据库、API 或权限测试。详见[正文](knowledge/PP/04-configuration/production.md)、[审查记录](reviews/work/2026-11-27-m4-workline-3-pp08-review.md)、[来源台账](plans/evidence-logistics-m3.md)和[逐篇审计](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
 
 ## PP-06 工作包更新（2026-11-27）
 

@@ -123,6 +123,13 @@ SD-07《销售与交货数据模型》按 M3 “限缩可写”准入建立目�
 
 工作线 2 分配的 8 篇文章（SD-06、SD-07、PP-01～PP-06）均为 drafting，累计 120 个同上下文模拟闭环；本线正式独立 role-reviewed 为 0/8。批次 A 正式计数仍 8/50 reviewed、0/50 owner accepted，全库正式接受 3/99。本线已完成分配范围，无下一篇。
 
+
+## 工作线 3 收尾检查点｜PP-08（2026-11-27）
+
+PP-08 最终正文 blob 为 `39203dad38372889c85a6f5253a8dade0dc2e1b5`，保持 Draft。SAP S/4HANA 2021 固定版资料只支持 Scheduling Margin Key、2021 FPS01 特定组件装配 action-handler 前提，以及 Change Record 2021.000 官方索引摘录；Operations Guide 当前 PDF 是动态 v11.0（2026-07-22；文档历史对应 2021 SPS10），只用于 `PPH_SETUP_MRPRECORDS` 报表前提。首轮三位独立 AI reviewer-context 指出此版本边界在文章中不清，作者修订文章、矩阵、来源清单与 M3 证据/贴合记录，最终三个 reviewer-context 各 5/5 PASS。原 M3 来源 p.623 实为 Browser-based Process Instruction-Sheets/Electronic Work Instructions，p.617 为 Simplified Sourcing；两份来源记录已纠正，没有修改已验收 M3 控制矩阵或放宽“未核验／暂缓核心”准入。
+
+订单类型、排程/确认、一般 MRP 参数、工厂配置、受权只读入口和权限仍未获得充分固定 2021 On-Premise 直接证据；PP-01、PP-04、PP-05、PP-06 均存在但仍为 Draft。PP-08 不计 Role Reviewed 或 Owner Accepted。全库 Owner Accepted 3/99；批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。W3 下一篇 PP-09；W4 QM-06；W5 FI-11。PR #21 已合并；新 PR 待批次 A 收尾完成后创建并保持开放，不合并。未连接 SAP，未做配置、实机、数据库、API 或权限测试。
+
 ### M4 Workline 5 CO-04｜2026-11-27
 
 CO-04《产品成本、生产差异与结算》按 M3 “暂缓核心”路径建立了受限 drafting 草稿：[文章](../knowledge/CO/02-functions/product-cost-variance-settlement.md)、[三角色视角记录](../reviews/work/2026-11-27-m4-co04-three-role-review.md)、[证据台账](evidence-finance-m3.md)。SAP S/4HANA 2021 FSD v9.0/SP08 快照支持制造方式影响成本观察对象、生产订单成本向一个或多个成本对象结算、重复制造期间性成本收集，以及特定 Kanban 场景的 WIP/差异和期末能力；2021.000 Deferred Summarization 仅说明特定数据汇总功能。普通生产订单 WIP/variance 公式、状态触发、一般结算规则/接收方和 FI 分录仍未由直接目标版证据闭合。普通读者、配置顾问、开发者视角各 5 个同上下文模拟闭环（共15）；不是独立 review，不计 reviewed。无 SAP 实机或用户权限验证；未推导 FI-07 采购库存借贷、税或自动科目。批次 A 仍 **8/50 reviewed、0/50 owner accepted**，owner accepted 为 **3/99**。工作线 5 下一篇 CO-05；开始前仅读取 CO-05 自身准入与证据登记。
