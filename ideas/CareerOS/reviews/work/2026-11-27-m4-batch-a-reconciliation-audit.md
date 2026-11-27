@@ -5,7 +5,7 @@
 - PR #21：[已合并](https://github.com/VJ-VickWeijie/IdeaLab/pull/21)，合并提交 `c026b3862c9a083c95cffb096f93e141276cfba5`；以下为当时开放状态的历史审计快照，不代表当前 PR 状态。
 - 原审计快照：PR #21 旧工作分支 `careeros-v04-m4-batch1-20261126`，HEAD `41131a194e332c50d98183a092caf41f98105a74`，main `db349fe68e1aa0560ba5546a6382ffe503d0f595`；其当时记录的 282 commits、113 changed files（+10,200 / -108）、开放状态、评论/检查数据仅描述旧快照。
 - 本次收尾新基线：PR #21 合并后的 main 为 `c026b3862c9a083c95cffb096f93e141276cfba5`；工作分支 `careeros-v04-m4-batch-a-closeout-20261127`，本次收尾处理 SD-03 前分支 HEAD `e1eb921a345c7add12a8b89bc2ec252a99cdfa3d`；后续工作包提交会继续推进此分支。新 PR 尚未创建；完成批次 A 收尾后创建并保持开放。
-- 本文是逐篇对账和阻塞审计，不是所有者审阅包；42 篇原 Draft 已逐篇审计。本轮对 SD-01、SD-02 精确正文重新执行独立角色复核；状态按目标版证据和 M3 范围判断，不将同上下文模拟当作正式 Role Reviewed。
+- 本文是逐篇对账和阻塞审计，不是所有者审阅包；42 篇原 Draft 已逐篇审计。本轮对 SD-01、SD-02、SD-03 精确正文重新执行独立 AI reviewer-context 复核；状态按目标版证据和 M3 范围判断，不将同上下文模拟当作正式 Role Reviewed。
 - 全程未连接 SAP；没有执行 SAP 实机、配置、数据库、API 或权限测试。
 
 ## 当前总状态
@@ -24,7 +24,7 @@
 
 | 工作线 | 批次 A 当前文章 | 当前计数 |
 | --- | --- | --- |
-| 1 | MM-08、MM-09、MM-10、SD-01、SD-02、SD-03、SD-04、SD-05 | 1 Role Reviewed、7 Draft；下一游标 SD-03 |
+| 1 | MM-08、MM-09、MM-10、SD-01、SD-02、SD-03、SD-04、SD-05 | 1 Role Reviewed、7 Draft；下一游标 SD-04 |
 | 2 | SD-06、SD-07、PP-01、PP-02、PP-03、PP-04、PP-05、PP-06 | 8 篇；8 Draft |
 | 3 | PP-07、PP-08、PP-09、QM-01、QM-02、QM-03、QM-04、QM-05 | 8 篇；8 Draft |
 | 4 | QM-06、QM-07、QM-08、FI-04、FI-06、FI-07、FI-08、FI-09、FI-10 | 9 篇；9 Draft |
