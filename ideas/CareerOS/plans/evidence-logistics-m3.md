@@ -1,3 +1,6 @@
+Warning: truncated output (original token count: 17205)
+Total output lines: 203
+
 # CareerOS V0.3｜物流与业务 46 项公开来源核验（M3 进行中）
 
 核验日期 2026-11-25（UTC）。基于 PR #20 当前规划；本台账仅是逐篇资料准备与缺口清单，不是文章正文、三角色审核或 SAP 实机验证。每条列出至少一个**与主题部分直接相关**的可读原文；其中个别只涉及邻近子主题或特定产品场景，已明确标示为“直接证据未解决”，不能作为该文章已满足 M3 条件的依据。
@@ -52,39 +55,7 @@
 | PROCESS-05 | [F：2021 SPS10；11.0，PDF 第 76 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=76)；§2.8.4.2 Production Execution | 生产执行包括备料、领料及进度记录 | 计划→生产→成本结算的完整流程及价值分录 |
 | PROCESS-06 | [SAP S/4HANA 2021 库存过账直接资料](qm-gr-inspection-2021-m3.md)：固定版本选择器 2021 (Oct 2021)；独立复核覆盖库存过账页 | 库存相关检验批在有未过账数量时，可在使用决策前、期间或之后过账；后台自动过账与人工确认取决于设置，自动使用决策不等于自动过账 | 目标系统设置、EWM及移动类型/凭证字段、财务影响、异常和冲销情形仍待逐项核验 |
 | PROCESS-07 | [F：2021 SPS10；11.0，PDF 第 39 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=39)；§2.6.2.2 Financial Close 相关章节 | 财务结账功能及报表的总体范围 | 企业实际关账顺序、管理会计和分录 |
-| PROCESS-08 | [F：2021 SPS10；11.0，PDF 第 90 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=90)；§2.8.4.7.1 Basic Subcontracting：Subcontracting Cockpit | 特定生产委外协作可管理采购订单、组件及交货 | 所有委外采购变体的货权/库存/会计和付款 |
-| PROCESS-09 | [SAP Consignment，S/4HANA 2021 初始版](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/91b21005dded4984bcccf4a69ae1300c/4c13b953495bb44ce10000000a174cb4.html?version=2021.000)；协调者及独立开发者均读取 `2021 (Oct 2021)` | 直接说明该标准寄售业务的库存、提取、估价和周期结算概念 | 具体合同货权、税、公司会计分录及所有变体仍须单独核实；该来源不替代法律或业务合同；该来源有限描述经独立复核 |
-| PROCESS-10 | [F：2021 SPS10；11.0，PDF 第 169 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=169)；§2.13.1.1 Goods Movement | 存在供应商退货及货物移动功能 | 退货与收货冲销、后续已开票时的凭证与资金 |
-| PROCESS-11 | [F：2021 SPS10；11.0，PDF 第 164 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=164)；§2.12.5.1 Invoice Processing | 发票校验涉及内容、价格及会计 | 差异容差、自动冻结与付款释放各触发条件 |
-| PROCESS-12 | [F：2021 SPS10；11.0，PDF 第 129 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=129)；§2.10.2.12 Claims, Returns, and Refund Management | 该特定客户退货流程可经检查并贷项或替代交付 | 退货、退款、抵扣和税务的所有变体及必要前提 |
-
-## 留存与未解决
-
-- 以上 F 的哈希只标识曾读取的字节；没有保存/发布原 PDF，不代表用户能经 latest 重现相同字节。后续应寻 SAP 官方固定版本或在许可范围内保留可复核快照及出处；若重读版本不同，重新定位正文、核验全部相关主张。
-- **MM-09、SD-01、QM-07、QM-08** 已补充部分直接来源；其未覆盖的核心场景仍缺；MM-01、MM-07、PROCESS-04、PROCESS-09 的初版直接资料已独立复核有限描述，但各自未覆盖的场景仍缺。本表不以相关但范围不足的概述冒充完整文章依据。其余条目也尚有大量具体场景、字段、配置、权限和账务内容未验证，不能由部分取证推断整篇通过。
-- 对 SPS10 之后目标系统补丁是否一致、用户环境权限以及所有实机运行行为没有验证；版本有差异时要另行核对。所有 46 项正文和三角色正式有效审核轮次均为 0。
-
-## 独立开发者复核与修订（2026-11-25）
-
-独立开发者向协调者报告：46 个 ID、FSD 哈希及七项抽查基本正确；发现 PROCESS-03/04 将 §2.13.2.1 标为 “Delivery Processing”，应为 “Delivery Management”。作者重新打开当次 SPS10 原文确认并修正。用量恢复后，原开发者读取 PR #20 `0730c3fc66292c1ae22ff95a0d9b89847b930d70` 并再次复核：PROCESS-03 标题与 PDF 一致；PROCESS-04 已换成 2021 初版跨公司资料，不再引用原错误标题。该标题缺陷的复核关闭。开发者也分别读取 MM-01、MM-07、PROCESS-04、PROCESS-09 四个 2021 初版页面，确认本表有限描述和边界；仍不能推断文章全文、配置或系统测试通过。
-剩余门禁：latest 文档未固定版本且未留存原始文件；核心主题取证不足及逐项 FPS、权限、配置、分录、接口和实机行为均继续待查。计划级资料复核不能计入正式文章的有效审核轮次。
-
-
-## 追加物流与质量来源（研究记录）
-
-[四项专题补查](evidence-gap-four-m3.md) 新增 MM-09 在特定材料账迁移场景的 OBYC 依据，以及 QM-07/QM-08 在 2021 FPS01 的单项配置和 CDS 示例；SD-01 的销售组织和销售区域 API 2021 初版正文已由独立配置顾问直接读取。各来源的适用版本与未覆盖事项以补查记录为准，不代表任何文章证据完整。
-
-[P2P 收货与发票估价补查](p2p-valuation-direct-2021.md) 收录实际读取的 2021 初版部分数量、估价与顺序示例；该范围不等于完整 P2P 或系统实测。
-
-
-## MM / QM 逐项来源复核
-
-`/root/consultant_m3_review` 对 [MM 与 QM 18 项来源](review-evidence-mm-qm-m3.md)进行复核，指出 QM-05 当前 SPS10 的引用应为 PDF 物理页 189 而非 188。Work 已修正上述台账链接与页码；原审查者已复读提交 `b46182890f73990f019b2db391ed0c0022ca9ae4` 与 SAP 第 189 页，页码问题限此关闭。FSD latest 未固定版本，MM-01/MM-07 本轮审查者未能独立重开动态正文，不可冒称本轮独立读取。以上为资料计划复核，不代表文章通过或 SAP 实测。
-
-
-## SD / PP 与流程章节定位复核
-
-`/root/consultant_plan` 逐项核查 SD/PP 来源，指出 SD-06 对应 SPS10 PDF 的配置功能位于第118页而不是117页，并提示 SD-07 只涉及特定转换字段；`/root/developer_m3_review` 指出 PROCESS-08 的委外小节应为 §2.8.4.7.1。Work 已修正这三处；`/root/consultant_plan` 已在 `d6049bc` 复核 SD-06/SD-07，`/root/developer_m3_review` 已在该提交复核 PROCESS-08，限上述定位与限定问题关闭。详见 [SD/PP 来源贴合度](sd-pp-source-fit-m3.md) 和 [流程来源贴合度](process-source-fit-m3.md)。上述文献是局部支持，不能代替完整流程、权限或目标系统实测。
+| PROCESS-08 | [F：2021 SPS10；11.0，PDF 第 90 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pd…1205 tokens truncated…tant_plan` 逐项核查 SD/PP 来源，指出 SD-06 对应 SPS10 PDF 的配置功能位于第118页而不是117页，并提示 SD-07 只涉及特定转换字段；`/root/developer_m3_review` 指出 PROCESS-08 的委外小节应为 §2.8.4.7.1。Work 已修正这三处；`/root/consultant_plan` 已在 `d6049bc` 复核 SD-06/SD-07，`/root/developer_m3_review` 已在该提交复核 PROCESS-08，限上述定位与限定问题关闭。详见 [SD/PP 来源贴合度](sd-pp-source-fit-m3.md) 和 [流程来源贴合度](process-source-fit-m3.md)。上述文献是局部支持，不能代替完整流程、权限或目标系统实测。
 
 
 ## M4 固定版来源重新核对（2026-11-26）
@@ -192,3 +163,12 @@ Work 于 2026-11-26 从 SAP 官方 S/4HANA 2021 动态 FSD 直接定位 §2.12.4
 - **检索到但排除的成本资料**：SAP Help “Production Cost Posting in Financial Accounting”“Goods Receipts in Cost Object Controlling”“Settlement in Product Cost by Order or Period”“Variance Calculation”“Goods Issue for the Manufacturing Order”“Goods Receipt for the Manufacturing Order” 的当前搜索片段含估价、订单成本、FI 过账或方差/结算信息，但这些页面本轮没有可核验的固定 2021.000 版本标签；尝试给其中三篇成本会计页面追加 `version=2021.000` 后，读取工具返回不可访问。故未以这些当前/无版本页面补写 S/4HANA 2021 通用金额、FI 科目或结算规则。
 - **仍未闭合**：普通订单及不同价格控制/库存覆盖条件下的实际估价金额；发料/退料和收货的标准或移动平均价影响；成本归集与活动/间接费的适用前提；WIP/差异的计算基础、周期/累计分支；默认结算规则、接收方与金额分配；FI/CO 科目和会计凭证明细；通用字段/API/授权。固定 2021 拆单示例只关闭一项特定功能描述，不能证明上述核心目标。
 - **依赖与边界**：PP-02、PP-05、CO-04 文件均已在当前收尾分支，但仍为 Draft；不作为已 Role Reviewed 的证据。PROCESS-05 不在批次 A 收尾分支。未连接 SAP，未执行库存过账、订单结算、数据库、API、权限或会计分录测试。PP-06 继续 Draft。
+
+## PP-07｜2026-11-27 事务码导航来源续核
+
+- **准入与当前正文**：M3 triage 将 PP-07 标为“暂缓核心”；detail-logistics 要求为 BOM、Routing、MRP、生产订单入口逐项核对对象、输入/输出、权限与 2021 证据。已验收控制矩阵没有 PP-07 独立行；逐篇门禁继续按 triage、detail-logistics 和 evidence-logistics 执行。最终正文 `ideas/CareerOS/knowledge/PP/03-tcodes/transaction-index.md` 的 blob 为 `5695c3b0c499707e877474a2c5a2842998b0da40`。
+- **固定版直接资料**：SAP Help《Displaying a Material BOM》请求 URL 锁定 `version=2021.000`，页面版本标签为 2021 (Oct 2021)，且位于 SAP S/4HANA Retail / Fashion and Vertical Business。可见官方检索索引摘要支持 CS03 的 BOM 显示措辞、物料/工厂/BOM 用途及可选替代 BOM/有效期输入、Item Overview 和可能默认值；canonical HTML direct open 为 0 可读行。文章据此仅列一个 Retail 范围的有限例子，不推广为全部 On-Premise 部署、授权或用户权限事实。
+- **有限 KBA 线索**：SAP Support KBA 3580904 的产品列表含 S/4HANA 2021，问题摘要把 CA03 与 Fiori 技术名 `ProductionRouting-display` 联系起来；KBA 3325837 提及 CA03 中显示 Routing operation，但产品标签为 all versions。KBA 3381909 的产品列表含 S/4HANA 2021，只涉及 MD04 Intra-Plant View 默认值；KBA 2818062 将 MD04 称为 Stock/Requirements List，但标为 all versions。KBA 3219397 的产品列表含 S/4HANA 2021，摘要在特定 OA219 文档链接问题中称 `App ID CO03 Display Production Order`。这些均是 SAP Support KBA 预览，只有有限名称、应用关联或版本适用性线索，不提供完整选择屏幕、一般输入/输出、操作步骤、读写边界或角色权限；all-versions KBA 不冒充固定版 2021 Help。
+- **排除及依赖**：2021 Simplification List 第 523 页只用于定位 MD01/MD02/MD03、CS01/CS02 等关键词，不赋予其职责。Routing Help 的 2021 请求页 canonical open 不可读，索引同时出现 Display 标题和“CA03 to create”措辞，文章不据此定性；未锁定版本的 Routing Display、Cloud MD04、当前版 Production Order 页面均未作为目标版一般事务说明。PP-02～PP-06、PP-08 在合并 main/当前收尾分支均存在，但状态仍 Draft，未作为已审查依赖。
+- **独立复核与状态**：reader、consultant、developer 三个独立 AI reviewer-context 对最终 blob 各完成 5 项质询—证据核对—作者答复/修订判断—原角色复核，15/15 PASS。配置顾问在首轮指出 CS03“逐步说明”归因强于官方索引证据；作者修订为明确索引摘要和不可读正文，三角色对新 hash 复验关闭。复核通过只确认表述边界，不是真人专家意见，也不满足 M3 核心准入。
+- **当前判断**：虽补得上述有限线索，M3 核心要求的完整固定版 On-Premise 逐码任务指南、输入/结果、Routing/MRP/生产订单导航及逐项授权仍未闭合。PP-07 保持 Draft，不计 Role Reviewed；既有 15 项同 Work 模拟不计独立复核。最终审查详见 `reviews/work/2026-11-27-m4-workline-3-pp07-review.md`。未连接 SAP，未执行事务码、配置、API、数据库或权限测试。

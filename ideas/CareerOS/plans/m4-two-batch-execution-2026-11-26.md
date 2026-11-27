@@ -1,8 +1,8 @@
 # CareerOS V0.4｜M4 剩余 96 篇两批执行计划
 
-- 更新时间：2026-11-26（Asia/Shanghai）
-- 分支：careeros-v04-m4-batch1-20261126
-- 当前 PR：#21；延续现有分支和 PR，不新开 PR，不合并。
+- 更新时间：2026-11-27（Asia/Shanghai）
+- 当前收尾分支：`careeros-v04-m4-batch-a-closeout-20261127`，起点为 PR #21 合并后的 main `c026b3862c9a083c95cffb096f93e141276cfba5`。
+- PR #21 已合并，不再追加；本批次 A 收尾完毕后创建新 PR 并保持开放，不自行合并。
 - AI-Workflow：V1.1 固定 SHA 939ec44036d89cd91622ab96b938be9f02479026；通用门禁不修改。
 - 总目标：99 篇正式文章；三篇首批已获所有者肯定并通过，剩余 96 篇分两批建设。
 - 最新所有者决定：“看了，很棒，甚至有点超出我逾期了。接下来分两批完成剩余的篇章。”Work 据此把 FI-01～FI-03 记为所有者通过，并开始剩余批次。
@@ -14,7 +14,7 @@
 | 批次 | 数量 | 范围 | 文章 ID | 状态 |
 | --- | ---: | --- | --- | --- |
 | 已通过首批 | 3 | FI 基础：财务会计、会计等式、借贷记账 | FI-01～FI-03 | 所有者已阅并肯定；正式接受 3/99 |
-| M4 批次 A | 50 | MM、SD、PP、QM、FI、CO 模块知识；覆盖基础、业务功能、T-Code、配置查看和数据模型，逐主张收窄 | MM-01～MM-10；SD-01～SD-07；PP-01～PP-09；QM-01～QM-08；FI-04～FI-11；CO-01～CO-08 | 进行中；FI-05、MM-01～MM-07 已 reviewed（15、16、15、18、18、15、15、15 个有效闭环，均待所有者验收）；FI-04/FI-06 保持 drafting |
+| M4 批次 A | 50 | MM、SD、PP、QM、FI、CO 模块知识；覆盖基础、业务功能、T-Code、配置查看和数据模型，逐主张收窄 | MM-01～MM-10；SD-01～SD-07；PP-01～PP-09；QM-01～QM-08；FI-04～FI-11；CO-01～CO-08 | 进行中；9/50 Role Reviewed（FI-05、MM-01～MM-07、SD-01）；41/50 Draft；0/50 Owner Accepted |
 | M4 批次 B | 46 | 统一业务流程、ABAP、S/4HANA 技术、SAP×AI、统一术语表及课程 | PROCESS-01～PROCESS-12；ABAP-01～ABAP-09；S4HANA-01～S4HANA-09；AI-Integration-01～AI-Integration-08；COMMON-01；COURSE-01～COURSE-07 | 待批次 A 完成 |
 
 合计：3 + 50 + 46 = 99。每篇 ID 和目标路径以 [99 项 M3 逐篇准入分流](m3-item-readiness-triage-v0.3.md)及 [控制矩阵](m3-item-control-matrix-v0.3.md)为准；此分组不修改原批准标题和路径。
@@ -42,12 +42,12 @@
 | --- | ---: |
 | 所有者通过文章 | 3/99 |
 | 剩余文章 | 96 |
-| 批次 A | 8/50 已角色 reviewed（FI-05、MM-01～MM-07）；0/50 所有者接受；FI-04/FI-06 保持 drafting |
+| 批次 A | 9/50 已角色 reviewed（FI-05、MM-01～MM-07、SD-01）；41/50 Draft；0/50 所有者接受 |
 | 批次 B | 0/46 已开始；待批次 A 完成 |
 | 正式文章总审核进度 | FI-01～FI-03 共 52 闭环；FI-05 15、MM-01 16、MM-02 15、MM-03 18、MM-04 18、MM-05 15、MM-06 15、MM-07 15 个有效闭环，均 reviewed 并待所有者验收；FI-04～FI-06 首轮问题 38/45 闭环；细项见各审查记录 |
 | SAP 实机测试 | 0；未连接 |
 
-FI-01～FI-03 已由所有者审阅肯定，正式接受数仍为 3/99。批次 A 目前有 8 篇完成三角色审查：FI-05（15）、MM-01（16）、MM-02（15）、MM-03（18）、MM-04（18）、MM-05（15）、MM-06（15）、MM-07（15）个有效闭环，均待所有者验收；尚未将其计入 accepted。FI-04/FI-06 文章级证据缺口与首轮 38/45 项状态见 A01 记录，不阻挡独立文章。MM-06 审查见 `reviews/work/2026-11-26-m4-mm06-three-role-review.md`；MM-07 正文与三角色审核见 `knowledge/MM/02-functions/price-unit-conversion.md` 及 `reviews/work/2026-11-26-m4-mm07-three-role-review.md`。下一工作包为 MM-08《MM 常用事务码导航》，按批准路径 `knowledge/MM/03-tcodes/transaction-index.md` 建设；逐事务核实目标版用途、对象、权限和显示/修改边界，只有已证实条目进入正文，不用业务功能范围推定事务码。每个工作包提交文章、真实审核记录、状态与 HANDOFF 到 PR #21；新窗口优先读取 HANDOFF、本计划及当前所需文件，不载入全部 99 篇历史记录。PR 不自动合并。
+FI-01～FI-03 已由所有者审阅肯定，正式接受数为 3/99。批次 A 目前 9 篇 Role Reviewed（FI-05、MM-01～MM-07、SD-01），待所有者审阅；41 篇仍 Draft，未将其计入 Owner Accepted。其余文章继续按五条工作线顺序收尾，具体状态与 M3 证据缺口见 [逐篇审计报告](../reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。PR #21 已合并，不再追加；本收尾分支完成后创建新 PR、保持开放且不自行合并。
 
 
 ## 工作线 2 进度追记（2026-11-27）
@@ -99,6 +99,11 @@ PP-05《生产订单与确认》已建立证据受限文章，状态 drafting；
 ## 工作线 2 进度追记（2026-11-27，PP-06）
 
 PP-06《生产发料、收货与成本》正文按 M3 分流的“限缩可写”范围提交，状态 `drafting`。普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各完成 5 个同一 Work 上下文的模拟闭环，共 15；记录披露不是独立审查，也不计入 8/50 role-reviewed。正文范围以实际读取的 SAP S/4HANA 2021 SPS10 FSD 动态快照（Document Version 11.0，2026-07-22）支持的生产执行、库存增减、物料凭证、高层成本对象和 Kanban 限定例子为限；另引用固定版 2021.000 BJ5 订单对象页的已记录货物移动显示说明。估价金额、退料/冲销条件、差异/WIP/结算计算、FI/CO 凭证与科目、数据模型/API、权限、EWM/MES 仍待目标版证据；首次较早分支核对时 CO-04 返回 404，后续 HEAD 复核已确认其正文存在但仍为 Draft（见 PP-06 收尾检查点）；未连接 SAP、未实测。工作线 2 下一篇为 SD-07；批次 A 与全库正式统计不变（8/50 reviewed、0/50 owner accepted、3/99 accepted）。
+
+
+## 工作线 3 收尾检查点｜PP-07（2026-11-27）
+
+PP-07 最终正文 blob 为 `5695c3b0c499707e877474a2c5a2842998b0da40`，继续 Draft。固定版 CS03 Help 正文本轮不可读，仅按官方检索索引摘要记录有限线索；CA03、MD04、CO03 KBA 预览均未支持完整操作导航、输入输出或权限矩阵。首轮顾问指出 CS03 归因过强，作者修订后，读者/配置顾问/开发者独立 AI reviewer-context 各对最终正文完成 5 项复核，15/15 PASS。M3 暂缓核心仍未闭合，不计 Role Reviewed。PR #21 已合并；新 PR 待批次 A 收尾后创建。全库 Owner Accepted 3/99；批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。工作线 3 下一篇 PP-08；工作线 4 QM-06；工作线 5 FI-11。未连接 SAP，未做实机/权限测试。
 
 
 ## 工作线 4 进度追记（2026-11-27，FI-10）
