@@ -1,11 +1,11 @@
-# CareerOS V0.4｜M4 批次 A 42 篇 Draft 实时对账与准入审计
+# CareerOS V0.4｜M4 批次 A 逐篇对账与准入审计
 
 - 审计日期：2026-11-27（Asia/Shanghai）
 - 仓库：VJ-VickWeijie/IdeaLab
 - PR #21：[已合并](https://github.com/VJ-VickWeijie/IdeaLab/pull/21)，合并提交 `c026b3862c9a083c95cffb096f93e141276cfba5`；以下为当时开放状态的历史审计快照，不代表当前 PR 状态。
 - 原审计快照：PR #21 旧工作分支 `careeros-v04-m4-batch1-20261126`，HEAD `41131a194e332c50d98183a092caf41f98105a74`，main `db349fe68e1aa0560ba5546a6382ffe503d0f595`；其当时记录的 282 commits、113 changed files（+10,200 / -108）、开放状态、评论/检查数据仅描述旧快照。
-- 本次收尾新基线：PR #21 合并后的 main 为 `c026b3862c9a083c95cffb096f93e141276cfba5`；工作分支 `careeros-v04-m4-batch-a-closeout-20261127`，当前 HEAD `b9d0ac5ce2a6419bd43b71aa07225e29d0a4ee87`。新 PR 尚未创建；完成批次 A 收尾后创建并保持开放。
-- 本文是逐篇对账和阻塞审计，不是所有者审阅包：42 篇仍为 Draft，尚未满足所有者审阅包触发条件。当前轮没有重新运行角色闭环或独立复核；表中审查项来自逐篇现存记录，未把同上下文模拟当作正式 Role Reviewed。
+- 本次收尾新基线：PR #21 合并后的 main 为 `c026b3862c9a083c95cffb096f93e141276cfba5`；工作分支 `careeros-v04-m4-batch-a-closeout-20261127`，本检查点变更前 HEAD `a7ce7083d060306a929a28692d8ea4a4ec8657ab`。新 PR 尚未创建；完成批次 A 收尾后创建并保持开放。
+- 本文是逐篇对账和阻塞审计，不是所有者审阅包；42 篇原 Draft 已逐篇审计。本轮对 SD-01、SD-02 精确正文重新执行独立角色复核；状态按目标版证据和 M3 范围判断，不将同上下文模拟当作正式 Role Reviewed。
 - 全程未连接 SAP；没有执行 SAP 实机、配置、数据库、API 或权限测试。
 
 ## 当前总状态
@@ -13,24 +13,24 @@
 | 状态 | 数量 | 项目 |
 | --- | ---: | --- |
 | Owner Accepted | 3/99 | FI-01～FI-03（此前所有者明确接受） |
-| Role Reviewed、等待所有者 | 8/50 批次 A | FI-05、MM-01～MM-07 |
-| Draft | 42/50 批次 A | 见下表；全部保留 Draft |
+| Role Reviewed、等待所有者 | 9/50 批次 A | FI-05、MM-01～MM-07、SD-01 |
+| Draft | 41/50 批次 A | 见下表；全部保留 Draft |
 | 批次 B 未开始 | 0/46 已启动 | PROCESS-01～12、ABAP-01～09、S4HANA-01～09、AI-Integration-01～08、COMMON-01、COURSE-01～07 |
-| **合计** | **99** | 3 accepted + 8 reviewed + 42 Draft + 46 not started |
+| **合计** | **99** | 3 accepted + 9 reviewed + 41 Draft + 46 not started |
 
-现有 8 篇 Role Reviewed 在本次对账期间保持原状态；没有一篇被改为 Owner Accepted。全库仍是 **3 Owner Accepted、8 Role Reviewed、42 Draft、46 未开始**。批次 B 仍须等批次 A 完成并经所有者明确批准。
+批次 A 现有 **9 Role Reviewed、41 Draft、0 Owner Accepted**；本工作包仅将 SD-01 从 Draft 转为 Role Reviewed，SD-02 经复核仍为 Draft。全库 Owner Accepted 仍 3/99；批次 B 46 篇未开始，须等批次 A 完成并经用户明确批准。
 
 ## 五条工作线逐篇状态
 
 | 工作线 | 批次 A 当前文章 | 当前计数 |
 | --- | --- | --- |
-| 1 | MM-08、MM-09、MM-10、SD-01、SD-02、SD-03、SD-04、SD-05 | 8 篇；8 Draft |
+| 1 | MM-08、MM-09、MM-10、SD-01、SD-02、SD-03、SD-04、SD-05 | 1 Role Reviewed、7 Draft；下一游标 SD-03 |
 | 2 | SD-06、SD-07、PP-01、PP-02、PP-03、PP-04、PP-05、PP-06 | 8 篇；8 Draft |
 | 3 | PP-07、PP-08、PP-09、QM-01、QM-02、QM-03、QM-04、QM-05 | 8 篇；8 Draft |
 | 4 | QM-06、QM-07、QM-08、FI-04、FI-06、FI-07、FI-08、FI-09、FI-10 | 9 篇；9 Draft |
 | 5 | FI-11、CO-01、CO-02、CO-03、CO-04、CO-05、CO-06、CO-07、CO-08 | 9 篇；9 Draft |
 
-## 42 篇逐篇正文、准入、评审与证据差距
+## 初始 42 篇 Draft 逐篇正文、准入、评审与证据差距（实时状态以本报告后续检查点为准）
 
 M3 准入取自 [逐篇准入与证据分流](../../plans/m3-item-readiness-triage-v0.3.md)。表内的“15/15”来自文章对应 review 文件，指该文件记录的每角色 5 个提问/答复/修订判断/原角色复核；它不自动等于独立审查。若记录标注同一 Work 上下文，则该环节仅为角色模拟，不计正式 Role Reviewed。对记录称有独立 AI 上下文的条目，本报告仍仅承认其记录范围，不把 AI 视角写成人类专家签核；证据门槛和文章状态仍独立判定。
 
@@ -39,8 +39,8 @@ M3 准入取自 [逐篇准入与证据分流](../../plans/m3-item-readiness-tria
 | MM-08 | [MM-08 正文](../../knowledge/MM/03-tcodes/transaction-index.md) | 暂缓核心 | 固定版 2021 SPS05 资料确认特定嵌入式 EWM 同步移动中的 MIGO 短文本及 Display Material Document List app；通用 MIGO 操作导航、一般物料凭证显示范围/入口代码、完整导航映射和用户权限仍缺直接证据。 | [评审记录](2026-11-27-m4-mm08-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | MM-09 | [MM-09 正文](../../knowledge/MM/04-configuration/purchasing-inventory.md) | 暂缓核心 | 普通估价库存收货的借贷方向、OBYC/BSX/WRX 触发与映射仍缺固定版完整证据；记录保留来源方向冲突，且无客户只读/授权测试。 | [评审记录](2026-11-27-m4-mm09-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | MM-10 | [MM-10 正文](../../knowledge/MM/05-data-model/purchasing-inventory.md) | 暂缓核心 | PR/PO/采购历史/物料凭证完整键、字段、基数、物理表/兼容视图、released API 与权限未闭合；FSD 当前可见版本是动态 SPS10 快照。 | [评审记录](2026-11-27-m4-mm10-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
-| SD-01 | [SD-01 正文](../../knowledge/SD/01-foundations/organization.md) | 限缩可写 | 固定版证据可支持有限组织关系；完整组织配置、跨公司开票适用条件、客户配置/API/权限仍未核。PROCESS-02 未进入批次 A 分支。 | [评审记录](2026-11-27-m4-sd01-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
-| SD-02 | [SD-02 正文](../../knowledge/SD/01-foundations/customer-product-master.md) | 限缩可写 | 固定来源允许有限 BP/伙伴职能教学；BP grouping/编号、完整伙伴确定配置、物料销售字段/API/权限未闭合。 | [评审记录](2026-11-27-m4-sd02-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
+| SD-01 | [SD-01 正文](../../knowledge/SD/01-foundations/organization.md) | 限缩可写 | 三个独立 AI reviewer-context 对精确正文 blob `1b2f9c6d1bde5cbf7f526fd3819ccf3f46338b29` 各完成 5 项复核，15/15 PASS；M3 支持限缩组织关系目标。固定版完整组织配置、跨公司开票条件、客户配置/API/权限仍未证，但明确排除于本篇范围。 | [复核记录](2026-11-27-m4-sd01-three-role-review.md)；当前 exact-body 15/15；未声称真人专家或系统测试 | **Role Reviewed**；等待所有者审阅，尚未 Owner Accepted |
+| SD-02 | [SD-02 正文](../../knowledge/SD/01-foundations/customer-product-master.md) | 限缩可写 | 精确正文 blob `587017266695199e2d8855da6981e09d612d0b72` 由三个独立 AI reviewer-context 各完成 5 项复核，15/15 PASS，现文未越界；但 BP grouping/编号、完整伙伴确定配置、物料销售字段/组织键/API、客户实际配置和权限仍属 M3 补查缺口，固定版 grouping 来源未补证。 | [复核记录](2026-11-27-m4-sd02-three-role-review.md)；当前 exact-body 15/15；独立 AI 视角，非真人专家 | **Draft**；核心数据模型范围未闭合，不仅凭 15/15 升级 |
 | SD-03 | [SD-03 正文](../../knowledge/SD/02-functions/sales-delivery.md) | 限缩可写 | 流程核心证据主要为动态 FSD Version 11.0 / S/4HANA 2021 SPS10 快照；具体部分交货、取消/拒绝/冲销和权限未闭合，页码定位曾有差异。 | [评审记录](2026-11-27-m4-sd03-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | SD-04 | [SD-04 正文](../../knowledge/SD/02-functions/pricing-billing-ar.md) | 限缩可写 | 动态 FSD SPS10 仅支持高层开票/AR 能力；定价条件、税、收入确认、实际 FI/AR 关系、收款/银行资金及权限未闭合。 | [评审记录](2026-11-27-m4-sd04-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | SD-05 | [SD-05 正文](../../knowledge/SD/03-tcodes/transaction-index.md) | 暂缓核心 | 直接证据仅覆盖 GTS/巴西等受限入口与迁移关键词；通用 SD 逐码用途、VA03、交货/开票导航、GUI/Fiori 映射和权限未闭合。 | [评审记录](2026-11-27-m4-sd05-three-role-review.md)；15/15；记录称三个独立 AI 角色上下文 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
@@ -118,3 +118,12 @@ M3 准入取自 [逐篇准入与证据分流](../../plans/m3-item-readiness-tria
 ### AI-Workflow 版本标签差异
 
 IdeaLab 根 README 与 docs/AI_WORKFLOW_INTEGRATION.md 将 SHA 939ec44036d89cd91622ab96b938be9f02479026 描述为正式 V1.1；该固定提交自己的 README 把 V1.1 标为“候选版本”。已记录差异，未更换 SHA。
+
+## 新分支收尾检查点 2：SD-01～SD-02（2026-11-27）
+
+- **工作线 1 游标**：MM-08～MM-10 已完成复核；SD-01 达 Role Reviewed；SD-02 仍 Draft；接下来依序处理 SD-03～SD-05。其他游标：W2 SD-06、W3 PP-07、W4 QM-06、W5 FI-11。
+- **SD-01**：精确正文 blob `1b2f9c6d1bde5cbf7f526fd3819ccf3f46338b29`；三个独立 AI reviewer-context 各做 5 项有效质询—证据答复—修订判断—原角色复核，共 15/15 PASS。M3 标为限缩可写；狭义组织关系有固定版来源记录并明确排除未知配置/跨公司情形细节，因此状态改为 Role Reviewed，未接受。
+- **SD-02**：精确正文 blob `587017266695199e2d8855da6981e09d612d0b72`；同样完成 15/15 exact-body 独立 AI 视角复核，均 PASS 且无需改文。M3 要求补查 BP grouping/编号、完整伙伴确定配置、物料销售视图/字段/组织键/API 及权限；本轮官方搜索未找到可核实的固定 2021 grouping 直接正文，未版本固定的结果未用于证据。文章保持 Draft。
+- **计数**：批次 A 9/50 Role Reviewed（原 8 篇 + SD-01）、41/50 Draft、0/50 Owner Accepted；全库 3/99 Owner Accepted；批次 B 0/46 未开始。
+- **提交**：SD-01 review `92fdc920645a39c55d371ff2082900a3cc910624`；SD-01 状态行 `d66b6770ff90643d67ef1cd59407630c8883153e`；SD-02 exact-body review `a7ce7083d060306a929a28692d8ea4a4ec8657ab`；本检查点审计提交由本次更新生成。
+- 未连接 SAP；无实机、配置、数据库、API 或权限测试。
