@@ -22,10 +22,10 @@ SAP Help 官方搜索索引中的固定 2021.000 “New App: Manage Multilevel B
 
 ### 纯教学用的虚构树
 
-下面只表示层级关系，不表示真实主数据、BOM item 记录或 SAP 选择结果：
+下面只表示层级关系，不表示真实主数据、BOM item 记录或 SAP 选择结果。根节点 FG-100 只表示虚构树的顶层对象；BOM header 元数据没有画进树图：
 
 - 成品 FG-100
-  - 装配件 ASM-110
+  - 装配件 ASM-110（此例中它也是上层组件，并继续展开为下层父级）
     - 组件 MAT-120
     - 组件 MAT-130
   - 组件 MAT-140
@@ -38,7 +38,7 @@ SAP Help 官方索引中三个固定 2021.000 “What's New”条目包含 BOM v
 
 1. 官方索引摘录显示，可使用 Customizing 条目 “Define Additional Control Data” 启用 BOM versioning。
 2. 另一条官方索引摘录显示，对某个 BOM usage，可以在 Customizing “Define Control Data for BOM Usage” 中指定 version-controlled BOM 的手动或自动 versioning。
-3. 这些条目只确认目标版本存在相关配置能力和设置名称；没有给出完整 IMG 路径、客户当前设置、版本与替代 BOM/生产版本的对应规则，也不表示所有 BOM usage 都启用了版本控制。
+3. 这些条目只确认目标版本存在相关配置能力和设置名称；没有给出完整 IMG 路径、客户当前设置、版本与替代 BOM/生产版本的对应规则，也不表示所有 BOM usage 都启用了版本控制。它们分别涉及是否启用 versioning、特定 BOM usage 的创建方式设置，以及下述重复制造确认中的日期选版例子；不能合并成一条普遍的 BOM 自动选择规则。
 
 目标版还有一个范围很窄的例子：固定 2021.000 “Confirm Repetitive Manufacturing” 的官方索引摘录显示，在按库存重复制造（make-to-stock repetitive manufacturing）的确认场景中，可使用 BOM explosion date 确定创建确认时有效的 BOM version。该版本化 Help HTML direct open 为 0 行，未直接复读完整页面正文。该页面把能力限定在这个场景。不要把这句话扩展成“所有生产订单都会按同一日期自动选择 BOM”，也不要据此推导通用的有效期或替代项优先级。
 
@@ -78,7 +78,7 @@ M3 批准范围还包括 BOM 用量、替代项、有效日期/版本，以及�
 
 1. SAP Help Portal，[“New App: Manage Multilevel Bill of Material”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/40fea7f7ca7d446c800d992088133f69.html?locale=en-US&version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000。官方检索索引摘录显示多层树、BOM header、嵌套组件/装配件/物料，以及 BOM Engineer business role template 授权说明；版本化 Help HTML direct open 返回 0 行，本轮未直接复读完整正文。索引显示应用支持 display and maintain，不应称为只读工具。
 2. SAP Help Portal，[“Configuration to Define Versioning of Bill of Material”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/354d3184ad4449f6b515029199e69de9.html?version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000。官方检索索引摘录显示可用 “Define Additional Control Data” 启用 BOM versioning；版本化 Help HTML direct open 返回 0 行，未直接复读完整正文。不支持推导完整 IMG 路径或客户设置。
-3. SAP Help Portal，[“Configuration to Maintain Manual or Automatic Versioning for BOM Usage”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/d9fae6cc2c684445b25cee45bf30502a.html?locale=en-US&version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000。SAP 官方检索索引摘录显示可为特定 BOM usage 选择手动或自动 versioning；版本化 Help HTML direct open 返回 0 行，未直接复读完整正文。不支持推导默认值、算法及全部 BOM usage 覆盖。
+3. SAP Help Portal，[“Configuration to Maintain Manual or Automatic Versioning for BOM Usage”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/d9fae6cc2c684445b25cee45bf30502a.html?version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000。SAP 官方检索索引摘录显示可为特定 BOM usage 选择手动或自动 versioning；版本化 Help HTML direct open 返回 0 行，未直接复读完整正文。不支持推导默认值、算法及全部 BOM usage 覆盖。
 4. SAP Help Portal，[“Confirm Repetitive Manufacturing”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/87921c2813d94507b725eec99b4e979c.html?locale=en-US&version=2021.000)，S/4HANA 2021 (Oct 2021), version 2021.000。官方检索索引摘录显示，make-to-stock repetitive manufacturing 确认场景可用 BOM explosion date 确定有效 BOM version；版本化 Help HTML direct open 返回 0 行，未直接复读完整正文。该有限说明不支持通用 BOM 选版规则。
 5. M3 范围/证据台账：[逐篇范围、版本线索与依赖](../../../plans/detail-logistics-v0.3.md)、[逐篇准入分流](../../../plans/m3-item-readiness-triage-v0.3.md)、[物流来源登记](../../../plans/evidence-logistics-m3.md)、[SD/PP 来源贴合度复核](../../../plans/sd-pp-source-fit-m3.md)。这些记录用于解释批准范围和来源限制，不是 BOM 产品规则的替代证据。
 
