@@ -1,8 +1,8 @@
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-27（Asia/Shanghai）  
-**当前实时快照**：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已于该提交合并。旧批次分支 `careeros-v04-m4-batch1-20261126` 最终 HEAD `02c5ee4518aeb9f079ea81cf1b949a21608f7d19`。本次收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 直接从该 `main` 建立，新 PR 尚未创建。对账起始计数：批次 A 50 篇均有正文，Role Reviewed 8/50（FI-05、MM-01～MM-07），Draft 42/50，Owner Accepted 0/50；全库 Owner Accepted 3/99（FI-01～FI-03），批次 B 0/46 未开始。五条工作线依次包含 8、8、8、9、9 篇。计数会在本轮逐篇审计后更新；批次 B 必须等批次 A 完成并由所有者明确批准后再启动。  
-**独立性与状态**：同一 Work 上下文的角色模拟不计 Role Reviewed；已有 review 记录即使为 15/15 也不自动通过证据门禁。42 篇均保留 Draft；没有推定所有者接受。未连接 SAP，未执行实机、配置、数据库、API 或权限测试。  
+**当前实时快照**：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已于该提交合并，绝不再向其追加。本次收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该 main 建立；本更新前分支 HEAD `5761468ffe624867bb4acb49f7e800dc8cdaafe2`，新 PR 尚未创建。全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A 9/50 Role Reviewed（FI-05、MM-01～MM-07、SD-01）、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。五条工作线依次有 8、8、8、9、9 篇。
+**独立性与状态**：同一 Work 上下文角色模拟不计 Role Reviewed；15/15 PASS 不自动通过证据门禁。本轮 SD-01 经精确正文独立 AI 角色复核后计入 Role Reviewed；SD-02 虽完成新的精确正文 15/15 复核，M3 范围缺口仍未闭合，保持 Draft。没有推定所有者接受。未连接 SAP，未执行实机、配置、数据库、API 或权限测试。
 **流程版本**：固定 SHA `939ec44036d89cd91622ab96b938be9f02479026` 未更换；IdeaLab 接入文档称 V1.1 正式版，而该固定提交 README 仍称“候选版本”，矛盾已记录于审计报告，待所有者决定是否升级。
 
 ## 当前仓库、分支与 PR
@@ -10,7 +10,7 @@
 - 仓库：[VJ-VickWeijie/IdeaLab](https://github.com/VJ-VickWeijie/IdeaLab)
 - 上一 PR：[#21｜CareerOS M4 全量分批建设](https://github.com/VJ-VickWeijie/IdeaLab/pull/21)，已合并至 `main`；不再向其追加提交。
 - 旧工作分支：`careeros-v04-m4-batch1-20261126`，最终 HEAD `02c5ee4518aeb9f079ea81cf1b949a21608f7d19`。
-- 当前收尾分支：`careeros-v04-m4-batch-a-closeout-20261127`，起点 `main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`。新 PR 尚未创建；创建后保持开放，不合并。
+- 当前收尾分支：`careeros-v04-m4-batch-a-closeout-20261127`，起点 `main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`。新 PR 尚未创建；批次 A 收尾完成后创建并保持开放，不合并。
 - AI-Workflow 固定 SHA：`939ec44036d89cd91622ab96b938be9f02479026`；不变更。正式/候选标记矛盾见[审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
 - 本次审计基线时 PR 为 282 commits、113 files changed（+10,200 / -108）；无 PR 评论、review submissions 或该 HEAD commit statuses/checks。
 ## 里程碑、授权与产品边界
@@ -44,23 +44,24 @@
 - MM-07《价格单位、数量单位与换算》完成 15 个有效闭环：普通读者 5、配置顾问 5、开发者 5；状态 reviewed，待所有者验收。正文区分 PO 订单单位、订单价格单位和教学用计价数量，例题假设已限定；未推断单位因子存储字段、发票匹配或 BAPI 字段覆盖根因。记录见 `reviews/work/2026-11-26-m4-mm07-three-role-review.md`。
 - 没有连接 SAP 系统或执行实机测试；没有声称验证客户配置、权限或生产凭证。
 
-## 当前执行状态与准确游标（2026-11-27；本轮对账前快照）
+- **最近工作包（工作线 1）**：SD-01 精确正文 blob `1b2f9c6d1bde5cbf7f526fd3819ccf3f46338b29` 经三角色各 5 个闭环后计 Role Reviewed；SD-02 精确正文 blob `587017266695199e2d8855da6981e09d612d0b72` 经三角色各 5 个闭环，固定版 grouping/编号及完整字段/API/权限证据仍缺，保持 Draft。详细记录见两篇 article review 与实时审计。
+## 当前执行状态与准确游标（2026-11-27；SD-01～SD-02 检查点）
 
-- M4 批次 A 全部 50 篇文件已在 `main`；基线为 8 篇 Role Reviewed、0 篇 Owner Accepted、42 篇 Draft。当前对账尚未完成，本文的最终计数以后续收尾报告为准。
+- M4 批次 A 全部 50 篇文件均已在 main：当前 9 篇 Role Reviewed、0 篇 Owner Accepted、41 篇 Draft；全库 Owner Accepted 3/99。
 - 批次 B 仍为 0/46；只有批次 A 全部完成且用户在本窗口明确批准后才能开工。
-- 对 42 篇 Draft 已逐篇对照正文、M3 准入与现存 review 记录；完整 ID、链接、证据边界、循环记录模式和下一步见[逐篇审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
+- 对原始 42 篇 Draft 已逐篇对照正文、M3 准入与现存 review；本轮 SD-01 依据精确正文复核升级 Role Reviewed，SD-02 新一轮复核完成但仍 Draft。完整 ID、链接、证据边界、循环记录模式和下一步见[逐篇审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
 - 五条当前工作线：
 
 | 工作线 | 当前文章 | 文章状态 | 下一游标 |
 | --- | --- | --- | --- |
-| 1 | MM-08～MM-10、SD-01～SD-05 | 8 Draft | MM-08 |
+| 1 | MM-08～MM-10、SD-01～SD-05 | 1 Role Reviewed、7 Draft | SD-03 |
 | 2 | SD-06～SD-07、PP-01～PP-06 | 8 Draft | SD-06 |
 | 3 | PP-07～PP-09、QM-01～QM-05 | 8 Draft | PP-07 |
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 Draft | QM-06 |
 | 5 | FI-11、CO-01～CO-08 | 9 Draft | FI-11 |
 
-**当前执行顺序**：先从 MM-08 开始，逐篇查找固定版直接来源并在证据可支撑时修订；之后按上表继续。核心证据无法补齐时，具体记录来源与缺口，文章继续 Draft 并转下一篇。只有具备足够目标版证据并完成可核验的独立角色复核，才可申请 Role Reviewed。Owner Accepted 只由用户明确批准。  
-**本次代码更新**：修正依赖文章已出现但仍 Draft 的陈旧文字；新增逐篇对账报告、FI-04 来源续核及对应 review 记录。不会扩大 M4 内容范围或更换 AI-Workflow SHA。
+**当前执行顺序**：工作线 1 由 SD-03 接续，之后处理 SD-04、SD-05；再按用户指定的五条工作线顺序推进。核心证据无法补齐时，记录已查来源、具体缺口和下一步，文章继续 Draft 并转下一篇。只有目标版证据足以支持其学习目标且完成可核验的独立角色复核，才可记 Role Reviewed。Owner Accepted 只由用户明确批准。
+**本次工作包更新**：SD-01 已达 Role Reviewed；SD-02 通过 15 个当前正文独立 AI 角色检查但保留 Draft。固定版 BP grouping/编号资料未补齐；未更换 AI-Workflow SHA。
 ## 未解决问题与证据边界
 
 继承自 M3 的主题级开放边界，限制相关主张，但不阻止独立文章：
@@ -82,7 +83,7 @@
 | 指标 | 数量/状态 |
 | --- | --- |
 | 正式接受文章 | **3/99**（FI-01～FI-03） |
-| 批次 A | **8/50 已角色 reviewed（FI-05、MM-01～MM-07）；0/50 已由所有者接受。** FI-04/FI-06、MM-08、QM-01 和 CO-01 均为 drafting |
+| 批次 A | **9/50 已角色 reviewed（FI-05、MM-01～MM-07、SD-01）；0/50 已由所有者接受。** 其余 41 篇 Draft。
 | 批次 B | **0/46 开始**；待批次 A 完成 |
 | FI-01～FI-03 角色审核闭环 | 52 |
 | MM-01 审查 | 16 个有效闭环：普通读者 5、配置顾问 5、开发者 6；reviewed，待所有者验收 |
