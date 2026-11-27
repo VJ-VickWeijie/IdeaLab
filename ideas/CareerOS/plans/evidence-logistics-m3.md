@@ -94,3 +94,11 @@
 ### MM-06 补充：采购订单协作范围
 
 Work 于 2026-11-26 从 SAP 官方 S/4HANA 2021 动态 FSD 直接定位 §2.12.4.4 Purchase Order Collaboration（文档版本 11.0，2021 SPS10，PDF 正文页 161）。该节说明，业务网络或外部系统集成且支持相应功能时，可以向供应商发送已收货物信息，并说明部分或全部交付已收。此证据仅支持条件化的供应商协作通知能力，不说明 GR 具体过账、PO 项目开放数量、容差、最终交货状态或库存/会计更新规则。动态 latest URL 未保存本次独立文件哈希；既有 SHA-256 仍只对应 2026-11-25 快照。
+
+
+## 2026-11-27 来源续核附录｜SD-03（未关闭 M3 缺口）
+
+- SAP 官方 SAP Help 搜索结果出现固定版 `What's New in SAP S/4HANA 2021` 条目 **Change Outbound Delivery - Special Exceptions 3rd Party Warehouse**，选择器为 `2021 (Oct 2021)`、Scope Item `4RQ (Decentralized EWM - Ad Hoc Goods Issue)`、Valid As Of SAP S/4HANA 2021。搜索摘录将其限定为连接第三方物流服务商或分布式仓库的特殊例外：须先用专用 Reverse Goods Movement app 取消 goods issue，再使用专用 app 更改交货；摘录提示变更不会自动同步到外部连接系统，可能造成 S/4HANA 与外部库存数据不一致。
+- **访问限制**：官方固定版链接 `https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/19b977e649f14e32830563367b2429ab.html?version=2021.000` 在本轮直接打开返回零行；上述内容只从 SAP 官方搜索索引摘录观察到，未能直接复读全文。本条仅登记为目标版窄场景候选，不作为普通 sell-from-stock 的 PGI reversal 规则、客户权限证明或已核实操作指引，不提升准入/审查状态。
+- 同轮搜索还找到 `Fixing Quantities and Dates in Sales Documents` 的 2025.001 页面与 `Goods Issue Reversal` 的 2025 FPS02 页面；它们不是固定 S/4HANA 2021 证据，未用于 SD-03 的结论。
+- M3 对 SD-03 的开放项仍包括一般部分交货、销售/交货取消或拒绝、普通 PGI 冲销规则及客户权限。除非取得可直接读取的适用版来源，否则文章维持 Draft；该搜索附录不改变原 M3 限缩准入。
