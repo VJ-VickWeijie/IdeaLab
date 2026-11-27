@@ -24,7 +24,7 @@
 
 | 工作线 | 批次 A 当前文章 | 当前计数 |
 | --- | --- | --- |
-| 1 | MM-08、MM-09、MM-10、SD-01、SD-02、SD-03、SD-04、SD-05 | 1 Role Reviewed、7 Draft；下一游标 SD-04 |
+| 1 | MM-08、MM-09、MM-10、SD-01、SD-02、SD-03、SD-04、SD-05 | 1 Role Reviewed、7 Draft；下一游标 SD-05 |
 | 2 | SD-06、SD-07、PP-01、PP-02、PP-03、PP-04、PP-05、PP-06 | 8 篇；8 Draft |
 | 3 | PP-07、PP-08、PP-09、QM-01、QM-02、QM-03、QM-04、QM-05 | 8 篇；8 Draft |
 | 4 | QM-06、QM-07、QM-08、FI-04、FI-06、FI-07、FI-08、FI-09、FI-10 | 9 篇；9 Draft |
