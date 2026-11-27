@@ -206,3 +206,15 @@ IdeaLab 根 README 与 docs/AI_WORKFLOW_INTEGRATION.md 将 SHA 939ec44036d89cd91
 - **M3 仍未闭合**：用量/基本数量/单位计算；替代 BOM、lot size、有效日期和生产版本的组合选择；组件缺失/失效/排除后的系统行为；完整配置、表/字段/键/基数、released API/CDS 与客户权限。搜索到的动态/2025/Cloud/ERP 信息及维护 BOM API 未用于补填通用生产 BOM 规则。PP-02 保持 Draft。
 - **依赖与计数**：PP-01 仍 Draft；MM-02 Role Reviewed 只辅助区分主数据与 BOM，不替代本篇规则；PP-03 等文章仍 Draft。批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99 Owner Accepted；批次 B 0/46 未开始。W1 已完成；W2 下一篇 PP-03；W3 PP-07；W4 QM-06；W5 FI-11。
 - **执行边界**：未连接 SAP；未执行实机、配置、数据库、API 或权限测试。PR #21 已合并；新 PR 尚未创建，完成批次 A 收尾后创建并保持开放，不合并。
+
+
+## M4 批次 A 收尾检查点｜PP-03（2026-11-27）
+
+- 逐篇重新核对 PP-03 正文、M3 readiness/detail-logistics/evidence 登记、控制矩阵（无 PP-03 专属行）、历史审查、PP-02/PP-04/PP-05 依赖状态；依赖文章不能代替 PP-03 产品证据。
+- 最终正文 blob：a84cbe704635ee67f58ce5d55c1db75b06086bc0。已补充动态 SAP S/4HANA 2021 FSD Document Version 11.0（2026-07-22，SPS10）概念主线：Work Center/resource 术语范围、Routing operations/顺序/执行资源/所需 BOM 组件、生产版本指定 BOM 与 Routing。正文明确它是后续 SPS 动态快照，不是固定 2021.000 初始版。
+- 来源差异：同一动态 FSD latest 路径此前一次抓取返回 v9.0/SPS08；本轮后续官方索引及直接打开读取到 v11.0/SPS10。无固定 URL/hash 可独立复现 v9；正文与证据台账只采用 v11 概念摘录并披露差异。固定版 2021.000 Manage Routings BJ5 与 Work Center API BJ8 页面官方索引可见摘要，但本轮 direct open 均 0 可读行；不能推导完整 Route 结构、公式、选择规则、客户权限或客户系统结果。PEO 来源只作专用边界例子。
+- 普通读者、配置顾问、开发者三个独立 AI reviewer-context 各完成 5 个不同质询，作者逐项答复并修订；原角色对精确正文 blob 各复核 5/5 PASS，共 15/15 PASS，仅表示来源范围/措辞通过。没有真人 SAP 专家参与，也没有 SAP 实机、配置、数据库、API 或权限测试。
+- **状态：Draft**。M3 核心仍缺普通 PP Routing 工序字段/选择、替代/有效期/数量规则、Work Center 完整定义与操作分配、产能和成本参数/公式、BOM 组件与 operation 精确关系、production version 选择与冲突处理。三位 reviewer-context 均建议保持 Draft；PP-03 不计入 Role Reviewed。
+- **计数**：全库 Owner Accepted 3/99；批次 A Role Reviewed 9/50、Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。
+- **五条工作线游标**：W1 已完成；W2 下一篇 PP-04；W3 下一篇 PP-07；W4 下一篇 QM-06；W5 下一篇 FI-11。
+- PR #21 已合并，不再追加；新 PR 尚未创建，批次 A 收尾后创建并保持开放、不合并。
