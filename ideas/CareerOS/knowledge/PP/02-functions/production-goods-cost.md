@@ -72,7 +72,7 @@ M3 逐篇分流将本篇列为“限缩可写”，要求补查库存估价、�
 
 - [PP-02｜物料清单 BOM](../01-foundations/bom.md) 可用于理解订单组件来自 BOM 这一知识关联；该文仍未证实通用组件数量、替代项选择和有效期规则，本文不据此计算领料量。
 - [PP-05｜生产订单与确认](production-order.md) 区分订单、确认和货物移动；本文承接其事件边界，不把报工说成自动过账开关。
-- M3 将 CO-04《产品成本、差异与结算》列为成本关联文章，批准路径为 `knowledge/CO/02-functions/product-cost-variance-settlement.md`。当前 PR #21 分支中该正文尚不存在；本文不代写其范围，也不将其视为已读来源。
+- M3 将 CO-04《产品成本、差异与结算》列为成本关联文章，批准路径为 `knowledge/CO/02-functions/product-cost-variance-settlement.md`。该正文目前已在 PR #21 分支中，但仍为 Draft，尚不能作为已审查依赖或闭合本篇估价/成本/结算证据。
 - M3 的 [物流来源登记](../../../plans/evidence-logistics-m3.md)、[逐篇范围和依赖](../../../plans/detail-logistics-v0.3.md)、[逐篇准入分流](../../../plans/m3-item-readiness-triage-v0.3.md) 与 [SD/PP 来源贴合度](../../../plans/sd-pp-source-fit-m3.md) 是范围控制资料，不替代产品事实来源。
 
 ## 目标版本资料及其支持边界

@@ -115,3 +115,11 @@ SAP S/4HANA 2021.000《Migration Objects for SAP S/4HANA》相关 G/L Account �
 - Work 检查了当前正文是否把 Direct Transfer 迁移场景误写成一般定义；正文仍将范围限定在该迁移对象，不新增系统规则，也不以一般会计背景填补 SAP 定义缺口。
 - 本次没有可用于关闭核心缺口的新固定版来源，因此不新增答辩/复核轮、不把旧问题改计 closed；FI-04 保持 `drafting`，尚未计入批次 A reviewed。未连接 SAP，未验证公司配置或用户权限。
 - 工作线 4 下一篇：FI-06，沿用其既有 9/15 审查结果和未闭合目标版证据项；不重跑 M3 或原有闭环。
+
+
+## 2026-11-27 FI-04 官方目标版来源续核
+
+- 已检索 SAP 官方域名，包含 “Company Code 2021”、“smallest organizational unit” 等定向查询。
+- 固定版 2021.000 命中：[Determination of Company Code from Incoming Message Data](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/fad5464c377c4881aca79ed80243f786.html?locale=en-US&state=PRODUCTION&version=2021.000) 只说明电子单据本地化场景；[Specify Company Code as Registered Entity](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/bd7d244126dc46cc8a7e131172ce4b16.html?locale=en-US&q=AMRP&state=PRODUCTION&version=2021.000) 只说明瑞典功能字段。二者均不支持本篇一般定义/组织基数。
+- 一般定义检索结果指向 SAP ERP 旧版页面，不作为 2021 证据；未把它们补进文章。
+- 结果：原三角色记录仍为 14/15；未关闭的配置顾问证据项保持开放，FI-04 继续 drafting。
