@@ -4,8 +4,9 @@
 - 工作包：CareerOS M4 批次 A，工作线 2
 - 文章路径：ideas/CareerOS/knowledge/PP/01-foundations/bom.md
 - 当前状态：drafting
-- 角色视角闭环：普通读者 5/5、资深 SAP 配置顾问 5/5、普通 SAP 开发人员 5/5；共 15 个完成“问题—证据答复—修改判断/正文修订—原视角复核”的闭环。
-- 执行上下文：同一 Work 上下文内的角色视角模拟；不是独立代理审查，也不代表真人 SAP 专家。此环境未显示模型身份。
+- 原有角色模拟：普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各 5/5，共 15 个同一 Work 上下文闭环；不构成独立审查。
+- 新增独立复核：三个独立 AI Agent reviewer-context 各对最终正文提出并复核 5 项，15 项均 PASS（仅表示证据边界和措辞安全）；没有真人 SAP 专家签核。核心目标证据仍缺，PP-02 不计 Role Reviewed。
+- 执行上下文：历史闭环为同一 Work 模拟；新复核为独立 AI reviewer contexts。此环境未显示模型身份。
 - SAP 系统：未连接；实机验证为 0。所有练习为离线纸笔练习。
 
 ## 1. M3 准入与本次写作范围
@@ -20,10 +21,10 @@ M3 来源登记列出 FSD_OP2021_latest.pdf §2.8.2.1。该 URL 含动态 latest
 
 | Ref | 来源 | 本次可用的直接支持 | 不支持 / 不作结论 |
 | --- | --- | --- | --- |
-| P1 | SAP Help, “New App: Manage Multilevel Bill of Material”, S/4HANA 2021 (Oct 2021), version 2021.000。https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/40fea7f7ca7d446c800d992088133f69.html?locale=en-US&version=2021.000 | 该应用展示多层树，先显示 BOM header，再展示嵌套的 components、assemblies 和 material；页面说明应用支持 display and maintain，权限对应 BOM Engineer business role template。 | 所有 BOM 类型/制造场景、物料数量规则、替代选择、通用有效期/爆炸逻辑、只读用户权限、客户系统角色分配。 |
-| P2 | SAP Help, “Configuration to Define Versioning of Bill of Material”, S/4HANA 2021 (Oct 2021), version 2021.000。https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/354d3184ad4449f6b515029199e69de9.html?version=2021.000 | 页面确认可通过 Customizing “Define Additional Control Data” 启用 BOM versioning。 | 完整 IMG 路径、默认值、全部版本规则、目标客户实际设置。 |
-| P3 | SAP Help, “Configuration to Maintain Manual or Automatic Versioning for BOM Usage”, S/4HANA 2021 (Oct 2021), version 2021.000。https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/d9fae6cc2c684445b25cee45bf30502a.html?locale=en-US&version=2021.000 | 该页面说明可针对特定 BOM usage 指定 version-controlled BOM 创建过程采用手动或自动 versioning。 | 全部 BOM usage 覆盖、自动编号算法、与替代项/生产版本/有效期的完整交互。 |
-| P4 | SAP Help, “Confirm Repetitive Manufacturing”, S/4HANA 2021 (Oct 2021), version 2021.000。https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/87921c2813d94507b725eec99b4e979c.html?locale=en-US&version=2021.000 | 页面说明在 make-to-stock repetitive manufacturing 的确认场景中，BOM explosion date 可用于判断创建确认时有效的 BOM version。 | 全部生产订单/制造模式的通用 BOM 选版规则，或该目标客户的实际结果。 |
+| P1 | SAP Help, “New App: Manage Multilevel Bill of Material”, S/4HANA 2021 (Oct 2021), version 2021.000。https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/40fea7f7ca7d446c800d992088133f69.html?locale=en-US&version=2021.000 | SAP 官方检索索引摘录显示多层树、BOM header、嵌套 components/assemblies/material，display and maintain，以及 BOM Engineer business role template 授权说明。版本化 HTML direct open 返回 0 行，本轮未直接复读完整正文。 | 索引不支持所有 BOM 类型/制造场景、物料数量规则、替代选择、通用有效期/爆炸逻辑、只读用户权限或客户系统角色分配。 |
+| P2 | SAP Help, “Configuration to Define Versioning of Bill of Material”, S/4HANA 2021 (Oct 2021), version 2021.000。https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/354d3184ad4449f6b515029199e69de9.html?version=2021.000 | SAP 官方检索索引摘录显示可经 Customizing “Define Additional Control Data” 启用 BOM versioning；版本化 HTML direct open 返回 0 行，未直接复读完整正文。 | 索引不支持完整 IMG 路径、默认值、全部版本规则或目标客户实际设置。 |
+| P3 | SAP Help, “Configuration to Maintain Manual or Automatic Versioning for BOM Usage”, S/4HANA 2021 (Oct 2021), version 2021.000。https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/d9fae6cc2c684445b25cee45bf30502a.html?version=2021.000 | SAP 官方检索索引摘录显示可对特定 BOM usage 的 version-controlled BOM 设置创建时的手动或自动 versioning；canonical HTML direct open 返回 0 行，未直接复读完整正文。 | 索引不支持全部 BOM usage 覆盖、自动编号算法或与替代项/生产版本/有效期的完整交互。 |
+| P4 | SAP Help, “Confirm Repetitive Manufacturing”, S/4HANA 2021 (Oct 2021), version 2021.000。https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/87921c2813d94507b725eec99b4e979c.html?locale=en-US&version=2021.000 | SAP 官方检索索引摘录显示，在 MTS repetitive manufacturing 的确认场景中，BOM explosion date 可用于判断创建确认时有效的 BOM version；版本化 HTML direct open 返回 0 行，未直接复读完整正文。 | 索引不支持全部生产订单/制造模式的通用 BOM 选版规则，亦不证明该目标客户的实际结果。 |
 | M3 记录 | detail-logistics-v0.3.md；m3-item-readiness-triage-v0.3.md；evidence-logistics-m3.md；sd-pp-source-fit-m3.md | 确认文章批准路径、目标范围和既有缺口。 | 规划/贴合度记录本身不是 PP-02 产品事实的替代证据。 |
 | 排除来源 | FSD_OP2021_latest.pdf（动态 URL，M3 台账 §2.8.2.1） | 仅用于追踪 M3 原始来源及解释为何当前证据范围受限。 | 不作为固定版 S/4HANA 2021 产品主张依据。 |
 
@@ -210,4 +211,40 @@ M3 来源登记列出 FSD_OP2021_latest.pdf §2.8.2.1。该 URL 含动态 latest
 - 正文只保留固定版支持的多层结构、BOM versioning 配置条目和重复制造 MTS 确认的日期示例；没有编造 IMG 完整路径、T-Code、表键、授权或系统结果。
 - 当前文章状态：drafting；不计入批次 A reviewed，也不增加 owner accepted。
 - 下一篇：PP-03《工作中心与工艺路线 Routing》，批准路径 knowledge/PP/01-foundations/work-center-routing.md。开始前只读取 PP-03 对应的范围、来源和关联材料。
-- 批次 A 正式统计仍为 8/50 reviewed、0/50 owner accepted；CareerOS owner accepted 仍为 3/99；SAP 实机测试 0。
+- 批次 A 正式统计为 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；CareerOS Owner Accepted 为 3/99；批次 B 0/46 未开始；SAP 实机测试 0。
+
+## 2026-11-27｜独立角色首轮质询与最终正文复核
+
+**最终复核对象**：PP-02 正文 blob `c87f31763c7137af445cc8c0f1267280b08dfb6c`。三名独立 AI reviewer-context 分别质询，作者答复并作修订判断/文字修订后，由原角色检查同一最终正文。P1–P4 均是固定 2021.000 官方 Help 搜索索引摘录；四个 canonical HTML 均无可读正文，本轮未直接复读完整页面。以下审核 PASS 仅表示边界安全，不是产品事实缺口通过。
+
+### 普通读者 reviewer-context（5 项）
+
+| # | 质询 | 作者答复/修订 | 精确最终正文复核 |
+| --- | --- | --- | --- |
+| 1 | FG-100 树根与 BOM header 的关系是什么？ | 明确 FG-100 是虚构树顶层对象，header 元数据未画入树图。 | PASS：没有暗示树图为 header 字段/记录布局。 |
+| 2 | ASM-110 是组件还是装配件？“上层组件”会不会被误读成分类？ | 接受歧义反馈，改为“在此树中，它是 FG-100 下的组件，也是 MAT-120 和 MAT-130 的父级装配件”。 | PASS：仅说明虚构树的位置关系，不加 SAP 分类或规则。 |
+| 3 | 层级树能否回答组件数量和单位？ | 确认没有固定 2021 直接依据，不新增数量公式/单位换算；原 M3 用量目标仍未达成。 | PASS（边界）；学习目标仍未闭合。 |
+| 4 | 配置 versioning、手/自动创建设置与运行时选版是否相同？ | 增加句子说明 P2/P3 是配置能力/创建方式，P4 是重复制造确认中的日期选版窄例，三者不能合并成通用规则。 | PASS：没有推导普遍自动选择。 |
+| 5 | 缺失、失效或排除组件会怎样？ | 保持未知，不从未画出的树节点推断零用量、报错、忽略或自动补齐。 | PASS（边界）；系统行为仍待证。 |
+
+### 资深 SAP 配置顾问 reviewer-context（5 项）
+
+| # | 质询 | 作者答复/处理 | 精确最终正文复核 |
+| --- | --- | --- | --- |
+| 1 | 替代 BOM、lot size、日期和生产版本如何共同决定选版？ | 不从 P4 MTS repetitive manufacturing 确认窄例推导一般订单/替代/lot-size/生产版本规则；继续列为待证。 | PASS（边界）；目标仍缺固定证据。 |
+| 2 | 用量、base quantity、单位换算可否满足 M3 教学目标？ | 无固定版直接正文，不作数值练习或计算；离线练习只画树。 | PASS（不伪造）；M3 用量目标未完成。 |
+| 3 | BOM usage 手动/自动 versioning 能否推出默认和自动选版？ | P2 启用入口、P3 特定 usage 的手/自动创建设置、P4 日期选版分别陈述；不声称全部 usage、默认或编号算法。 | PASS：配置与运行时选择规则未混为一谈。 |
+| 4 | 缺失/失效/排除组件的系统行为是什么？ | 继续未知，等待目标版直接证据。 | PASS（边界）；未推断爆炸结果、报错、跳过或替代补料。 |
+| 5 | P1–P4 是否为直读正文，还是索引摘录？ | 明确四项都使用 SAP 官方固定 2021.000 搜索索引摘录；四个 canonical HTML direct open 为 0 可读行。P3 带 locale 首开报错，移除 locale 后仍 0 行。 | PASS：未冒充完整页面直读；动态/2025/Cloud/ERP 均未用于补证。 |
+
+### 普通 SAP 开发人员 reviewer-context（5 项）
+
+| # | 质询 | 作者答复/处理 | 精确最终正文复核 |
+| --- | --- | --- | --- |
+| 1 | 是否从 BOM 树推断物理表、字段、键、JOIN、基数或 API？ | 不推断；schema、CDS/API 合同仍列为未闭合。 | PASS：没有未证数据模型/接口断言。 |
+| 2 | P1 的 display-and-maintain 与 BOM Engineer 模板是否代表只读或客户授权？ | 仅写官方索引中的应用功能和 business role template 要求，不代表目标客户用户已授权。 | PASS：未称只读、未声称实际分配。 |
+| 3 | P2/P3/P4 的配置与版本选择边界如何处理？ | 配置能力/usage 的创建设置与 MTS 重复制造确认的日期选版分开说明；不推导默认和普遍规则。 | PASS：边界准确。 |
+| 4 | MFBF/API 是否为通用 BOM 查看/读取方式？ | 正文不列其通用用途；仅保留 P4 窄确认场景。 | PASS：未泛化为读取 API、权限或全部生产订单规则。 |
+| 5 | 文档读法、客户系统、实机及权限状态是否准确？ | P1–P4 版本固定，注明索引摘录和无可读正文；SAP 未连接，未做配置/数据库/API/权限测试。 | PASS：未把文档适用性写成客户系统验证。 |
+
+**最终结论**：最终正文上三个独立 AI reviewer-context 各 5/5 PASS（合计 15/15，限当前范围与证据边界）；旧有 15 个同 Work 上下文模拟仍作为非独立历史记录保留。正文另按读者意见修正 ASM-110 描述并由三角色复核通过。M3 triage 为“限缩可写”，仍需补有效期、替代项与字段；detail-logistics 还要求用量、版本和组件缺失。数量/单位计算，替代 BOM、lot size、日期与生产版本的选择关系，一般有效期，组件异常处理和数据模型/API/CDS/权限仍未由固定版直接正文闭合。PP-02 继续 `drafting`，不计 Role Reviewed 或 Owner Accepted。未连接 SAP，未执行实机、配置、数据库、API 或权限测试。
