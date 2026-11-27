@@ -1,16 +1,16 @@
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-27（Asia/Shanghai）  
-**当前实时快照（本次修改前）**：PR #21 开放、未合并；批次 A 50 篇均有文章文件，正式 Role Reviewed 8/50（FI-05、MM-01～MM-07），Draft 42/50，Owner Accepted 0/50；全库 3/99 Owner Accepted（FI-01～FI-03），批次 B 0/46 未启动。五条工作线分别 8、8、8、9、9 篇，全部仍 Draft，逐篇证据和评审模式见[42 篇实时对账审计](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。批次 B 必须等批次 A 完成并由所有者明确批准后再启动。此处本次审计修改前的分支 HEAD 为 `41131a194e332c50d98183a092caf41f98105a74`；本次更新提交后应以 PR 实时 HEAD 为准。  
+**当前实时快照**：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已于该提交合并。旧批次分支 `careeros-v04-m4-batch1-20261126` 最终 HEAD `02c5ee4518aeb9f079ea81cf1b949a21608f7d19`。本次收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 直接从该 `main` 建立，新 PR 尚未创建。对账起始计数：批次 A 50 篇均有正文，Role Reviewed 8/50（FI-05、MM-01～MM-07），Draft 42/50，Owner Accepted 0/50；全库 Owner Accepted 3/99（FI-01～FI-03），批次 B 0/46 未开始。五条工作线依次包含 8、8、8、9、9 篇。计数会在本轮逐篇审计后更新；批次 B 必须等批次 A 完成并由所有者明确批准后再启动。  
 **独立性与状态**：同一 Work 上下文的角色模拟不计 Role Reviewed；已有 review 记录即使为 15/15 也不自动通过证据门禁。42 篇均保留 Draft；没有推定所有者接受。未连接 SAP，未执行实机、配置、数据库、API 或权限测试。  
 **流程版本**：固定 SHA `939ec44036d89cd91622ab96b938be9f02479026` 未更换；IdeaLab 接入文档称 V1.1 正式版，而该固定提交 README 仍称“候选版本”，矛盾已记录于审计报告，待所有者决定是否升级。
 
 ## 当前仓库、分支与 PR
 
 - 仓库：[VJ-VickWeijie/IdeaLab](https://github.com/VJ-VickWeijie/IdeaLab)
-- 当前 PR：[#21｜CareerOS M4 全量分批建设](https://github.com/VJ-VickWeijie/IdeaLab/pull/21)，base `main`，状态 open、未合并；不自行合并。
-- 工作分支：`careeros-v04-m4-batch1-20261126`。
-- 本次审计修改前 HEAD：`41131a194e332c50d98183a092caf41f98105a74`，与上次历史报告相同；main HEAD：`db349fe68e1aa0560ba5546a6382ffe503d0f595`。
+- 上一 PR：[#21｜CareerOS M4 全量分批建设](https://github.com/VJ-VickWeijie/IdeaLab/pull/21)，已合并至 `main`；不再向其追加提交。
+- 旧工作分支：`careeros-v04-m4-batch1-20261126`，最终 HEAD `02c5ee4518aeb9f079ea81cf1b949a21608f7d19`。
+- 当前收尾分支：`careeros-v04-m4-batch-a-closeout-20261127`，起点 `main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`。新 PR 尚未创建；创建后保持开放，不合并。
 - AI-Workflow 固定 SHA：`939ec44036d89cd91622ab96b938be9f02479026`；不变更。正式/候选标记矛盾见[审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
 - 本次审计基线时 PR 为 282 commits、113 files changed（+10,200 / -108）；无 PR 评论、review submissions 或该 HEAD commit statuses/checks。
 ## 里程碑、授权与产品边界
@@ -30,7 +30,7 @@
 
 ## 已完成
 
-- PR #20 的 M3 结果已并入 main；沿用现有 M4 分支和 PR #21，不丢弃成果、不另开 PR。
+- PR #20 的 M3 结果已并入 main；PR #21 后续承载 M4 批次 A 起步成果并已合并。当前收尾从最新 main 新开分支，不向旧 PR 追加。
 - FI-01～FI-03 已完成三角色审核，共 52 个闭环：FI-01 17、FI-02 15、FI-03 20；所有者已审阅肯定，正式接受计数更新为 3/99。
 - FI-04～FI-06 已完成首轮三角色审查，并保存问题、答复、修改和原角色复核记录。45 条首轮意见中，38 条确认闭环；没有把尚未解决的 SAP 2021 目标证据缺口计为通过。
 - FI-05 已达到普通读者、配置顾问、开发者各 5 个有效闭环，状态 `reviewed`。
@@ -44,9 +44,9 @@
 - MM-07《价格单位、数量单位与换算》完成 15 个有效闭环：普通读者 5、配置顾问 5、开发者 5；状态 reviewed，待所有者验收。正文区分 PO 订单单位、订单价格单位和教学用计价数量，例题假设已限定；未推断单位因子存储字段、发票匹配或 BAPI 字段覆盖根因。记录见 `reviews/work/2026-11-26-m4-mm07-three-role-review.md`。
 - 没有连接 SAP 系统或执行实机测试；没有声称验证客户配置、权限或生产凭证。
 
-## 当前执行状态与准确游标（2026-11-27）
+## 当前执行状态与准确游标（2026-11-27；本轮对账前快照）
 
-- M4 批次 A 全部 50 篇文件已在 PR；8 篇 Role Reviewed、0 篇 Owner Accepted、42 篇 Draft。当前没有文章状态升级。
+- M4 批次 A 全部 50 篇文件已在 `main`；基线为 8 篇 Role Reviewed、0 篇 Owner Accepted、42 篇 Draft。当前对账尚未完成，本文的最终计数以后续收尾报告为准。
 - 批次 B 仍为 0/46；只有批次 A 全部完成且用户在本窗口明确批准后才能开工。
 - 对 42 篇 Draft 已逐篇对照正文、M3 准入与现存 review 记录；完整 ID、链接、证据边界、循环记录模式和下一步见[逐篇审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
 - 五条当前工作线：
@@ -158,9 +158,11 @@
 - [多角色审核与记录规则](reviews/README.md)
 - [M3/M4 收尾方案与所有者决定](plans/m3-closeout-batched-m4-proposal-2026-11-26.md)
 
-## 新窗口可直接使用的接手指令
+## 接手与状态说明
 
-接手 GitHub 仓库 `VJ-VickWeijie/IdeaLab` 中的 CareerOS。先实时读取 PR #21、分支 `careeros-v04-m4-batch1-20261126`、`main` 和 PR #20 的状态及最新 HEAD；PR 不合并。然后读取本 HANDOFF、CareerOS README、[M4 两批执行计划](plans/m4-two-batch-execution-2026-11-26.md)、[本批 FI-04～FI-06 审查记录](reviews/work/2026-11-26-m4-batch-a01-fi04-fi06-review.md)、reviews/README、知识树和当前所选文章对应的控制矩阵/证据登记。M3 已验收；M4 全部 99 篇分批建设已授权。FI-01～FI-03 已获所有者肯定，正式接受 3/99。FI-05（15）、MM-01（16）、MM-02（15）、MM-03（18）、MM-04（18）、MM-05（15）、MM-06（15）、MM-07（15）均 reviewed、待所有者验收；MM-08、MM-09、MM-10 均因核心证据缺口保持 drafting，不计入 reviewed；批次 A 为 8/50 reviewed、0/50 owner accepted；工作线 1 已完成 SD-01～SD-05 和 MM-08；MM-08 仍为 drafting、不计 reviewed，下一项为 MM-09。SD-01、SD-02 均完成 15/15 个原角色复核闭环但仍为 drafting、不计 reviewed；详见各自最新进度追记。不要重复 M0～M3 或已完成的研究；不要把草稿/来源登记算成正式文章；保留五项 M3 证据边界及 FI-04/FI-06 新阻碍；继续批次 A 中可独立写作的文章。每完成一个工作包，真实记录三角色问题、Work 答辩/修改、原角色复核及闭环数，更新本 HANDOFF 并提交到 PR #21。
+PR #21 已合并，不要向该 PR 追加提交。批次 A 收尾从 `main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5` 建立的新分支 `careeros-v04-m4-batch-a-closeout-20261127` 执行。开始时重查 PR、main、分支及文章实时文件；按 IdeaLab 根 README、AGENTS、AI_WORKFLOW_INTEGRATION、CareerOS README/HANDOFF、M4 两批计划、M3 控制矩阵、逐篇准入/证据、reviews README、42 篇正文与现存 review 的顺序完成核验。固定 AI-Workflow SHA `939ec44036d89cd91622ab96b938be9f02479026` 不更换；版本标记差异需如实记录。逐篇只处理批次 A；文章有核心目标版证据缺口或没有真正独立审查时继续 Draft。Owner Accepted 只能由用户在本窗口明确批准；批次 B 必须等批次 A 完成并获明确批准。最终新 PR 保持开放，不合并。
+
+> 后续工作线追记中的 PR #21 状态、分支 HEAD 与游标均是各条记录形成时的历史快照；PR #21 已于 `c026b3862c9a083c95cffb096f93e141276cfba5` 合并至 main。
 
 
 ## 工作线 2 进度追记（2026-11-27）
