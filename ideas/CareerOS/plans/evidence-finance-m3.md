@@ -38,9 +38,9 @@ SEC/GAO/IRS来源只支持文本中确切内容，站点其他第三方内容或
 | FI-04 | [SAP 2021 FI 总账迁移对象](fi04-gl-2021-evidence-m3.md)在限定 Direct Transfer 情景说明选定公司代码推导科目表、两类视图及 FS00 的 Display/Change；经独立复核。SEC1 与 S21 另提供各自有限背景。 | 日常组织基数、公司代码/报表边界、主数据字段及过账、FS00 实际权限仍需核验，迁移情景不可普遍推广。 |
 | FI-05 | S21 §3.6.1.8描述特定 Manage Journal Entries 应用中的凭证分析与冲销功能。 | 复式会计分录、各单据冲销条件、期间与GUI事务仍缺直接依据；不得凭已暂停教材补足。 |
 | FI-06 | SEC2第2页说明应收/应付的基本含义；S21 Finance相关条目列出特定客户和供应商项目应用。 | SAP 2021发票、过账、部分支付、付款清账及税币条件仍缺可读专题；美国教育资料不是中国准则。 |
-| FI-07 | [SAP 2021 初版 FI-07 直接证据补查](finance-fi07-direct-2021.md)：MAP 数量/价差特例及 GR/IR 页面歧义；固定 2021 Account Determination 由 Work/独立上下文复读。另有 SAP Learning 一般性科目确定、收货和关账课程的独立复读（未锁定 2021）。Learning 课程间的发票方向冲突仅发生在 Describing Automatic Account Determination 与 Managing Closing Activities；Managing Goods Movements 只明确限定收货方向。YCOA 2025-FPS1 仅作邻近对照。 | 通用课程不能裁决固定版；2021 普通库存借贷前提、税、发票、自动科目/OBYC映射及完整配置仍缺。下一步：继续寻找目标版前提清晰、分录方向明确的普通库存采购证据。判定：未闭合。 |
-| FI-08 | S21 §3.6.1.24–25支持2021余额结转状态及特定作业；IRS1 Introduction仅提供美国税务语境下会计期间/方法线索。 | 完整月结/年结和国内制度需2021专题及适用地区证据；无实机操作。 |
-| FI-09 | S21 §3.6.1.15列特定GR/IR清账入口及显示/模拟/更新模式。 | 不可把整个程序称作只读；完整GUI与Fiori索引逐项版本、输入输出、权限及影响尚缺。 |
+| FI-07 | [SAP 2021 初版 FI-07 直接证据补查](finance-fi07-direct-2021.md)：含 MAP 数量/价差特例、局部地区收货例、GR/IR 页面歧义，以及固定版 GR/IR 未清项匹配/清账条件；固定 2021 Account Determination 由 Work/独立上下文复读。SAP Learning 科目确定、收货和关账课程未锁定 2021，课程间发票方向有冲突。2026-11-27 建立[证据受限草稿](../knowledge/FI/02-functions/inventory-valuation-grir.md)及[Work 角色视角记录](../reviews/work/2026-11-27-m4-workline-4-fi07-review.md)。 | 普通库存采购借贷前提、税务、一般发票处理及自动科目/OBYC 映射仍未闭合；局部案例不得外推为通用分录。文章 drafting；Work 同上下文角色模拟不构成独立审查，未做 SAP 实机测试。 |
+| FI-08 | S21 §3.6.1.24–25支持固定 2021 版余额结转状态应用及特定作业：各账户余额（所有币种）结转到新财年；可用 Schedule General Ledger Jobs 安排 Balance Carryforward application job，或按文档所述使用 `FAGLGVTR` 与后台作业；状态应用可显示状态、运行时间等。条目标注 J58、FI-GL、Valid as Of S/4HANA 2021、Functional Localization: Not applicable。2026-11-27 建立[证据受限草稿](../knowledge/FI/02-functions/period-close-reporting.md)及[Work 角色视角记录](../reviews/work/2026-11-27-m4-workline-4-fi08-review.md)。IRS1 仅属美国税务语境，不用于中国规则。 | 完整月结/年结、期间启闭、模拟/过账、地区制度与报表流程需 2021 专题及适用地区证据；目标系统可用性/权限及作业行为未核，无实机操作。文章 drafting；同上下文角色模拟不是独立审查。 |
+| FI-09 | S21 §3.6.1.15 直接支持一个 2021 GR/IR 专用条目：`FGRIR_CLEARING`，含菜单路径、分组未清项显示/模拟/真实更新三种模式，以及 Extended Open Item Management 条件下须用该程序的说明。2026-11-27 建立[单项证据受限草稿](../knowledge/FI/03-tcodes/finance-transactions.md)及[Work 角色视角记录](../reviews/work/2026-11-27-m4-workline-4-fi09-review.md)。 | 完整 FI GUI/Fiori 索引、每项版本、输入输出、显示/更新影响、角色权限及目标系统可用性仍须逐项核对；不把整个程序称作只读，无客户系统操作。文章 drafting；同上下文角色模拟不是独立审查。 |
 | FI-10 | S21 §3.6.1.16限特定GR/IR扩展未清项字段及启用条件；[SAP《What's New in SAP S/4HANA 2021》](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.000/en-US/WN_OP2021_EN.pdf) §3.6.1.3（印刷页133–134）说明 Automatic Account Determination app 用于配置 G/L account assignments；范围为 J58、FI-FIO-GL-CA、Available As Of S/4HANA 2021。表中列出 BUL（Ledger-Specific CoCode Clearing）和 BUU（CoCode Clearing Between Differing Amts）新 transaction keys，限 Prepare Intercompany Transactions；另列 `*` 通配符可用于 Integrate with HR Postings 的客户/供应商账号输入。 | 应用公告不是完整配置指南：科目表、账户映射、设置路径、角色/权限及只读入口仍需逐项核验；FI app 变化不能推及 MM OBYC/BSX/WRX。未授权不做系统更改。 |
 | FI-11 | SI21 §8.1支持转换中的FI/CO数据模型/兼容视图背景；S21 §3.6.1.26仅讨论特定成本汇总中的ACDOCA/ACDOCD。 | BKPF/ACDOCA主键、字段、基数、发布API和权限尚需逐字段文档或有权系统确认。 |
 
@@ -79,3 +79,124 @@ SEC/GAO/IRS来源只支持文本中确切内容，站点其他第三方内容或
 `/root/audit_design_review` 独立抽查 PR #20 原财务台账（blob `1d1b34a90a111df3c6a76665910000427e709dd7`）及相关规划：26 个 ID 无重复。审查者指出 SEC1 相关位置还应列出现金流量表，以及 GAO1 第3–4节的位置应为印刷页19–20而非18–19。协调者依据意见修正本台账，原审查上下文重新读取修改后本地文件确认这两处修正。SEC、GAO、IRS 仅在原记录注明的美国背景和具体范围内使用；审查者未能独立读取大型 SAP 2021 PDF，因此不能将 SAP 具体段落记成其独立验证。其他来源、主张与全部文章并未被本次抽样证明。
 
 本台账的原作者另做 [FI/CO 来源补查](finance-source-recheck-20261125.md)，该报告不是独立验收；其中中国财政部2014历史大纲及2016修订通知只作为研究线索，不是当前规则或 SAP 2021 证据，复用范围待确认。
+
+
+## M4 FI-11 证据复核（2026-11-27）
+
+本次只复核 FI-11 所需资料，没有加载其他 CO 文章的完整研究材料。
+
+| 来源 | 本次读取与支持范围 | 不能据此断言 |
+| --- | --- | --- |
+| S1. [SAP Simplification List for SAP S/4HANA 2021](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=200)，Initial Shipment、FPS1/2，§8.1，印刷页 200–201 | 2021 转换语境下 Universal Journal 的报告背景；部分总额/索引表变化；某些 compatibility view 的读取与写入说明。 | BKPF/ACDOCA/BSEG 完整字段、主键、基数、released API、权限；所有 FI/CO 数据都在一个物理表。 |
+| S2. [What's New in SAP S/4HANA 2021](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b8102751e57e4de2ad50ec07253127e0.html?version=2021.000)，§3.6.1.26 | 特定 deferred summarization 场景中，明细移至 ACDOCD、汇总后明细留在 ACDOCA。 | 通用 ACDOCA 粒度、主键或跨模块关系。 |
+| S3. [SAP Help：Journal Entry Item Cube](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/ee6ff9b281d8448f96b4fe6c89f2bdc8/0ee5e95760521070e10000000a44147b.html) | 当前页面描述 CDS view 的 ACDOCA 数据来源及部分授权前提；只作待查线索。 | 未锁定 2021 On-Premise，不计为目标版依据。 |
+
+复核结果：FI-11 仍为“暂缓核心”。固定版资料不足以支撑逐字段表、主键/基数、released CDS/API 与授权说明。文章只保留高层概念与边界，状态 drafting。SAP 系统未连接，无实机验证。
+
+## M4 CO-01 证据复核（2026-11-27）
+
+本次只处理 CO-01《管理会计从零：成本与利润》，不预载 CO-02～CO-08 的完整研究材料。M3 原 CO-01 行仍是当时的证据快照；以下目标版来源补充其 FI/CO 视角及集成证据，不改写其他 CO 项状态。
+
+| 来源 | 本次读取与支持范围 | 不能据此断言 |
+| --- | --- | --- |
+| E1. [SAP S/4HANA 2021 Feature Scope Description](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)，文档版本9.0（2025-07-23，适用于2021 SP08），§2.5.1.1.1，印刷页23–24；§2.5.2.1.1，印刷页27–28 | General Ledger财务会计用途；Overhead Cost Accounting按成本中心捕捉成本、以activity types描述成本中心产出、统计关键指标可作期末分摊基础；按选定期间报告成本中心等对象的actual与plan；Universal Journal相关报告范围及内外部核算协调。 | 客户实际配置、强制成本中心分配、计划自动生成、具体分摊算法、所有CO活动统一过账、利润分析方案、表/字段/API/CDS、权限或系统验证。 |
+| E2. [Simplification List for SAP S/4HANA 2021](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=200)，Initial Shipment、FPS1/2，§8.1，印刷页200–201 | 转换背景下Universal Journal报告数据模型及内外部报告共同document store的高层说明；列出总账、资产会计、Controlling等不同业务活动。 | 把早期转换材料泛化到所有后续2021 SP，或推出每个业务步骤、过账、技术对象和授权完全相同。 |
+
+**CO-01 证据判断：**资料直接支持限缩入门目标：区分FI/CO所问问题、解释成本中心actual/plan报告及报告数据联系。尚未闭合成本对象分配前提、计划维护、统计指标具体分摊规则、内部订单与结算、利润分析定义/配置、底层表字段/API及用户权限。文章对此不作通用断言。SAP系统未连接，无实机验证。
+
+## M4 CO-02｜成本中心与成本要素
+日期：2026-11-27（Asia/Shanghai）
+
+- **M3 准入与路径：**“暂缓核心”；ideas/CareerOS/knowledge/CO/02-functions/cost-center-elements.md。本次只建立有证据边界的入门草稿，没有声称关闭核心门槛。
+- **E1：**[SAP S/4HANA 2021 Feature Scope Description](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)，v9.0，2025-07-23，标记适用于 SP08；§2.5.1.1.1，印刷页 23–24。直接支持按成本中心捕捉成本、成本中心产出与 activity types 相关，以及按选定期间查看 actual/plan。链接为 latest，记录的是实际读取版本快照。
+- **E2：**[Migration Objects for SAP S/4HANA 2021](https://help.sap.com/doc/69dd0f1ef0034261ab6e617e0b2beb21/2021.000/en-US/MigrationObjects_OP_EN.pdf)，固定版 2021.000 On-Premise；§1.35，印刷页 153–154：成本中心定义及迁移范围；成本中心属于 controlling area，定义依据可涉及功能、分配标准、地点、成本责任；迁移对象范围含 company-code data 与 validity，且迁移范围内按 company codes 推导 controlling areas。以上只按迁移对象语境支持，不是一般配置规则。
+- **E3：**[Central Finance 2021 On-Premise Implementation Guide](https://help.sap.com/doc/a9616f4a29354fc297c58499b754e3f8/2021.001/en-US/loio4857c0540cf5ef05e10000000a4450e5.pdf)，固定版 2021.001；§1.4.1.1，印刷页 15。Central Finance source/target mapping 说明 S/4HANA 目标模型中的成本要素属于 G/L account/chart-of-accounts 关系；并比较两者时间依赖背景。限定为 Central Finance 映射/初始加载语境，不推广为所有流程的字段、分类和配置规格。
+- **已支持的学习主张：**成本中心是组织责任／成本发生观察维度；成本要素的 S/4HANA 账户关系可在 E3 指定映射语境内说明；2021 功能范围支持成本中心实际/计划报告。
+- **仍缺直接证据：**成本中心字段级有效期和更改规则、公司代码与 controlling area 一般配置约束、成本要素类别与规则、日常费用分配和自动派生、完整 FI/CO 凭证行为、数据字段/键/API/CDS/权限。
+- Migration Objects 中的 secondary cost element 与 G/L/primary cost element 条目是源 ERP 到 S/4 的迁移对象说明，不据其名称推断目标 S/4 使用独立旧式 master data。
+- 不涉及普通库存采购完整借贷、税务和自动科目决定（FI-07 仍开放）。SAP 未连接，未做实机验证。
+- 审查记录：[CO-02 三角色视角闭环](../reviews/work/2026-11-27-m4-co02-three-role-review.md)。各角色 5 个同上下文模拟闭环；不是独立审查，不计正式 reviewed。
+
+
+## M4 FI-10 来源复核与文章状态（2026-11-27）
+
+本次对 FI-10 做目标文章级核对；本节为 M4 补记，不改写上表 M3 计划快照。
+
+| 资料 | 直接支持的主张 | 不支持的推论 |
+| --- | --- | --- |
+| [SAP《What's New in SAP S/4HANA 2021》§3.6.1.3](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.000/en-US/WN_OP2021_EN.pdf)，印刷页 133–134 | Automatic Account Determination app 可配置 G/L account assignments；条目标 J58、FI-FIO-GL-CA、Available As Of S/4HANA 2021。BUL/BUU 两个新增 transaction keys 限 Prepare Intercompany Transactions；星号通配符仅在 Integrate with HR Postings 输入 customer/supplier account 的说明中出现。 | 完整映射、全部过账规则、通用 IMG 路径、只读模式、角色授权和客户系统可用性。不得外推到 MM 的 OBYC/BSX/WRX。 |
+| [SAP Help Portal，Open Item Management in the Manage G/L Account Master Data App，固定版本 2021.000](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/95c14c3ac4884b8ba46b7da9738fd391.html?locale=en-US&state=PRODUCTION&version=2021.000)，§3.6.1.16 | Extended Open Item Management 字段表示相关 GR/IR 总账科目是否启用该功能；文档也指向相关 SAP GUI 事务 Display G/L Account Centrally（FS00），并说相应功能启用后该字段为 display only。XLGCLR 对应的是另一个 Open Item Management by Ledger Group 字段。 | 具体账号的角色授权、客户系统是否启用、全页面只读属性、该扩展字段的表/键/API 或启用步骤。本文不提供也不建议执行启用步骤。 |
+
+已建立[证据受限草稿](../knowledge/FI/04-configuration/finance-config-observation.md)和[Work/独立 AI 角色视角记录](../reviews/work/2026-11-27-m4-workline-4-fi10-review.md)。初稿阶段有 15 个同上下文模拟闭环；随后普通学习者、配置顾问、开发者三个独立 AI 子代理上下文各完成 5 个问题—证据答复—修订—原角色复验循环，共 15 个独立上下文闭环。不是真人专家签核，模型 ID 未显示。尽管复核问题均闭合，核心配置证据仍未闭合，FI-10 继续 `drafting`，不计 formal reviewed。
+
+补证尝试：SAP Help 的 Manage Posting Periods 页面未能通过本次工具打开固定 `version=2021.000` 页面；可见的未锁版页面不作为 S/4HANA 2021 直接证据。公司代码、科目表、期间、收付款配置、完整账户映射、配置路径和只读/写入授权仍是开放项。SAP 系统未连接，无实机验证。
+
+### M4 Workline 5｜CO-03 内部订单（2026-11-27）
+
+- [文章](../knowledge/CO/02-functions/internal-orders.md) 与 [三角色视角记录](../reviews/work/2026-11-27-m4-co03-three-role-review.md) 已建立。记录来自同一 Work 上下文的读者、配置顾问、开发者视角模拟各 5 轮；不代表独立审核者，不计入 8/50 reviewed。文章状态仍为 drafting。
+- SAP S/4HANA 2021 FSD v9.0 / SP08 §2.5.1.1.1（印刷页23–24）支持 internal orders 属于成本核算主数据、按选定期间报告计划/实际；latest URL 的版本快照不外推至全部 2021 FPS。
+- SAP S/4HANA 2021.002 Migration Objects §1.40（印刷页172–174）在迁移对象语境定义内部订单的监控成本用途；不将迁移规则或授权扩为日常业务事实。
+- SAP Learning 的真实/统计订单与结算课程未标发行版，仅用于概念说明和检索线索；不作为 2021 通用规则。2021.001 Central Finance §1.4.7.2 只支持其中央结算状态检查场景。
+- 未闭合：普通 2021 订单类型/真实统计处理、成本归集细则、预算检查触发、结算配置和接收方、权限、表/字段/API/CDS；没有 SAP 系统或客户配置验证。未推导 FI-07 普通库存借贷、税或自动科目。
+
+## M4 CO-04 证据范围与草稿记录（2026-11-27）
+
+- [文章](../knowledge/CO/02-functions/product-cost-variance-settlement.md)：状态 drafting。按 M3“暂缓核心”建立受限草稿，不声称完整制造成本流程已证实。
+- **E1**：[SAP S/4HANA 2021 FSD](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)，本次读到 v9.0（2025-07-23）/ SP08 快照，latest URL 动态。§2.6.1.1.2（印刷页28–29）支持不同制造方式关注销售订单、生产/流程订单或期间成本；§2.8.4.1（页75）描述生产订单实际成本可结算到一个或多个接收成本对象；§2.8.4.3（页79–82）支持重复制造按期间由产品成本收集器收集成本及偏差汇总；§2.8.4.4（页83–85）是特定 Kanban 场景的实际成本更新及期间 WIP/差异/结算功能。仅作 FSD 所列范围，不外推到每种制造方式、客户配置或 2021 全部 FPS。
+- **E2**：[Deferred Summarization of Production Costs](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b8102751e57e4de2ad50ec07253127e0.html?version=2021.000)，固定 S/4HANA 2021.000 条目 §3.6.1.26，印刷页159：特定延期汇总功能说明 journal entry details 从 ACDOCA 移到 ACDOCD、汇总细节保留于 ACDOCA。它不是 WIP/variance 算法或完整 CO 数据模型证明。
+- 读者、配置顾问、开发人员各 5 个同一 Work 上下文的模拟闭环；见 [CO-04 视角记录](../reviews/work/2026-11-27-m4-co04-three-role-review.md)。无独立复核，不计 reviewed；无 SAP 实机测试。
+- 未闭合：常规制造订单的 WIP/variance 公式、订单状态触发和结算规则/接收方、估价和 FI 分录条件、权限、T-Code、数据字段/键/API/CDS。未据此推出 FI-07 普通采购库存借贷、税或自动科目。
+## M4 CO-05 证据补查与草稿状态（2026-11-27）
+
+本次只处理 CO-05《获利分析与 FI 集成》，未预载后续 CO-06～CO-08 的完整研究资料。文章：`knowledge/CO/02-functions/profitability-fi.md`；三角色视角记录：`reviews/work/2026-11-27-m4-co05-three-role-review.md`。按 M3“限缩可写”路径建立 drafting 草稿。
+
+| 来源 | 本次直接支持的范围 | 不能据此断言 |
+| --- | --- | --- |
+| E1. [SAP S/4HANA 2021 Feature Scope Description（On-Premise）](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)，直接打开的 latest 文档版本11.0（2026-07-22，SP10）。§2.6.1.1.3（印刷页29–30）、§2.6.1.1.4（页30）、§2.6.2.1.1（页31–32）、§2.6.2.1.3（页34–35）、§2.6.4.2.1（页46–47）。搜索索引也返回过旧 v9.0/SP08 快照；URL 动态，版本范围需明确。 | v11.0/SP10 直接支持市场细分（产品、产品组、客户、客户组、销售组织）、收入/销售成本、成本中心间接费用的定期分配；预测会计早于实际财务日记账；Revenue Accounting and Reporting 的合同/履约义务/履约事件；特定项目 Event-Based Revenue Recognition；应收销售/物流触发、总账同步及来款清账。 | 所有销售的统一收入确认时点、客户系统 FPS、完整销售单据链、客户合同/配置、成本估值/贡献毛利通用公式、市场属性派生和分配算法。 |
+| E2. [Simplification List for SAP S/4HANA 2021，Initial Shipment、FPS 1 & 2](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf)，v1.25（2022-05-25）；§8.1（印刷页200–201）、§12.13（页307–308）。 | 稳定的 S/4HANA On-Premise 2021 初始版/FPS1/2 文件：统一文档存储的转换语境；Margin Analysis 与 costing-based CO-PA 区别；在 §12.13 的 Margin Analysis 语境中，收入开票时点、COGS 交货时点、延迟开票时成本先显示的可能性；收入和销售扣减条件映射到账户并生成 FI 过账的范围。 | 不代表后续 FPS/客户设置；不等于所有合同的收入会计政策，也不支持未列配置的 price condition、估值、完整 COGS 科目规则。 |
+| E3. [What’s New in SAP S/4HANA 2021](https://help.sap.com/doc/4eefc5f2d826408f91a999687d31780f/2021/en-US/WN_OP2021__EN.pdf)，§3.5.6.4，印刷页122。 | Margin Analysis 术语以及 account-based / ACDOCA 窄范围描述。 | 客户启用状态、CO-PA 全部持久化方式、字段/主键/API/权限。 |
+| E4. [New App “Manage COGS Splits”](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/f2bb8fe1f6c046a7a00797ddc02149f6.html?locale=en-US&state=PRODUCTION&version=2021.000)，固定版2021.000。 | 一个需相应 Customizing 的 COGS 成本组件拆分场景及其分析应用。 | 普通采购库存完整借贷、税、自动科目或所有客户销售的统一规则。 |
+
+CO-05 文章将收入确认、获利分析和应收收款/清账分别解释；用 F2 的开票/交货时点限缩说明 Margin Analysis，再与 FSD 中 Revenue Accounting and Reporting 和 Event-Based Revenue Recognition 的适用范围分开。COGS split 被限定为 S/4HANA 2021.000 的特定可配置功能，未推导 FI-07 普通库存分录。普通销售其他确认场景、客户估值/属性配置、字段/API/权限仍未闭合。
+
+普通读者、配置顾问、开发人员各 5 个同一 Work 上下文角色视角模拟闭环，共 15；不是独立评审，不计 8/50 reviewed。SAP 系统未连接，无实机、凭证、配置或权限测试。状态保持 drafting。
+
+## M4 CO-06 证据补查与受限导航稿（2026-11-27）
+
+本次只处理 CO-06《CO 常用入口导航》，未预载 CO-07/CO-08 的完整研究材料。文章：`../knowledge/CO/03-tcodes/controlling-transactions.md`；角色视角记录：`../reviews/work/2026-11-27-m4-co06-three-role-review.md`。按 M3“暂缓核心”准入建立受限 drafting 草稿。
+
+| 来源 | 实际核对及可支持范围 | 不能据此断言 |
+| --- | --- | --- |
+| E1. [What's New in SAP S/4HANA 2021 (Oct 2021)](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.000/en-US/WN_OP2021_EN.pdf)，§3.5.1.2、§3.5.1.4–3.5.1.8、§3.5.4.1、§3.5.5.1–3.5.5.2、§3.5.6.1。 | 固定 S/4HANA 2021 文档点名 Manage Cost Center Budgets、Manage Internal Orders (Version 2)、Where-Used List – Internal Orders、Change Log – Internal Orders、Commitments by Cost Center – Classic Commitment Management、Manage Cost Element Groups、Display Material Value Chain – Actual/Estimated Costs、Manage COGS Splits 等应用，并给出各自具体功能和部分前提。 | 不是完整 GUI T-Code/Fiori 目录；未逐项给出应用 ID、business catalog、business role、权限或客户系统部署情况；scope item 不等于已启用。 |
+| E2. [Change Log – Internal Orders](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/00ec2c96762d4587b976248bf2f4f12c.html?version=2021.000)，固定版 2021.000。 | 查看内部订单主数据变更内容、用户与时间。 | 不证明保留期限、字段全集、导出、角色授权或客户可用性。 |
+| E3. [Manage Cost Element Groups](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/daad5c6c4d764c2baa25b93a9fab7d82.html?locale=en-US&version=2021.000)，固定版 2021.000。 | 创建、编辑及显示成本要素组。 | 不证明只读访问、一般成本要素配置规则、输入输出或交易权限。 |
+| E4. [Display Material Value Chain – Actual Costs](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/18ddb677b64e455c945f4c4de9168e9e.html?locale=en-US&version=2021.000)，固定版 2021.000；与 E1 §3.5.5.1 对照。 | 特定产品成本分析 app 的名称/有限功能，包括利润中心显示选择及特定节点/边线成本组件拆分说明。 | 不证明所有产品成本、WIP、差异和结算应用，也不证明全部 Fiori role 或现场可用性。 |
+| E5. [Manage COGS Splits](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/f2bb8fe1f6c046a7a00797ddc02149f6.html?locale=en-US&state=PRODUCTION&version=2021.000)，固定版 2021.000；与 E1 §3.5.6.1 对照。 | J55 Margin Analysis 中用于分析已产生 COGS split postings 的特定应用范围。 | 不替代一般利润分析报表、普通销售/库存会计规则、FI-07 借贷/税/自动科目证据。 |
+
+本轮检索到的 SAP Help 动态产品援助页和其他版本入口没有用来补全目标版 T-Code。对 KSB1、KOB1、KE30 等常见候选，没有找到满足本篇门槛的固定 2021 原厂逐项映射，所以正文没有将其列为目标版已核实代码。一般成本中心实际/计划报表、内部订单实际行项目、完整 Margin Analysis 报表的目标版入口、输入输出与用户权限仍缺直接证据。
+
+普通读者、配置顾问、开发者视角各 5 个同一 Work 上下文模拟闭环，共 15；无独立 reviewer/真人 SAP 专家，故不计正式 reviewed。SAP 系统未连接，无 app、T-Code、报表、权限或过账实机验证。
+
+
+## M4 CO-07 证据补查与受限配置观察稿（2026-11-27）
+
+本次只处理 CO-07《管理会计配置查看》，未预载 CO-08 研究材料。文章：`../knowledge/CO/04-configuration/controlling-config-observation.md`；角色视角记录：`../reviews/work/2026-11-27-m4-co07-three-role-review.md`。按 M3“暂缓核心”准入建立受限 drafting 草稿。
+
+| 来源 | 实际核对及可支持范围 | 不能据此断言 |
+| --- | --- | --- |
+| E1. [What's New in SAP S/4HANA 2021 (Oct 2021)](https://help.sap.com/doc/4eefc5f2d826408f91a999687d31780f/2021/en-US/WN_OP2021__EN.pdf)，§3.5.1.3 “Block Intercompany Postings”。 | 固定 2021 资料说明这是新的 CO-OM/Overhead Cost Controlling 配置活动（scope J54）；可允许全部、阻止全部，或仅允许指定 sender/receiver company code 组合的 CO intercompany postings；给出 Controlling → Cost Center Accounting → Actual Postings → Intercompany Postings → Block Intercompany Postings 路径。 | 默认值、优先级、底层表/字段/API、T-Code、只读模式、用户角色/权限、客户实际设置、传输与运行日志均未给出。也不支持 FI intercompany posting、普通成本分摊/结算、税务或任何 FI 分录推论。 |
+
+其余成本中心、成本要素、内部订单、结算规则、分配周期和只读 IMG/权限入口没有逐项目标版来源，本篇未补写路径。普通读者、配置顾问、开发人员视角各 5 个同一 Work 上下文模拟闭环，共 15；无独立 reviewer/真人专家，故不计正式 reviewed。未连接 SAP、未实机查看或修改配置、未传输或运行过账。
+
+
+## M4 CO-08 证据补查与受限数据模型稿（2026-11-27）
+
+本次只处理 CO-08《管理会计数据模型》，未读取其他文章的完整研究材料。文章：`../knowledge/CO/05-data-model/controlling-data-model.md`；角色视角记录：`../reviews/work/2026-11-27-m4-co08-three-role-review.md`。按 M3“暂缓核心”准入建立受限 drafting 草稿。
+
+| 来源 | 直接支持范围 | 版本/边界与未支持项 |
+| --- | --- | --- |
+| E1. [Simplification List for SAP S/4HANA 2021 – Initial Shipment, FPS 1 & 2](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf)，v1.25，§8.1，印刷页200–201。 | 统一日记账改变财务报告交易数据存储方式；报告可从同一 document store 读取并以 account 为统一元素。该节也描述特定 Simple Finance/早期 S/4HANA 转换背景中的 totals/application-index compatibility views，并说明 SELECT 兼容与写访问限制。 | 此为报告/转换背景，不是完整 2021 CO 对象 schema。早期转换示例不证明每个 2021 FPS 的运行时物理表。未提供本文所需 CO 字段、主键、基数、对象关系或 API。 |
+| E2. [What's New in SAP S/4HANA 2021](https://help.sap.com/doc/4eefc5f2d826408f91a999687d31780f/2021/en-US/WN_OP2021__EN.pdf)，§3.5.6.4，印刷页122。 | Margin Analysis 是 account-based profitability analysis；相关 values 和 characteristics posted to accounts in ACDOCA。 | 限于 Margin Analysis 方案，不扩展到 costing-based CO-PA、所有 CO 对象或客户启用状态。 |
+| E3. [Deferred Summarization of Production Costs](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/b8102751e57e4de2ad50ec07253127e0.html?version=2021.000)，固定版 2021.000。 | 特定 deferred summarization 功能把详细 journal-entry 信息移动到 ACDOCD，汇总信息保留在 ACDOCA；属于异常大数据量下的特殊功能，并有报告粒度限制。 | 不代表普通生产成本数据流或一般 CO persistence，不提供 ACDOCA/ACDOCD 关系键、对象基数、完整字段或客户数据。 |
+
+缺口仍包括成本中心、内部订单、生产订单等 CO 对象字段/主键/组织范围及与日记账的基数关系；COSP/COSS/COEP 候选对象在目标 FPS 的物理/兼容视图状态；released CDS/API、调用方式和授权。正文未给出 SQL/JOIN 或普遍表映射。普通读者、配置顾问、开发者视角各 5 个同一 Work 上下文模拟闭环，共 15；没有独立 reviewer/真人专家，故不计正式 reviewed。未读取 DDIC、客户表数据、接口或权限。

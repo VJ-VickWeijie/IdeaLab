@@ -65,3 +65,10 @@
 ## 后续更新：FI-10 自动科目确定应用
 
 SAP《What's New in SAP S/4HANA 2021》§3.6.1.3（印刷页134）为 FI-10 增加目标版本直接证据：Automatic Account Determination app 用于配置 G/L account assignments；2021 新增内容位于 FI/J58、FI-FIO-GL-CA 范围，涉及 areas 和 transaction keys。该变化公告不列出完整配置步骤、账户映射、权限或只读角色，且不涉及 MM 的 OBYC/BSX/WRX。故仅将来源贴合度从未读摘要更新为“有限直接支持”，不关闭 FI-10 的配置证据缺口；本次不属于文章审核。
+
+
+## M4 FI-10 文章级核验（2026-11-27）
+
+本次直接阅读 SAP S/4HANA 2021 What's New §3.6.1.3 和固定版本 2021.000 Help Portal 页面《Open Item Management in the Manage G/L Account Master Data App》（§3.6.1.16）。它们将来源贴合度从“有限规划线索”推进到“有限直接支持”：前者支持 Automatic Account Determination 应用用途及公告中的 BUL/BUU、HR Posting 通配符窄范围；后者支持特定 GR/IR 总账科目字段的说明、FS00 相关入口和字段 display-only 属性。它们不提供完整账户映射、完整配置步骤、期间/收付款设置或用户权限；XLGCLR 属于 Open Item Management by Ledger Group 字段，不能映射成 Extended Open Item Management 字段。
+
+本次曾尝试打开 Manage Posting Periods 的 `version=2021.000` 固定版页面，但当前读取工具返回不可访问；未锁版页面不计作目标版本证据。FI-10 正文只保留上述两个有限例子，状态 `drafting`。初稿有 15 个同上下文模拟循环；另有三个独立 AI 子代理上下文各完成 5 个问题—证据答复—修订—原角色复验闭环。该独立角色复核不等于真人专家或第二模型签核；模型 ID 未显示。因核心配置证据缺口未闭，文章仍为 `drafting`，不计 formal reviewed。未连接 SAP，未检查权限或配置。

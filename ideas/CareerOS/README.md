@@ -1,6 +1,28 @@
-# CareerOS｜项目总入口（2026-11-26 更新）
+# CareerOS｜项目总入口（2026-11-27 更新）
 
-> 跨 Work 窗口接手入口：[HANDOFF.md](HANDOFF.md)。CareerOS 项目级 M3 门禁调整已获所有者批准，三角色计划级收尾复核已通过；M3 阶段验收待所有者，M4 未授权。见[复核报告](reviews/work/2026-11-26-m3-gate-closeout-review.md)和[门禁调整记录](plans/m3-closeout-batched-m4-proposal-2026-11-26.md)。
+> 当前交接入口：[HANDOFF.md](HANDOFF.md)。截至本次审计基线 HEAD `41131a194e332c50d98183a092caf41f98105a74`：PR #21 开放、未合并；全库 Owner Accepted 3/99（FI-01～FI-03），Role Reviewed 8/50（FI-05、MM-01～MM-07），批次 A Draft 42/50、Owner Accepted 0/50，批次 B 尚未开始（0/46）。五条工作线逐篇状态和证据缺口见[实时对账审计](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。无同上下文模拟升级为 Role Reviewed，无所有者接受推定。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；“正式版/候选版本”标记差异见审计报告。
+
+## 当前进度（2026-11-27）
+
+| 工作线 | 当前文章 | 状态 |
+| --- | --- | --- |
+| 1 | MM-08～MM-10、SD-01～SD-05 | 8 篇 Draft |
+| 2 | SD-06～SD-07、PP-01～PP-06 | 8 篇 Draft |
+| 3 | PP-07～PP-09、QM-01～QM-05 | 8 篇 Draft |
+| 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 篇 Draft |
+| 5 | FI-11、CO-01～CO-08 | 9 篇 Draft |
+
+当前下一游标为 MM-08。每篇的 M3 准入、目标版证据、审查记录、具体缺口和建议状态见实时审计报告。批次 B 只能在批次 A 全部完成并获用户明确批准后开始；PR #21 不自行合并。
+
+## 历史进度日志（当时快照；以当前对账报告为准）
+
+- Workline 1：SD-01《销售业务与组织结构》已提交证据受限草稿及三角色审查记录；普通读者、配置顾问视角、开发者视角各 5 个原问题闭环，共 15/15 AI 问题—答复—修订—原角色复核。固定版组织配置和跨公司开票适用范围仍未闭合，文章保持 drafting，不计入 8/50 reviewed；批次 A 仍 0/50 owner accepted。下一篇 SD-02。详见 [SD-01 正文](knowledge/SD/01-foundations/organization.md)、[审查记录](reviews/work/2026-11-27-m4-sd01-three-role-review.md) 与 [HANDOFF](HANDOFF.md)。
+- Workline 1：SD-02《客户业务伙伴与物料主数据》已提交限缩草稿和三角色审查记录；普通读者、配置顾问视角、开发者视角各完成 5 个原问题闭环，共 15/15 AI 问题—答复—修订—原角色复核。BP grouping/编号、完整伙伴确定配置、物料销售视图/字段/API/权限仍未闭合，保持 drafting、不计入 8/50 reviewed；批次 A 仍为 0/50 owner accepted。下一篇 SD-03。详见 [SD-02 正文](knowledge/SD/01-foundations/customer-product-master.md)、[审查记录](reviews/work/2026-11-27-m4-sd02-three-role-review.md) 与 [HANDOFF](HANDOFF.md)。
+- Workline 1：SD-03《销售订单与交货机制》已提交受限 drafting 正文及三角色审查记录；reader_mm08、consultant_mm08、developer_mm08 三个 AI 角色视角各完成 5 个闭环，所有原问题均经原角色复核 PASS。FSD latest 当次记录为 S/4HANA 2021 SPS10 Version 11.0，动态来源和订单章节页码记录差异已披露；具体部分交货、订单/交货取消、PGI 冲销和权限仍未闭合，因此不计入 8/50 reviewed 或 owner accepted。未连接 SAP、未做系统测试。下一篇 SD-04。详见 [SD-03 正文](knowledge/SD/02-functions/sales-delivery.md)、[审查记录](reviews/work/2026-11-27-m4-sd03-three-role-review.md) 与 [HANDOFF](HANDOFF.md)。
+- Workline 1：SD-04《定价、开票与应收集成》已提交受限 drafting 正文及三角色审查记录；reader_mm08、consultant_mm08、developer_mm08 三个 AI 角色视角各完成 5 个闭环，原角色复核 15/15 PASS。FSD 来源限于动态 latest 当次记录的 S/4HANA 2021 SPS10 Version 11.0；读取日期、版本映射与动态链接边界已披露。条件定价、税、收入确认/FI 分录、实际 AR 关联、收款差异、银行资金和权限仍未闭合，因此不计入 8/50 reviewed 或 owner accepted；未连接 SAP、未测 API/权限。当时下一篇 SD-05，现已完成；当前下一项 MM-08。详见 [SD-04 正文](knowledge/SD/02-functions/pricing-billing-ar.md)、[审查记录](reviews/work/2026-11-27-m4-sd04-three-role-review.md) 与 [HANDOFF](HANDOFF.md)。
+- Workline 1：SD-05《SD 常用事务码导航》已提交证据受限正文与三角色审查记录；普通读者、配置顾问、开发者视角各完成 5 个首轮问题闭环，原角色复核 15/15 PASS。固定版证据只支持 GTS 合规状态与巴西账单页等限定场景，以及 Simplification List §49.8 的特定迁移说明；通用销售/交货/开票逐码用途、交货入口、GUI/Fiori、App ID、输入输出和权限仍未闭合，故保持 drafting，不计入 8/50 reviewed 或 owner accepted。未连接 SAP、未做系统/API/配置/权限测试。当时下一项 MM-08，现已完成当前 PR 候选复核；用户交接所述本地副本因执行环境不可用未读取，未当作已提交或已审核；当前下一项 MM-09。详见 [SD-05 正文](knowledge/SD/03-tcodes/transaction-index.md)、[审查记录](reviews/work/2026-11-27-m4-sd05-three-role-review.md) 与 [HANDOFF](HANDOFF.md)。
+- Workline 1：MM-08《MM 常用事务码导航》已将 PR 候选修订至提交 7eb37405554e293553985e434bd24cf0eb3449b9，并由原普通读者、资深配置顾问、普通开发人员视角各复核 5 个原问题，共 15/15 PASS；审查记录附录见 [MM-08 三角色审查记录](reviews/work/2026-11-27-m4-mm08-three-role-review.md)。新补入 2021 Best Practices《Administration Guide》§3.3.2 p.53 的嵌入式 EWM 范围定义，并如实标出 PDF 封面日期 2024-07-05。物料凭证显示入口、通用 MIGO 导航仍缺固定版直接证据，GUI/Fiori/App ID、输入输出与权限仍不完整，故保持 drafting、不计 8/50 reviewed 或 owner accepted。执行环境不可用，未读取用户交接所述未提交本地副本；本条只描述 PR 候选。未连接 SAP、未做实机/API/配置/权限测试。下一项 MM-09。详见 [MM-08 正文](knowledge/MM/03-tcodes/transaction-index.md) 与 [HANDOFF](HANDOFF.md)。
+- Workline 3：PP-07 已完成证据受限草稿与 15 个同一 Work 上下文内的角色模拟闭环（读者 5、配置顾问 5、开发者 5），仍为 drafting，不计入 8/50 reviewed。Routing、MRP、生产订单事务码的 S/4HANA 2021 On-Premise 直接来源和授权未闭合；下一篇为 PP-08。当前分支其他工作线进展见 [HANDOFF](HANDOFF.md)。
 
 ## 项目主旨
 利用工作日合规的碎片时间，建立**中文为主、保留英文术语**的 SAP 业务与技术知识网络，同时保留 24 个月职业成长课程。目标不只是记住 T-Code，而是理解企业为什么需要某个流程、完整业务/单据/物流/财务流、SAP 如何实现，以及跨模块关联；FI/CO 从零基础解释。长期发展方向是 SAP MM/QM + ABAP/S/4HANA 架构 + 企业 AI 集成。
@@ -11,7 +33,15 @@
 3. **系统学习课程**：沿用长期路线，提供推荐阅读和可选练习；不强制每天操作 SAP。
 4. **质量机制**：Work 负责写作、答辩和修订；普通用户、资深 SAP 配置顾问、普通 SAP 开发人员分别对每篇正式文章按需进行**5～10 个有效质询—答辩—修订—复核轮次**，三角色合计 15～30 轮，完整过程存入 GitHub。不得将同一模型的角色扮演冒充独立子代理。
 
-## 当前真实进度（2026-11-26）
+## 当前实际状态（2026-11-27）
+
+- M3 已由所有者验收；M4 完整 99 篇分两批建设已获授权。
+- FI-01～FI-03 已获所有者明确接受（3/99）。批次 A 另有 FI-05、MM-01～MM-07 共 8 篇 Role Reviewed，尚未获所有者接受。
+- 批次 A 42 篇为 Draft，逐篇对账见[审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)；所有文章按其现有证据边界保留状态。同上下文角色模拟、15/15 PASS、文章存在或阅读过均不等于正式 Role Reviewed。
+- 批次 B 46 篇尚未开始；须等待批次 A 完成及用户明确审批。
+- 核心固定版证据缺口继续按文章级边界处理。没有 SAP 实机、配置、数据库、API 或权限测试记录。
+- PR #21 保持开放，不合并。
+## M3 规划阶段状态（以下为 M3 验收前历史记录）（2026-11-26）
 - 所有者于 2026-11-26 明确批准 CareerOS 项目级 M3 门禁调整（不修改 AI-Workflow V1.1）；普通读者、资深 SAP 配置顾问、普通 SAP 开发人员的计划级收尾复核均已通过。M3 阶段验收仍待所有者，M4 仍未授权。详见 [M3 收尾复核报告](reviews/work/2026-11-26-m3-gate-closeout-review.md)与 [99 项分流](plans/m3-item-readiness-triage-v0.3.md)。
 - PR #19 的 V0.3 蓝图已合并；所有者已批准 M0、M1、M2、99 篇正式文章范围及 11 个纯结构导航分类。
 - 五项历史来源缺口仍按文章级边界处理，不阻止与其无关且证据充分的文章进入未来批次；M4 尚未授权。
@@ -41,7 +71,7 @@ Work 应先建立细粒度覆盖矩阵，按阶段门禁开展全范围内容建
 ---
 
 ## 原始项目记录（保留历史）
-# CareerOS｜长期职业竞争力成长计划
+# CareerOS｜项目总入口（2026-11-27 更新）
 
 ## 灵感卡
 - **一句话想法**｜在保留稳定工作与家庭陪伴的前提下，利用工作日合理空档，持续提升 SAP 技术、业务架构及 AI 应用能力，增强 35 岁以后职业选择权。
@@ -94,3 +124,52 @@ Work 应先建立细粒度覆盖矩阵，按阶段门禁开展全范围内容建
 - [初始职业背景与约束](notes/2026-11-23-baseline.md)
 - [初步学习与阶段规划](plans/roadmap-v0.1.md)
 
+
+
+## M4 工作线 5｜FI-11 进度（2026-11-27）
+
+- FI-11《财务凭证与总账数据模型》已按 M3 逐篇分流建立证据受限草稿，状态 `drafting`；同一上下文三角色视角各 5 个闭环，未声称独立复核。字段、键、基数、API 和权限证据仍缺。详见[工作线进度](plans/m4-two-batch-execution-2026-11-26.md)。
+
+## M4 工作线 5｜CO-01 进度（2026-11-27）
+
+- CO-01《管理会计从零：成本与利润》已完成限缩范围正文和来源补查，当前状态 drafting。普通读者、资深 SAP 配置顾问、普通 SAP 开发人员视角各5个闭环，共15；同一Work上下文模拟，没有独立复核，故不计正式reviewed。
+- 核心范围有 SAP S/4HANA 2021 目标版证据；配置、分摊/结算、字段/API、权限等仍明示为范围外。未连接 SAP，未做实机验证。
+- 下一项为 CO-02《成本中心与成本要素》；接手时按 M3 准入与来源登记逐项研究，未预载该篇完整研究材料。详见 [正文](knowledge/CO/01-foundations/cost-profit-basics.md)、[审查记录](reviews/work/2026-11-27-m4-co01-three-role-review.md) 和 [HANDOFF](HANDOFF.md)。
+
+### M4 工作线 5｜CO-02 进度（2026-11-27）
+
+CO-02《成本中心与成本要素》已建立证据受限草稿，保持 drafting；普通读者、资深 SAP 配置顾问、普通 SAP 开发人员视角各 5 个同上下文模拟闭环，共 15，不是独立审核，不计正式 reviewed。成本中心主数据有效期和组织设置、成本要素类别及日常分配/自动规则仍待 2021 目标版直接证据；Central Finance 的账户关系只按该映射语境引用。批次 A 仍为 8/50 reviewed、0/50 owner accepted，全库 owner accepted 为 3/99。详见 [文章](knowledge/CO/02-functions/cost-center-elements.md)、[审查记录](reviews/work/2026-11-27-m4-co02-three-role-review.md) 和 [证据登记](plans/evidence-finance-m3.md)。
+
+## 工作线 5 更新：CO-03（2026-11-27）
+
+- CO-03《内部订单和费用归集》已建立证据受限草稿：[正文](knowledge/CO/02-functions/internal-orders.md)、[三角色闭环记录](reviews/work/2026-11-27-m4-co03-three-role-review.md)、[证据台账](plans/evidence-finance-m3.md)。
+- 同一 Work 上下文角色模拟闭环：普通读者 5、资深 SAP 配置顾问 5、普通 SAP 开发人员 5；无独立复核，不计入批次 A 的 **8/50 reviewed**。批次 A 仍为 **0/50 owner accepted**；全库已接受 **3/99**。
+- 无 SAP 实机测试、客户配置/权限核验。普通订单真实/统计处理、预算控制和结算规则仍缺直接目标版证据；未推导 FI-07 普通库存借贷、税或自动科目。
+- 下一篇：CO-04。开始前仅读取该篇自身准入和证据登记。
+
+## 工作线 5 更新：CO-04（2026-11-27）
+
+- CO-04《产品成本、生产差异与结算》已建立 drafting 受限草稿：[文章](knowledge/CO/02-functions/product-cost-variance-settlement.md)、[角色视角闭环记录](reviews/work/2026-11-27-m4-co04-three-role-review.md)、[证据台账](plans/evidence-finance-m3.md)。
+- 角色视角模拟：普通读者 5、资深 SAP 配置顾问 5、普通 SAP 开发人员 5；均在同一 Work 上下文，不是独立复核，不计入批次 A 的 **8/50 reviewed**。批次 A 仍 **0/50 owner accepted**；全库 owner accepted **3/99**。
+- 2021 FSD v9.0/SP08 快照支持方法和对象范围概览、重复制造的期间成本收集、特定 Kanban WIP/差异能力及生产订单接收对象概览；普通生产订单公式、状态触发、结算规则/接收方仍缺直接来源。无 SAP 实机/权限验证，未推导 FI-07 通用采购库存借贷、税或自动科目。
+- 下一篇：CO-05；开始前仅读取其自身准入和证据登记。
+
+
+## Workline 5｜CO-05（2026-11-27）
+
+CO-05《获利分析与 FI 集成：收入、成本与收款分清》已建立证据受限 drafting 草稿。目标版 FSD latest 直接读取 v11.0/SP10，旧索引仍缓存 v9.0/SP08，文章披露动态来源边界；固定版 SAP 2021 Simplification List §12.13 仅支持 Initial Shipment/FPS1/2 的 Margin Analysis 开票/交货时点。普通读者、配置顾问、开发者视角各 5 个同上下文模拟闭环，共15，非独立审查，不计 8/50 reviewed。普通销售其他确认时点、客户估值/配置、完整成本拆分规则、技术模型/API/权限仍有缺口；无 SAP 实机验证。下一项 CO-06。批次 A 数字仍为 8/50 reviewed、0/50 owner accepted；正式接受 3/99。
+
+
+### M4 Workline 5｜CO-06（2026-11-27）
+
+CO-06《CO 常用入口导航》已建立受限 drafting 草稿，依据固定 SAP S/4HANA 2021 What's New 与 2021.000 Help，仅记录有目标版文档支持的少数 app 功能。常用 GUI T-Code、成本中心/订单/一般获利分析报表映射、app ID、部署及权限仍未闭合；不把 KSB1/KOB1/KE30 写成已核实。普通读者、配置顾问、开发人员视角各 5 个同 Work 上下文模拟闭环，共 15；不是独立审查、不计 reviewed。无 SAP 实机验证。下一项 CO-07。批次 A 仍 8/50 reviewed、0/50 owner accepted；正式接受 3/99。详见 `knowledge/CO/03-tcodes/controlling-transactions.md`、`reviews/work/2026-11-27-m4-co06-three-role-review.md` 与 `plans/evidence-finance-m3.md`。
+
+
+### M4 Workline 5｜CO-07（2026-11-27）
+
+CO-07《管理会计配置查看》按“暂缓核心”准入建立受限 drafting 草稿。固定 SAP S/4HANA 2021 What's New §3.5.1.3 仅支持 Block Intercompany Postings 一项 CO-OM 配置、其允许/阻止范围及 IMG 路径；未补写其它配置、只读路径、T-Code、角色权限或客户设置。三角色各 5 个同上下文模拟闭环，共 15；非独立审查、不计 reviewed。未连接 SAP、未改配置。下一项 CO-08。批次 A 仍 8/50 reviewed、0/50 owner accepted；正式接受 3/99。详见 `knowledge/CO/04-configuration/controlling-config-observation.md`、`reviews/work/2026-11-27-m4-co07-three-role-review.md` 与 `plans/evidence-finance-m3.md`。
+
+
+### M4 Workline 5｜CO-08（2026-11-27）
+
+CO-08《管理会计数据模型》按“暂缓核心”准入建立受限 drafting 草稿。固定版资料支持统一报告存储的转换背景、Margin Analysis 与 ACDOCA 的特定关联，以及 deferred summarization 下 ACDOCA/ACDOCD 的特殊生产成本案例；不支持 CO 对象字段、键、基数、一般持久化、API/权限或客户表结构。三角色各 5 个同上下文模拟闭环，共 15；非独立审查、不计 reviewed。未连接 SAP，未查 DDIC/数据库/API。工作线 5 所分配文章已完成推进（全部草稿待独立角色审查/所有者验收）；批次 A 仍 8/50 reviewed、0/50 owner accepted，正式接受 3/99。详见 `knowledge/CO/05-data-model/controlling-data-model.md`、`reviews/work/2026-11-27-m4-co08-three-role-review.md` 和 `plans/evidence-finance-m3.md`。
