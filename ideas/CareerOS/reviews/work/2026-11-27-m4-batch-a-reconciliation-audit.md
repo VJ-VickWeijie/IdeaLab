@@ -18,7 +18,7 @@
 | 批次 B 未开始 | 0/46 已启动 | PROCESS-01～12、ABAP-01～09、S4HANA-01～09、AI-Integration-01～08、COMMON-01、COURSE-01～07 |
 | **合计** | **99** | 3 accepted + 9 reviewed + 41 Draft + 46 not started |
 
-批次 A 现有 **9 Role Reviewed、41 Draft、0 Owner Accepted**；PP-01、PP-09、QM-01、QM-02 经独立 AI reviewer-context 复核后仍为 Draft，计数不变。PP-09 的一般物理键、关系基数、目标系统元数据与权限未闭合；QM-01 的质量组织/岗位映射、检验批创建触发、设置和权限未闭合。SD-01 仍是本轮唯一新增 Role Reviewed。全库 Owner Accepted 仍 3/99；批次 B 46 篇未开始，须等批次 A 完成并经用户明确批准。
+批次 A 现有 **9 Role Reviewed、41 Draft、0 Owner Accepted**；PP-01、PP-09、QM-01～QM-03 经独立 AI reviewer-context 复核后仍为 Draft，计数不变。PP-09 的一般物理键、关系基数、目标系统元数据与权限未闭合；QM-01 的质量组织/岗位映射、检验批创建触发、设置和权限未闭合；QM-03 的计划/工序/特性结构、计划选择/有效性、抽样与无计划规则未闭合。SD-01 仍是本轮唯一新增 Role Reviewed。全库 Owner Accepted 仍 3/99；批次 B 46 篇未开始，须等批次 A 完成并经用户明确批准。
 
 ## 五条工作线逐篇状态
 
@@ -57,7 +57,7 @@ M3 准入取自 [逐篇准入与证据分流](../../plans/m3-item-readiness-tria
 | PP-09 | [PP-09 正文](../../knowledge/PP/05-data-model/production.md) | 限缩可写 | 固定 2021 资料仅支持简化 sourcing 的部分业务引用、特定 EHS 选择条件对象名和 MATDOC 兼容读取；SDK 记录支持特定确认 VDM entity 的五键。一般物理键/外键、关联基数、MATDOC 与订单关联、运行时 API 元数据/发布/权限未闭合；2025 FPS01 搜索结果未用作 2021 证据。M3 矩阵无 PP-09 行；S4HANA-09 不替代。 | [评审记录](2026-11-27-m4-workline-3-pp09-review.md)：旧 15 轮为同一 Work 模拟；读者、配置顾问、开发者独立 AI reviewer-context 对最终 blob 各 5 项复核（15/15 边界 PASS），未要求正文修改。依赖摘要已修正。 | **Draft**；独立复核确认边界表达，但核心数据模型目标未闭合，不计 Role Reviewed 或 Owner Accepted。下一步寻找固定版官方 DDIC/CDS/API 元数据及关联键；无合适证据时保留阻塞。 |
 | QM-01 | [QM-01 正文](../../knowledge/QM/01-foundations/quality-organization.md) | 限缩可写 | 最终正文 blob `4519e14b896f0aa3cd71af53e74cb378654cd4d4`；2021.000 Manage Inspection Lots 官方检索摘要支持 QM-IM、四个 scope item、worklist 结果/UD；Customizing Structure 仅支持 Reference IMG 结构变化；Business Events for Inspection Plans 仅是计划 CRUD，不是检验批触发。三个 canonical Help 页面本轮直开均 0 行。FSD latest 索引 v9.0 与直开 v11.0 漂移，不作为固定版证据。 | [评审记录](2026-11-27-m4-workline-3-qm01-review.md)：三个独立 AI reviewer-context 对最终正文各 5 项复核，15/15 边界 PASS；原 15 轮同一 Work 模拟不计独立审查。 | **Draft**；组织/岗位映射、检验批创建触发、设置/权限和客户系统状态等 M3 核心目标证据缺失；下一步继续查固定 2021 直接资料并保持边界，未闭合不升级 |
 | QM-02 | [QM-02 正文](../../knowledge/QM/02-functions/inspection-type-lot.md) | 限缩可写 | 最终正文 blob `53b91de8ccaebf5b69c1a7519e60b023555ee874`；保存的 2021 来源记录支持 01/01 示例、一个来源可有多类型、自动建批类型确定、收货条件及有限库存关系。固定版页面本轮直开不可用，动态 2025 页面未作 2021 证据。未支持来源 05/类型 05 精确配对或手工选择规则，正文已删除确切断言；自动过账例限检验目录类型 3。 | [评审记录](2026-11-27-m4-workline-3-qm02-review.md)：最终 blob 三个独立 AI reviewer-context 各 5 项复核，15/15 边界 PASS；旧 15 项同一 Work 模拟不计独立审查。 | **Draft**；完整跳检/不建批、来源 05/手工选择、一般 QIR、EWM/普通 IM、库存估价/FI、客户配置与权限未闭合；下一步查固定版直接资料或保持明确缺口 |
-| QM-03 | [QM-03 正文](../../knowledge/QM/02-functions/inspection-plan-characteristic.md) | 限缩可写 | FPS01 business-event 范围及 2021.000 事件页只支持有限活动；计划选择、抽样参数、特性字段与有效性规则不足。 | [评审记录](2026-11-27-m4-workline-3-qm03-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
+| QM-03 | [QM-03 正文](../../knowledge/QM/02-functions/inspection-plan-characteristic.md) | 限缩可写 | FPS01 What's New §4.3.1 直接支持工作清单按材料筛选；version=2021.000 官方搜索结果支持计划 create/update/delete 事件，固定 HTML 本轮打开 0 行。计划/工序/特性结构、选择与有效期/批量规则、抽样参数和无计划行为仍无目标版证据。 | [评审记录](2026-11-27-m4-workline-3-qm03-review.md)；三个独立 AI reviewer-context 各 5 项，15/15 边界复核；旧同 Work 模拟不计 | **Draft**；核心学习目标证据未闭合，需固定版直接资料或客户验证后再判断升级 |
 | QM-04 | [QM-04 正文](../../knowledge/QM/02-functions/results-usage-decision.md) | 限缩可写 | 固定 Help 支持结果/UD 与库存过账的部分概念和特定规则；一般自动/手工过账条件、撤销、库存估值/FI 与权限未闭合。 | [评审记录](2026-11-27-m4-workline-3-qm04-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | QM-05 | [QM-05 正文](../../knowledge/QM/02-functions/quality-stock-integration.md) | 暂缓核心 | 固定来源支持特定检验库存/收货场景；普通 IM 质量库存的标准集成、库存移动与财务影响未闭合。 | [评审记录](2026-11-27-m4-workline-3-qm05-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
 | QM-06 | [QM-06 正文](../../knowledge/QM/03-tcodes/transaction-index.md) | 暂缓核心 | 2021 Simplification List 仅列部分替代/授权对象变化；完整 QM 导航、逐事务用途、输入输出和实际授权来源未核。 | [评审记录](2026-11-27-m4-workline-4-qm06-review.md)；15/15；同一 Work 上下文模拟 | **Draft**；按未解风险保留当前准入边界，取得足够目标版直接证据并完成独立审查后再判断升级 |
@@ -291,3 +291,11 @@ QM-01 的精确正文、M3 准入、M3 目标版来源记录、现有 review 与
 ## 工作线 3 收尾检查点｜QM-02（2026-11-27）
 
 已逐篇核对 QM-02 正文、M3 控制矩阵/逐篇准入、detail-logistics、来源记录、旧 review 和依赖状态。三个独立 AI reviewer-context 针对最终正文 blob `53b91de8ccaebf5b69c1a7519e60b023555ee874` 各完成 5 项挑战—证据答复—作者处理—原角色复核；顾问与开发者首轮指出来源 05/类型 05 配对、手工建批类型提示证据不足以及目录类型 3 范围未明，Work 已收窄并由原角色复读最终哈希通过。普通读者确认最终来源摘要与正文一致。来源访问限制和 2025 搜索结果排除已记录。QM-02 仍 Draft，不计 Role Reviewed。全库 Owner Accepted 3/99；批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；批次 B 0/46。W3 下一篇 QM-03；W4 QM-06；W5 FI-11。PR #21 已合并，新 PR 尚未创建。未连接 SAP，未做实机、配置、数据库、API、库存/财务或权限测试。
+
+## 工作线 3 最新收尾检查点｜QM-03（2026-11-27）
+
+- 正文 blob：`eba555f35a4f9eca54e58d040634cc48acb16132`；状态保持 **Draft**，不计 Role Reviewed 或 Owner Accepted。
+- 直接读取范围：SAP S/4HANA 2021 FPS01 What's New §4.3.1 直接 PDF 内容仅说明工作清单按材料筛选；SAP Help version=2021.000 的官方搜索结果显示计划创建、更新、删除业务事件，但本轮固定 HTML 直开 0 行。未锁版 Help 与动态 FSD v11.0/SPS10 未用于固定版规则。
+- 三个独立 AI reviewer-context 各对精确最终正文完成 5 项复核（15/15 只表示当前证据边界与文案复核通过）；原始同一 Work 上下文模拟不计。文章增加的裂纹例子为虚构概念练习，不代表 SAP 字段或抽样规则。
+- 未闭合：计划/工序/特性关系与字段；计划/工厂/用途/状态/有效期/批量选择；抽样程序/方案/动态调整与样本数算法；无计划/多计划行为；客户应用启用、角色与权限。
+- 当前批次 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 Owner Accepted 3/99；批次 B 0/46。W3 下一篇 QM-04；W4 QM-06；W5 FI-11。PR #21 已合并；新 PR 尚未创建；未连接 SAP 或执行实机、配置、数据库、API、权限测试。

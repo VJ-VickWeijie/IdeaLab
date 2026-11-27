@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-27 更新）
 
-> 当前交接入口：[HANDOFF.md](HANDOFF.md)。main 起始基线 `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并并关闭，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 已顺序推进至 QM-02；最终正文 blob `53b91de8ccaebf5b69c1a7519e60b023555ee874` 经普通读者、资深配置顾问、开发者三个独立 AI reviewer-context 各 5 项复核，边界问题已修订并最终复验通过（15/15），仍因 M3 核心证据缺口保持 Draft。来源 05 精确类型映射、手工建批类型选择、完整跳检/不建批规则、一般 QIR、EWM 与财务证据未闭合；固定版页面本轮直开不可用，动态 2025 页面未作 2021 证据。新 PR 尚未创建。全库 Owner Accepted 3/99；批次 A Role Reviewed 9/50，Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。工作线游标：W1、W2 已完成、W3 QM-03、W4 QM-06、W5 FI-11。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 接入文档与固定提交 README 的版本标签差异继续记录。
+> 当前交接入口：[HANDOFF.md](HANDOFF.md)。main 起始基线 `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并并关闭，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 已顺序推进至 QM-03；最终正文 blob `eba555f35a4f9eca54e58d040634cc48acb16132` 经普通读者、资深配置顾问、开发者三个独立 AI reviewer-context 各 5 项复核，证据边界与文案复验通过（15/15），仍因 M3 核心证据缺口保持 Draft。固定 FPS01 What's New 仅证明工作清单按材料筛选；version=2021.000 官方搜索结果仅证明计划 CRUD 事件，本轮固定页面打开为 0 行。未锁版 Help 与动态 FSD 不作目标版规则。新 PR 尚未创建。全库 Owner Accepted 3/99；批次 A Role Reviewed 9/50、Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。工作线游标：W1、W2 已完成、W3 QM-04、W4 QM-06、W5 FI-11。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 接入文档与固定提交 README 的版本标签差异继续记录。
 
 ## 当前进度（2026-11-27）
 
@@ -12,7 +12,7 @@
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 篇 Draft |
 | 5 | FI-11、CO-01～CO-08 | 9 篇 Draft |
 
-当前工作线游标：W1、W2 已完成、W3 QM-03、W4 QM-06、W5 FI-11。PP-01～PP-09 与 QM-01～QM-02 均由三个独立 AI reviewer-context 对最终正文各完成 5 项复核；复核只确认边界表达，M3 核心证据仍缺的文章继续 Draft、计数不变。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
+当前工作线游标：W1、W2 已完成、W3 QM-04、W4 QM-06、W5 FI-11。PP-01～PP-09 与 QM-01～QM-03 均由三个独立 AI reviewer-context 对最终正文各完成 5 项复核；复核只确认边界表达，M3 核心证据仍缺的文章继续 Draft、计数不变。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
 
 
 
@@ -231,3 +231,7 @@ CO-08《管理会计数据模型》按“暂缓核心”准入建立受限 draft
 ## PP-09 工作包更新（2026-11-27）
 
 PP-09 正文精确 blob `df8768bef910bf09a87687d1c89630d80e78bd21` 经普通读者、配置顾问、开发者三个独立 AI reviewer-context 各完成 5 项最终边界复核（15/15 PASS），均未要求修改正文。既有 15 项同一 Work 上下文模拟另列，不视为独立审查。固定 SAP S/4HANA 2021 来源仅支持有限 sourcing 关系、特定 EHS 选择条件及 MATDOC 兼容读取；SAP Cloud SDK 生成源码记录仅支持特定 confirmation entity 的五项逻辑键。一般生产对象物理键、外键、关系基数、运行时 API 元数据/发布/权限仍未闭合，PP-09 继续 Draft，不计 Role Reviewed。PP-02、PP-03、PP-05 在当前分支存在但仍 Draft。旧 review 摘要中依赖“不在分支”已纠正。批次 A 计数不变：9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 Owner Accepted 3/99；批次 B 0/46 未开始。W3 下一篇 QM-01；W4 QM-06；W5 FI-11。未连接 SAP，未做实机、数据库、API 或权限测试。
+
+## QM-03 工作包更新（2026-11-27）
+
+QM-03《检验计划与检验特性》保持 Draft。三个独立 AI reviewer-context 对最终正文 blob `eba555f35a4f9eca54e58d040634cc48acb16132` 各完成 5 项复核，15/15 只确认当前证据范围与措辞，不代表 M3 核心门禁关闭。FPS01 直接证据只涉及 Manage Inspection Plans 工作清单按材料筛选；固定版 2021.000 Business Events 只从官方检索结果确认计划 create/update/delete 事件，页面直开为 0 行。计划/特性结构、适用性/有效期/批量选择、抽样参数/算法、无计划/多计划处理和客户授权仍无充分直接证据；未锁版 Help 与动态 FSD 不作为 2021 通用规则。塑料外壳裂纹练习明确标为虚构概念题。批次 A 计数不变，W3 下一篇 QM-04。详见[文章](knowledge/QM/02-functions/inspection-plan-characteristic.md)、[复核记录](reviews/work/2026-11-27-m4-workline-3-qm03-review.md)、[来源台账](plans/qm-gr-inspection-2021-m3.md)、[独立来源复核](plans/review-evidence-mm-qm-m3.md)及[逐篇审计](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
