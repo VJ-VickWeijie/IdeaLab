@@ -3,10 +3,10 @@
 - 日期：2026-11-27（Asia/Shanghai）
 - 工作包：CareerOS M4 批次 A，工作线 2
 - 文章路径：ideas/CareerOS/knowledge/PP/01-foundations/work-center-routing.md
-- 当前状态：drafting
-- 角色视角闭环：普通读者 5/5、资深 SAP 配置顾问 5/5、普通 SAP 开发人员 5/5，共 15 个完成问题、证据答复、修订判断/修改和原视角复核的循环。
-- 执行上下文：同一 Work 上下文内角色视角模拟；没有真人专家或独立 Agent。模型身份未在本环境显示。
-- SAP 系统：未连接；实机验证为 0。
+- 当前状态：Draft；M3 核心证据缺口未闭合，不计 Role Reviewed。
+- 历史角色模拟：普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各 5/5，共 15 个闭环，但全部为同一 Work 上下文模拟，不是独立审查。
+- 新增独立 AI reviewer-context：三种角色各 5 个质询—Work 答复/修订判断—原角色复核，共 15 项，全部针对最终正文 blob a84cbe704635ee67f58ce5d55c1db75b06086bc0。15/15 PASS 仅表示本轮证据范围/措辞边界通过；不代表 M3 核心证据补齐，也不将文章升级为 Role Reviewed。
+- 独立审查限制：三者是独立 AI reviewer context，不是真人 SAP 专家；SAP 系统未连接，实机验证为 0。
 
 ## 1. M3 准入和实际范围
 
@@ -200,12 +200,53 @@ M3 逐篇分流将 PP-03 标为“限缩可写”，路径为 knowledge/PP/01-fo
 - status：closed-in-perspective
 - executor_context：同一 Work 上下文角色视角模拟；无真人专家或独立 Agent；模型身份未显示。
 
-## 4. 状态与后续证据门槛
+## 4. 当前状态与后续证据门槛
 
-- 已记录普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各 5 个同上下文问题—答复—修订—复核闭环，共 15。
-- 这些循环不构成独立 review；不能据此将 PP-03 标记为 reviewed。
-- 固定版 2021 证据只支持特定 Scope Item 的 Routing 搜索/导航、Work Center API 数据类别、operation PRT 读取，以及 PEO 专用路线模型。核心通用解释仍缺：普通 PP routing operation 顺序和选择；routing/work center 完整字段及映射；替代/有效期与 BOM/生产版本关系；产能/成本公式和参数。
+- 原来记录的 15 个同 Work 角色模拟闭环仅作历史留档，不构成独立 review。
+- 三个独立 AI reviewer-context 复核了最终正文，过程与逐题结果见第 5 节；边界表达通过，但不改变 Draft 状态。
+- M3 核心仍缺：普通 PP routing 工序字段/选择与工厂范围；替代/有效期和 BOM/生产版本选择；Work Center 完整定义与工序指派；standard values、formula、capacity requirements、成本估算/分摊；BOM 组件与工序的精确关系；客户配置和权限证据。
 - 文中没有写未经证实的 T-Code、IMG 完整路径、物理表、字段键、接口授权、客户配置或生产系统结果。
-- 当前状态：drafting；批次 A reviewed 和 owner accepted 数量不变。
-- 下一篇：PP-04《需求、MRP 与计划订单》，路径 knowledge/PP/02-functions/mrp-planned-order.md；应先只读取 PP-04 对应控制/准入/来源及关联文章。
-- 批次 A 仍为 8/50 reviewed、0/50 owner accepted；CareerOS owner accepted 仍为 3/99；SAP 实机验证为 0。
+- 当前状态：Draft；批次 A Role Reviewed 数量不变。
+- 下一篇：PP-04《需求、MRP 与计划订单》，路径 knowledge/PP/02-functions/mrp-planned-order.md；按顺序先只读取 PP-04 对应控制/准入/来源及关联文章。
+- 当前批次 A 为 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 Owner Accepted 3/99；批次 B 0/46；SAP 实机验证为 0。
+
+## 5. 独立 AI reviewer-context 质询与最终正文复核
+
+复核对象：ideas/CareerOS/knowledge/PP/01-foundations/work-center-routing.md，最终正文 blob a84cbe704635ee67f58ce5d55c1db75b06086bc0。三个角色分别由不同 AI reviewer-context 提问；Work 答复、判断并修改后，由原 reviewer-context 对同一正文复核。下表每行是一项有效质询—答复/修订判断—原角色复核闭环。AI reviewer-context 不是真人 SAP 专家；没有执行 SAP 实机测试。
+
+### 普通读者（5 项）
+
+| 轮次 | 问题与证据 | Work 答复与修订 | 原角色复核 |
+| --- | --- | --- | --- |
+| R1 | Routing 工序顺序会否被误认为固定 2021.000 通用规则？动态 FSD SPS10 支持概念顺序；BJ5 固定页只支持应用入口。 | 文章改用动态 FSD v11.0/SPS10，虚构流程标为教学设定，不推导工序编号、状态或选择算法。 | PASS：窄概念范围明确；详细规则仍缺证。 |
+| R2 | Work Center 是否指地理地点，或暗示每个 operation 只关联一个？FSD 不是字段/基数合同。 | 改为“执行资源”，说明不是厂区地理位置，不推工序—工作中心基数。 | PASS：不暗示地理位置或一对一关系。 |
+| R3 | BOM 中 A/B 是否被误解为已分配到具体 operation？FSD 只有所需组件的高层关系。 | 补充 A/B 未分配到 operation，不表示工序组件分配、领用或物料移动。 | PASS：没有从示例推出组件分配或消耗。 |
+| R4 | 生产版本何时自动选定 BOM/Routing？FSD 无日期、数量、优先级或冲突规则。 | 将生产版本限于主数据配对概念；练习不求选版结果。 | PASS：没有自动选版算法。 |
+| R5 | 能否从 Work Center/API 名称算出工时、负荷或成本？FSD 只支持高层用途，API 实体不构成公式。 | 保留用途与计算结果的区分，不加计算示例；公式/参数列为未闭合。 | PASS：无计算暗示，M3 计算目标仍未满足。 |
+
+### 资深 SAP 配置顾问（5 项）
+
+| 轮次 | 问题与证据 | Work 答复与修订 | 原角色复核 |
+| --- | --- | --- | --- |
+| C1 | 动态 FSD v9/SPS08 与 v11/SPS10 是否可复现？同一 latest URL 曾返回不同版本，缺固定 PDF/hash。 | 改用当前可直接核对的 v11.0/SPS10；在文章和台账披露 v9/v11 差异、动态 URL 与无固定哈希。 | PASS：最终主张对齐 v11 快照，v9 只保留为来源差异。 |
+| C2 | 离散 Work Center 与流程 Resource 是否混同？ | 明确本篇讨论离散制造 Work Center；流程 Resource 是另一范围。 | PASS：未跨模式泛化。 |
+| C3 | 同线/alternate work centers 的容量分组是否表示替代 Routing/工序自动切换？ | 补充该功能只支持汇总产能评估，不证明路线、工序或订单自动切换。 | PASS：容量聚合与选择逻辑分开。 |
+| C4 | 排程/成本/产能用途是否被扩成公式或结果？BJ8 API 实体是否被当成过账？ | 仅保留 FSD 高层用途；公式、标准值、过账/分摊结果和客户设置保留为缺口。 | PASS：用途和计算/过账规则未混淆。 |
+| C5 | 固定 BJ5 应用、BJ8 API 及 Draft 依赖是否隔离？ | 分列两个 Scope Item；PP-02/04/05 只作课程关联；注明 Help HTML direct open 为 0 行。 | PASS：范围、授权和依赖证据限制明确。 |
+
+### 普通 SAP 开发人员（5 项）
+
+| 轮次 | 问题与证据 | Work 答复与修订 | 原角色复核 |
+| --- | --- | --- | --- |
+| D1 | v9/SPS08 是否可作为可复现的固定资料？ | 以 v11/SPS10 作为最终概念来源，并披露 dynamic latest 的版本差异与无固定哈希。 | PASS：不冒充固定 2021.000 资料。 |
+| D2 | Work Center 与流程 Resource 是否是同一对象？ | 按离散/流程术语分开描述。 | PASS：未混为同一对象定义。 |
+| D3 | BJ5 应用和 BJ8 API 是否证明客户拥有只读入口、完整字段或授权？ | 分别限定 Scope Item；说明 API 有写操作，不证明客户启用、用户权限或完整合同。 | PASS：没有推出权限、字段或客户部署。 |
+| D4 | 是否暗示工序与 Work Center 一对一，或 BOM 有 operation 键/JOIN？ | 限于 FSD 高层关系；明确不推基数、工序组件映射、字段键或 JOIN。 | PASS：未推导技术数据模型。 |
+| D5 | 生产版本配对是否能推出自动选版或 MRP/订单/成本结果？ | 不推导上述行为；PP-02/04/05 不作产品事实来源。 | PASS：相邻文章未替代本篇证据。 |
+
+### 独立审查结论
+
+- 读者、配置顾问、开发者三个独立 AI reviewer-context 对最终正文各完成 5/5 项复核，合计 15/15 PASS；PASS 仅表示本轮边界/措辞闭合。
+- 三方都建议文章继续 Draft。未关闭项：Routing 工序字段/选择、替代路线与有效期、Work Center 完整定义/工序指派、成本/产能参数与计算、BOM—operation 精确关系、生产版本日期/数量选择和冲突处理。
+- 固定 2021.000 BJ5、BJ8 Help HTML 本轮均为 0 可读行，仅使用官方索引可见范围；动态 FSD 使用 v11.0/SPS10 概念摘录，不能称作固定初始版；PEO 专用指南不外推。
+- 未连接 SAP；未执行实机、配置、数据库、API 或权限测试；未更改 Owner Accepted 状态。
