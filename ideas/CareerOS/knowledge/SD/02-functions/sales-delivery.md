@@ -50,7 +50,7 @@ M3 尚未找到足以闭合下列具体规则的目标版直接证据：
 
 ## 来源与版本边界
 
-1. SAP 官方 [SAP S/4HANA 2021 Feature Scope Description（FSD）](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)：§2.10.2.6 *Sales Order Management and Processing*；M3 主证据台账记录 PDF 第 122 页，独立补查记录定位于第 123–124 页。两条记录页码相邻但标注不同，因此本篇以节标题和有限主张为主，不把单页号当作完整证据。§2.13.2.1 *Delivery Management*，独立补查记录定位 PDF 第 178–179 页；仅支持所述 sell-from-stock、出库交货、拣配/包装和 PGI 的有限功能描述。
-2. 同一 FSD 的 §2.10.2.8 *Sales Billing*，独立 M3 来源补查定位 PDF 第 126 页；本文只用其说明开票和应收为独立业务环节，不把它外推成每笔订单的强制时序、分录或收款证明。
-3. 以上 M3 读取记录将当次 latest 文件识别为 Version 11.0（2026-07-22）、S/4HANA 2021 SPS10。链接含 latest，不是不可变文件；结论限于该次读取的 2021 SPS10 范围，不反推 S/4HANA 2021 初版或其他 FPS/SPS。参见 [M3 物流证据台账](../../../plans/evidence-logistics-m3.md) 和 [PROCESS-02 来源补查](../../../plans/o2c-direct-2021-m3.md)。
-4. 本篇对客户系统的具体配置、启用功能、实际流程和权限均无直接结论。部分交货、取消/拒绝/冲销和授权细节仍未闭合，因此状态保持 drafting。
+1. SAP 官方 [SAP S/4HANA 2021 Feature Scope Description（FSD）](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)：§2.10.2.6 *Sales Order Management and Processing* 支持销售单据与确认数量/日期的高层说明；§2.13.2.1 *Delivery Management* 支持 sell-from-stock、出库交货、拣配/包装和 goods issue 的有限功能描述。当前直接打开的 PDF 显示该销售订单章节从正文页 122 开始并延续到 123–124；交货管理章节从页 177 开始，功能表在页 178–179。它们支持本篇明确标出的高层业务范围，不支持完整行为、技术键或权限。
+2. 本轮打开的该动态 latest PDF 的 Document History 列出 Version 11.0（2026-07-22），对应 SAP S/4HANA 2021 SPS10；因此本篇仅将上述主张限定为已识别的 SPS10 文档范围，不反推 2021 初始版或其他 FPS/SPS。此直接打开确认章节页码为不同审计记录差异提供了定位；本轮没有下载 PDF 字节或重新计算哈希，M3 台账中的哈希只对应此前保存的快照。由于链接含 latest，不是不可变文件，复用时仍需核对文档历史。参见 [M3 物流证据台账](../../../plans/evidence-logistics-m3.md) 和 [PROCESS-02 来源补查](../../../plans/o2c-direct-2021-m3.md)。
+3. 同一 FSD 的 §2.10.2.8 *Sales Billing*（正文页 125–126）只用于说明开票和应收为独立业务环节，不外推成每笔订单的强制时序、分录或收款证明。
+4. 本篇对客户系统的具体配置、启用功能、实际流程和权限均无直接结论。部分交货、取消/拒绝/冲销和授权细节仍未闭合，因此状态保持 drafting.
