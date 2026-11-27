@@ -504,7 +504,7 @@ PR #21 已合并，不要向该 PR 追加提交。批次 A 收尾从 `main` HEAD
 
 ## 工作线 2 检查点 2：SD-07（2026-11-27）
 
-- SD-07 正文当前 blob `7a00a76187960d5279c8052071731bc9742efb7b`；正文和证据台账已补入 SAP 固定 2021 Simplification List §36.9 的早期 VBFA/STUFE 历史范围。新增表述区分系统转换目标版与新安装起始/曾经版，并逐项列出官方清单的重建历史路径；明确不推断 2021 一般系统现况或要求普遍重建。
+- SD-07 正文当前 blob `7a00a76187960d5279c8052071731bc9742efb7a`；正文和证据台账已补入 SAP 固定 2021 Simplification List §36.9 的早期 VBFA/STUFE 历史范围。新增表述区分系统转换目标版与新安装起始/曾经版，并逐项列出官方清单的重建历史路径；明确不推断 2021 一般系统现况或要求普遍重建。
 - 原 15 个 Work 同上下文角色模拟仍不能计独立审查。读者、顾问、开发三个独立 AI reviewer-context 各完成 5 个质询，作者答复/修订后由原角色复核，均 5/5 PASS；记录见 [SD-07 审查记录](reviews/work/2026-11-27-m4-workline-2-sd07-three-role-review.md)。这不是真人 SAP 专家意见或实机验证。
 - SAP Help 的 S3 页面直开 0 行，正文仅把官方固定版检索索引作为有限模拟 API 线索；动态 FSD 仅为当前 SPS10 高层开票范围。SD-07 所需的完整 VBFA/后续单据字段、键、基数、组织约束、SD-FI 字段级关系、released API/CDS 和权限证据仍未闭合，继续 Draft。
 - M3 依赖 SD-03、SD-04、FI-11 均为 Draft。批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99 Owner Accepted；批次 B 0/46 未开始。
