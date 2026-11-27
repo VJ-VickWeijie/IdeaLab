@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-27 更新）
 
-> 当前交接入口：[HANDOFF.md](HANDOFF.md)。main 起始基线 `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 已顺序推进至 PP-09；正文精确 blob `df8768bef910bf09a87687d1c89630d80e78bd21` 维持 Draft。三种独立 AI reviewer-context 各对最终正文完成 5 项边界复核（15/15 PASS），未要求修改正文；生产对象一般物理键、关联基数、目标系统 API 元数据与授权仍缺。PP-02、PP-03、PP-05 均存在但为 Draft。新 PR 尚未创建。当前全库 Owner Accepted 3/99；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。工作线游标：W1、W2 已完成、W3 QM-01、W4 QM-06、W5 FI-11。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
+> 当前交接入口：[HANDOFF.md](HANDOFF.md)。main 起始基线 `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并并关闭，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 已顺序推进至 QM-01；最终正文 blob `4519e14b896f0aa3cd71af53e74cb378654cd4d4` 经三个独立 AI reviewer-context 各 5 项复核（15/15 边界 PASS），但质量组织/岗位、检验批触发、设置和授权仍缺目标版直接证据，故保持 Draft。固定版 Help 页面本轮直开 0 行，FSD latest 索引 v9.0/直开 v11.0 版本差异已披露。新 PR 尚未创建。全库 Owner Accepted 3/99；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。工作线游标：W1、W2 已完成、W3 QM-02、W4 QM-06、W5 FI-11。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`，IdeaLab 接入文件与固定提交 README 的版本标签差异继续记录。
 
 ## 当前进度（2026-11-27）
 
@@ -12,7 +12,12 @@
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 篇 Draft |
 | 5 | FI-11、CO-01～CO-08 | 9 篇 Draft |
 
-当前工作线游标：W1、W2 已完成、W3 QM-01、W4 QM-06、W5 FI-11。PP-01～PP-09 均经三个独立 AI reviewer-context 各 5 项最终正文复核；复核只确认边界表达，M3 核心证据仍缺的文章继续 Draft、计数不变。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
+当前工作线游标：W1、W2 已完成、W3 QM-02、W4 QM-06、W5 FI-11。PP-01～PP-09 与 QM-01 均由三个独立 AI reviewer-context 对最终正文各完成 5 项复核；复核只确认边界表达，M3 核心证据仍缺的文章继续 Draft、计数不变。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
+
+
+## QM-01 工作包更新（2026-11-27）
+
+QM-01 正文最终 blob `4519e14b896f0aa3cd71af53e74cb378654cd4d4` 已完成三个独立 AI reviewer-context 各 5 项精确正文复核（15/15 边界检查通过），但不满足 M3 核心证据门槛，继续 Draft、不计 Role Reviewed。固定版官方检索摘要仅支持 QM-IM、四个 scope item 及 worklist 结果记录/使用决策；本轮三个 canonical Help 页面直开均 0 行。FSD latest 检索索引 v9.0、直开 v11.0 的版本差异已记入正文与证据记录；未用来支持固定版组织/角色/触发规则。质量组织/岗位映射、检验批创建触发、设置/授权及客户系统状态仍待目标版直接证据。依赖 MM-01（仅采购组织、已 reviewed）、PP-01（Draft）和未建设的 PROCESS-06 不足以填补。批次计数不变，W3 下一篇 QM-02。未连接 SAP，未做实机、配置、数据库、API 或权限测试。详见[正文](knowledge/QM/01-foundations/quality-organization.md)、[审查记录](reviews/work/2026-11-27-m4-workline-3-qm01-review.md)、[目标版来源台账](plans/evidence-logistics-m3.md)及[逐篇审计](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
 
 ## PP-07 工作包更新（2026-11-27）
 

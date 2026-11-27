@@ -28,7 +28,7 @@
 
 | ID | 本次核对的原文及能够支持的有限事实 | 未通过／待办 |
 | --- | --- | --- |
-| QM-01 | [F PDF 93 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=93)：11.0/SPS10 开始介绍采购、生产和销售场景的质量检验。 | 不证明企业角色/组织分配、初始补丁、工厂启用等。 |
+| QM-01 | [Manage Inspection Lots（2021.000）官方检索摘要](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/eec27eaaa6b6499687148df6e52c34ad.html?version=2021.000)：QM-IM、四个 scope item、worklist 结果/UD；[Customizing Structure（2021.000）摘要](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/eea29ed947a048aabc54ecfb5a092abc.html?version=2021.000)：Reference IMG 结构调整；[Business Events for Inspection Plans（2021.000）摘要](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/07da1a573afa433d91b66a6bccf0e4dc.html?version=2021.000)：仅计划 create/update/delete events。 | 核心未通过/待办：质量组织/岗位映射、检验批创建触发、客户系统激活与授权。三个固定 Help 页面本轮直接打开均返回 0 行；正文只能标为搜索摘要及既有项目记录支持。M3 的 FSD `latest` 搜索索引出现 v9.0（2025-07-23），直开同 URL 为 v11.0（2026-07-22），存在版本漂移，不作固定版/初版证据。 |
 | QM-02 | [F PDF 94 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=94)：11.0/SPS10 解释检验批代表检验请求。 | 检验类型、检验来源、创建条件及激活/跳批规则待查。 |
 | QM-03 | [F PDF 93 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=93) §2.8.5.1：实读质量规划与检验特性/规格概述。 | 检验计划选择、抽样、有效期及各字段需专门资料。 |
 | QM-04 | [F PDF 94 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=94)：11.0/SPS10 描述结果记录及使用决策。 | 不足以证明 UD 的库存过账是自动还是手动、冲销或所有系统的条件。 |
@@ -47,3 +47,11 @@
 ## 页码修订复核
 
 `/root/consultant_m3_review` 读取提交 `b46182890f73990f019b2db391ed0c0022ca9ae4` 的 QM-05 行并重新阅读 SAP PDF 第 189 页，确认页码、EWM 限定及版本风险；页码问题关闭，其他事实、FPS、权限和系统测试不因此通过。
+
+## M4 QM-01 目标版续核（2026-11-27）
+
+1. SAP Help 官方检索摘要将 `Manage Inspection Lots` 固定到 2021 (Oct 2021)/version 2021.000，支持 QM-IM Application Component、1FM/1MP/1E1/1MR scope item 名称，以及 worklist 记录结果、作使用决策。摘要不支持企业岗位/组织、批次创建触发、客户启用或权限；canonical HTML 本轮直接打开为 0 行，未将本轮描述写作直接重读页面正文。
+2. `Customizing Structure for Quality Inspections` 固定 2021.000 摘要仅描述 Reference IMG 质量检验结构的拆分/合并/重命名。它不证明岗位、组织映射、触发、具体客户配置或授权；canonical HTML 直开 0 行。
+3. `Business Events for Inspection Plans` 固定 2021.000 摘要讨论检验计划 create/update/delete 时的业务事件。对象是 inspection plan，不是 inspection lot；不得将计划事件推作检验批创建触发。canonical HTML 直开 0 行。
+4. 同一 SAP Help FSD `latest` URL 本轮官方搜索索引提供 v9.0（2025-07-23）摘录，直接打开 URL 则为 v11.0（2026-07-22）。这是动态 URL 的版本漂移；两种快照都未用于填补固定版 QM-01 门槛。此前 M3 台账所述 v11.0/SPS10 属特定直接打开快照，不等于冻结的 2021.000。
+5. SAP Help 官方站点针对 quality planner、quality engineer、质量组织和 inspection lot trigger 的 2021.000 查询未找到可直接支撑 QM-01 核心学习目标的固定资料。未连接 SAP，没有进行数据库、API、配置或权限测试。QM-01 继续 Draft，下一步仍是寻找固定版质量组织/角色、检验批创建条件与只读授权证据；找不到时保留缺口。

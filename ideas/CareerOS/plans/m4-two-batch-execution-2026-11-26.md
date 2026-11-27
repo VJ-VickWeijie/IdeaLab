@@ -164,3 +164,7 @@ PP-06 已完成逐篇核查与目标版来源补查。动态 FSD v11.0/SPS10 仅
 ## 工作线 3 收尾检查点｜PP-09（2026-11-27）
 
 PP-09 正文 blob `df8768bef910bf09a87687d1c89630d80e78bd21` 经三个独立 AI reviewer-context（读者、配置顾问、开发者）各五项复核，15/15 仅通过目标版证据边界与用语检查；原同 Work 上下文的 15 轮仍只记作者角色模拟。正文无需修改，继续 Draft。SAP 2021 固定版材料限于简化 sourcing、特定 EHS 选择条件、MATDOC 兼容读取；SDK 源码记录限于指定确认 VDM entity 键。针对固定 2021 API/物理关联的官方续查只返回 2025 FPS01 页面，不作为 2021 证据。一般生产数据物理键、关联基数、运行时 API 元数据/发布/授权仍未闭合。PP-02、PP-03、PP-05 当前均存在但 Draft，未作已审查依赖。全库 Owner Accepted 3/99；批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。工作线 3 下一篇 QM-01；工作线 4 QM-06；工作线 5 FI-11。PR #21 已合并；新 PR 待批次 A 收尾全部达到 Role Reviewed 后创建并保持开放，不合并。未连接 SAP、未做实机、数据库、API、配置或权限测试。
+
+## 工作线 3 收尾检查点｜QM-01（2026-11-27）
+
+QM-01《质量管理业务与组织对象》最终正文 blob `4519e14b896f0aa3cd71af53e74cb378654cd4d4` 已按当前分支核对正文、M3 准入、目标版来源、已有审查和依赖，并完成三个独立 AI reviewer-context（普通读者、资深 SAP 配置顾问、普通 SAP 开发人员）各 5 项精确正文复核。15/15 PASS 仅表示来源范围和措辞通过；旧的 15 项同一 Work 上下文模拟不计独立审查。固定版官方检索摘要支持 QM-IM、四个 scope item 及 worklist 的结果记录/使用决策；Customizing Structure 仅支持 IMG 结构变化；Inspection Plans 事件仅为计划 CRUD，不证明检验批创建触发。三个 canonical HTML 页面本轮均直开 0 行。FSD latest 索引 v9.0、直开 v11.0 存在动态版本差异，不作为固定版来源。质量组织/岗位映射、检验批创建条件、设置、授权和客户系统启用状态仍缺目标版直接证据，故继续 Draft，不计 Role Reviewed。依赖 MM-01（已 reviewed、仅采购组织）、PP-01（Draft）和 PROCESS-06（未开始）不能填补缺口。全库 Owner Accepted 3/99；批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；批次 B 0/46。工作线 3 下一篇 QM-02；工作线 4 QM-06；工作线 5 FI-11。PR #21 已合并，新 PR 尚未创建，批次 A 收尾完成后创建并保持开放，不合并。未连接 SAP，未做系统测试。

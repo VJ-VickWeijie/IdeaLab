@@ -4,7 +4,7 @@
 - 状态：drafting
 - 目标版本：SAP S/4HANA 2021 On-Premise；ECC 仅作必要差异对比
 - 当前可写范围：固定版 SAP Help 对一个质量检验应用的功能说明和范围项名称；说明其证据不能推出企业组织结构、质量角色、检验触发或仓库执行方式。
-- 状态原因：准入范围的质量部门/组织映射、用户角色、设置和触发前提均未由本轮固定版来源闭合。M3 FSD 链接是动态 latest 快照，不能直接替代固定版证据。
+- 状态原因：M3 准入仍为“部分/限缩可写”。固定版 2021.000 Help 的官方检索摘要仅支持一项应用功能、QM-IM 组件和 scope item 名称；本轮直开这些 canonical HTML 均为 0 行。质量部门/组织映射、用户角色、检验批创建触发、实际设置及授权仍无固定版直接证据。M3 FSD 的 latest PDF 有版本漂移，不替代固定版证据。
 - 系统验证：SAP 系统未连接；未查看客户系统的应用、主数据、角色、授权或配置。
 
 ## 1. 这篇文章目前能回答什么
@@ -55,3 +55,11 @@ SAP Help《Manage Inspection Lots》固定为 SAP S/4HANA 2021（Oct 2021，vers
 2. SAP Help Portal, [Customizing Structure for Quality Inspections](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/eea29ed947a048aabc54ecfb5a092abc.html?version=2021.000), SAP S/4HANA 2021 (Oct 2021), version 2021.000。此页面记录固定版质量检验 Customizing 结构变化；未用于证明本篇的用户角色、触发或工厂设置。
 3. CareerOS [QM-01 逐篇准入分流](../../plans/m3-item-readiness-triage-v0.3.md)、[逐篇范围与依赖](../../plans/detail-logistics-v0.3.md)、[QM-01 证据台账](../../plans/evidence-logistics-m3.md)和[MM/QM M3 来源复核记录](../../plans/review-evidence-mm-qm-m3.md)作为范围/限制记录，不替代 SAP 产品证据。
 4. [MM-01 组织结构文章](../../MM/01-foundations/organization-objects.md)、[PP-01 生产组织文章](../../PP/01-foundations/production-organization.md)是依赖阅读材料；PROCESS-06 当前未建设。它们不作为质量角色或检验触发的证据。
+
+## 7. 2026-11-27 目标版本来源续核
+
+- SAP Help 固定页面 [Manage Inspection Lots（2021.000）](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/eec27eaaa6b6499687148df6e52c34ad.html?version=2021.000) 的官方检索摘要确认：应用组件 QM-IM、四个 scope item 名称，以及从检验批 worklist 记录结果和作使用决策。本轮直接打开该 canonical HTML 为 0 行，因此把这些内容限定为 SAP 官方检索摘要及项目已有记录所能支持的范围；它不说明企业组织、用户角色、检验批创建事件、客户系统启用或权限。
+- 固定页面 [Customizing Structure for Quality Inspections（2021.000）](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/eea29ed947a048aabc54ecfb5a092abc.html?version=2021.000) 的官方检索摘要说明 Reference IMG 的质量检验配置结构改动；本轮直接打开该 canonical HTML 为 0 行。本篇不据此推导质量岗位、组织分配、触发规则或具体客户设置。
+- 本轮以 SAP Help 官方站点按 `quality planner`、`quality engineer`、质量组织与检验批触发加 `2021.000` 进行目标版搜索，没有找到可直接支持质量岗位/组织映射或检验批创建触发的固定版资料。另检索到 [Business Events for Inspection Plans（2021.000）](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/07da1a573afa433d91b66a6bccf0e4dc.html?version=2021.000)：其主题是 inspection plan 创建、更新、删除时触发业务事件，不是 inspection lot 创建；本轮直接打开其 canonical HTML 也为 0 行，故不用于本篇触发结论。搜索无结果只描述本次查询范围，不表示 SAP 文档中必定不存在其他材料。
+- M3 记录中的 FSD `latest` 链接会变化：本轮 SAP 官方搜索索引返回 v9.0（2025-07-23）摘录，直接打开同一 URL 则标注 v11.0（2026-07-22）。版本显示存在漂移；两个动态快照均不作为冻结 2021.000 初版或角色/组织配置证据。
+- 状态不变：现有固定版证据不足以安全支撑质量组织、角色、检验触发与配置的核心学习目标，QM-01 继续 Draft。未连接 SAP；未执行角色、权限、配置或业务流程测试。
