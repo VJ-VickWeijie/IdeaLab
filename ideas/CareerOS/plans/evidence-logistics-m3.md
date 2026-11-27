@@ -169,3 +169,17 @@ Work 于 2026-11-26 从 SAP 官方 S/4HANA 2021 动态 FSD 直接定位 §2.12.4
 - **补证搜索及排除**：对 BOM item/base quantity、alternate BOM/validity、缺失组件和通用选择规则的 SAP 官方搜索，出现的可读通用资料分别标记为 2025 FPS01/其他动态版或 SAP ERP EHP8；未用于 2021 On-Premise 主张。Maintenance Bill of Material 2021 API 只针对设备/功能位置 BOM，不替代 PP 物料 BOM 数据模型。未找到足以闭合 PP-02 用量/单位、有效期、替代项优先、组件缺失及表/字段/API 核心目标的固定版直接正文。
 - **文章处理**：正文已限定为可见的官方检索索引摘录，明确 P1–P4 的页面正文无法直接复读；核心缺口保持在文章与 review 记录中。PP-02 保持 Draft，不计 Role Reviewed；SAP 未连接，未执行系统、配置、数据库、API 或权限测试。
 - **独立角色复核与状态**：PP-02 最终正文 blob `c87f31763c7137af445cc8c0f1267280b08dfb6c` 由读者、配置顾问、开发者三个独立 AI reviewer-context 各完成 5 项质询—作者答复/修订判断—最终正文复核。读者发现 ASM-110 位置措辞歧义，作者修正后原角色复验；最终 15/15 PASS 仅表示边界清楚、未外推索引证据。用量/单位、一般选版、组件异常及数据模型等学习目标未闭合，文章保持 Draft，不增加 Role Reviewed；详见 [PP-02 审查记录](../reviews/work/2026-11-27-m4-pp02-three-role-review.md)。SAP 未连接，未做系统、配置、数据库、API 或权限测试。
+
+
+## PP-03｜2026-11-27 M4 动态来源核对与独立审查补记
+
+- 最终正文：ideas/CareerOS/knowledge/PP/01-foundations/work-center-routing.md；blob `a84cbe704635ee67f58ce5d55c1db75b06086bc0`。逐篇审查见 [PP-03 三角色工作记录](../reviews/work/2026-11-27-m4-pp03-three-role-review.md)。
+- 动态 SAP 官方来源：[S/4HANA 2021 Feature Scope Description](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf)。本轮直接打开并核对到 Document Version 11.0（2026-07-22）；文档历史将其标为 SAP S/4HANA 2021 SPS10。§2.8.2.2，PDF pp.68–69，支持高层说明：离散制造 work center 与流程工业 resource 的术语区分；Work Center 的机器/生产线/员工/员工组示例及排程、成本、产能计划用途；Routing 的工序/步骤与顺序、执行工作中心信息和所需 BOM 组件；生产版本为材料指定生产所用 BOM 与 Routing。
+- 该 FSD URL 含动态 latest。本窗口早先一次官方抓取返回 Document Version 9.0（2025-07-23，SPS08），后续对同一路径的官方搜索索引及直接打开返回 v11.0/SPS10。没有本地 PDF 或固定哈希可锁定 v9 快照；文章仅采用可直接核对的 v11.0/SPS10 文本，并在正文披露版本差异与可复现性限制。不得把任何 latest 结果称为固定 2021.000 初始版。
+- 固定 SAP Help：
+  - [Manage Routings](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/9a63a564ff1c4194843dec4c37dfb033.html?locale=en-US&version=2021.000)：官方索引显示 2021.000、Scope Item BJ5（离散制造 MTS），搜索 Routing 并导航至创建/更改应用；本轮直接打开 HTML 为 0 可读行。不支持通用 Route 字段、选择规则、客户权限或只读承诺。
+  - [OData API: Work Center](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/f7e7144c65a647c3a68d84db06bc54c4.html?locale=en-US&version=2021.000)：官方索引显示 2021.000、Scope Item BJ8（基于流程订单的按库存流程制造），OData V4 create/read/update 与 header/description/cost center allocation/pooled capacity/capacity 等实体类别；本轮直接打开 HTML 为 0 可读行。API 含写能力，不是只读权限证明，也不是所有离散制造 Route 的字段合同。
+  - [Manage Shop Floor Routings](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/7cb8c2893d224d0bbe47c4102d136a12.html?locale=en-US&state=PRODUCTION&version=2021.000) 与 2021 PEO-ERP Implementation Guide 仅作 PEO 专用路线边界材料，不推广为普通 PP Routing 规则。
+- 支持和缺口：SPS10 FSD 只补齐概念层关系，不给 Routing operation 详细字段/选择，工厂适用性，替代/有效期/数量选择，Work Center 完整字段与工序指派，standard values/formula/capacity requirements/成本估算，BOM-component-to-operation 精确关系，生产版本冲突处理，客户配置/授权。FSD 中 same-line/alternate work center 分组只用于汇总产能评估，不支持路线、operation 或订单自动切换结论。
+- 独立审查：普通读者、资深 SAP 配置顾问、普通 SAP 开发者三个独立 AI reviewer-context 各对最终正文 blob 完成 5 个问题和原角色复核，共 15/15 PASS（仅来源范围与措辞边界）。三者建议文章保持 Draft；M3 核心未闭合，因此不计 Role Reviewed。原有 15 项同 Work 角色模拟作为历史，不计独立审查。
+- 未连接 SAP；未执行实机、配置、数据库、API、权限或客户设置测试。
