@@ -129,3 +129,13 @@ Work 于 2026-11-26 从 SAP 官方 S/4HANA 2021 动态 FSD 直接定位 §2.12.4
 - 搜索所得无版本 EWM/ERP 事务列表及 S/4HANA Cloud 2608 导航页不作为固定 S/4HANA 2021 On-Premise 证据；这些页面即使出现 VL03N 等入口，也不能补本篇目标版通用交货入口。
 - **准入决定**：固定版证据只闭合三个局部情境中的入口名；M3 核心仍要求通用销售、交货、开票导航，以及用途/输入输出/类别/权限逐入口核验。SD-05 继续 Draft，不将局部证据升格为目录完整。后续需找到可直接复读的 2021 On-Premise Help/本地文档，并对照用户获准的目标系统核验应用类别/权限；在取得证据前不列通用交货代码。
 - 未连接 SAP；未执行事务码、系统配置、API、权限或实机测试。
+
+
+## 2026-11-27 逐篇来源复核｜SD-06 销售配置查看
+
+- 当前批次 A 正文 blob 48293fd49ac07ad4ee42ad3ed9b4f48e59a3b1a8、M3 逐篇准入、详细范围、SD/PP 来源贴合度与原角色视角记录已重新核对。M3 准入表允许“限缩可写”，要求补查准确 IMG 节点、业务分支和访问权限；详细范围还要求定价/单据类型/交货/开票/科目决定、组织/主数据前提与授权只读查看路径。M3 控制矩阵没有 SD-01 至 SD-07 的独立行，不能用它补充 SD-06 的具体准入内容；本篇按 triage/detail-logistics 原行继续处理，未改写已验收的 M3 资料。
+- SAP Help 官方固定版 [Condition Purposes in Business Documents](https://help.sap.com/docs/PRODUCT_ID/e296651f454c4284ade361292c633d69/8575c2f80df64d53b32340dfaab856b8.html?version=2021.000) 搜索摘录标明 What's New 2021 (Oct)、Available As Of 2021，并显示 Condition Purpose 可分配给 condition type 或 pricing procedure + condition type，路径为 Sales and Distribution > Basic Functions > Pricing > Condition Purposes in Pricing。直接 open 不可读；只按 SAP 官方索引可见文本核对该有限例子，不从它推出通用定价规则、配置授权或客户实际路径。
+- SAP Help 官方固定版 [Approval Workflows for Debit Memo Requests](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/e296651f454c4284ade361292c633d69/975ea2cdf26140c7a012209a7eab443e.html?version=2021.000)搜索摘录标为 What's New 2021 (Oct)、Scope Item 1F1。仅在该工作流场景中，相关借项凭证申请类型不得设置 billing block；若设置须按来源所列路径处理。页面直接 open 不可读；不推广成其他单据/场景规则或生产修改指引。
+- SAP 官方静态 [What's New in SAP S/4HANA 2021 FPS01](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.001/en-US/WN_OP2021_FPS01_EN.pdf#page=96)本轮直接打开并核对 §3.5.2.1：PSFX 固定价格只用于订阅订单的一次性价格处理（S/4HANA 2021 FPS01）；PDF p.96–97 列出该专项条件类型与定价程序活动。正文对此限定准确，不推广到初始版或普通销售订单。
+- 对动态 FSD_OP2021_latest.pdf 本轮再次直接打开，Document Version 11.0（2026-07-22），文件记录 SPS10。先前 SD-06 角色记录曾记录同一 latest URL 的旧读取为 Version 9.0（2025-07-23，SPS08）；这反映动态响应随时间更新，不作为固定版主张证据。正文已排除此来源。
+- **门禁结论**：固定证据只支持以上三个示例。通用销售配置树、其对应行为/业务分支、交货/开票与科目决定、只读访问路径/授权仍未闭合；SD-06 继续 Draft。下一步是逐项获取固定版 2021 的直接配置活动及适用前提，并取得已授权的目标系统只读访问说明；不得补写未证节点或做生产修改。未连接 SAP，未进行 IMG、事务码、权限或业务单据测试。
