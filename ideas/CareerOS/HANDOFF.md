@@ -1,7 +1,7 @@
 # CareerOS V0.4｜跨 Work 窗口统一交接入口
 
 更新时间：2026-11-27（Asia/Shanghai）  
-**当前实时快照**：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已于该提交合并，绝不再向其追加。本次收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该 main 建立；本更新前分支 HEAD `5761468ffe624867bb4acb49f7e800dc8cdaafe2`，新 PR 尚未创建。全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A 9/50 Role Reviewed（FI-05、MM-01～MM-07、SD-01）、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。五条工作线依次有 8、8、8、9、9 篇。
+**当前实时快照**：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已于该提交合并，绝不再向其追加。本次收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该 main 建立；SD-03 工作包开始时分支 HEAD `e1eb921a345c7add12a8b89bc2ec252a99cdfa3d`，新 PR 尚未创建。全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A 9/50 Role Reviewed（FI-05、MM-01～MM-07、SD-01）、41/50 Draft、0/50 Owner Accepted；批次 B 0/46 未开始。五条工作线依次有 8、8、8、9、9 篇。
 **独立性与状态**：同一 Work 上下文角色模拟不计 Role Reviewed；15/15 PASS 不自动通过证据门禁。本轮 SD-01 经精确正文独立 AI 角色复核后计入 Role Reviewed；SD-02 虽完成新的精确正文 15/15 复核，M3 范围缺口仍未闭合，保持 Draft。没有推定所有者接受。未连接 SAP，未执行实机、配置、数据库、API 或权限测试。
 **流程版本**：固定 SHA `939ec44036d89cd91622ab96b938be9f02479026` 未更换；IdeaLab 接入文档称 V1.1 正式版，而该固定提交 README 仍称“候选版本”，矛盾已记录于审计报告，待所有者决定是否升级。
 
@@ -44,24 +44,24 @@
 - MM-07《价格单位、数量单位与换算》完成 15 个有效闭环：普通读者 5、配置顾问 5、开发者 5；状态 reviewed，待所有者验收。正文区分 PO 订单单位、订单价格单位和教学用计价数量，例题假设已限定；未推断单位因子存储字段、发票匹配或 BAPI 字段覆盖根因。记录见 `reviews/work/2026-11-26-m4-mm07-three-role-review.md`。
 - 没有连接 SAP 系统或执行实机测试；没有声称验证客户配置、权限或生产凭证。
 
-- **最近工作包（工作线 1）**：SD-01 精确正文 blob `1b2f9c6d1bde5cbf7f526fd3819ccf3f46338b29` 经三角色各 5 个闭环后计 Role Reviewed；SD-02 精确正文 blob `587017266695199e2d8855da6981e09d612d0b72` 经三角色各 5 个闭环，固定版 grouping/编号及完整字段/API/权限证据仍缺，保持 Draft。详细记录见两篇 article review 与实时审计。
-## 当前执行状态与准确游标（2026-11-27；SD-01～SD-02 检查点）
+- **最近工作包（工作线 1）**：SD-03 当前正文 blob `dade5b834076bb588fc90b2cfc796d1efa43fdbb` 经三个独立 AI reviewer-context 对精确正文各复核 5 项，15/15 PASS。顾问首轮因 PDF 提取截断提出的 C2 FAIL，已在重新读取 SAP 官方 FSD §2.13.2.1 后撤回；交货参照来源归因通过，但一般部分交货、取消/拒绝、普通 PGI 冲销及权限仍缺目标版证据，故继续 Draft。当前游标 SD-04。详见 SD-03 review 与实时审计。
+## 当前执行状态与准确游标（2026-11-27；SD-03 检查点）
 
 - M4 批次 A 全部 50 篇文件均已在 main：当前 9 篇 Role Reviewed、0 篇 Owner Accepted、41 篇 Draft；全库 Owner Accepted 3/99。
 - 批次 B 仍为 0/46；只有批次 A 全部完成且用户在本窗口明确批准后才能开工。
-- 对原始 42 篇 Draft 已逐篇对照正文、M3 准入与现存 review；本轮 SD-01 依据精确正文复核升级 Role Reviewed，SD-02 新一轮复核完成但仍 Draft。完整 ID、链接、证据边界、循环记录模式和下一步见[逐篇审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
+- 原始 42 篇 Draft 已逐篇对照正文、M3 准入与现存 review；本轮 SD-01 依据精确正文复核升级 Role Reviewed，SD-02 与 SD-03 新一轮复核完成但仍 Draft。完整 ID、链接、证据边界、循环记录模式和下一步见[逐篇审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
 - 五条当前工作线：
 
 | 工作线 | 当前文章 | 文章状态 | 下一游标 |
 | --- | --- | --- | --- |
-| 1 | MM-08～MM-10、SD-01～SD-05 | 1 Role Reviewed、7 Draft | SD-03 |
+| 1 | MM-08～MM-10、SD-01～SD-05 | 1 Role Reviewed、7 Draft | SD-04 |
 | 2 | SD-06～SD-07、PP-01～PP-06 | 8 Draft | SD-06 |
 | 3 | PP-07～PP-09、QM-01～QM-05 | 8 Draft | PP-07 |
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 Draft | QM-06 |
 | 5 | FI-11、CO-01～CO-08 | 9 Draft | FI-11 |
 
-**当前执行顺序**：工作线 1 由 SD-03 接续，之后处理 SD-04、SD-05；再按用户指定的五条工作线顺序推进。核心证据无法补齐时，记录已查来源、具体缺口和下一步，文章继续 Draft 并转下一篇。只有目标版证据足以支持其学习目标且完成可核验的独立角色复核，才可记 Role Reviewed。Owner Accepted 只由用户明确批准。
-**本次工作包更新**：SD-01 已达 Role Reviewed；SD-02 通过 15 个当前正文独立 AI 角色检查但保留 Draft。固定版 BP grouping/编号资料未补齐；未更换 AI-Workflow SHA。
+**当前执行顺序**：工作线 1 从 SD-04 接续，之后处理 SD-05；再按用户指定的五条工作线顺序推进。核心证据无法补齐时，记录已查来源、具体缺口和下一步，文章继续 Draft 并转下一篇。只有目标版证据足以支持其学习目标且完成可核验的独立角色复核，才可记 Role Reviewed。Owner Accepted 只由用户明确批准。
+**本次工作包更新**：SD-03 当前正文经 15 项原角色复核均 PASS；顾问来源归因疑问经官方 FSD 同节复读后关闭。M3 要求的部分交货、取消/拒绝、普通 PGI 冲销及权限仍无充分证据，保持 Draft。AI-Workflow SHA 未更换。
 ## 未解决问题与证据边界
 
 继承自 M3 的主题级开放边界，限制相关主张，但不阻止独立文章：
@@ -97,7 +97,7 @@
 | SAP 实机测试 | 0；未连接 |
 | 11 个纯结构导航类别 | 已批准，不计文章 |
 
-## 工作线 4 进度（2026-11-27）
+## 工作线 4 进度（2026-11-27；历史快照，形成时批次 A 仍为 8/50 reviewed；以本文顶部实时快照为准）
 
 - **QM-06《QM 常用事务码导航》**：已建立目标版来源受限草稿及 Work 角色视角记录。文章列出 2021《Simplification List》逐项明确的事务替代/Fiori 导航变化和 QM 授权对象操作类别；逐事务用户权限映射、完整常用入口、客户角色与当前系统可用性未由来源证明，状态 `drafting`。
 - QM-06 记录 15 个同一 Work 上下文内的角色模拟闭环（读者 5、顾问 5、开发者 5），明确不是独立审查者或真人专家复核。记录见 [QM-06 Work 审查记录](reviews/work/2026-11-27-m4-workline-4-qm06-review.md)。
@@ -161,7 +161,7 @@
 
 ## 接手与状态说明
 
-PR #21 已合并，不要向该 PR 追加提交。批次 A 收尾从 `main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5` 建立的新分支 `careeros-v04-m4-batch-a-closeout-20261127` 执行。开始时重查 PR、main、分支及文章实时文件；按 IdeaLab 根 README、AGENTS、AI_WORKFLOW_INTEGRATION、CareerOS README/HANDOFF、M4 两批计划、M3 控制矩阵、逐篇准入/证据、reviews README、42 篇正文与现存 review 的顺序完成核验。固定 AI-Workflow SHA `939ec44036d89cd91622ab96b938be9f02479026` 不更换；版本标记差异需如实记录。逐篇只处理批次 A；文章有核心目标版证据缺口或没有真正独立审查时继续 Draft。Owner Accepted 只能由用户在本窗口明确批准；批次 B 必须等批次 A 完成并获明确批准。最终新 PR 保持开放，不合并。
+PR #21 已合并，不要向该 PR 追加提交。批次 A 收尾从 `main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5` 建立的新分支 `careeros-v04-m4-batch-a-closeout-20261127` 执行。开始时重查 PR、main、分支及文章实时文件；按 IdeaLab 根 README、AGENTS、AI_WORKFLOW_INTEGRATION、CareerOS README/HANDOFF、M4 两批计划、M3 控制矩阵、逐篇准入/证据、reviews README、批次 A 当前 50 篇正文与各自现存 review 的顺序完成核验。固定 AI-Workflow SHA `939ec44036d89cd91622ab96b938be9f02479026` 不更换；版本标记差异需如实记录。逐篇只处理批次 A；文章有核心目标版证据缺口或没有真正独立审查时继续 Draft。Owner Accepted 只能由用户在本窗口明确批准；批次 B 必须等批次 A 完成并获明确批准。最终新 PR 保持开放，不合并。
 
 > 后续工作线追记中的 PR #21 状态、分支 HEAD 与游标均是各条记录形成时的历史快照；PR #21 已于 `c026b3862c9a083c95cffb096f93e141276cfba5` 合并至 main。
 
@@ -302,7 +302,7 @@ PR #21 已合并，不要向该 PR 追加提交。批次 A 收尾从 `main` HEAD
 - 仍缺：成本中心主数据字段级有效期和组织配置约束、成本要素类别及日常分配/自动规则、通用凭证行为、表字段/键/API/CDS 和权限。Central Finance 对成本要素与总账账户的说明仅限其映射与初始加载场景；迁移范围/迁移源结构不外推为普通应用模型。
 - FI-07 普通库存采购完整借贷、税务与自动科目边界保持开放；SAP 未连接，无实机测试。
 - 批次 A reviewed/owner accepted 计数不变：**8/50、0/50**；全库正式接受 **3/99**。文章、闭环与证据登记分别见 [CO-02 正文](knowledge/CO/02-functions/cost-center-elements.md)、[CO-02 审查](reviews/work/2026-11-27-m4-co02-three-role-review.md)、[财务证据登记](plans/evidence-finance-m3.md)。
-- 本节提交前实时检查 PR #21：状态 open、未合并、目标 main；工作分支 careeros-v04-m4-batch1-20261126；当时工作分支 HEAD 为 488c888bcbaa8c223f60d175126861ffdeafd983。该值是本节提交前的 HEAD。
+- 本节形成时的历史快照：PR #21 状态 open、未合并、目标 main；后已于 2026-11-27 合并到 main（c026b3862c9a083c95cffb096f93e141276cfba5）。工作分支 careeros-v04-m4-batch1-20261126；当时工作分支 HEAD 为 488c888bcbaa8c223f60d175126861ffdeafd983。该值是本节提交前的 HEAD。
 - 工作线 5 下一项：CO-03《内部订单和费用归集》，按其准入路径和证据登记开始；本次没有预载 CO-03 完整研究资料。
 
 
@@ -331,12 +331,12 @@ PR #21 已合并，不要向该 PR 追加提交。批次 A 收尾从 `main` HEAD
 - PP-07 的逐事务码目标版直接证据及权限/显示修改边界仍不全；PP-08/09 的配置与对象模型目标范围仍有核心缺口。QM-01～05 分别保留各自控制矩阵中的组织/触发、检验规划、结果/UD、一般 IM 库存及财务缺口；EWM 场景未推广到普通 IM。SAP 系统未连接，实机测试为 0。
 - QM-04 正文提交 9522cb9c7b2bf00edd5efb897f92a7b1793d535a，审查记录提交 f43b8f14315f6bced7661e52d20566bb46ca0115。
 - QM-05 正文提交 2a1f7d9565915eeaf4689cb20eb8817d6c15de25，审查记录提交 6a6f58c9ba90de59e0c062544054a80a20fd613a。
-- 本工作线不改变批次 A **8/50 reviewed、0/50 owner accepted**；全库正式接受仍为 **3/99**。PR #21 保持开放、未合并。
+- 本工作线不改变批次 A **8/50 reviewed、0/50 owner accepted**；全库正式接受仍为 **3/99**。当时 PR #21 仍开放、未合并；后已于 2026-11-27 合并到 main（c026b3862c9a083c95cffb096f93e141276cfba5）。
 - 本工作线分配范围已完成；本线内没有下一篇。后续文章须由协调者另行分配。
 
 ## M4 工作线 5 更新：CO-03（2026-11-27）
 
-- 提交前实时复核 PR #21：open、未合并、base main；工作分支 careeros-v04-m4-batch1-20261126，本次 HANDOFF 更新前 HEAD 为 d6f274693efd0a47d4ac9c78ed2b05886140e234。PR 不合并。
+- 本条记录形成时的历史快照为 PR #21 open、未合并、base main；后已于 2026-11-27 合并到 main（c026b3862c9a083c95cffb096f93e141276cfba5）；工作分支 careeros-v04-m4-batch1-20261126，本次 HANDOFF 更新前 HEAD 为 d6f274693efd0a47d4ac9c78ed2b05886140e234。PR 不合并。
 - CO-03《内部订单和费用归集》正文：[knowledge/CO/02-functions/internal-orders.md](knowledge/CO/02-functions/internal-orders.md)，状态 drafting；同上下文角色视角闭环为普通读者 5、资深配置顾问 5、普通 SAP 开发人员 5。没有独立角色审查、SAP 实机测试或客户权限检查，不计入 8/50 reviewed。
 - 目标版证据范围：FSD v9.0/SP08 支持成本核算主数据与期间计划/实际报告；2021.002 迁移对象给出迁移语境的定义；SAP Learning 未锁发行版，仅作概念说明；2021.001 Central Finance 仅限中心结算状态检查。普通订单真实/统计规则、归集、预算、结算接收方、权限和数据模型仍有缺口。没有推导 FI-07 普通库存借贷、税或自动科目。
 - 审查记录：[reviews/work/2026-11-27-m4-co03-three-role-review.md](reviews/work/2026-11-27-m4-co03-three-role-review.md)。证据记录：[plans/evidence-finance-m3.md](plans/evidence-finance-m3.md)。两批执行计划已同步。
@@ -351,7 +351,7 @@ PR #21 已合并，不要向该 PR 追加提交。批次 A 收尾从 `main` HEAD
 - 正文按固定 SAP S/4HANA 2021《Simplification List》§36.8 限于状态表/对应对象、VBFA 简化、单据类别及冗余索引变更；明确其 system conversion 语境。固定 2021.000 What's New 中的 API_SALES_ORDER_SIMULATION_SRV 仅作为销售订单模拟 API 的窄范围例子。动态 FSD 只按实际读取 SPS10 快照标注，用于开票可过账至 Financial Accounting 的高层说明。
 - 完整 VBFA/后续单据字段、主键、关联基数、组织映射、FI 凭证关系、released API/CDS 合同和权限仍未闭合；不提供生产 JOIN。M3 关联的 SD-03、SD-04 正文文件当前分支不存在。SAP 系统未连接、未执行实机测试。
 - 工作线 2 已完成分配的 8 篇正文（SD-06、SD-07、PP-01～PP-06）；全部 drafting，累计 120 个同上下文模拟闭环（每篇读者/顾问/开发者各 5），本线正式独立 role-reviewed 为 0/8。批次 A 正式 reviewed 仍 **8/50**、owner accepted **0/50**；全库正式接受仍 **3/99**。SAP 实机测试为 0。
-- 本次更新前已重新读取 PR #21：open、未合并、目标 `main`；基于工作分支 HEAD `7c36b5db4904e6a18e61c293a854ab2c8c4c38d6`。PR 不合并。本工作线范围已完成；本线下一篇为“无”，后续需另行分配。
+- 本条记录形成时 PR #21 为 open、未合并、目标 `main`；后已于 2026-11-27 合并到 main（c026b3862c9a083c95cffb096f93e141276cfba5）；基于工作分支 HEAD `7c36b5db4904e6a18e61c293a854ab2c8c4c38d6`。PR 不合并。本工作线范围已完成；本线下一篇为“无”，后续需另行分配。
 
 ## M4 工作线 5 更新：CO-04（2026-11-27）
 
@@ -459,3 +459,14 @@ PR #21 已合并，不要向该 PR 追加提交。批次 A 收尾从 `main` HEAD
 - **未解决核心**：材料凭证显示入口与通用 MIGO 导航仍缺目标版 SAP S/4HANA 2021 On-Premise 固定版直接证据；GUI/Fiori/App ID、逐代码输入输出及权限映射也不完整。没有连接 SAP、没有实机或 API/配置/权限测试。
 - **计数与游标**：MM-08 15/15 原问题完成当前候选复核，但仍不计 reviewed；批次 A 仍为 8/50 reviewed、0/50 owner accepted，全库正式接受 3/99。工作线 1 下一篇 MM-09，按 M3 控制矩阵与逐篇准入路径只处理 MM-09。
 
+
+
+## 工作线 1 检查点 3：SD-03（2026-11-27）
+
+- 精确正文 blob：`dade5b834076bb588fc90b2cfc796d1efa43fdbb`，正文未修改。
+- 三个独立 AI reviewer-context 对当前精确正文各复核 5 个问题，15/15 PASS。顾问首轮 C2 FAIL 源于 PDF 文本提取未显示同节后半段；直接重读官方 FSD 后，确认 §2.13.2.1 明列 sales order、stock transport order 与 no reference 三种交货参照，顾问撤回 FAIL 并确认 PASS。
+- FSD 为动态 latest Version 11.0（2026-07-22），适用于 S/4HANA 2021 SPS10；不能外推为 2021 初始版或其他补丁的通用证据。
+- 一般部分交货、订单/交货取消或拒绝、普通 PGI 冲销和客户授权仍未闭合；4RQ 特殊 3PL 索引摘录不能支持这些一般规则。SD-03 保持 Draft，不计入正式 Role Reviewed。
+- 计数保持：批次 A 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99 Owner Accepted；批次 B 0/46 未开始。
+- 最新游标：W1 SD-04；W2 SD-06；W3 PP-07；W4 QM-06；W5 FI-11。
+- 未连接 SAP；未执行实机、配置、数据库、API 或权限测试。
