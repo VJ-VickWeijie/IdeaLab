@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-27 更新）
 
-> 当前交接入口：[HANDOFF.md](HANDOFF.md)。main 起始基线 `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并并关闭，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 已顺序推进至 QM-01；最终正文 blob `4519e14b896f0aa3cd71af53e74cb378654cd4d4` 经三个独立 AI reviewer-context 各 5 项复核（15/15 边界 PASS），但质量组织/岗位、检验批触发、设置和授权仍缺目标版直接证据，故保持 Draft。固定版 Help 页面本轮直开 0 行，FSD latest 索引 v9.0/直开 v11.0 版本差异已披露。新 PR 尚未创建。全库 Owner Accepted 3/99；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。工作线游标：W1、W2 已完成、W3 QM-02、W4 QM-06、W5 FI-11。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`，IdeaLab 接入文件与固定提交 README 的版本标签差异继续记录。
+> 当前交接入口：[HANDOFF.md](HANDOFF.md)。main 起始基线 `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并并关闭，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 已顺序推进至 QM-02；最终正文 blob `53b91de8ccaebf5b69c1a7519e60b023555ee874` 经普通读者、资深配置顾问、开发者三个独立 AI reviewer-context 各 5 项复核，边界问题已修订并最终复验通过（15/15），仍因 M3 核心证据缺口保持 Draft。来源 05 精确类型映射、手工建批类型选择、完整跳检/不建批规则、一般 QIR、EWM 与财务证据未闭合；固定版页面本轮直开不可用，动态 2025 页面未作 2021 证据。新 PR 尚未创建。全库 Owner Accepted 3/99；批次 A Role Reviewed 9/50，Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。工作线游标：W1、W2 已完成、W3 QM-03、W4 QM-06、W5 FI-11。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 接入文档与固定提交 README 的版本标签差异继续记录。
 
 ## 当前进度（2026-11-27）
 
@@ -12,8 +12,13 @@
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 篇 Draft |
 | 5 | FI-11、CO-01～CO-08 | 9 篇 Draft |
 
-当前工作线游标：W1、W2 已完成、W3 QM-02、W4 QM-06、W5 FI-11。PP-01～PP-09 与 QM-01 均由三个独立 AI reviewer-context 对最终正文各完成 5 项复核；复核只确认边界表达，M3 核心证据仍缺的文章继续 Draft、计数不变。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
+当前工作线游标：W1、W2 已完成、W3 QM-03、W4 QM-06、W5 FI-11。PP-01～PP-09 与 QM-01～QM-02 均由三个独立 AI reviewer-context 对最终正文各完成 5 项复核；复核只确认边界表达，M3 核心证据仍缺的文章继续 Draft、计数不变。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
 
+
+
+## QM-02 工作包更新（2026-11-27）
+
+QM-02 最终正文 blob `53b91de8ccaebf5b69c1a7519e60b023555ee874` 已完成三个独立 AI reviewer-context 各 5 项精确正文复核。正文保留固定版保存记录支持的 01/01 示例、一个来源可配多个类型、自动建批时的类型确定、收货条件及有限库存关系；移除留存证据未支持的来源 05/类型 05 精确配对和手工建批多类型选择细节。库存过账建议与后台自动过账被限于来源记录的检验目录类型 3 场景。来源 #1 同步注明手工规则未核实。当前固定版 Help 重开失败，动态 2025 FPS 页面未作为 2021 证据。完整 skip inspection/跳批/不建批、一般 QIR、EWM 与普通 IM、库存估价/FI、客户配置与权限仍是 M3 缺口；文章保持 Draft，不计 Role Reviewed。工作线计数不变，W3 下一篇 QM-03。未连接 SAP。详见[文章](knowledge/QM/02-functions/inspection-type-lot.md)、[独立复核记录](reviews/work/2026-11-27-m4-workline-3-qm02-review.md)、[证据记录](plans/qm-gr-inspection-2021-m3.md)及[逐篇审计](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
 
 ## QM-01 工作包更新（2026-11-27）
 
