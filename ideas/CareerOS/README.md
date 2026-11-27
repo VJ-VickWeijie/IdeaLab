@@ -1,6 +1,6 @@
 # CareerOS｜项目总入口（2026-11-27 更新）
 
-> 当前交接入口：[HANDOFF.md](HANDOFF.md)。实时基线：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并至 `main`，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该基线建立，当前按顺序完成至 PP-04；PP-04 精确正文 blob 为 `26d1459be3a9f6999dacc414fb8ca634da793cda`，仍为 Draft。最新收尾提交 `f1cc02048585b54c0e5330d0701b18aef2bc54eb`；新 PR 尚未创建。当前全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。工作线游标：W1 已完成、W2 PP-05、W3 PP-07、W4 QM-06、W5 FI-11。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
+> 当前交接入口：[HANDOFF.md](HANDOFF.md)。实时基线：`main` HEAD `c026b3862c9a083c95cffb096f93e141276cfba5`；PR #21 已合并至 `main`，不再向其追加。批次 A 收尾分支 `careeros-v04-m4-batch-a-closeout-20261127` 从该基线建立，当前按顺序完成至 PP-05；PP-05 精确正文 blob 为 `1fffe1c2b6e8e0817e785f64c11f62e6763a58e0`，仍为 Draft。PP-05 工作包正在同步提交；新 PR 尚未创建。当前全库 Owner Accepted 3/99（FI-01～FI-03）；批次 A Role Reviewed 9/50（FI-05、MM-01～MM-07、SD-01），Draft 41/50、Owner Accepted 0/50；批次 B 0/46 未开始。工作线游标：W1 已完成、W2 PP-06、W3 PP-07、W4 QM-06、W5 FI-11。AI-Workflow 固定 SHA 保持 `939ec44036d89cd91622ab96b938be9f02479026`；IdeaLab 与固定提交 README 的版本标签差异继续记录。
 
 ## 当前进度（2026-11-27）
 
@@ -12,9 +12,13 @@
 | 4 | QM-06～QM-08、FI-04、FI-06～FI-10 | 9 篇 Draft |
 | 5 | FI-11、CO-01～CO-08 | 9 篇 Draft |
 
-当前工作线游标：W1 已完成、W2 PP-05、W3 PP-07、W4 QM-06、W5 FI-11。PP-01～PP-04 均经三个独立 AI reviewer-context 各 5 项复核；四篇只通过边界表达检查，M3 核心证据仍缺，继续 Draft、计数不变。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
+当前工作线游标：W1 已完成、W2 PP-06、W3 PP-07、W4 QM-06、W5 FI-11。PP-01～PP-05 均经三个独立 AI reviewer-context 各 5 项复核；五篇只通过边界表达检查，M3 核心证据仍缺，继续 Draft、计数不变。逐篇 M3 准入、目标版证据、审查记录、具体缺口和建议状态见[实时审计报告](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。新 PR 尚未创建；收尾完成后创建并保持开放，不自行合并。批次 B 只能在批次 A 全部完成并获用户明确批准后开始。
 
-## PP-04 工作包更新（2026-11-27）
+## PP-05 工作包更新（2026-11-27）
+
+PP-05 最终正文 blob 为 `1fffe1c2b6e8e0817e785f64c11f62e6763a58e0`。动态 SAP S/4HANA 2021 FSD v11.0/SPS10 仅支持计划订单转换、TECO/关闭差异、确认可能触发的一些动作及货物移动重处理；动态 `latest` 来源曾有 v9.0/SPS08 与 v11.0/SPS10 抓取差异，已披露且无本地 PDF 哈希。固定版 2021.000/BJ5 Help 仅使用 SAP 官方索引摘要，规范 HTML 直开无可读正文；2025 FPS01/FPS02 和未锁版本页面未用于 2021 通则。读者、配置顾问、开发者三个独立 AI reviewer-context 各对最终精确正文完成 5 项复核，15/15 PASS 只说明边界和措辞通过，不代表真人专家或系统验证。完整订单状态机、一般释放条件、确认取消后果与凭证逆转、库存动作触发/失败恢复、API/schema/授权和 FI/CO 规则仍未闭合，PP-05 保持 Draft、不计 Role Reviewed。批次 A 仍为 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99 Owner Accepted；批次 B 0/46。W2 下一篇 PP-06；PR #21 已合并，新 PR 尚未创建。未连接 SAP、未做实机、配置、数据库、API 或权限测试。详见 [PP-05 正文](knowledge/PP/02-functions/production-order.md)、[审查记录](reviews/work/2026-11-27-m4-pp05-three-role-review.md)、[证据台账](plans/evidence-logistics-m3.md)与[逐篇审计](reviews/work/2026-11-27-m4-batch-a-reconciliation-audit.md)。
+
+### PP-04 历史工作包更新（2026-11-27）
 
 PP-04 最终正文 blob 为 `26d1459be3a9f6999dacc414fb8ca634da793cda`。动态 S/4HANA 2021 FSD v11.0/SPS10 仅支持 MRP 与 capacity planning 的范围区分；固定版 2021.000 的 J44 与 Planned Orders API 仅用官方搜索索引摘要，canonical HTML 直开均为 0 可读行。搜索索引曾显示动态 FSD v9.0/SPS08，直接打开则为 v11.0/SPS10；差异和无本地 PDF 哈希均已披露。2025 FPS01 Help 页面与转换专用 Simplification List 未被用作 S/4HANA 2021 通用算法依据。读者、配置顾问、开发者三个独立 AI reviewer-context 各完成 5 项质询及精确正文复核，15/15 PASS 仅代表证据边界与措辞通过；reviewer-context 不是人工 SAP 专家。净需求/库存日期纳入、批量规则、来源选择、日期/firming/MRP 运行差异、API 完整合同等核心证据仍缺，因此 PP-04 保持 Draft，不计 Role Reviewed。批次 A 仍为 9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99 Owner Accepted；批次 B 0/46。W2 下一篇 PP-05；PR #21 已合并，新 PR 尚未创建。未连接 SAP、未做系统/API/数据库/权限测试。详见 [PP-04 正文](knowledge/PP/02-functions/mrp-planned-order.md)、[审查记录](reviews/work/2026-11-27-m4-pp04-three-role-review.md) 和 [证据台账](plans/evidence-logistics-m3.md)。
 
@@ -24,7 +28,7 @@ PP-03 最终正文 blob 为 a84cbe704635ee67f58ce5d55c1db75b06086bc0。动态 SA
 
 ## 历史进度日志（当时快照；以当前对账报告为准）
 
-> 以下条目记录各自写入时的状态；其中 PR #21 曾处于开放状态，后来已合并至 main。
+> 以下条目保留各自写入时的历史进度；PR #21 当前已于 2026-11-27 合并至 main。
 
 - Workline 1：SD-01《销售业务与组织结构》已提交证据受限草稿及三角色审查记录；普通读者、配置顾问视角、开发者视角各 5 个原问题闭环，共 15/15 AI 问题—答复—修订—原角色复核。固定版组织配置和跨公司开票适用范围仍未闭合，文章保持 drafting，不计入 8/50 reviewed；批次 A 仍 0/50 owner accepted。下一篇 SD-02。详见 [SD-01 正文](knowledge/SD/01-foundations/organization.md)、[审查记录](reviews/work/2026-11-27-m4-sd01-three-role-review.md) 与 [HANDOFF](HANDOFF.md)。
 - Workline 1：SD-02《客户业务伙伴与物料主数据》已提交限缩草稿和三角色审查记录；普通读者、配置顾问视角、开发者视角各完成 5 个原问题闭环，共 15/15 AI 问题—答复—修订—原角色复核。BP grouping/编号、完整伙伴确定配置、物料销售视图/字段/API/权限仍未闭合，保持 drafting、不计入 8/50 reviewed；批次 A 仍为 0/50 owner accepted。下一篇 SD-03。详见 [SD-02 正文](knowledge/SD/01-foundations/customer-product-master.md)、[审查记录](reviews/work/2026-11-27-m4-sd02-three-role-review.md) 与 [HANDOFF](HANDOFF.md)。
