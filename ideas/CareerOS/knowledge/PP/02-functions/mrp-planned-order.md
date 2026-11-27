@@ -46,8 +46,8 @@ SAP 2021 SPS10 的 FSD 说，计划运行检查材料可用性，并在发现短
 
 ## 2021 版可直接确认的有限入口
 
-1. **MRP 结果监控**：固定版 SAP Help 页面“Monitor Material Coverage”标注 SAP S/4HANA 2021（Oct 2021，version 2021.000）及 Scope Item J44。它记载该应用的两个新增能力：intraday supply，以及参照 safety time 的 shortage 显示。此页是特定应用功能说明，不是净需求或批量算法手册。
-2. **计划订单 API**：固定版 SAP Help 的 2021 What's New 页面记录 Planned Order OData API（API_PLANNED_ORDERS），可读取、创建、更改和删除计划订单，并列出 BJ5、J44 范围；页面建议使用 Planned Order OData V4 服务管理计划订单。这只证明资料列出的 API 能力和版本/场景范围，不证明客户系统已启用、调用者已获授权，也不提供完整数据字段契约。
+1. **MRP 结果监控**：固定版 SAP Help 官方检索索引的“Monitor Material Coverage”条目标注 SAP S/4HANA 2021（Oct 2021，version 2021.000）及 Scope Item J44，并摘录该应用两个新增能力：intraday supply，以及参照 safety time 的 shortage 显示。规范 HTML 直开为 0 行可读正文，因此本文只按官方索引摘要支持这两个有限应用能力；它不是净需求或批量算法手册。
+2. **计划订单 API**：固定版 SAP Help 官方检索索引中的 2021 What's New 条目记录 Planned Order OData API（API_PLANNED_ORDERS），可读取、创建、更改和删除计划订单，并列出 BJ5、J44 范围；索引还建议使用 Planned Order OData V4 服务管理计划订单。规范 HTML 直开为 0 行可读正文，故本文只按索引摘要支持该 API 的有限版本/场景范围，不证明客户系统已启用、调用者已获授权，也不提供完整数据字段契约。
 3. **MRP 运行准备事项**：SAP《Operations Guide for SAP S/4HANA 2021》所读文件版本 11.0（2026-07-22，SPS10）在 MRP 运维章节说明了 MRP 记录、物料主数据 MRP 视图/MRP type 前提及 MRP Live 的总需求清理事项。这些是 SPS10 运维准备提示，不是完整的计划资格清单；不能取代计划算法说明，也不能证明某客户材料会参加某次运行、某客户系统满足前提或 MRP Live 与经典计划结果等价。
 4. **高层范围提示**：同一 FSD 的第 2.8.3.1 节描述计划运行、短缺补货提议、供需监控和计划订单性质。因为这是动态 URL 上的 SPS10 文件快照，正文已披露其文件版本和日期；它不是 2021.000 初始版页面。
 5. **迁移范围内的物料主数据变化**：SAP S/4HANA 2021 Simplification List §3.24（PDF pp.150–151）属于系统转换/升级说明，提到 MRP 主数据字段变化，包括 MRP1 的 Unit of Measure Group，以及系统转换后配额安排的处理变化。它不能代替日常 MRP 的净需求或批量计算说明；本文不从这项迁移说明推导计划结果。
