@@ -27,7 +27,7 @@
 | SD-04 | [F：2021 SPS10；11.0，PDF 第 126 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=126)；§2.10.2.8 Sales Billing | 开票单据可传递 FI | 并非所有开票的收入确认、税和收款逻辑 |
 | SD-05 | [S：2021 初版/FPS01/FPS02；1.25，PDF 第 951 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=951)；DIMP 场景快速录入兼容变更 | 特定 DIMP 快速录入的变更段提到 VA03 | 不能据此推断所有系统 VA03 的授权及完整作用 |
 | SD-06 | [F：2021 SPS10；11.0，PDF 第 118 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=118)；§2.10.2.2 Price Management | 价格管理包含定价流程配置 | 准确 IMG 节点、业务分支和访问权限 |
-| SD-07 | [S：2021 初版/FPS01/FPS02；1.25，PDF 第 789 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=789)；SD data model simplifications | 特定转换场景涉及 VBUK/VBUP 的状态和追加字段迁移；不推断所有状态字段均同样迁移 | 完整单据流字段、主键、接口及关联基数 |
+| SD-07 | [S：2021 初版/FPS01/FPS02；1.25，PDF §36.8 第 789–790 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=789)；[§36.9 第 791–793 页](https://help.sap.com/doc/f2591a6901344c97a5e2029cc8f3703e/2021/en-US/SIMPL_OP2021.pdf#page=791) | §36.8 支持特定转换场景下状态表整合和追加字段转换；§36.9 补充早期目标版本的 VBFA/STUFE 间接关系历史，不是 2021 通用字段/键/基数规则 | 完整单据流字段、主键、接口、关联基数和客户本地转换历史仍待核；新增资料仅作历史边界提醒，见本文件 SD-07 来源续核附录 |
 | PP-01 | [F：2021 SPS10；11.0，PDF 第 70 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=70)；§2.8.3.1 Material Requirements Planning | 生产/客户需求与供应计划的范围 | 组织结构及所有制造模式的业务边界 |
 | PP-02 | [F：2021 SPS10；11.0，PDF 第 67 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=67)；§2.8.2.1 Production BOM Management | 生产 BOM 是产品组件的结构化清单 | 有效期、替代项选择和具体表/字段 |
 | PP-03 | [F：2021 SPS10；11.0，PDF 第 68 页](https://help.sap.com/doc/e2048712f0ab45e791e6d15ba5e20c68/2021/en-US/FSD_OP2021_latest.pdf#page=68)；§2.8.2.2 Master Recipe/Routing Management | 工艺路线/配方作为生产过程主数据的总体作用 | 工作中心完整定义、工序选择和成本/产能参数 |
@@ -139,3 +139,12 @@ Work 于 2026-11-26 从 SAP 官方 S/4HANA 2021 动态 FSD 直接定位 §2.12.4
 - SAP 官方静态 [What's New in SAP S/4HANA 2021 FPS01](https://help.sap.com/doc/b870b6ebcd2e4b5890f16f4b06827064/2021.001/en-US/WN_OP2021_FPS01_EN.pdf#page=96)本轮直接打开并核对 §3.5.2.1：PSFX 固定价格只用于订阅订单的一次性价格处理（S/4HANA 2021 FPS01）；PDF p.96–97 列出该专项条件类型与定价程序活动。正文对此限定准确，不推广到初始版或普通销售订单。
 - 对动态 FSD_OP2021_latest.pdf 本轮再次直接打开，Document Version 11.0（2026-07-22），文件记录 SPS10。先前 SD-06 角色记录曾记录同一 latest URL 的旧读取为 Version 9.0（2025-07-23，SPS08）；这反映动态响应随时间更新，不作为固定版主张证据。正文已排除此来源。
 - **门禁结论**：固定证据只支持以上三个示例。通用销售配置树、其对应行为/业务分支、交货/开票与科目决定、只读访问路径/授权仍未闭合；SD-06 继续 Draft。下一步是逐项获取固定版 2021 的直接配置活动及适用前提，并取得已授权的目标系统只读访问说明；不得补写未证节点或做生产修改。未连接 SAP，未进行 IMG、事务码、权限或业务单据测试。
+
+
+## SD-07 2026-11-27 固定版来源续核
+
+- 官方 SAP《Simplification List for SAP S/4HANA 2021》Document Version 1.25（2022-05-25）封面明确覆盖 Initial Shipment、FPS 1、FPS 2。本轮直接打开该静态 PDF 并复读 §36.8–36.9：§36.8 印刷页 789–790 说明 VBUK/VBUP 状态字段迁入列明的单据表、VBFA 简化、VBTYP/VBTYPL 变化及特定追加字段转换前提；不构成完整 DDIC/API 数据字典。
+- §36.9（印刷页 791–793）讨论早期目标发行版和系统历史：1511/1610 初期对 VBFA 的 STUFE、间接关系有特定变化，后续版本重新存储间接关系；该段指出表及内容不兼容变化、直接读取 VBFA 的客户代码需检查，部分具体历史转换需要文档流重建。它不提供 SAP S/4HANA 2021 的完整键、字段、关系基数/API 合同，也不能确定当前客户系统经历过哪条转换路径。正文已新增这条范围边界，不把它推广成 2021 通用规则。
+- 固定版 SAP Help “OData API: Sales Order - Simulate (A2X)” 搜索结果给出 2021-10、Available As Of SAP S/4HANA 2021、Scope Item BD9，以及 API_SALES_ORDER_SIMULATION_SRV 的头/项目级扩展属性；页面 direct open 返回 0 行。本证据只支撑销售订单模拟 API 的窄例，不是完整发布接口目录/字段合同或目标系统授权证明。
+- 官方动态 FSD PDF direct open 显示 Version 11.0（2026-07-22），封面为 SAP S/4HANA 2021；本来源只支持正文标明的 SPS10 高层开票范围，不能代表固定 2021.000 初始版。
+- **门禁结论**：M3 “限缩可写”仍要求单据流字段、主键、接口及关联基数。§36.9 是历史分支，不闭合这些目标；SD-03/04、FI-11 仍为 Draft。SD-07 继续 Draft，未执行 SE16、数据库、ABAP、API 或权限测试。
