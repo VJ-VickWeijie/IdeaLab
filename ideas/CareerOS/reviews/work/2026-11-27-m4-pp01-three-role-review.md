@@ -4,8 +4,9 @@
 - 工作包：M4 批次 A，工作线 2
 - 文章路径：ideas/CareerOS/knowledge/PP/01-foundations/production-organization.md
 - 当前状态：drafting
-- 角色视角循环：普通读者 5/5、资深 SAP 配置顾问 5/5、普通 SAP 开发人员 5/5，共 15 个已完成答复、修订判断和复核的同上下文循环。
-- 执行上下文：同一 Work 上下文内角色视角模拟；没有真人专家或独立 Agent。模型身份未在本环境显示。此记录不构成独立审查或 M5 验收。
+- 原始角色模拟：普通读者、资深 SAP 配置顾问、普通 SAP 开发人员各 5/5，共 15 个同一 Work 上下文闭环；这些不构成独立审查。
+- 新增独立复核：三个独立 AI Agent reviewer-context 各对最终正文提出并复核 5 项，15 项均 PASS（仅表示证据边界/措辞安全）；没有真人专家签核。核心目标证据仍缺，因此文章不计 Role Reviewed。
+- 执行上下文：独立 AI reviewer contexts；模型身份未在本环境显示。此记录不构成 M5 验收。
 - SAP 系统：未连接；实机验证为 0。
 
 ## 1. 准入判断
@@ -157,13 +158,14 @@ M3 逐篇分流将 PP-01 标为“暂缓核心”。detail-logistics 规划要�
 - 当前稿件没有把动态 latest、较新版本、ECC 资料或常识写成 S/4HANA 2021 确定事实。
 - 15 个问题—答复—修订—复核视角循环已记录；它们来自同一个 Work 上下文，不能证明独立审查。
 - 核心证据缺口仍在：固定 2021 的 Plant 组织定义及分配关系、MTS/MTO 业务边界、离散/流程制造差异和目标系统适用前提。
-- 文章保持 drafting；不计入批次 A reviewed 或 owner accepted。只有取得固定版直接证据并补足核心教学内容、再由独立上下文复核后，才可考虑 reviewed。
+- 原有 15 个同 Work 上下文模拟已与新独立复核分开记录。最新精确正文经三个独立 AI reviewer-context 各复核 5 项，边界问题均 PASS；这不证明文章的核心教学目标已完成。
+- 文章保持 `drafting`；不计入批次 A Role Reviewed 或 Owner Accepted。只有取得足够的固定版直接证据、补足核心教学内容并再次核对状态门槛后，才可考虑 Role Reviewed。
 
 ## 5. 进度
 
 - 新建文章：1 篇 drafting。
-- 批次 A：仍为 8/50 reviewed、0/50 owner accepted。
-- CareerOS owner accepted：3/99。
+- 批次 A：9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted（PP-01 不改变计数）。
+- CareerOS Owner Accepted：3/99；批次 B：0/46 未开始。
 - 下一篇：PP-02《物料清单 BOM》，路径以 M3 逐篇分流为准。
 - SAP 实机测试：0。
 
@@ -174,3 +176,40 @@ M3 逐篇分流将 PP-01 标为“暂缓核心”。detail-logistics 规划要�
 - **P2 固定 PDF 直接复读**：SAP《What's New in SAP S/4HANA 2021 SPS04》Document Version 1.0（2023-05-17），§3.1.1 / 印刷页 13，列出适用于 PI Sheet / work instruction HTML5 支持功能的 MTS discrete、MTS process、MTO process 等 Scope Item 名称。它不定义完整制造模式。
 - **排除的近似资料**：检索到的 Plant/Corporate Structure 页面为 2025 版；通用 Make-to-Order 与 MRP Area 页面未锁定 S/4HANA 2021 On-Premise；BJE 页面适用 S/4HANA Cloud 2021。均未用于本文目标版事实。
 - **核心门禁**：SPS04 静态清单仍只支撑特定功能的模式名称，未补足 Plant 生产组织职责、MTS/MTO 需求/库存边界、离散/流程制造差异、成本和权限。PP-01 继续 Draft。未连接 SAP，未做系统或权限测试。
+
+
+## 2026-11-27｜最终正文的独立角色复核
+
+**复核对象**：PP-01 正文精确 blob `2c8d036bcedc137e5a0cc13ee1846719d2006bd9`。作者在首轮问题后修订了 P2 的 Customizing 激活范围说明，并删除第 5 节重复的来源条目；随后原审查角色上下文复核该最终正文。以下记录与原先 15 个同 Work 模拟闭环分开。
+
+### 普通读者 reviewer-context（5 项）
+
+| # | 质询 | 作者答复/处理 | 最终复核 |
+| --- | --- | --- | --- |
+| 1 | Plant 在生产计划、物料计划和执行中承担什么角色？ | 不从常识或其他版本补定义；固定版直接来源缺失，核心问题保留未闭合。 | PASS：正文明确缺口；不代表 Plant 学习目标已达成。 |
+| 2 | P1/P2 能否解释 MTS/MTO 的需求、库存、计划边界？ | 不从 Scope Item 名称推导通用规则。 | PASS：规则仍列为未知，核心目标未达成。 |
+| 3 | 离散与流程制造差异能否按词义补写？ | 不推导 BOM/配方、订单或执行差异，等待固定版直接证据。 | PASS：正文未以常识补写。 |
+| 4 | P2 Scope Item 清单是否为完整制造模式目录？ | 保留 §3.1.1 仅针对 PI Sheet/work-instruction HTML5 功能范围的限定；新增说明 enhancement 激活也只针对该功能。 | PASS：未外推为完整目录或客户系统能力。 |
+| 5 | P1 官方索引是否足以定义业务或证明系统现状？ | 保留官方检索索引摘录、direct open=0 的访问限制；仅记录可见范围标签。 | PASS：未推导业务定义或客户系统状态。 |
+
+### 资深 SAP 配置顾问 reviewer-context（5 项）
+
+| # | 质询 | 作者答复/处理 | 最终复核 |
+| --- | --- | --- | --- |
+| 1 | Plant 与公司代码、MRP 区域、供应区域、存储地点、工作中心的分配是什么？ | 不从 ECC、常识或 2025 页面补写；组织职责和分配关系仍待目标版固定直接证据。 | PASS：§3/§4 将其保留为未闭合。 |
+| 2 | MTS/MTO 如何关联需求、库存分段、计划及成本对象？ | 不由 P1/P2 名称推导；逐项作为独立证据缺口。 | PASS：没有通用规则或案例外推。 |
+| 3 | 离散/流程制造对 BOM/配方、Routing、生产/流程订单和报工有何差异？ | 不作词面推断，等待 2021 On-Premise 直接资料。 | PASS：完整对象/执行差异继续未闭合。 |
+| 4 | P1 2021.000 与 P2 2021 SPS04 的版本/范围能否合并外推？ | 明确 P1 为官方索引且页面直开 0 行；P2 为 SPS04 静态 PDF，仅限 HTML5 功能范围。 | PASS：未把 SPS04 列表外推到初始版、全部 SPS 或完整制造目录。 |
+| 5 | 能否据此说明库存估价、FI/CO 分录、成本与结算因果？ | 不保留任何因果或借贷方向；成本/库存/FI/CO 分别待证。 | PASS：这些内容仍列未闭合，P1/P2 未被用于财务主张。 |
+
+### 普通 SAP 开发人员 reviewer-context（5 项）
+
+| # | 质询 | 作者答复/处理 | 最终复核 |
+| --- | --- | --- | --- |
+| 1 | P1 的 CDS Scope Item 标签是否证明完整数据/API 合同？ | 只用官方索引支持范围名称；不推导字段、全量可读性或 released API。 | PASS：无字段/接口合同外推。 |
+| 2 | Scope 标签、许可、部署、激活及 P2 enhancement 激活是否不同？ | 新增句明确 P2 enhancement 激活针对 HTML5 功能，不证明任一客户 Scope Item 已获许可、部署或启用。 | PASS：限定与 SAP SPS04 功能说明一致，未混同状态。 |
+| 3 | 是否能推导 Plant 组织键、表字段、CDS 键或关联？ | 不从 CDS 标题推导数据模型；物理表、字段、键和权限均待核。 | PASS：正文没有未证数据模型/API 示例。 |
+| 4 | 是否能从 app/function Scope 推断普遍 MTS/MTO 或制造模型？ | 不从范围名推导订单模型、制造模式全集或客户配置。 | PASS：P2 被限定为 HTML5 功能适用范围。 |
+| 5 | SAP 实机、配置、数据库、API 或权限是否已验证？ | 明确保留未连接 SAP、无实机测试；客户状态和权限未验证。 | PASS：没有声称执行未做测试。 |
+
+**结论**：三个独立 AI reviewer-context 各 5 项均在最终正文上完成“质询—作者答复/修订判断—原角色复核”，合计 15/15 PASS；PASS 仅说明当前窄范围措辞没有把证据外推。M3 将 PP-01 列为“暂缓核心”；Plant 组织职责及分配、MTS/MTO 业务边界、离散/流程制造对象与执行差异，以及相关 BOM/MRP/生产订单/成本/库存影响，仍缺足够的 SAP S/4HANA 2021 On-Premise 固定版直接证据。故文章继续 `drafting`，不计入 Role Reviewed 或 Owner Accepted。M3 控制矩阵没有 PP-01 独立行；逐篇门槛来自 triage、detail-logistics 与 evidence-logistics。本轮未连接 SAP，未执行系统、配置、数据库、API 或权限测试。
