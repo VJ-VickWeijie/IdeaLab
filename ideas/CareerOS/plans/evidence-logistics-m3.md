@@ -109,3 +109,12 @@ Work 于 2026-11-26 从 SAP 官方 S/4HANA 2021 动态 FSD 直接定位 §2.12.4
 再次直接定位 SAP 官方 `FSD_OP2021_latest.pdf` §2.13.2.1 *Delivery Management*（本轮已识别文档 Version 11.0，2026-07-22，S/4HANA 2021 SPS10）：PDF 正文对 Outbound Deliveries 列出 sell-from-stock、returns 和 stock transfer 场景；同节 Key Features 又明确出库交货可以“with reference to a sales order”、“with reference to a stock transport order”或“without any reference”（SAP Help PDF 提取行 4337–4340、4375；打印页约 177–179）。因此，SD-03 正文中把 sell-from-stock 作为受限示意、同时明确交货可从其他场景产生并非所有 delivery 都源自销售订单的来源归因，能由该动态 SPS10 文件对应章节支持；无需为此更改文章。
 
 此补充只解决上述有限来源定位，不将动态 FSD 升格为不可变的 S/4HANA 2021 初始版依据；正文仍需保留 SPS10 边界。一般部分交货、订单/交货取消或拒绝、普通 PGI 冲销及客户权限仍未闭合。此前登记的固定 2021 4RQ 特殊 3PL 索引候选仍不可用于这些一般规则。
+
+
+## 2026-11-27 目标版来源续核｜SD-04 定价、开票与应收
+
+- 重新审读批次 A 当前 SD-04 正文 blob `7d349641c104cffa49f375ec2b5107a5a9f5dda6`、M3 准入（“部分 / 限缩可写”）、逐篇范围与现有 15 项审查记录。正文已有 FSD 高层开票/应收边界，明确将定价条件、税、收入确认/FI 分录、客户系统实际 AR 关联、收款差异、银行资金及权限留空。
+- SAP 官方搜索返回固定 `2021.000` 页面标题 **CDS Views for Preliminary Billing Documents, Billing Document Requests, and Billing Due List Items**。本轮直接打开该帮助页得到零条可读正文，因此只确认有该题名的固定版资料入口，不用搜索摘录推断 CDS 字段、发布状态、文档关系或定价/AR 行为。
+- “Pricing in Sales Documents”搜索结果来自未标定版本的通用 SAP Help 页；页面未能直接打开，也不能证明其适用于 S/4HANA 2021 On-Premise，未作为目标版依据。此次搜索命中的税务、Billing Processing、Condition Technique 等内容标记为 2025 FPS01 或其他较新版本，明确排除。
+- 对 `FSD_OP2021_latest.pdf` 的搜索索引出现较早的 Version 9.0 / 2025 摘录，与 M3 已直接打开并记录的 Version 11.0（2026-07-22，S/4HANA 2021 SPS10）不是同一动态响应。本轮继续以此前直接读取的版本记录为本篇现有高层证据，不将较旧搜索摘录混入，也不宣称固定初版。
+- **结论与下一步**：没有获得可直接复读的 2021 固定版资料，足以支撑通用条件定价、币种/税、收入确认与具体 FI 借贷、付款/银行资金关系。后续应逐项寻找 SAP 官方 2021.000/明确 FPS 的直接正文或可复核归档，逐项限定业务条件；在此之前 SD-04 保持 Draft。SD-03、FI-06 虽在分支存在但均 Draft；M3 依赖 PROCESS-02 当前不在批次 A 分支，不能用其替代证据。未连接 SAP、未执行系统/API/配置/权限测试。
