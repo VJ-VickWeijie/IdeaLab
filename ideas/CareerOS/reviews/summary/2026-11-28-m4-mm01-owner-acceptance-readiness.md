@@ -9,7 +9,7 @@
 - PR #21 已于 2026-11-27 合并并关闭，合并提交为 c026b3862c9a083c95cffb096f93e141276cfba5；不向该 PR 追加提交。
 - main 核查时 HEAD：c026b3862c9a083c95cffb096f93e141276cfba5。
 - 收尾分支：careeros-v04-m4-batch-a-closeout-20261127；核查时 HEAD：123c993bfe06a66c244b18cc149ea1fd21a53236。核查时该分支尚无 PR。
-- 当前批次 A 统计以最新 README/HANDOFF 为准：9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99 Owner Accepted。MM-01 仍是 Role Reviewed，不计入 Owner Accepted。
+- 当前批次 A 统计以最新 README/HANDOFF 为准：9/50 Role Reviewed、41/50 Draft、0/50 Owner Accepted；全库 3/99 Owner Accepted。MM-01 仍是 Role Reviewed，不计入 Owner Accepted。2026-11-27 逐篇审计保留其较早的 8/50 历史快照；此处不回改总审计。
 - AI-Workflow 固定 SHA 继续为 939ec44036d89cd91622ab96b938be9f02479026；本工作包未更改流程版本或审批规则。
 
 ## 正文与复核版本对账
@@ -29,7 +29,7 @@
 
 [M3 物流证据台账](../../plans/evidence-logistics-m3.md)记录：M3 阶段协调者和独立开发者曾读取该固定版页面；Work 于 2026-11-26 重新打开并确认选择器显示 2021 (Oct 2021)。台账同时标出顾问复核者无法在其工具中独立重开页面及来源范围限制。[MM/QM 来源复核记录](../../plans/review-evidence-mm-qm-m3.md)也说明本轮无法重开固定版正文，不能把该轮写成新的一次独立原文复读。
 
-本次核查再次尝试打开同一 2021.000 URL，当前网页读取工具返回不可访问。搜索可读到的同名 SAP Help 页面标注为 SAP S/4HANA Cloud 2025 FPS01；该内容未被用来证明 S/4HANA 2021。故本报告的 2021 证据依据是仓库中可追溯的既往固定版直接读取记录和其明确限定的规则摘要，而不是本次对 SAP 页面的独立重读。
+本次核查再次尝试打开同一 2021.000 URL，当前网页读取工具返回不可访问。搜索可读到的同名 [SAP Help 页面](https://help.sap.com/docs/SAP_S4HANA_CLOUD_PE/af9ef57f504840d2b81be8667206d485/2b7eb65334e6b54ce10000000a174cb4.html)标注为 SAP S/4HANA Cloud 2025 FPS01；该内容未被用来证明 S/4HANA 2021。故本报告的 2021 证据依据是仓库中可追溯的既往固定版直接读取记录和其明确限定的规则摘要，而不是本次对 SAP 页面的独立重读。
 
 ## 开放限制
 
